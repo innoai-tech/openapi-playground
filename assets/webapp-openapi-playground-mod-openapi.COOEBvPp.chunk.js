@@ -10371,7 +10371,16 @@ function* S5(e13, t10) {
   for (let [s10, l10] of Object.entries(e13.paths))
     for (let [e14, a10] of Object.entries(l10)) {
       var r10, i10, o10;
-      "OpenAPI" != a10.operationId && "OpenAPIView" != a10.operationId && (!t10.tag || (null !== (i10 = a10.tags) && void 0 !== i10 ? i10 : []).includes(t10.tag)) && (!t10.operationId || a10.operationId.includes(t10.operationId)) && (yield { ...a10, method: e14, path: s10, group: null !== (o10 = null === (r10 = a10.tags) || void 0 === r10 ? void 0 : r10[0]) && void 0 !== o10 ? o10 : "" });
+      if ("OpenAPI" != a10.operationId && "OpenAPIView" != a10.operationId && (!t10.tag || (null !== (i10 = a10.tags) && void 0 !== i10 ? i10 : []).includes(t10.tag))) {
+        if (t10.operationId) {
+          if (t10.operationId.startsWith("*")) {
+            if (!a10.operationId.includes(t10.operationId.slice(1)))
+              continue;
+          } else if (a10.operationId != t10.operationId)
+            continue;
+        }
+        yield { ...a10, method: e14, path: s10, group: null !== (o10 = null === (r10 = a10.tags) || void 0 === r10 ? void 0 : r10[0]) && void 0 !== o10 ? o10 : "" };
+      }
     }
 }
 let S8 = function(e13) {
@@ -10410,7 +10419,7 @@ let Ce = (e13) => (t10, r10) => t10[e13] == r10[e13] ? 0 : t10[e13] < r10[e13] ?
     }));
   })), yR((e14) => {
     o10.next((t11) => {
-      t11.operationId = e14;
+      t11.operationId = `*${null != e14 ? e14 : ""}`;
     });
   }), bx());
   let l10 = yI(o10, yD((e14) => i10.operations$(e14)), bS((e14) => {
@@ -26236,7 +26245,13 @@ class Ff {
       return;
     }
     if (Fe(e13)) {
-      if (Fv.test(e13)) {
+      if (!("" == e13 || /^[0-9]+$/.test(e13)) && function(e14) {
+        let t10 = e14.length;
+        if (t10 % 4 != 0 || Fv.test(e14))
+          return false;
+        let r10 = e14.indexOf("=");
+        return -1 === r10 || r10 === t10 - 1 || r10 === t10 - 2 && "=" === e14[t10 - 1];
+      }(e13)) {
         let t10 = atob(e13);
         if (Fg(t10)) {
           __privateMethod(this, _c2, c_fn).call(this, t10, "'''");
@@ -26288,7 +26303,7 @@ function Fg(e13) {
 function Fm(e13, t10) {
   return `${t10}${e13.split("").map((e14) => e14 == t10 ? "\\" + t10 : e14).join("")}${t10}`;
 }
-let Fv = /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+/]{3}=)?$/;
+let Fv = /[^A-Z0-9+\/=]/i;
 class Fy {
   static parse(e13) {
     let t10 = $8.parse(e13);
@@ -26417,12 +26432,12 @@ class Fk {
   }
 }
 let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
-  var r10, i10;
-  let {} = t10, o10 = S6.use(), s10 = $E(null !== (r10 = e13.field$.input) && void 0 !== r10 ? r10 : ""), l10 = mn.decode(null !== (i10 = e13.field$.meta.rawSchema) && void 0 !== i10 ? i10 : {}, (e14) => {
+  var r10;
+  let {} = t10, i10 = S6.use(), o10 = $E(S1(e13.field$.input) ? "" : Fy.stringify(e13.field$.input)), s10 = mn.decode(null !== (r10 = e13.field$.meta.rawSchema) && void 0 !== r10 ? r10 : {}, (e14) => {
     var t11;
-    return [null !== (t11 = o10.schema(e14)) && void 0 !== t11 ? t11 : {}, mt(e14)];
+    return [null !== (t11 = i10.schema(e14)) && void 0 !== t11 ? t11 : {}, mt(e14)];
   });
-  return e13.field$.optional && (l10 = l10.optional()), () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($D, { value: s10, children: bw(FC, { field$: e13.field$, schema: l10 }) }) });
+  return e13.field$.optional && (s10 = s10.optional()), () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($D, { value: o10, children: bw(FC, { field$: e13.field$, schema: s10 }) }) });
 }), FC = b_({ field$: pP(), schema: pP() }, (e13) => {
   let t10 = $D.use();
   return yI(e13.schema$, bP((e14) => t10.use(() => {
@@ -26621,7 +26636,7 @@ ${r3(i10) ? JSON.stringify(i10) : String(i10)}
   let {} = t10;
   return () => {
     let t11 = e13.response;
-    return FL(t11.headers).includes("image/") ? bw("div", { children: bw("img", { src: FR(t11.body, FL(t11.headers)), alt: "" }) }) : bb(FP, { children: [bb("span", { children: ["HTTP/1.1 ", t11.status] }), bw("br", {}), t11.headers && bw(fY, { children: Object.entries(t11.headers).map((e14) => {
+    return FL(t11.headers).includes("image/") ? bw("div", { children: bw("img", { src: FR(t11.body, FL(t11.headers)), alt: "" }) }) : bb(FP, { children: [bb("span", { children: ["HTTP/* ", t11.status] }), bw("br", {}), t11.headers && bw(fY, { children: Object.entries(t11.headers).map((e14) => {
       let [t12, r10] = e14;
       return bw(F_, { field: t12, value: r10 }, t12);
     }) }), bw("br", {}), t11.body ? Fj(t11.headers) ? JSON.stringify(t11.body, null, 2) : `${FD(t11.body)}` : null] });
@@ -26652,19 +26667,29 @@ let FH = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
       e14.includes("json") ? a10.body = i11.use(M5(FO)) : a10.body = i11;
     }
   }
-  let c10 = M2.of(pS(a10), {});
-  yI(c10, yR((t11) => {
+  let c10 = fw(va), u10 = fw(vc), h10 = M2.of(pS(a10), (() => {
+    try {
+      var e14;
+      let t11 = u10.query.params;
+      return JSON.parse(atob(null !== (e14 = Array.isArray(t11) ? t11[0] : t11) && void 0 !== e14 ? e14 : ""));
+    } catch (e15) {
+    }
+    return {};
+  })());
+  yI(h10, yR((t11) => {
     l10.request(e13.operation.operationId, t11);
+  }), yR((e14) => {
+    c10.replace({ query: { params: btoa(JSON.stringify(e14)) } });
   }), bx());
-  let u10 = yI(c10.inputs$, bS((t11) => {
+  let f10 = yI(h10.inputs$, bS((t11) => {
     let r11 = l10.asRequestConfigCreator(e13.operation.operationId);
     return r11 ? bw(FN, { request: r11(t11) }) : null;
   }));
   return () => {
     var t11;
     return bb(k5, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e14) => {
-      e14.preventDefault(), c10.submit();
-    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...c10.fields(c10.typedef)].map((e14) => bw(FW, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [u10, bw("div", { children: bw(Te, { type: "submit", children: "发起请求" }) }), bw(Fz, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = s10.default) || void 0 === t11 ? void 0 : t11.call(s10) })] }) })] }, e13.operation.operationId);
+      e14.preventDefault(), h10.submit();
+    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...h10.fields(h10.typedef)].map((e14) => bw(FW, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [f10, bw(k5, { sx: { px: 8 }, children: bw(Te, { type: "submit", children: "发起请求" }) }), bw(Fz, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = s10.default) || void 0 === t11 ? void 0 : t11.call(s10) })] }) })] }, e13.operation.operationId);
   };
 }), FW = b_({ field$: pP() }, (e13, t10) => {
   let { field$: r10 } = e13, { render: i10 } = t10;
@@ -26695,7 +26720,7 @@ let FH = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
     return bw(Fq, { operation: e14, children: bw(fY, { children: Object.entries(null !== (t11 = e14.responses) && void 0 !== t11 ? t11 : {}).map((e15) => {
       let [t12, r11] = e15;
       return bw(M1, { code: t12, response: r11 }, t12);
-    }) }) });
+    }) }) }, e14.operationId);
   }));
   return yI(o10, bS((e14) => e14 ? bb(FY, { children: [l10, bb(k5, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [a10, bw(k5, { sx: { flex: 1, overflow: "auto" }, children: c10 })] })] }, e14.operationId) : null));
 }), FY = k6("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), FK = k6("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), FG = Object.assign(FQ, { displayName: "OperationView" });
