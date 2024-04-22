@@ -3899,12 +3899,12 @@ let dB = ["Webkit", "Moz", "ms"], d$ = {}, dF = "http://www.w3.org/1999/xlink", 
           return;
         }
         if (256 & d11) {
-          F2(u11, f11, r12, i12, o10, s12, l11, a11, c11);
+          F3(u11, f11, r12, i12, o10, s12, l11, a11, c11);
           return;
         }
       }
       8 & g9 ? (16 & h11 && X2(u11, o10, s12), f11 !== u11 && p10(r12, f11)) : 16 & h11 ? 16 & g9 ? z2(u11, f11, r12, i12, o10, s12, l11, a11, c11) : X2(u11, o10, s12, true) : (8 & h11 && p10(r12, ""), 16 & g9 && T10(f11, r12, i12, o10, s12, l11, a11, c11));
-    }, F2 = (e15, t12, r12, i12, o10, s12, l11, a11, c11) => {
+    }, F3 = (e15, t12, r12, i12, o10, s12, l11, a11, c11) => {
       let u11;
       e15 = e15 || cu, t12 = t12 || cu;
       let h11 = e15.length, f11 = t12.length, d11 = Math.min(h11, f11);
@@ -14017,32 +14017,32 @@ let MN = Object.assign(b_({ text: pm(), components: pC(pm(), pP()).optional() },
       };
     }({ components: null !== (r10 = e13.components) && void 0 !== r10 ? r10 : {} })(i10);
   }));
-}), { displayName: "Markdown" }), MB = k6("div", { spacing: pv().optional().default(0), $default: pP().optional() }, (e13, t10) => {
+}), { displayName: "Markdown" }), MB = k6("div")({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), M$ = k6("div", { deprecated: pb().optional(), optional: pb().optional(), nullable: pb().optional() })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14, color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), MF = k6("div", { spacing: pv().optional().default(0), $default: pP().optional() }, (e13, t10) => {
   let { slots: r10 } = t10, i10 = MH.use();
   return (t11) => {
     var o10;
     return bw(t11, { style: { paddingLeft: `${i10.indent}em`, marginTop: 0.5 * e13.spacing }, children: null === (o10 = r10.default) || void 0 === o10 ? void 0 : o10.call(r10) });
   };
-})({ position: "relative", display: "block" }), M$ = k6("div", { schema: pP() }, (e13, t10) => {
+})({ position: "relative", display: "block" }), Mz = k6("div", { schema: pP() }, (e13, t10) => {
   let {} = t10;
   return (t11) => {
     var r10;
     let i10 = null !== (r10 = e13.schema.description) && void 0 !== r10 ? r10 : "";
     return 0 == i10.length ? null : bw(t11, { children: bw(MN, { text: i10 }) });
   };
-})({ position: "relative", pt: 4, "& p": { my: 1, "&::before": { content: '"// "', fontFamily: "code" }, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12 }), MF = k6("div")({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), Mz = k6(MF, { deprecated: pb().optional(), optional: pb().optional(), nullable: pb().optional() })({ color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), MV = (e13) => {
+})({ position: "relative", pt: 4, "& p": { my: 1, "&::before": { content: '"// "', fontFamily: "code" }, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12 }), MV = (e13) => {
   let { name: t10, value: r10, extra: i10 } = e13;
-  return "" == r10 ? null : bw(MQ, { children: bb(MF, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MF, { sx: { color: "sys.primary" }, children: `@${t10}(` }), `${r10}`, Object.entries(null != i10 ? i10 : {}).map((e14) => {
+  return "" == r10 ? null : bw(MK, { children: bb(MQ, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MQ, { sx: { color: "sys.primary" }, children: `@${t10}(` }), `${r10}`, Object.entries(null != i10 ? i10 : {}).map((e14) => {
     let [t11, r11] = e14;
-    return bb(fY, { children: [bb(MF, { sx: { opacity: 0.5 }, children: [",", " "] }), bw(MF, { sx: { opacity: 0.5 }, children: t11 }), bb(MF, { sx: { opacity: 0.5 }, children: [":", " "] }), bw(MF, { sx: { opacity: 0.7 }, children: r11 })] });
-  }), bw(MF, { sx: { color: "sys.primary" }, children: ")" })] }) });
+    return bb(fY, { children: [bb(MQ, { sx: { opacity: 0.5 }, children: [",", " "] }), bw(MQ, { sx: { opacity: 0.5 }, children: t11 }), bb(MQ, { sx: { opacity: 0.5 }, children: [":", " "] }), bw(MQ, { sx: { opacity: 0.7 }, children: r11 })] });
+  }), bw(MQ, { sx: { color: "sys.primary" }, children: ")" })] }) });
 }, MH = bE(() => ({ indent: 0 }), { name: "IntentContext" }), MW = md({ $default: pP().optional() }, (e13, t10) => {
   let {} = e13, { slots: r10 } = t10, i10 = MH.use();
   return () => {
     var e14;
     return bw(MH, { value: { indent: i10.indent + 1 }, children: null === (e14 = r10.default) || void 0 === e14 ? void 0 : e14.call(r10) });
   };
-}), MU = b_({ schema: pP() }, (e13) => () => bw(fY, { children: bw(MK, { schema: e13.schema }) })), Mq = b_({ schema: pP() }, (e13) => {
+}), MU = b_({ schema: pP() }, (e13) => () => bw(fY, { children: bw(MZ, { schema: e13.schema }) })), Mq = b_({ schema: pP() }, (e13) => {
   var t10;
   let r10 = S6.use(), i10 = null !== (t10 = e13.schema) && void 0 !== t10 ? t10 : {};
   if (i10.$ref) {
@@ -14055,20 +14055,20 @@ let MN = Object.assign(b_({ text: pm(), components: pC(pm(), pP()).optional() },
       return i10.discriminator ? bw(fY, { children: Object.entries(null !== (e14 = i10.discriminator.mapping) && void 0 !== e14 ? e14 : {}).toSorted().map((e15) => {
         var t12;
         let [r12, o11] = e15;
-        return o11 ? bb(fY, { children: [bw(MQ, { spacing: 2, children: " " }), bw(MQ, { children: bb(Mz, { sx: { py: 8 }, children: ["if ", null === (t12 = i10.discriminator) || void 0 === t12 ? void 0 : t12.propertyName, " = ", bw(MK, { schema: { enum: [r12] } }), ":"] }) }), bb(MW, { children: [bw(MF, { children: "  " }), bw(MK, { schema: o11 })] })] }) : null;
-      }) }) : bw(fY, { children: i10.oneOf.map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MF, { children: [" ", " | ", " "] }), bw(MF, { sx: { mr: "1em" }, children: ":" }), bw(MK, { schema: e15 })] })) });
+        return o11 ? bb(fY, { children: [bw(MK, { spacing: 2, children: " " }), bw(MK, { children: bb(MY, { sx: { py: 8 }, children: ["if ", null === (t12 = i10.discriminator) || void 0 === t12 ? void 0 : t12.propertyName, " = ", bw(MZ, { schema: { enum: [r12] } }), ":"] }) }), bb(MJ, { children: [bw(MQ, { children: "  " }), bw(MZ, { schema: o11 })] })] }) : null;
+      }) }) : bw(fY, { children: i10.oneOf.map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MQ, { children: [" ", " | ", " "] }), bw(MQ, { sx: { mr: "1em" }, children: ":" }), bw(MZ, { schema: e15 })] })) });
     if (Array.isArray(i10.allOf))
-      return bw(MF, { children: i10.allOf.filter((e15) => !Object.keys(e15).length).map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MF, { children: [" ", "&", " "] }), bw(MK, { schema: e15 })] })) });
+      return bw(MQ, { children: i10.allOf.filter((e15) => !Object.keys(e15).length).map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MQ, { children: [" ", "&", " "] }), bw(MZ, { schema: e15 })] })) });
     if ("array" == i10.type)
-      return bb(MF, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MF, { children: "Array<" }), bw(MK, { schema: null !== (t11 = i10.items) && void 0 !== t11 ? t11 : {} }), bw(MF, { children: ">" })] });
+      return bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MQ, { children: "Array<" }), bw(MZ, { schema: null !== (t11 = i10.items) && void 0 !== t11 ? t11 : {} }), bw(MQ, { children: ">" })] });
     if ("object" == i10.type)
-      return bb(fY, { children: [i10.$id && bb(MF, { id: i10.$id, children: [i10.$id, " "] }), bw(MF, { children: "{" }), bw(MW, { children: bw(fY, { children: Object.entries(null !== (r11 = i10.properties) && void 0 !== r11 ? r11 : {}).map((e15) => {
+      return bb(fY, { children: [i10.$id && bb(MQ, { id: i10.$id, children: [i10.$id, " "] }), bw(MQ, { children: "{" }), bw(MJ, { children: bw(fY, { children: Object.entries(null !== (r11 = i10.properties) && void 0 !== r11 ? r11 : {}).map((e15) => {
         var t12;
         let [r12, o11] = e15;
-        return o11 ? bw(fY, { children: bb(MQ, { spacing: 2, children: [bw(MY, { schema: o11 }), bb(MF, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(Mz, { nullable: o11.nullable, deprecated: o11.deprecated, optional: !(null !== (t12 = i10.required) && void 0 !== t12 ? t12 : []).includes(r12), children: r12 }), bw(MF, { sx: { mr: "1em" }, children: ":" }), bw(MK, { schema: o11 })] })] }) }) : null;
-      }) }) }), i10.additionalProperties && bw(fY, { children: bw(MW, { children: bb(MQ, { children: [bb(MF, { sx: { mr: 1 }, children: ["[K:", " "] }), bw(MK, { schema: null !== (o10 = i10.propertyNames) && void 0 !== o10 ? o10 : { type: "string" } }), bb(MF, { sx: { mr: 1 }, children: ["]:", " "] }), bw(MK, { schema: i10.additionalProperties })] }) }) }), bw(MF, { children: "}" })] });
+        return o11 ? bw(fY, { children: bb(MK, { spacing: 2, children: [bw(MG, { schema: o11 }), bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MY, { nullable: o11.nullable, deprecated: o11.deprecated, optional: !(null !== (t12 = i10.required) && void 0 !== t12 ? t12 : []).includes(r12), children: r12 }), bw(MQ, { sx: { mr: "1em" }, children: ":" }), bw(MZ, { schema: o11 })] })] }) }) : null;
+      }) }) }), i10.additionalProperties && bw(fY, { children: bw(MJ, { children: bb(MK, { children: [bb(MQ, { sx: { mr: 1 }, children: ["[K:", " "] }), bw(MZ, { schema: null !== (o10 = i10.propertyNames) && void 0 !== o10 ? o10 : { type: "string" } }), bb(MQ, { sx: { mr: 1 }, children: ["]:", " "] }), bw(MZ, { schema: i10.additionalProperties })] }) }) }), bw(MQ, { children: "}" })] });
     let [s10, l10, a10, c10] = [i10.type, i10.format, i10.enum, i10.default];
-    return a10 && 1 == a10.length ? bw(MF, { children: JSON.stringify(a10[0]) }) : (!s10 && a10 && a10.length > 0 && (s10 = typeof a10[0]), bb(fY, { children: [bw(MF, { sx: { fontWeight: "bold" }, children: s10 || "any" }), bb(MW, { children: [l10 && bw(MV, { name: "format", value: l10 }), !S1(c10) && bw(MV, { name: "default", value: c10 }), !MX(i10) && bw(MV, { name: "validate", value: function() {
+    return a10 && 1 == a10.length ? bw(MQ, { children: JSON.stringify(a10[0]) }) : (!s10 && a10 && a10.length > 0 && (s10 = typeof a10[0]), bb(fY, { children: [bw(MQ, { sx: { fontWeight: "bold" }, children: s10 || "any" }), bb(MJ, { children: [l10 && bw(MV, { name: "format", value: l10 }), !S1(c10) && bw(MV, { name: "default", value: c10 }), !MX(i10) && bw(MV, { name: "validate", value: function() {
       let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return e15["x-tag-validate"] ? e15["x-tag-validate"] : MX(e15) ? e15.pattern ? `@r/${String(e15.pattern)}/` : `@${e15.exclusiveMinimum} ? "(" : "["}${function() {
         let e16 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -14083,19 +14083,28 @@ let MN = Object.assign(b_({ text: pm(), components: pC(pm(), pP()).optional() },
 function MX(e13) {
   return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t10) => Object.hasOwn(e13, t10));
 }
-let MQ = Object.assign(MB, { displayName: "Line" }), MY = Object.assign(M$, { displayName: "Description" }), MK = Object.assign(Mq, { displayName: "SchemaView" }), MG = b_({ code: pP(), response: pP() }, (e13) => () => {
-  var t10;
-  return bb(MJ, { children: [bw(MZ, { "data-failed": function(e14) {
+let MQ = Object.assign(MB, { displayName: "Token" }), MY = Object.assign(M$, { displayName: "PropName" }), MK = Object.assign(MF, { displayName: "Line" }), MG = Object.assign(Mz, { displayName: "Description" }), MJ = Object.assign(MW, { displayName: "Indent" }), MZ = Object.assign(Mq, { displayName: "SchemaView" }), M0 = b_({ code: pP(), response: pP() }, (e13) => () => {
+  var t10, r10;
+  return bb(M1, { children: [bw(M2, { "data-failed": function(e14) {
     try {
       return Number(e14) >= 400;
     } catch (e15) {
       return false;
     }
-  }(e13.code), children: e13.code }), bw(k5, { sx: { pl: "4em" }, children: Object.entries(null !== (t10 = e13.response.content) && void 0 !== t10 ? t10 : {}).map((e14) => {
-    let [t11, { schema: r10 }] = e14;
-    return bb(M0, { children: [bw(MQ, { spacing: 0, children: bw(MK, { schema: r10 }) }), bw("div", { "data-content-type": true, children: t11 })] });
-  }) })] });
-}), MJ = k6("section")({}), MZ = k6("div")({ fontSize: 18, fontFamily: "code", color: "sys.success", pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), M0 = k6("section")({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), M1 = Object.assign(MG, { displayName: "ResponseView" }), M2 = class e10 extends v4 {
+  }(e13.code), children: e13.code }), bb(k5, { sx: { pl: "4em" }, children: [bw(fY, { children: null === (t10 = e13.response["x-status-return-errors"]) || void 0 === t10 ? void 0 : t10.map((e14) => function() {
+    let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+    return e15.startsWith("StatusError{") ? e15.slice(12, e15.length - 1).split(",").reduce((e16, t11) => {
+      let [r11, i10] = t11.split("=", 2);
+      return S1(r11) || S1(i10) ? e16 : { ...e16, [r11]: i10 };
+    }, {}) : null;
+  }(e14)).map((e14) => e14 ? bw(k5, { sx: { mb: 16 }, children: bb(MK, { spacing: 0, children: [bb(MQ, { children: ["{", " "] }), bw(MJ, { children: Object.entries(e14).map((e15) => {
+    let [t11, r11] = e15;
+    return "code" === t11 ? null : bb(MK, { children: [bw(MY, { children: t11 }), bw(MQ, { children: ": " }), bw(MQ, { children: r11 })] });
+  }) }), bb(MQ, { children: [" ", "}"] })] }) }) : null) }), bw(fY, { children: Object.entries(null !== (r10 = e13.response.content) && void 0 !== r10 ? r10 : {}).map((e14) => {
+    let [t11, { schema: r11 }] = e14;
+    return bb(M4, { children: [bw(MK, { spacing: 0, children: bw(MZ, { schema: r11 }) }), bw("div", { "data-content-type": true, children: t11 })] });
+  }) })] })] });
+}), M1 = k6("section")({}), M2 = k6("div")({ fontSize: 18, fontFamily: "code", color: "sys.success", py: 12, pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), M4 = k6("section")({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), M3 = Object.assign(M0, { displayName: "ResponseView" }), M5 = class e10 extends v4 {
   constructor(e13, t10) {
     var r10;
     super();
@@ -14144,8 +14153,8 @@ let MQ = Object.assign(MB, { displayName: "Line" }), MY = Object.assign(M$, { di
     for (let [i10, o10, s10] of e13.entries(t10, dY)) {
       if (i10 === ps || "never" === s10.type)
         continue;
-      let e14 = [...r10, i10], t11 = M4.stringify(e14), o11 = this._fields.get(t11);
-      o11 || (o11 = new M4(this, s10, e14), this._fields.set(t11, o11)), yield o11;
+      let e14 = [...r10, i10], t11 = M8.stringify(e14), o11 = this._fields.get(t11);
+      o11 || (o11 = new M8(this, s10, e14), this._fields.set(t11, o11)), yield o11;
     }
   }
   reset() {
@@ -14153,9 +14162,9 @@ let MQ = Object.assign(MB, { displayName: "Line" }), MY = Object.assign(M$, { di
       t10.reset();
   }
 };
-const _M4 = class _M4 extends bh {
-  constructor(e13, t10, r10, i10 = _M4.stringify(r10)) {
-    super({ initial: oM(e13.inputs$.value, i10, _M4.defaultValue(t10)) });
+const _M8 = class _M8 extends bh {
+  constructor(e13, t10, r10, i10 = _M8.stringify(r10)) {
+    super({ initial: oM(e13.inputs$.value, i10, _M8.defaultValue(t10)) });
     __privateAdd(this, _i2, void 0);
     __privateAdd(this, _o2, void 0);
     __publicField(this, "focus", () => {
@@ -14195,7 +14204,7 @@ const _M4 = class _M4 extends bh {
     return t10;
   }
   get input() {
-    return oM(this.form$.inputs$.value, this.name, _M4.defaultValue(this.typedef));
+    return oM(this.form$.inputs$.value, this.name, _M8.defaultValue(this.typedef));
   }
   get meta() {
     return this.typedef.meta;
@@ -14207,7 +14216,7 @@ const _M4 = class _M4 extends bh {
     return void 0 === __privateGet(this, _i2) && __privateSet(this, _i2, !this.validate(void 0)), __privateGet(this, _i2);
   }
   get input$() {
-    return void 0 === __privateGet(this, _o2) && __privateSet(this, _o2, yI(this.form$.inputs$, yx((e13) => oM(e13, this.name, _M4.defaultValue(this.typedef))), yP())), __privateGet(this, _o2);
+    return void 0 === __privateGet(this, _o2) && __privateSet(this, _o2, yI(this.form$.inputs$, yx((e13) => oM(e13, this.name, _M8.defaultValue(this.typedef))), yP())), __privateGet(this, _o2);
   }
   validate(e13) {
     let t10 = "array" !== this.typedef.type || aM(e13) ? e13 : e13.filter((e14) => !aM(e14)), [r10] = this.typedef.validate(t10);
@@ -14223,21 +14232,21 @@ const _M4 = class _M4 extends bh {
 };
 _i2 = new WeakMap();
 _o2 = new WeakMap();
-__publicField(_M4, "defaultValue", (e13) => {
+__publicField(_M8, "defaultValue", (e13) => {
   try {
     return e13.create(void 0);
   } catch (e14) {
     return;
   }
 });
-let M4 = _M4;
-function M3(e13) {
+let M8 = _M8;
+function M6(e13) {
   return (t10) => dJ.of(t10, { $meta: { label: e13 } });
 }
-function M5(e13) {
+function M9(e13) {
   return (t10) => dJ.of(t10, { $meta: { input: e13 } });
 }
-let M8 = k6("div", { valued: pb().optional(), focus: pb().optional(), invalid: pb().optional(), disabled: pb().optional(), $label: pP().optional(), $hint: pP().optional(), $supporting: pP().optional(), $leading: pP().optional(), $trailing: pP().optional(), $default: pP() }, (e13, t10) => {
+let M7 = k6("div", { valued: pb().optional(), focus: pb().optional(), invalid: pb().optional(), disabled: pb().optional(), $label: pP().optional(), $hint: pP().optional(), $supporting: pP().optional(), $leading: pP().optional(), $trailing: pP().optional(), $default: pP() }, (e13, t10) => {
   let { slots: r10 } = t10;
   return (t11) => {
     var i10, o10, s10, l10;
@@ -14248,20 +14257,20 @@ let M8 = k6("div", { valued: pb().optional(), focus: pb().optional(), invalid: p
       }
       return f5(e14);
     });
-    return bb(t11, { "data-valued": a10, "data-invalid": c10, "data-disabled": u10, "data-focus-within": e13.focus, "data-has-leading": !!r10.leading, "data-has-trailing": !!r10.trailing, children: [bb("div", { "data-input-container": true, children: [bb("div", { "data-input-decorator-container": true, children: [bw("div", { "data-input-decorator-leading": true }), bw("div", { "data-input-decorator-label": true, children: bw("div", { "data-input-label": true, children: null === (o10 = r10.label) || void 0 === o10 ? void 0 : o10.call(r10) }) }), bw("div", { "data-input-decorator-trailing": true })] }), bb("div", { "data-input-row": true, children: [r10.leading && bw(M6, { role: "leading", children: r10.leading() }), h10, r10.trailing && bw(M6, { role: "trailing", children: r10.trailing() })] })] }), r10.supporting && bw("div", { "data-input-supporting": true, children: null === (s10 = r10.supporting) || void 0 === s10 ? void 0 : s10.call(r10) })] });
+    return bb(t11, { "data-valued": a10, "data-invalid": c10, "data-disabled": u10, "data-focus-within": e13.focus, "data-has-leading": !!r10.leading, "data-has-trailing": !!r10.trailing, children: [bb("div", { "data-input-container": true, children: [bb("div", { "data-input-decorator-container": true, children: [bw("div", { "data-input-decorator-leading": true }), bw("div", { "data-input-decorator-label": true, children: bw("div", { "data-input-label": true, children: null === (o10 = r10.label) || void 0 === o10 ? void 0 : o10.call(r10) }) }), bw("div", { "data-input-decorator-trailing": true })] }), bb("div", { "data-input-row": true, children: [r10.leading && bw(Te, { role: "leading", children: r10.leading() }), h10, r10.trailing && bw(Te, { role: "trailing", children: r10.trailing() })] })] }), r10.supporting && bw("div", { "data-input-supporting": true, children: null === (s10 = r10.supporting) || void 0 === s10 ? void 0 : s10.call(r10) })] });
   };
-})({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, pointerEvents: "none", rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1 }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), M6 = k6("div", { role: px(["leading", "trailing"]) })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), M9 = Object.assign(M8, { displayName: "TextField" }), M7 = Object.assign(k6("button", { hover: pb().optional(), focus: pb().optional(), active: pb().optional(), disabled: pb().optional() })({ textStyle: "sys.label-large", display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none", outline: "none", overflow: "hidden", border: 0, margin: 0, userSelect: "none", cursor: "pointer", _disabled: { cursor: "not-allowed" }, gap: 8, h: 40, px: 24, rounded: 20, transitionDuration: "md4", transitionTimingFunction: "standard-accelerate", bg: "none", pos: "relative", zIndex: 1, _$before: { content: '""', pos: "absolute", top: 0, right: 0, left: 0, bottom: 0, zIndex: -1, transitionDuration: "md1", transitionTimingFunction: "standard-accelerate" }, $data_icon: { boxSize: 18, _data_placement__start: { ml: -8 }, _data_placement__end: { mr: -8 } } }), { displayName: "ButtonBase" }), Te = Object.assign(k6(M7)({ containerStyle: "sys.primary", shadow: "1", _hover: { shadow: "2", _$before: { bgColor: xM("white", xA(0.08)) } }, _focus: { shadow: "2", _$before: { bgColor: xM("white", xA(0.12)) } }, _active: { shadow: "2", _$before: { bgColor: xM("white", xA(0.12)) } }, _disabled: { shadow: "0", color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "FilledButton" });
-Object.assign(k6(M7)({ color: "sys.primary", shadow: "1", _$before: { bgColor: "sys.surface-container-low" }, _hover: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.08)) } }, _focus: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _active: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _disabled: { shadow: "0", color: xM("sys.on-surface", xA(0.38)), _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "ElevatedButton" });
-let Tt = Object.assign(k6(M7)({ extends: [{ px: 16, $data_icon: { _data_placement__start: { ml: -4 }, _data_placement__end: { mr: -4 } } }], color: "sys.primary", _$before: { bgColor: "rgba(0,0,0,0)" }, _hover: { _$before: { bgColor: xM("sys.primary", xA(0.08)) } }, _focus: { _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _active: { _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", _$before: { bgColor: "rgba(0,0,0,0)" } } }), { displayName: "TextButton" });
-Object.assign(k6(M7)({ containerStyle: "sys.secondary-container", color: "sys.primary", shadow: "0", _hover: { shadow: "1", _$before: { bgColor: xM("sys.on-secondary-container", xA(0.08)) } }, _focus: { _$before: { bgColor: xM("sys.on-secondary-container", xA(0.12)) } }, _active: { _$before: { bgColor: xM("sys.on-secondary-container", xA(0.12)) } }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", shadow: "0", _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "TonalButton" }), Object.assign(k6(M7)({ extends: [{ border: "1px solid" }], color: "sys.primary", bgColor: "rgba(0,0,0,0)", borderColor: "sys.outline", _hover: { bgColor: xM("sys.primary", xA(0.08)) }, _active: { bgColor: xM("sys.primary", xA(0.12)) }, _focus: { bgColor: xM("sys.primary", xA(0.12)) }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", borderColor: xM("sys.on-surface", xA(0.12)) } }), { displayName: "OutlinedButton" }), Object.assign(k6(Tt, {})({ boxSize: 40, p: 0 }), { displayName: "IconButton" }), Object.assign(k6("span", { placement: px(["start", "end"]).optional(), path: pm() }, (e13, t10) => (t11) => bw(t11, { "data-icon": true, "data-placement": e13.placement, children: bw("svg", { viewBox: "0 0 24 24", children: bw("path", { d: e13.path }) }) }))({ boxSize: "1.2em" }), { displayName: "Icon" });
-let Tn = xI({ from: { opacity: 0 }, to: { opacity: 1 }, duration: xR.duration.md1, easing: xR.easing.standard.accelerate }, { from: { opacity: 1 }, to: { opacity: 0 }, duration: xR.duration.sm4, easing: xR.easing.standard.decelerate }), Tr = k6("div")({ py: 4, px: 12, rounded: "sm", shadow: "3", containerStyle: "sys.on-surface", pos: "relative", zIndex: 100 });
+})({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, pointerEvents: "none", rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1 }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), Te = k6("div", { role: px(["leading", "trailing"]) })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), Tt = Object.assign(M7, { displayName: "TextField" }), Tn = Object.assign(k6("button", { hover: pb().optional(), focus: pb().optional(), active: pb().optional(), disabled: pb().optional() })({ textStyle: "sys.label-large", display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none", outline: "none", overflow: "hidden", border: 0, margin: 0, userSelect: "none", cursor: "pointer", _disabled: { cursor: "not-allowed" }, gap: 8, h: 40, px: 24, rounded: 20, transitionDuration: "md4", transitionTimingFunction: "standard-accelerate", bg: "none", pos: "relative", zIndex: 1, _$before: { content: '""', pos: "absolute", top: 0, right: 0, left: 0, bottom: 0, zIndex: -1, transitionDuration: "md1", transitionTimingFunction: "standard-accelerate" }, $data_icon: { boxSize: 18, _data_placement__start: { ml: -8 }, _data_placement__end: { mr: -8 } } }), { displayName: "ButtonBase" }), Tr = Object.assign(k6(Tn)({ containerStyle: "sys.primary", shadow: "1", _hover: { shadow: "2", _$before: { bgColor: xM("white", xA(0.08)) } }, _focus: { shadow: "2", _$before: { bgColor: xM("white", xA(0.12)) } }, _active: { shadow: "2", _$before: { bgColor: xM("white", xA(0.12)) } }, _disabled: { shadow: "0", color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "FilledButton" });
+Object.assign(k6(Tn)({ color: "sys.primary", shadow: "1", _$before: { bgColor: "sys.surface-container-low" }, _hover: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.08)) } }, _focus: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _active: { shadow: "2", _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _disabled: { shadow: "0", color: xM("sys.on-surface", xA(0.38)), _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "ElevatedButton" });
+let Ti = Object.assign(k6(Tn)({ extends: [{ px: 16, $data_icon: { _data_placement__start: { ml: -4 }, _data_placement__end: { mr: -4 } } }], color: "sys.primary", _$before: { bgColor: "rgba(0,0,0,0)" }, _hover: { _$before: { bgColor: xM("sys.primary", xA(0.08)) } }, _focus: { _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _active: { _$before: { bgColor: xM("sys.primary", xA(0.12)) } }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", _$before: { bgColor: "rgba(0,0,0,0)" } } }), { displayName: "TextButton" });
+Object.assign(k6(Tn)({ containerStyle: "sys.secondary-container", color: "sys.primary", shadow: "0", _hover: { shadow: "1", _$before: { bgColor: xM("sys.on-secondary-container", xA(0.08)) } }, _focus: { _$before: { bgColor: xM("sys.on-secondary-container", xA(0.12)) } }, _active: { _$before: { bgColor: xM("sys.on-secondary-container", xA(0.12)) } }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", shadow: "0", _$before: { bgColor: xM("sys.on-surface", xA(0.12)) } } }), { displayName: "TonalButton" }), Object.assign(k6(Tn)({ extends: [{ border: "1px solid" }], color: "sys.primary", bgColor: "rgba(0,0,0,0)", borderColor: "sys.outline", _hover: { bgColor: xM("sys.primary", xA(0.08)) }, _active: { bgColor: xM("sys.primary", xA(0.12)) }, _focus: { bgColor: xM("sys.primary", xA(0.12)) }, _disabled: { color: xM("sys.on-surface", xA(0.38)), bgColor: "rgba(0,0,0,0)", borderColor: xM("sys.on-surface", xA(0.12)) } }), { displayName: "OutlinedButton" }), Object.assign(k6(Ti, {})({ boxSize: 40, p: 0 }), { displayName: "IconButton" });
+let To = Object.assign(k6("span", { placement: px(["start", "end"]).optional(), path: pm() }, (e13, t10) => (t11) => bw(t11, { "data-icon": true, "data-placement": e13.placement, children: bw("svg", { viewBox: "0 0 24 24", children: bw("path", { d: e13.path }) }) }))({ boxSize: "1.2em" }), { displayName: "Icon" }), Ts = xI({ from: { opacity: 0 }, to: { opacity: 1 }, duration: xR.duration.md1, easing: xR.easing.standard.accelerate }, { from: { opacity: 1 }, to: { opacity: 0 }, duration: xR.duration.sm4, easing: xR.easing.standard.decelerate }), Tl = k6("div")({ py: 4, px: 12, rounded: "sm", shadow: "3", containerStyle: "sys.on-surface", pos: "relative", zIndex: 100 });
 Object.assign(md({ title: pP(), $default: pP() }, (e13, t10) => {
   let { slots: r10 } = t10, i10 = u2(false);
   return () => {
     let t11 = r10.default()[0];
-    return bw(SJ, { isOpen: i10.value, $content: bw(Tr, { children: e13.title }), $transition: (e14) => {
+    return bw(SJ, { isOpen: i10.value, $content: bw(Tl, { children: e13.title }), $transition: (e14) => {
       let { content: t12 } = e14;
-      return bw(Tn, { children: t12 });
+      return bw(Ts, { children: t12 });
     }, children: t11 ? f5(t11, { onMouseover: () => {
       i10.value = true;
     }, onMouseout: () => {
@@ -14269,20 +14278,20 @@ Object.assign(md({ title: pP(), $default: pP() }, (e13, t10) => {
     } }) : null });
   };
 }), { displayName: "Tooltip" });
-let Ti = k6("div")({ py: 8, rounded: "sm", shadow: "2", minW: 120, containerStyle: "sys.surface-container", pos: "relative", zIndex: 100 }), To = k6("div")({ "& + &": { borderTop: "1px solid", borderColor: "sys.outline-variant" }, py: 8, px: 16, textStyle: "sys.label-large", containerStyle: "sys.surface-container", _hover: { cursor: "pointer", bgColor: xM("sys.on-surface", xA(0.08)) } }), Ts = md({ placement: pP().optional(), $menu: pP(), $default: pP() }, (e13, t10) => {
+let Ta = k6("div")({ py: 8, rounded: "sm", shadow: "2", minW: 120, containerStyle: "sys.surface-container", pos: "relative", zIndex: 100 }), Tc = k6("div")({ "& + &": { borderTop: "1px solid", borderColor: "sys.outline-variant" }, py: 8, px: 16, textStyle: "sys.label-large", containerStyle: "sys.surface-container", _hover: { cursor: "pointer", bgColor: xM("sys.on-surface", xA(0.08)) } }), Tu = md({ placement: pP().optional(), $menu: pP(), $default: pP() }, (e13, t10) => {
   let { slots: r10 } = t10, i10 = u2(false);
   return () => {
     var t11;
     let o10 = r10.default ? r10.default()[0] : void 0;
     return bw(SJ, { isOpen: i10.value, placement: e13.placement, onClickOutside: () => {
       i10.value = false;
-    }, $content: bw(Tl, { children: null === (t11 = r10.menu) || void 0 === t11 ? void 0 : t11.call(r10) }), children: o10 ? f5(o10, { onClick: () => {
+    }, $content: bw(Th, { children: null === (t11 = r10.menu) || void 0 === t11 ? void 0 : t11.call(r10) }), children: o10 ? f5(o10, { onClick: () => {
       i10.value = true;
     } }) : null });
   };
-}), Tl = Object.assign(Ti, { displayName: "MenuContainer" });
-Object.assign(To, { displayName: "ListItem" }), Object.assign(Ts, { displayName: "Menu" });
-let Ta = k6("div")({ pos: "absolute", top: 0, left: 0, h: "100vh", w: "100vw", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center" }), Tc = k6("div")({ cursor: "pointer", pos: "absolute", top: 0, left: 0, h: "100vh", w: "100vw", zIndex: -1, bgColor: xM("sys.scrim", xA(0.38)) }), Tu = k6("div")({ py: 12, rounded: "sm", shadow: "3", minW: "50vw", containerStyle: "sys.surface-container-high" }), Th = xI({ from: { opacity: 0 }, to: { opacity: 1 }, duration: xR.duration.md1, easing: xR.easing.standard.accelerate }, { from: { opacity: 1 }, to: { opacity: 0 }, duration: xR.duration.sm4, easing: xR.easing.standard.accelerate }), Tf = md({ isOpen: Sr.propTypes.isOpen, onClose: pP(), $default: pP().optional() }, (e13, t10) => {
+}), Th = Object.assign(Ta, { displayName: "MenuContainer" });
+Object.assign(Tc, { displayName: "ListItem" }), Object.assign(Tu, { displayName: "Menu" });
+let Tf = k6("div")({ pos: "absolute", top: 0, left: 0, h: "100vh", w: "100vw", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center" }), Td = k6("div")({ cursor: "pointer", pos: "absolute", top: 0, left: 0, h: "100vh", w: "100vw", zIndex: -1, bgColor: xM("sys.scrim", xA(0.38)) }), Tp = k6("div")({ py: 12, rounded: "sm", shadow: "3", minW: "50vw", containerStyle: "sys.surface-container-high" }), Tg = xI({ from: { opacity: 0 }, to: { opacity: 1 }, duration: xR.duration.md1, easing: xR.easing.standard.accelerate }, { from: { opacity: 1 }, to: { opacity: 0 }, duration: xR.duration.sm4, easing: xR.easing.standard.accelerate }), Tm = md({ isOpen: Sr.propTypes.isOpen, onClose: pP(), $default: pP().optional() }, (e13, t10) => {
   var r10;
   let { slots: i10, emit: o10 } = t10, s10 = u2(null !== (r10 = e13.isOpen) && void 0 !== r10 && r10), l10 = u2(false);
   return hD(() => e13.isOpen, (e14) => {
@@ -14293,24 +14302,24 @@ let Ta = k6("div")({ pos: "absolute", top: 0, left: 0, h: "100vh", w: "100vw", z
       l10.value = true;
     }, onEscKeydown: () => {
       l10.value = false;
-    }, children: bb(Ta, { children: [bw(Th, { onComplete: (e15) => {
+    }, children: bb(Tf, { children: [bw(Tg, { onComplete: (e15) => {
       "leave" === e15 && (s10.value = false, o10("close"));
-    }, children: l10.value ? bw(Td, { onClick: () => {
+    }, children: l10.value ? bw(Tv, { onClick: () => {
       l10.value = false;
     } }) : null }), null === (e14 = i10.default) || void 0 === e14 ? void 0 : e14.call(i10)] }) });
   };
-}), Td = Object.assign(Tc, { displayName: "DialogBackdrop" });
-Object.assign(Tu, { displayName: "DialogContainer" }), Object.assign(Tf, { displayName: "Dialog" });
-let Tp = k6("label", { valued: pb().optional(), focus: pb().optional(), invalid: pb().optional(), disabled: pb().optional(), $label: pP().optional(), $supporting: pP().optional(), $leading: pP().optional(), $trailing: pP().optional(), $default: pP() }, (e13, t10) => {
+}), Tv = Object.assign(Td, { displayName: "DialogBackdrop" });
+Object.assign(Tp, { displayName: "DialogContainer" }), Object.assign(Tm, { displayName: "Dialog" });
+let Ty = k6("label", { valued: pb().optional(), focus: pb().optional(), invalid: pb().optional(), disabled: pb().optional(), $label: pP().optional(), $supporting: pP().optional(), $leading: pP().optional(), $trailing: pP().optional(), $default: pP() }, (e13, t10) => {
   let { slots: r10 } = t10;
   return (t11) => {
     var i10, o10, s10, l10;
     let a10 = e13.valued, c10 = e13.invalid, u10 = e13.disabled, h10 = (null !== (l10 = null === (i10 = r10.default) || void 0 === i10 ? void 0 : i10.call(r10)) && void 0 !== l10 ? l10 : []).map((e14) => "input" === e14.type ? (a10 = !!oM(e14.props, ["value"], oM(e14.props, ["placeholder"], a10)), u10 = oM(e14.props, ["disabled"], u10), f5(e14, { disabled: u10 })) : f5(e14));
-    return bb(t11, { "data-valued": a10, "data-invalid": c10, "data-disabled": u10, "data-focus-within": e13.focus, "data-has-leading": !!r10.leading, "data-has-trailing": !!r10.trailing, children: [bb("div", { "data-input-container": "", children: [r10.leading && bw(Tg, { children: r10.leading() }), bw("div", { "data-input-label": "", children: null === (o10 = r10.label) || void 0 === o10 ? void 0 : o10.call(r10) }), h10, r10.trailing && bw(Tg, { children: r10.trailing() })] }), r10.supporting && bw("div", { "data-input-supporting": "", children: null === (s10 = r10.supporting) || void 0 === s10 ? void 0 : s10.call(r10) })] });
+    return bb(t11, { "data-valued": a10, "data-invalid": c10, "data-disabled": u10, "data-focus-within": e13.focus, "data-has-leading": !!r10.leading, "data-has-trailing": !!r10.trailing, children: [bb("div", { "data-input-container": "", children: [r10.leading && bw(Tb, { children: r10.leading() }), bw("div", { "data-input-label": "", children: null === (o10 = r10.label) || void 0 === o10 ? void 0 : o10.call(r10) }), h10, r10.trailing && bw(Tb, { children: r10.trailing() })] }), r10.supporting && bw("div", { "data-input-supporting": "", children: null === (s10 = r10.supporting) || void 0 === s10 ? void 0 : s10.call(r10) })] });
   };
-})({ display: "block", pos: "relative", textStyle: "sys.body-large", $data_input_container: { pos: "relative" }, $data_input: { outline: "none", flex: 1, w: "100%", m: 0, px: 16, py: 4, minHeight: 56, bg: "none", border: "none", cursor: "text", "&[readonly]": { cursor: "pointer" }, bgColor: "sys.surface-container-highest", color: "sys.on-surface", roundedTop: "xs", borderBottom: "1px solid", borderColor: "sys.outline-variant", textStyle: "sys.body-large", transitionDuration: "sm1", transitionTimingFunction: "standard" }, $data_input_label: { pos: "absolute", top: 4, bottom: 4, left: 16, color: "sys.on-surface-variant", display: "flex", alignItems: "center", transitionDuration: "sm2", transitionTimingFunction: "standard-accelerate" }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: { pt: 18 }, $data_input_label: { top: 8, bottom: "auto", textStyle: "sys.body-small" } }, _focusWithin: { $data_input: { pt: 18, borderBottom: "2px solid", borderColor: "sys.primary" }, $data_input_label: { top: 8, bottom: "auto", textStyle: "sys.body-small", color: "sys.primary" } }, _invalid: { $data_input: { borderBottom: "2px solid", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), Tg = k6("div", { role: px(["leading", "trailing"]).optional().default("leading") })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } });
-Object.assign(Tp, { displayName: "TextField" });
-let Tm = class e11 {
+})({ display: "block", pos: "relative", textStyle: "sys.body-large", $data_input_container: { pos: "relative" }, $data_input: { outline: "none", flex: 1, w: "100%", m: 0, px: 16, py: 4, minHeight: 56, bg: "none", border: "none", cursor: "text", "&[readonly]": { cursor: "pointer" }, bgColor: "sys.surface-container-highest", color: "sys.on-surface", roundedTop: "xs", borderBottom: "1px solid", borderColor: "sys.outline-variant", textStyle: "sys.body-large", transitionDuration: "sm1", transitionTimingFunction: "standard" }, $data_input_label: { pos: "absolute", top: 4, bottom: 4, left: 16, color: "sys.on-surface-variant", display: "flex", alignItems: "center", transitionDuration: "sm2", transitionTimingFunction: "standard-accelerate" }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: { pt: 18 }, $data_input_label: { top: 8, bottom: "auto", textStyle: "sys.body-small" } }, _focusWithin: { $data_input: { pt: 18, borderBottom: "2px solid", borderColor: "sys.primary" }, $data_input_label: { top: 8, bottom: "auto", textStyle: "sys.body-small", color: "sys.primary" } }, _invalid: { $data_input: { borderBottom: "2px solid", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), Tb = k6("div", { role: px(["leading", "trailing"]).optional().default("leading") })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } });
+Object.assign(Ty, { displayName: "TextField" });
+let Tw = class e11 {
   lineAt(e13) {
     if (e13 < 0 || e13 > this.length)
       throw RangeError(`Invalid position ${e13} in document of length ${this.length}`);
@@ -14322,25 +14331,25 @@ let Tm = class e11 {
     return this.lineInner(e13, true, 1, 0);
   }
   replace(e13, t10, r10) {
-    [e13, t10] = TC(this, e13, t10);
+    [e13, t10] = TM(this, e13, t10);
     let i10 = [];
-    return this.decompose(0, e13, i10, 2), r10.length && r10.decompose(0, r10.length, i10, 3), this.decompose(t10, this.length, i10, 1), Ty.from(i10, this.length - (t10 - e13) + r10.length);
+    return this.decompose(0, e13, i10, 2), r10.length && r10.decompose(0, r10.length, i10, 3), this.decompose(t10, this.length, i10, 1), Tk.from(i10, this.length - (t10 - e13) + r10.length);
   }
   append(e13) {
     return this.replace(this.length, this.length, e13);
   }
   slice(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-    [e13, t10] = TC(this, e13, t10);
+    [e13, t10] = TM(this, e13, t10);
     let r10 = [];
-    return this.decompose(e13, t10, r10, 0), Ty.from(r10, t10 - e13);
+    return this.decompose(e13, t10, r10, 0), Tk.from(r10, t10 - e13);
   }
   eq(e13) {
     if (e13 == this)
       return true;
     if (e13.length != this.length || e13.lines != this.lines)
       return false;
-    let t10 = this.scanIdentical(e13, 1), r10 = this.length - this.scanIdentical(e13, -1), i10 = new Tw(this), o10 = new Tw(e13);
+    let t10 = this.scanIdentical(e13, 1), r10 = this.length - this.scanIdentical(e13, -1), i10 = new TC(this), o10 = new TC(e13);
     for (let e14 = t10, s10 = t10; ; ) {
       if (i10.next(e14), o10.next(e14), e14 = 0, i10.lineBreak != o10.lineBreak || i10.done != o10.done || i10.value != o10.value)
         return false;
@@ -14350,11 +14359,11 @@ let Tm = class e11 {
   }
   iter() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-    return new Tw(this, e13);
+    return new TC(this, e13);
   }
   iterRange(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-    return new Tx(this, e13, t10);
+    return new TO(this, e13, t10);
   }
   iterLines(e13, t10) {
     let r10;
@@ -14365,7 +14374,7 @@ let Tm = class e11 {
       let i10 = this.line(e13).from;
       r10 = this.iterRange(i10, Math.max(i10, t10 == this.lines + 1 ? this.length : t10 <= 1 ? 0 : this.line(t10 - 1).to));
     }
-    return new Tk(r10);
+    return new TA(r10);
   }
   toString() {
     return this.sliceString(0);
@@ -14379,10 +14388,10 @@ let Tm = class e11 {
   static of(t10) {
     if (0 == t10.length)
       throw RangeError("A document must have at least one line");
-    return 1 != t10.length || t10[0] ? t10.length <= 32 ? new Tv(t10) : Ty.from(Tv.split(t10, [])) : e11.empty;
+    return 1 != t10.length || t10[0] ? t10.length <= 32 ? new Tx(t10) : Tk.from(Tx.split(t10, [])) : e11.empty;
   }
 };
-class Tv extends Tm {
+class Tx extends Tw {
   constructor(e13, t10 = function(e14) {
     let t11 = -1;
     for (let r10 of e14)
@@ -14401,33 +14410,33 @@ class Tv extends Tm {
     for (let o10 = 0; ; o10++) {
       let s10 = this.text[o10], l10 = i10 + s10.length;
       if ((t10 ? r10 : l10) >= e13)
-        return new TS(i10, l10, r10, s10);
+        return new T_(i10, l10, r10, s10);
       i10 = l10 + 1, r10++;
     }
   }
   decompose(e13, t10, r10, i10) {
-    let o10 = e13 <= 0 && t10 >= this.length ? this : new Tv(Tb(this.text, [""], e13, t10), Math.min(t10, this.length) - Math.max(0, e13));
+    let o10 = e13 <= 0 && t10 >= this.length ? this : new Tx(TS(this.text, [""], e13, t10), Math.min(t10, this.length) - Math.max(0, e13));
     if (1 & i10) {
-      let e14 = r10.pop(), t11 = Tb(o10.text, e14.text.slice(), 0, o10.length);
+      let e14 = r10.pop(), t11 = TS(o10.text, e14.text.slice(), 0, o10.length);
       if (t11.length <= 32)
-        r10.push(new Tv(t11, e14.length + o10.length));
+        r10.push(new Tx(t11, e14.length + o10.length));
       else {
         let e15 = t11.length >> 1;
-        r10.push(new Tv(t11.slice(0, e15)), new Tv(t11.slice(e15)));
+        r10.push(new Tx(t11.slice(0, e15)), new Tx(t11.slice(e15)));
       }
     } else
       r10.push(o10);
   }
   replace(e13, t10, r10) {
-    if (!(r10 instanceof Tv))
+    if (!(r10 instanceof Tx))
       return super.replace(e13, t10, r10);
-    [e13, t10] = TC(this, e13, t10);
-    let i10 = Tb(this.text, Tb(r10.text, Tb(this.text, [""], 0, e13)), t10), o10 = this.length + r10.length - (t10 - e13);
-    return i10.length <= 32 ? new Tv(i10, o10) : Ty.from(Tv.split(i10, []), o10);
+    [e13, t10] = TM(this, e13, t10);
+    let i10 = TS(this.text, TS(r10.text, TS(this.text, [""], 0, e13)), t10), o10 = this.length + r10.length - (t10 - e13);
+    return i10.length <= 32 ? new Tx(i10, o10) : Tk.from(Tx.split(i10, []), o10);
   }
   sliceString(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-    [e13, t10] = TC(this, e13, t10);
+    [e13, t10] = TM(this, e13, t10);
     let i10 = "";
     for (let o10 = 0, s10 = 0; o10 <= t10 && s10 < this.text.length; s10++) {
       let l10 = this.text[s10], a10 = o10 + l10.length;
@@ -14445,11 +14454,11 @@ class Tv extends Tm {
   static split(e13, t10) {
     let r10 = [], i10 = -1;
     for (let o10 of e13)
-      r10.push(o10), i10 += o10.length + 1, 32 == r10.length && (t10.push(new Tv(r10, i10)), r10 = [], i10 = -1);
-    return i10 > -1 && t10.push(new Tv(r10, i10)), t10;
+      r10.push(o10), i10 += o10.length + 1, 32 == r10.length && (t10.push(new Tx(r10, i10)), r10 = [], i10 = -1);
+    return i10 > -1 && t10.push(new Tx(r10, i10)), t10;
   }
 }
-class Ty extends Tm {
+class Tk extends Tw {
   constructor(e13, t10) {
     for (let r10 of (super(), this.children = e13, this.length = t10, this.lines = 0, e13))
       this.lines += r10.lines;
@@ -14473,14 +14482,14 @@ class Ty extends Tm {
     }
   }
   replace(e13, t10, r10) {
-    if ([e13, t10] = TC(this, e13, t10), r10.lines < this.lines)
+    if ([e13, t10] = TM(this, e13, t10), r10.lines < this.lines)
       for (let i10 = 0, o10 = 0; i10 < this.children.length; i10++) {
         let s10 = this.children[i10], l10 = o10 + s10.length;
         if (e13 >= o10 && t10 <= l10) {
           let a10 = s10.replace(e13 - o10, t10 - o10, r10), c10 = this.lines - s10.lines + a10.lines;
           if (a10.lines < c10 >> 4 && a10.lines > c10 >> 6) {
             let o11 = this.children.slice();
-            return o11[i10] = a10, new Ty(o11, this.length - (t10 - e13) + r10.length);
+            return o11[i10] = a10, new Tk(o11, this.length - (t10 - e13) + r10.length);
           }
           return super.replace(o10, l10, a10);
         }
@@ -14490,7 +14499,7 @@ class Ty extends Tm {
   }
   sliceString(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-    [e13, t10] = TC(this, e13, t10);
+    [e13, t10] = TM(this, e13, t10);
     let i10 = "";
     for (let o10 = 0, s10 = 0; o10 < this.children.length && s10 <= t10; o10++) {
       let l10 = this.children[o10], a10 = s10 + l10.length;
@@ -14503,7 +14512,7 @@ class Ty extends Tm {
       t10.flatten(e13);
   }
   scanIdentical(e13, t10) {
-    if (!(e13 instanceof Ty))
+    if (!(e13 instanceof Tk))
       return 0;
     let r10 = 0, [i10, o10, s10, l10] = t10 > 0 ? [0, 0, this.children.length, e13.children.length] : [this.children.length - 1, e13.children.length - 1, -1, -1];
     for (; ; i10 += t10, o10 += t10) {
@@ -14523,25 +14532,25 @@ class Ty extends Tm {
       let r11 = [];
       for (let t11 of e13)
         t11.flatten(r11);
-      return new Tv(r11, t10);
+      return new Tx(r11, t10);
     }
     let i10 = Math.max(32, r10 >> 5), o10 = i10 << 1, s10 = i10 >> 1, l10 = [], a10 = 0, c10 = -1, u10 = [];
     function h10() {
-      0 != a10 && (l10.push(1 == u10.length ? u10[0] : Ty.from(u10, c10)), c10 = -1, a10 = u10.length = 0);
+      0 != a10 && (l10.push(1 == u10.length ? u10[0] : Tk.from(u10, c10)), c10 = -1, a10 = u10.length = 0);
     }
     for (let t11 of e13)
       !function e14(t12) {
         let r11;
-        if (t12.lines > o10 && t12 instanceof Ty)
+        if (t12.lines > o10 && t12 instanceof Tk)
           for (let r12 of t12.children)
             e14(r12);
         else
-          t12.lines > s10 && (a10 > s10 || !a10) ? (h10(), l10.push(t12)) : t12 instanceof Tv && a10 && (r11 = u10[u10.length - 1]) instanceof Tv && t12.lines + r11.lines <= 32 ? (a10 += t12.lines, c10 += t12.length + 1, u10[u10.length - 1] = new Tv(r11.text.concat(t12.text), r11.length + 1 + t12.length)) : (a10 + t12.lines > i10 && h10(), a10 += t12.lines, c10 += t12.length + 1, u10.push(t12));
+          t12.lines > s10 && (a10 > s10 || !a10) ? (h10(), l10.push(t12)) : t12 instanceof Tx && a10 && (r11 = u10[u10.length - 1]) instanceof Tx && t12.lines + r11.lines <= 32 ? (a10 += t12.lines, c10 += t12.length + 1, u10[u10.length - 1] = new Tx(r11.text.concat(t12.text), r11.length + 1 + t12.length)) : (a10 + t12.lines > i10 && h10(), a10 += t12.lines, c10 += t12.length + 1, u10.push(t12));
       }(t11);
-    return h10(), 1 == l10.length ? l10[0] : new Ty(l10, t10);
+    return h10(), 1 == l10.length ? l10[0] : new Tk(l10, t10);
   }
 }
-function Tb(e13, t10) {
+function TS(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, i10 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
   for (let o10 = 0, s10 = 0, l10 = true; s10 < e13.length && o10 <= i10; s10++) {
     let a10 = e13[s10], c10 = o10 + a10.length;
@@ -14549,14 +14558,14 @@ function Tb(e13, t10) {
   }
   return t10;
 }
-Tm.empty = new Tv([""], 0);
-class Tw {
+Tw.empty = new Tx([""], 0);
+class TC {
   constructor(e13, t10 = 1) {
-    this.dir = t10, this.done = false, this.lineBreak = false, this.value = "", this.nodes = [e13], this.offsets = [t10 > 0 ? 1 : (e13 instanceof Tv ? e13.text.length : e13.children.length) << 1];
+    this.dir = t10, this.done = false, this.lineBreak = false, this.value = "", this.nodes = [e13], this.offsets = [t10 > 0 ? 1 : (e13 instanceof Tx ? e13.text.length : e13.children.length) << 1];
   }
   nextInner(e13, t10) {
     for (this.done = this.lineBreak = false; ; ) {
-      let r10 = this.nodes.length - 1, i10 = this.nodes[r10], o10 = this.offsets[r10], s10 = o10 >> 1, l10 = i10 instanceof Tv ? i10.text.length : i10.children.length;
+      let r10 = this.nodes.length - 1, i10 = this.nodes[r10], o10 = this.offsets[r10], s10 = o10 >> 1, l10 = i10 instanceof Tx ? i10.text.length : i10.children.length;
       if (s10 == (t10 > 0 ? l10 : 0)) {
         if (0 == r10)
           return this.done = true, this.value = "", this;
@@ -14565,14 +14574,14 @@ class Tw {
         if (this.offsets[r10] += t10, 0 == e13)
           return this.lineBreak = true, this.value = "\n", this;
         e13--;
-      } else if (i10 instanceof Tv) {
+      } else if (i10 instanceof Tx) {
         let o11 = i10.text[s10 + (t10 < 0 ? -1 : 0)];
         if (this.offsets[r10] += t10, o11.length > Math.max(0, e13))
           return this.value = 0 == e13 ? o11 : t10 > 0 ? o11.slice(e13) : o11.slice(0, o11.length - e13), this;
         e13 -= o11.length;
       } else {
         let o11 = i10.children[s10 + (t10 < 0 ? -1 : 0)];
-        e13 > o11.length ? (e13 -= o11.length, this.offsets[r10] += t10) : (t10 < 0 && this.offsets[r10]--, this.nodes.push(o11), this.offsets.push(t10 > 0 ? 1 : (o11 instanceof Tv ? o11.text.length : o11.children.length) << 1));
+        e13 > o11.length ? (e13 -= o11.length, this.offsets[r10] += t10) : (t10 < 0 && this.offsets[r10]--, this.nodes.push(o11), this.offsets.push(t10 > 0 ? 1 : (o11 instanceof Tx ? o11.text.length : o11.children.length) << 1));
       }
     }
   }
@@ -14581,9 +14590,9 @@ class Tw {
     return e13 < 0 && (this.nextInner(-e13, -this.dir), e13 = this.value.length), this.nextInner(e13, this.dir);
   }
 }
-class Tx {
+class TO {
   constructor(e13, t10, r10) {
-    this.value = "", this.done = false, this.cursor = new Tw(e13, t10 > r10 ? -1 : 1), this.pos = t10 > r10 ? e13.length : 0, this.from = Math.min(t10, r10), this.to = Math.max(t10, r10);
+    this.value = "", this.done = false, this.cursor = new TC(e13, t10 > r10 ? -1 : 1), this.pos = t10 > r10 ? e13.length : 0, this.from = Math.min(t10, r10), this.to = Math.max(t10, r10);
   }
   nextInner(e13, t10) {
     if (t10 < 0 ? this.pos <= this.from : this.pos >= this.to)
@@ -14602,7 +14611,7 @@ class Tx {
     return this.cursor.lineBreak && "" != this.value;
   }
 }
-class Tk {
+class TA {
   constructor(e13) {
     this.inner = e13, this.afterBreak = true, this.value = "", this.done = false;
   }
@@ -14614,12 +14623,12 @@ class Tk {
     return false;
   }
 }
-"undefined" != typeof Symbol && (Tm.prototype[Symbol.iterator] = function() {
+"undefined" != typeof Symbol && (Tw.prototype[Symbol.iterator] = function() {
   return this.iter();
-}, Tw.prototype[Symbol.iterator] = Tx.prototype[Symbol.iterator] = Tk.prototype[Symbol.iterator] = function() {
+}, TC.prototype[Symbol.iterator] = TO.prototype[Symbol.iterator] = TA.prototype[Symbol.iterator] = function() {
   return this;
 });
-class TS {
+class T_ {
   constructor(e13, t10, r10, i10) {
     this.from = e13, this.to = t10, this.number = r10, this.text = i10;
   }
@@ -14627,20 +14636,20 @@ class TS {
     return this.to - this.from;
   }
 }
-function TC(e13, t10, r10) {
+function TM(e13, t10, r10) {
   return [t10 = Math.max(0, Math.min(e13.length, t10)), Math.max(t10, Math.min(e13.length, r10))];
 }
-let TO = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((e13) => e13 ? parseInt(e13, 36) : 1);
-for (let e13 = 1; e13 < TO.length; e13++)
-  TO[e13] += TO[e13 - 1];
-function TA(e13) {
+let TT = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((e13) => e13 ? parseInt(e13, 36) : 1);
+for (let e13 = 1; e13 < TT.length; e13++)
+  TT[e13] += TT[e13 - 1];
+function TP(e13) {
   return e13 >= 127462 && e13 <= 127487;
 }
-function T_(e13, t10) {
+function TE(e13, t10) {
   let r10 = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2], i10 = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (r10 ? TM : function(e14, t11, r11) {
+  return (r10 ? TD : function(e14, t11, r11) {
     for (; t11 > 0; ) {
-      let i11 = TM(e14, t11 - 2, r11);
+      let i11 = TD(e14, t11 - 2, r11);
       if (i11 < t11)
         return i11;
       t11--;
@@ -14648,23 +14657,23 @@ function T_(e13, t10) {
     return 0;
   })(e13, t10, i10);
 }
-function TM(e13, t10, r10) {
+function TD(e13, t10, r10) {
   if (t10 == e13.length)
     return t10;
-  t10 && TT(e13.charCodeAt(t10)) && TP(e13.charCodeAt(t10 - 1)) && t10--;
-  let i10 = TE(e13, t10);
-  for (t10 += TR(i10); t10 < e13.length; ) {
-    let o10 = TE(e13, t10);
+  t10 && TR(e13.charCodeAt(t10)) && TI(e13.charCodeAt(t10 - 1)) && t10--;
+  let i10 = TL(e13, t10);
+  for (t10 += TN(i10); t10 < e13.length; ) {
+    let o10 = TL(e13, t10);
     if (8205 == i10 || 8205 == o10 || r10 && function(e14) {
-      for (let t11 = 1; t11 < TO.length; t11 += 2)
-        if (TO[t11] > e14)
-          return TO[t11 - 1] <= e14;
+      for (let t11 = 1; t11 < TT.length; t11 += 2)
+        if (TT[t11] > e14)
+          return TT[t11 - 1] <= e14;
       return false;
     }(o10))
-      t10 += TR(o10), i10 = o10;
-    else if (TA(o10)) {
+      t10 += TN(o10), i10 = o10;
+    else if (TP(o10)) {
       let r11 = 0, i11 = t10 - 2;
-      for (; i11 >= 0 && TA(TE(e13, i11)); )
+      for (; i11 >= 0 && TP(TL(e13, i11)); )
         r11++, i11 -= 2;
       if (r11 % 2 == 0)
         break;
@@ -14674,28 +14683,28 @@ function TM(e13, t10, r10) {
   }
   return t10;
 }
-function TT(e13) {
+function TR(e13) {
   return e13 >= 56320 && e13 < 57344;
 }
-function TP(e13) {
+function TI(e13) {
   return e13 >= 55296 && e13 < 56320;
 }
-function TE(e13, t10) {
+function TL(e13, t10) {
   let r10 = e13.charCodeAt(t10);
-  if (!TP(r10) || t10 + 1 == e13.length)
+  if (!TI(r10) || t10 + 1 == e13.length)
     return r10;
   let i10 = e13.charCodeAt(t10 + 1);
-  return TT(i10) ? (r10 - 55296 << 10) + (i10 - 56320) + 65536 : r10;
+  return TR(i10) ? (r10 - 55296 << 10) + (i10 - 56320) + 65536 : r10;
 }
-function TD(e13) {
+function Tj(e13) {
   return e13 <= 65535 ? String.fromCharCode(e13) : String.fromCharCode(((e13 -= 65536) >> 10) + 55296, (1023 & e13) + 56320);
 }
-function TR(e13) {
+function TN(e13) {
   return e13 < 65536 ? 1 : 2;
 }
-let TI = /\r\n?|\n/;
-var TL = ((V = TL || (TL = {}))[V.Simple = 0] = "Simple", V[V.TrackDel = 1] = "TrackDel", V[V.TrackBefore = 2] = "TrackBefore", V[V.TrackAfter = 3] = "TrackAfter", V);
-class Tj {
+let TB = /\r\n?|\n/;
+var T$ = ((V = T$ || (T$ = {}))[V.Simple = 0] = "Simple", V[V.TrackDel = 1] = "TrackDel", V[V.TrackBefore = 2] = "TrackBefore", V[V.TrackAfter = 3] = "TrackAfter", V);
+class TF {
   constructor(e13) {
     this.sections = e13;
   }
@@ -14724,7 +14733,7 @@ class Tj {
   }
   iterChangedRanges(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    TF(this, e13, t10);
+    TW(this, e13, t10);
   }
   get invertedDesc() {
     let e13 = [];
@@ -14732,17 +14741,17 @@ class Tj {
       let r10 = this.sections[t10++], i10 = this.sections[t10++];
       i10 < 0 ? e13.push(r10, i10) : e13.push(i10, r10);
     }
-    return new Tj(e13);
+    return new TF(e13);
   }
   composeDesc(e13) {
-    return this.empty ? e13 : e13.empty ? this : TV(this, e13);
+    return this.empty ? e13 : e13.empty ? this : Tq(this, e13);
   }
   mapDesc(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return e13.empty ? this : Tz(this, e13, t10);
+    return e13.empty ? this : TU(this, e13, t10);
   }
   mapPos(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TL.Simple, i10 = 0, o10 = 0;
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T$.Simple, i10 = 0, o10 = 0;
     for (let s10 = 0; s10 < this.sections.length; ) {
       let l10 = this.sections[s10++], a10 = this.sections[s10++], c10 = i10 + l10;
       if (a10 < 0) {
@@ -14750,7 +14759,7 @@ class Tj {
           return o10 + (e13 - i10);
         o10 += l10;
       } else {
-        if (r10 != TL.Simple && c10 >= e13 && (r10 == TL.TrackDel && i10 < e13 && c10 > e13 || r10 == TL.TrackBefore && i10 < e13 || r10 == TL.TrackAfter && c10 > e13))
+        if (r10 != T$.Simple && c10 >= e13 && (r10 == T$.TrackDel && i10 < e13 && c10 > e13 || r10 == T$.TrackBefore && i10 < e13 || r10 == T$.TrackAfter && c10 > e13))
           return null;
         if (c10 > e13 || c10 == e13 && t10 < 0 && !l10)
           return e13 == i10 || t10 < 0 ? o10 : o10 + a10;
@@ -14786,24 +14795,24 @@ class Tj {
   static fromJSON(e13) {
     if (!Array.isArray(e13) || e13.length % 2 || e13.some((e14) => "number" != typeof e14))
       throw RangeError("Invalid JSON representation of ChangeDesc");
-    return new Tj(e13);
+    return new TF(e13);
   }
   static create(e13) {
-    return new Tj(e13);
+    return new TF(e13);
   }
 }
-class TN extends Tj {
+class Tz extends TF {
   constructor(e13, t10) {
     super(e13), this.inserted = t10;
   }
   apply(e13) {
     if (this.length != e13.length)
       throw RangeError("Applying change set to a document with the wrong length");
-    return TF(this, (t10, r10, i10, o10, s10) => e13 = e13.replace(i10, i10 + (r10 - t10), s10), false), e13;
+    return TW(this, (t10, r10, i10, o10, s10) => e13 = e13.replace(i10, i10 + (r10 - t10), s10), false), e13;
   }
   mapDesc(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return Tz(this, e13, t10, true);
+    return TU(this, e13, t10, true);
   }
   invert(e13) {
     let t10 = this.sections.slice(), r10 = [];
@@ -14813,29 +14822,29 @@ class TN extends Tj {
         t10[i10] = l10, t10[i10 + 1] = s10;
         let a10 = i10 >> 1;
         for (; r10.length < a10; )
-          r10.push(Tm.empty);
-        r10.push(s10 ? e13.slice(o10, o10 + s10) : Tm.empty);
+          r10.push(Tw.empty);
+        r10.push(s10 ? e13.slice(o10, o10 + s10) : Tw.empty);
       }
       o10 += s10;
     }
-    return new TN(t10, r10);
+    return new Tz(t10, r10);
   }
   compose(e13) {
-    return this.empty ? e13 : e13.empty ? this : TV(this, e13, true);
+    return this.empty ? e13 : e13.empty ? this : Tq(this, e13, true);
   }
   map(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return e13.empty ? this : Tz(this, e13, t10, true);
+    return e13.empty ? this : TU(this, e13, t10, true);
   }
   iterChanges(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    TF(this, e13, t10);
+    TW(this, e13, t10);
   }
   get desc() {
-    return Tj.create(this.sections);
+    return TF.create(this.sections);
   }
   filter(e13) {
-    let t10 = [], r10 = [], i10 = [], o10 = new TH(this);
+    let t10 = [], r10 = [], i10 = [], o10 = new TX(this);
     e:
       for (let s10 = 0, l10 = 0; ; ) {
         let a10 = s10 == e13.length ? 1e9 : e13[s10++];
@@ -14843,19 +14852,19 @@ class TN extends Tj {
           if (o10.done)
             break e;
           let e14 = Math.min(o10.len, a10 - l10);
-          TB(i10, e14, -1);
+          TV(i10, e14, -1);
           let s11 = -1 == o10.ins ? -1 : 0 == o10.off ? o10.ins : 0;
-          TB(t10, e14, s11), s11 > 0 && T$(r10, t10, o10.text), o10.forward(e14), l10 += e14;
+          TV(t10, e14, s11), s11 > 0 && TH(r10, t10, o10.text), o10.forward(e14), l10 += e14;
         }
         let c10 = e13[s10++];
         for (; l10 < c10; ) {
           if (o10.done)
             break e;
           let e14 = Math.min(o10.len, c10 - l10);
-          TB(t10, e14, -1), TB(i10, e14, -1 == o10.ins ? -1 : 0 == o10.off ? o10.ins : 0), o10.forward(e14), l10 += e14;
+          TV(t10, e14, -1), TV(i10, e14, -1 == o10.ins ? -1 : 0 == o10.off ? o10.ins : 0), o10.forward(e14), l10 += e14;
         }
       }
-    return { changes: new TN(t10, r10), filtered: Tj.create(i10) };
+    return { changes: new Tz(t10, r10), filtered: TF.create(i10) };
   }
   toJSON() {
     let e13 = [];
@@ -14871,15 +14880,15 @@ class TN extends Tj {
       let e14 = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       if (!e14 && !i10.length)
         return;
-      s10 < t10 && TB(i10, t10 - s10, -1);
-      let r11 = new TN(i10, o10);
+      s10 < t10 && TV(i10, t10 - s10, -1);
+      let r11 = new Tz(i10, o10);
       l10 = l10 ? l10.compose(r11.map(l10)) : r11, i10 = [], o10 = [], s10 = 0;
     }
     return !function e14(c10) {
       if (Array.isArray(c10))
         for (let t11 of c10)
           e14(t11);
-      else if (c10 instanceof TN) {
+      else if (c10 instanceof Tz) {
         if (c10.length != t10)
           throw RangeError(`Mismatched change set length (got ${c10.length}, expected ${t10})`);
         a10(), l10 = l10 ? l10.compose(c10.map(l10)) : c10;
@@ -14887,15 +14896,15 @@ class TN extends Tj {
         let { from: e15, to: l11 = e15, insert: u10 } = c10;
         if (e15 > l11 || e15 < 0 || l11 > t10)
           throw RangeError(`Invalid change range ${e15} to ${l11} (in doc of length ${t10})`);
-        let h10 = u10 ? "string" == typeof u10 ? Tm.of(u10.split(r10 || TI)) : u10 : Tm.empty, f10 = h10.length;
+        let h10 = u10 ? "string" == typeof u10 ? Tw.of(u10.split(r10 || TB)) : u10 : Tw.empty, f10 = h10.length;
         if (e15 == l11 && 0 == f10)
           return;
-        e15 < s10 && a10(), e15 > s10 && TB(i10, e15 - s10, -1), TB(i10, l11 - e15, f10), T$(o10, i10, h10), s10 = l11;
+        e15 < s10 && a10(), e15 > s10 && TV(i10, e15 - s10, -1), TV(i10, l11 - e15, f10), TH(o10, i10, h10), s10 = l11;
       }
     }(e13), a10(!l10), l10;
   }
   static empty(e13) {
-    return new TN(e13 ? [e13, -1] : [], []);
+    return new Tz(e13 ? [e13, -1] : [], []);
   }
   static fromJSON(e13) {
     if (!Array.isArray(e13))
@@ -14911,24 +14920,24 @@ class TN extends Tj {
         t10.push(o10[0], 0);
       else {
         for (; r10.length < i10; )
-          r10.push(Tm.empty);
-        r10[i10] = Tm.of(o10.slice(1)), t10.push(o10[0], r10[i10].length);
+          r10.push(Tw.empty);
+        r10[i10] = Tw.of(o10.slice(1)), t10.push(o10[0], r10[i10].length);
       }
     }
-    return new TN(t10, r10);
+    return new Tz(t10, r10);
   }
   static createSet(e13, t10) {
-    return new TN(e13, t10);
+    return new Tz(e13, t10);
   }
 }
-function TB(e13, t10, r10) {
+function TV(e13, t10, r10) {
   let i10 = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   if (0 == t10 && r10 <= 0)
     return;
   let o10 = e13.length - 2;
   o10 >= 0 && r10 <= 0 && r10 == e13[o10 + 1] ? e13[o10] += t10 : 0 == t10 && 0 == e13[o10] ? e13[o10 + 1] += r10 : i10 ? (e13[o10] += t10, e13[o10 + 1] += r10) : e13.push(t10, r10);
 }
-function T$(e13, t10, r10) {
+function TH(e13, t10, r10) {
   if (0 == r10.length)
     return;
   let i10 = t10.length - 2 >> 1;
@@ -14936,35 +14945,35 @@ function T$(e13, t10, r10) {
     e13[e13.length - 1] = e13[e13.length - 1].append(r10);
   else {
     for (; e13.length < i10; )
-      e13.push(Tm.empty);
+      e13.push(Tw.empty);
     e13.push(r10);
   }
 }
-function TF(e13, t10, r10) {
+function TW(e13, t10, r10) {
   let i10 = e13.inserted;
   for (let o10 = 0, s10 = 0, l10 = 0; l10 < e13.sections.length; ) {
     let a10 = e13.sections[l10++], c10 = e13.sections[l10++];
     if (c10 < 0)
       o10 += a10, s10 += a10;
     else {
-      let u10 = o10, h10 = s10, f10 = Tm.empty;
+      let u10 = o10, h10 = s10, f10 = Tw.empty;
       for (; u10 += a10, h10 += c10, c10 && i10 && (f10 = f10.append(i10[l10 - 2 >> 1])), !r10 && l10 != e13.sections.length && !(e13.sections[l10 + 1] < 0); )
         a10 = e13.sections[l10++], c10 = e13.sections[l10++];
       t10(o10, u10, s10, h10, f10), o10 = u10, s10 = h10;
     }
   }
 }
-function Tz(e13, t10, r10) {
-  let i10 = arguments.length > 3 && void 0 !== arguments[3] && arguments[3], o10 = [], s10 = i10 ? [] : null, l10 = new TH(e13), a10 = new TH(t10);
+function TU(e13, t10, r10) {
+  let i10 = arguments.length > 3 && void 0 !== arguments[3] && arguments[3], o10 = [], s10 = i10 ? [] : null, l10 = new TX(e13), a10 = new TX(t10);
   for (let e14 = -1; ; )
     if (-1 == l10.ins && -1 == a10.ins) {
       let e15 = Math.min(l10.len, a10.len);
-      TB(o10, e15, -1), l10.forward(e15), a10.forward(e15);
+      TV(o10, e15, -1), l10.forward(e15), a10.forward(e15);
     } else if (a10.ins >= 0 && (l10.ins < 0 || e14 == l10.i || 0 == l10.off && (a10.len < l10.len || a10.len == l10.len && !r10))) {
       let t11 = a10.len;
-      for (TB(o10, a10.ins, -1); t11; ) {
+      for (TV(o10, a10.ins, -1); t11; ) {
         let r11 = Math.min(l10.len, t11);
-        l10.ins >= 0 && e14 < l10.i && l10.len <= r11 && (TB(o10, 0, l10.ins), s10 && T$(s10, o10, l10.text), e14 = l10.i), l10.forward(r11), t11 -= r11;
+        l10.ins >= 0 && e14 < l10.i && l10.len <= r11 && (TV(o10, 0, l10.ins), s10 && TH(s10, o10, l10.text), e14 = l10.i), l10.forward(r11), t11 -= r11;
       }
       a10.next();
     } else if (l10.ins >= 0) {
@@ -14977,19 +14986,19 @@ function Tz(e13, t10, r10) {
           r11 -= a10.len, a10.next();
         else
           break;
-      TB(o10, t11, e14 < l10.i ? l10.ins : 0), s10 && e14 < l10.i && T$(s10, o10, l10.text), e14 = l10.i, l10.forward(l10.len - r11);
+      TV(o10, t11, e14 < l10.i ? l10.ins : 0), s10 && e14 < l10.i && TH(s10, o10, l10.text), e14 = l10.i, l10.forward(l10.len - r11);
     } else if (l10.done && a10.done)
-      return s10 ? TN.createSet(o10, s10) : Tj.create(o10);
+      return s10 ? Tz.createSet(o10, s10) : TF.create(o10);
     else
       throw Error("Mismatched change set lengths");
 }
-function TV(e13, t10) {
-  let r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = [], o10 = r10 ? [] : null, s10 = new TH(e13), l10 = new TH(t10);
+function Tq(e13, t10) {
+  let r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = [], o10 = r10 ? [] : null, s10 = new TX(e13), l10 = new TX(t10);
   for (let e14 = false; ; ) {
     if (s10.done && l10.done)
-      return o10 ? TN.createSet(i10, o10) : Tj.create(i10);
+      return o10 ? Tz.createSet(i10, o10) : TF.create(i10);
     if (0 == s10.ins)
-      TB(i10, s10.len, 0, e14), s10.next();
+      TV(i10, s10.len, 0, e14), s10.next();
     else if (0 != l10.len || l10.done) {
       if (s10.done || l10.done)
         throw Error("Mismatched change set lengths");
@@ -14997,16 +15006,16 @@ function TV(e13, t10) {
         let t11 = Math.min(s10.len2, l10.len), r11 = i10.length;
         if (-1 == s10.ins) {
           let r12 = -1 == l10.ins ? -1 : l10.off ? 0 : l10.ins;
-          TB(i10, t11, r12, e14), o10 && r12 && T$(o10, i10, l10.text);
+          TV(i10, t11, r12, e14), o10 && r12 && TH(o10, i10, l10.text);
         } else
-          -1 == l10.ins ? (TB(i10, s10.off ? 0 : s10.len, t11, e14), o10 && T$(o10, i10, s10.textBit(t11))) : (TB(i10, s10.off ? 0 : s10.len, l10.off ? 0 : l10.ins, e14), o10 && !l10.off && T$(o10, i10, l10.text));
+          -1 == l10.ins ? (TV(i10, s10.off ? 0 : s10.len, t11, e14), o10 && TH(o10, i10, s10.textBit(t11))) : (TV(i10, s10.off ? 0 : s10.len, l10.off ? 0 : l10.ins, e14), o10 && !l10.off && TH(o10, i10, l10.text));
         e14 = (s10.ins > t11 || l10.ins >= 0 && l10.len > t11) && (e14 || i10.length > r11), s10.forward2(t11), l10.forward(t11);
       }
     } else
-      TB(i10, 0, l10.ins, e14), o10 && T$(o10, i10, l10.text), l10.next();
+      TV(i10, 0, l10.ins, e14), o10 && TH(o10, i10, l10.text), l10.next();
   }
 }
-class TH {
+class TX {
   constructor(e13) {
     this.set = e13, this.i = 0, this.next();
   }
@@ -15022,11 +15031,11 @@ class TH {
   }
   get text() {
     let { inserted: e13 } = this.set, t10 = this.i - 2 >> 1;
-    return t10 >= e13.length ? Tm.empty : e13[t10];
+    return t10 >= e13.length ? Tw.empty : e13[t10];
   }
   textBit(e13) {
     let { inserted: t10 } = this.set, r10 = this.i - 2 >> 1;
-    return r10 >= t10.length && !e13 ? Tm.empty : t10[r10].slice(this.off, null == e13 ? void 0 : this.off + e13);
+    return r10 >= t10.length && !e13 ? Tw.empty : t10[r10].slice(this.off, null == e13 ? void 0 : this.off + e13);
   }
   forward(e13) {
     e13 == this.len ? this.next() : (this.len -= e13, this.off += e13);
@@ -15035,7 +15044,7 @@ class TH {
     -1 == this.ins ? this.forward(e13) : e13 == this.ins ? this.next() : (this.ins -= e13, this.off += e13);
   }
 }
-class TW {
+class TQ {
   constructor(e13, t10, r10) {
     this.from = e13, this.to = t10, this.flags = r10;
   }
@@ -15061,14 +15070,14 @@ class TW {
   }
   map(e13) {
     let t10, r10, i10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-    return this.empty ? t10 = r10 = e13.mapPos(this.from, i10) : (t10 = e13.mapPos(this.from, 1), r10 = e13.mapPos(this.to, -1)), t10 == this.from && r10 == this.to ? this : new TW(t10, r10, this.flags);
+    return this.empty ? t10 = r10 = e13.mapPos(this.from, i10) : (t10 = e13.mapPos(this.from, 1), r10 = e13.mapPos(this.to, -1)), t10 == this.from && r10 == this.to ? this : new TQ(t10, r10, this.flags);
   }
   extend(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
     if (e13 <= this.anchor && t10 >= this.anchor)
-      return TU.range(e13, t10);
+      return TY.range(e13, t10);
     let r10 = Math.abs(e13 - this.anchor) > Math.abs(t10 - this.anchor) ? e13 : t10;
-    return TU.range(this.anchor, r10);
+    return TY.range(this.anchor, r10);
   }
   eq(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -15080,19 +15089,19 @@ class TW {
   static fromJSON(e13) {
     if (!e13 || "number" != typeof e13.anchor || "number" != typeof e13.head)
       throw RangeError("Invalid JSON representation for SelectionRange");
-    return TU.range(e13.anchor, e13.head);
+    return TY.range(e13.anchor, e13.head);
   }
   static create(e13, t10, r10) {
-    return new TW(e13, t10, r10);
+    return new TQ(e13, t10, r10);
   }
 }
-class TU {
+class TY {
   constructor(e13, t10) {
     this.ranges = e13, this.mainIndex = t10;
   }
   map(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-    return e13.empty ? this : TU.create(this.ranges.map((r10) => r10.map(e13, t10)), this.mainIndex);
+    return e13.empty ? this : TY.create(this.ranges.map((r10) => r10.map(e13, t10)), this.mainIndex);
   }
   eq(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -15107,15 +15116,15 @@ class TU {
     return this.ranges[this.mainIndex];
   }
   asSingle() {
-    return 1 == this.ranges.length ? this : new TU([this.main], 0);
+    return 1 == this.ranges.length ? this : new TY([this.main], 0);
   }
   addRange(e13) {
     let t10 = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return TU.create([e13].concat(this.ranges), t10 ? 0 : this.mainIndex + 1);
+    return TY.create([e13].concat(this.ranges), t10 ? 0 : this.mainIndex + 1);
   }
   replaceRange(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex, r10 = this.ranges.slice();
-    return r10[t10] = e13, TU.create(r10, this.mainIndex);
+    return r10[t10] = e13, TY.create(r10, this.mainIndex);
   }
   toJSON() {
     return { ranges: this.ranges.map((e13) => e13.toJSON()), main: this.mainIndex };
@@ -15123,11 +15132,11 @@ class TU {
   static fromJSON(e13) {
     if (!e13 || !Array.isArray(e13.ranges) || "number" != typeof e13.main || e13.main >= e13.ranges.length)
       throw RangeError("Invalid JSON representation for EditorSelection");
-    return new TU(e13.ranges.map((e14) => TW.fromJSON(e14)), e13.main);
+    return new TY(e13.ranges.map((e14) => TQ.fromJSON(e14)), e13.main);
   }
   static single(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
-    return new TU([TU.range(e13, t10)], 0);
+    return new TY([TY.range(e13, t10)], 0);
   }
   static create(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
@@ -15136,18 +15145,18 @@ class TU {
     for (let r10 = 0, i10 = 0; i10 < e13.length; i10++) {
       let o10 = e13[i10];
       if (o10.empty ? o10.from <= r10 : o10.from < r10)
-        return TU.normalized(e13.slice(), t10);
+        return TY.normalized(e13.slice(), t10);
       r10 = o10.to;
     }
-    return new TU(e13, t10);
+    return new TY(e13, t10);
   }
   static cursor(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = arguments.length > 2 ? arguments[2] : void 0, i10 = arguments.length > 3 ? arguments[3] : void 0;
-    return TW.create(e13, e13, (0 == t10 ? 0 : t10 < 0 ? 8 : 16) | (null == r10 ? 7 : Math.min(6, r10)) | (null != i10 ? i10 : 16777215) << 6);
+    return TQ.create(e13, e13, (0 == t10 ? 0 : t10 < 0 ? 8 : 16) | (null == r10 ? 7 : Math.min(6, r10)) | (null != i10 ? i10 : 16777215) << 6);
   }
   static range(e13, t10, r10, i10) {
     let o10 = (null != r10 ? r10 : 16777215) << 6 | (null == i10 ? 7 : Math.min(6, i10));
-    return t10 < e13 ? TW.create(t10, e13, 48 | o10) : TW.create(e13, t10, (t10 > e13 ? 8 : 0) | o10);
+    return t10 < e13 ? TQ.create(t10, e13, 48 | o10) : TQ.create(e13, t10, (t10 > e13 ? 8 : 0) | o10);
   }
   static normalized(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = e13[t10];
@@ -15156,52 +15165,52 @@ class TU {
       let i10 = e13[r11], o10 = e13[r11 - 1];
       if (i10.empty ? i10.from <= o10.to : i10.from < o10.to) {
         let s10 = o10.from, l10 = Math.max(i10.to, o10.to);
-        r11 <= t10 && t10--, e13.splice(--r11, 2, i10.anchor > i10.head ? TU.range(l10, s10) : TU.range(s10, l10));
+        r11 <= t10 && t10--, e13.splice(--r11, 2, i10.anchor > i10.head ? TY.range(l10, s10) : TY.range(s10, l10));
       }
     }
-    return new TU(e13, t10);
+    return new TY(e13, t10);
   }
 }
-function Tq(e13, t10) {
+function TK(e13, t10) {
   for (let r10 of e13.ranges)
     if (r10.to > t10)
       throw RangeError("Selection points outside of document");
 }
-let TX = 0;
-class TQ {
+let TG = 0;
+class TJ {
   constructor(e13, t10, r10, i10, o10) {
-    this.combine = e13, this.compareInput = t10, this.compare = r10, this.isStatic = i10, this.id = TX++, this.default = e13([]), this.extensions = "function" == typeof o10 ? o10(this) : o10;
+    this.combine = e13, this.compareInput = t10, this.compare = r10, this.isStatic = i10, this.id = TG++, this.default = e13([]), this.extensions = "function" == typeof o10 ? o10(this) : o10;
   }
   get reader() {
     return this;
   }
   static define() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return new TQ(e13.combine || ((e14) => e14), e13.compareInput || ((e14, t10) => e14 === t10), e13.compare || (e13.combine ? (e14, t10) => e14 === t10 : TY), !!e13.static, e13.enables);
+    return new TJ(e13.combine || ((e14) => e14), e13.compareInput || ((e14, t10) => e14 === t10), e13.compare || (e13.combine ? (e14, t10) => e14 === t10 : TZ), !!e13.static, e13.enables);
   }
   of(e13) {
-    return new TK([], this, 0, e13);
+    return new T0([], this, 0, e13);
   }
   compute(e13, t10) {
     if (this.isStatic)
       throw Error("Can't compute a static facet");
-    return new TK(e13, this, 1, t10);
+    return new T0(e13, this, 1, t10);
   }
   computeN(e13, t10) {
     if (this.isStatic)
       throw Error("Can't compute a static facet");
-    return new TK(e13, this, 2, t10);
+    return new T0(e13, this, 2, t10);
   }
   from(e13, t10) {
     return t10 || (t10 = (e14) => e14), this.compute([e13], (r10) => t10(r10.field(e13)));
   }
 }
-function TY(e13, t10) {
+function TZ(e13, t10) {
   return e13 == t10 || e13.length == t10.length && e13.every((e14, r10) => e14 === t10[r10]);
 }
-class TK {
+class T0 {
   constructor(e13, t10, r10, i10) {
-    this.dependencies = e13, this.facet = t10, this.type = r10, this.value = i10, this.id = TX++;
+    this.dependencies = e13, this.facet = t10, this.type = r10, this.value = i10, this.id = TG++;
   }
   dynamicSlot(e13) {
     var t10;
@@ -15209,17 +15218,17 @@ class TK {
     for (let r11 of this.dependencies)
       "doc" == r11 ? a10 = true : "selection" == r11 ? c10 = true : ((null !== (t10 = e13[r11.id]) && void 0 !== t10 ? t10 : 1) & 1) == 0 && u10.push(e13[r11.id]);
     return { create: (e14) => (e14.values[s10] = r10(e14), 1), update(e14, t11) {
-      if (a10 && t11.docChanged || c10 && (t11.docChanged || t11.selection) || TJ(e14, u10)) {
+      if (a10 && t11.docChanged || c10 && (t11.docChanged || t11.selection) || T2(e14, u10)) {
         let t12 = r10(e14);
-        if (l10 ? !TG(t12, e14.values[s10], i10) : !i10(t12, e14.values[s10]))
+        if (l10 ? !T1(t12, e14.values[s10], i10) : !i10(t12, e14.values[s10]))
           return e14.values[s10] = t12, 1;
       }
       return 0;
     }, reconfigure: (e14, t11) => {
       let a11, c11 = t11.config.address[o10];
       if (null != c11) {
-        let o11 = T7(t11, c11);
-        if (this.dependencies.every((r11) => r11 instanceof TQ ? t11.facet(r11) === e14.facet(r11) : !(r11 instanceof T0) || t11.field(r11, false) == e14.field(r11, false)) || (l10 ? TG(a11 = r10(e14), o11, i10) : i10(a11 = r10(e14), o11)))
+        let o11 = Pr(t11, c11);
+        if (this.dependencies.every((r11) => r11 instanceof TJ ? t11.facet(r11) === e14.facet(r11) : !(r11 instanceof T3) || t11.field(r11, false) == e14.field(r11, false)) || (l10 ? T1(a11 = r10(e14), o11, i10) : i10(a11 = r10(e14), o11)))
           return e14.values[s10] = o11, 0;
       } else
         a11 = r10(e14);
@@ -15227,7 +15236,7 @@ class TK {
     } };
   }
 }
-function TG(e13, t10, r10) {
+function T1(e13, t10, r10) {
   if (e13.length != t10.length)
     return false;
   for (let i10 = 0; i10 < e13.length; i10++)
@@ -15235,23 +15244,23 @@ function TG(e13, t10, r10) {
       return false;
   return true;
 }
-function TJ(e13, t10) {
+function T2(e13, t10) {
   let r10 = false;
   for (let i10 of t10)
-    1 & T9(e13, i10) && (r10 = true);
+    1 & Pn(e13, i10) && (r10 = true);
   return r10;
 }
-let TZ = TQ.define({ static: true });
-class T0 {
+let T4 = TJ.define({ static: true });
+class T3 {
   constructor(e13, t10, r10, i10, o10) {
     this.id = e13, this.createF = t10, this.updateF = r10, this.compareF = i10, this.spec = o10, this.provides = void 0;
   }
   static define(e13) {
-    let t10 = new T0(TX++, e13.create, e13.update, e13.compare || ((e14, t11) => e14 === t11), e13);
+    let t10 = new T3(TG++, e13.create, e13.update, e13.compare || ((e14, t11) => e14 === t11), e13);
     return e13.provide && (t10.provides = e13.provide(t10)), t10;
   }
   create(e13) {
-    let t10 = e13.facet(TZ).find((e14) => e14.field == this);
+    let t10 = e13.facet(T4).find((e14) => e14.field == this);
     return ((null == t10 ? void 0 : t10.create) || this.createF)(e13);
   }
   slot(e13) {
@@ -15262,39 +15271,39 @@ class T0 {
     }, reconfigure: (e14, r10) => null != r10.config.address[this.id] ? (e14.values[t10] = r10.field(this), 0) : (e14.values[t10] = this.create(e14), 1) };
   }
   init(e13) {
-    return [this, TZ.of({ field: this, create: e13 })];
+    return [this, T4.of({ field: this, create: e13 })];
   }
   get extension() {
     return this;
   }
 }
-let T1 = { lowest: 4, low: 3, default: 2, high: 1, highest: 0 };
-function T2(e13) {
-  return (t10) => new T3(t10, e13);
+let T5 = { lowest: 4, low: 3, default: 2, high: 1, highest: 0 };
+function T8(e13) {
+  return (t10) => new T9(t10, e13);
 }
-let T4 = { highest: T2(T1.highest), high: T2(T1.high), default: T2(T1.default), low: T2(T1.low), lowest: T2(T1.lowest) };
-class T3 {
+let T6 = { highest: T8(T5.highest), high: T8(T5.high), default: T8(T5.default), low: T8(T5.low), lowest: T8(T5.lowest) };
+class T9 {
   constructor(e13, t10) {
     this.inner = e13, this.prec = t10;
   }
 }
-class T5 {
+class T7 {
   of(e13) {
-    return new T8(this, e13);
+    return new Pe(this, e13);
   }
   reconfigure(e13) {
-    return T5.reconfigure.of({ compartment: this, extension: e13 });
+    return T7.reconfigure.of({ compartment: this, extension: e13 });
   }
   get(e13) {
     return e13.config.compartments.get(this);
   }
 }
-class T8 {
+class Pe {
   constructor(e13, t10) {
     this.compartment = e13, this.inner = t10;
   }
 }
-class T6 {
+class Pt {
   constructor(e13, t10, r10, i10, o10, s10) {
     for (this.base = e13, this.compartments = t10, this.dynamicSlots = r10, this.address = i10, this.staticValues = o10, this.facets = s10, this.statusTemplate = []; this.statusTemplate.length < r10.length; )
       this.statusTemplate.push(0);
@@ -15311,30 +15320,30 @@ class T6 {
         if (l11 <= s11)
           return;
         let e15 = i10[l11].indexOf(r12);
-        e15 > -1 && i10[l11].splice(e15, 1), r12 instanceof T8 && a10.delete(r12.compartment);
+        e15 > -1 && i10[l11].splice(e15, 1), r12 instanceof Pe && a10.delete(r12.compartment);
       }
       if (o10.set(r12, s11), Array.isArray(r12))
         for (let t11 of r12)
           e14(t11, s11);
-      else if (r12 instanceof T8) {
+      else if (r12 instanceof Pe) {
         if (a10.has(r12.compartment))
           throw RangeError("Duplicate use of compartment in extensions");
         let i11 = t10.get(r12.compartment) || r12.inner;
         a10.set(r12.compartment, i11), e14(i11, s11);
-      } else if (r12 instanceof T3)
+      } else if (r12 instanceof T9)
         e14(r12.inner, r12.prec);
-      else if (r12 instanceof T0)
+      else if (r12 instanceof T3)
         i10[s11].push(r12), r12.provides && e14(r12.provides, s11);
-      else if (r12 instanceof TK)
-        i10[s11].push(r12), r12.facet.extensions && e14(r12.facet.extensions, T1.default);
+      else if (r12 instanceof T0)
+        i10[s11].push(r12), r12.facet.extensions && e14(r12.facet.extensions, T5.default);
       else {
         let t11 = r12.extension;
         if (!t11)
           throw Error(`Unrecognized extension value in extension set (${r12}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
         e14(t11, s11);
       }
-    }(e13, T1.default), i10.reduce((e14, t11) => e14.concat(t11))))
-      r11 instanceof T0 ? s10.push(r11) : (l10[r11.facet.id] || (l10[r11.facet.id] = [])).push(r11);
+    }(e13, T5.default), i10.reduce((e14, t11) => e14.concat(t11))))
+      r11 instanceof T3 ? s10.push(r11) : (l10[r11.facet.id] || (l10[r11.facet.id] = [])).push(r11);
     let c10 = /* @__PURE__ */ Object.create(null), u10 = [], h10 = [];
     for (let e14 of s10)
       c10[e14.id] = h10.length << 1, h10.push((t11) => e14.slot(t11));
@@ -15342,7 +15351,7 @@ class T6 {
     for (let e14 in l10) {
       let t11 = l10[e14], i11 = t11[0].facet, o11 = f10 && f10[e14] || [];
       if (t11.every((e15) => 0 == e15.type)) {
-        if (c10[i11.id] = u10.length << 1 | 1, TY(o11, t11))
+        if (c10[i11.id] = u10.length << 1 | 1, TZ(o11, t11))
           u10.push(r10.facet(i11));
         else {
           let e15 = i11.combine(t11.map((e16) => e16.value));
@@ -15356,7 +15365,7 @@ class T6 {
           function a11(e17) {
             let r12 = [];
             for (let t13 = 0; t13 < i12.length; t13++) {
-              let s12 = T7(e17, i12[t13]);
+              let s12 = Pr(e17, i12[t13]);
               if (2 == o12[t13])
                 for (let e18 of s12)
                   r12.push(e18);
@@ -15367,16 +15376,16 @@ class T6 {
           }
           return { create(e17) {
             for (let t13 of i12)
-              T9(e17, t13);
+              Pn(e17, t13);
             return e17.values[l11] = a11(e17), 1;
           }, update(e17, r12) {
-            if (!TJ(e17, s11))
+            if (!T2(e17, s11))
               return 0;
             let i13 = a11(e17);
             return t12.compare(i13, e17.values[l11]) ? 0 : (e17.values[l11] = i13, 1);
           }, reconfigure(e17, o13) {
-            let s12 = TJ(e17, i12), c11 = o13.config.facets[t12.id], u11 = o13.facet(t12);
-            if (c11 && !s12 && TY(r11, c11))
+            let s12 = T2(e17, i12), c11 = o13.config.facets[t12.id], u11 = o13.facet(t12);
+            if (c11 && !s12 && TZ(r11, c11))
               return e17.values[l11] = u11, 0;
             let h11 = a11(e17);
             return t12.compare(h11, u11) ? (e17.values[l11] = u11, 0) : (e17.values[l11] = h11, 1);
@@ -15384,10 +15393,10 @@ class T6 {
         }(e15, i11, t11));
       }
     }
-    return new T6(e13, a10, h10.map((e14) => e14(c10)), c10, u10, l10);
+    return new Pt(e13, a10, h10.map((e14) => e14(c10)), c10, u10, l10);
   }
 }
-function T9(e13, t10) {
+function Pn(e13, t10) {
   if (1 & t10)
     return 2;
   let r10 = t10 >> 1, i10 = e13.status[r10];
@@ -15399,45 +15408,45 @@ function T9(e13, t10) {
   let o10 = e13.computeSlot(e13, e13.config.dynamicSlots[r10]);
   return e13.status[r10] = 2 | o10;
 }
-function T7(e13, t10) {
+function Pr(e13, t10) {
   return 1 & t10 ? e13.config.staticValues[t10 >> 1] : e13.values[t10 >> 1];
 }
-let Pe = TQ.define(), Pt = TQ.define({ combine: (e13) => e13.some((e14) => e14), static: true }), Pn = TQ.define({ combine: (e13) => e13.length ? e13[0] : void 0, static: true }), Pr = TQ.define(), Pi = TQ.define(), Po = TQ.define(), Ps = TQ.define({ combine: (e13) => !!e13.length && e13[0] });
-class Pl {
+let Pi = TJ.define(), Po = TJ.define({ combine: (e13) => e13.some((e14) => e14), static: true }), Ps = TJ.define({ combine: (e13) => e13.length ? e13[0] : void 0, static: true }), Pl = TJ.define(), Pa = TJ.define(), Pc = TJ.define(), Pu = TJ.define({ combine: (e13) => !!e13.length && e13[0] });
+class Ph {
   constructor(e13, t10) {
     this.type = e13, this.value = t10;
   }
   static define() {
-    return new Pa();
+    return new Pf();
   }
 }
-class Pa {
+class Pf {
   of(e13) {
-    return new Pl(this, e13);
+    return new Ph(this, e13);
   }
 }
-class Pc {
+class Pd {
   constructor(e13) {
     this.map = e13;
   }
   of(e13) {
-    return new Pu(this, e13);
+    return new Pp(this, e13);
   }
 }
-class Pu {
+class Pp {
   constructor(e13, t10) {
     this.type = e13, this.value = t10;
   }
   map(e13) {
     let t10 = this.type.map(this.value, e13);
-    return void 0 === t10 ? void 0 : t10 == this.value ? this : new Pu(this.type, t10);
+    return void 0 === t10 ? void 0 : t10 == this.value ? this : new Pp(this.type, t10);
   }
   is(e13) {
     return this.type == e13;
   }
   static define() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return new Pc(e13.map || ((e14) => e14));
+    return new Pd(e13.map || ((e14) => e14));
   }
   static mapEffects(e13, t10) {
     if (!e13.length)
@@ -15450,13 +15459,13 @@ class Pu {
     return r10;
   }
 }
-Pu.reconfigure = Pu.define(), Pu.appendConfig = Pu.define();
-class Ph {
+Pp.reconfigure = Pp.define(), Pp.appendConfig = Pp.define();
+class Pg {
   constructor(e13, t10, r10, i10, o10, s10) {
-    this.startState = e13, this.changes = t10, this.selection = r10, this.effects = i10, this.annotations = o10, this.scrollIntoView = s10, this._doc = null, this._state = null, r10 && Tq(r10, t10.newLength), o10.some((e14) => e14.type == Ph.time) || (this.annotations = o10.concat(Ph.time.of(Date.now())));
+    this.startState = e13, this.changes = t10, this.selection = r10, this.effects = i10, this.annotations = o10, this.scrollIntoView = s10, this._doc = null, this._state = null, r10 && TK(r10, t10.newLength), o10.some((e14) => e14.type == Pg.time) || (this.annotations = o10.concat(Pg.time.of(Date.now())));
   }
   static create(e13, t10, r10, i10, o10, s10) {
-    return new Ph(e13, t10, r10, i10, o10, s10);
+    return new Pg(e13, t10, r10, i10, o10, s10);
   }
   get newDoc() {
     return this._doc || (this._doc = this.changes.apply(this.startState.doc));
@@ -15479,35 +15488,35 @@ class Ph {
     return this.startState.config != this.state.config;
   }
   isUserEvent(e13) {
-    let t10 = this.annotation(Ph.userEvent);
+    let t10 = this.annotation(Pg.userEvent);
     return !!(t10 && (t10 == e13 || t10.length > e13.length && t10.slice(0, e13.length) == e13 && "." == t10[e13.length]));
   }
 }
-function Pf(e13, t10, r10) {
+function Pm(e13, t10, r10) {
   var i10;
   let o10, s10, l10;
-  return r10 ? (o10 = t10.changes, s10 = TN.empty(t10.changes.length), l10 = e13.changes.compose(t10.changes)) : (o10 = t10.changes.map(e13.changes), s10 = e13.changes.mapDesc(t10.changes, true), l10 = e13.changes.compose(o10)), { changes: l10, selection: t10.selection ? t10.selection.map(s10) : null === (i10 = e13.selection) || void 0 === i10 ? void 0 : i10.map(o10), effects: Pu.mapEffects(e13.effects, o10).concat(Pu.mapEffects(t10.effects, s10)), annotations: e13.annotations.length ? e13.annotations.concat(t10.annotations) : t10.annotations, scrollIntoView: e13.scrollIntoView || t10.scrollIntoView };
+  return r10 ? (o10 = t10.changes, s10 = Tz.empty(t10.changes.length), l10 = e13.changes.compose(t10.changes)) : (o10 = t10.changes.map(e13.changes), s10 = e13.changes.mapDesc(t10.changes, true), l10 = e13.changes.compose(o10)), { changes: l10, selection: t10.selection ? t10.selection.map(s10) : null === (i10 = e13.selection) || void 0 === i10 ? void 0 : i10.map(o10), effects: Pp.mapEffects(e13.effects, o10).concat(Pp.mapEffects(t10.effects, s10)), annotations: e13.annotations.length ? e13.annotations.concat(t10.annotations) : t10.annotations, scrollIntoView: e13.scrollIntoView || t10.scrollIntoView };
 }
-function Pd(e13, t10, r10) {
-  let i10 = t10.selection, o10 = Pg(t10.annotations);
-  return t10.userEvent && (o10 = o10.concat(Ph.userEvent.of(t10.userEvent))), { changes: t10.changes instanceof TN ? t10.changes : TN.of(t10.changes || [], r10, e13.facet(Pn)), selection: i10 && (i10 instanceof TU ? i10 : TU.single(i10.anchor, i10.head)), effects: Pg(t10.effects), annotations: o10, scrollIntoView: !!t10.scrollIntoView };
+function Pv(e13, t10, r10) {
+  let i10 = t10.selection, o10 = Pb(t10.annotations);
+  return t10.userEvent && (o10 = o10.concat(Pg.userEvent.of(t10.userEvent))), { changes: t10.changes instanceof Tz ? t10.changes : Tz.of(t10.changes || [], r10, e13.facet(Ps)), selection: i10 && (i10 instanceof TY ? i10 : TY.single(i10.anchor, i10.head)), effects: Pb(t10.effects), annotations: o10, scrollIntoView: !!t10.scrollIntoView };
 }
-Ph.time = Pl.define(), Ph.userEvent = Pl.define(), Ph.addToHistory = Pl.define(), Ph.remote = Pl.define();
-let Pp = [];
-function Pg(e13) {
-  return null == e13 ? Pp : Array.isArray(e13) ? e13 : [e13];
+Pg.time = Ph.define(), Pg.userEvent = Ph.define(), Pg.addToHistory = Ph.define(), Pg.remote = Ph.define();
+let Py = [];
+function Pb(e13) {
+  return null == e13 ? Py : Array.isArray(e13) ? e13 : [e13];
 }
-var Pm = ((H = Pm || (Pm = {}))[H.Word = 0] = "Word", H[H.Space = 1] = "Space", H[H.Other = 2] = "Other", H);
-let Pv = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+var Pw = ((H = Pw || (Pw = {}))[H.Word = 0] = "Word", H[H.Space = 1] = "Space", H[H.Other = 2] = "Other", H);
+let Px = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
 try {
   a = RegExp("[\\p{Alphabetic}\\p{Number}_]", "u");
 } catch (e13) {
 }
-class Py {
+class Pk {
   constructor(e13, t10, r10, i10, o10, s10) {
     this.config = e13, this.doc = t10, this.selection = r10, this.values = i10, this.status = e13.statusTemplate.slice(), this.computeSlot = o10, s10 && (s10._state = this);
     for (let e14 = 0; e14 < this.config.dynamicSlots.length; e14++)
-      T9(this, e14 << 1);
+      Pn(this, e14 << 1);
     this.computeSlot = null;
   }
   field(e13) {
@@ -15517,30 +15526,30 @@ class Py {
         throw RangeError("Field is not present in this state");
       return;
     }
-    return T9(this, r10), T7(this, r10);
+    return Pn(this, r10), Pr(this, r10);
   }
   update() {
     for (var e13 = arguments.length, t10 = Array(e13), r10 = 0; r10 < e13; r10++)
       t10[r10] = arguments[r10];
     return function e14(t11, r11, i10) {
-      let o10 = Pd(t11, r11.length ? r11[0] : {}, t11.doc.length);
+      let o10 = Pv(t11, r11.length ? r11[0] : {}, t11.doc.length);
       r11.length && false === r11[0].filter && (i10 = false);
       for (let e15 = 1; e15 < r11.length; e15++) {
         false === r11[e15].filter && (i10 = false);
         let s11 = !!r11[e15].sequential;
-        o10 = Pf(o10, Pd(t11, r11[e15], s11 ? o10.changes.newLength : t11.doc.length), s11);
+        o10 = Pm(o10, Pv(t11, r11[e15], s11 ? o10.changes.newLength : t11.doc.length), s11);
       }
-      let s10 = Ph.create(t11, o10.changes, o10.selection, o10.effects, o10.annotations, o10.scrollIntoView);
+      let s10 = Pg.create(t11, o10.changes, o10.selection, o10.effects, o10.annotations, o10.scrollIntoView);
       return function(e15) {
-        let t12 = e15.startState, r12 = t12.facet(Po), i11 = e15;
+        let t12 = e15.startState, r12 = t12.facet(Pc), i11 = e15;
         for (let o11 = r12.length - 1; o11 >= 0; o11--) {
           let s11 = r12[o11](e15);
-          s11 && Object.keys(s11).length && (i11 = Pf(i11, Pd(t12, s11, e15.changes.newLength), true));
+          s11 && Object.keys(s11).length && (i11 = Pm(i11, Pv(t12, s11, e15.changes.newLength), true));
         }
-        return i11 == e15 ? e15 : Ph.create(t12, e15.changes, e15.selection, i11.effects, i11.annotations, i11.scrollIntoView);
+        return i11 == e15 ? e15 : Pg.create(t12, e15.changes, e15.selection, i11.effects, i11.annotations, i11.scrollIntoView);
       }(i10 ? function(t12) {
         let r12 = t12.startState, i11 = true;
-        for (let e15 of r12.facet(Pr)) {
+        for (let e15 of r12.facet(Pl)) {
           let r13 = e15(t12);
           if (false === r13) {
             i11 = false;
@@ -15564,17 +15573,17 @@ class Py {
         if (true !== i11) {
           let e15, o12;
           if (false === i11)
-            o12 = t12.changes.invertedDesc, e15 = TN.empty(r12.doc.length);
+            o12 = t12.changes.invertedDesc, e15 = Tz.empty(r12.doc.length);
           else {
             let r13 = t12.changes.filter(i11);
             e15 = r13.changes, o12 = r13.filtered.mapDesc(r13.changes).invertedDesc;
           }
-          t12 = Ph.create(r12, e15, t12.selection && t12.selection.map(o12), Pu.mapEffects(t12.effects, o12), t12.annotations, t12.scrollIntoView);
+          t12 = Pg.create(r12, e15, t12.selection && t12.selection.map(o12), Pp.mapEffects(t12.effects, o12), t12.annotations, t12.scrollIntoView);
         }
-        let o11 = r12.facet(Pi);
+        let o11 = r12.facet(Pa);
         for (let i12 = o11.length - 1; i12 >= 0; i12--) {
           let s11 = o11[i12](t12);
-          t12 = s11 instanceof Ph ? s11 : Array.isArray(s11) && 1 == s11.length && s11[0] instanceof Ph ? s11[0] : e14(r12, Pg(s11), false);
+          t12 = s11 instanceof Pg ? s11 : Array.isArray(s11) && 1 == s11.length && s11[0] instanceof Pg ? s11[0] : e14(r12, Pb(s11), false);
         }
         return t12;
       }(s10) : s10);
@@ -15583,31 +15592,31 @@ class Py {
   applyTransaction(e13) {
     let t10, r10 = this.config, { base: i10, compartments: o10 } = r10;
     for (let t11 of e13.effects)
-      t11.is(T5.reconfigure) ? (r10 && (o10 = /* @__PURE__ */ new Map(), r10.compartments.forEach((e14, t12) => o10.set(t12, e14)), r10 = null), o10.set(t11.value.compartment, t11.value.extension)) : t11.is(Pu.reconfigure) ? (r10 = null, i10 = t11.value) : t11.is(Pu.appendConfig) && (r10 = null, i10 = Pg(i10).concat(t11.value));
-    t10 = r10 ? e13.startState.values.slice() : new Py(r10 = T6.resolve(i10, o10, this), this.doc, this.selection, r10.dynamicSlots.map(() => null), (e14, t11) => t11.reconfigure(e14, this), null).values;
-    let s10 = e13.startState.facet(Pt) ? e13.newSelection : e13.newSelection.asSingle();
-    new Py(r10, e13.newDoc, s10, t10, (t11, r11) => r11.update(t11, e13), e13);
+      t11.is(T7.reconfigure) ? (r10 && (o10 = /* @__PURE__ */ new Map(), r10.compartments.forEach((e14, t12) => o10.set(t12, e14)), r10 = null), o10.set(t11.value.compartment, t11.value.extension)) : t11.is(Pp.reconfigure) ? (r10 = null, i10 = t11.value) : t11.is(Pp.appendConfig) && (r10 = null, i10 = Pb(i10).concat(t11.value));
+    t10 = r10 ? e13.startState.values.slice() : new Pk(r10 = Pt.resolve(i10, o10, this), this.doc, this.selection, r10.dynamicSlots.map(() => null), (e14, t11) => t11.reconfigure(e14, this), null).values;
+    let s10 = e13.startState.facet(Po) ? e13.newSelection : e13.newSelection.asSingle();
+    new Pk(r10, e13.newDoc, s10, t10, (t11, r11) => r11.update(t11, e13), e13);
   }
   replaceSelection(e13) {
-    return "string" == typeof e13 && (e13 = this.toText(e13)), this.changeByRange((t10) => ({ changes: { from: t10.from, to: t10.to, insert: e13 }, range: TU.cursor(t10.from + e13.length) }));
+    return "string" == typeof e13 && (e13 = this.toText(e13)), this.changeByRange((t10) => ({ changes: { from: t10.from, to: t10.to, insert: e13 }, range: TY.cursor(t10.from + e13.length) }));
   }
   changeByRange(e13) {
-    let t10 = this.selection, r10 = e13(t10.ranges[0]), i10 = this.changes(r10.changes), o10 = [r10.range], s10 = Pg(r10.effects);
+    let t10 = this.selection, r10 = e13(t10.ranges[0]), i10 = this.changes(r10.changes), o10 = [r10.range], s10 = Pb(r10.effects);
     for (let r11 = 1; r11 < t10.ranges.length; r11++) {
       let l10 = e13(t10.ranges[r11]), a10 = this.changes(l10.changes), c10 = a10.map(i10);
       for (let e14 = 0; e14 < r11; e14++)
         o10[e14] = o10[e14].map(c10);
       let u10 = i10.mapDesc(a10, true);
-      o10.push(l10.range.map(u10)), i10 = i10.compose(c10), s10 = Pu.mapEffects(s10, c10).concat(Pu.mapEffects(Pg(l10.effects), u10));
+      o10.push(l10.range.map(u10)), i10 = i10.compose(c10), s10 = Pp.mapEffects(s10, c10).concat(Pp.mapEffects(Pb(l10.effects), u10));
     }
-    return { changes: i10, selection: TU.create(o10, t10.mainIndex), effects: s10 };
+    return { changes: i10, selection: TY.create(o10, t10.mainIndex), effects: s10 };
   }
   changes() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return e13 instanceof TN ? e13 : TN.of(e13, this.doc.length, this.facet(Py.lineSeparator));
+    return e13 instanceof Tz ? e13 : Tz.of(e13, this.doc.length, this.facet(Pk.lineSeparator));
   }
   toText(e13) {
-    return Tm.of(e13.split(this.facet(Py.lineSeparator) || TI));
+    return Tw.of(e13.split(this.facet(Pk.lineSeparator) || TB));
   }
   sliceDoc() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0, t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
@@ -15615,14 +15624,14 @@ class Py {
   }
   facet(e13) {
     let t10 = this.config.address[e13.id];
-    return null == t10 ? e13.default : (T9(this, t10), T7(this, t10));
+    return null == t10 ? e13.default : (Pn(this, t10), Pr(this, t10));
   }
   toJSON(e13) {
     let t10 = { doc: this.sliceDoc(), selection: this.selection.toJSON() };
     if (e13)
       for (let r10 in e13) {
         let i10 = e13[r10];
-        i10 instanceof T0 && null != this.config.address[i10.id] && (t10[r10] = i10.spec.toJSON(this.field(e13[r10]), this));
+        i10 instanceof T3 && null != this.config.address[i10.id] && (t10[r10] = i10.spec.toJSON(this.field(e13[r10]), this));
       }
     return t10;
   }
@@ -15638,25 +15647,25 @@ class Py {
           i10.push(o10.init((e14) => o10.spec.fromJSON(s10, e14)));
         }
     }
-    return Py.create({ doc: e13.doc, selection: TU.fromJSON(e13.selection), extensions: t10.extensions ? i10.concat([t10.extensions]) : i10 });
+    return Pk.create({ doc: e13.doc, selection: TY.fromJSON(e13.selection), extensions: t10.extensions ? i10.concat([t10.extensions]) : i10 });
   }
   static create() {
-    let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t10 = T6.resolve(e13.extensions || [], /* @__PURE__ */ new Map()), r10 = e13.doc instanceof Tm ? e13.doc : Tm.of((e13.doc || "").split(t10.staticFacet(Py.lineSeparator) || TI)), i10 = e13.selection ? e13.selection instanceof TU ? e13.selection : TU.single(e13.selection.anchor, e13.selection.head) : TU.single(0);
-    return Tq(i10, r10.length), t10.staticFacet(Pt) || (i10 = i10.asSingle()), new Py(t10, r10, i10, t10.dynamicSlots.map(() => null), (e14, t11) => t11.create(e14), null);
+    let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t10 = Pt.resolve(e13.extensions || [], /* @__PURE__ */ new Map()), r10 = e13.doc instanceof Tw ? e13.doc : Tw.of((e13.doc || "").split(t10.staticFacet(Pk.lineSeparator) || TB)), i10 = e13.selection ? e13.selection instanceof TY ? e13.selection : TY.single(e13.selection.anchor, e13.selection.head) : TY.single(0);
+    return TK(i10, r10.length), t10.staticFacet(Po) || (i10 = i10.asSingle()), new Pk(t10, r10, i10, t10.dynamicSlots.map(() => null), (e14, t11) => t11.create(e14), null);
   }
   get tabSize() {
-    return this.facet(Py.tabSize);
+    return this.facet(Pk.tabSize);
   }
   get lineBreak() {
-    return this.facet(Py.lineSeparator) || "\n";
+    return this.facet(Pk.lineSeparator) || "\n";
   }
   get readOnly() {
-    return this.facet(Ps);
+    return this.facet(Pu);
   }
   phrase(e13) {
     for (var t10 = arguments.length, r10 = Array(t10 > 1 ? t10 - 1 : 0), i10 = 1; i10 < t10; i10++)
       r10[i10 - 1] = arguments[i10];
-    for (let t11 of this.facet(Py.phrases))
+    for (let t11 of this.facet(Pk.phrases))
       if (Object.prototype.hasOwnProperty.call(t11, e13)) {
         e13 = t11[e13];
         break;
@@ -15670,7 +15679,7 @@ class Py {
   }
   languageDataAt(e13, t10) {
     let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1, i10 = [];
-    for (let o10 of this.facet(Pe))
+    for (let o10 of this.facet(Pi))
       for (let s10 of o10(this, t10, r10))
         Object.prototype.hasOwnProperty.call(s10, e13) && i10.push(s10[e13]);
     return i10;
@@ -15679,42 +15688,42 @@ class Py {
     var t10;
     return t10 = this.languageDataAt("wordChars", e13).join(""), (e14) => {
       if (!/\S/.test(e14))
-        return Pm.Space;
+        return Pw.Space;
       if (function(e15) {
         if (a)
           return a.test(e15);
         for (let t11 = 0; t11 < e15.length; t11++) {
           let r10 = e15[t11];
-          if (/\w/.test(r10) || r10 > "" && (r10.toUpperCase() != r10.toLowerCase() || Pv.test(r10)))
+          if (/\w/.test(r10) || r10 > "" && (r10.toUpperCase() != r10.toLowerCase() || Px.test(r10)))
             return true;
         }
         return false;
       }(e14))
-        return Pm.Word;
+        return Pw.Word;
       for (let r10 = 0; r10 < t10.length; r10++)
         if (e14.indexOf(t10[r10]) > -1)
-          return Pm.Word;
-      return Pm.Other;
+          return Pw.Word;
+      return Pw.Other;
     };
   }
   wordAt(e13) {
     let { text: t10, from: r10, length: i10 } = this.doc.lineAt(e13), o10 = this.charCategorizer(e13), s10 = e13 - r10, l10 = e13 - r10;
     for (; s10 > 0; ) {
-      let e14 = T_(t10, s10, false);
-      if (o10(t10.slice(e14, s10)) != Pm.Word)
+      let e14 = TE(t10, s10, false);
+      if (o10(t10.slice(e14, s10)) != Pw.Word)
         break;
       s10 = e14;
     }
     for (; l10 < i10; ) {
-      let e14 = T_(t10, l10);
-      if (o10(t10.slice(l10, e14)) != Pm.Word)
+      let e14 = TE(t10, l10);
+      if (o10(t10.slice(l10, e14)) != Pw.Word)
         break;
       l10 = e14;
     }
-    return s10 == l10 ? null : TU.range(s10 + r10, l10 + r10);
+    return s10 == l10 ? null : TY.range(s10 + r10, l10 + r10);
   }
 }
-function Pb(e13, t10) {
+function PS(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, i10 = {};
   for (let t11 of e13)
     for (let e14 of Object.keys(t11)) {
@@ -15732,21 +15741,21 @@ function Pb(e13, t10) {
     void 0 === i10[e14] && (i10[e14] = t10[e14]);
   return i10;
 }
-Py.allowMultipleSelections = Pt, Py.tabSize = TQ.define({ combine: (e13) => e13.length ? e13[0] : 4 }), Py.lineSeparator = Pn, Py.readOnly = Ps, Py.phrases = TQ.define({ compare(e13, t10) {
+Pk.allowMultipleSelections = Po, Pk.tabSize = TJ.define({ combine: (e13) => e13.length ? e13[0] : 4 }), Pk.lineSeparator = Ps, Pk.readOnly = Pu, Pk.phrases = TJ.define({ compare(e13, t10) {
   let r10 = Object.keys(e13), i10 = Object.keys(t10);
   return r10.length == i10.length && r10.every((r11) => e13[r11] == t10[r11]);
-} }), Py.languageData = Pe, Py.changeFilter = Pr, Py.transactionFilter = Pi, Py.transactionExtender = Po, T5.reconfigure = Pu.define();
-class Pw {
+} }), Pk.languageData = Pi, Pk.changeFilter = Pl, Pk.transactionFilter = Pa, Pk.transactionExtender = Pc, T7.reconfigure = Pp.define();
+class PC {
   eq(e13) {
     return this == e13;
   }
   range(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
-    return Px.create(e13, t10, this);
+    return PO.create(e13, t10, this);
   }
 }
-Pw.prototype.startSide = Pw.prototype.endSide = 0, Pw.prototype.point = false, Pw.prototype.mapMode = TL.TrackDel;
-let Px = class e12 {
+PC.prototype.startSide = PC.prototype.endSide = 0, PC.prototype.point = false, PC.prototype.mapMode = T$.TrackDel;
+let PO = class e12 {
   constructor(e13, t10, r10) {
     this.from = e13, this.to = t10, this.value = r10;
   }
@@ -15754,10 +15763,10 @@ let Px = class e12 {
     return new e12(t10, r10, i10);
   }
 };
-function Pk(e13, t10) {
+function PA(e13, t10) {
   return e13.from - t10.from || e13.value.startSide - t10.value.startSide;
 }
-class PS {
+class P_ {
   constructor(e13, t10, r10, i10) {
     this.from = e13, this.to = t10, this.value = r10, this.maxPoint = i10;
   }
@@ -15792,15 +15801,15 @@ class PS {
         continue;
       0 > (d10 - f10 || c10.endSide - c10.startSide) || (s10 < 0 && (s10 = f10), c10.point && (l10 = Math.max(l10, d10 - f10)), r10.push(c10), i10.push(f10 - s10), o10.push(d10 - s10));
     }
-    return { mapped: r10.length ? new PS(i10, o10, r10, l10) : null, pos: s10 };
+    return { mapped: r10.length ? new P_(i10, o10, r10, l10) : null, pos: s10 };
   }
 }
-class PC {
+class PM {
   constructor(e13, t10, r10, i10) {
     this.chunkPos = e13, this.chunk = t10, this.nextLayer = r10, this.maxPoint = i10;
   }
   static create(e13, t10, r10, i10) {
-    return new PC(e13, t10, r10, i10);
+    return new PM(e13, t10, r10, i10);
   }
   get length() {
     let e13 = this.chunk.length - 1;
@@ -15821,16 +15830,16 @@ class PC {
     let { add: t10 = [], sort: r10 = false, filterFrom: i10 = 0, filterTo: o10 = this.length } = e13, s10 = e13.filter;
     if (0 == t10.length && !s10)
       return this;
-    if (r10 && (t10 = t10.slice().sort(Pk)), this.isEmpty)
-      return t10.length ? PC.of(t10) : this;
-    let l10 = new P_(this, null, -1).goto(0), a10 = 0, c10 = [], u10 = new PO();
+    if (r10 && (t10 = t10.slice().sort(PA)), this.isEmpty)
+      return t10.length ? PM.of(t10) : this;
+    let l10 = new PE(this, null, -1).goto(0), a10 = 0, c10 = [], u10 = new PT();
     for (; l10.value || a10 < t10.length; )
       if (a10 < t10.length && (l10.from - t10[a10].from || l10.startSide - t10[a10].value.startSide) >= 0) {
         let e14 = t10[a10++];
         u10.addInner(e14.from, e14.to, e14.value) || c10.push(e14);
       } else
-        1 == l10.rangeIndex && l10.chunkIndex < this.chunk.length && (a10 == t10.length || this.chunkEnd(l10.chunkIndex) < t10[a10].from) && (!s10 || i10 > this.chunkEnd(l10.chunkIndex) || o10 < this.chunkPos[l10.chunkIndex]) && u10.addChunk(this.chunkPos[l10.chunkIndex], this.chunk[l10.chunkIndex]) ? l10.nextChunk() : ((!s10 || i10 > l10.to || o10 < l10.from || s10(l10.from, l10.to, l10.value)) && !u10.addInner(l10.from, l10.to, l10.value) && c10.push(Px.create(l10.from, l10.to, l10.value)), l10.next());
-    return u10.finishInner(this.nextLayer.isEmpty && !c10.length ? PC.empty : this.nextLayer.update({ add: c10, filter: s10, filterFrom: i10, filterTo: o10 }));
+        1 == l10.rangeIndex && l10.chunkIndex < this.chunk.length && (a10 == t10.length || this.chunkEnd(l10.chunkIndex) < t10[a10].from) && (!s10 || i10 > this.chunkEnd(l10.chunkIndex) || o10 < this.chunkPos[l10.chunkIndex]) && u10.addChunk(this.chunkPos[l10.chunkIndex], this.chunk[l10.chunkIndex]) ? l10.nextChunk() : ((!s10 || i10 > l10.to || o10 < l10.from || s10(l10.from, l10.to, l10.value)) && !u10.addInner(l10.from, l10.to, l10.value) && c10.push(PO.create(l10.from, l10.to, l10.value)), l10.next());
+    return u10.finishInner(this.nextLayer.isEmpty && !c10.length ? PM.empty : this.nextLayer.update({ add: c10, filter: s10, filterFrom: i10, filterTo: o10 }));
   }
   map(e13) {
     if (e13.empty || this.isEmpty)
@@ -15846,7 +15855,7 @@ class PC {
       }
     }
     let o10 = this.nextLayer.map(e13);
-    return 0 == t10.length ? o10 : new PC(r10, t10, o10 || PC.empty, i10);
+    return 0 == t10.length ? o10 : new PM(r10, t10, o10 || PM.empty, i10);
   }
   between(e13, t10, r10) {
     if (!this.isEmpty) {
@@ -15860,18 +15869,18 @@ class PC {
   }
   iter() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-    return PM.from([this]).goto(e13);
+    return PD.from([this]).goto(e13);
   }
   get isEmpty() {
     return this.nextLayer == this;
   }
   static iter(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return PM.from(e13).goto(t10);
+    return PD.from(e13).goto(t10);
   }
   static compare(e13, t10, r10, i10) {
-    let o10 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1, s10 = e13.filter((e14) => e14.maxPoint > 0 || !e14.isEmpty && e14.maxPoint >= o10), l10 = t10.filter((e14) => e14.maxPoint > 0 || !e14.isEmpty && e14.maxPoint >= o10), a10 = PA(s10, l10, r10), c10 = new PP(s10, a10, o10), u10 = new PP(l10, a10, o10);
-    r10.iterGaps((e14, t11, r11) => PE(c10, e14, u10, t11, r11, i10)), r10.empty && 0 == r10.length && PE(c10, 0, u10, 0, 0, i10);
+    let o10 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1, s10 = e13.filter((e14) => e14.maxPoint > 0 || !e14.isEmpty && e14.maxPoint >= o10), l10 = t10.filter((e14) => e14.maxPoint > 0 || !e14.isEmpty && e14.maxPoint >= o10), a10 = PP(s10, l10, r10), c10 = new PI(s10, a10, o10), u10 = new PI(l10, a10, o10);
+    r10.iterGaps((e14, t11, r11) => PL(c10, e14, u10, t11, r11, i10)), r10.empty && 0 == r10.length && PL(c10, 0, u10, 0, 0, i10);
   }
   static eq(e13, t10) {
     let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, i10 = arguments.length > 3 ? arguments[3] : void 0;
@@ -15881,9 +15890,9 @@ class PC {
       return false;
     if (!o10.length)
       return true;
-    let l10 = PA(o10, s10), a10 = new PP(o10, l10, 0).goto(r10), c10 = new PP(s10, l10, 0).goto(r10);
+    let l10 = PP(o10, s10), a10 = new PI(o10, l10, 0).goto(r10), c10 = new PI(s10, l10, 0).goto(r10);
     for (; ; ) {
-      if (a10.to != c10.to || !PD(a10.active, c10.active) || a10.point && (!c10.point || !a10.point.eq(c10.point)))
+      if (a10.to != c10.to || !Pj(a10.active, c10.active) || a10.point && (!c10.point || !a10.point.eq(c10.point)))
         return false;
       if (a10.to > i10)
         return true;
@@ -15891,7 +15900,7 @@ class PC {
     }
   }
   static spans(e13, t10, r10, i10) {
-    let o10 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1, s10 = new PP(e13, null, o10).goto(t10), l10 = t10, a10 = s10.openStart;
+    let o10 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1, s10 = new PI(e13, null, o10).goto(t10), l10 = t10, a10 = s10.openStart;
     for (; ; ) {
       let e14 = Math.min(s10.to, r10);
       if (s10.point) {
@@ -15905,13 +15914,13 @@ class PC {
     }
   }
   static of(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], r10 = new PO();
-    for (let i10 of e13 instanceof Px ? [e13] : t10 ? function(e14) {
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], r10 = new PT();
+    for (let i10 of e13 instanceof PO ? [e13] : t10 ? function(e14) {
       if (e14.length > 1)
         for (let t11 = e14[0], r11 = 1; r11 < e14.length; r11++) {
           let i11 = e14[r11];
-          if (Pk(t11, i11) > 0)
-            return e14.slice().sort(Pk);
+          if (PA(t11, i11) > 0)
+            return e14.slice().sort(PA);
           t11 = i11;
         }
       return e14;
@@ -15921,24 +15930,24 @@ class PC {
   }
   static join(e13) {
     if (!e13.length)
-      return PC.empty;
+      return PM.empty;
     let t10 = e13[e13.length - 1];
     for (let r10 = e13.length - 2; r10 >= 0; r10--)
-      for (let i10 = e13[r10]; i10 != PC.empty; i10 = i10.nextLayer)
-        t10 = new PC(i10.chunkPos, i10.chunk, t10, Math.max(i10.maxPoint, t10.maxPoint));
+      for (let i10 = e13[r10]; i10 != PM.empty; i10 = i10.nextLayer)
+        t10 = new PM(i10.chunkPos, i10.chunk, t10, Math.max(i10.maxPoint, t10.maxPoint));
     return t10;
   }
 }
-PC.empty = new PC([], [], null, -1), PC.empty.nextLayer = PC.empty;
-class PO {
+PM.empty = new PM([], [], null, -1), PM.empty.nextLayer = PM.empty;
+class PT {
   finishChunk(e13) {
-    this.chunks.push(new PS(this.from, this.to, this.value, this.maxPoint)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.maxPoint), this.maxPoint = -1, e13 && (this.from = [], this.to = [], this.value = []);
+    this.chunks.push(new P_(this.from, this.to, this.value, this.maxPoint)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.maxPoint), this.maxPoint = -1, e13 && (this.from = [], this.to = [], this.value = []);
   }
   constructor() {
     this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.maxPoint = -1, this.setMaxPoint = -1, this.nextLayer = null;
   }
   add(e13, t10, r10) {
-    this.addInner(e13, t10, r10) || (this.nextLayer || (this.nextLayer = new PO())).add(e13, t10, r10);
+    this.addInner(e13, t10, r10) || (this.nextLayer || (this.nextLayer = new PT())).add(e13, t10, r10);
   }
   addInner(e13, t10, r10) {
     let i10 = e13 - this.lastTo || r10.startSide - this.last.endSide;
@@ -15954,16 +15963,16 @@ class PO {
     return this.last = t10.value[r10], this.lastFrom = t10.from[r10] + e13, this.lastTo = t10.to[r10] + e13, true;
   }
   finish() {
-    return this.finishInner(PC.empty);
+    return this.finishInner(PM.empty);
   }
   finishInner(e13) {
     if (this.from.length && this.finishChunk(false), 0 == this.chunks.length)
       return e13;
-    let t10 = PC.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(e13) : e13, this.setMaxPoint);
+    let t10 = PM.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(e13) : e13, this.setMaxPoint);
     return this.from = null, t10;
   }
 }
-function PA(e13, t10, r10) {
+function PP(e13, t10, r10) {
   let i10 = /* @__PURE__ */ new Map();
   for (let t11 of e13)
     for (let e14 = 0; e14 < t11.chunk.length; e14++)
@@ -15976,7 +15985,7 @@ function PA(e13, t10, r10) {
     }
   return o10;
 }
-class P_ {
+class PE {
   constructor(e13, t10, r10, i10 = 0) {
     this.layer = e13, this.skip = t10, this.minPoint = r10, this.rank = i10;
   }
@@ -16035,7 +16044,7 @@ class P_ {
     return this.from - e13.from || this.startSide - e13.startSide || this.rank - e13.rank || this.to - e13.to || this.endSide - e13.endSide;
   }
 }
-class PM {
+class PD {
   constructor(e13) {
     this.heap = e13;
   }
@@ -16043,8 +16052,8 @@ class PM {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1, i10 = [];
     for (let o10 = 0; o10 < e13.length; o10++)
       for (let s10 = e13[o10]; !s10.isEmpty; s10 = s10.nextLayer)
-        s10.maxPoint >= r10 && i10.push(new P_(s10, t10, r10, o10));
-    return 1 == i10.length ? i10[0] : new PM(i10);
+        s10.maxPoint >= r10 && i10.push(new PE(s10, t10, r10, o10));
+    return 1 == i10.length ? i10[0] : new PD(i10);
   }
   get startSide() {
     return this.value ? this.value.startSide : 0;
@@ -16054,14 +16063,14 @@ class PM {
     for (let r10 of this.heap)
       r10.goto(e13, t10);
     for (let e14 = this.heap.length >> 1; e14 >= 0; e14--)
-      PT(this.heap, e14);
+      PR(this.heap, e14);
     return this.next(), this;
   }
   forward(e13, t10) {
     for (let r10 of this.heap)
       r10.forward(e13, t10);
     for (let e14 = this.heap.length >> 1; e14 >= 0; e14--)
-      PT(this.heap, e14);
+      PR(this.heap, e14);
     0 > (this.to - e13 || this.value.endSide - t10) && this.next();
   }
   next() {
@@ -16069,11 +16078,11 @@ class PM {
       this.from = this.to = 1e9, this.value = null, this.rank = -1;
     else {
       let e13 = this.heap[0];
-      this.from = e13.from, this.to = e13.to, this.value = e13.value, this.rank = e13.rank, e13.value && e13.next(), PT(this.heap, 0);
+      this.from = e13.from, this.to = e13.to, this.value = e13.value, this.rank = e13.rank, e13.value && e13.next(), PR(this.heap, 0);
     }
   }
 }
-function PT(e13, t10) {
+function PR(e13, t10) {
   for (let r10 = e13[t10]; ; ) {
     let i10 = (t10 << 1) + 1;
     if (i10 >= e13.length)
@@ -16084,9 +16093,9 @@ function PT(e13, t10) {
     e13[i10] = r10, e13[t10] = o10, t10 = i10;
   }
 }
-class PP {
+class PI {
   constructor(e13, t10, r10) {
-    this.minPoint = r10, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = PM.from(e13, t10, r10);
+    this.minPoint = r10, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = PD.from(e13, t10, r10);
   }
   goto(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
@@ -16098,13 +16107,13 @@ class PP {
     this.cursor.forward(e13, t10);
   }
   removeActive(e13) {
-    PR(this.active, e13), PR(this.activeTo, e13), PR(this.activeRank, e13), this.minActive = PL(this.active, this.activeTo);
+    PN(this.active, e13), PN(this.activeTo, e13), PN(this.activeRank, e13), this.minActive = P$(this.active, this.activeTo);
   }
   addActive(e13) {
     let t10 = 0, { value: r10, to: i10, rank: o10 } = this.cursor;
     for (; t10 < this.activeRank.length && (o10 - this.activeRank[t10] || i10 - this.activeTo[t10]) > 0; )
       t10++;
-    PI(this.active, t10, r10), PI(this.activeTo, t10, i10), PI(this.activeRank, t10, o10), e13 && PI(e13, t10, this.cursor.from), this.minActive = PL(this.active, this.activeTo);
+    PB(this.active, t10, r10), PB(this.activeTo, t10, i10), PB(this.activeRank, t10, o10), e13 && PB(e13, t10, this.cursor.from), this.minActive = P$(this.active, this.activeTo);
   }
   next() {
     let e13 = this.to, t10 = this.point;
@@ -16117,7 +16126,7 @@ class PP {
           this.to = this.activeTo[i10], this.endSide = this.active[i10].endSide;
           break;
         }
-        this.removeActive(i10), r10 && PR(r10, i10);
+        this.removeActive(i10), r10 && PN(r10, i10);
       } else if (this.cursor.value) {
         if (this.cursor.from > e13) {
           this.to = this.cursor.from, this.endSide = this.cursor.startSide;
@@ -16161,17 +16170,17 @@ class PP {
     return t10;
   }
 }
-function PE(e13, t10, r10, i10, o10, s10) {
+function PL(e13, t10, r10, i10, o10, s10) {
   e13.goto(t10), r10.goto(i10);
   let l10 = i10 + o10, a10 = i10, c10 = i10 - t10;
   for (; ; ) {
     let t11 = e13.to + c10 - r10.to || e13.endSide - r10.endSide, i11 = t11 < 0 ? e13.to + c10 : r10.to, o11 = Math.min(i11, l10);
-    if (e13.point || r10.point ? e13.point && r10.point && (e13.point == r10.point || e13.point.eq(r10.point)) && PD(e13.activeForPoint(e13.to), r10.activeForPoint(r10.to)) || s10.comparePoint(a10, o11, e13.point, r10.point) : o11 > a10 && !PD(e13.active, r10.active) && s10.compareRange(a10, o11, e13.active, r10.active), i11 > l10)
+    if (e13.point || r10.point ? e13.point && r10.point && (e13.point == r10.point || e13.point.eq(r10.point)) && Pj(e13.activeForPoint(e13.to), r10.activeForPoint(r10.to)) || s10.comparePoint(a10, o11, e13.point, r10.point) : o11 > a10 && !Pj(e13.active, r10.active) && s10.compareRange(a10, o11, e13.active, r10.active), i11 > l10)
       break;
     a10 = i11, t11 <= 0 && e13.next(), t11 >= 0 && r10.next();
   }
 }
-function PD(e13, t10) {
+function Pj(e13, t10) {
   if (e13.length != t10.length)
     return false;
   for (let r10 = 0; r10 < e13.length; r10++)
@@ -16179,30 +16188,30 @@ function PD(e13, t10) {
       return false;
   return true;
 }
-function PR(e13, t10) {
+function PN(e13, t10) {
   for (let r10 = t10, i10 = e13.length - 1; r10 < i10; r10++)
     e13[r10] = e13[r10 + 1];
   e13.pop();
 }
-function PI(e13, t10, r10) {
+function PB(e13, t10, r10) {
   for (let r11 = e13.length - 1; r11 >= t10; r11--)
     e13[r11 + 1] = e13[r11];
   e13[t10] = r10;
 }
-function PL(e13, t10) {
+function P$(e13, t10) {
   let r10 = -1, i10 = 1e9;
   for (let o10 = 0; o10 < t10.length; o10++)
     0 > (t10[o10] - i10 || e13[o10].endSide - e13[r10].endSide) && (r10 = o10, i10 = t10[o10]);
   return r10;
 }
-function Pj(e13, t10) {
+function PF(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e13.length, i10 = 0;
   for (let o10 = 0; o10 < r10; )
-    9 == e13.charCodeAt(o10) ? (i10 += t10 - i10 % t10, o10++) : (i10++, o10 = T_(e13, o10));
+    9 == e13.charCodeAt(o10) ? (i10 += t10 - i10 % t10, o10++) : (i10++, o10 = TE(e13, o10));
   return i10;
 }
-let PN = "undefined" == typeof Symbol ? "__ͼ" : Symbol.for("ͼ"), PB = "undefined" == typeof Symbol ? "__styleSet" + Math.floor(1e8 * Math.random()) : Symbol("styleSet"), P$ = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : {};
-class PF {
+let Pz = "undefined" == typeof Symbol ? "__ͼ" : Symbol.for("ͼ"), PV = "undefined" == typeof Symbol ? "__styleSet" + Math.floor(1e8 * Math.random()) : Symbol("styleSet"), PH = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : {};
+class PW {
   constructor(e13, t10) {
     this.rules = [];
     let { finish: r10 } = t10 || {};
@@ -16232,26 +16241,26 @@ class PF {
     return this.rules.join("\n");
   }
   static newName() {
-    let e13 = P$[PN] || 1;
-    return P$[PN] = e13 + 1, "ͼ" + e13.toString(36);
+    let e13 = PH[Pz] || 1;
+    return PH[Pz] = e13 + 1, "ͼ" + e13.toString(36);
   }
   static mount(e13, t10, r10) {
-    let i10 = e13[PB], o10 = r10 && r10.nonce;
-    i10 ? o10 && i10.setNonce(o10) : i10 = new PV(e13, o10), i10.mount(Array.isArray(t10) ? t10 : [t10], e13);
+    let i10 = e13[PV], o10 = r10 && r10.nonce;
+    i10 ? o10 && i10.setNonce(o10) : i10 = new Pq(e13, o10), i10.mount(Array.isArray(t10) ? t10 : [t10], e13);
   }
 }
-let Pz = /* @__PURE__ */ new Map();
-class PV {
+let PU = /* @__PURE__ */ new Map();
+class Pq {
   constructor(e13, t10) {
     let r10 = e13.ownerDocument || e13, i10 = r10.defaultView;
     if (!e13.head && e13.adoptedStyleSheets && i10.CSSStyleSheet) {
-      let t11 = Pz.get(r10);
+      let t11 = PU.get(r10);
       if (t11)
-        return e13[PB] = t11;
-      this.sheet = new i10.CSSStyleSheet(), Pz.set(r10, this);
+        return e13[PV] = t11;
+      this.sheet = new i10.CSSStyleSheet(), PU.set(r10, this);
     } else
       this.styleTag = r10.createElement("style"), t10 && this.styleTag.setAttribute("nonce", t10);
-    this.modules = [], e13[PB] = this;
+    this.modules = [], e13[PV] = this;
   }
   mount(e13, t10) {
     let r10 = this.sheet, i10 = 0, o10 = 0;
@@ -16282,73 +16291,73 @@ class PV {
     this.styleTag && this.styleTag.getAttribute("nonce") != e13 && this.styleTag.setAttribute("nonce", e13);
   }
 }
-for (var PH = { 8: "Backspace", 9: "Tab", 10: "Enter", 12: "NumLock", 13: "Enter", 16: "Shift", 17: "Control", 18: "Alt", 20: "CapsLock", 27: "Escape", 32: " ", 33: "PageUp", 34: "PageDown", 35: "End", 36: "Home", 37: "ArrowLeft", 38: "ArrowUp", 39: "ArrowRight", 40: "ArrowDown", 44: "PrintScreen", 45: "Insert", 46: "Delete", 59: ";", 61: "=", 91: "Meta", 92: "Meta", 106: "*", 107: "+", 108: ",", 109: "-", 110: ".", 111: "/", 144: "NumLock", 145: "ScrollLock", 160: "Shift", 161: "Shift", 162: "Control", 163: "Control", 164: "Alt", 165: "Alt", 173: "-", 186: ";", 187: "=", 188: ",", 189: "-", 190: ".", 191: "/", 192: "`", 219: "[", 220: "\\", 221: "]", 222: "'" }, PW = { 48: ")", 49: "!", 50: "@", 51: "#", 52: "$", 53: "%", 54: "^", 55: "&", 56: "*", 57: "(", 59: ":", 61: "+", 173: "_", 186: ":", 187: "+", 188: "<", 189: "_", 190: ">", 191: "?", 192: "~", 219: "{", 220: "|", 221: "}", 222: '"' }, PU = "undefined" != typeof navigator && /Mac/.test(navigator.platform), Pq = "undefined" != typeof navigator && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent), PX = 0; PX < 10; PX++)
-  PH[48 + PX] = PH[96 + PX] = String(PX);
-for (var PX = 1; PX <= 24; PX++)
-  PH[PX + 111] = "F" + PX;
-for (var PX = 65; PX <= 90; PX++)
-  PH[PX] = String.fromCharCode(PX + 32), PW[PX] = String.fromCharCode(PX);
-for (var PQ in PH)
-  PW.hasOwnProperty(PQ) || (PW[PQ] = PH[PQ]);
-function PY(e13) {
+for (var PX = { 8: "Backspace", 9: "Tab", 10: "Enter", 12: "NumLock", 13: "Enter", 16: "Shift", 17: "Control", 18: "Alt", 20: "CapsLock", 27: "Escape", 32: " ", 33: "PageUp", 34: "PageDown", 35: "End", 36: "Home", 37: "ArrowLeft", 38: "ArrowUp", 39: "ArrowRight", 40: "ArrowDown", 44: "PrintScreen", 45: "Insert", 46: "Delete", 59: ";", 61: "=", 91: "Meta", 92: "Meta", 106: "*", 107: "+", 108: ",", 109: "-", 110: ".", 111: "/", 144: "NumLock", 145: "ScrollLock", 160: "Shift", 161: "Shift", 162: "Control", 163: "Control", 164: "Alt", 165: "Alt", 173: "-", 186: ";", 187: "=", 188: ",", 189: "-", 190: ".", 191: "/", 192: "`", 219: "[", 220: "\\", 221: "]", 222: "'" }, PQ = { 48: ")", 49: "!", 50: "@", 51: "#", 52: "$", 53: "%", 54: "^", 55: "&", 56: "*", 57: "(", 59: ":", 61: "+", 173: "_", 186: ":", 187: "+", 188: "<", 189: "_", 190: ">", 191: "?", 192: "~", 219: "{", 220: "|", 221: "}", 222: '"' }, PY = "undefined" != typeof navigator && /Mac/.test(navigator.platform), PK = "undefined" != typeof navigator && /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(navigator.userAgent), PG = 0; PG < 10; PG++)
+  PX[48 + PG] = PX[96 + PG] = String(PG);
+for (var PG = 1; PG <= 24; PG++)
+  PX[PG + 111] = "F" + PG;
+for (var PG = 65; PG <= 90; PG++)
+  PX[PG] = String.fromCharCode(PG + 32), PQ[PG] = String.fromCharCode(PG);
+for (var PJ in PX)
+  PQ.hasOwnProperty(PJ) || (PQ[PJ] = PX[PJ]);
+function PZ(e13) {
   return (11 == e13.nodeType ? e13.getSelection ? e13 : e13.ownerDocument : e13).getSelection();
 }
-function PK(e13, t10) {
+function P0(e13, t10) {
   return !!t10 && (e13 == t10 || e13.contains(1 != t10.nodeType ? t10.parentNode : t10));
 }
-function PG(e13, t10) {
+function P1(e13, t10) {
   if (!t10.anchorNode)
     return false;
   try {
-    return PK(e13, t10.anchorNode);
+    return P0(e13, t10.anchorNode);
   } catch (e14) {
     return false;
   }
 }
-function PJ(e13) {
-  return 3 == e13.nodeType ? P7(e13, 0, e13.nodeValue.length).getClientRects() : 1 == e13.nodeType ? e13.getClientRects() : [];
+function P2(e13) {
+  return 3 == e13.nodeType ? Er(e13, 0, e13.nodeValue.length).getClientRects() : 1 == e13.nodeType ? e13.getClientRects() : [];
 }
-function PZ(e13, t10, r10, i10) {
-  return !!r10 && (P2(e13, t10, r10, i10, -1) || P2(e13, t10, r10, i10, 1));
+function P4(e13, t10, r10, i10) {
+  return !!r10 && (P8(e13, t10, r10, i10, -1) || P8(e13, t10, r10, i10, 1));
 }
-function P0(e13) {
+function P3(e13) {
   for (var t10 = 0; ; t10++)
     if (!(e13 = e13.previousSibling))
       return t10;
 }
-function P1(e13) {
+function P5(e13) {
   return 1 == e13.nodeType && /^(DIV|P|LI|UL|OL|BLOCKQUOTE|DD|DT|H\d|SECTION|PRE)$/.test(e13.nodeName);
 }
-function P2(e13, t10, r10, i10, o10) {
+function P8(e13, t10, r10, i10, o10) {
   for (; ; ) {
     if (e13 == r10 && t10 == i10)
       return true;
-    if (t10 == (o10 < 0 ? 0 : P4(e13))) {
+    if (t10 == (o10 < 0 ? 0 : P6(e13))) {
       if ("DIV" == e13.nodeName)
         return false;
       let r11 = e13.parentNode;
       if (!r11 || 1 != r11.nodeType)
         return false;
-      t10 = P0(e13) + (o10 < 0 ? 0 : 1), e13 = r11;
+      t10 = P3(e13) + (o10 < 0 ? 0 : 1), e13 = r11;
     } else {
       if (1 != e13.nodeType || 1 == (e13 = e13.childNodes[t10 + (o10 < 0 ? -1 : 0)]).nodeType && "false" == e13.contentEditable)
         return false;
-      t10 = o10 < 0 ? P4(e13) : 0;
+      t10 = o10 < 0 ? P6(e13) : 0;
     }
   }
 }
-function P4(e13) {
+function P6(e13) {
   return 3 == e13.nodeType ? e13.nodeValue.length : e13.childNodes.length;
 }
-function P3(e13, t10) {
+function P9(e13, t10) {
   let r10 = t10 ? e13.left : e13.right;
   return { left: r10, right: r10, top: e13.top, bottom: e13.bottom };
 }
-function P5(e13, t10) {
+function P7(e13, t10) {
   let r10 = t10.width / e13.offsetWidth, i10 = t10.height / e13.offsetHeight;
   return (r10 > 0.995 && r10 < 1.005 || !isFinite(r10) || 1 > Math.abs(t10.width - e13.offsetWidth)) && (r10 = 1), (i10 > 0.995 && i10 < 1.005 || !isFinite(i10) || 1 > Math.abs(t10.height - e13.offsetHeight)) && (i10 = 1), { scaleX: r10, scaleY: i10 };
 }
-class P8 {
+class Ee {
   constructor() {
     this.anchorNode = null, this.anchorOffset = 0, this.focusNode = null, this.focusOffset = 0;
   }
@@ -16357,36 +16366,36 @@ class P8 {
   }
   setRange(e13) {
     let { anchorNode: t10, focusNode: r10 } = e13;
-    this.set(t10, Math.min(e13.anchorOffset, t10 ? P4(t10) : 0), r10, Math.min(e13.focusOffset, r10 ? P4(r10) : 0));
+    this.set(t10, Math.min(e13.anchorOffset, t10 ? P6(t10) : 0), r10, Math.min(e13.focusOffset, r10 ? P6(r10) : 0));
   }
   set(e13, t10, r10, i10) {
     this.anchorNode = e13, this.anchorOffset = t10, this.focusNode = r10, this.focusOffset = i10;
   }
 }
-let P6 = null;
-function P9(e13) {
+let Et = null;
+function En(e13) {
   if (e13.setActive)
     return e13.setActive();
-  if (P6)
-    return e13.focus(P6);
+  if (Et)
+    return e13.focus(Et);
   let t10 = [];
   for (let r10 = e13; r10 && (t10.push(r10, r10.scrollTop, r10.scrollLeft), r10 != r10.ownerDocument); r10 = r10.parentNode)
     ;
-  if (e13.focus(null == P6 ? { get preventScroll() {
-    return P6 = { preventScroll: true }, true;
-  } } : void 0), !P6) {
-    P6 = false;
+  if (e13.focus(null == Et ? { get preventScroll() {
+    return Et = { preventScroll: true }, true;
+  } } : void 0), !Et) {
+    Et = false;
     for (let e14 = 0; e14 < t10.length; ) {
       let r10 = t10[e14++], i10 = t10[e14++], o10 = t10[e14++];
       r10.scrollTop != i10 && (r10.scrollTop = i10), r10.scrollLeft != o10 && (r10.scrollLeft = o10);
     }
   }
 }
-function P7(e13, t10) {
+function Er(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t10, i10 = c || (c = document.createRange());
   return i10.setEnd(e13, r10), i10.setStart(e13, t10), i10;
 }
-function Ee(e13, t10, r10, i10) {
+function Ei(e13, t10, r10, i10) {
   let o10 = { key: t10, code: t10, keyCode: r10, which: r10, cancelable: true };
   i10 && ({ altKey: o10.altKey, ctrlKey: o10.ctrlKey, shiftKey: o10.shiftKey, metaKey: o10.metaKey } = i10);
   let s10 = new KeyboardEvent("keydown", o10);
@@ -16394,29 +16403,29 @@ function Ee(e13, t10, r10, i10) {
   let l10 = new KeyboardEvent("keyup", o10);
   return l10.synthetic = true, e13.dispatchEvent(l10), s10.defaultPrevented || l10.defaultPrevented;
 }
-function Et(e13) {
+function Eo(e13) {
   for (; e13.attributes.length; )
     e13.removeAttributeNode(e13.attributes[0]);
 }
-function En(e13) {
+function Es(e13) {
   return e13.scrollTop > Math.max(1, e13.scrollHeight - e13.clientHeight - 4);
 }
-function Er(e13, t10) {
+function El(e13, t10) {
   for (let r10 = e13, i10 = t10; ; ) {
     if (3 == r10.nodeType && i10 > 0)
       return { node: r10, offset: i10 };
     if (1 == r10.nodeType && i10 > 0) {
       if ("false" == r10.contentEditable)
         return null;
-      i10 = P4(r10 = r10.childNodes[i10 - 1]);
+      i10 = P6(r10 = r10.childNodes[i10 - 1]);
     } else {
-      if (!r10.parentNode || P1(r10))
+      if (!r10.parentNode || P5(r10))
         return null;
-      i10 = P0(r10), r10 = r10.parentNode;
+      i10 = P3(r10), r10 = r10.parentNode;
     }
   }
 }
-function Ei(e13, t10) {
+function Ea(e13, t10) {
   for (let r10 = e13, i10 = t10; ; ) {
     if (3 == r10.nodeType && i10 < r10.nodeValue.length)
       return { node: r10, offset: i10 };
@@ -16425,25 +16434,25 @@ function Ei(e13, t10) {
         return null;
       r10 = r10.childNodes[i10], i10 = 0;
     } else {
-      if (!r10.parentNode || P1(r10))
+      if (!r10.parentNode || P5(r10))
         return null;
-      i10 = P0(r10) + 1, r10 = r10.parentNode;
+      i10 = P3(r10) + 1, r10 = r10.parentNode;
     }
   }
 }
-class Eo {
+class Ec {
   constructor(e13, t10, r10 = true) {
     this.node = e13, this.offset = t10, this.precise = r10;
   }
   static before(e13, t10) {
-    return new Eo(e13.parentNode, P0(e13), t10);
+    return new Ec(e13.parentNode, P3(e13), t10);
   }
   static after(e13, t10) {
-    return new Eo(e13.parentNode, P0(e13) + 1, t10);
+    return new Ec(e13.parentNode, P3(e13) + 1, t10);
   }
 }
-let Es = [];
-class El {
+let Eu = [];
+class Eh {
   constructor() {
     this.parent = null, this.dom = null, this.flags = 2;
   }
@@ -16474,20 +16483,20 @@ class El {
       for (let s10 of this.children) {
         if (7 & s10.flags) {
           if (!s10.dom && (o10 = i10 ? i10.nextSibling : r10.firstChild)) {
-            let e14 = El.get(o10);
+            let e14 = Eh.get(o10);
             (!e14 || !e14.parent && e14.canReuseDOM(s10)) && s10.reuseDOM(o10);
           }
           s10.sync(e13, t10), s10.flags &= -8;
         }
         if (o10 = i10 ? i10.nextSibling : r10.firstChild, t10 && !t10.written && t10.node == r10 && o10 != s10.dom && (t10.written = true), s10.dom.parentNode == r10)
           for (; o10 && o10 != s10.dom; )
-            o10 = Ea(o10);
+            o10 = Ef(o10);
         else
           r10.insertBefore(s10.dom, o10);
         i10 = s10.dom;
       }
       for ((o10 = i10 ? i10.nextSibling : r10.firstChild) && t10 && t10.node == r10 && (t10.written = true); o10; )
-        o10 = Ea(o10);
+        o10 = Ef(o10);
     } else if (1 & this.flags)
       for (let r10 of this.children)
         7 & r10.flags && (r10.sync(e13, t10), r10.flags &= -8);
@@ -16499,7 +16508,7 @@ class El {
     if (e13 == this.dom)
       r10 = this.dom.childNodes[t10];
     else {
-      let i10 = 0 == P4(e13) ? 0 : 0 == t10 ? -1 : 1;
+      let i10 = 0 == P6(e13) ? 0 : 0 == t10 ? -1 : 1;
       for (; ; ) {
         let t11 = e13.parentNode;
         if (t11 == this.dom)
@@ -16510,7 +16519,7 @@ class El {
     }
     if (r10 == this.dom.firstChild)
       return 0;
-    for (; r10 && !El.get(r10); )
+    for (; r10 && !Eh.get(r10); )
       r10 = r10.nextSibling;
     if (!r10)
       return this.length;
@@ -16561,7 +16570,7 @@ class El {
     }
   }
   replaceChildren(e13, t10) {
-    let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Es;
+    let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Eu;
     this.markDirty();
     for (let i10 = e13; i10 < t10; i10++) {
       let e14 = this.children[i10];
@@ -16579,7 +16588,7 @@ class El {
   }
   childCursor() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.length;
-    return new Ec(this.children, e13, this.children.length);
+    return new Ed(this.children, e13, this.children.length);
   }
   childPos(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -16619,12 +16628,12 @@ class El {
     this.parent = null;
   }
 }
-function Ea(e13) {
+function Ef(e13) {
   let t10 = e13.nextSibling;
   return e13.parentNode.removeChild(e13), t10;
 }
-El.prototype.breakAfter = 0;
-class Ec {
+Eh.prototype.breakAfter = 0;
+class Ed {
   constructor(e13, t10, r10) {
     this.children = e13, this.pos = t10, this.i = r10, this.off = 0;
   }
@@ -16638,7 +16647,7 @@ class Ec {
     }
   }
 }
-function Eu(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
+function Ep(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
   let { children: u10 } = e13, h10 = u10.length ? u10[t10] : null, f10 = s10.length ? s10[s10.length - 1] : null, d10 = f10 ? f10.breakAfter : l10;
   if (!(t10 == i10 && h10 && !l10 && !d10 && s10.length < 2 && h10.merge(r10, o10, s10.length ? f10 : null, 0 == r10, a10, c10))) {
     if (i10 < u10.length) {
@@ -16655,15 +16664,15 @@ function Eu(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
     !s10.length && t10 && i10 < u10.length && !u10[t10 - 1].breakAfter && u10[i10].merge(0, 0, u10[t10 - 1], false, a10, c10) && t10--, (t10 < i10 || s10.length) && e13.replaceChildren(t10, i10, s10);
   }
 }
-function Eh(e13, t10, r10, i10, o10, s10) {
+function Eg(e13, t10, r10, i10, o10, s10) {
   let l10 = e13.childCursor(), { i: a10, off: c10 } = l10.findPos(r10, 1), { i: u10, off: h10 } = l10.findPos(t10, -1), f10 = t10 - r10;
   for (let e14 of i10)
     f10 += e14.length;
-  e13.length += f10, Eu(e13, u10, h10, a10, c10, i10, 0, o10, s10);
+  e13.length += f10, Ep(e13, u10, h10, a10, c10, i10, 0, o10, s10);
 }
-let Ef = "undefined" != typeof navigator ? navigator : { userAgent: "", vendor: "", platform: "" }, Ed = "undefined" != typeof document ? document : { documentElement: { style: {} } }, Ep = /Edge\/(\d+)/.exec(Ef.userAgent), Eg = /MSIE \d/.test(Ef.userAgent), Em = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(Ef.userAgent), Ev = !!(Eg || Em || Ep), Ey = !Ev && /gecko\/(\d+)/i.test(Ef.userAgent), Eb = !Ev && /Chrome\/(\d+)/.exec(Ef.userAgent), Ew = "webkitFontSmoothing" in Ed.documentElement.style, Ex = !Ev && /Apple Computer/.test(Ef.vendor), Ek = Ex && (/Mobile\/\w+/.test(Ef.userAgent) || Ef.maxTouchPoints > 2);
-var ES = { mac: Ek || /Mac/.test(Ef.platform), windows: /Win/.test(Ef.platform), linux: /Linux|X11/.test(Ef.platform), ie: Ev, ie_version: Eg ? Ed.documentMode || 6 : Em ? +Em[1] : Ep ? +Ep[1] : 0, gecko: Ey, gecko_version: Ey ? +(/Firefox\/(\d+)/.exec(Ef.userAgent) || [0, 0])[1] : 0, chrome: !!Eb, chrome_version: Eb ? +Eb[1] : 0, ios: Ek, android: /Android\b/.test(Ef.userAgent), webkit: Ew, safari: Ex, webkit_version: Ew ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0, tabSize: null != Ed.documentElement.style.tabSize ? "tab-size" : "-moz-tab-size" };
-class EC extends El {
+let Em = "undefined" != typeof navigator ? navigator : { userAgent: "", vendor: "", platform: "" }, Ev = "undefined" != typeof document ? document : { documentElement: { style: {} } }, Ey = /Edge\/(\d+)/.exec(Em.userAgent), Eb = /MSIE \d/.test(Em.userAgent), Ew = /Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(Em.userAgent), Ex = !!(Eb || Ew || Ey), Ek = !Ex && /gecko\/(\d+)/i.test(Em.userAgent), ES = !Ex && /Chrome\/(\d+)/.exec(Em.userAgent), EC = "webkitFontSmoothing" in Ev.documentElement.style, EO = !Ex && /Apple Computer/.test(Em.vendor), EA = EO && (/Mobile\/\w+/.test(Em.userAgent) || Em.maxTouchPoints > 2);
+var E_ = { mac: EA || /Mac/.test(Em.platform), windows: /Win/.test(Em.platform), linux: /Linux|X11/.test(Em.platform), ie: Ex, ie_version: Eb ? Ev.documentMode || 6 : Ew ? +Ew[1] : Ey ? +Ey[1] : 0, gecko: Ek, gecko_version: Ek ? +(/Firefox\/(\d+)/.exec(Em.userAgent) || [0, 0])[1] : 0, chrome: !!ES, chrome_version: ES ? +ES[1] : 0, ios: EA, android: /Android\b/.test(Em.userAgent), webkit: EC, safari: EO, webkit_version: EC ? +(/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1] : 0, tabSize: null != Ev.documentElement.style.tabSize ? "tab-size" : "-moz-tab-size" };
+class EM extends Eh {
   constructor(e13) {
     super(), this.text = e13;
   }
@@ -16680,17 +16689,17 @@ class EC extends El {
     3 == e13.nodeType && this.createDOM(e13);
   }
   merge(e13, t10, r10) {
-    return !(8 & this.flags) && (!r10 || r10 instanceof EC && !(this.length - (t10 - e13) + r10.length > 256) && !(8 & r10.flags)) && (this.text = this.text.slice(0, e13) + (r10 ? r10.text : "") + this.text.slice(t10), this.markDirty(), true);
+    return !(8 & this.flags) && (!r10 || r10 instanceof EM && !(this.length - (t10 - e13) + r10.length > 256) && !(8 & r10.flags)) && (this.text = this.text.slice(0, e13) + (r10 ? r10.text : "") + this.text.slice(t10), this.markDirty(), true);
   }
   split(e13) {
-    let t10 = new EC(this.text.slice(e13));
+    let t10 = new EM(this.text.slice(e13));
     return this.text = this.text.slice(0, e13), this.markDirty(), t10.flags |= 8 & this.flags, t10;
   }
   localPosFromDOM(e13, t10) {
     return e13 == this.dom ? t10 : t10 ? this.text.length : 0;
   }
   domAtPos(e13) {
-    return new Eo(this.dom, e13);
+    return new Ec(this.dom, e13);
   }
   domBoundsAround(e13, t10, r10) {
     return { from: r10, to: r10 + this.length, startDOM: this.dom, endDOM: this.dom.nextSibling };
@@ -16700,22 +16709,22 @@ class EC extends El {
       let i10 = e14.nodeValue.length;
       t11 > i10 && (t11 = i10);
       let o10 = t11, s10 = t11, l10 = 0;
-      0 == t11 && r10 < 0 || t11 == i10 && r10 >= 0 ? !(ES.chrome || ES.gecko) && (t11 ? (o10--, l10 = 1) : s10 < i10 && (s10++, l10 = -1)) : r10 < 0 ? o10-- : s10 < i10 && s10++;
-      let a10 = P7(e14, o10, s10).getClientRects();
+      0 == t11 && r10 < 0 || t11 == i10 && r10 >= 0 ? !(E_.chrome || E_.gecko) && (t11 ? (o10--, l10 = 1) : s10 < i10 && (s10++, l10 = -1)) : r10 < 0 ? o10-- : s10 < i10 && s10++;
+      let a10 = Er(e14, o10, s10).getClientRects();
       if (!a10.length)
         return null;
       let c10 = a10[(l10 ? l10 < 0 : r10 >= 0) ? 0 : a10.length - 1];
-      return ES.safari && !l10 && 0 == c10.width && (c10 = Array.prototype.find.call(a10, (e15) => e15.width) || c10), l10 ? P3(c10, l10 < 0) : c10 || null;
+      return E_.safari && !l10 && 0 == c10.width && (c10 = Array.prototype.find.call(a10, (e15) => e15.width) || c10), l10 ? P9(c10, l10 < 0) : c10 || null;
     }(this.dom, e13, t10);
   }
 }
-class EO extends El {
+class ET extends Eh {
   constructor(e13, t10 = [], r10 = 0) {
     for (let i10 of (super(), this.mark = e13, this.children = t10, this.length = r10, t10))
       i10.setParent(this);
   }
   setAttrs(e13) {
-    if (Et(e13), this.mark.class && (e13.className = this.mark.class), this.mark.attrs)
+    if (Eo(e13), this.mark.class && (e13.className = this.mark.class), this.mark.attrs)
       for (let t10 in this.mark.attrs)
         e13.setAttribute(t10, this.mark.attrs[t10]);
     return e13;
@@ -16730,7 +16739,7 @@ class EO extends El {
     this.dom ? 4 & this.flags && this.setAttrs(this.dom) : this.setDOM(this.setAttrs(document.createElement(this.mark.tagName))), super.sync(e13, t10);
   }
   merge(e13, t10, r10, i10, o10, s10) {
-    return (!r10 || !!(r10 instanceof EO && r10.mark.eq(this.mark)) && (!e13 || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (Eh(this, e13, t10, r10 ? r10.children.slice() : [], o10 - 1, s10 - 1), this.markDirty(), true);
+    return (!r10 || !!(r10 instanceof ET && r10.mark.eq(this.mark)) && (!e13 || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (Eg(this, e13, t10, r10 ? r10.children.slice() : [], o10 - 1, s10 - 1), this.markDirty(), true);
   }
   split(e13) {
     let t10 = [], r10 = 0, i10 = -1, o10 = 0;
@@ -16739,24 +16748,24 @@ class EO extends El {
       l10 > e13 && t10.push(r10 < e13 ? s11.split(e13 - r10) : s11), i10 < 0 && r10 >= e13 && (i10 = o10), r10 = l10, o10++;
     }
     let s10 = this.length - e13;
-    return this.length = e13, i10 > -1 && (this.children.length = i10, this.markDirty()), new EO(this.mark, t10, s10);
+    return this.length = e13, i10 > -1 && (this.children.length = i10, this.markDirty()), new ET(this.mark, t10, s10);
   }
   domAtPos(e13) {
-    return EM(this, e13);
+    return ED(this, e13);
   }
   coordsAt(e13, t10) {
-    return ET(this, e13, t10);
+    return ER(this, e13, t10);
   }
 }
-class EA extends El {
+class EP extends Eh {
   static create(e13, t10, r10) {
-    return new EA(e13, t10, r10);
+    return new EP(e13, t10, r10);
   }
   constructor(e13, t10, r10) {
     super(), this.widget = e13, this.length = t10, this.side = r10, this.prevWidget = null;
   }
   split(e13) {
-    let t10 = EA.create(this.widget, this.length - e13, this.side);
+    let t10 = EP.create(this.widget, this.length - e13, this.side);
     return this.length -= e13, t10;
   }
   sync(e13) {
@@ -16766,10 +16775,10 @@ class EA extends El {
     return this.side;
   }
   merge(e13, t10, r10, i10, o10, s10) {
-    return (!r10 || r10 instanceof EA && !!this.widget.compare(r10.widget) && (!(e13 > 0) || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (this.length = e13 + (r10 ? r10.length : 0) + (this.length - t10), true);
+    return (!r10 || r10 instanceof EP && !!this.widget.compare(r10.widget) && (!(e13 > 0) || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (this.length = e13 + (r10 ? r10.length : 0) + (this.length - t10), true);
   }
   become(e13) {
-    return e13 instanceof EA && e13.side == this.side && this.widget.constructor == e13.widget.constructor && (this.widget.compare(e13.widget) || this.markDirty(true), this.dom && !this.prevWidget && (this.prevWidget = this.widget), this.widget = e13.widget, this.length = e13.length, true);
+    return e13 instanceof EP && e13.side == this.side && this.widget.constructor == e13.widget.constructor && (this.widget.compare(e13.widget) || this.markDirty(true), this.dom && !this.prevWidget && (this.prevWidget = this.widget), this.widget = e13.widget, this.length = e13.length, true);
   }
   ignoreMutation() {
     return true;
@@ -16779,15 +16788,15 @@ class EA extends El {
   }
   get overrideDOMText() {
     if (0 == this.length)
-      return Tm.empty;
+      return Tw.empty;
     let e13 = this;
     for (; e13.parent; )
       e13 = e13.parent;
     let { view: t10 } = e13, r10 = t10 && t10.state.doc, i10 = this.posAtStart;
-    return r10 ? r10.slice(i10, i10 + this.length) : Tm.empty;
+    return r10 ? r10.slice(i10, i10 + this.length) : Tw.empty;
   }
   domAtPos(e13) {
-    return (this.length ? 0 == e13 : this.side > 0) ? Eo.before(this.dom) : Eo.after(this.dom, e13 == this.length);
+    return (this.length ? 0 == e13 : this.side > 0) ? Ec.before(this.dom) : Ec.after(this.dom, e13 == this.length);
   }
   domBoundsAround() {
     return null;
@@ -16802,7 +16811,7 @@ class EA extends El {
     let s10 = this.side ? this.side < 0 : e13 > 0;
     for (let t11 = s10 ? i10.length - 1 : 0; o10 = i10[t11], e13 > 0 ? 0 != t11 : t11 != i10.length - 1 && !(o10.top < o10.bottom); t11 += s10 ? -1 : 1)
       ;
-    return P3(o10, !s10);
+    return P9(o10, !s10);
   }
   get isEditable() {
     return false;
@@ -16817,7 +16826,7 @@ class EA extends El {
     super.destroy(), this.dom && this.widget.destroy(this.dom);
   }
 }
-class E_ extends El {
+class EE extends Eh {
   constructor(e13) {
     super(), this.side = e13;
   }
@@ -16828,10 +16837,10 @@ class E_ extends El {
     return false;
   }
   become(e13) {
-    return e13 instanceof E_ && e13.side == this.side;
+    return e13 instanceof EE && e13.side == this.side;
   }
   split() {
-    return new E_(this.side);
+    return new EE(this.side);
   }
   sync() {
     if (!this.dom) {
@@ -16843,7 +16852,7 @@ class E_ extends El {
     return this.side;
   }
   domAtPos(e13) {
-    return this.side > 0 ? Eo.before(this.dom) : Eo.after(this.dom);
+    return this.side > 0 ? Ec.before(this.dom) : Ec.after(this.dom);
   }
   localPosFromDOM() {
     return 0;
@@ -16855,13 +16864,13 @@ class E_ extends El {
     return this.dom.getBoundingClientRect();
   }
   get overrideDOMText() {
-    return Tm.empty;
+    return Tw.empty;
   }
   get isHidden() {
     return true;
   }
 }
-function EM(e13, t10) {
+function ED(e13, t10) {
   let r10 = e13.dom, { children: i10 } = e13, o10 = 0;
   for (let e14 = 0; o10 < i10.length; o10++) {
     let s10 = i10[o10], l10 = e14 + s10.length;
@@ -16883,9 +16892,9 @@ function EM(e13, t10) {
     if (t11.dom.parentNode == r10)
       return t11.domAtPos(0);
   }
-  return new Eo(r10, 0);
+  return new Ec(r10, 0);
 }
-function ET(e13, t10, r10) {
+function ER(e13, t10, r10) {
   let i10 = null, o10 = -1, s10 = null, l10 = -1;
   !function e14(t11, a11) {
     for (let c10 = 0, u10 = 0; c10 < t11.children.length && u10 <= a11; c10++) {
@@ -16898,21 +16907,21 @@ function ET(e13, t10, r10) {
     let t11 = e14.dom.lastChild;
     if (!t11)
       return e14.dom.getBoundingClientRect();
-    let r11 = PJ(t11);
+    let r11 = P2(t11);
     return r11[r11.length - 1] || null;
   }(e13);
 }
-function EP(e13, t10) {
+function EI(e13, t10) {
   for (let r10 in e13)
     "class" == r10 && t10.class ? t10.class += " " + e13.class : "style" == r10 && t10.style ? t10.style += ";" + e13.style : t10[r10] = e13[r10];
   return t10;
 }
-EC.prototype.children = EA.prototype.children = E_.prototype.children = Es;
-let EE = /* @__PURE__ */ Object.create(null);
-function ED(e13, t10, r10) {
+EM.prototype.children = EP.prototype.children = EE.prototype.children = Eu;
+let EL = /* @__PURE__ */ Object.create(null);
+function Ej(e13, t10, r10) {
   if (e13 == t10)
     return true;
-  e13 || (e13 = EE), t10 || (t10 = EE);
+  e13 || (e13 = EL), t10 || (t10 = EL);
   let i10 = Object.keys(e13), o10 = Object.keys(t10);
   if (i10.length - (r10 && i10.indexOf(r10) > -1 ? 1 : 0) != o10.length - (r10 && o10.indexOf(r10) > -1 ? 1 : 0))
     return false;
@@ -16921,7 +16930,7 @@ function ED(e13, t10, r10) {
       return false;
   return true;
 }
-function ER(e13, t10, r10) {
+function EN(e13, t10, r10) {
   let i10 = false;
   if (t10)
     for (let o10 in t10)
@@ -16931,20 +16940,20 @@ function ER(e13, t10, r10) {
       t10 && t10[o10] == r10[o10] || (i10 = true, "style" == o10 ? e13.style.cssText = r10[o10] : e13.setAttribute(o10, r10[o10]));
   return i10;
 }
-class EI extends El {
+class EB extends Eh {
   constructor() {
     super(...arguments), this.children = [], this.length = 0, this.prevAttrs = void 0, this.attrs = null, this.breakAfter = 0;
   }
   merge(e13, t10, r10, i10, o10, s10) {
     if (r10) {
-      if (!(r10 instanceof EI))
+      if (!(r10 instanceof EB))
         return false;
       this.dom || r10.transferDOM(this);
     }
-    return i10 && this.setDeco(r10 ? r10.attrs : null), Eh(this, e13, t10, r10 ? r10.children.slice() : [], o10, s10), true;
+    return i10 && this.setDeco(r10 ? r10.attrs : null), Eg(this, e13, t10, r10 ? r10.children.slice() : [], o10, s10), true;
   }
   split(e13) {
-    let t10 = new EI();
+    let t10 = new EB();
     if (t10.breakAfter = this.breakAfter, 0 == this.length)
       return t10;
     let { i: r10, off: i10 } = this.childPos(e13);
@@ -16959,31 +16968,31 @@ class EI extends El {
     this.dom && (this.markDirty(), e13.setDOM(this.dom), e13.prevAttrs = void 0 === this.prevAttrs ? this.attrs : this.prevAttrs, this.prevAttrs = void 0, this.dom = null);
   }
   setDeco(e13) {
-    ED(this.attrs, e13) || (this.dom && (this.prevAttrs = this.attrs, this.markDirty()), this.attrs = e13);
+    Ej(this.attrs, e13) || (this.dom && (this.prevAttrs = this.attrs, this.markDirty()), this.attrs = e13);
   }
   append(e13, t10) {
     !function e14(t11, r10, i10) {
       let o10, { children: s10 } = t11;
-      i10 > 0 && r10 instanceof EO && s10.length && (o10 = s10[s10.length - 1]) instanceof EO && o10.mark.eq(r10.mark) ? e14(o10, r10.children[0], i10 - 1) : (s10.push(r10), r10.setParent(t11)), t11.length += r10.length;
+      i10 > 0 && r10 instanceof ET && s10.length && (o10 = s10[s10.length - 1]) instanceof ET && o10.mark.eq(r10.mark) ? e14(o10, r10.children[0], i10 - 1) : (s10.push(r10), r10.setParent(t11)), t11.length += r10.length;
     }(this, e13, t10);
   }
   addLineDeco(e13) {
     let t10 = e13.spec.attributes, r10 = e13.spec.class;
-    t10 && (this.attrs = EP(t10, this.attrs || {})), r10 && (this.attrs = EP({ class: r10 }, this.attrs || {}));
+    t10 && (this.attrs = EI(t10, this.attrs || {})), r10 && (this.attrs = EI({ class: r10 }, this.attrs || {}));
   }
   domAtPos(e13) {
-    return EM(this, e13);
+    return ED(this, e13);
   }
   reuseDOM(e13) {
     "DIV" == e13.nodeName && (this.setDOM(e13), this.flags |= 6);
   }
   sync(e13, t10) {
     var r10;
-    this.dom ? 4 & this.flags && (Et(this.dom), this.dom.className = "cm-line", this.prevAttrs = this.attrs ? null : void 0) : (this.setDOM(document.createElement("div")), this.dom.className = "cm-line", this.prevAttrs = this.attrs ? null : void 0), void 0 !== this.prevAttrs && (ER(this.dom, this.prevAttrs, this.attrs), this.dom.classList.add("cm-line"), this.prevAttrs = void 0), super.sync(e13, t10);
+    this.dom ? 4 & this.flags && (Eo(this.dom), this.dom.className = "cm-line", this.prevAttrs = this.attrs ? null : void 0) : (this.setDOM(document.createElement("div")), this.dom.className = "cm-line", this.prevAttrs = this.attrs ? null : void 0), void 0 !== this.prevAttrs && (EN(this.dom, this.prevAttrs, this.attrs), this.dom.classList.add("cm-line"), this.prevAttrs = void 0), super.sync(e13, t10);
     let i10 = this.dom.lastChild;
-    for (; i10 && El.get(i10) instanceof EO; )
+    for (; i10 && Eh.get(i10) instanceof ET; )
       i10 = i10.lastChild;
-    if (!i10 || !this.length || "BR" != i10.nodeName && (null === (r10 = El.get(i10)) || void 0 === r10 ? void 0 : r10.isEditable) == false && (!ES.ios || !this.children.some((e14) => e14 instanceof EC))) {
+    if (!i10 || !this.length || "BR" != i10.nodeName && (null === (r10 = Eh.get(i10)) || void 0 === r10 ? void 0 : r10.isEditable) == false && (!E_.ios || !this.children.some((e14) => e14 instanceof EM))) {
       let e14 = document.createElement("BR");
       e14.cmIgnore = true, this.dom.appendChild(e14);
     }
@@ -16993,9 +17002,9 @@ class EI extends El {
       return null;
     let e13 = 0, t10;
     for (let r10 of this.children) {
-      if (!(r10 instanceof EC) || /[^ -~]/.test(r10.text))
+      if (!(r10 instanceof EM) || /[^ -~]/.test(r10.text))
         return null;
-      let i10 = PJ(r10.dom);
+      let i10 = P2(r10.dom);
       if (1 != i10.length)
         return null;
       e13 += i10[0].width, t10 = i10[0].height;
@@ -17003,7 +17012,7 @@ class EI extends El {
     return e13 ? { lineHeight: this.dom.getBoundingClientRect().height, charWidth: e13 / this.length, textHeight: t10 } : null;
   }
   coordsAt(e13, t10) {
-    let r10 = ET(this, e13, t10);
+    let r10 = ER(this, e13, t10);
     if (!this.children.length && r10 && this.parent) {
       let { heightOracle: e14 } = this.parent.view.viewState, t11 = r10.bottom - r10.top;
       if (2 > Math.abs(t11 - e14.lineHeight) && e14.textHeight < t11) {
@@ -17023,7 +17032,7 @@ class EI extends El {
     for (let r10 = 0, i10 = 0; r10 < e13.children.length; r10++) {
       let o10 = e13.children[r10], s10 = i10 + o10.length;
       if (s10 >= t10) {
-        if (o10 instanceof EI)
+        if (o10 instanceof EB)
           return o10;
         if (s10 > t10)
           break;
@@ -17033,36 +17042,36 @@ class EI extends El {
     return null;
   }
 }
-class EL extends El {
+class E$ extends Eh {
   constructor(e13, t10, r10) {
     super(), this.widget = e13, this.length = t10, this.deco = r10, this.breakAfter = 0, this.prevWidget = null;
   }
   merge(e13, t10, r10, i10, o10, s10) {
-    return (!r10 || r10 instanceof EL && !!this.widget.compare(r10.widget) && (!(e13 > 0) || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (this.length = e13 + (r10 ? r10.length : 0) + (this.length - t10), true);
+    return (!r10 || r10 instanceof E$ && !!this.widget.compare(r10.widget) && (!(e13 > 0) || !(o10 <= 0)) && (!(t10 < this.length) || !(s10 <= 0))) && (this.length = e13 + (r10 ? r10.length : 0) + (this.length - t10), true);
   }
   domAtPos(e13) {
-    return 0 == e13 ? Eo.before(this.dom) : Eo.after(this.dom, e13 == this.length);
+    return 0 == e13 ? Ec.before(this.dom) : Ec.after(this.dom, e13 == this.length);
   }
   split(e13) {
     let t10 = this.length - e13;
     this.length = e13;
-    let r10 = new EL(this.widget, t10, this.deco);
+    let r10 = new E$(this.widget, t10, this.deco);
     return r10.breakAfter = this.breakAfter, r10;
   }
   get children() {
-    return Es;
+    return Eu;
   }
   sync(e13) {
     this.dom && this.widget.updateDOM(this.dom, e13) || (this.dom && this.prevWidget && this.prevWidget.destroy(this.dom), this.prevWidget = null, this.setDOM(this.widget.toDOM(e13)), this.widget.editable || (this.dom.contentEditable = "false"));
   }
   get overrideDOMText() {
-    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : Tm.empty;
+    return this.parent ? this.parent.view.state.doc.slice(this.posAtStart, this.posAtEnd) : Tw.empty;
   }
   domBoundsAround() {
     return null;
   }
   become(e13) {
-    return e13 instanceof EL && e13.widget.constructor == this.widget.constructor && (e13.widget.compare(this.widget) || this.markDirty(true), this.dom && !this.prevWidget && (this.prevWidget = this.widget), this.widget = e13.widget, this.length = e13.length, this.deco = e13.deco, this.breakAfter = e13.breakAfter, true);
+    return e13 instanceof E$ && e13.widget.constructor == this.widget.constructor && (e13.widget.compare(this.widget) || this.markDirty(true), this.dom && !this.prevWidget && (this.prevWidget = this.widget), this.widget = e13.widget, this.length = e13.length, this.deco = e13.deco, this.breakAfter = e13.breakAfter, true);
   }
   ignoreMutation() {
     return true;
@@ -17087,7 +17096,7 @@ class EL extends El {
     return t10 != r10 && (e13 < 0 ? t10 < 0 : r10 > 0);
   }
 }
-class Ej {
+class EF {
   eq(e13) {
     return false;
   }
@@ -17118,8 +17127,8 @@ class Ej {
   destroy(e13) {
   }
 }
-var EN = ((W = EN || (EN = {}))[W.Text = 0] = "Text", W[W.WidgetBefore = 1] = "WidgetBefore", W[W.WidgetAfter = 2] = "WidgetAfter", W[W.WidgetRange = 3] = "WidgetRange", W);
-class EB extends Pw {
+var Ez = ((W = Ez || (Ez = {}))[W.Text = 0] = "Text", W[W.WidgetBefore = 1] = "WidgetBefore", W[W.WidgetAfter = 2] = "WidgetAfter", W[W.WidgetRange = 3] = "WidgetRange", W);
+class EV extends PC {
   constructor(e13, t10, r10, i10) {
     super(), this.startSide = e13, this.endSide = t10, this.widget = r10, this.spec = i10;
   }
@@ -17127,42 +17136,42 @@ class EB extends Pw {
     return false;
   }
   static mark(e13) {
-    return new E$(e13);
+    return new EH(e13);
   }
   static widget(e13) {
     let t10 = Math.max(-1e4, Math.min(1e4, e13.side || 0)), r10 = !!e13.block;
-    return t10 += r10 && !e13.inlineOrder ? t10 > 0 ? 3e8 : -4e8 : t10 > 0 ? 1e8 : -1e8, new Ez(e13, t10, t10, r10, e13.widget || null, false);
+    return t10 += r10 && !e13.inlineOrder ? t10 > 0 ? 3e8 : -4e8 : t10 > 0 ? 1e8 : -1e8, new EU(e13, t10, t10, r10, e13.widget || null, false);
   }
   static replace(e13) {
     let t10 = !!e13.block, r10, i10;
     if (e13.isBlockGap)
       r10 = -5e8, i10 = 4e8;
     else {
-      let { start: o10, end: s10 } = EV(e13, t10);
+      let { start: o10, end: s10 } = Eq(e13, t10);
       r10 = (o10 ? t10 ? -3e8 : -1 : 5e8) - 1, i10 = (s10 ? t10 ? 2e8 : 1 : -6e8) + 1;
     }
-    return new Ez(e13, r10, i10, t10, e13.widget || null, true);
+    return new EU(e13, r10, i10, t10, e13.widget || null, true);
   }
   static line(e13) {
-    return new EF(e13);
+    return new EW(e13);
   }
   static set(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return PC.of(e13, t10);
+    return PM.of(e13, t10);
   }
   hasHeight() {
     return !!this.widget && this.widget.estimatedHeight > -1;
   }
 }
-EB.none = PC.empty;
-class E$ extends EB {
+EV.none = PM.empty;
+class EH extends EV {
   constructor(e13) {
-    let { start: t10, end: r10 } = EV(e13);
+    let { start: t10, end: r10 } = Eq(e13);
     super(t10 ? -1 : 5e8, r10 ? 1 : -6e8, null, e13), this.tagName = e13.tagName || "span", this.class = e13.class || "", this.attrs = e13.attributes || null;
   }
   eq(e13) {
     var t10, r10;
-    return this == e13 || e13 instanceof E$ && this.tagName == e13.tagName && (this.class || (null === (t10 = this.attrs) || void 0 === t10 ? void 0 : t10.class)) == (e13.class || (null === (r10 = e13.attrs) || void 0 === r10 ? void 0 : r10.class)) && ED(this.attrs, e13.attrs, "class");
+    return this == e13 || e13 instanceof EH && this.tagName == e13.tagName && (this.class || (null === (t10 = this.attrs) || void 0 === t10 ? void 0 : t10.class)) == (e13.class || (null === (r10 = e13.attrs) || void 0 === r10 ? void 0 : r10.class)) && Ej(this.attrs, e13.attrs, "class");
   }
   range(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
@@ -17171,13 +17180,13 @@ class E$ extends EB {
     return super.range(e13, t10);
   }
 }
-E$.prototype.point = false;
-class EF extends EB {
+EH.prototype.point = false;
+class EW extends EV {
   constructor(e13) {
     super(-2e8, -2e8, null, e13);
   }
   eq(e13) {
-    return e13 instanceof EF && this.spec.class == e13.spec.class && ED(this.spec.attributes, e13.spec.attributes);
+    return e13 instanceof EW && this.spec.class == e13.spec.class && Ej(this.spec.attributes, e13.spec.attributes);
   }
   range(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
@@ -17186,20 +17195,20 @@ class EF extends EB {
     return super.range(e13, t10);
   }
 }
-EF.prototype.mapMode = TL.TrackBefore, EF.prototype.point = true;
-class Ez extends EB {
+EW.prototype.mapMode = T$.TrackBefore, EW.prototype.point = true;
+class EU extends EV {
   constructor(e13, t10, r10, i10, o10, s10) {
-    super(t10, r10, o10, e13), this.block = i10, this.isReplace = s10, this.mapMode = i10 ? t10 <= 0 ? TL.TrackBefore : TL.TrackAfter : TL.TrackDel;
+    super(t10, r10, o10, e13), this.block = i10, this.isReplace = s10, this.mapMode = i10 ? t10 <= 0 ? T$.TrackBefore : T$.TrackAfter : T$.TrackDel;
   }
   get type() {
-    return this.startSide != this.endSide ? EN.WidgetRange : this.startSide <= 0 ? EN.WidgetBefore : EN.WidgetAfter;
+    return this.startSide != this.endSide ? Ez.WidgetRange : this.startSide <= 0 ? Ez.WidgetBefore : Ez.WidgetAfter;
   }
   get heightRelevant() {
     return this.block || !!this.widget && (this.widget.estimatedHeight >= 5 || this.widget.lineBreaks > 0);
   }
   eq(e13) {
     var t10, r10;
-    return e13 instanceof Ez && ((t10 = this.widget) == (r10 = e13.widget) || !!(t10 && r10 && t10.compare(r10))) && this.block == e13.block && this.startSide == e13.startSide && this.endSide == e13.endSide;
+    return e13 instanceof EU && ((t10 = this.widget) == (r10 = e13.widget) || !!(t10 && r10 && t10.compare(r10))) && this.block == e13.block && this.startSide == e13.startSide && this.endSide == e13.endSide;
   }
   range(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13;
@@ -17210,16 +17219,16 @@ class Ez extends EB {
     return super.range(e13, t10);
   }
 }
-function EV(e13) {
+function Eq(e13) {
   let t10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], { inclusiveStart: r10, inclusiveEnd: i10 } = e13;
   return null == r10 && (r10 = e13.inclusive), null == i10 && (i10 = e13.inclusive), { start: null != r10 ? r10 : t10, end: null != i10 ? i10 : t10 };
 }
-function EH(e13, t10, r10) {
+function EX(e13, t10, r10) {
   let i10 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0, o10 = r10.length - 1;
   o10 >= 0 && r10[o10] + i10 >= e13 ? r10[o10] = Math.max(r10[o10], t10) : r10.push(e13, t10);
 }
-Ez.prototype.point = true;
-class EW {
+EU.prototype.point = true;
+class EQ {
   constructor(e13, t10, r10, i10) {
     this.doc = e13, this.pos = t10, this.end = r10, this.disallowBlockEffectsFor = i10, this.content = [], this.curLine = null, this.breakAtStart = 0, this.pendingBuffer = 0, this.bufferMarks = [], this.atCursorPos = true, this.openStart = -1, this.openEnd = -1, this.text = "", this.textOff = 0, this.cursor = e13.iter(), this.skip = t10;
   }
@@ -17227,20 +17236,20 @@ class EW {
     if (0 == this.content.length)
       return !this.breakAtStart && this.doc.lineAt(this.pos).from != this.pos;
     let e13 = this.content[this.content.length - 1];
-    return !(e13.breakAfter || e13 instanceof EL && e13.deco.endSide < 0);
+    return !(e13.breakAfter || e13 instanceof E$ && e13.deco.endSide < 0);
   }
   getLine() {
-    return this.curLine || (this.content.push(this.curLine = new EI()), this.atCursorPos = true), this.curLine;
+    return this.curLine || (this.content.push(this.curLine = new EB()), this.atCursorPos = true), this.curLine;
   }
   flushBuffer() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.bufferMarks;
-    this.pendingBuffer && (this.curLine.append(EU(new E_(-1), e13), e13.length), this.pendingBuffer = 0);
+    this.pendingBuffer && (this.curLine.append(EY(new EE(-1), e13), e13.length), this.pendingBuffer = 0);
   }
   addBlockWidget(e13) {
     this.flushBuffer(), this.curLine = null, this.content.push(e13);
   }
   finish(e13) {
-    this.pendingBuffer && e13 <= this.bufferMarks.length ? this.flushBuffer() : this.pendingBuffer = 0, this.posCovered() || e13 && this.content.length && this.content[this.content.length - 1] instanceof EL || this.getLine();
+    this.pendingBuffer && e13 <= this.bufferMarks.length ? this.flushBuffer() : this.pendingBuffer = 0, this.posCovered() || e13 && this.content.length && this.content[this.content.length - 1] instanceof E$ || this.getLine();
   }
   buildText(e13, t10, r10) {
     for (; e13 > 0; ) {
@@ -17255,42 +17264,42 @@ class EW {
         this.text = t11, this.textOff = 0;
       }
       let i10 = Math.min(this.text.length - this.textOff, e13, 512);
-      this.flushBuffer(t10.slice(t10.length - r10)), this.getLine().append(EU(new EC(this.text.slice(this.textOff, this.textOff + i10)), t10), r10), this.atCursorPos = true, this.textOff += i10, e13 -= i10, r10 = 0;
+      this.flushBuffer(t10.slice(t10.length - r10)), this.getLine().append(EY(new EM(this.text.slice(this.textOff, this.textOff + i10)), t10), r10), this.atCursorPos = true, this.textOff += i10, e13 -= i10, r10 = 0;
     }
   }
   span(e13, t10, r10, i10) {
     this.buildText(t10 - e13, r10, i10), this.pos = t10, this.openStart < 0 && (this.openStart = i10);
   }
   point(e13, t10, r10, i10, o10, s10) {
-    if (this.disallowBlockEffectsFor[s10] && r10 instanceof Ez) {
+    if (this.disallowBlockEffectsFor[s10] && r10 instanceof EU) {
       if (r10.block)
         throw RangeError("Block decorations may not be specified via plugins");
       if (t10 > this.doc.lineAt(this.pos).to)
         throw RangeError("Decorations that replace line breaks may not be specified via plugins");
     }
     let l10 = t10 - e13;
-    if (r10 instanceof Ez) {
+    if (r10 instanceof EU) {
       if (r10.block)
-        r10.startSide > 0 && !this.posCovered() && this.getLine(), this.addBlockWidget(new EL(r10.widget || Eq.block, l10, r10));
+        r10.startSide > 0 && !this.posCovered() && this.getLine(), this.addBlockWidget(new E$(r10.widget || EK.block, l10, r10));
       else {
-        let s11 = EA.create(r10.widget || Eq.inline, l10, l10 ? 0 : r10.startSide), a10 = this.atCursorPos && !s11.isEditable && o10 <= i10.length && (e13 < t10 || r10.startSide > 0), c10 = !s11.isEditable && (e13 < t10 || o10 > i10.length || r10.startSide <= 0), u10 = this.getLine();
-        2 != this.pendingBuffer || a10 || s11.isEditable || (this.pendingBuffer = 0), this.flushBuffer(i10), a10 && (u10.append(EU(new E_(1), i10), o10), o10 = i10.length + Math.max(0, o10 - i10.length)), u10.append(EU(s11, i10), o10), this.atCursorPos = c10, this.pendingBuffer = c10 ? e13 < t10 || o10 > i10.length ? 1 : 2 : 0, this.pendingBuffer && (this.bufferMarks = i10.slice());
+        let s11 = EP.create(r10.widget || EK.inline, l10, l10 ? 0 : r10.startSide), a10 = this.atCursorPos && !s11.isEditable && o10 <= i10.length && (e13 < t10 || r10.startSide > 0), c10 = !s11.isEditable && (e13 < t10 || o10 > i10.length || r10.startSide <= 0), u10 = this.getLine();
+        2 != this.pendingBuffer || a10 || s11.isEditable || (this.pendingBuffer = 0), this.flushBuffer(i10), a10 && (u10.append(EY(new EE(1), i10), o10), o10 = i10.length + Math.max(0, o10 - i10.length)), u10.append(EY(s11, i10), o10), this.atCursorPos = c10, this.pendingBuffer = c10 ? e13 < t10 || o10 > i10.length ? 1 : 2 : 0, this.pendingBuffer && (this.bufferMarks = i10.slice());
       }
     } else
       this.doc.lineAt(this.pos).from == this.pos && this.getLine().addLineDeco(r10);
     l10 && (this.textOff + l10 <= this.text.length ? this.textOff += l10 : (this.skip += l10 - (this.text.length - this.textOff), this.text = "", this.textOff = 0), this.pos = t10), this.openStart < 0 && (this.openStart = o10);
   }
   static build(e13, t10, r10, i10, o10) {
-    let s10 = new EW(e13, t10, r10, o10);
-    return s10.openEnd = PC.spans(i10, t10, r10, s10), s10.openStart < 0 && (s10.openStart = s10.openEnd), s10.finish(s10.openEnd), s10;
+    let s10 = new EQ(e13, t10, r10, o10);
+    return s10.openEnd = PM.spans(i10, t10, r10, s10), s10.openStart < 0 && (s10.openStart = s10.openEnd), s10.finish(s10.openEnd), s10;
   }
 }
-function EU(e13, t10) {
+function EY(e13, t10) {
   for (let r10 of t10)
-    e13 = new EO(r10, [e13], e13.length);
+    e13 = new ET(r10, [e13], e13.length);
   return e13;
 }
-class Eq extends Ej {
+class EK extends EF {
   constructor(e13) {
     super(), this.tag = e13;
   }
@@ -17307,27 +17316,27 @@ class Eq extends Ej {
     return true;
   }
 }
-Eq.inline = new Eq("span"), Eq.block = new Eq("div");
-var EX = ((U = EX || (EX = {}))[U.LTR = 0] = "LTR", U[U.RTL = 1] = "RTL", U);
-let EQ = EX.LTR, EY = EX.RTL;
-function EK(e13) {
+EK.inline = new EK("span"), EK.block = new EK("div");
+var EG = ((U = EG || (EG = {}))[U.LTR = 0] = "LTR", U[U.RTL = 1] = "RTL", U);
+let EJ = EG.LTR, EZ = EG.RTL;
+function E0(e13) {
   let t10 = [];
   for (let r10 = 0; r10 < e13.length; r10++)
     t10.push(1 << +e13[r10]);
   return t10;
 }
-let EG = EK("88888888888888888888888888888888888666888888787833333333337888888000000000000000000000000008888880000000000000000000000000088888888888888888888888888888888888887866668888088888663380888308888800000000000000000000000800000000000000000000000000000008"), EJ = EK("4444448826627288999999999992222222222222222222222222222222222222222222222229999999999999999999994444444444644222822222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222999999949999999229989999223333333333"), EZ = /* @__PURE__ */ Object.create(null), E0 = [];
+let E1 = E0("88888888888888888888888888888888888666888888787833333333337888888000000000000000000000000008888880000000000000000000000000088888888888888888888888888888888888887866668888088888663380888308888800000000000000000000000800000000000000000000000000000008"), E2 = E0("4444448826627288999999999992222222222222222222222222222222222222222222222229999999999999999999994444444444644222822222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222999999949999999229989999223333333333"), E4 = /* @__PURE__ */ Object.create(null), E3 = [];
 for (let e13 of ["()", "[]", "{}"]) {
   let t10 = e13.charCodeAt(0), r10 = e13.charCodeAt(1);
-  EZ[t10] = r10, EZ[r10] = -t10;
+  E4[t10] = r10, E4[r10] = -t10;
 }
-function E1(e13) {
-  return e13 <= 247 ? EG[e13] : 1424 <= e13 && e13 <= 1524 ? 2 : 1536 <= e13 && e13 <= 1785 ? EJ[e13 - 1536] : 1774 <= e13 && e13 <= 2220 ? 4 : 8192 <= e13 && e13 <= 8204 ? 256 : 64336 <= e13 && e13 <= 65023 ? 4 : 1;
+function E5(e13) {
+  return e13 <= 247 ? E1[e13] : 1424 <= e13 && e13 <= 1524 ? 2 : 1536 <= e13 && e13 <= 1785 ? E2[e13 - 1536] : 1774 <= e13 && e13 <= 2220 ? 4 : 8192 <= e13 && e13 <= 8204 ? 256 : 64336 <= e13 && e13 <= 65023 ? 4 : 1;
 }
-let E2 = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac\ufb50-\ufdff]/;
-class E4 {
+let E8 = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac\ufb50-\ufdff]/;
+class E6 {
   get dir() {
-    return this.level % 2 ? EY : EQ;
+    return this.level % 2 ? EZ : EJ;
   }
   constructor(e13, t10, r10) {
     this.from = e13, this.to = t10, this.level = r10;
@@ -17353,47 +17362,47 @@ class E4 {
     return o10;
   }
 }
-let E3 = [];
-function E5(e13) {
-  return [new E4(0, e13, 0)];
+let E9 = [];
+function E7(e13) {
+  return [new E6(0, e13, 0)];
 }
-let E8 = "", E6 = TQ.define(), E9 = TQ.define(), E7 = TQ.define(), De = TQ.define(), Dt = TQ.define(), Dn = TQ.define(), Dr = TQ.define(), Di = TQ.define({ combine: (e13) => e13.some((e14) => e14) }), Do = TQ.define({ combine: (e13) => e13.some((e14) => e14) }), Ds = TQ.define();
-class Dl {
+let De = "", Dt = TJ.define(), Dn = TJ.define(), Dr = TJ.define(), Di = TJ.define(), Do = TJ.define(), Ds = TJ.define(), Dl = TJ.define(), Da = TJ.define({ combine: (e13) => e13.some((e14) => e14) }), Dc = TJ.define({ combine: (e13) => e13.some((e14) => e14) }), Du = TJ.define();
+class Dh {
   constructor(e13, t10 = "nearest", r10 = "nearest", i10 = 5, o10 = 5, s10 = false) {
     this.range = e13, this.y = t10, this.x = r10, this.yMargin = i10, this.xMargin = o10, this.isSnapshot = s10;
   }
   map(e13) {
-    return e13.empty ? this : new Dl(this.range.map(e13), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
+    return e13.empty ? this : new Dh(this.range.map(e13), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
   }
   clip(e13) {
-    return this.range.to <= e13.doc.length ? this : new Dl(TU.cursor(e13.doc.length), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
+    return this.range.to <= e13.doc.length ? this : new Dh(TY.cursor(e13.doc.length), this.y, this.x, this.yMargin, this.xMargin, this.isSnapshot);
   }
 }
-let Da = Pu.define({ map: (e13, t10) => e13.map(t10) });
-function Dc(e13, t10, r10) {
-  let i10 = e13.facet(De);
+let Df = Pp.define({ map: (e13, t10) => e13.map(t10) });
+function Dd(e13, t10, r10) {
+  let i10 = e13.facet(Di);
   i10.length ? i10[0](t10) : window.onerror ? window.onerror(String(t10), r10, void 0, void 0, t10) : r10 ? console.error(r10 + ":", t10) : console.error(t10);
 }
-let Du = TQ.define({ combine: (e13) => !e13.length || e13[0] }), Dh = 0, Df = TQ.define();
-class Dd {
+let Dp = TJ.define({ combine: (e13) => !e13.length || e13[0] }), Dg = 0, Dm = TJ.define();
+class Dv {
   constructor(e13, t10, r10, i10, o10) {
     this.id = e13, this.create = t10, this.domEventHandlers = r10, this.domEventObservers = i10, this.extension = o10(this);
   }
   static define(e13, t10) {
     let { eventHandlers: r10, eventObservers: i10, provide: o10, decorations: s10 } = t10 || {};
-    return new Dd(Dh++, e13, r10, i10, (e14) => {
-      let t11 = [Df.of(e14)];
-      return s10 && t11.push(Dv.of((t12) => {
+    return new Dv(Dg++, e13, r10, i10, (e14) => {
+      let t11 = [Dm.of(e14)];
+      return s10 && t11.push(Dx.of((t12) => {
         let r11 = t12.plugin(e14);
-        return r11 ? s10(r11) : EB.none;
+        return r11 ? s10(r11) : EV.none;
       })), o10 && t11.push(o10(e14)), t11;
     });
   }
   static fromClass(e13, t10) {
-    return Dd.define((t11) => new e13(t11), t10);
+    return Dv.define((t11) => new e13(t11), t10);
   }
 }
-class Dp {
+class Dy {
   constructor(e13) {
     this.spec = e13, this.mustUpdate = null, this.value = null;
   }
@@ -17405,7 +17414,7 @@ class Dp {
           try {
             this.value.update(e14);
           } catch (t10) {
-            if (Dc(e14.state, t10, "CodeMirror plugin crashed"), this.value.destroy)
+            if (Dd(e14.state, t10, "CodeMirror plugin crashed"), this.value.destroy)
               try {
                 this.value.destroy();
               } catch (e15) {
@@ -17417,7 +17426,7 @@ class Dp {
       try {
         this.value = this.spec.create(e13);
       } catch (t10) {
-        Dc(e13.state, t10, "CodeMirror plugin crashed"), this.deactivate();
+        Dd(e13.state, t10, "CodeMirror plugin crashed"), this.deactivate();
       }
     return this;
   }
@@ -17427,33 +17436,33 @@ class Dp {
       try {
         this.value.destroy();
       } catch (t11) {
-        Dc(e13.state, t11, "CodeMirror plugin crashed");
+        Dd(e13.state, t11, "CodeMirror plugin crashed");
       }
   }
   deactivate() {
     this.spec = this.value = null;
   }
 }
-let Dg = TQ.define(), Dm = TQ.define(), Dv = TQ.define(), Dy = TQ.define(), Db = TQ.define(), Dw = TQ.define();
-function Dx(e13, t10) {
-  let r10 = e13.state.facet(Dw);
+let Db = TJ.define(), Dw = TJ.define(), Dx = TJ.define(), Dk = TJ.define(), DS = TJ.define(), DC = TJ.define();
+function DO(e13, t10) {
+  let r10 = e13.state.facet(DC);
   if (!r10.length)
     return r10;
   let i10 = r10.map((t11) => t11 instanceof Function ? t11(e13) : t11), o10 = [];
-  return PC.spans(i10, t10.from, t10.to, { point() {
+  return PM.spans(i10, t10.from, t10.to, { point() {
   }, span(e14, r11, i11, s10) {
     let l10 = e14 - t10.from, a10 = r11 - t10.from, c10 = o10;
     for (let e15 = i11.length - 1; e15 >= 0; e15--, s10--) {
       let r12 = i11[e15].spec.bidiIsolate, o11;
       if (null == r12 && (r12 = function(e16, t11, r13) {
         for (let i12 = t11; i12 < r13; i12++) {
-          let t12 = E1(e16.charCodeAt(i12));
+          let t12 = E5(e16.charCodeAt(i12));
           if (1 == t12)
             break;
           if (2 == t12 || 4 == t12)
-            return EY;
+            return EZ;
         }
-        return EQ;
+        return EJ;
       }(t10.text, l10, a10)), s10 > 0 && c10.length && (o11 = c10[c10.length - 1]).to == l10 && o11.direction == r12)
         o11.to = a10, c10 = o11.inner;
       else {
@@ -17463,22 +17472,22 @@ function Dx(e13, t10) {
     }
   } }), o10;
 }
-let Dk = TQ.define();
-function DS(e13) {
+let DA = TJ.define();
+function D_(e13) {
   let t10 = 0, r10 = 0, i10 = 0, o10 = 0;
-  for (let s10 of e13.state.facet(Dk)) {
+  for (let s10 of e13.state.facet(DA)) {
     let l10 = s10(e13);
     l10 && (null != l10.left && (t10 = Math.max(t10, l10.left)), null != l10.right && (r10 = Math.max(r10, l10.right)), null != l10.top && (i10 = Math.max(i10, l10.top)), null != l10.bottom && (o10 = Math.max(o10, l10.bottom)));
   }
   return { left: t10, right: r10, top: i10, bottom: o10 };
 }
-let DC = TQ.define();
-class DO {
+let DM = TJ.define();
+class DT {
   constructor(e13, t10, r10, i10) {
     this.fromA = e13, this.toA = t10, this.fromB = r10, this.toB = i10;
   }
   join(e13) {
-    return new DO(Math.min(this.fromA, e13.fromA), Math.max(this.toA, e13.toA), Math.min(this.fromB, e13.fromB), Math.max(this.toB, e13.toB));
+    return new DT(Math.min(this.fromA, e13.fromA), Math.max(this.toA, e13.toA), Math.min(this.fromB, e13.fromB), Math.max(this.toB, e13.toB));
   }
   addToSet(e13) {
     let t10 = e13.length, r10 = this;
@@ -17500,25 +17509,25 @@ class DO {
       let a10 = i10 == e13.length ? null : e13[i10], c10 = s10 - l10, u10 = a10 ? a10.fromB : 1e9;
       for (; o10 < t10.length && t10[o10] < u10; ) {
         let e14 = t10[o10], i11 = t10[o10 + 1], s11 = Math.max(l10, e14), a11 = Math.min(u10, i11);
-        if (s11 <= a11 && new DO(s11 + c10, a11 + c10, s11, a11).addToSet(r10), i11 > u10)
+        if (s11 <= a11 && new DT(s11 + c10, a11 + c10, s11, a11).addToSet(r10), i11 > u10)
           break;
         o10 += 2;
       }
       if (!a10)
         return r10;
-      new DO(a10.fromA, a10.toA, a10.fromB, a10.toB).addToSet(r10), s10 = a10.toA, l10 = a10.toB;
+      new DT(a10.fromA, a10.toA, a10.fromB, a10.toB).addToSet(r10), s10 = a10.toA, l10 = a10.toB;
     }
   }
 }
-class DA {
+class DP {
   constructor(e13, t10, r10) {
-    for (let i11 of (this.view = e13, this.state = t10, this.transactions = r10, this.flags = 0, this.startState = e13.state, this.changes = TN.empty(this.startState.doc.length), r10))
+    for (let i11 of (this.view = e13, this.state = t10, this.transactions = r10, this.flags = 0, this.startState = e13.state, this.changes = Tz.empty(this.startState.doc.length), r10))
       this.changes = this.changes.compose(i11.changes);
     let i10 = [];
-    this.changes.iterChangedRanges((e14, t11, r11, o10) => i10.push(new DO(e14, t11, r11, o10))), this.changedRanges = i10;
+    this.changes.iterChangedRanges((e14, t11, r11, o10) => i10.push(new DT(e14, t11, r11, o10))), this.changedRanges = i10;
   }
   static create(e13, t10, r10) {
-    return new DA(e13, t10, r10);
+    return new DP(e13, t10, r10);
   }
   get viewportChanged() {
     return (4 & this.flags) > 0;
@@ -17542,12 +17551,12 @@ class DA {
     return 0 == this.flags && 0 == this.transactions.length;
   }
 }
-class D_ extends El {
+class DE extends Eh {
   get length() {
     return this.view.state.doc.length;
   }
   constructor(e13) {
-    super(), this.view = e13, this.decorations = [], this.dynamicDecorationMap = [], this.domChanged = null, this.hasComposition = null, this.markedForComposition = /* @__PURE__ */ new Set(), this.lastCompositionAfterCursor = false, this.minWidth = 0, this.minWidthFrom = 0, this.minWidthTo = 0, this.impreciseAnchor = null, this.impreciseHead = null, this.forceSelection = false, this.lastUpdate = Date.now(), this.setDOM(e13.contentDOM), this.children = [new EI()], this.children[0].setParent(this), this.updateDeco(), this.updateInner([new DO(0, 0, 0, e13.state.doc.length)], 0, null);
+    super(), this.view = e13, this.decorations = [], this.dynamicDecorationMap = [], this.domChanged = null, this.hasComposition = null, this.markedForComposition = /* @__PURE__ */ new Set(), this.lastCompositionAfterCursor = false, this.minWidth = 0, this.minWidthFrom = 0, this.minWidthTo = 0, this.impreciseAnchor = null, this.impreciseHead = null, this.forceSelection = false, this.lastUpdate = Date.now(), this.setDOM(e13.contentDOM), this.children = [new EB()], this.children[0].setParent(this), this.updateDeco(), this.updateInner([new DT(0, 0, 0, e13.state.doc.length)], 0, null);
   }
   update(e13) {
     var t10, r10, i10, o10, s10, l10;
@@ -17562,23 +17571,23 @@ class D_ extends El {
       e14 < i10.to && t11 > i10.from && (a10 = true);
     }), a10 || e13.selectionSet || (h10 = e13.state.selection.main.head)));
     let f10 = h10 > -1 ? function(e14, t11, r11) {
-      let i11 = DT(e14, r11);
+      let i11 = DR(e14, r11);
       if (!i11)
         return null;
       let { node: o11, from: s11, to: l11 } = i11, a11 = o11.nodeValue;
       if (/[\n\r]/.test(a11) || e14.state.doc.sliceString(i11.from, i11.to) != a11)
         return null;
-      let c11 = t11.invertedDesc, u11 = new DO(c11.mapPos(s11), c11.mapPos(l11), s11, l11), h11 = [];
+      let c11 = t11.invertedDesc, u11 = new DT(c11.mapPos(s11), c11.mapPos(l11), s11, l11), h11 = [];
       for (let t12 = o11.parentNode; ; t12 = t12.parentNode) {
-        let r12 = El.get(t12);
-        if (r12 instanceof EO)
+        let r12 = Eh.get(t12);
+        if (r12 instanceof ET)
           h11.push({ node: t12, deco: r12.mark });
         else {
-          if (r12 instanceof EI || "DIV" == t12.nodeName && t12.parentNode == e14.contentDOM)
+          if (r12 instanceof EB || "DIV" == t12.nodeName && t12.parentNode == e14.contentDOM)
             return { range: u11, text: o11, marks: h11, line: t12 };
           if (t12 == e14.contentDOM)
             return null;
-          h11.push({ node: t12, deco: new E$({ inclusive: true, attributes: function(e15) {
+          h11.push({ node: t12, deco: new EH({ inclusive: true, attributes: function(e15) {
             let t13 = /* @__PURE__ */ Object.create(null);
             for (let r13 = 0; r13 < e15.attributes.length; r13++) {
               let i12 = e15.attributes[r13];
@@ -17592,24 +17601,24 @@ class D_ extends El {
     if (this.domChanged = null, this.hasComposition) {
       this.markedForComposition.clear();
       let { from: t11, to: r11 } = this.hasComposition;
-      u10 = new DO(t11, r11, e13.changes.mapPos(t11, -1), e13.changes.mapPos(r11, 1)).addToSet(u10.slice());
+      u10 = new DT(t11, r11, e13.changes.mapPos(t11, -1), e13.changes.mapPos(r11, 1)).addToSet(u10.slice());
     }
-    this.hasComposition = f10 ? { from: f10.range.fromB, to: f10.range.toB } : null, (ES.ie || ES.chrome) && !f10 && e13 && e13.state.doc.lines != e13.startState.doc.lines && (this.forceSelection = true);
-    let d10 = (o10 = this.decorations, s10 = this.updateDeco(), l10 = e13.changes, c10 = new DP(), PC.compare(o10, s10, l10, c10), c10.changes);
-    return u10 = DO.extendWithRanges(u10, d10), (!!(7 & this.flags) || 0 != u10.length) && (this.updateInner(u10, e13.startState.doc.length, f10), e13.transactions.length && (this.lastUpdate = Date.now()), true);
+    this.hasComposition = f10 ? { from: f10.range.fromB, to: f10.range.toB } : null, (E_.ie || E_.chrome) && !f10 && e13 && e13.state.doc.lines != e13.startState.doc.lines && (this.forceSelection = true);
+    let d10 = (o10 = this.decorations, s10 = this.updateDeco(), l10 = e13.changes, c10 = new DI(), PM.compare(o10, s10, l10, c10), c10.changes);
+    return u10 = DT.extendWithRanges(u10, d10), (!!(7 & this.flags) || 0 != u10.length) && (this.updateInner(u10, e13.startState.doc.length, f10), e13.transactions.length && (this.lastUpdate = Date.now()), true);
   }
   updateInner(e13, t10, r10) {
     this.view.viewState.mustMeasureContent = true, this.updateChildren(e13, t10, r10);
     let { observer: i10 } = this.view;
     i10.ignore(() => {
       this.dom.style.height = this.view.viewState.contentHeight / this.view.scaleY + "px", this.dom.style.flexBasis = this.minWidth ? this.minWidth + "px" : "";
-      let e14 = ES.chrome || ES.ios ? { node: i10.selectionRange.focusNode, written: false } : void 0;
+      let e14 = E_.chrome || E_.ios ? { node: i10.selectionRange.focusNode, written: false } : void 0;
       this.sync(this.view, e14), this.flags &= -8, e14 && (e14.written || i10.selectionRange.focusNode != e14.node) && (this.forceSelection = true), this.dom.style.height = "";
     }), this.markedForComposition.forEach((e14) => e14.flags &= -9);
     let o10 = [];
     if (this.view.viewport.from || this.view.viewport.to < this.view.state.doc.length)
       for (let e14 of this.children)
-        e14 instanceof EL && e14.widget instanceof DM && o10.push(e14.dom);
+        e14 instanceof E$ && e14.widget instanceof DD && o10.push(e14.dom);
     i10.updateGaps(o10);
   }
   updateChildren(e13, t10, r10) {
@@ -17620,28 +17629,28 @@ class D_ extends El {
         break;
       let { fromA: s10, toA: l10, fromB: a10, toB: c10 } = t11, u10, h10, f10, d10;
       if (r10 && r10.range.fromB < c10 && r10.range.toB > a10) {
-        let e15 = EW.build(this.view.state.doc, a10, r10.range.fromB, this.decorations, this.dynamicDecorationMap), t12 = EW.build(this.view.state.doc, r10.range.toB, c10, this.decorations, this.dynamicDecorationMap);
+        let e15 = EQ.build(this.view.state.doc, a10, r10.range.fromB, this.decorations, this.dynamicDecorationMap), t12 = EQ.build(this.view.state.doc, r10.range.toB, c10, this.decorations, this.dynamicDecorationMap);
         h10 = e15.breakAtStart, f10 = e15.openStart, d10 = t12.openEnd;
         let i11 = this.compositionView(r10);
         t12.breakAtStart ? i11.breakAfter = 1 : t12.content.length && i11.merge(i11.length, i11.length, t12.content[0], false, t12.openStart, 0) && (i11.breakAfter = t12.content[0].breakAfter, t12.content.shift()), e15.content.length && i11.merge(0, 0, e15.content[e15.content.length - 1], true, 0, e15.openEnd) && e15.content.pop(), u10 = e15.content.concat(i11).concat(t12.content);
       } else
-        ({ content: u10, breakAtStart: h10, openStart: f10, openEnd: d10 } = EW.build(this.view.state.doc, a10, c10, this.decorations, this.dynamicDecorationMap));
+        ({ content: u10, breakAtStart: h10, openStart: f10, openEnd: d10 } = EQ.build(this.view.state.doc, a10, c10, this.decorations, this.dynamicDecorationMap));
       let { i: p10, off: g7 } = o10.findPos(l10, 1), { i: m10, off: y10 } = o10.findPos(s10, -1);
-      Eu(this, m10, y10, p10, g7, u10, h10, f10, d10);
+      Ep(this, m10, y10, p10, g7, u10, h10, f10, d10);
     }
     r10 && this.fixCompositionDOM(r10);
   }
   compositionView(e13) {
-    let t10 = new EC(e13.text.nodeValue);
+    let t10 = new EM(e13.text.nodeValue);
     for (let { deco: r11 } of (t10.flags |= 8, e13.marks))
-      t10 = new EO(r11, [t10], t10.length);
-    let r10 = new EI();
+      t10 = new ET(r11, [t10], t10.length);
+    let r10 = new EB();
     return r10.append(t10, 0), r10;
   }
   fixCompositionDOM(e13) {
     let t10 = (e14, t11) => {
       t11.flags |= 8 | (t11.children.some((e15) => 7 & e15.flags) ? 1 : 0), this.markedForComposition.add(t11);
-      let r11 = El.get(e14);
+      let r11 = Eh.get(e14);
       r11 && r11 != t11 && (r11.dom = null), t11.setDOM(e14);
     }, r10 = this.childPos(e13.range.fromB, 1), i10 = this.children[r10.i];
     t10(e13.line, i10);
@@ -17652,33 +17661,33 @@ class D_ extends El {
     var e13;
     let t10 = arguments.length > 0 && void 0 !== arguments[0] && arguments[0], r10 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     (t10 || !this.view.observer.selectionRange.focusNode) && this.view.observer.readSelectionRange();
-    let i10 = this.view.root.activeElement, o10 = i10 == this.dom, s10 = !o10 && PG(this.dom, this.view.observer.selectionRange) && !(i10 && this.dom.contains(i10));
+    let i10 = this.view.root.activeElement, o10 = i10 == this.dom, s10 = !o10 && P1(this.dom, this.view.observer.selectionRange) && !(i10 && this.dom.contains(i10));
     if (!(o10 || r10 || s10))
       return;
     let l10 = this.forceSelection;
     this.forceSelection = false;
     let a10 = this.view.state.selection.main, c10 = this.moveToLine(this.domAtPos(a10.anchor)), u10 = a10.empty ? c10 : this.moveToLine(this.domAtPos(a10.head));
-    if (ES.gecko && a10.empty && !this.hasComposition && 1 == (e13 = c10).node.nodeType && e13.node.firstChild && (0 == e13.offset || "false" == e13.node.childNodes[e13.offset - 1].contentEditable) && (e13.offset == e13.node.childNodes.length || "false" == e13.node.childNodes[e13.offset].contentEditable)) {
+    if (E_.gecko && a10.empty && !this.hasComposition && 1 == (e13 = c10).node.nodeType && e13.node.firstChild && (0 == e13.offset || "false" == e13.node.childNodes[e13.offset - 1].contentEditable) && (e13.offset == e13.node.childNodes.length || "false" == e13.node.childNodes[e13.offset].contentEditable)) {
       let e14 = document.createTextNode("");
-      this.view.observer.ignore(() => c10.node.insertBefore(e14, c10.node.childNodes[c10.offset] || null)), c10 = u10 = new Eo(e14, 0), l10 = true;
+      this.view.observer.ignore(() => c10.node.insertBefore(e14, c10.node.childNodes[c10.offset] || null)), c10 = u10 = new Ec(e14, 0), l10 = true;
     }
     let h10 = this.view.observer.selectionRange;
-    !l10 && h10.focusNode && (PZ(c10.node, c10.offset, h10.anchorNode, h10.anchorOffset) && PZ(u10.node, u10.offset, h10.focusNode, h10.focusOffset) || this.suppressWidgetCursorChange(h10, a10)) || (this.view.observer.ignore(() => {
-      ES.android && ES.chrome && this.dom.contains(h10.focusNode) && function(e15, t12) {
+    !l10 && h10.focusNode && (P4(c10.node, c10.offset, h10.anchorNode, h10.anchorOffset) && P4(u10.node, u10.offset, h10.focusNode, h10.focusOffset) || this.suppressWidgetCursorChange(h10, a10)) || (this.view.observer.ignore(() => {
+      E_.android && E_.chrome && this.dom.contains(h10.focusNode) && function(e15, t12) {
         for (let r12 = e15; r12 && r12 != t12; r12 = r12.assignedSlot || r12.parentNode)
           if (1 == r12.nodeType && "false" == r12.contentEditable)
             return true;
         return false;
       }(h10.focusNode, this.dom) && (this.dom.blur(), this.dom.focus({ preventScroll: true }));
-      let e14 = PY(this.view.root);
+      let e14 = PZ(this.view.root);
       if (e14) {
         if (a10.empty) {
-          if (ES.gecko) {
+          if (E_.gecko) {
             var t11, r11;
             let e15 = (t11 = c10.node, r11 = c10.offset, 1 != t11.nodeType ? 0 : (r11 && "false" == t11.childNodes[r11 - 1].contentEditable ? 1 : 0) | (r11 < t11.childNodes.length && "false" == t11.childNodes[r11].contentEditable ? 2 : 0));
             if (e15 && 3 != e15) {
-              let t12 = (1 == e15 ? Er : Ei)(c10.node, c10.offset);
-              t12 && (c10 = new Eo(t12.node, t12.offset));
+              let t12 = (1 == e15 ? El : Ea)(c10.node, c10.offset);
+              t12 && (c10 = new Ec(t12.node, t12.offset));
             }
           }
           e14.collapse(c10.node, c10.offset), null != a10.bidiLevel && void 0 !== e14.caretBidiLevel && (e14.caretBidiLevel = a10.bidiLevel);
@@ -17694,18 +17703,18 @@ class D_ extends El {
         }
       }
       s10 && this.view.root.activeElement == this.dom && (this.dom.blur(), i10 && i10.focus());
-    }), this.view.observer.setSelectionRange(c10, u10)), this.impreciseAnchor = c10.precise ? null : new Eo(h10.anchorNode, h10.anchorOffset), this.impreciseHead = u10.precise ? null : new Eo(h10.focusNode, h10.focusOffset);
+    }), this.view.observer.setSelectionRange(c10, u10)), this.impreciseAnchor = c10.precise ? null : new Ec(h10.anchorNode, h10.anchorOffset), this.impreciseHead = u10.precise ? null : new Ec(h10.focusNode, h10.focusOffset);
   }
   suppressWidgetCursorChange(e13, t10) {
-    return this.hasComposition && t10.empty && PZ(e13.focusNode, e13.focusOffset, e13.anchorNode, e13.anchorOffset) && this.posFromDOM(e13.focusNode, e13.focusOffset) == t10.head;
+    return this.hasComposition && t10.empty && P4(e13.focusNode, e13.focusOffset, e13.anchorNode, e13.anchorOffset) && this.posFromDOM(e13.focusNode, e13.focusOffset) == t10.head;
   }
   enforceCursorAssoc() {
     if (this.hasComposition)
       return;
-    let { view: e13 } = this, t10 = e13.state.selection.main, r10 = PY(e13.root), { anchorNode: i10, anchorOffset: o10 } = e13.observer.selectionRange;
+    let { view: e13 } = this, t10 = e13.state.selection.main, r10 = PZ(e13.root), { anchorNode: i10, anchorOffset: o10 } = e13.observer.selectionRange;
     if (!r10 || !t10.empty || !t10.assoc || !r10.modify)
       return;
-    let s10 = EI.find(this, t10.head);
+    let s10 = EB.find(this, t10.head);
     if (!s10)
       return;
     let l10 = s10.posAtStart;
@@ -17724,18 +17733,18 @@ class D_ extends El {
     if (e13.node != t10)
       return e13;
     for (let i10 = e13.offset; !r10 && i10 < t10.childNodes.length; i10++) {
-      let e14 = El.get(t10.childNodes[i10]);
-      e14 instanceof EI && (r10 = e14.domAtPos(0));
+      let e14 = Eh.get(t10.childNodes[i10]);
+      e14 instanceof EB && (r10 = e14.domAtPos(0));
     }
     for (let i10 = e13.offset - 1; !r10 && i10 >= 0; i10--) {
-      let e14 = El.get(t10.childNodes[i10]);
-      e14 instanceof EI && (r10 = e14.domAtPos(e14.length));
+      let e14 = Eh.get(t10.childNodes[i10]);
+      e14 instanceof EB && (r10 = e14.domAtPos(e14.length));
     }
-    return r10 ? new Eo(r10.node, r10.offset, true) : e13;
+    return r10 ? new Ec(r10.node, r10.offset, true) : e13;
   }
   nearest(e13) {
     for (let t10 = e13; t10; ) {
-      let e14 = El.get(t10);
+      let e14 = Eh.get(t10);
       if (e14 && e14.rootView == this)
         return e14;
       t10 = t10.parentNode;
@@ -17752,7 +17761,7 @@ class D_ extends El {
     let { i: t10, off: r10 } = this.childCursor().findPos(e13, -1);
     for (; t10 < this.children.length - 1; ) {
       let e14 = this.children[t10];
-      if (r10 < e14.length || e14 instanceof EI)
+      if (r10 < e14.length || e14 instanceof EB)
         break;
       t10++, r10 = 0;
     }
@@ -17764,13 +17773,13 @@ class D_ extends El {
       let l10 = this.children[s10], a10 = o10 - l10.breakAfter, c10 = a10 - l10.length;
       if (a10 < e13)
         break;
-      c10 <= e13 && (c10 < e13 || l10.covers(-1)) && (a10 > e13 || l10.covers(1)) && (!r10 || l10 instanceof EI && !(r10 instanceof EI && t10 >= 0)) && (r10 = l10, i10 = c10), o10 = c10;
+      c10 <= e13 && (c10 < e13 || l10.covers(-1)) && (a10 > e13 || l10.covers(1)) && (!r10 || l10 instanceof EB && !(r10 instanceof EB && t10 >= 0)) && (r10 = l10, i10 = c10), o10 = c10;
     }
     return r10 ? r10.coordsAt(e13 - i10, t10) : null;
   }
   coordsForChar(e13) {
     let { i: t10, off: r10 } = this.childPos(e13, 1), i10 = this.children[t10];
-    if (!(i10 instanceof EI))
+    if (!(i10 instanceof EB))
       return null;
     for (; i10.children.length; ) {
       let { i: e14, off: t11 } = i10.childPos(r10, 1);
@@ -17782,12 +17791,12 @@ class D_ extends El {
       }
       r10 = t11;
     }
-    if (!(i10 instanceof EC))
+    if (!(i10 instanceof EM))
       return null;
-    let o10 = T_(i10.text, r10);
+    let o10 = TE(i10.text, r10);
     if (o10 == r10)
       return null;
-    let s10 = P7(i10.dom, r10, o10).getClientRects();
+    let s10 = Er(i10.dom, r10, o10).getClientRects();
     for (let e14 = 0; e14 < s10.length; e14++) {
       let t11 = s10[e14];
       if (e14 == s10.length - 1 || t11.top < t11.bottom && t11.left < t11.right)
@@ -17796,7 +17805,7 @@ class D_ extends El {
     return null;
   }
   measureVisibleLineHeights(e13) {
-    let t10 = [], { from: r10, to: i10 } = e13, o10 = this.view.contentDOM.clientWidth, s10 = o10 > Math.max(this.view.scrollDOM.clientWidth, this.minWidth) + 1, l10 = -1, a10 = this.view.textDirection == EX.LTR;
+    let t10 = [], { from: r10, to: i10 } = e13, o10 = this.view.contentDOM.clientWidth, s10 = o10 > Math.max(this.view.scrollDOM.clientWidth, this.minWidth) + 1, l10 = -1, a10 = this.view.textDirection == EG.LTR;
     for (let e14 = 0, c10 = 0; c10 < this.children.length; c10++) {
       let u10 = this.children[c10], h10 = e14 + u10.length;
       if (h10 > i10)
@@ -17804,7 +17813,7 @@ class D_ extends El {
       if (e14 >= r10) {
         let r11 = u10.dom.getBoundingClientRect();
         if (t10.push(r11.height), s10) {
-          let t11 = u10.dom.lastChild, i11 = t11 ? PJ(t11) : [];
+          let t11 = u10.dom.lastChild, i11 = t11 ? P2(t11) : [];
           if (i11.length) {
             let t12 = i11[i11.length - 1], s11 = a10 ? t12.right - r11.left : r11.right - t12.left;
             s11 > l10 && (l10 = s11, this.minWidth = o10, this.minWidthFrom = e14, this.minWidthTo = h10);
@@ -17817,11 +17826,11 @@ class D_ extends El {
   }
   textDirectionAt(e13) {
     let { i: t10 } = this.childPos(e13, 1);
-    return "rtl" == getComputedStyle(this.children[t10].dom).direction ? EX.RTL : EX.LTR;
+    return "rtl" == getComputedStyle(this.children[t10].dom).direction ? EG.RTL : EG.LTR;
   }
   measureTextSize() {
     for (let e14 of this.children)
-      if (e14 instanceof EI) {
+      if (e14 instanceof EB) {
         let t11 = e14.measureTextSize();
         if (t11)
           return t11;
@@ -17829,13 +17838,13 @@ class D_ extends El {
     let e13 = document.createElement("div"), t10, r10, i10;
     return e13.className = "cm-line", e13.style.width = "99999px", e13.style.position = "absolute", e13.textContent = "abc def ghi jkl mno pqr stu", this.view.observer.ignore(() => {
       this.dom.appendChild(e13);
-      let o10 = PJ(e13.firstChild)[0];
+      let o10 = P2(e13.firstChild)[0];
       t10 = e13.getBoundingClientRect().height, r10 = o10 ? o10.width / 27 : 7, i10 = o10 ? o10.height : t10, e13.remove();
     }), { lineHeight: t10, charWidth: r10, textHeight: i10 };
   }
   childCursor() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.length, t10 = this.children.length;
-    return t10 && (e13 -= this.children[--t10].length), new Ec(this.children, e13, t10);
+    return t10 && (e13 -= this.children[--t10].length), new Ed(this.children, e13, t10);
   }
   computeBlockGapDeco() {
     let e13 = [], t10 = this.view.viewState;
@@ -17843,20 +17852,20 @@ class D_ extends El {
       let o10 = i10 == t10.viewports.length ? null : t10.viewports[i10], s10 = o10 ? o10.from - 1 : this.length;
       if (s10 > r10) {
         let i11 = (t10.lineBlockAt(s10).bottom - t10.lineBlockAt(r10).top) / this.view.scaleY;
-        e13.push(EB.replace({ widget: new DM(i11), block: true, inclusive: true, isBlockGap: true }).range(r10, s10));
+        e13.push(EV.replace({ widget: new DD(i11), block: true, inclusive: true, isBlockGap: true }).range(r10, s10));
       }
       if (!o10)
         break;
       r10 = o10.to + 1;
     }
-    return EB.set(e13);
+    return EV.set(e13);
   }
   updateDeco() {
-    let e13 = 0, t10 = this.view.state.facet(Dv).map((t11) => (this.dynamicDecorationMap[e13++] = "function" == typeof t11) ? t11(this.view) : t11), r10 = false, i10 = this.view.state.facet(Dy).map((e14, t11) => {
+    let e13 = 0, t10 = this.view.state.facet(Dx).map((t11) => (this.dynamicDecorationMap[e13++] = "function" == typeof t11) ? t11(this.view) : t11), r10 = false, i10 = this.view.state.facet(Dk).map((e14, t11) => {
       let i11 = "function" == typeof e14;
       return i11 && (r10 = true), i11 ? e14(this.view) : e14;
     });
-    for (i10.length && (this.dynamicDecorationMap[e13++] = r10, t10.push(PC.join(i10))), this.decorations = [...t10, this.computeBlockGapDeco(), this.view.viewState.lineGapDeco]; e13 < this.decorations.length; )
+    for (i10.length && (this.dynamicDecorationMap[e13++] = r10, t10.push(PM.join(i10))), this.decorations = [...t10, this.computeBlockGapDeco(), this.view.viewState.lineGapDeco]; e13 < this.decorations.length; )
       this.dynamicDecorationMap[e13++] = false;
     return this.decorations;
   }
@@ -17866,18 +17875,18 @@ class D_ extends El {
       this.view.scrollDOM.scrollTop = t11.top - e13.yMargin, this.view.scrollDOM.scrollLeft = e13.xMargin;
       return;
     }
-    for (let t11 of this.view.state.facet(Ds))
+    for (let t11 of this.view.state.facet(Du))
       try {
         if (t11(this.view, e13.range, e13))
           return true;
       } catch (e14) {
-        Dc(this.view.state, e14, "scroll handler");
+        Dd(this.view.state, e14, "scroll handler");
       }
     let { range: t10 } = e13, r10 = this.coordsAt(t10.head, t10.empty ? t10.assoc : t10.head > t10.anchor ? -1 : 1), i10;
     if (!r10)
       return;
     !t10.empty && (i10 = this.coordsAt(t10.anchor, t10.anchor > t10.head ? -1 : 1)) && (r10 = { left: Math.min(r10.left, i10.left), top: Math.min(r10.top, i10.top), right: Math.max(r10.right, i10.right), bottom: Math.max(r10.bottom, i10.bottom) });
-    let o10 = DS(this.view), s10 = { left: r10.left - o10.left, top: r10.top - o10.top, right: r10.right + o10.right, bottom: r10.bottom + o10.bottom }, { offsetWidth: l10, offsetHeight: a10 } = this.view.scrollDOM;
+    let o10 = D_(this.view), s10 = { left: r10.left - o10.left, top: r10.top - o10.top, right: r10.right + o10.right, bottom: r10.bottom + o10.bottom }, { offsetWidth: l10, offsetHeight: a10 } = this.view.scrollDOM;
     !function(e14, t11, r11, i11, o11, s11, l11, a11) {
       let c10 = e14.ownerDocument, u10 = c10.defaultView || window;
       for (let h10 = e14, f10 = false; h10 && !f10; )
@@ -17894,7 +17903,7 @@ class D_ extends El {
               continue;
             }
             let t12 = h10.getBoundingClientRect();
-            ({ scaleX: p10, scaleY: g7 } = P5(h10, t12)), e15 = { left: t12.left, right: t12.left + h10.clientWidth * p10, top: t12.top, bottom: t12.top + h10.clientHeight * g7 };
+            ({ scaleX: p10, scaleY: g7 } = P7(h10, t12)), e15 = { left: t12.left, right: t12.left + h10.clientWidth * p10, top: t12.top, bottom: t12.top + h10.clientHeight * g7 };
           }
           let m10 = 0, y10 = 0;
           if ("nearest" == o11)
@@ -17926,10 +17935,10 @@ class D_ extends El {
           h10 = h10.host;
         else
           break;
-    }(this.view.scrollDOM, s10, t10.head < t10.anchor ? -1 : 1, e13.x, e13.y, Math.max(Math.min(e13.xMargin, l10), -l10), Math.max(Math.min(e13.yMargin, a10), -a10), this.view.textDirection == EX.LTR);
+    }(this.view.scrollDOM, s10, t10.head < t10.anchor ? -1 : 1, e13.x, e13.y, Math.max(Math.min(e13.xMargin, l10), -l10), Math.max(Math.min(e13.yMargin, a10), -a10), this.view.textDirection == EG.LTR);
   }
 }
-class DM extends Ej {
+class DD extends EF {
   constructor(e13) {
     super(), this.height = e13;
   }
@@ -17953,18 +17962,18 @@ class DM extends Ej {
     return false;
   }
 }
-function DT(e13, t10) {
+function DR(e13, t10) {
   let r10 = e13.observer.selectionRange;
   if (!r10.focusNode)
     return null;
-  let i10 = Er(r10.focusNode, r10.focusOffset), o10 = Ei(r10.focusNode, r10.focusOffset), s10 = i10 || o10;
+  let i10 = El(r10.focusNode, r10.focusOffset), o10 = Ea(r10.focusNode, r10.focusOffset), s10 = i10 || o10;
   if (o10 && i10 && o10.node != i10.node) {
-    let t11 = El.get(o10.node);
-    if (!t11 || t11 instanceof EC && t11.text != o10.node.nodeValue)
+    let t11 = Eh.get(o10.node);
+    if (!t11 || t11 instanceof EM && t11.text != o10.node.nodeValue)
       s10 = o10;
     else if (e13.docView.lastCompositionAfterCursor) {
-      let e14 = El.get(i10.node);
-      !e14 || e14 instanceof EC && e14.text != i10.node.nodeValue || (s10 = o10);
+      let e14 = Eh.get(i10.node);
+      !e14 || e14 instanceof EM && e14.text != i10.node.nodeValue || (s10 = o10);
     }
   }
   if (e13.docView.lastCompositionAfterCursor = s10 != i10, !s10)
@@ -17972,30 +17981,30 @@ function DT(e13, t10) {
   let l10 = t10 - s10.offset;
   return { from: l10, to: l10 + s10.node.nodeValue.length, node: s10.node };
 }
-let DP = class {
+let DI = class {
   constructor() {
     this.changes = [];
   }
   compareRange(e13, t10) {
-    EH(e13, t10, this.changes);
+    EX(e13, t10, this.changes);
   }
   comparePoint(e13, t10) {
-    EH(e13, t10, this.changes);
+    EX(e13, t10, this.changes);
   }
 };
-function DE(e13, t10) {
+function DL(e13, t10) {
   return e13.top < t10.bottom - 1 && e13.bottom > t10.top + 1;
 }
-function DD(e13, t10) {
+function Dj(e13, t10) {
   return t10 < e13.top ? { top: t10, left: e13.left, right: e13.right, bottom: e13.bottom } : e13;
 }
-function DR(e13, t10) {
+function DN(e13, t10) {
   return t10 > e13.bottom ? { top: e13.top, left: e13.left, right: e13.right, bottom: t10 } : e13;
 }
-function DI(e13, t10, r10) {
+function DB(e13, t10, r10) {
   let i10 = e13.nodeValue.length, o10 = -1, s10 = 1e9, l10 = 0;
   for (let a10 = 0; a10 < i10; a10++) {
-    let i11 = P7(e13, a10, a10 + 1).getClientRects();
+    let i11 = Er(e13, a10, a10 + 1).getClientRects();
     for (let c10 = 0; c10 < i11.length; c10++) {
       let u10 = i11[c10];
       if (u10.top == u10.bottom)
@@ -18004,7 +18013,7 @@ function DI(e13, t10, r10) {
       let h10 = (u10.top > r10 ? u10.top - r10 : r10 - u10.bottom) - 1;
       if (u10.left - 1 <= t10 && u10.right + 1 >= t10 && h10 < s10) {
         let r11 = t10 >= (u10.left + u10.right) / 2, i12 = r11;
-        if ((ES.chrome || ES.gecko) && P7(e13, a10).getBoundingClientRect().left == u10.right && (i12 = !r11), h10 <= 0)
+        if ((E_.chrome || E_.gecko) && Er(e13, a10).getBoundingClientRect().left == u10.right && (i12 = !r11), h10 <= 0)
           return { node: e13, offset: a10 + (i12 ? 1 : 0) };
         o10 = a10 + (i12 ? 1 : 0), s10 = h10;
       }
@@ -18012,14 +18021,14 @@ function DI(e13, t10, r10) {
   }
   return { node: e13, offset: o10 > -1 ? o10 : l10 > 0 ? e13.nodeValue.length : 0 };
 }
-function DL(e13, t10, r10) {
+function D$(e13, t10, r10) {
   var i10, o10;
   let s10 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1, l10 = e13.contentDOM.getBoundingClientRect(), a10 = l10.top + e13.viewState.paddingTop, c10, { docHeight: u10 } = e13.viewState, { x: h10, y: f10 } = t10, d10 = f10 - a10;
   if (d10 < 0)
     return 0;
   if (d10 > u10)
     return e13.state.doc.length;
-  for (let t11 = e13.viewState.heightOracle.textHeight / 2, i11 = false; (c10 = e13.elementAtHeight(d10)).type != EN.Text; )
+  for (let t11 = e13.viewState.heightOracle.textHeight / 2, i11 = false; (c10 = e13.elementAtHeight(d10)).type != Ez.Text; )
     for (; !((d10 = s10 > 0 ? c10.bottom + t11 : c10.top - t11) >= 0) || !(d10 <= u10); ) {
       if (i11)
         return r10 ? null : 0;
@@ -18028,9 +18037,9 @@ function DL(e13, t10, r10) {
   f10 = a10 + d10;
   let p10 = c10.from;
   if (p10 < e13.viewport.from)
-    return 0 == e13.viewport.from ? 0 : r10 ? null : Dj(e13, l10, c10, h10, f10);
+    return 0 == e13.viewport.from ? 0 : r10 ? null : DF(e13, l10, c10, h10, f10);
   if (p10 > e13.viewport.to)
-    return e13.viewport.to == e13.state.doc.length ? e13.state.doc.length : r10 ? null : Dj(e13, l10, c10, h10, f10);
+    return e13.viewport.to == e13.state.doc.length ? e13.state.doc.length : r10 ? null : DF(e13, l10, c10, h10, f10);
   let g7 = e13.dom.ownerDocument, m10 = e13.root.elementFromPoint ? e13.root : g7, y10 = m10.elementFromPoint(h10, f10);
   y10 && !e13.contentDOM.contains(y10) && (y10 = null), !y10 && (h10 = Math.max(l10.left + 1, Math.min(l10.right - 1, h10)), (y10 = m10.elementFromPoint(h10, f10)) && !e13.contentDOM.contains(y10) && (y10 = null));
   let b10, w10 = -1;
@@ -18040,15 +18049,15 @@ function DL(e13, t10, r10) {
       e14 && ({ offsetNode: b10, offset: w10 } = e14);
     } else if (g7.caretRangeFromPoint) {
       let t11 = g7.caretRangeFromPoint(h10, f10);
-      t11 && ({ startContainer: b10, startOffset: w10 } = t11, (!e13.contentDOM.contains(b10) || ES.safari && function(e14, t12, r11) {
+      t11 && ({ startContainer: b10, startOffset: w10 } = t11, (!e13.contentDOM.contains(b10) || E_.safari && function(e14, t12, r11) {
         let i11;
         if (3 != e14.nodeType || t12 != (i11 = e14.nodeValue.length))
           return false;
         for (let t13 = e14.nextSibling; t13; t13 = t13.nextSibling)
           if (1 != t13.nodeType || "BR" != t13.nodeName)
             return false;
-        return P7(e14, i11 - 1, i11).getBoundingClientRect().left > r11;
-      }(b10, w10, h10) || ES.chrome && function(e14, t12, r11) {
+        return Er(e14, i11 - 1, i11).getBoundingClientRect().left > r11;
+      }(b10, w10, h10) || E_.chrome && function(e14, t12, r11) {
         if (0 != t12)
           return false;
         for (let t13 = e14; ; ) {
@@ -18059,38 +18068,38 @@ function DL(e13, t10, r10) {
             break;
           t13 = e15;
         }
-        return r11 - (1 == e14.nodeType ? e14.getBoundingClientRect() : P7(e14, 0, Math.max(e14.nodeValue.length, 1)).getBoundingClientRect()).left > 5;
+        return r11 - (1 == e14.nodeType ? e14.getBoundingClientRect() : Er(e14, 0, Math.max(e14.nodeValue.length, 1)).getBoundingClientRect()).left > 5;
       }(b10, w10, h10)) && (b10 = void 0));
     }
   }
   if (!b10 || !e13.docView.dom.contains(b10)) {
-    let t11 = EI.find(e13.docView, p10);
+    let t11 = EB.find(e13.docView, p10);
     if (!t11)
       return d10 > c10.top + c10.height / 2 ? c10.to : c10.from;
     ({ node: b10, offset: w10 } = function e14(t12, r11, i11) {
       let o11, s11, l11, a11, c11, u11, h11, f11, d11 = false;
       for (let m12 = t12.firstChild; m12; m12 = m12.nextSibling) {
-        let t13 = PJ(m12);
+        let t13 = P2(m12);
         for (let y12 = 0; y12 < t13.length; y12++) {
           var p11, g9;
           let b11 = t13[y12];
-          u11 && DE(u11, b11) && (b11 = DD(DR(b11, u11.bottom), u11.top));
+          u11 && DL(u11, b11) && (b11 = Dj(DN(b11, u11.bottom), u11.top));
           let w11 = (p11 = b11).left > r11 ? p11.left - r11 : Math.max(0, r11 - p11.right), x11 = (g9 = b11).top > i11 ? g9.top - i11 : Math.max(0, i11 - g9.bottom);
           if (0 == w11 && 0 == x11)
-            return 3 == m12.nodeType ? DI(m12, r11, i11) : e14(m12, r11, i11);
+            return 3 == m12.nodeType ? DB(m12, r11, i11) : e14(m12, r11, i11);
           if (!c11 || f11 > x11 || f11 == x11 && h11 > w11) {
             c11 = m12, u11 = b11, h11 = w11, f11 = x11;
             let e15 = x11 ? i11 < b11.top ? -1 : 1 : w11 ? r11 < b11.left ? -1 : 1 : 0;
             d11 = !e15 || (e15 > 0 ? y12 < t13.length - 1 : y12 > 0);
           }
-          0 == w11 ? i11 > b11.bottom && (!l11 || l11.bottom < b11.bottom) ? (o11 = m12, l11 = b11) : i11 < b11.top && (!a11 || a11.top > b11.top) && (s11 = m12, a11 = b11) : l11 && DE(l11, b11) ? l11 = DR(l11, b11.bottom) : a11 && DE(a11, b11) && (a11 = DD(a11, b11.top));
+          0 == w11 ? i11 > b11.bottom && (!l11 || l11.bottom < b11.bottom) ? (o11 = m12, l11 = b11) : i11 < b11.top && (!a11 || a11.top > b11.top) && (s11 = m12, a11 = b11) : l11 && DL(l11, b11) ? l11 = DN(l11, b11.bottom) : a11 && DL(a11, b11) && (a11 = Dj(a11, b11.top));
         }
       }
       if (l11 && l11.bottom >= i11 ? (c11 = o11, u11 = l11) : a11 && a11.top <= i11 && (c11 = s11, u11 = a11), !c11)
         return { node: t12, offset: 0 };
       let m11 = Math.max(u11.left, Math.min(u11.right, r11));
       if (3 == c11.nodeType)
-        return DI(c11, m11, i11);
+        return DB(c11, m11, i11);
       if (d11 && "false" != c11.contentEditable)
         return e14(c11, m11, i11);
       let y11 = Array.prototype.indexOf.call(t12.childNodes, c11) + (r11 >= (u11.left + u11.right) / 2 ? 1 : 0);
@@ -18107,7 +18116,7 @@ function DL(e13, t10, r10) {
     return t10.y < e14.top || t10.y <= e14.bottom && t10.x <= (e14.left + e14.right) / 2 ? x10.posAtStart : x10.posAtEnd;
   }
 }
-function Dj(e13, t10, r10, i10, o10) {
+function DF(e13, t10, r10, i10, o10) {
   let s10 = Math.round((i10 - t10.left) * e13.defaultCharacterWidth);
   if (e13.lineWrapping && r10.height > 1.5 * e13.defaultLineHeight) {
     let t11 = e13.viewState.heightOracle.textHeight;
@@ -18120,28 +18129,28 @@ function Dj(e13, t10, r10, i10, o10) {
         return i12;
       if (i12 == e14.length)
         break;
-      o11 += 9 == e14.charCodeAt(i12) ? r11 - o11 % r11 : 1, i12 = T_(e14, i12);
+      o11 += 9 == e14.charCodeAt(i12) ? r11 - o11 % r11 : 1, i12 = TE(e14, i12);
     }
     return e14.length;
   }(l10, s10, e13.state.tabSize);
 }
-function DN(e13, t10, r10, i10) {
+function Dz(e13, t10, r10, i10) {
   let o10 = e13.state.doc.lineAt(t10.head), s10 = e13.bidiSpans(o10), l10 = e13.textDirectionAt(o10.from);
   for (let a10 = t10, c10 = null; ; ) {
     let t11 = function(e14, t12, r11, i11, o11) {
       var s11;
-      let l11 = i11.head - e14.from, a11 = E4.find(t12, l11, null !== (s11 = i11.bidiLevel) && void 0 !== s11 ? s11 : -1, i11.assoc), c11 = t12[a11], u11 = c11.side(o11, r11);
+      let l11 = i11.head - e14.from, a11 = E6.find(t12, l11, null !== (s11 = i11.bidiLevel) && void 0 !== s11 ? s11 : -1, i11.assoc), c11 = t12[a11], u11 = c11.side(o11, r11);
       if (l11 == u11) {
         let e15 = a11 += o11 ? 1 : -1;
         if (e15 < 0 || e15 >= t12.length)
           return null;
         l11 = (c11 = t12[a11 = e15]).side(!o11, r11), u11 = c11.side(o11, r11);
       }
-      let h10 = T_(e14.text, l11, c11.forward(o11, r11));
-      (h10 < c11.from || h10 > c11.to) && (h10 = u11), E8 = e14.text.slice(Math.min(l11, h10), Math.max(l11, h10));
+      let h10 = TE(e14.text, l11, c11.forward(o11, r11));
+      (h10 < c11.from || h10 > c11.to) && (h10 = u11), De = e14.text.slice(Math.min(l11, h10), Math.max(l11, h10));
       let f10 = a11 == (o11 ? t12.length - 1 : 0) ? null : t12[a11 + (o11 ? 1 : -1)];
-      return f10 && h10 == u11 && f10.level + (o11 ? 0 : 1) < c11.level ? TU.cursor(f10.side(!o11, r11) + e14.from, f10.forward(o11, r11) ? 1 : -1, f10.level) : TU.cursor(h10 + e14.from, c11.forward(o11, r11) ? -1 : 1, c11.level);
-    }(o10, s10, l10, a10, r10), u10 = E8;
+      return f10 && h10 == u11 && f10.level + (o11 ? 0 : 1) < c11.level ? TY.cursor(f10.side(!o11, r11) + e14.from, f10.forward(o11, r11) ? 1 : -1, f10.level) : TY.cursor(h10 + e14.from, c11.forward(o11, r11) ? -1 : 1, c11.level);
+    }(o10, s10, l10, a10, r10), u10 = De;
     if (!t11) {
       if (o10.number == (r10 ? e13.state.doc.lines : 1))
         return a10;
@@ -18158,7 +18167,7 @@ function DN(e13, t10, r10, i10) {
     a10 = t11;
   }
 }
-function DB(e13, t10, r10) {
+function DV(e13, t10, r10) {
   for (; ; ) {
     let i10 = 0;
     for (let o10 of e13)
@@ -18172,17 +18181,17 @@ function DB(e13, t10, r10) {
       return t10;
   }
 }
-function D$(e13, t10, r10) {
-  let i10 = DB(e13.state.facet(Db).map((t11) => t11(e13)), r10.from, t10.head > r10.from ? -1 : 1);
-  return i10 == r10.from ? r10 : TU.cursor(i10, i10 < r10.from ? 1 : -1);
+function DH(e13, t10, r10) {
+  let i10 = DV(e13.state.facet(DS).map((t11) => t11(e13)), r10.from, t10.head > r10.from ? -1 : 1);
+  return i10 == r10.from ? r10 : TY.cursor(i10, i10 < r10.from ? 1 : -1);
 }
-class DF {
+class DW {
   setSelectionOrigin(e13) {
     this.lastSelectionOrigin = e13, this.lastSelectionTime = Date.now();
   }
   constructor(e13) {
     var t10;
-    this.view = e13, this.lastKeyCode = 0, this.lastKeyTime = 0, this.lastTouchTime = 0, this.lastFocusTime = 0, this.lastScrollTop = 0, this.lastScrollLeft = 0, this.pendingIOSKey = void 0, this.lastSelectionOrigin = null, this.lastSelectionTime = 0, this.lastEscPress = 0, this.lastContextMenu = 0, this.scrollHandlers = [], this.handlers = /* @__PURE__ */ Object.create(null), this.composing = -1, this.compositionFirstChange = null, this.compositionEndedAt = 0, this.compositionPendingKey = false, this.compositionPendingChange = false, this.mouseSelection = null, this.draggedContent = null, this.handleEvent = this.handleEvent.bind(this), this.notifiedFocused = e13.hasFocus, ES.safari && e13.contentDOM.addEventListener("input", () => null), ES.gecko && (t10 = e13.contentDOM.ownerDocument, Rt.has(t10) || (Rt.add(t10), t10.addEventListener("copy", () => {
+    this.view = e13, this.lastKeyCode = 0, this.lastKeyTime = 0, this.lastTouchTime = 0, this.lastFocusTime = 0, this.lastScrollTop = 0, this.lastScrollLeft = 0, this.pendingIOSKey = void 0, this.lastSelectionOrigin = null, this.lastSelectionTime = 0, this.lastEscPress = 0, this.lastContextMenu = 0, this.scrollHandlers = [], this.handlers = /* @__PURE__ */ Object.create(null), this.composing = -1, this.compositionFirstChange = null, this.compositionEndedAt = 0, this.compositionPendingKey = false, this.compositionPendingChange = false, this.mouseSelection = null, this.draggedContent = null, this.handleEvent = this.handleEvent.bind(this), this.notifiedFocused = e13.hasFocus, E_.safari && e13.contentDOM.addEventListener("input", () => null), E_.gecko && (t10 = e13.contentDOM.ownerDocument, Ro.has(t10) || (Ro.add(t10), t10.addEventListener("copy", () => {
     }), t10.addEventListener("cut", () => {
     })));
   }
@@ -18193,7 +18202,7 @@ class DF {
       if (t10.defaultPrevented)
         return false;
       for (let r10 = t10.target, i10; r10 != e14.contentDOM; r10 = r10.parentNode)
-        if (!r10 || 11 == r10.nodeType || (i10 = El.get(r10)) && i10.ignoreEvent(t10))
+        if (!r10 || 11 == r10.nodeType || (i10 = Eh.get(r10)) && i10.ignoreEvent(t10))
           return false;
       return true;
     }(this.view, e13) || this.ignoreDuringComposition(e13)) && ("keydown" == e13.type && this.keydown(e13) || this.runHandlers(e13.type, e13));
@@ -18224,18 +18233,18 @@ class DF {
         if (e15 && e15.domEventHandlers)
           for (let i11 in e15.domEventHandlers) {
             let o10 = e15.domEventHandlers[i11];
-            o10 && r11(i11).handlers.push(Dz(t12.value, o10));
+            o10 && r11(i11).handlers.push(DU(t12.value, o10));
           }
         if (e15 && e15.domEventObservers)
           for (let i11 in e15.domEventObservers) {
             let o10 = e15.domEventObservers[i11];
-            o10 && r11(i11).observers.push(Dz(t12.value, o10));
+            o10 && r11(i11).observers.push(DU(t12.value, o10));
           }
       }
-      for (let e15 in DX)
-        r11(e15).handlers.push(DX[e15]);
-      for (let e15 in DQ)
-        r11(e15).observers.push(DQ[e15]);
+      for (let e15 in DG)
+        r11(e15).handlers.push(DG[e15]);
+      for (let e15 in DJ)
+        r11(e15).observers.push(DJ[e15]);
       return t11;
     }(e13), r10 = this.handlers, i10 = this.view.contentDOM;
     for (let e14 in t10)
@@ -18249,14 +18258,14 @@ class DF {
   }
   keydown(e13) {
     let t10;
-    return this.lastKeyCode = e13.keyCode, this.lastKeyTime = Date.now(), !!(9 == e13.keyCode && Date.now() < this.lastEscPress + 2e3) || ((27 != e13.keyCode && 0 > DW.indexOf(e13.keyCode) && (this.view.inputState.lastEscPress = 0), ES.android && ES.chrome && !e13.synthetic && (13 == e13.keyCode || 8 == e13.keyCode)) ? (this.view.observer.delayAndroidKey(e13.key, e13.keyCode), true) : ES.ios && !e13.synthetic && !e13.altKey && !e13.metaKey && ((t10 = DV.find((t11) => t11.keyCode == e13.keyCode)) && !e13.ctrlKey || DH.indexOf(e13.key) > -1 && e13.ctrlKey && !e13.shiftKey) ? (this.pendingIOSKey = t10 || e13, setTimeout(() => this.flushIOSKey(), 250), true) : (229 != e13.keyCode && this.view.observer.forceFlush(), false));
+    return this.lastKeyCode = e13.keyCode, this.lastKeyTime = Date.now(), !!(9 == e13.keyCode && Date.now() < this.lastEscPress + 2e3) || ((27 != e13.keyCode && 0 > DQ.indexOf(e13.keyCode) && (this.view.inputState.lastEscPress = 0), E_.android && E_.chrome && !e13.synthetic && (13 == e13.keyCode || 8 == e13.keyCode)) ? (this.view.observer.delayAndroidKey(e13.key, e13.keyCode), true) : E_.ios && !e13.synthetic && !e13.altKey && !e13.metaKey && ((t10 = Dq.find((t11) => t11.keyCode == e13.keyCode)) && !e13.ctrlKey || DX.indexOf(e13.key) > -1 && e13.ctrlKey && !e13.shiftKey) ? (this.pendingIOSKey = t10 || e13, setTimeout(() => this.flushIOSKey(), 250), true) : (229 != e13.keyCode && this.view.observer.forceFlush(), false));
   }
   flushIOSKey(e13) {
     let t10 = this.pendingIOSKey;
-    return !(!t10 || "Enter" == t10.key && e13 && e13.from < e13.to && /^\S+$/.test(e13.insert.toString())) && (this.pendingIOSKey = void 0, Ee(this.view.contentDOM, t10.key, t10.keyCode, t10 instanceof KeyboardEvent ? t10 : void 0));
+    return !(!t10 || "Enter" == t10.key && e13 && e13.from < e13.to && /^\S+$/.test(e13.insert.toString())) && (this.pendingIOSKey = void 0, Ei(this.view.contentDOM, t10.key, t10.keyCode, t10 instanceof KeyboardEvent ? t10 : void 0));
   }
   ignoreDuringComposition(e13) {
-    return !!/^key/.test(e13.type) && (this.composing > 0 || !!(ES.safari && !ES.ios && this.compositionPendingKey && Date.now() - this.compositionEndedAt < 100) && (this.compositionPendingKey = false, true));
+    return !!/^key/.test(e13.type) && (this.composing > 0 || !!(E_.safari && !E_.ios && this.compositionPendingKey && Date.now() - this.compositionEndedAt < 100) && (this.compositionPendingKey = false, true));
   }
   startMouseSelection(e13) {
     this.mouseSelection && this.mouseSelection.destroy(), this.mouseSelection = e13;
@@ -18268,20 +18277,20 @@ class DF {
     this.mouseSelection && this.mouseSelection.destroy();
   }
 }
-function Dz(e13, t10) {
+function DU(e13, t10) {
   return (r10, i10) => {
     try {
       return t10.call(e13, i10, r10);
     } catch (e14) {
-      Dc(r10.state, e14);
+      Dd(r10.state, e14);
     }
   };
 }
-let DV = [{ key: "Backspace", keyCode: 8, inputType: "deleteContentBackward" }, { key: "Enter", keyCode: 13, inputType: "insertParagraph" }, { key: "Enter", keyCode: 13, inputType: "insertLineBreak" }, { key: "Delete", keyCode: 46, inputType: "deleteContentForward" }], DH = "dthko", DW = [16, 17, 18, 20, 91, 92, 224, 225];
-function DU(e13) {
+let Dq = [{ key: "Backspace", keyCode: 8, inputType: "deleteContentBackward" }, { key: "Enter", keyCode: 13, inputType: "insertParagraph" }, { key: "Enter", keyCode: 13, inputType: "insertLineBreak" }, { key: "Delete", keyCode: 46, inputType: "deleteContentForward" }], DX = "dthko", DQ = [16, 17, 18, 20, 91, 92, 224, 225];
+function DY(e13) {
   return 0.7 * Math.max(0, e13) + 8;
 }
-class Dq {
+class DK {
   constructor(e13, t10, r10, i10) {
     let o10;
     this.view = e13, this.startEvent = t10, this.style = r10, this.mustSelect = i10, this.scrollSpeed = { x: 0, y: 0 }, this.scrolling = -1, this.lastEvent = t10, this.scrollParent = function(e14) {
@@ -18296,13 +18305,13 @@ class Dq {
         else
           break;
       return null;
-    }(e13.contentDOM), this.atoms = e13.state.facet(Db).map((t11) => t11(e13));
+    }(e13.contentDOM), this.atoms = e13.state.facet(DS).map((t11) => t11(e13));
     let s10 = e13.contentDOM.ownerDocument;
-    s10.addEventListener("mousemove", this.move = this.move.bind(this)), s10.addEventListener("mouseup", this.up = this.up.bind(this)), this.extend = t10.shiftKey, this.multiple = e13.state.facet(Py.allowMultipleSelections) && ((o10 = e13.state.facet(E6)).length ? o10[0](t10) : ES.mac ? t10.metaKey : t10.ctrlKey), this.dragging = !!function(e14, t11) {
+    s10.addEventListener("mousemove", this.move = this.move.bind(this)), s10.addEventListener("mouseup", this.up = this.up.bind(this)), this.extend = t10.shiftKey, this.multiple = e13.state.facet(Pk.allowMultipleSelections) && ((o10 = e13.state.facet(Dt)).length ? o10[0](t10) : E_.mac ? t10.metaKey : t10.ctrlKey), this.dragging = !!function(e14, t11) {
       let { main: r11 } = e14.state.selection;
       if (r11.empty)
         return false;
-      let i11 = PY(e14.root);
+      let i11 = PZ(e14.root);
       if (!i11 || 0 == i11.rangeCount)
         return true;
       let o11 = i11.getRangeAt(0).getClientRects();
@@ -18312,7 +18321,7 @@ class Dq {
           return true;
       }
       return false;
-    }(e13, t10) && 1 == D5(t10) && null;
+    }(e13, t10) && 1 == D7(t10) && null;
   }
   start(e13) {
     false === this.dragging && this.select(e13);
@@ -18324,8 +18333,8 @@ class Dq {
     if (this.dragging || null == this.dragging && 10 > Math.max(Math.abs((r10 = this.startEvent).clientX - e13.clientX), Math.abs(r10.clientY - e13.clientY)))
       return;
     this.select(this.lastEvent = e13);
-    let i10 = 0, o10 = 0, s10 = (null === (t10 = this.scrollParent) || void 0 === t10 ? void 0 : t10.getBoundingClientRect()) || { left: 0, top: 0, right: this.view.win.innerWidth, bottom: this.view.win.innerHeight }, l10 = DS(this.view);
-    e13.clientX - l10.left <= s10.left + 6 ? i10 = -DU(s10.left - e13.clientX) : e13.clientX + l10.right >= s10.right - 6 && (i10 = DU(e13.clientX - s10.right)), e13.clientY - l10.top <= s10.top + 6 ? o10 = -DU(s10.top - e13.clientY) : e13.clientY + l10.bottom >= s10.bottom - 6 && (o10 = DU(e13.clientY - s10.bottom)), this.setScrollSpeed(i10, o10);
+    let i10 = 0, o10 = 0, s10 = (null === (t10 = this.scrollParent) || void 0 === t10 ? void 0 : t10.getBoundingClientRect()) || { left: 0, top: 0, right: this.view.win.innerWidth, bottom: this.view.win.innerHeight }, l10 = D_(this.view);
+    e13.clientX - l10.left <= s10.left + 6 ? i10 = -DY(s10.left - e13.clientX) : e13.clientX + l10.right >= s10.right - 6 && (i10 = DY(e13.clientX - s10.right)), e13.clientY - l10.top <= s10.top + 6 ? o10 = -DY(s10.top - e13.clientY) : e13.clientY + l10.bottom >= s10.bottom - 6 && (o10 = DY(e13.clientY - s10.bottom)), this.setScrollSpeed(i10, o10);
   }
   up(e13) {
     null == this.dragging && this.select(this.lastEvent), this.dragging || e13.preventDefault(), this.destroy();
@@ -18346,15 +18355,15 @@ class Dq {
     for (let r10 = 0; r10 < e13.ranges.length; r10++) {
       let i10 = e13.ranges[r10], o10 = null;
       if (i10.empty) {
-        let e14 = DB(this.atoms, i10.from, 0);
-        e14 != i10.from && (o10 = TU.cursor(e14, -1));
+        let e14 = DV(this.atoms, i10.from, 0);
+        e14 != i10.from && (o10 = TY.cursor(e14, -1));
       } else {
-        let e14 = DB(this.atoms, i10.from, -1), t11 = DB(this.atoms, i10.to, 1);
-        (e14 != i10.from || t11 != i10.to) && (o10 = TU.range(i10.from == i10.anchor ? e14 : t11, i10.from == i10.head ? e14 : t11));
+        let e14 = DV(this.atoms, i10.from, -1), t11 = DV(this.atoms, i10.to, 1);
+        (e14 != i10.from || t11 != i10.to) && (o10 = TY.range(i10.from == i10.anchor ? e14 : t11, i10.from == i10.head ? e14 : t11));
       }
       o10 && (t10 || (t10 = e13.ranges.slice()), t10[r10] = o10);
     }
-    return t10 ? TU.create(t10, e13.mainIndex) : e13;
+    return t10 ? TY.create(t10, e13.mainIndex) : e13;
   }
   select(e13) {
     let { view: t10 } = this, r10 = this.skipAtoms(this.style.get(e13, this.extend, this.multiple));
@@ -18364,10 +18373,10 @@ class Dq {
     this.style.update(e13) && setTimeout(() => this.select(this.lastEvent), 20);
   }
 }
-let DX = /* @__PURE__ */ Object.create(null), DQ = /* @__PURE__ */ Object.create(null), DY = ES.ie && ES.ie_version < 15 || ES.ios && ES.webkit_version < 604;
-function DK(e13, t10) {
+let DG = /* @__PURE__ */ Object.create(null), DJ = /* @__PURE__ */ Object.create(null), DZ = E_.ie && E_.ie_version < 15 || E_.ios && E_.webkit_version < 604;
+function D0(e13, t10) {
   let { state: r10 } = e13, i10, o10 = 1, s10 = r10.toText(t10), l10 = s10.lines == r10.selection.ranges.length;
-  if (null != D6 && r10.selection.ranges.every((e14) => e14.empty) && D6 == s10.toString()) {
+  if (null != Rt && r10.selection.ranges.every((e14) => e14.empty) && Rt == s10.toString()) {
     let e14 = -1;
     i10 = r10.changeByRange((i11) => {
       let a10 = r10.doc.lineAt(i11.from);
@@ -18375,90 +18384,90 @@ function DK(e13, t10) {
         return { range: i11 };
       e14 = a10.from;
       let c10 = r10.toText((l10 ? s10.line(o10++).text : t10) + r10.lineBreak);
-      return { changes: { from: a10.from, insert: c10 }, range: TU.cursor(i11.from + c10.length) };
+      return { changes: { from: a10.from, insert: c10 }, range: TY.cursor(i11.from + c10.length) };
     });
   } else
     i10 = l10 ? r10.changeByRange((e14) => {
       let t11 = s10.line(o10++);
-      return { changes: { from: e14.from, to: e14.to, insert: t11.text }, range: TU.cursor(e14.from + t11.length) };
+      return { changes: { from: e14.from, to: e14.to, insert: t11.text }, range: TY.cursor(e14.from + t11.length) };
     }) : r10.replaceSelection(s10);
   e13.dispatch(i10, { userEvent: "input.paste", scrollIntoView: true });
 }
-function DG(e13, t10, r10, i10) {
+function D1(e13, t10, r10, i10) {
   if (1 == i10)
-    return TU.cursor(t10, r10);
+    return TY.cursor(t10, r10);
   if (2 == i10)
     return function(e14, t11) {
       let r11 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, i11 = e14.charCategorizer(t11), o10 = e14.doc.lineAt(t11), s10 = t11 - o10.from;
       if (0 == o10.length)
-        return TU.cursor(t11);
+        return TY.cursor(t11);
       0 == s10 ? r11 = 1 : s10 == o10.length && (r11 = -1);
       let l10 = s10, a10 = s10;
-      r11 < 0 ? l10 = T_(o10.text, s10, false) : a10 = T_(o10.text, s10);
+      r11 < 0 ? l10 = TE(o10.text, s10, false) : a10 = TE(o10.text, s10);
       let c10 = i11(o10.text.slice(l10, a10));
       for (; l10 > 0; ) {
-        let e15 = T_(o10.text, l10, false);
+        let e15 = TE(o10.text, l10, false);
         if (i11(o10.text.slice(e15, l10)) != c10)
           break;
         l10 = e15;
       }
       for (; a10 < o10.length; ) {
-        let e15 = T_(o10.text, a10);
+        let e15 = TE(o10.text, a10);
         if (i11(o10.text.slice(a10, e15)) != c10)
           break;
         a10 = e15;
       }
-      return TU.range(l10 + o10.from, a10 + o10.from);
+      return TY.range(l10 + o10.from, a10 + o10.from);
     }(e13.state, t10, r10);
   {
-    let r11 = EI.find(e13.docView, t10), i11 = e13.state.doc.lineAt(r11 ? r11.posAtEnd : t10), o10 = r11 ? r11.posAtStart : i11.from, s10 = r11 ? r11.posAtEnd : i11.to;
-    return s10 < e13.state.doc.length && s10 == i11.to && s10++, TU.range(o10, s10);
+    let r11 = EB.find(e13.docView, t10), i11 = e13.state.doc.lineAt(r11 ? r11.posAtEnd : t10), o10 = r11 ? r11.posAtStart : i11.from, s10 = r11 ? r11.posAtEnd : i11.to;
+    return s10 < e13.state.doc.length && s10 == i11.to && s10++, TY.range(o10, s10);
   }
 }
-DQ.scroll = (e13) => {
+DJ.scroll = (e13) => {
   e13.inputState.lastScrollTop = e13.scrollDOM.scrollTop, e13.inputState.lastScrollLeft = e13.scrollDOM.scrollLeft;
-}, DX.keydown = (e13, t10) => (e13.inputState.setSelectionOrigin("select"), 27 == t10.keyCode && (e13.inputState.lastEscPress = Date.now()), false), DQ.touchstart = (e13, t10) => {
+}, DG.keydown = (e13, t10) => (e13.inputState.setSelectionOrigin("select"), 27 == t10.keyCode && (e13.inputState.lastEscPress = Date.now()), false), DJ.touchstart = (e13, t10) => {
   e13.inputState.lastTouchTime = Date.now(), e13.inputState.setSelectionOrigin("select.pointer");
-}, DQ.touchmove = (e13) => {
+}, DJ.touchmove = (e13) => {
   e13.inputState.setSelectionOrigin("select.pointer");
-}, DX.mousedown = (e13, t10) => {
+}, DG.mousedown = (e13, t10) => {
   let r10, i10, o10;
   if (e13.observer.flush(), e13.inputState.lastTouchTime > Date.now() - 2e3)
     return false;
   let s10 = null;
-  for (let r11 of e13.state.facet(E7))
+  for (let r11 of e13.state.facet(Dr))
     if (s10 = r11(e13, t10))
       break;
-  if (s10 || 0 != t10.button || (r10 = D0(e13, t10), i10 = D5(t10), o10 = e13.state.selection, s10 = { update(e14) {
+  if (s10 || 0 != t10.button || (r10 = D3(e13, t10), i10 = D7(t10), o10 = e13.state.selection, s10 = { update(e14) {
     e14.docChanged && (r10.pos = e14.changes.mapPos(r10.pos), o10 = o10.map(e14.changes));
   }, get(t11, s11, l10) {
-    let a10 = D0(e13, t11), c10, u10 = DG(e13, a10.pos, a10.bias, i10);
+    let a10 = D3(e13, t11), c10, u10 = D1(e13, a10.pos, a10.bias, i10);
     if (r10.pos != a10.pos && !s11) {
-      let t12 = DG(e13, r10.pos, r10.bias, i10), o11 = Math.min(t12.from, u10.from), s12 = Math.max(t12.to, u10.to);
-      u10 = o11 < u10.from ? TU.range(o11, s12) : TU.range(s12, o11);
+      let t12 = D1(e13, r10.pos, r10.bias, i10), o11 = Math.min(t12.from, u10.from), s12 = Math.max(t12.to, u10.to);
+      u10 = o11 < u10.from ? TY.range(o11, s12) : TY.range(s12, o11);
     }
     return s11 ? o10.replaceRange(o10.main.extend(u10.from, u10.to)) : l10 && 1 == i10 && o10.ranges.length > 1 && (c10 = function(e14, t12) {
       for (let r11 = 0; r11 < e14.ranges.length; r11++) {
         let { from: i11, to: o11 } = e14.ranges[r11];
         if (i11 <= t12 && o11 >= t12)
-          return TU.create(e14.ranges.slice(0, r11).concat(e14.ranges.slice(r11 + 1)), e14.mainIndex == r11 ? 0 : e14.mainIndex - (e14.mainIndex > r11 ? 1 : 0));
+          return TY.create(e14.ranges.slice(0, r11).concat(e14.ranges.slice(r11 + 1)), e14.mainIndex == r11 ? 0 : e14.mainIndex - (e14.mainIndex > r11 ? 1 : 0));
       }
       return null;
-    }(o10, a10.pos)) ? c10 : l10 ? o10.addRange(u10) : TU.create([u10]);
+    }(o10, a10.pos)) ? c10 : l10 ? o10.addRange(u10) : TY.create([u10]);
   } }), s10) {
     let r11 = !e13.hasFocus;
-    e13.inputState.startMouseSelection(new Dq(e13, t10, s10, r11)), r11 && e13.observer.ignore(() => P9(e13.contentDOM));
+    e13.inputState.startMouseSelection(new DK(e13, t10, s10, r11)), r11 && e13.observer.ignore(() => En(e13.contentDOM));
     let i11 = e13.inputState.mouseSelection;
     if (i11)
       return i11.start(t10), false === i11.dragging;
   }
   return false;
 };
-let DJ = (e13, t10) => e13 >= t10.top && e13 <= t10.bottom, DZ = (e13, t10, r10) => DJ(t10, r10) && e13 >= r10.left && e13 <= r10.right;
-function D0(e13, t10) {
+let D2 = (e13, t10) => e13 >= t10.top && e13 <= t10.bottom, D4 = (e13, t10, r10) => D2(t10, r10) && e13 >= r10.left && e13 <= r10.right;
+function D3(e13, t10) {
   let r10 = e13.posAtCoords({ x: t10.clientX, y: t10.clientY }, false);
   return { pos: r10, bias: function(e14, t11, r11, i10) {
-    let o10 = EI.find(e14.docView, t11);
+    let o10 = EB.find(e14.docView, t11);
     if (!o10)
       return 1;
     let s10 = t11 - o10.posAtStart;
@@ -18467,38 +18476,38 @@ function D0(e13, t10) {
     if (s10 == o10.length)
       return -1;
     let l10 = o10.coordsAt(s10, -1);
-    if (l10 && DZ(r11, i10, l10))
+    if (l10 && D4(r11, i10, l10))
       return -1;
     let a10 = o10.coordsAt(s10, 1);
-    return a10 && DZ(r11, i10, a10) ? 1 : l10 && DJ(i10, l10) ? -1 : 1;
+    return a10 && D4(r11, i10, a10) ? 1 : l10 && D2(i10, l10) ? -1 : 1;
   }(e13, r10, t10.clientX, t10.clientY) };
 }
-let D1 = ES.ie && ES.ie_version <= 11, D2 = null, D4 = 0, D3 = 0;
-function D5(e13) {
-  if (!D1)
+let D5 = E_.ie && E_.ie_version <= 11, D8 = null, D6 = 0, D9 = 0;
+function D7(e13) {
+  if (!D5)
     return e13.detail;
-  let t10 = D2, r10 = D3;
-  return D2 = e13, D3 = Date.now(), D4 = !t10 || r10 > Date.now() - 400 && 2 > Math.abs(t10.clientX - e13.clientX) && 2 > Math.abs(t10.clientY - e13.clientY) ? (D4 + 1) % 3 : 1;
+  let t10 = D8, r10 = D9;
+  return D8 = e13, D9 = Date.now(), D6 = !t10 || r10 > Date.now() - 400 && 2 > Math.abs(t10.clientX - e13.clientX) && 2 > Math.abs(t10.clientY - e13.clientY) ? (D6 + 1) % 3 : 1;
 }
-function D8(e13, t10, r10, i10) {
+function Re(e13, t10, r10, i10) {
   let o10;
   if (!r10)
     return;
-  let s10 = e13.posAtCoords({ x: t10.clientX, y: t10.clientY }, false), { draggedContent: l10 } = e13.inputState, a10 = i10 && l10 && ((o10 = e13.state.facet(E9)).length ? o10[0](t10) : ES.mac ? !t10.altKey : !t10.ctrlKey) ? { from: l10.from, to: l10.to } : null, c10 = { from: s10, insert: r10 }, u10 = e13.state.changes(a10 ? [a10, c10] : c10);
+  let s10 = e13.posAtCoords({ x: t10.clientX, y: t10.clientY }, false), { draggedContent: l10 } = e13.inputState, a10 = i10 && l10 && ((o10 = e13.state.facet(Dn)).length ? o10[0](t10) : E_.mac ? !t10.altKey : !t10.ctrlKey) ? { from: l10.from, to: l10.to } : null, c10 = { from: s10, insert: r10 }, u10 = e13.state.changes(a10 ? [a10, c10] : c10);
   e13.focus(), e13.dispatch({ changes: u10, selection: { anchor: u10.mapPos(s10, -1), head: u10.mapPos(s10, 1) }, userEvent: a10 ? "move.drop" : "input.drop" }), e13.inputState.draggedContent = null;
 }
-DX.dragstart = (e13, t10) => {
+DG.dragstart = (e13, t10) => {
   let { selection: { main: r10 } } = e13.state;
   if (t10.target.draggable) {
     let i11 = e13.docView.nearest(t10.target);
     if (i11 && i11.isWidget) {
       let e14 = i11.posAtStart, t11 = e14 + i11.length;
-      (e14 >= r10.to || t11 <= r10.from) && (r10 = TU.range(e14, t11));
+      (e14 >= r10.to || t11 <= r10.from) && (r10 = TY.range(e14, t11));
     }
   }
   let { inputState: i10 } = e13;
   return i10.mouseSelection && (i10.mouseSelection.dragging = true), i10.draggedContent = r10, t10.dataTransfer && (t10.dataTransfer.setData("Text", e13.state.sliceDoc(r10.from, r10.to)), t10.dataTransfer.effectAllowed = "copyMove"), false;
-}, DX.dragend = (e13) => (e13.inputState.draggedContent = null, false), DX.drop = (e13, t10) => {
+}, DG.dragend = (e13) => (e13.inputState.draggedContent = null, false), DG.drop = (e13, t10) => {
   if (!t10.dataTransfer)
     return false;
   if (e13.state.readOnly)
@@ -18506,7 +18515,7 @@ DX.dragstart = (e13, t10) => {
   let r10 = t10.dataTransfer.files;
   if (r10 && r10.length) {
     let i10 = Array(r10.length), o10 = 0, s10 = () => {
-      ++o10 == r10.length && D8(e13, t10, i10.filter((e14) => null != e14).join(e13.state.lineBreak), false);
+      ++o10 == r10.length && Re(e13, t10, i10.filter((e14) => null != e14).join(e13.state.lineBreak), false);
     };
     for (let e14 = 0; e14 < r10.length; e14++) {
       let t11 = new FileReader();
@@ -18519,26 +18528,26 @@ DX.dragstart = (e13, t10) => {
   {
     let r11 = t10.dataTransfer.getData("Text");
     if (r11)
-      return D8(e13, t10, r11, true), true;
+      return Re(e13, t10, r11, true), true;
   }
   return false;
-}, DX.paste = (e13, t10) => {
+}, DG.paste = (e13, t10) => {
   if (e13.state.readOnly)
     return true;
   e13.observer.flush();
-  let r10 = DY ? null : t10.clipboardData;
-  return r10 ? (DK(e13, r10.getData("text/plain") || r10.getData("text/uri-list")), true) : (function(e14) {
+  let r10 = DZ ? null : t10.clipboardData;
+  return r10 ? (D0(e13, r10.getData("text/plain") || r10.getData("text/uri-list")), true) : (function(e14) {
     let t11 = e14.dom.parentNode;
     if (!t11)
       return;
     let r11 = t11.appendChild(document.createElement("textarea"));
     r11.style.cssText = "position: fixed; left: -10000px; top: 10px", r11.focus(), setTimeout(() => {
-      e14.focus(), r11.remove(), DK(e14, r11.value);
+      e14.focus(), r11.remove(), D0(e14, r11.value);
     }, 50);
   }(e13), false);
 };
-let D6 = null;
-DX.copy = DX.cut = (e13, t10) => {
+let Rt = null;
+DG.copy = DG.cut = (e13, t10) => {
   let { text: r10, ranges: i10, linewise: o10 } = function(e14) {
     let t11 = [], r11 = [], i11 = false;
     for (let i12 of e14.selection.ranges)
@@ -18555,8 +18564,8 @@ DX.copy = DX.cut = (e13, t10) => {
   }(e13.state);
   if (!r10 && !o10)
     return false;
-  D6 = o10 ? r10 : null, "cut" != t10.type || e13.state.readOnly || e13.dispatch({ changes: i10, scrollIntoView: true, userEvent: "delete.cut" });
-  let s10 = DY ? null : t10.clipboardData;
+  Rt = o10 ? r10 : null, "cut" != t10.type || e13.state.readOnly || e13.dispatch({ changes: i10, scrollIntoView: true, userEvent: "delete.cut" });
+  let s10 = DZ ? null : t10.clipboardData;
   return s10 ? (s10.clearData(), s10.setData("text/plain", r10), true) : (!function(e14, t11) {
     let r11 = e14.dom.parentNode;
     if (!r11)
@@ -18567,52 +18576,52 @@ DX.copy = DX.cut = (e13, t10) => {
     }, 50);
   }(e13, r10), false);
 };
-let D9 = Pl.define();
-function D7(e13, t10) {
+let Rn = Ph.define();
+function Rr(e13, t10) {
   let r10 = [];
-  for (let i10 of e13.facet(Dr)) {
+  for (let i10 of e13.facet(Dl)) {
     let o10 = i10(e13, t10);
     o10 && r10.push(o10);
   }
-  return r10 ? e13.update({ effects: r10, annotations: D9.of(true) }) : null;
+  return r10 ? e13.update({ effects: r10, annotations: Rn.of(true) }) : null;
 }
-function Re(e13) {
+function Ri(e13) {
   setTimeout(() => {
     let t10 = e13.hasFocus;
     if (t10 != e13.inputState.notifiedFocused) {
-      let r10 = D7(e13.state, t10);
+      let r10 = Rr(e13.state, t10);
       r10 ? e13.dispatch(r10) : e13.update([]);
     }
   }, 10);
 }
-DQ.focus = (e13) => {
-  e13.inputState.lastFocusTime = Date.now(), !e13.scrollDOM.scrollTop && (e13.inputState.lastScrollTop || e13.inputState.lastScrollLeft) && (e13.scrollDOM.scrollTop = e13.inputState.lastScrollTop, e13.scrollDOM.scrollLeft = e13.inputState.lastScrollLeft), Re(e13);
-}, DQ.blur = (e13) => {
-  e13.observer.clearSelectionRange(), Re(e13);
-}, DQ.compositionstart = DQ.compositionupdate = (e13) => {
+DJ.focus = (e13) => {
+  e13.inputState.lastFocusTime = Date.now(), !e13.scrollDOM.scrollTop && (e13.inputState.lastScrollTop || e13.inputState.lastScrollLeft) && (e13.scrollDOM.scrollTop = e13.inputState.lastScrollTop, e13.scrollDOM.scrollLeft = e13.inputState.lastScrollLeft), Ri(e13);
+}, DJ.blur = (e13) => {
+  e13.observer.clearSelectionRange(), Ri(e13);
+}, DJ.compositionstart = DJ.compositionupdate = (e13) => {
   null == e13.inputState.compositionFirstChange && (e13.inputState.compositionFirstChange = true), e13.inputState.composing < 0 && (e13.inputState.composing = 0);
-}, DQ.compositionend = (e13) => {
-  e13.inputState.composing = -1, e13.inputState.compositionEndedAt = Date.now(), e13.inputState.compositionPendingKey = true, e13.inputState.compositionPendingChange = e13.observer.pendingRecords().length > 0, e13.inputState.compositionFirstChange = null, ES.chrome && ES.android ? e13.observer.flushSoon() : e13.inputState.compositionPendingChange ? Promise.resolve().then(() => e13.observer.flush()) : setTimeout(() => {
+}, DJ.compositionend = (e13) => {
+  e13.inputState.composing = -1, e13.inputState.compositionEndedAt = Date.now(), e13.inputState.compositionPendingKey = true, e13.inputState.compositionPendingChange = e13.observer.pendingRecords().length > 0, e13.inputState.compositionFirstChange = null, E_.chrome && E_.android ? e13.observer.flushSoon() : e13.inputState.compositionPendingChange ? Promise.resolve().then(() => e13.observer.flush()) : setTimeout(() => {
     e13.inputState.composing < 0 && e13.docView.hasComposition && e13.update([]);
   }, 50);
-}, DQ.contextmenu = (e13) => {
+}, DJ.contextmenu = (e13) => {
   e13.inputState.lastContextMenu = Date.now();
-}, DX.beforeinput = (e13, t10) => {
+}, DG.beforeinput = (e13, t10) => {
   var r10;
   let i10;
-  if (ES.chrome && ES.android && (i10 = DV.find((e14) => e14.inputType == t10.inputType)) && (e13.observer.delayAndroidKey(i10.key, i10.keyCode), "Backspace" == i10.key || "Delete" == i10.key)) {
+  if (E_.chrome && E_.android && (i10 = Dq.find((e14) => e14.inputType == t10.inputType)) && (e13.observer.delayAndroidKey(i10.key, i10.keyCode), "Backspace" == i10.key || "Delete" == i10.key)) {
     let t11 = (null === (r10 = window.visualViewport) || void 0 === r10 ? void 0 : r10.height) || 0;
     setTimeout(() => {
       var r11;
       ((null === (r11 = window.visualViewport) || void 0 === r11 ? void 0 : r11.height) || 0) > t11 + 10 && e13.hasFocus && (e13.contentDOM.blur(), e13.focus());
     }, 100);
   }
-  return ES.ios && "deleteContentForward" == t10.inputType && e13.observer.flushSoon(), ES.safari && "insertText" == t10.inputType && e13.inputState.composing >= 0 && setTimeout(() => DQ.compositionend(e13, t10), 20), false;
+  return E_.ios && "deleteContentForward" == t10.inputType && e13.observer.flushSoon(), E_.safari && "insertText" == t10.inputType && e13.inputState.composing >= 0 && setTimeout(() => DJ.compositionend(e13, t10), 20), false;
 };
-let Rt = /* @__PURE__ */ new Set(), Rn = ["pre-wrap", "normal", "pre-line", "break-spaces"];
-class Rr {
+let Ro = /* @__PURE__ */ new Set(), Rs = ["pre-wrap", "normal", "pre-line", "break-spaces"];
+class Rl {
   constructor(e13) {
-    this.lineWrapping = e13, this.doc = Tm.empty, this.heightSamples = {}, this.lineHeight = 14, this.charWidth = 7, this.textHeight = 14, this.lineLength = 30, this.heightChanged = false;
+    this.lineWrapping = e13, this.doc = Tw.empty, this.heightSamples = {}, this.lineHeight = 14, this.charWidth = 7, this.textHeight = 14, this.lineLength = 30, this.heightChanged = false;
   }
   heightForGap(e13, t10) {
     let r10 = this.doc.lineAt(t10).number - this.doc.lineAt(e13).number + 1;
@@ -18625,7 +18634,7 @@ class Rr {
     return this.doc = e13, this;
   }
   mustRefreshForWrapping(e13) {
-    return Rn.indexOf(e13) > -1 != this.lineWrapping;
+    return Rs.indexOf(e13) > -1 != this.lineWrapping;
   }
   mustRefreshForHeights(e13) {
     let t10 = false;
@@ -18636,7 +18645,7 @@ class Rr {
     return t10;
   }
   refresh(e13, t10, r10, i10, o10, s10) {
-    let l10 = Rn.indexOf(e13) > -1, a10 = Math.round(t10) != Math.round(this.lineHeight) || this.lineWrapping != l10;
+    let l10 = Rs.indexOf(e13) > -1, a10 = Math.round(t10) != Math.round(this.lineHeight) || this.lineWrapping != l10;
     if (this.lineWrapping = l10, this.lineHeight = t10, this.charWidth = r10, this.textHeight = i10, this.lineLength = o10, a10) {
       this.heightSamples = {};
       for (let e14 = 0; e14 < s10.length; e14++) {
@@ -18647,7 +18656,7 @@ class Rr {
     return a10;
   }
 }
-class Ri {
+class Ra {
   constructor(e13, t10) {
     this.from = e13, this.heights = t10, this.index = 0;
   }
@@ -18655,12 +18664,12 @@ class Ri {
     return this.index < this.heights.length;
   }
 }
-class Ro {
+class Rc {
   constructor(e13, t10, r10, i10, o10) {
     this.from = e13, this.length = t10, this.top = r10, this.height = i10, this._content = o10;
   }
   get type() {
-    return "number" == typeof this._content ? EN.Text : Array.isArray(this._content) ? this._content : this._content.type;
+    return "number" == typeof this._content ? Ez.Text : Array.isArray(this._content) ? this._content : this._content.type;
   }
   get to() {
     return this.from + this.length;
@@ -18669,18 +18678,18 @@ class Ro {
     return this.top + this.height;
   }
   get widget() {
-    return this._content instanceof Ez ? this._content.widget : null;
+    return this._content instanceof EU ? this._content.widget : null;
   }
   get widgetLineBreaks() {
     return "number" == typeof this._content ? this._content : 0;
   }
   join(e13) {
     let t10 = (Array.isArray(this._content) ? this._content : [this]).concat(Array.isArray(e13._content) ? e13._content : [e13]);
-    return new Ro(this.from, this.length + e13.length, this.top, this.height + e13.height, t10);
+    return new Rc(this.from, this.length + e13.length, this.top, this.height + e13.height, t10);
   }
 }
-var Rs = ((q = Rs || (Rs = {}))[q.ByPos = 0] = "ByPos", q[q.ByHeight = 1] = "ByHeight", q[q.ByPosNoHeight = 2] = "ByPosNoHeight", q);
-class Rl {
+var Ru = ((q = Ru || (Ru = {}))[q.ByPos = 0] = "ByPos", q[q.ByHeight = 1] = "ByHeight", q[q.ByPosNoHeight = 2] = "ByPosNoHeight", q);
+class Rh {
   constructor(e13, t10, r10 = 2) {
     this.length = e13, this.height = t10, this.flags = r10;
   }
@@ -18694,7 +18703,7 @@ class Rl {
     this.height != t10 && (Math.abs(this.height - t10) > 1e-3 && (e13.heightChanged = true), this.height = t10);
   }
   replace(e13, t10, r10) {
-    return Rl.of(r10);
+    return Rh.of(r10);
   }
   decomposeLeft(e13, t10) {
     t10.push(this);
@@ -18705,17 +18714,17 @@ class Rl {
   applyChanges(e13, t10, r10, i10) {
     let o10 = this, s10 = r10.doc;
     for (let l10 = i10.length - 1; l10 >= 0; l10--) {
-      let { fromA: a10, toA: c10, fromB: u10, toB: h10 } = i10[l10], f10 = o10.lineAt(a10, Rs.ByPosNoHeight, r10.setDoc(t10), 0, 0), d10 = f10.to >= c10 ? f10 : o10.lineAt(c10, Rs.ByPosNoHeight, r10, 0, 0);
+      let { fromA: a10, toA: c10, fromB: u10, toB: h10 } = i10[l10], f10 = o10.lineAt(a10, Ru.ByPosNoHeight, r10.setDoc(t10), 0, 0), d10 = f10.to >= c10 ? f10 : o10.lineAt(c10, Ru.ByPosNoHeight, r10, 0, 0);
       for (h10 += d10.to - c10, c10 = d10.to; l10 > 0 && f10.from <= i10[l10 - 1].toA; )
-        a10 = i10[l10 - 1].fromA, u10 = i10[l10 - 1].fromB, l10--, a10 < f10.from && (f10 = o10.lineAt(a10, Rs.ByPosNoHeight, r10, 0, 0));
+        a10 = i10[l10 - 1].fromA, u10 = i10[l10 - 1].fromB, l10--, a10 < f10.from && (f10 = o10.lineAt(a10, Ru.ByPosNoHeight, r10, 0, 0));
       u10 += f10.from - a10, a10 = f10.from;
-      let p10 = Rd.build(r10.setDoc(s10), e13, u10, h10);
+      let p10 = Rv.build(r10.setDoc(s10), e13, u10, h10);
       o10 = o10.replace(a10, c10, p10);
     }
     return o10.updateHeight(r10, 0);
   }
   static empty() {
-    return new Rc(0, 0);
+    return new Rd(0, 0);
   }
   static of(e13) {
     if (1 == e13.length)
@@ -18739,16 +18748,16 @@ class Rl {
         t11 && (o10 += t11.size);
       }
     let s10 = 0;
-    return null == e13[t10 - 1] ? (s10 = 1, t10--) : null == e13[t10] && (s10 = 1, r10++), new Rh(Rl.of(e13.slice(0, t10)), s10, Rl.of(e13.slice(r10)));
+    return null == e13[t10 - 1] ? (s10 = 1, t10--) : null == e13[t10] && (s10 = 1, r10++), new Rg(Rh.of(e13.slice(0, t10)), s10, Rh.of(e13.slice(r10)));
   }
 }
-Rl.prototype.size = 1;
-class Ra extends Rl {
+Rh.prototype.size = 1;
+class Rf extends Rh {
   constructor(e13, t10, r10) {
     super(e13, t10), this.deco = r10;
   }
   blockAt(e13, t10, r10, i10) {
-    return new Ro(i10, this.length, r10, this.height, this.deco || 0);
+    return new Rc(i10, this.length, r10, this.height, this.deco || 0);
   }
   lineAt(e13, t10, r10, i10, o10) {
     return this.blockAt(0, r10, i10, o10);
@@ -18764,16 +18773,16 @@ class Ra extends Rl {
     return `block(${this.length})`;
   }
 }
-class Rc extends Ra {
+class Rd extends Rf {
   constructor(e13, t10) {
     super(e13, t10, null), this.collapsed = 0, this.widgetHeight = 0, this.breaks = 0;
   }
   blockAt(e13, t10, r10, i10) {
-    return new Ro(i10, this.length, r10, this.height, this.breaks);
+    return new Rc(i10, this.length, r10, this.height, this.breaks);
   }
   replace(e13, t10, r10) {
     let i10 = r10[0];
-    return 1 == r10.length && (i10 instanceof Rc || i10 instanceof Ru && 4 & i10.flags) && 10 > Math.abs(this.length - i10.length) ? (i10 instanceof Ru ? i10 = new Rc(i10.length, this.height) : i10.height = this.height, this.outdated || (i10.outdated = false), i10) : Rl.of(r10);
+    return 1 == r10.length && (i10 instanceof Rd || i10 instanceof Rp && 4 & i10.flags) && 10 > Math.abs(this.length - i10.length) ? (i10 instanceof Rp ? i10 = new Rd(i10.length, this.height) : i10.height = this.height, this.outdated || (i10.outdated = false), i10) : Rh.of(r10);
   }
   updateHeight(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = arguments.length > 3 ? arguments[3] : void 0;
@@ -18783,7 +18792,7 @@ class Rc extends Ra {
     return `line(${this.length}${this.collapsed ? -this.collapsed : ""}${this.widgetHeight ? ":" + this.widgetHeight : ""})`;
   }
 }
-class Ru extends Rl {
+class Rp extends Rh {
   constructor(e13) {
     super(e13, 0);
   }
@@ -18800,22 +18809,22 @@ class Ru extends Rl {
     let { firstLine: o10, lastLine: s10, perLine: l10, perChar: a10 } = this.heightMetrics(t10, i10);
     if (t10.lineWrapping) {
       let o11 = i10 + (e13 < t10.lineHeight ? 0 : Math.round(Math.max(0, Math.min(1, (e13 - r10) / this.height)) * this.length)), s11 = t10.doc.lineAt(o11), c10 = l10 + s11.length * a10;
-      return new Ro(s11.from, s11.length, Math.max(r10, e13 - c10 / 2), c10, 0);
+      return new Rc(s11.from, s11.length, Math.max(r10, e13 - c10 / 2), c10, 0);
     }
     {
       let i11 = Math.max(0, Math.min(s10 - o10, Math.floor((e13 - r10) / l10))), { from: a11, length: c10 } = t10.doc.line(o10 + i11);
-      return new Ro(a11, c10, r10 + l10 * i11, l10, 0);
+      return new Rc(a11, c10, r10 + l10 * i11, l10, 0);
     }
   }
   lineAt(e13, t10, r10, i10, o10) {
-    if (t10 == Rs.ByHeight)
+    if (t10 == Ru.ByHeight)
       return this.blockAt(e13, r10, i10, o10);
-    if (t10 == Rs.ByPosNoHeight) {
+    if (t10 == Ru.ByPosNoHeight) {
       let { from: t11, to: i11 } = r10.doc.lineAt(e13);
-      return new Ro(t11, i11 - t11, 0, 0, 0);
+      return new Rc(t11, i11 - t11, 0, 0, 0);
     }
     let { firstLine: s10, perLine: l10, perChar: a10 } = this.heightMetrics(r10, o10), c10 = r10.doc.lineAt(e13), u10 = l10 + c10.length * a10, h10 = c10.number - s10, f10 = i10 + l10 * h10 + a10 * (c10.from - o10 - h10);
-    return new Ro(c10.from, c10.length, Math.max(i10, Math.min(f10, i10 + this.height - u10)), u10, 0);
+    return new Rc(c10.from, c10.length, Math.max(i10, Math.min(f10, i10 + this.height - u10)), u10, 0);
   }
   forEachLine(e13, t10, r10, i10, o10, s10) {
     e13 = Math.max(e13, o10), t10 = Math.min(t10, o10 + this.length);
@@ -18827,41 +18836,41 @@ class Ru extends Rl {
         h10 += a10 * r11 + c10 * (e13 - o10 - r11);
       }
       let i11 = a10 + c10 * t11.length;
-      s10(new Ro(t11.from, t11.length, h10, i11, 0)), h10 += i11, u10 = t11.to + 1;
+      s10(new Rc(t11.from, t11.length, h10, i11, 0)), h10 += i11, u10 = t11.to + 1;
     }
   }
   replace(e13, t10, r10) {
     let i10 = this.length - t10;
     if (i10 > 0) {
       let e14 = r10[r10.length - 1];
-      e14 instanceof Ru ? r10[r10.length - 1] = new Ru(e14.length + i10) : r10.push(null, new Ru(i10 - 1));
+      e14 instanceof Rp ? r10[r10.length - 1] = new Rp(e14.length + i10) : r10.push(null, new Rp(i10 - 1));
     }
     if (e13 > 0) {
       let t11 = r10[0];
-      t11 instanceof Ru ? r10[0] = new Ru(e13 + t11.length) : r10.unshift(new Ru(e13 - 1), null);
+      t11 instanceof Rp ? r10[0] = new Rp(e13 + t11.length) : r10.unshift(new Rp(e13 - 1), null);
     }
-    return Rl.of(r10);
+    return Rh.of(r10);
   }
   decomposeLeft(e13, t10) {
-    t10.push(new Ru(e13 - 1), null);
+    t10.push(new Rp(e13 - 1), null);
   }
   decomposeRight(e13, t10) {
-    t10.push(null, new Ru(this.length - e13 - 1));
+    t10.push(null, new Rp(this.length - e13 - 1));
   }
   updateHeight(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = arguments.length > 3 ? arguments[3] : void 0, o10 = t10 + this.length;
     if (i10 && i10.from <= t10 + this.length && i10.more) {
       let r11 = [], s10 = Math.max(t10, i10.from), l10 = -1;
-      for (i10.from > t10 && r11.push(new Ru(i10.from - t10 - 1).updateHeight(e13, t10)); s10 <= o10 && i10.more; ) {
+      for (i10.from > t10 && r11.push(new Rp(i10.from - t10 - 1).updateHeight(e13, t10)); s10 <= o10 && i10.more; ) {
         let t11 = e13.doc.lineAt(s10).length;
         r11.length && r11.push(null);
         let o11 = i10.heights[i10.index++];
         -1 == l10 ? l10 = o11 : Math.abs(o11 - l10) >= 1e-3 && (l10 = -2);
-        let a11 = new Rc(t11, o11);
+        let a11 = new Rd(t11, o11);
         a11.outdated = false, r11.push(a11), s10 += t11 + 1;
       }
-      s10 <= o10 && r11.push(null, new Ru(o10 - s10).updateHeight(e13, s10));
-      let a10 = Rl.of(r11);
+      s10 <= o10 && r11.push(null, new Rp(o10 - s10).updateHeight(e13, s10));
+      let a10 = Rh.of(r11);
       return (l10 < 0 || Math.abs(a10.height - this.height) >= 1e-3 || Math.abs(l10 - this.heightMetrics(e13, t10).perLine) >= 1e-3) && (e13.heightChanged = true), a10;
     }
     return (r10 || this.outdated) && (this.setHeight(e13, e13.heightForGap(t10, t10 + this.length)), this.outdated = false), this;
@@ -18870,7 +18879,7 @@ class Ru extends Rl {
     return `gap(${this.length})`;
   }
 }
-class Rh extends Rl {
+class Rg extends Rh {
   constructor(e13, t10, r10) {
     super(e13.length + t10 + r10.length, e13.height + r10.height, t10 | (e13.outdated || r10.outdated ? 2 : 0)), this.left = e13, this.right = r10, this.size = e13.size + r10.size;
   }
@@ -18882,10 +18891,10 @@ class Rh extends Rl {
     return e13 < o10 ? this.left.blockAt(e13, t10, r10, i10) : this.right.blockAt(e13, t10, o10, i10 + this.left.length + this.break);
   }
   lineAt(e13, t10, r10, i10, o10) {
-    let s10 = i10 + this.left.height, l10 = o10 + this.left.length + this.break, a10 = t10 == Rs.ByHeight ? e13 < s10 : e13 < l10, c10 = a10 ? this.left.lineAt(e13, t10, r10, i10, o10) : this.right.lineAt(e13, t10, r10, s10, l10);
+    let s10 = i10 + this.left.height, l10 = o10 + this.left.length + this.break, a10 = t10 == Ru.ByHeight ? e13 < s10 : e13 < l10, c10 = a10 ? this.left.lineAt(e13, t10, r10, i10, o10) : this.right.lineAt(e13, t10, r10, s10, l10);
     if (this.break || (a10 ? c10.to < l10 : c10.from > l10))
       return c10;
-    let u10 = t10 == Rs.ByPosNoHeight ? Rs.ByPosNoHeight : Rs.ByPos;
+    let u10 = t10 == Ru.ByPosNoHeight ? Ru.ByPosNoHeight : Ru.ByPos;
     return a10 ? c10.join(this.right.lineAt(l10, u10, r10, s10, l10)) : this.left.lineAt(l10, u10, r10, i10, o10).join(c10);
   }
   forEachLine(e13, t10, r10, i10, o10, s10) {
@@ -18893,7 +18902,7 @@ class Rh extends Rl {
     if (this.break)
       e13 < a10 && this.left.forEachLine(e13, t10, r10, i10, o10, s10), t10 >= a10 && this.right.forEachLine(e13, t10, r10, l10, a10, s10);
     else {
-      let c10 = this.lineAt(a10, Rs.ByPos, r10, i10, o10);
+      let c10 = this.lineAt(a10, Ru.ByPos, r10, i10, o10);
       e13 < c10.from && this.left.forEachLine(e13, c10.from - 1, r10, i10, o10, s10), c10.to >= e13 && c10.from <= t10 && s10(c10), t10 > c10.to && this.right.forEachLine(c10.to + 1, t10, r10, l10, a10, s10);
     }
   }
@@ -18908,11 +18917,11 @@ class Rh extends Rl {
     let s10 = o10.length;
     for (let e14 of r10)
       o10.push(e14);
-    if (e13 > 0 && Rf(o10, s10 - 1), t10 < this.length) {
+    if (e13 > 0 && Rm(o10, s10 - 1), t10 < this.length) {
       let e14 = o10.length;
-      this.decomposeRight(t10, o10), Rf(o10, e14);
+      this.decomposeRight(t10, o10), Rm(o10, e14);
     }
-    return Rl.of(o10);
+    return Rh.of(o10);
   }
   decomposeLeft(e13, t10) {
     let r10 = this.left.length;
@@ -18927,7 +18936,7 @@ class Rh extends Rl {
     e13 < r10 && this.left.decomposeRight(e13, t10), this.break && e13 < i10 && t10.push(null), t10.push(this.right);
   }
   balanced(e13, t10) {
-    return e13.size > 2 * t10.size || t10.size > 2 * e13.size ? Rl.of(this.break ? [e13, null, t10] : [e13, t10]) : (this.left = e13, this.right = t10, this.height = e13.height + t10.height, this.outdated = e13.outdated || t10.outdated, this.size = e13.size + t10.size, this.length = e13.length + this.break + t10.length, this);
+    return e13.size > 2 * t10.size || t10.size > 2 * e13.size ? Rh.of(this.break ? [e13, null, t10] : [e13, t10]) : (this.left = e13, this.right = t10, this.height = e13.height + t10.height, this.outdated = e13.outdated || t10.outdated, this.size = e13.size + t10.size, this.length = e13.length + this.break + t10.length, this);
   }
   updateHeight(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = arguments.length > 3 ? arguments[3] : void 0, { left: o10, right: s10 } = this, l10 = t10 + o10.length + this.break, a10 = null;
@@ -18937,11 +18946,11 @@ class Rh extends Rl {
     return this.left + (this.break ? " " : "-") + this.right;
   }
 }
-function Rf(e13, t10) {
+function Rm(e13, t10) {
   let r10, i10;
-  null == e13[t10] && (r10 = e13[t10 - 1]) instanceof Ru && (i10 = e13[t10 + 1]) instanceof Ru && e13.splice(t10 - 1, 3, new Ru(r10.length + 1 + i10.length));
+  null == e13[t10] && (r10 = e13[t10 - 1]) instanceof Rp && (i10 = e13[t10 + 1]) instanceof Rp && e13.splice(t10 - 1, 3, new Rp(r10.length + 1 + i10.length));
 }
-class Rd {
+class Rv {
   constructor(e13, t10) {
     this.pos = e13, this.oracle = t10, this.nodes = [], this.lineStart = -1, this.lineEnd = -1, this.covering = null, this.writtenTo = e13;
   }
@@ -18951,7 +18960,7 @@ class Rd {
   span(e13, t10) {
     if (this.lineStart > -1) {
       let e14 = Math.min(t10, this.lineEnd), r10 = this.nodes[this.nodes.length - 1];
-      r10 instanceof Rc ? r10.length += e14 - this.pos : (e14 > this.pos || !this.isCovered) && this.nodes.push(new Rc(e14 - this.pos, -1)), this.writtenTo = e14, t10 > e14 && (this.nodes.push(null), this.writtenTo++, this.lineStart = -1);
+      r10 instanceof Rd ? r10.length += e14 - this.pos : (e14 > this.pos || !this.isCovered) && this.nodes.push(new Rd(e14 - this.pos, -1)), this.writtenTo = e14, t10 > e14 && (this.nodes.push(null), this.writtenTo++, this.lineStart = -1);
     }
     this.pos = t10;
   }
@@ -18960,7 +18969,7 @@ class Rd {
       let i10 = r10.widget ? r10.widget.estimatedHeight : 0, o10 = r10.widget ? r10.widget.lineBreaks : 0;
       i10 < 0 && (i10 = this.oracle.lineHeight);
       let s10 = t10 - e13;
-      r10.block ? this.addBlock(new Ra(s10, i10, r10)) : (s10 || o10 || i10 >= 5) && this.addLineDeco(i10, o10, s10);
+      r10.block ? this.addBlock(new Rf(s10, i10, r10)) : (s10 || o10 || i10 >= 5) && this.addLineDeco(i10, o10, s10);
     } else
       t10 > e13 && this.span(e13, t10);
     this.lineEnd > -1 && this.lineEnd < this.pos && (this.lineEnd = this.oracle.doc.lineAt(this.pos).to);
@@ -18969,18 +18978,18 @@ class Rd {
     if (this.lineStart > -1)
       return;
     let { from: e13, to: t10 } = this.oracle.doc.lineAt(this.pos);
-    this.lineStart = e13, this.lineEnd = t10, this.writtenTo < e13 && ((this.writtenTo < e13 - 1 || null == this.nodes[this.nodes.length - 1]) && this.nodes.push(this.blankContent(this.writtenTo, e13 - 1)), this.nodes.push(null)), this.pos > e13 && this.nodes.push(new Rc(this.pos - e13, -1)), this.writtenTo = this.pos;
+    this.lineStart = e13, this.lineEnd = t10, this.writtenTo < e13 && ((this.writtenTo < e13 - 1 || null == this.nodes[this.nodes.length - 1]) && this.nodes.push(this.blankContent(this.writtenTo, e13 - 1)), this.nodes.push(null)), this.pos > e13 && this.nodes.push(new Rd(this.pos - e13, -1)), this.writtenTo = this.pos;
   }
   blankContent(e13, t10) {
-    let r10 = new Ru(t10 - e13);
+    let r10 = new Rp(t10 - e13);
     return this.oracle.doc.lineAt(e13).to == t10 && (r10.flags |= 4), r10;
   }
   ensureLine() {
     this.enterLine();
     let e13 = this.nodes.length ? this.nodes[this.nodes.length - 1] : null;
-    if (e13 instanceof Rc)
+    if (e13 instanceof Rd)
       return e13;
-    let t10 = new Rc(0, -1);
+    let t10 = new Rd(0, -1);
     return this.nodes.push(t10), t10;
   }
   addBlock(e13) {
@@ -18994,28 +19003,28 @@ class Rd {
   }
   finish(e13) {
     let t10 = 0 == this.nodes.length ? null : this.nodes[this.nodes.length - 1];
-    !(this.lineStart > -1) || t10 instanceof Rc || this.isCovered ? (this.writtenTo < this.pos || null == t10) && this.nodes.push(this.blankContent(this.writtenTo, this.pos)) : this.nodes.push(new Rc(0, -1));
+    !(this.lineStart > -1) || t10 instanceof Rd || this.isCovered ? (this.writtenTo < this.pos || null == t10) && this.nodes.push(this.blankContent(this.writtenTo, this.pos)) : this.nodes.push(new Rd(0, -1));
     let r10 = e13;
     for (let e14 of this.nodes)
-      e14 instanceof Rc && e14.updateHeight(this.oracle, r10), r10 += e14 ? e14.length : 1;
+      e14 instanceof Rd && e14.updateHeight(this.oracle, r10), r10 += e14 ? e14.length : 1;
     return this.nodes;
   }
   static build(e13, t10, r10, i10) {
-    let o10 = new Rd(r10, e13);
-    return PC.spans(t10, r10, i10, o10, 0), o10.finish(r10);
+    let o10 = new Rv(r10, e13);
+    return PM.spans(t10, r10, i10, o10, 0), o10.finish(r10);
   }
 }
-class Rp {
+class Ry {
   constructor() {
     this.changes = [];
   }
   compareRange() {
   }
   comparePoint(e13, t10, r10, i10) {
-    (e13 < t10 || r10 && r10.heightRelevant || i10 && i10.heightRelevant) && EH(e13, t10, this.changes, 5);
+    (e13 < t10 || r10 && r10.heightRelevant || i10 && i10.heightRelevant) && EX(e13, t10, this.changes, 5);
   }
 }
-class Rg {
+class Rb {
   constructor(e13, t10, r10) {
     this.from = e13, this.to = t10, this.size = r10;
   }
@@ -19030,10 +19039,10 @@ class Rg {
     return true;
   }
   draw(e13, t10) {
-    return EB.replace({ widget: new Rm(this.size * (t10 ? e13.scaleY : e13.scaleX), t10) }).range(this.from, this.to);
+    return EV.replace({ widget: new Rw(this.size * (t10 ? e13.scaleY : e13.scaleX), t10) }).range(this.from, this.to);
   }
 }
-class Rm extends Ej {
+class Rw extends EF {
   constructor(e13, t10) {
     super(), this.size = e13, this.vertical = t10;
   }
@@ -19048,11 +19057,11 @@ class Rm extends Ej {
     return this.vertical ? this.size : -1;
   }
 }
-class Rv {
+class Rx {
   constructor(e13) {
-    this.state = e13, this.pixelViewport = { left: 0, right: window.innerWidth, top: 0, bottom: 0 }, this.inView = true, this.paddingTop = 0, this.paddingBottom = 0, this.contentDOMWidth = 0, this.contentDOMHeight = 0, this.editorHeight = 0, this.editorWidth = 0, this.scrollTop = 0, this.scrolledToBottom = false, this.scaleX = 1, this.scaleY = 1, this.scrollAnchorPos = 0, this.scrollAnchorHeight = -1, this.scaler = Rx, this.scrollTarget = null, this.printing = false, this.mustMeasureContent = true, this.defaultTextDirection = EX.LTR, this.visibleRanges = [], this.mustEnforceCursorAssoc = false;
-    let t10 = e13.facet(Dm).some((e14) => "function" != typeof e14 && "cm-lineWrapping" == e14.class);
-    this.heightOracle = new Rr(t10), this.stateDeco = e13.facet(Dv).filter((e14) => "function" != typeof e14), this.heightMap = Rl.empty().applyChanges(this.stateDeco, Tm.empty, this.heightOracle.setDoc(e13.doc), [new DO(0, 0, 0, e13.doc.length)]), this.viewport = this.getViewport(0, null), this.updateViewportLines(), this.updateForViewport(), this.lineGaps = this.ensureLineGaps([]), this.lineGapDeco = EB.set(this.lineGaps.map((e14) => e14.draw(this, false))), this.computeVisibleRanges();
+    this.state = e13, this.pixelViewport = { left: 0, right: window.innerWidth, top: 0, bottom: 0 }, this.inView = true, this.paddingTop = 0, this.paddingBottom = 0, this.contentDOMWidth = 0, this.contentDOMHeight = 0, this.editorHeight = 0, this.editorWidth = 0, this.scrollTop = 0, this.scrolledToBottom = false, this.scaleX = 1, this.scaleY = 1, this.scrollAnchorPos = 0, this.scrollAnchorHeight = -1, this.scaler = RO, this.scrollTarget = null, this.printing = false, this.mustMeasureContent = true, this.defaultTextDirection = EG.LTR, this.visibleRanges = [], this.mustEnforceCursorAssoc = false;
+    let t10 = e13.facet(Dw).some((e14) => "function" != typeof e14 && "cm-lineWrapping" == e14.class);
+    this.heightOracle = new Rl(t10), this.stateDeco = e13.facet(Dx).filter((e14) => "function" != typeof e14), this.heightMap = Rh.empty().applyChanges(this.stateDeco, Tw.empty, this.heightOracle.setDoc(e13.doc), [new DT(0, 0, 0, e13.doc.length)]), this.viewport = this.getViewport(0, null), this.updateViewportLines(), this.updateForViewport(), this.lineGaps = this.ensureLineGaps([]), this.lineGapDeco = EV.set(this.lineGaps.map((e14) => e14.draw(this, false))), this.computeVisibleRanges();
   }
   updateForViewport() {
     let e13 = [this.viewport], { main: t10 } = this.state.selection;
@@ -19063,14 +19072,14 @@ class Rv {
         return i10 >= t11 && i10 <= r11;
       })) {
         let { from: t11, to: r11 } = this.lineBlockAt(i10);
-        e13.push(new Ry(t11, r11));
+        e13.push(new Rk(t11, r11));
       }
     }
-    this.viewports = e13.sort((e14, t11) => e14.from - t11.from), this.scaler = this.heightMap.height <= 7e6 ? Rx : new Rk(this.heightOracle, this.heightMap, this.viewports);
+    this.viewports = e13.sort((e14, t11) => e14.from - t11.from), this.scaler = this.heightMap.height <= 7e6 ? RO : new RA(this.heightOracle, this.heightMap, this.viewports);
   }
   updateViewportLines() {
     this.viewportLines = [], this.heightMap.forEachLine(this.viewport.from, this.viewport.to, this.heightOracle.setDoc(this.state.doc), 0, 0, (e13) => {
-      this.viewportLines.push(1 == this.scaler.scale ? e13 : RS(e13, this.scaler));
+      this.viewportLines.push(1 == this.scaler.scale ? e13 : R_(e13, this.scaler));
     });
   }
   update(e13) {
@@ -19078,28 +19087,28 @@ class Rv {
     let i10, o10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     this.state = e13.state;
     let s10 = this.stateDeco;
-    this.stateDeco = this.state.facet(Dv).filter((e14) => "function" != typeof e14);
-    let l10 = e13.changedRanges, a10 = DO.extendWithRanges(l10, (t10 = this.stateDeco, r10 = e13 ? e13.changes : TN.empty(this.state.doc.length), i10 = new Rp(), PC.compare(s10, t10, r10, i10, 0), i10.changes)), c10 = this.heightMap.height, u10 = this.scrolledToBottom ? null : this.scrollAnchorAt(this.scrollTop);
+    this.stateDeco = this.state.facet(Dx).filter((e14) => "function" != typeof e14);
+    let l10 = e13.changedRanges, a10 = DT.extendWithRanges(l10, (t10 = this.stateDeco, r10 = e13 ? e13.changes : Tz.empty(this.state.doc.length), i10 = new Ry(), PM.compare(s10, t10, r10, i10, 0), i10.changes)), c10 = this.heightMap.height, u10 = this.scrolledToBottom ? null : this.scrollAnchorAt(this.scrollTop);
     this.heightMap = this.heightMap.applyChanges(this.stateDeco, e13.startState.doc, this.heightOracle.setDoc(this.state.doc), a10), this.heightMap.height != c10 && (e13.flags |= 2), u10 ? (this.scrollAnchorPos = e13.changes.mapPos(u10.from, -1), this.scrollAnchorHeight = u10.top) : (this.scrollAnchorPos = -1, this.scrollAnchorHeight = this.heightMap.height);
     let h10 = a10.length ? this.mapViewport(this.viewport, e13.changes) : this.viewport;
     (o10 && (o10.range.head < h10.from || o10.range.head > h10.to) || !this.viewportIsAppropriate(h10)) && (h10 = this.getViewport(0, o10));
     let f10 = !e13.changes.empty || 2 & e13.flags || h10.from != this.viewport.from || h10.to != this.viewport.to;
-    this.viewport = h10, this.updateForViewport(), f10 && this.updateViewportLines(), (this.lineGaps.length || this.viewport.to - this.viewport.from > 4e3) && this.updateLineGaps(this.ensureLineGaps(this.mapLineGaps(this.lineGaps, e13.changes))), e13.flags |= this.computeVisibleRanges(), o10 && (this.scrollTarget = o10), !this.mustEnforceCursorAssoc && e13.selectionSet && e13.view.lineWrapping && e13.state.selection.main.empty && e13.state.selection.main.assoc && !e13.state.facet(Do) && (this.mustEnforceCursorAssoc = true);
+    this.viewport = h10, this.updateForViewport(), f10 && this.updateViewportLines(), (this.lineGaps.length || this.viewport.to - this.viewport.from > 4e3) && this.updateLineGaps(this.ensureLineGaps(this.mapLineGaps(this.lineGaps, e13.changes))), e13.flags |= this.computeVisibleRanges(), o10 && (this.scrollTarget = o10), !this.mustEnforceCursorAssoc && e13.selectionSet && e13.view.lineWrapping && e13.state.selection.main.empty && e13.state.selection.main.assoc && !e13.state.facet(Dc) && (this.mustEnforceCursorAssoc = true);
   }
   measure(e13) {
     let t10 = e13.contentDOM, r10 = window.getComputedStyle(t10), i10 = this.heightOracle, o10 = r10.whiteSpace;
-    this.defaultTextDirection = "rtl" == r10.direction ? EX.RTL : EX.LTR;
+    this.defaultTextDirection = "rtl" == r10.direction ? EG.RTL : EG.LTR;
     let s10 = this.heightOracle.mustRefreshForWrapping(o10), l10 = t10.getBoundingClientRect(), a10 = s10 || this.mustMeasureContent || this.contentDOMHeight != l10.height;
     this.contentDOMHeight = l10.height, this.mustMeasureContent = false;
     let c10 = 0, u10 = 0;
     if (l10.width && l10.height) {
-      let { scaleX: e14, scaleY: r11 } = P5(t10, l10);
+      let { scaleX: e14, scaleY: r11 } = P7(t10, l10);
       (e14 > 5e-3 && Math.abs(this.scaleX - e14) > 5e-3 || r11 > 5e-3 && Math.abs(this.scaleY - r11) > 5e-3) && (this.scaleX = e14, this.scaleY = r11, c10 |= 8, s10 = a10 = true);
     }
     let h10 = (parseInt(r10.paddingTop) || 0) * this.scaleY, f10 = (parseInt(r10.paddingBottom) || 0) * this.scaleY;
     (this.paddingTop != h10 || this.paddingBottom != f10) && (this.paddingTop = h10, this.paddingBottom = f10, c10 |= 10), this.editorWidth != e13.scrollDOM.clientWidth && (i10.lineWrapping && (a10 = true), this.editorWidth = e13.scrollDOM.clientWidth, c10 |= 8);
     let d10 = e13.scrollDOM.scrollTop * this.scaleY;
-    this.scrollTop != d10 && (this.scrollAnchorHeight = -1, this.scrollTop = d10), this.scrolledToBottom = En(e13.scrollDOM);
+    this.scrollTop != d10 && (this.scrollAnchorHeight = -1, this.scrollTop = d10), this.scrolledToBottom = Es(e13.scrollDOM);
     let p10 = (this.printing ? function(e14, t11) {
       let r11 = e14.getBoundingClientRect();
       return { left: 0, right: r11.right - r11.left, top: t11, bottom: r11.bottom - (r11.top + t11) };
@@ -19132,7 +19141,7 @@ class Rv {
       }
       for (let r11 of (g7 > 0 && m10 > 0 ? u10 = Math.max(g7, m10) : g7 < 0 && m10 < 0 && (u10 = Math.min(g7, m10)), i10.heightChanged = false, this.viewports)) {
         let o11 = r11.from == this.viewport.from ? t11 : e13.docView.measureVisibleLineHeights(r11);
-        this.heightMap = (s10 ? Rl.empty().applyChanges(this.stateDeco, Tm.empty, this.heightOracle, [new DO(0, 0, 0, e13.state.doc.length)]) : this.heightMap).updateHeight(i10, 0, s10, new Ri(r11.from, o11));
+        this.heightMap = (s10 ? Rh.empty().applyChanges(this.stateDeco, Tw.empty, this.heightOracle, [new DT(0, 0, 0, e13.state.doc.length)]) : this.heightMap).updateHeight(i10, 0, s10, new Ra(r11.from, o11));
       }
       i10.heightChanged && (c10 |= 2);
     }
@@ -19146,25 +19155,25 @@ class Rv {
     return this.scaler.fromDOM(this.pixelViewport.bottom);
   }
   getViewport(e13, t10) {
-    let r10 = 0.5 - Math.max(-0.5, Math.min(0.5, e13 / 1e3 / 2)), i10 = this.heightMap, o10 = this.heightOracle, { visibleTop: s10, visibleBottom: l10 } = this, a10 = new Ry(i10.lineAt(s10 - 1e3 * r10, Rs.ByHeight, o10, 0, 0).from, i10.lineAt(l10 + (1 - r10) * 1e3, Rs.ByHeight, o10, 0, 0).to);
+    let r10 = 0.5 - Math.max(-0.5, Math.min(0.5, e13 / 1e3 / 2)), i10 = this.heightMap, o10 = this.heightOracle, { visibleTop: s10, visibleBottom: l10 } = this, a10 = new Rk(i10.lineAt(s10 - 1e3 * r10, Ru.ByHeight, o10, 0, 0).from, i10.lineAt(l10 + (1 - r10) * 1e3, Ru.ByHeight, o10, 0, 0).to);
     if (t10) {
       let { head: e14 } = t10.range;
       if (e14 < a10.from || e14 > a10.to) {
-        let r11 = Math.min(this.editorHeight, this.pixelViewport.bottom - this.pixelViewport.top), s11 = i10.lineAt(e14, Rs.ByPos, o10, 0, 0), l11;
-        l11 = "center" == t10.y ? (s11.top + s11.bottom) / 2 - r11 / 2 : "start" == t10.y || "nearest" == t10.y && e14 < a10.from ? s11.top : s11.bottom - r11, a10 = new Ry(i10.lineAt(l11 - 500, Rs.ByHeight, o10, 0, 0).from, i10.lineAt(l11 + r11 + 500, Rs.ByHeight, o10, 0, 0).to);
+        let r11 = Math.min(this.editorHeight, this.pixelViewport.bottom - this.pixelViewport.top), s11 = i10.lineAt(e14, Ru.ByPos, o10, 0, 0), l11;
+        l11 = "center" == t10.y ? (s11.top + s11.bottom) / 2 - r11 / 2 : "start" == t10.y || "nearest" == t10.y && e14 < a10.from ? s11.top : s11.bottom - r11, a10 = new Rk(i10.lineAt(l11 - 500, Ru.ByHeight, o10, 0, 0).from, i10.lineAt(l11 + r11 + 500, Ru.ByHeight, o10, 0, 0).to);
       }
     }
     return a10;
   }
   mapViewport(e13, t10) {
     let r10 = t10.mapPos(e13.from, -1), i10 = t10.mapPos(e13.to, 1);
-    return new Ry(this.heightMap.lineAt(r10, Rs.ByPos, this.heightOracle, 0, 0).from, this.heightMap.lineAt(i10, Rs.ByPos, this.heightOracle, 0, 0).to);
+    return new Rk(this.heightMap.lineAt(r10, Ru.ByPos, this.heightOracle, 0, 0).from, this.heightMap.lineAt(i10, Ru.ByPos, this.heightOracle, 0, 0).to);
   }
   viewportIsAppropriate(e13) {
     let { from: t10, to: r10 } = e13, i10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     if (!this.inView)
       return true;
-    let { top: o10 } = this.heightMap.lineAt(t10, Rs.ByPos, this.heightOracle, 0, 0), { bottom: s10 } = this.heightMap.lineAt(r10, Rs.ByPos, this.heightOracle, 0, 0), { visibleTop: l10, visibleBottom: a10 } = this;
+    let { top: o10 } = this.heightMap.lineAt(t10, Ru.ByPos, this.heightOracle, 0, 0), { bottom: s10 } = this.heightMap.lineAt(r10, Ru.ByPos, this.heightOracle, 0, 0), { visibleTop: l10, visibleBottom: a10 } = this;
     return (0 == t10 || o10 <= l10 - Math.max(10, Math.min(-i10, 250))) && (r10 == this.state.doc.length || s10 >= a10 + Math.max(10, Math.min(i10, 250))) && o10 > l10 - 2e3 && s10 < a10 + 2e3;
   }
   mapLineGaps(e13, t10) {
@@ -19172,12 +19181,12 @@ class Rv {
       return e13;
     let r10 = [];
     for (let i10 of e13)
-      t10.touchesRange(i10.from, i10.to) || r10.push(new Rg(t10.mapPos(i10.from), t10.mapPos(i10.to), i10.size));
+      t10.touchesRange(i10.from, i10.to) || r10.push(new Rb(t10.mapPos(i10.from), t10.mapPos(i10.to), i10.size));
     return r10;
   }
   ensureLineGaps(e13, t10) {
     let r10 = this.heightOracle.lineWrapping, i10 = r10 ? 1e4 : 2e3, o10 = i10 >> 1, s10 = i10 << 1;
-    if (this.defaultTextDirection != EX.LTR && !r10)
+    if (this.defaultTextDirection != EG.LTR && !r10)
       return [];
     let l10 = [], a10 = (i11, s11, c10, u10) => {
       if (s11 - i11 < o10)
@@ -19195,10 +19204,10 @@ class Rv {
       }(e13, (e14) => e14.from >= c10.from && e14.to <= c10.to && Math.abs(e14.from - i11) < o10 && Math.abs(e14.to - s11) < o10 && !f10.some((t11) => e14.from < t11 && e14.to > t11));
       if (!d10) {
         if (s11 < c10.to && t10 && r10 && t10.visibleRanges.some((e14) => e14.from <= s11 && e14.to >= s11)) {
-          let e14 = t10.moveToLineBoundary(TU.cursor(s11), false, true).head;
+          let e14 = t10.moveToLineBoundary(TY.cursor(s11), false, true).head;
           e14 > i11 && (s11 = e14);
         }
-        d10 = new Rg(i11, s11, this.gapSize(c10, i11, s11, u10));
+        d10 = new Rb(i11, s11, this.gapSize(c10, i11, s11, u10));
       }
       l10.push(d10);
     };
@@ -19208,7 +19217,7 @@ class Rv {
         continue;
       let l11 = function(e15, t12, r11) {
         let i11 = [], o12 = e15, s11 = 0;
-        return PC.spans(r11, e15, t12, { span() {
+        return PM.spans(r11, e15, t12, { span() {
         }, point(e16, t13) {
           e16 > o12 && (i11.push({ from: o12, to: e16 }), s11 += e16 - o12), o12 = t13;
         } }, 20), o12 < t12 && (i11.push({ from: o12, to: t12 }), s11 += t12 - o12), { total: s11, ranges: i11 };
@@ -19219,36 +19228,36 @@ class Rv {
       if (r10) {
         let r11, s11, a11 = i10 / this.heightOracle.lineLength * this.heightOracle.lineHeight;
         if (null != c10) {
-          let t12 = Rw(l11, c10), i11 = ((this.visibleBottom - this.visibleTop) / 2 + a11) / e14.height;
+          let t12 = RC(l11, c10), i11 = ((this.visibleBottom - this.visibleTop) / 2 + a11) / e14.height;
           r11 = t12 - i11, s11 = t12 + i11;
         } else
           r11 = (this.visibleTop - e14.top - a11) / e14.height, s11 = (this.visibleBottom - e14.top + a11) / e14.height;
-        t11 = Rb(l11, r11), o11 = Rb(l11, s11);
+        t11 = RS(l11, r11), o11 = RS(l11, s11);
       } else {
         let e15, r11, s11 = l11.total * this.heightOracle.charWidth, a11 = i10 * this.heightOracle.charWidth;
         if (null != c10) {
-          let t12 = Rw(l11, c10), i11 = ((this.pixelViewport.right - this.pixelViewport.left) / 2 + a11) / s11;
+          let t12 = RC(l11, c10), i11 = ((this.pixelViewport.right - this.pixelViewport.left) / 2 + a11) / s11;
           e15 = t12 - i11, r11 = t12 + i11;
         } else
           e15 = (this.pixelViewport.left - a11) / s11, r11 = (this.pixelViewport.right + a11) / s11;
-        t11 = Rb(l11, e15), o11 = Rb(l11, r11);
+        t11 = RS(l11, e15), o11 = RS(l11, r11);
       }
       t11 > e14.from && a10(e14.from, t11, e14, l11), o11 < e14.to && a10(o11, e14.to, e14, l11);
     }
     return l10;
   }
   gapSize(e13, t10, r10, i10) {
-    let o10 = Rw(i10, r10) - Rw(i10, t10);
+    let o10 = RC(i10, r10) - RC(i10, t10);
     return this.heightOracle.lineWrapping ? e13.height * o10 : i10.total * this.heightOracle.charWidth * o10;
   }
   updateLineGaps(e13) {
-    Rg.same(e13, this.lineGaps) || (this.lineGaps = e13, this.lineGapDeco = EB.set(e13.map((e14) => e14.draw(this, this.heightOracle.lineWrapping))));
+    Rb.same(e13, this.lineGaps) || (this.lineGaps = e13, this.lineGapDeco = EV.set(e13.map((e14) => e14.draw(this, this.heightOracle.lineWrapping))));
   }
   computeVisibleRanges() {
     let e13 = this.stateDeco;
     this.lineGaps.length && (e13 = e13.concat(this.lineGapDeco));
     let t10 = [];
-    PC.spans(e13, this.viewport.from, this.viewport.to, { span(e14, r11) {
+    PM.spans(e13, this.viewport.from, this.viewport.to, { span(e14, r11) {
       t10.push({ from: e14, to: r11 });
     }, point() {
     } }, 20);
@@ -19256,17 +19265,17 @@ class Rv {
     return this.visibleRanges = t10, r10 ? 4 : 0;
   }
   lineBlockAt(e13) {
-    return e13 >= this.viewport.from && e13 <= this.viewport.to && this.viewportLines.find((t10) => t10.from <= e13 && t10.to >= e13) || RS(this.heightMap.lineAt(e13, Rs.ByPos, this.heightOracle, 0, 0), this.scaler);
+    return e13 >= this.viewport.from && e13 <= this.viewport.to && this.viewportLines.find((t10) => t10.from <= e13 && t10.to >= e13) || R_(this.heightMap.lineAt(e13, Ru.ByPos, this.heightOracle, 0, 0), this.scaler);
   }
   lineBlockAtHeight(e13) {
-    return RS(this.heightMap.lineAt(this.scaler.fromDOM(e13), Rs.ByHeight, this.heightOracle, 0, 0), this.scaler);
+    return R_(this.heightMap.lineAt(this.scaler.fromDOM(e13), Ru.ByHeight, this.heightOracle, 0, 0), this.scaler);
   }
   scrollAnchorAt(e13) {
     let t10 = this.lineBlockAtHeight(e13 + 8);
     return t10.from >= this.viewport.from || this.viewportLines[0].top - e13 > 200 ? t10 : this.viewportLines[0];
   }
   elementAtHeight(e13) {
-    return RS(this.heightMap.blockAt(this.scaler.fromDOM(e13), this.heightOracle, 0, 0), this.scaler);
+    return R_(this.heightMap.blockAt(this.scaler.fromDOM(e13), this.heightOracle, 0, 0), this.scaler);
   }
   get docHeight() {
     return this.scaler.toDOM(this.heightMap.height);
@@ -19275,12 +19284,12 @@ class Rv {
     return this.docHeight + this.paddingTop + this.paddingBottom;
   }
 }
-class Ry {
+class Rk {
   constructor(e13, t10) {
     this.from = e13, this.to = t10;
   }
 }
-function Rb(e13, t10) {
+function RS(e13, t10) {
   let { total: r10, ranges: i10 } = e13;
   if (t10 <= 0)
     return i10[0].from;
@@ -19294,7 +19303,7 @@ function Rb(e13, t10) {
     o10 -= s10;
   }
 }
-function Rw(e13, t10) {
+function RC(e13, t10) {
   let r10 = 0;
   for (let { from: i10, to: o10 } of e13.ranges) {
     if (t10 <= o10) {
@@ -19305,12 +19314,12 @@ function Rw(e13, t10) {
   }
   return r10 / e13.total;
 }
-let Rx = { toDOM: (e13) => e13, fromDOM: (e13) => e13, scale: 1 };
-class Rk {
+let RO = { toDOM: (e13) => e13, fromDOM: (e13) => e13, scale: 1 };
+class RA {
   constructor(e13, t10, r10) {
     let i10 = 0, o10 = 0, s10 = 0;
     for (let l10 of (this.viewports = r10.map((r11) => {
-      let { from: o11, to: s11 } = r11, l11 = t10.lineAt(o11, Rs.ByPos, e13, 0, 0).top, a10 = t10.lineAt(s11, Rs.ByPos, e13, 0, 0).bottom;
+      let { from: o11, to: s11 } = r11, l11 = t10.lineAt(o11, Ru.ByPos, e13, 0, 0).top, a10 = t10.lineAt(s11, Ru.ByPos, e13, 0, 0).bottom;
       return i10 += a10 - l11, { from: o11, to: s11, top: l11, bottom: a10, domTop: 0, domBottom: 0 };
     }), this.scale = (7e6 - i10) / (t10.height - i10), this.viewports))
       l10.domTop = s10 + (l10.top - o10) * this.scale, s10 = l10.domBottom = l10.domTop + (l10.bottom - l10.top), o10 = l10.bottom;
@@ -19336,15 +19345,15 @@ class Rk {
     }
   }
 }
-function RS(e13, t10) {
+function R_(e13, t10) {
   if (1 == t10.scale)
     return e13;
   let r10 = t10.toDOM(e13.top), i10 = t10.toDOM(e13.bottom);
-  return new Ro(e13.from, e13.length, r10, i10 - r10, Array.isArray(e13._content) ? e13._content.map((e14) => RS(e14, t10)) : e13._content);
+  return new Rc(e13.from, e13.length, r10, i10 - r10, Array.isArray(e13._content) ? e13._content.map((e14) => R_(e14, t10)) : e13._content);
 }
-let RC = TQ.define({ combine: (e13) => e13.join(" ") }), RO = TQ.define({ combine: (e13) => e13.indexOf(true) > -1 }), RA = PF.newName(), R_ = PF.newName(), RM = PF.newName(), RT = { "&light": "." + R_, "&dark": "." + RM };
-function RP(e13, t10, r10) {
-  return new PF(t10, { finish: (t11) => /&/.test(t11) ? t11.replace(/&\w*/, (t12) => {
+let RM = TJ.define({ combine: (e13) => e13.join(" ") }), RT = TJ.define({ combine: (e13) => e13.indexOf(true) > -1 }), RP = PW.newName(), RE = PW.newName(), RD = PW.newName(), RR = { "&light": "." + RE, "&dark": "." + RD };
+function RI(e13, t10, r10) {
+  return new PW(t10, { finish: (t11) => /&/.test(t11) ? t11.replace(/&\w*/, (t12) => {
     if ("&" == t12)
       return e13;
     if (!r10 || !r10[t12])
@@ -19352,10 +19361,10 @@ function RP(e13, t10, r10) {
     return r10[t12];
   }) : e13 + " " + t11 });
 }
-let RE = RP("." + RA, { "&": { position: "relative !important", boxSizing: "border-box", "&.cm-focused": { outline: "1px dotted #212121" }, display: "flex !important", flexDirection: "column" }, ".cm-scroller": { display: "flex !important", alignItems: "flex-start !important", fontFamily: "monospace", lineHeight: 1.4, height: "100%", overflowX: "auto", position: "relative", zIndex: 0 }, ".cm-content": { margin: 0, flexGrow: 2, flexShrink: 0, display: "block", whiteSpace: "pre", wordWrap: "normal", boxSizing: "border-box", minHeight: "100%", padding: "4px 0", outline: "none", "&[contenteditable=true]": { WebkitUserModify: "read-write-plaintext-only" } }, ".cm-lineWrapping": { whiteSpace_fallback: "pre-wrap", whiteSpace: "break-spaces", wordBreak: "break-word", overflowWrap: "anywhere", flexShrink: 1 }, "&light .cm-content": { caretColor: "black" }, "&dark .cm-content": { caretColor: "white" }, ".cm-line": { display: "block", padding: "0 2px 0 6px" }, ".cm-layer": { position: "absolute", left: 0, top: 0, contain: "size style", "& > *": { position: "absolute" } }, "&light .cm-selectionBackground": { background: "#d9d9d9" }, "&dark .cm-selectionBackground": { background: "#222" }, "&light.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": { background: "#d7d4f0" }, "&dark.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": { background: "#233" }, ".cm-cursorLayer": { pointerEvents: "none" }, "&.cm-focused > .cm-scroller > .cm-cursorLayer": { animation: "steps(1) cm-blink 1.2s infinite" }, "@keyframes cm-blink": { "0%": {}, "50%": { opacity: 0 }, "100%": {} }, "@keyframes cm-blink2": { "0%": {}, "50%": { opacity: 0 }, "100%": {} }, ".cm-cursor, .cm-dropCursor": { borderLeft: "1.2px solid black", marginLeft: "-0.6px", pointerEvents: "none" }, ".cm-cursor": { display: "none" }, "&dark .cm-cursor": { borderLeftColor: "#444" }, ".cm-dropCursor": { position: "absolute" }, "&.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor": { display: "block" }, ".cm-iso": { unicodeBidi: "isolate" }, ".cm-announced": { position: "fixed", top: "-10000px" }, "@media print": { ".cm-announced": { display: "none" } }, "&light .cm-activeLine": { backgroundColor: "#cceeff44" }, "&dark .cm-activeLine": { backgroundColor: "#99eeff33" }, "&light .cm-specialChar": { color: "red" }, "&dark .cm-specialChar": { color: "#f78" }, ".cm-gutters": { flexShrink: 0, display: "flex", height: "100%", boxSizing: "border-box", insetInlineStart: 0, zIndex: 200 }, "&light .cm-gutters": { backgroundColor: "#f5f5f5", color: "#6c6c6c", borderRight: "1px solid #ddd" }, "&dark .cm-gutters": { backgroundColor: "#333338", color: "#ccc" }, ".cm-gutter": { display: "flex !important", flexDirection: "column", flexShrink: 0, boxSizing: "border-box", minHeight: "100%", overflow: "hidden" }, ".cm-gutterElement": { boxSizing: "border-box" }, ".cm-lineNumbers .cm-gutterElement": { padding: "0 3px 0 5px", minWidth: "20px", textAlign: "right", whiteSpace: "nowrap" }, "&light .cm-activeLineGutter": { backgroundColor: "#e2f2ff" }, "&dark .cm-activeLineGutter": { backgroundColor: "#222227" }, ".cm-panels": { boxSizing: "border-box", position: "sticky", left: 0, right: 0 }, "&light .cm-panels": { backgroundColor: "#f5f5f5", color: "black" }, "&light .cm-panels-top": { borderBottom: "1px solid #ddd" }, "&light .cm-panels-bottom": { borderTop: "1px solid #ddd" }, "&dark .cm-panels": { backgroundColor: "#333338", color: "white" }, ".cm-tab": { display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }, ".cm-widgetBuffer": { verticalAlign: "text-top", height: "1em", width: 0, display: "inline" }, ".cm-placeholder": { color: "#888", display: "inline-block", verticalAlign: "top" }, ".cm-highlightSpace:before": { content: "attr(data-display)", position: "absolute", pointerEvents: "none", color: "#888" }, ".cm-highlightTab": { backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>')`, backgroundSize: "auto 100%", backgroundPosition: "right 90%", backgroundRepeat: "no-repeat" }, ".cm-trailingSpace": { backgroundColor: "#ff332255" }, ".cm-button": { verticalAlign: "middle", color: "inherit", fontSize: "70%", padding: ".2em 1em", borderRadius: "1px" }, "&light .cm-button": { backgroundImage: "linear-gradient(#eff1f5, #d9d9df)", border: "1px solid #888", "&:active": { backgroundImage: "linear-gradient(#b4b4b4, #d0d3d6)" } }, "&dark .cm-button": { backgroundImage: "linear-gradient(#393939, #111)", border: "1px solid #888", "&:active": { backgroundImage: "linear-gradient(#111, #333)" } }, ".cm-textfield": { verticalAlign: "middle", color: "inherit", fontSize: "70%", border: "1px solid silver", padding: ".2em .5em" }, "&light .cm-textfield": { backgroundColor: "white" }, "&dark .cm-textfield": { border: "1px solid #555", backgroundColor: "inherit" } }, RT);
-class RD {
+let RL = RI("." + RP, { "&": { position: "relative !important", boxSizing: "border-box", "&.cm-focused": { outline: "1px dotted #212121" }, display: "flex !important", flexDirection: "column" }, ".cm-scroller": { display: "flex !important", alignItems: "flex-start !important", fontFamily: "monospace", lineHeight: 1.4, height: "100%", overflowX: "auto", position: "relative", zIndex: 0 }, ".cm-content": { margin: 0, flexGrow: 2, flexShrink: 0, display: "block", whiteSpace: "pre", wordWrap: "normal", boxSizing: "border-box", minHeight: "100%", padding: "4px 0", outline: "none", "&[contenteditable=true]": { WebkitUserModify: "read-write-plaintext-only" } }, ".cm-lineWrapping": { whiteSpace_fallback: "pre-wrap", whiteSpace: "break-spaces", wordBreak: "break-word", overflowWrap: "anywhere", flexShrink: 1 }, "&light .cm-content": { caretColor: "black" }, "&dark .cm-content": { caretColor: "white" }, ".cm-line": { display: "block", padding: "0 2px 0 6px" }, ".cm-layer": { position: "absolute", left: 0, top: 0, contain: "size style", "& > *": { position: "absolute" } }, "&light .cm-selectionBackground": { background: "#d9d9d9" }, "&dark .cm-selectionBackground": { background: "#222" }, "&light.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": { background: "#d7d4f0" }, "&dark.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground": { background: "#233" }, ".cm-cursorLayer": { pointerEvents: "none" }, "&.cm-focused > .cm-scroller > .cm-cursorLayer": { animation: "steps(1) cm-blink 1.2s infinite" }, "@keyframes cm-blink": { "0%": {}, "50%": { opacity: 0 }, "100%": {} }, "@keyframes cm-blink2": { "0%": {}, "50%": { opacity: 0 }, "100%": {} }, ".cm-cursor, .cm-dropCursor": { borderLeft: "1.2px solid black", marginLeft: "-0.6px", pointerEvents: "none" }, ".cm-cursor": { display: "none" }, "&dark .cm-cursor": { borderLeftColor: "#444" }, ".cm-dropCursor": { position: "absolute" }, "&.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor": { display: "block" }, ".cm-iso": { unicodeBidi: "isolate" }, ".cm-announced": { position: "fixed", top: "-10000px" }, "@media print": { ".cm-announced": { display: "none" } }, "&light .cm-activeLine": { backgroundColor: "#cceeff44" }, "&dark .cm-activeLine": { backgroundColor: "#99eeff33" }, "&light .cm-specialChar": { color: "red" }, "&dark .cm-specialChar": { color: "#f78" }, ".cm-gutters": { flexShrink: 0, display: "flex", height: "100%", boxSizing: "border-box", insetInlineStart: 0, zIndex: 200 }, "&light .cm-gutters": { backgroundColor: "#f5f5f5", color: "#6c6c6c", borderRight: "1px solid #ddd" }, "&dark .cm-gutters": { backgroundColor: "#333338", color: "#ccc" }, ".cm-gutter": { display: "flex !important", flexDirection: "column", flexShrink: 0, boxSizing: "border-box", minHeight: "100%", overflow: "hidden" }, ".cm-gutterElement": { boxSizing: "border-box" }, ".cm-lineNumbers .cm-gutterElement": { padding: "0 3px 0 5px", minWidth: "20px", textAlign: "right", whiteSpace: "nowrap" }, "&light .cm-activeLineGutter": { backgroundColor: "#e2f2ff" }, "&dark .cm-activeLineGutter": { backgroundColor: "#222227" }, ".cm-panels": { boxSizing: "border-box", position: "sticky", left: 0, right: 0 }, "&light .cm-panels": { backgroundColor: "#f5f5f5", color: "black" }, "&light .cm-panels-top": { borderBottom: "1px solid #ddd" }, "&light .cm-panels-bottom": { borderTop: "1px solid #ddd" }, "&dark .cm-panels": { backgroundColor: "#333338", color: "white" }, ".cm-tab": { display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }, ".cm-widgetBuffer": { verticalAlign: "text-top", height: "1em", width: 0, display: "inline" }, ".cm-placeholder": { color: "#888", display: "inline-block", verticalAlign: "top" }, ".cm-highlightSpace:before": { content: "attr(data-display)", position: "absolute", pointerEvents: "none", color: "#888" }, ".cm-highlightTab": { backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>')`, backgroundSize: "auto 100%", backgroundPosition: "right 90%", backgroundRepeat: "no-repeat" }, ".cm-trailingSpace": { backgroundColor: "#ff332255" }, ".cm-button": { verticalAlign: "middle", color: "inherit", fontSize: "70%", padding: ".2em 1em", borderRadius: "1px" }, "&light .cm-button": { backgroundImage: "linear-gradient(#eff1f5, #d9d9df)", border: "1px solid #888", "&:active": { backgroundImage: "linear-gradient(#b4b4b4, #d0d3d6)" } }, "&dark .cm-button": { backgroundImage: "linear-gradient(#393939, #111)", border: "1px solid #888", "&:active": { backgroundImage: "linear-gradient(#111, #333)" } }, ".cm-textfield": { verticalAlign: "middle", color: "inherit", fontSize: "70%", border: "1px solid silver", padding: ".2em .5em" }, "&light .cm-textfield": { backgroundColor: "white" }, "&dark .cm-textfield": { border: "1px solid #555", backgroundColor: "inherit" } }, RR);
+class Rj {
   constructor(e13, t10) {
-    this.points = e13, this.text = "", this.lineSeparator = t10.facet(Py.lineSeparator);
+    this.points = e13, this.text = "", this.lineSeparator = t10.facet(Pk.lineSeparator);
   }
   append(e13) {
     this.text += e13;
@@ -19374,8 +19383,8 @@ class RD {
       let o10 = i10.nextSibling;
       if (o10 == t10)
         break;
-      let s10 = El.get(i10), l10 = El.get(o10);
-      (s10 && l10 ? s10.breakAfter : (s10 ? s10.breakAfter : P1(i10)) || P1(o10) && ("BR" != i10.nodeName || i10.cmIgnore) && this.text.length > e14) && this.lineBreak(), i10 = o10;
+      let s10 = Eh.get(i10), l10 = Eh.get(o10);
+      (s10 && l10 ? s10.breakAfter : (s10 ? s10.breakAfter : P5(i10)) || P5(o10) && ("BR" != i10.nodeName || i10.cmIgnore) && this.text.length > e14) && this.lineBreak(), i10 = o10;
     }
     return this.findPointBefore(r10, t10), this;
   }
@@ -19396,7 +19405,7 @@ class RD {
   readNode(e13) {
     if (e13.cmIgnore)
       return;
-    let t10 = El.get(e13), r10 = t10 && t10.overrideDOMText;
+    let t10 = Eh.get(e13), r10 = t10 && t10.overrideDOMText;
     if (null != r10) {
       this.findPointInside(e13, r10.length);
       for (let e14 = r10.iter(); !e14.next().done; )
@@ -19412,21 +19421,21 @@ class RD {
     for (let r10 of this.points)
       (3 == e13.nodeType ? r10.node == e13 : e13.contains(r10.node)) && (r10.pos = this.text.length + (!function(e14, t11, r11) {
         for (; ; ) {
-          if (!t11 || r11 < P4(t11))
+          if (!t11 || r11 < P6(t11))
             return false;
           if (t11 == e14)
             return true;
-          r11 = P0(t11) + 1, t11 = t11.parentNode;
+          r11 = P3(t11) + 1, t11 = t11.parentNode;
         }
       }(e13, r10.node, r10.offset) ? 0 : t10));
   }
 }
-class RR {
+class RN {
   constructor(e13, t10) {
     this.node = e13, this.offset = t10, this.pos = -1;
   }
 }
-class RI {
+class RB {
   constructor(e13, t10, r10, i10) {
     this.typeOver = i10, this.bounds = null, this.text = "";
     let { impreciseHead: o10, impreciseAnchor: s10 } = e13.docView;
@@ -19438,30 +19447,30 @@ class RI {
         if (e14.root.activeElement != e14.contentDOM)
           return t12;
         let { anchorNode: r12, anchorOffset: i11, focusNode: o11, focusOffset: s11 } = e14.observer.selectionRange;
-        return r12 && (t12.push(new RR(r12, i11)), (o11 != r12 || s11 != i11) && t12.push(new RR(o11, s11))), t12;
-      }(e13), r11 = new RD(t11, e13.state);
+        return r12 && (t12.push(new RN(r12, i11)), (o11 != r12 || s11 != i11) && t12.push(new RN(o11, s11))), t12;
+      }(e13), r11 = new Rj(t11, e13.state);
       r11.readRange(this.bounds.startDOM, this.bounds.endDOM), this.text = r11.text, this.newSel = function(e14, t12) {
         if (0 == e14.length)
           return null;
         let r12 = e14[0].pos, i11 = 2 == e14.length ? e14[1].pos : r12;
-        return r12 > -1 && i11 > -1 ? TU.single(r12 + t12, i11 + t12) : null;
+        return r12 > -1 && i11 > -1 ? TY.single(r12 + t12, i11 + t12) : null;
       }(t11, this.bounds.from);
     } else {
-      let t11 = e13.observer.selectionRange, r11 = o10 && o10.node == t11.focusNode && o10.offset == t11.focusOffset || !PK(e13.contentDOM, t11.focusNode) ? e13.state.selection.main.head : e13.docView.posFromDOM(t11.focusNode, t11.focusOffset), i11 = s10 && s10.node == t11.anchorNode && s10.offset == t11.anchorOffset || !PK(e13.contentDOM, t11.anchorNode) ? e13.state.selection.main.anchor : e13.docView.posFromDOM(t11.anchorNode, t11.anchorOffset), l10 = e13.viewport;
-      if ((ES.ios || ES.chrome) && e13.state.selection.main.empty && r11 != i11 && (l10.from > 0 || l10.to < e13.state.doc.length)) {
+      let t11 = e13.observer.selectionRange, r11 = o10 && o10.node == t11.focusNode && o10.offset == t11.focusOffset || !P0(e13.contentDOM, t11.focusNode) ? e13.state.selection.main.head : e13.docView.posFromDOM(t11.focusNode, t11.focusOffset), i11 = s10 && s10.node == t11.anchorNode && s10.offset == t11.anchorOffset || !P0(e13.contentDOM, t11.anchorNode) ? e13.state.selection.main.anchor : e13.docView.posFromDOM(t11.anchorNode, t11.anchorOffset), l10 = e13.viewport;
+      if ((E_.ios || E_.chrome) && e13.state.selection.main.empty && r11 != i11 && (l10.from > 0 || l10.to < e13.state.doc.length)) {
         let t12 = Math.min(r11, i11), o11 = Math.max(r11, i11), s11 = l10.from - t12, a10 = l10.to - o11;
         (0 == s11 || 1 == s11 || 0 == t12) && (0 == a10 || -1 == a10 || o11 == e13.state.doc.length) && (r11 = 0, i11 = e13.state.doc.length);
       }
-      this.newSel = TU.single(i11, r11);
+      this.newSel = TY.single(i11, r11);
     }
   }
 }
-function RL(e13, t10) {
+function R$(e13, t10) {
   let r10;
   let { newSel: i10 } = t10, o10 = e13.state.selection.main, s10 = e13.inputState.lastKeyTime > Date.now() - 100 ? e13.inputState.lastKeyCode : -1;
   if (t10.bounds) {
     let { from: i11, to: l10 } = t10.bounds, a10 = o10.from, c10 = null;
-    (8 === s10 || ES.android && t10.text.length < l10 - i11) && (a10 = o10.to, c10 = "end");
+    (8 === s10 || E_.android && t10.text.length < l10 - i11) && (a10 = o10.to, c10 = "end");
     let u10 = function(e14, t11, r11, i12) {
       let o11 = Math.min(e14.length, t11.length), s11 = 0;
       for (; s11 < o11 && e14.charCodeAt(s11) == t11.charCodeAt(s11); )
@@ -19484,14 +19493,14 @@ function RL(e13, t10) {
       }
       return { from: s11, toA: l11, toB: a11 };
     }(e13.state.doc.sliceString(i11, l10, "￿"), t10.text, a10 - i11, c10);
-    u10 && (ES.chrome && 13 == s10 && u10.toB == u10.from + 2 && "￿￿" == t10.text.slice(u10.from, u10.toB) && u10.toB--, r10 = { from: i11 + u10.from, to: i11 + u10.toA, insert: Tm.of(t10.text.slice(u10.from, u10.toB).split("￿")) });
+    u10 && (E_.chrome && 13 == s10 && u10.toB == u10.from + 2 && "￿￿" == t10.text.slice(u10.from, u10.toB) && u10.toB--, r10 = { from: i11 + u10.from, to: i11 + u10.toA, insert: Tw.of(t10.text.slice(u10.from, u10.toB).split("￿")) });
   } else
-    i10 && (!e13.hasFocus && e13.state.facet(Du) || i10.main.eq(o10)) && (i10 = null);
+    i10 && (!e13.hasFocus && e13.state.facet(Dp) || i10.main.eq(o10)) && (i10 = null);
   if (!r10 && !i10)
     return false;
-  if (!r10 && t10.typeOver && !o10.empty && i10 && i10.main.empty ? r10 = { from: o10.from, to: o10.to, insert: e13.state.doc.slice(o10.from, o10.to) } : r10 && r10.from >= o10.from && r10.to <= o10.to && (r10.from != o10.from || r10.to != o10.to) && o10.to - o10.from - (r10.to - r10.from) <= 4 ? r10 = { from: o10.from, to: o10.to, insert: e13.state.doc.slice(o10.from, r10.from).append(r10.insert).append(e13.state.doc.slice(r10.to, o10.to)) } : (ES.mac || ES.android) && r10 && r10.from == r10.to && r10.from == o10.head - 1 && /^\. ?$/.test(r10.insert.toString()) && "off" == e13.contentDOM.getAttribute("autocorrect") ? (i10 && 2 == r10.insert.length && (i10 = TU.single(i10.main.anchor - 1, i10.main.head - 1)), r10 = { from: o10.from, to: o10.to, insert: Tm.of([" "]) }) : ES.chrome && r10 && r10.from == r10.to && r10.from == o10.head && "\n " == r10.insert.toString() && e13.lineWrapping && (i10 && (i10 = TU.single(i10.main.anchor - 1, i10.main.head - 1)), r10 = { from: o10.from, to: o10.to, insert: Tm.of([" "]) }), r10) {
+  if (!r10 && t10.typeOver && !o10.empty && i10 && i10.main.empty ? r10 = { from: o10.from, to: o10.to, insert: e13.state.doc.slice(o10.from, o10.to) } : r10 && r10.from >= o10.from && r10.to <= o10.to && (r10.from != o10.from || r10.to != o10.to) && o10.to - o10.from - (r10.to - r10.from) <= 4 ? r10 = { from: o10.from, to: o10.to, insert: e13.state.doc.slice(o10.from, r10.from).append(r10.insert).append(e13.state.doc.slice(r10.to, o10.to)) } : (E_.mac || E_.android) && r10 && r10.from == r10.to && r10.from == o10.head - 1 && /^\. ?$/.test(r10.insert.toString()) && "off" == e13.contentDOM.getAttribute("autocorrect") ? (i10 && 2 == r10.insert.length && (i10 = TY.single(i10.main.anchor - 1, i10.main.head - 1)), r10 = { from: o10.from, to: o10.to, insert: Tw.of([" "]) }) : E_.chrome && r10 && r10.from == r10.to && r10.from == o10.head && "\n " == r10.insert.toString() && e13.lineWrapping && (i10 && (i10 = TY.single(i10.main.anchor - 1, i10.main.head - 1)), r10 = { from: o10.from, to: o10.to, insert: Tw.of([" "]) }), r10) {
     let t11;
-    if (ES.ios && e13.inputState.flushIOSKey(r10) || ES.android && (r10.to == o10.to && (r10.from == o10.from || r10.from == o10.from - 1 && " " == e13.state.sliceDoc(r10.from, o10.from)) && 1 == r10.insert.length && 2 == r10.insert.lines && Ee(e13.contentDOM, "Enter", 13) || (r10.from == o10.from - 1 && r10.to == o10.to && 0 == r10.insert.length || 8 == s10 && r10.insert.length < r10.to - r10.from && r10.to > o10.head) && Ee(e13.contentDOM, "Backspace", 8) || r10.from == o10.from && r10.to == o10.to + 1 && 0 == r10.insert.length && Ee(e13.contentDOM, "Delete", 46)))
+    if (E_.ios && e13.inputState.flushIOSKey(r10) || E_.android && (r10.to == o10.to && (r10.from == o10.from || r10.from == o10.from - 1 && " " == e13.state.sliceDoc(r10.from, o10.from)) && 1 == r10.insert.length && 2 == r10.insert.lines && Ei(e13.contentDOM, "Enter", 13) || (r10.from == o10.from - 1 && r10.to == o10.to && 0 == r10.insert.length || 8 == s10 && r10.insert.length < r10.to - r10.from && r10.to > o10.head) && Ei(e13.contentDOM, "Backspace", 8) || r10.from == o10.from && r10.to == o10.to + 1 && 0 == r10.insert.length && Ei(e13.contentDOM, "Delete", 46)))
       return true;
     let l10 = r10.insert.toString();
     e13.inputState.composing >= 0 && e13.inputState.composing++;
@@ -19503,7 +19512,7 @@ function RL(e13, t10) {
       } else {
         let l12 = o11.changes(t12), a11 = r11 && r11.main.to <= l12.newLength ? r11.main : void 0;
         if (o11.selection.ranges.length > 1 && e14.inputState.composing >= 0 && t12.to <= s11.to && t12.to >= s11.to - 10) {
-          let c10 = e14.state.sliceDoc(t12.from, t12.to), u10, h10 = r11 && DT(e14, r11.main.head);
+          let c10 = e14.state.sliceDoc(t12.from, t12.to), u10, h10 = r11 && DR(e14, r11.main.head);
           if (h10) {
             let e15 = t12.insert.length - (t12.to - t12.from);
             u10 = { from: h10.from, to: h10.to - e15 };
@@ -19517,7 +19526,7 @@ function RL(e13, t10) {
             if (r12.to - r12.from != d10 || e14.state.sliceDoc(h11, i12) != c10 || r12.to >= u10.from && r12.from <= u10.to)
               return { range: r12 };
             let p10 = o11.changes({ from: h11, to: i12, insert: t12.insert }), g7 = r12.to - s11.to;
-            return { changes: p10, range: a11 ? TU.range(Math.max(0, a11.anchor + g7), Math.max(0, a11.head + g7)) : r12.map(p10) };
+            return { changes: p10, range: a11 ? TY.range(Math.max(0, a11.anchor + g7), Math.max(0, a11.head + g7)) : r12.map(p10) };
           });
         } else
           i11 = { changes: l12, selection: a11 && o11.selection.replaceRange(a11) };
@@ -19525,7 +19534,7 @@ function RL(e13, t10) {
       let l11 = "input.type";
       return (e14.composing || e14.inputState.compositionPendingChange && e14.inputState.compositionEndedAt > Date.now() - 50) && (e14.inputState.compositionPendingChange = false, l11 += ".compose", e14.inputState.compositionFirstChange && (l11 += ".start", e14.inputState.compositionFirstChange = false)), o11.update(i11, { userEvent: l11, scrollIntoView: true });
     }(e13, r10, i10));
-    return e13.state.facet(Dn).some((t12) => t12(e13, r10.from, r10.to, l10, a10)) || e13.dispatch(a10()), true;
+    return e13.state.facet(Ds).some((t12) => t12(e13, r10.from, r10.to, l10, a10)) || e13.dispatch(a10()), true;
   }
   if (!i10 || i10.main.eq(o10))
     return false;
@@ -19534,14 +19543,14 @@ function RL(e13, t10) {
     return e13.inputState.lastSelectionTime > Date.now() - 50 && ("select" == e13.inputState.lastSelectionOrigin && (t11 = true), r11 = e13.inputState.lastSelectionOrigin), e13.dispatch({ selection: i10, scrollIntoView: t11, userEvent: r11 }), true;
   }
 }
-let Rj = { childList: true, characterData: true, subtree: true, attributes: true, characterDataOldValue: true }, RN = ES.ie && ES.ie_version <= 11;
-class RB {
+let RF = { childList: true, characterData: true, subtree: true, attributes: true, characterDataOldValue: true }, Rz = E_.ie && E_.ie_version <= 11;
+class RV {
   constructor(e13) {
-    this.view = e13, this.active = false, this.selectionRange = new P8(), this.selectionChanged = false, this.delayedFlush = -1, this.resizeTimeout = -1, this.queue = [], this.delayedAndroidKey = null, this.flushingAndroidKey = -1, this.lastChange = 0, this.scrollTargets = [], this.intersection = null, this.resizeScroll = null, this.intersecting = false, this.gapIntersection = null, this.gaps = [], this.printQuery = null, this.parentCheck = -1, this.dom = e13.contentDOM, this.observer = new MutationObserver((t10) => {
+    this.view = e13, this.active = false, this.selectionRange = new Ee(), this.selectionChanged = false, this.delayedFlush = -1, this.resizeTimeout = -1, this.queue = [], this.delayedAndroidKey = null, this.flushingAndroidKey = -1, this.lastChange = 0, this.scrollTargets = [], this.intersection = null, this.resizeScroll = null, this.intersecting = false, this.gapIntersection = null, this.gaps = [], this.printQuery = null, this.parentCheck = -1, this.dom = e13.contentDOM, this.observer = new MutationObserver((t10) => {
       for (let e14 of t10)
         this.queue.push(e14);
-      (ES.ie && ES.ie_version <= 11 || ES.ios && e13.composing) && t10.some((e14) => "childList" == e14.type && e14.removedNodes.length || "characterData" == e14.type && e14.oldValue.length > e14.target.nodeValue.length) ? this.flushSoon() : this.flush();
-    }), RN && (this.onCharData = (e14) => {
+      (E_.ie && E_.ie_version <= 11 || E_.ios && e13.composing) && t10.some((e14) => "childList" == e14.type && e14.removedNodes.length || "characterData" == e14.type && e14.oldValue.length > e14.target.nodeValue.length) ? this.flushSoon() : this.flush();
+    }), Rz && (this.onCharData = (e14) => {
       this.queue.push({ target: e14.target, type: "characterData", oldValue: e14.prevValue }), this.flushSoon();
     }), this.onSelectionChange = this.onSelectionChange.bind(this), this.onResize = this.onResize.bind(this), this.onPrint = this.onPrint.bind(this), this.onScroll = this.onScroll.bind(this), window.matchMedia && (this.printQuery = window.matchMedia("print")), "function" == typeof ResizeObserver && (this.resizeScroll = new ResizeObserver(() => {
       var e14;
@@ -19580,20 +19589,20 @@ class RB {
     if (!this.readSelectionRange() || this.delayedAndroidKey)
       return;
     let { view: r10 } = this, i10 = this.selectionRange;
-    if (r10.state.facet(Du) ? r10.root.activeElement != this.dom : !PG(r10.dom, i10))
+    if (r10.state.facet(Dp) ? r10.root.activeElement != this.dom : !P1(r10.dom, i10))
       return;
     let o10 = i10.anchorNode && r10.docView.nearest(i10.anchorNode);
     if (o10 && o10.ignoreEvent(e13)) {
       t10 || (this.selectionChanged = false);
       return;
     }
-    (ES.ie && ES.ie_version <= 11 || ES.android && ES.chrome) && !r10.state.selection.main.empty && i10.focusNode && PZ(i10.focusNode, i10.focusOffset, i10.anchorNode, i10.anchorOffset) ? this.flushSoon() : this.flush(false);
+    (E_.ie && E_.ie_version <= 11 || E_.android && E_.chrome) && !r10.state.selection.main.empty && i10.focusNode && P4(i10.focusNode, i10.focusOffset, i10.anchorNode, i10.anchorOffset) ? this.flushSoon() : this.flush(false);
   }
   readSelectionRange() {
-    let { view: e13 } = this, t10 = PY(e13.root);
+    let { view: e13 } = this, t10 = PZ(e13.root);
     if (!t10)
       return false;
-    let r10 = ES.safari && 11 == e13.root.nodeType && function(e14) {
+    let r10 = E_.safari && 11 == e13.root.nodeType && function(e14) {
       let t11 = e14.activeElement;
       for (; t11 && t11.shadowRoot; )
         t11 = t11.shadowRoot.activeElement;
@@ -19602,31 +19611,31 @@ class RB {
       if (t11.getComposedRanges) {
         let r12 = t11.getComposedRanges(e14.root)[0];
         if (r12)
-          return RF(e14, r12);
+          return RW(e14, r12);
       }
       let r11 = null;
       function i11(e15) {
         e15.preventDefault(), e15.stopImmediatePropagation(), r11 = e15.getTargetRanges()[0];
       }
-      return e14.contentDOM.addEventListener("beforeinput", i11, true), e14.dom.ownerDocument.execCommand("indent"), e14.contentDOM.removeEventListener("beforeinput", i11, true), r11 ? RF(e14, r11) : null;
+      return e14.contentDOM.addEventListener("beforeinput", i11, true), e14.dom.ownerDocument.execCommand("indent"), e14.contentDOM.removeEventListener("beforeinput", i11, true), r11 ? RW(e14, r11) : null;
     }(this.view, t10) || t10;
     if (!r10 || this.selectionRange.eq(r10))
       return false;
-    let i10 = PG(this.dom, r10);
+    let i10 = P1(this.dom, r10);
     return i10 && !this.selectionChanged && e13.inputState.lastFocusTime > Date.now() - 200 && e13.inputState.lastTouchTime < Date.now() - 300 && function(e14, t11) {
       let r11 = t11.focusNode, i11 = t11.focusOffset;
       if (!r11 || t11.anchorNode != r11 || t11.anchorOffset != i11)
         return false;
-      for (i11 = Math.min(i11, P4(r11)); ; )
+      for (i11 = Math.min(i11, P6(r11)); ; )
         if (i11) {
           if (1 != r11.nodeType)
             return false;
           let e15 = r11.childNodes[i11 - 1];
-          "false" == e15.contentEditable ? i11-- : i11 = P4(r11 = e15);
+          "false" == e15.contentEditable ? i11-- : i11 = P6(r11 = e15);
         } else {
           if (r11 == e14)
             return true;
-          i11 = P0(r11), r11 = r11.parentNode;
+          i11 = P3(r11), r11 = r11.parentNode;
         }
     }(this.dom, r10) ? (this.view.inputState.lastFocusTime = 0, e13.docView.updateSelection(), false) : (this.selectionRange.setRange(r10), i10 && (this.selectionChanged = true), true);
   }
@@ -19663,10 +19672,10 @@ class RB {
     }
   }
   start() {
-    this.active || (this.observer.observe(this.dom, Rj), RN && this.dom.addEventListener("DOMCharacterDataModified", this.onCharData), this.active = true);
+    this.active || (this.observer.observe(this.dom, RF), Rz && this.dom.addEventListener("DOMCharacterDataModified", this.onCharData), this.active = true);
   }
   stop() {
-    this.active && (this.active = false, this.observer.disconnect(), RN && this.dom.removeEventListener("DOMCharacterDataModified", this.onCharData));
+    this.active && (this.active = false, this.observer.disconnect(), Rz && this.dom.removeEventListener("DOMCharacterDataModified", this.onCharData));
   }
   clear() {
     this.processRecords(), this.queue.length = 0, this.selectionChanged = false;
@@ -19675,7 +19684,7 @@ class RB {
     var r10;
     this.delayedAndroidKey || (this.flushingAndroidKey = this.view.win.requestAnimationFrame(() => {
       let e14 = this.delayedAndroidKey;
-      e14 && (this.clearDelayedAndroidKey(), this.view.inputState.lastKeyCode = e14.keyCode, this.view.inputState.lastKeyTime = Date.now(), !this.flush() && e14.force && Ee(this.dom, e14.key, e14.keyCode));
+      e14 && (this.clearDelayedAndroidKey(), this.view.inputState.lastKeyCode = e14.keyCode, this.view.inputState.lastKeyTime = Date.now(), !this.flush() && e14.force && Ei(this.dom, e14.key, e14.keyCode));
     })), this.delayedAndroidKey && "Enter" != e13 || (this.delayedAndroidKey = { key: e13, keyCode: t10, force: this.lastChange < Date.now() - 50 || !!(null === (r10 = this.delayedAndroidKey) || void 0 === r10 ? void 0 : r10.force) });
   }
   clearDelayedAndroidKey() {
@@ -19705,11 +19714,11 @@ class RB {
     return { from: t10, to: r10, typeOver: i10 };
   }
   readChange() {
-    let { from: e13, to: t10, typeOver: r10 } = this.processRecords(), i10 = this.selectionChanged && PG(this.dom, this.selectionRange);
+    let { from: e13, to: t10, typeOver: r10 } = this.processRecords(), i10 = this.selectionChanged && P1(this.dom, this.selectionRange);
     if (e13 < 0 && !i10)
       return null;
     e13 > -1 && (this.lastChange = Date.now()), this.view.inputState.lastFocusTime = 0, this.selectionChanged = false;
-    let o10 = new RI(this.view, e13, t10, r10);
+    let o10 = new RB(this.view, e13, t10, r10);
     return this.view.docView.domChanged = { newSel: o10.newSel ? o10.newSel.main : null }, o10;
   }
   flush() {
@@ -19720,7 +19729,7 @@ class RB {
     let t10 = this.readChange();
     if (!t10)
       return this.view.requestMeasure(), false;
-    let r10 = this.view.state, i10 = RL(this.view, t10);
+    let r10 = this.view.state, i10 = R$(this.view, t10);
     return this.view.state == r10 && this.view.update([]), i10;
   }
   readMutation(e13) {
@@ -19728,7 +19737,7 @@ class RB {
     if (!t10 || t10.ignoreMutation(e13))
       return null;
     if (t10.markDirty("attributes" == e13.type), "attributes" == e13.type && (t10.flags |= 4), "childList" == e13.type) {
-      let r10 = R$(t10, e13.previousSibling || e13.target.previousSibling, -1), i10 = R$(t10, e13.nextSibling || e13.target.nextSibling, 1);
+      let r10 = RH(t10, e13.previousSibling || e13.target.previousSibling, -1), i10 = RH(t10, e13.nextSibling || e13.target.nextSibling, 1);
       return { from: r10 ? t10.posAfter(r10) : t10.posAtStart, to: i10 ? t10.posBefore(i10) : t10.posAtEnd, typeOver: false };
     }
     return "characterData" == e13.type ? { from: t10.posAtStart, to: t10.posAtEnd, typeOver: e13.target.nodeValue == e13.oldValue } : null;
@@ -19749,9 +19758,9 @@ class RB {
     this.removeWindowListeners(this.win), clearTimeout(this.parentCheck), clearTimeout(this.resizeTimeout), this.win.cancelAnimationFrame(this.delayedFlush), this.win.cancelAnimationFrame(this.flushingAndroidKey);
   }
 }
-function R$(e13, t10, r10) {
+function RH(e13, t10, r10) {
   for (; t10; ) {
-    let i10 = El.get(t10);
+    let i10 = Eh.get(t10);
     if (i10 && i10.parent == e13)
       return i10;
     let o10 = t10.parentNode;
@@ -19759,11 +19768,11 @@ function R$(e13, t10, r10) {
   }
   return null;
 }
-function RF(e13, t10) {
+function RW(e13, t10) {
   let r10 = t10.startContainer, i10 = t10.startOffset, o10 = t10.endContainer, s10 = t10.endOffset, l10 = e13.docView.domAtPos(e13.state.selection.main.anchor);
-  return PZ(l10.node, l10.offset, o10, s10) && ([r10, i10, o10, s10] = [o10, s10, r10, i10]), { anchorNode: r10, anchorOffset: i10, focusNode: o10, focusOffset: s10 };
+  return P4(l10.node, l10.offset, o10, s10) && ([r10, i10, o10, s10] = [o10, s10, r10, i10]), { anchorNode: r10, anchorOffset: i10, focusNode: o10, focusOffset: s10 };
 }
-class Rz {
+class RU {
   get state() {
     return this.viewState.state;
   }
@@ -19798,14 +19807,14 @@ class Rz {
         e14 = e14.assignedSlot || e14.parentNode;
       }
       return null;
-    }(e13.parent) || document, this.viewState = new Rv(e13.state || Py.create(e13)), e13.scrollTo && e13.scrollTo.is(Da) && (this.viewState.scrollTarget = e13.scrollTo.value.clip(this.viewState.state)), this.plugins = this.state.facet(Df).map((e14) => new Dp(e14)), this.plugins))
+    }(e13.parent) || document, this.viewState = new Rx(e13.state || Pk.create(e13)), e13.scrollTo && e13.scrollTo.is(Df) && (this.viewState.scrollTarget = e13.scrollTo.value.clip(this.viewState.state)), this.plugins = this.state.facet(Dm).map((e14) => new Dy(e14)), this.plugins))
       r10.update(this);
-    this.observer = new RB(this), this.inputState = new DF(this), this.inputState.ensureHandlers(this.plugins), this.docView = new D_(this), this.mountStyles(), this.updateAttrs(), this.updateState = 0, this.requestMeasure();
+    this.observer = new RV(this), this.inputState = new DW(this), this.inputState.ensureHandlers(this.plugins), this.docView = new DE(this), this.mountStyles(), this.updateAttrs(), this.updateState = 0, this.requestMeasure();
   }
   dispatch() {
     for (var e13 = arguments.length, t10 = Array(e13), r10 = 0; r10 < e13; r10++)
       t10[r10] = arguments[r10];
-    let i10 = 1 == t10.length && t10[0] instanceof Ph ? t10 : 1 == t10.length && Array.isArray(t10[0]) ? t10[0] : [this.state.update(...t10)];
+    let i10 = 1 == t10.length && t10[0] instanceof Pg ? t10 : 1 == t10.length && Array.isArray(t10[0]) ? t10[0] : [this.state.update(...t10)];
     this.dispatchTransactions(i10, this);
   }
   update(e13) {
@@ -19822,34 +19831,34 @@ class Rz {
       return;
     }
     let s10 = this.hasFocus, l10 = 0, a10 = null;
-    e13.some((e14) => e14.annotation(D9)) ? (this.inputState.notifiedFocused = s10, l10 = 1) : s10 == this.inputState.notifiedFocused || (this.inputState.notifiedFocused = s10, (a10 = D7(o10, s10)) || (l10 = 1));
+    e13.some((e14) => e14.annotation(Rn)) ? (this.inputState.notifiedFocused = s10, l10 = 1) : s10 == this.inputState.notifiedFocused || (this.inputState.notifiedFocused = s10, (a10 = Rr(o10, s10)) || (l10 = 1));
     let c10 = this.observer.delayedAndroidKey, u10 = null;
-    if (c10 ? (this.observer.clearDelayedAndroidKey(), ((u10 = this.observer.readChange()) && !this.state.doc.eq(o10.doc) || !this.state.selection.eq(o10.selection)) && (u10 = null)) : this.observer.clear(), o10.facet(Py.phrases) != this.state.facet(Py.phrases))
+    if (c10 ? (this.observer.clearDelayedAndroidKey(), ((u10 = this.observer.readChange()) && !this.state.doc.eq(o10.doc) || !this.state.selection.eq(o10.selection)) && (u10 = null)) : this.observer.clear(), o10.facet(Pk.phrases) != this.state.facet(Pk.phrases))
       return this.setState(o10);
-    i10 = DA.create(this, o10, e13), i10.flags |= l10;
+    i10 = DP.create(this, o10, e13), i10.flags |= l10;
     let h10 = this.viewState.scrollTarget;
     try {
       for (let t11 of (this.updateState = 2, e13)) {
         if (h10 && (h10 = h10.map(t11.changes)), t11.scrollIntoView) {
           let { main: e14 } = t11.state.selection;
-          h10 = new Dl(e14.empty ? e14 : TU.cursor(e14.head, e14.head > e14.anchor ? -1 : 1));
+          h10 = new Dh(e14.empty ? e14 : TY.cursor(e14.head, e14.head > e14.anchor ? -1 : 1));
         }
         for (let e14 of t11.effects)
-          e14.is(Da) && (h10 = e14.value.clip(this.state));
+          e14.is(Df) && (h10 = e14.value.clip(this.state));
       }
-      this.viewState.update(i10, h10), this.bidiCache = RW.update(this.bidiCache, i10.changes), i10.empty || (this.updatePlugins(i10), this.inputState.update(i10)), t10 = this.docView.update(i10), this.state.facet(DC) != this.styleModules && this.mountStyles(), r10 = this.updateAttrs(), this.showAnnouncements(e13), this.docView.updateSelection(t10, e13.some((e14) => e14.isUserEvent("select.pointer")));
+      this.viewState.update(i10, h10), this.bidiCache = RQ.update(this.bidiCache, i10.changes), i10.empty || (this.updatePlugins(i10), this.inputState.update(i10)), t10 = this.docView.update(i10), this.state.facet(DM) != this.styleModules && this.mountStyles(), r10 = this.updateAttrs(), this.showAnnouncements(e13), this.docView.updateSelection(t10, e13.some((e14) => e14.isUserEvent("select.pointer")));
     } finally {
       this.updateState = 0;
     }
-    if (i10.startState.facet(RC) != i10.state.facet(RC) && (this.viewState.mustMeasureContent = true), (t10 || r10 || h10 || this.viewState.mustEnforceCursorAssoc || this.viewState.mustMeasureContent) && this.requestMeasure(), t10 && this.docViewUpdate(), !i10.empty)
-      for (let e14 of this.state.facet(Dt))
+    if (i10.startState.facet(RM) != i10.state.facet(RM) && (this.viewState.mustMeasureContent = true), (t10 || r10 || h10 || this.viewState.mustEnforceCursorAssoc || this.viewState.mustMeasureContent) && this.requestMeasure(), t10 && this.docViewUpdate(), !i10.empty)
+      for (let e14 of this.state.facet(Do))
         try {
           e14(i10);
         } catch (e15) {
-          Dc(this.state, e15, "update listener");
+          Dd(this.state, e15, "update listener");
         }
     (a10 || u10) && Promise.resolve().then(() => {
-      a10 && this.state == a10.startState && this.dispatch(a10), u10 && !RL(this, u10) && c10.force && Ee(this.contentDOM, c10.key, c10.keyCode);
+      a10 && this.state == a10.startState && this.dispatch(a10), u10 && !R$(this, u10) && c10.force && Ei(this.contentDOM, c10.key, c10.keyCode);
     });
   }
   setState(e13) {
@@ -19864,22 +19873,22 @@ class Rz {
     try {
       for (let e14 of this.plugins)
         e14.destroy(this);
-      for (let t11 of (this.viewState = new Rv(e13), this.plugins = e13.facet(Df).map((e14) => new Dp(e14)), this.pluginMap.clear(), this.plugins))
+      for (let t11 of (this.viewState = new Rx(e13), this.plugins = e13.facet(Dm).map((e14) => new Dy(e14)), this.pluginMap.clear(), this.plugins))
         t11.update(this);
-      this.docView.destroy(), this.docView = new D_(this), this.inputState.ensureHandlers(this.plugins), this.mountStyles(), this.updateAttrs(), this.bidiCache = [];
+      this.docView.destroy(), this.docView = new DE(this), this.inputState.ensureHandlers(this.plugins), this.mountStyles(), this.updateAttrs(), this.bidiCache = [];
     } finally {
       this.updateState = 0;
     }
     t10 && this.focus(), this.requestMeasure();
   }
   updatePlugins(e13) {
-    let t10 = e13.startState.facet(Df), r10 = e13.state.facet(Df);
+    let t10 = e13.startState.facet(Dm), r10 = e13.state.facet(Dm);
     if (t10 != r10) {
       let i10 = [];
       for (let o10 of r10) {
         let r11 = t10.indexOf(o10);
         if (r11 < 0)
-          i10.push(new Dp(o10));
+          i10.push(new Dy(o10));
         else {
           let t11 = this.plugins[r11];
           t11.mustUpdate = e13, i10.push(t11);
@@ -19902,7 +19911,7 @@ class Rz {
         try {
           t10.docViewUpdate(this);
         } catch (e14) {
-          Dc(this.state, e14, "doc view update listener");
+          Dd(this.state, e14, "doc view update listener");
         }
     }
   }
@@ -19920,7 +19929,7 @@ class Rz {
     try {
       for (let e14 = 0; ; e14++) {
         if (s10 < 0) {
-          if (En(r10))
+          if (Es(r10))
             o10 = -1, s10 = this.viewState.heightMap.height;
           else {
             let e15 = this.viewState.scrollAnchorAt(i10);
@@ -19941,17 +19950,17 @@ class Rz {
           try {
             return e15.read(this);
           } catch (e16) {
-            return Dc(this.state, e16), RH;
+            return Dd(this.state, e16), RX;
           }
-        }), u10 = DA.create(this, this.state, []), h10 = false;
+        }), u10 = DP.create(this, this.state, []), h10 = false;
         u10.flags |= l10, t10 ? t10.flags |= l10 : t10 = u10, this.updateState = 2, !u10.empty && (this.updatePlugins(u10), this.inputState.update(u10), this.updateAttrs(), (h10 = this.docView.update(u10)) && this.docViewUpdate());
         for (let e15 = 0; e15 < a10.length; e15++)
-          if (c10[e15] != RH)
+          if (c10[e15] != RX)
             try {
               let t11 = a10[e15];
               t11.write && t11.write(c10[e15], this);
             } catch (e16) {
-              Dc(this.state, e16);
+              Dd(this.state, e16);
             }
         if (h10 && this.docView.updateSelection(true), !u10.viewportChanged && 0 == this.measureRequests.length) {
           if (this.viewState.editorHeight) {
@@ -19974,17 +19983,17 @@ class Rz {
       this.updateState = 0, this.measureScheduled = -1;
     }
     if (t10 && !t10.empty)
-      for (let e14 of this.state.facet(Dt))
+      for (let e14 of this.state.facet(Do))
         e14(t10);
   }
   get themeClasses() {
-    return RA + " " + (this.state.facet(RO) ? RM : R_) + " " + this.state.facet(RC);
+    return RP + " " + (this.state.facet(RT) ? RD : RE) + " " + this.state.facet(RM);
   }
   updateAttrs() {
-    let e13 = RU(this, Dg, { class: "cm-editor" + (this.hasFocus ? " cm-focused " : " ") + this.themeClasses }), t10 = { spellcheck: "false", autocorrect: "off", autocapitalize: "off", translate: "no", contenteditable: this.state.facet(Du) ? "true" : "false", class: "cm-content", style: `${ES.tabSize}: ${this.state.tabSize}`, role: "textbox", "aria-multiline": "true" };
-    this.state.readOnly && (t10["aria-readonly"] = "true"), RU(this, Dm, t10);
+    let e13 = RY(this, Db, { class: "cm-editor" + (this.hasFocus ? " cm-focused " : " ") + this.themeClasses }), t10 = { spellcheck: "false", autocorrect: "off", autocapitalize: "off", translate: "no", contenteditable: this.state.facet(Dp) ? "true" : "false", class: "cm-content", style: `${E_.tabSize}: ${this.state.tabSize}`, role: "textbox", "aria-multiline": "true" };
+    this.state.readOnly && (t10["aria-readonly"] = "true"), RY(this, Dw, t10);
     let r10 = this.observer.ignore(() => {
-      let r11 = ER(this.contentDOM, this.contentAttrs, t10), i10 = ER(this.dom, this.editorAttrs, e13);
+      let r11 = EN(this.contentDOM, this.contentAttrs, t10), i10 = EN(this.dom, this.editorAttrs, e13);
       return r11 || i10;
     });
     return this.editorAttrs = e13, this.contentAttrs = t10, r10;
@@ -19993,12 +20002,12 @@ class Rz {
     let t10 = true;
     for (let r10 of e13)
       for (let e14 of r10.effects)
-        e14.is(Rz.announce) && (t10 && (this.announceDOM.textContent = ""), t10 = false, this.announceDOM.appendChild(document.createElement("div")).textContent = e14.value);
+        e14.is(RU.announce) && (t10 && (this.announceDOM.textContent = ""), t10 = false, this.announceDOM.appendChild(document.createElement("div")).textContent = e14.value);
   }
   mountStyles() {
-    this.styleModules = this.state.facet(DC);
-    let e13 = this.state.facet(Rz.cspNonce);
-    PF.mount(this.root, this.styleModules.concat(RE).reverse(), e13 ? { nonce: e13 } : void 0);
+    this.styleModules = this.state.facet(DM);
+    let e13 = this.state.facet(RU.cspNonce);
+    PW.mount(this.root, this.styleModules.concat(RL).reverse(), e13 ? { nonce: e13 } : void 0);
   }
   readMeasured() {
     if (2 == this.updateState)
@@ -20049,21 +20058,21 @@ class Rz {
     return this.viewState.contentHeight;
   }
   moveByChar(e13, t10, r10) {
-    return D$(this, e13, DN(this, e13, t10, r10));
+    return DH(this, e13, Dz(this, e13, t10, r10));
   }
   moveByGroup(e13, t10) {
-    return D$(this, e13, DN(this, e13, t10, (t11) => {
+    return DH(this, e13, Dz(this, e13, t10, (t11) => {
       var r10;
       let i10, o10;
       return r10 = e13.head, o10 = (i10 = this.state.charCategorizer(r10))(t11), (e14) => {
         let t12 = i10(e14);
-        return o10 == Pm.Space && (o10 = t12), o10 == t12;
+        return o10 == Pw.Space && (o10 = t12), o10 == t12;
       };
     }));
   }
   visualLineSide(e13, t10) {
     let r10 = this.bidiSpans(e13), i10 = this.textDirectionAt(e13.from), o10 = r10[t10 ? r10.length - 1 : 0];
-    return TU.cursor(o10.side(t10, i10) + e13.from, o10.forward(!t10, i10) ? 1 : -1);
+    return TY.cursor(o10.side(t10, i10) + e13.from, o10.forward(!t10, i10) ? 1 : -1);
   }
   moveToLineBoundary(e13, t10) {
     let r10 = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -20072,24 +20081,24 @@ class Rz {
         let r12 = e15.lineBlockAt(t12);
         if (Array.isArray(r12.type)) {
           for (let e16 of r12.type)
-            if (e16.to > t12 || e16.to == t12 && (e16.to == r12.to || e16.type == EN.Text))
+            if (e16.to > t12 || e16.to == t12 && (e16.to == r12.to || e16.type == Ez.Text))
               return e16;
         }
         return r12;
-      }(e14, t11.head), s10 = i10 && o10.type == EN.Text && (e14.lineWrapping || o10.widgetLineBreaks) ? e14.coordsAtPos(t11.assoc < 0 && t11.head > o10.from ? t11.head - 1 : t11.head) : null;
+      }(e14, t11.head), s10 = i10 && o10.type == Ez.Text && (e14.lineWrapping || o10.widgetLineBreaks) ? e14.coordsAtPos(t11.assoc < 0 && t11.head > o10.from ? t11.head - 1 : t11.head) : null;
       if (s10) {
-        let t12 = e14.dom.getBoundingClientRect(), i11 = e14.textDirectionAt(o10.from), l10 = e14.posAtCoords({ x: r11 == (i11 == EX.LTR) ? t12.right - 1 : t12.left + 1, y: (s10.top + s10.bottom) / 2 });
+        let t12 = e14.dom.getBoundingClientRect(), i11 = e14.textDirectionAt(o10.from), l10 = e14.posAtCoords({ x: r11 == (i11 == EG.LTR) ? t12.right - 1 : t12.left + 1, y: (s10.top + s10.bottom) / 2 });
         if (null != l10)
-          return TU.cursor(l10, r11 ? -1 : 1);
+          return TY.cursor(l10, r11 ? -1 : 1);
       }
-      return TU.cursor(r11 ? o10.to : o10.from, r11 ? -1 : 1);
+      return TY.cursor(r11 ? o10.to : o10.from, r11 ? -1 : 1);
     }(this, e13, t10, r10);
   }
   moveVertically(e13, t10, r10) {
-    return D$(this, e13, function(e14, t11, r11, i10) {
+    return DH(this, e13, function(e14, t11, r11, i10) {
       let o10 = t11.head, s10 = r11 ? 1 : -1;
       if (o10 == (r11 ? e14.state.doc.length : 0))
-        return TU.cursor(o10, t11.assoc);
+        return TY.cursor(o10, t11.assoc);
       let l10 = t11.goalColumn, a10, c10 = e14.contentDOM.getBoundingClientRect(), u10 = e14.coordsAtPos(o10, t11.assoc || -1), h10 = e14.documentTop;
       if (u10)
         null == l10 && (l10 = u10.left - c10.left), a10 = s10 < 0 ? u10.top : u10.bottom;
@@ -20099,10 +20108,10 @@ class Rz {
       }
       let f10 = c10.left + l10, d10 = null != i10 ? i10 : e14.viewState.heightOracle.textHeight >> 1;
       for (let t12 = 0; ; t12 += 10) {
-        let r12 = a10 + (d10 + t12) * s10, i11 = DL(e14, { x: f10, y: r12 }, false, s10);
+        let r12 = a10 + (d10 + t12) * s10, i11 = D$(e14, { x: f10, y: r12 }, false, s10);
         if (r12 < c10.top || r12 > c10.bottom || (s10 < 0 ? i11 < o10 : i11 > o10)) {
           let t13 = e14.docView.coordsForChar(i11), o11 = !t13 || r12 < t13.top ? -1 : 1;
-          return TU.cursor(i11, o11, void 0, l10);
+          return TY.cursor(i11, o11, void 0, l10);
         }
       }
     }(this, e13, t10, r10));
@@ -20116,7 +20125,7 @@ class Rz {
   }
   posAtCoords(e13) {
     let t10 = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return this.readMeasured(), DL(this, e13, t10);
+    return this.readMeasured(), D$(this, e13, t10);
   }
   coordsAtPos(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -20125,7 +20134,7 @@ class Rz {
     if (!r10 || r10.left == r10.right)
       return r10;
     let i10 = this.state.doc.lineAt(e13), o10 = this.bidiSpans(i10);
-    return P3(r10, o10[E4.find(o10, e13 - i10.from, -1, t10)].dir == EX.LTR == t10 > 0);
+    return P9(r10, o10[E6.find(o10, e13 - i10.from, -1, t10)].dir == EG.LTR == t10 > 0);
   }
   coordsForChar(e13) {
     return this.readMeasured(), this.docView.coordsForChar(e13);
@@ -20140,14 +20149,14 @@ class Rz {
     return this.viewState.defaultTextDirection;
   }
   textDirectionAt(e13) {
-    return !this.state.facet(Di) || e13 < this.viewport.from || e13 > this.viewport.to ? this.textDirection : (this.readMeasured(), this.docView.textDirectionAt(e13));
+    return !this.state.facet(Da) || e13 < this.viewport.from || e13 > this.viewport.to ? this.textDirection : (this.readMeasured(), this.docView.textDirectionAt(e13));
   }
   get lineWrapping() {
     return this.viewState.heightOracle.lineWrapping;
   }
   bidiSpans(e13) {
-    if (e13.length > RV)
-      return E5(e13.length);
+    if (e13.length > Rq)
+      return E7(e13.length);
     let t10 = this.textDirectionAt(e13.from), r10;
     for (let i11 of this.bidiCache)
       if (i11.from == e13.from && i11.dir == t10 && (i11.fresh || function e14(t11, r11) {
@@ -20159,41 +20168,41 @@ class Rz {
             return false;
         }
         return true;
-      }(i11.isolates, r10 = Dx(this, e13))))
+      }(i11.isolates, r10 = DO(this, e13))))
         return i11.order;
-    r10 || (r10 = Dx(this, e13));
+    r10 || (r10 = DO(this, e13));
     let i10 = function(e14, t11, r11) {
       if (!e14)
-        return [new E4(0, 0, t11 == EY ? 1 : 0)];
-      if (t11 == EQ && !r11.length && !E2.test(e14))
-        return E5(e14.length);
+        return [new E6(0, 0, t11 == EZ ? 1 : 0)];
+      if (t11 == EJ && !r11.length && !E8.test(e14))
+        return E7(e14.length);
       if (r11.length)
-        for (; e14.length > E3.length; )
-          E3[E3.length] = 256;
-      let i11 = [], o10 = t11 == EQ ? 0 : 1;
+        for (; e14.length > E9.length; )
+          E9[E9.length] = 256;
+      let i11 = [], o10 = t11 == EJ ? 0 : 1;
       return function e15(t12, r12, i12, o11, s10, l10, a10) {
         let c10 = r12 % 2 ? 2 : 1;
         (function(e16, t13, r13, i13, o12) {
           for (let s11 = 0; s11 <= i13.length; s11++) {
             let l11 = s11 ? i13[s11 - 1].to : t13, a11 = s11 < i13.length ? i13[s11].from : r13, c11 = s11 ? 256 : o12;
             for (let t14 = l11, r14 = c11, i14 = c11; t14 < a11; t14++) {
-              let o13 = E1(e16.charCodeAt(t14));
-              512 == o13 ? o13 = r14 : 8 == o13 && 4 == i14 && (o13 = 16), E3[t14] = 4 == o13 ? 2 : o13, 7 & o13 && (i14 = o13), r14 = o13;
+              let o13 = E5(e16.charCodeAt(t14));
+              512 == o13 ? o13 = r14 : 8 == o13 && 4 == i14 && (o13 = 16), E9[t14] = 4 == o13 ? 2 : o13, 7 & o13 && (i14 = o13), r14 = o13;
             }
             for (let e17 = l11, t14 = c11, i14 = c11; e17 < a11; e17++) {
-              let o13 = E3[e17];
+              let o13 = E9[e17];
               if (128 == o13)
-                e17 < a11 - 1 && t14 == E3[e17 + 1] && 24 & t14 ? o13 = E3[e17] = t14 : E3[e17] = 256;
+                e17 < a11 - 1 && t14 == E9[e17 + 1] && 24 & t14 ? o13 = E9[e17] = t14 : E9[e17] = 256;
               else if (64 == o13) {
                 let o14 = e17 + 1;
-                for (; o14 < a11 && 64 == E3[o14]; )
+                for (; o14 < a11 && 64 == E9[o14]; )
                   o14++;
-                let s12 = e17 && 8 == t14 || o14 < r13 && 8 == E3[o14] ? 1 == i14 ? 1 : 8 : 256;
+                let s12 = e17 && 8 == t14 || o14 < r13 && 8 == E9[o14] ? 1 == i14 ? 1 : 8 : 256;
                 for (let t15 = e17; t15 < o14; t15++)
-                  E3[t15] = s12;
+                  E9[t15] = s12;
                 e17 = o14 - 1;
               } else
-                8 == o13 && 1 == i14 && (E3[e17] = 1);
+                8 == o13 && 1 == i14 && (E9[e17] = 1);
               t14 = o13, 7 & o13 && (i14 = o13);
             }
           }
@@ -20202,31 +20211,31 @@ class Rz {
           for (let l11 = 0, a11 = 0, c11 = 0; l11 <= i13.length; l11++) {
             let u10 = l11 ? i13[l11 - 1].to : t13, h10 = l11 < i13.length ? i13[l11].from : r13;
             for (let t14 = u10, r14, i14, l12; t14 < h10; t14++)
-              if (i14 = EZ[r14 = e16.charCodeAt(t14)]) {
+              if (i14 = E4[r14 = e16.charCodeAt(t14)]) {
                 if (i14 < 0) {
                   for (let e17 = a11 - 3; e17 >= 0; e17 -= 3)
-                    if (E0[e17 + 1] == -i14) {
-                      let r15 = E0[e17 + 2], i15 = 2 & r15 ? o12 : 4 & r15 ? 1 & r15 ? s11 : o12 : 0;
-                      i15 && (E3[t14] = E3[E0[e17]] = i15), a11 = e17;
+                    if (E3[e17 + 1] == -i14) {
+                      let r15 = E3[e17 + 2], i15 = 2 & r15 ? o12 : 4 & r15 ? 1 & r15 ? s11 : o12 : 0;
+                      i15 && (E9[t14] = E9[E3[e17]] = i15), a11 = e17;
                       break;
                     }
-                } else if (189 == E0.length)
+                } else if (189 == E3.length)
                   break;
                 else
-                  E0[a11++] = t14, E0[a11++] = r14, E0[a11++] = c11;
-              } else if (2 == (l12 = E3[t14]) || 1 == l12) {
+                  E3[a11++] = t14, E3[a11++] = r14, E3[a11++] = c11;
+              } else if (2 == (l12 = E9[t14]) || 1 == l12) {
                 let e17 = l12 == o12;
                 c11 = e17 ? 0 : 1;
                 for (let t15 = a11 - 3; t15 >= 0; t15 -= 3) {
-                  let r15 = E0[t15 + 2];
+                  let r15 = E3[t15 + 2];
                   if (2 & r15)
                     break;
                   if (e17)
-                    E0[t15 + 2] |= 2;
+                    E3[t15 + 2] |= 2;
                   else {
                     if (4 & r15)
                       break;
-                    E0[t15 + 2] |= 4;
+                    E3[t15 + 2] |= 4;
                   }
                 }
               }
@@ -20235,7 +20244,7 @@ class Rz {
           for (let o12 = 0, s11 = i13; o12 <= r13.length; o12++) {
             let l11 = o12 ? r13[o12 - 1].to : e16, a11 = o12 < r13.length ? r13[o12].from : t13;
             for (let c11 = l11; c11 < a11; ) {
-              let l12 = E3[c11];
+              let l12 = E9[c11];
               if (256 == l12) {
                 let l13 = c11 + 1;
                 for (; ; )
@@ -20243,13 +20252,13 @@ class Rz {
                     if (o12 == r13.length)
                       break;
                     l13 = r13[o12++].to, a11 = o12 < r13.length ? r13[o12].from : t13;
-                  } else if (256 == E3[l13])
+                  } else if (256 == E9[l13])
                     l13++;
                   else
                     break;
-                let u10 = 1 == s11, h10 = u10 == ((l13 < t13 ? E3[l13] : i13) == 1) ? u10 ? 1 : 2 : i13;
+                let u10 = 1 == s11, h10 = u10 == ((l13 < t13 ? E9[l13] : i13) == 1) ? u10 ? 1 : 2 : i13;
                 for (let t14 = l13, i14 = o12, s12 = i14 ? r13[i14 - 1].to : e16; t14 > c11; )
-                  t14 == s12 && (t14 = r13[--i14].from, s12 = i14 ? r13[i14 - 1].to : e16), E3[--t14] = h10;
+                  t14 == s12 && (t14 = r13[--i14].from, s12 = i14 ? r13[i14 - 1].to : e16), E9[--t14] = h10;
                 c11 = l13;
               } else
                 s11 = l12, c11++;
@@ -20261,7 +20270,7 @@ class Rz {
             for (let h10 = i13, f10 = 0; h10 < o12; ) {
               let i14 = true, d10 = false;
               if (f10 == a11.length || h10 < a11[f10].from) {
-                let e16 = E3[h10];
+                let e16 = E9[h10];
                 e16 != u10 && (i14 = false, d10 = 16 == e16);
               }
               let p10 = i14 || 1 != u10 ? null : [], g7 = i14 ? s11 : s11 + 1, m10 = h10;
@@ -20277,23 +20286,23 @@ class Rz {
                           break t;
                         if (r14 < a11.length && a11[r14].from == e16)
                           e16 = a11[r14++].to;
-                        else if (E3[e16] == u10)
+                        else if (E9[e16] == u10)
                           break t;
                         else
                           break;
                       }
-                    f10++, p10 ? p10.push(t14) : (t14.from > h10 && c11.push(new E4(h10, t14.from, g7)), e15(r13, t14.direction == EQ != !(g7 % 2) ? s11 + 1 : s11, l11, t14.inner, t14.from, t14.to, c11), h10 = t14.to), m10 = t14.to;
-                  } else if (m10 == o12 || (i14 ? E3[m10] != u10 : E3[m10] == u10))
+                    f10++, p10 ? p10.push(t14) : (t14.from > h10 && c11.push(new E6(h10, t14.from, g7)), e15(r13, t14.direction == EJ != !(g7 % 2) ? s11 + 1 : s11, l11, t14.inner, t14.from, t14.to, c11), h10 = t14.to), m10 = t14.to;
+                  } else if (m10 == o12 || (i14 ? E9[m10] != u10 : E9[m10] == u10))
                     break;
                   else
                     m10++;
-              p10 ? t13(r13, h10, m10, s11 + 1, l11, p10, c11) : h10 < m10 && c11.push(new E4(h10, m10, g7)), h10 = m10;
+              p10 ? t13(r13, h10, m10, s11 + 1, l11, p10, c11) : h10 < m10 && c11.push(new E6(h10, m10, g7)), h10 = m10;
             }
           else
             for (let h10 = o12, f10 = a11.length; h10 > i13; ) {
               let o13 = true, d10 = false;
               if (!f10 || h10 > a11[f10 - 1].to) {
-                let e16 = E3[h10 - 1];
+                let e16 = E9[h10 - 1];
                 e16 != u10 && (o13 = false, d10 = 16 == e16);
               }
               let p10 = o13 || 1 != u10 ? null : [], g7 = o13 ? s11 : s11 + 1, m10 = h10;
@@ -20309,30 +20318,30 @@ class Rz {
                           break t;
                         if (r14 && a11[r14 - 1].to == e16)
                           e16 = a11[--r14].from;
-                        else if (E3[e16 - 1] == u10)
+                        else if (E9[e16 - 1] == u10)
                           break t;
                         else
                           break;
                       }
-                    p10 ? p10.push(t14) : (t14.to < h10 && c11.push(new E4(t14.to, h10, g7)), e15(r13, t14.direction == EQ != !(g7 % 2) ? s11 + 1 : s11, l11, t14.inner, t14.from, t14.to, c11), h10 = t14.from), m10 = t14.from;
-                  } else if (m10 == i13 || (o13 ? E3[m10 - 1] != u10 : E3[m10 - 1] == u10))
+                    p10 ? p10.push(t14) : (t14.to < h10 && c11.push(new E6(t14.to, h10, g7)), e15(r13, t14.direction == EJ != !(g7 % 2) ? s11 + 1 : s11, l11, t14.inner, t14.from, t14.to, c11), h10 = t14.from), m10 = t14.from;
+                  } else if (m10 == i13 || (o13 ? E9[m10 - 1] != u10 : E9[m10 - 1] == u10))
                     break;
                   else
                     m10--;
-              p10 ? t13(r13, m10, h10, s11 + 1, l11, p10, c11) : m10 < h10 && c11.push(new E4(m10, h10, g7)), h10 = m10;
+              p10 ? t13(r13, m10, h10, s11 + 1, l11, p10, c11) : m10 < h10 && c11.push(new E6(m10, h10, g7)), h10 = m10;
             }
         }(t12, s10, l10, r12, i12, o11, a10);
       }(e14, o10, o10, r11, 0, e14.length, i11), i11;
     }(e13.text, t10, r10);
-    return this.bidiCache.push(new RW(e13.from, e13.to, t10, r10, true, i10)), i10;
+    return this.bidiCache.push(new RQ(e13.from, e13.to, t10, r10, true, i10)), i10;
   }
   get hasFocus() {
     var e13;
-    return (this.dom.ownerDocument.hasFocus() || ES.safari && (null === (e13 = this.inputState) || void 0 === e13 ? void 0 : e13.lastContextMenu) > Date.now() - 3e4) && this.root.activeElement == this.contentDOM;
+    return (this.dom.ownerDocument.hasFocus() || E_.safari && (null === (e13 = this.inputState) || void 0 === e13 ? void 0 : e13.lastContextMenu) > Date.now() - 3e4) && this.root.activeElement == this.contentDOM;
   }
   focus() {
     this.observer.ignore(() => {
-      P9(this.contentDOM), this.docView.updateSelection();
+      En(this.contentDOM), this.docView.updateSelection();
     });
   }
   setRoot(e13) {
@@ -20345,64 +20354,64 @@ class Rz {
   }
   static scrollIntoView(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return Da.of(new Dl("number" == typeof e13 ? TU.cursor(e13) : e13, t10.y, t10.x, t10.yMargin, t10.xMargin));
+    return Df.of(new Dh("number" == typeof e13 ? TY.cursor(e13) : e13, t10.y, t10.x, t10.yMargin, t10.xMargin));
   }
   scrollSnapshot() {
     let { scrollTop: e13, scrollLeft: t10 } = this.scrollDOM, r10 = this.viewState.scrollAnchorAt(e13);
-    return Da.of(new Dl(TU.cursor(r10.from), "start", "start", r10.top - e13, t10, true));
+    return Df.of(new Dh(TY.cursor(r10.from), "start", "start", r10.top - e13, t10, true));
   }
   static domEventHandlers(e13) {
-    return Dd.define(() => ({}), { eventHandlers: e13 });
+    return Dv.define(() => ({}), { eventHandlers: e13 });
   }
   static domEventObservers(e13) {
-    return Dd.define(() => ({}), { eventObservers: e13 });
+    return Dv.define(() => ({}), { eventObservers: e13 });
   }
   static theme(e13, t10) {
-    let r10 = PF.newName(), i10 = [RC.of(r10), DC.of(RP(`.${r10}`, e13))];
-    return t10 && t10.dark && i10.push(RO.of(true)), i10;
+    let r10 = PW.newName(), i10 = [RM.of(r10), DM.of(RI(`.${r10}`, e13))];
+    return t10 && t10.dark && i10.push(RT.of(true)), i10;
   }
   static baseTheme(e13) {
-    return T4.lowest(DC.of(RP("." + RA, e13, RT)));
+    return T6.lowest(DM.of(RI("." + RP, e13, RR)));
   }
   static findFromDOM(e13) {
     var t10;
-    let r10 = e13.querySelector(".cm-content"), i10 = r10 && El.get(r10) || El.get(e13);
+    let r10 = e13.querySelector(".cm-content"), i10 = r10 && Eh.get(r10) || Eh.get(e13);
     return (null === (t10 = null == i10 ? void 0 : i10.rootView) || void 0 === t10 ? void 0 : t10.view) || null;
   }
 }
-Rz.styleModule = DC, Rz.inputHandler = Dn, Rz.scrollHandler = Ds, Rz.focusChangeEffect = Dr, Rz.perLineTextDirection = Di, Rz.exceptionSink = De, Rz.updateListener = Dt, Rz.editable = Du, Rz.mouseSelectionStyle = E7, Rz.dragMovesSelection = E9, Rz.clickAddsSelectionRange = E6, Rz.decorations = Dv, Rz.outerDecorations = Dy, Rz.atomicRanges = Db, Rz.bidiIsolatedRanges = Dw, Rz.scrollMargins = Dk, Rz.darkTheme = RO, Rz.cspNonce = TQ.define({ combine: (e13) => e13.length ? e13[0] : "" }), Rz.contentAttributes = Dm, Rz.editorAttributes = Dg, Rz.lineWrapping = Rz.contentAttributes.of({ class: "cm-lineWrapping" }), Rz.announce = Pu.define();
-let RV = 4096, RH = {};
-class RW {
+RU.styleModule = DM, RU.inputHandler = Ds, RU.scrollHandler = Du, RU.focusChangeEffect = Dl, RU.perLineTextDirection = Da, RU.exceptionSink = Di, RU.updateListener = Do, RU.editable = Dp, RU.mouseSelectionStyle = Dr, RU.dragMovesSelection = Dn, RU.clickAddsSelectionRange = Dt, RU.decorations = Dx, RU.outerDecorations = Dk, RU.atomicRanges = DS, RU.bidiIsolatedRanges = DC, RU.scrollMargins = DA, RU.darkTheme = RT, RU.cspNonce = TJ.define({ combine: (e13) => e13.length ? e13[0] : "" }), RU.contentAttributes = Dw, RU.editorAttributes = Db, RU.lineWrapping = RU.contentAttributes.of({ class: "cm-lineWrapping" }), RU.announce = Pp.define();
+let Rq = 4096, RX = {};
+class RQ {
   constructor(e13, t10, r10, i10, o10, s10) {
     this.from = e13, this.to = t10, this.dir = r10, this.isolates = i10, this.fresh = o10, this.order = s10;
   }
   static update(e13, t10) {
     if (t10.empty && !e13.some((e14) => e14.fresh))
       return e13;
-    let r10 = [], i10 = e13.length ? e13[e13.length - 1].dir : EX.LTR;
+    let r10 = [], i10 = e13.length ? e13[e13.length - 1].dir : EG.LTR;
     for (let o10 = Math.max(0, e13.length - 10); o10 < e13.length; o10++) {
       let s10 = e13[o10];
-      s10.dir != i10 || t10.touchesRange(s10.from, s10.to) || r10.push(new RW(t10.mapPos(s10.from, 1), t10.mapPos(s10.to, -1), s10.dir, s10.isolates, false, s10.order));
+      s10.dir != i10 || t10.touchesRange(s10.from, s10.to) || r10.push(new RQ(t10.mapPos(s10.from, 1), t10.mapPos(s10.to, -1), s10.dir, s10.isolates, false, s10.order));
     }
     return r10;
   }
 }
-function RU(e13, t10, r10) {
+function RY(e13, t10, r10) {
   for (let i10 = e13.state.facet(t10), o10 = i10.length - 1; o10 >= 0; o10--) {
     let t11 = i10[o10], s10 = "function" == typeof t11 ? t11(e13) : t11;
-    s10 && EP(s10, r10);
+    s10 && EI(s10, r10);
   }
   return r10;
 }
-let Rq = ES.mac ? "mac" : ES.windows ? "win" : ES.linux ? "linux" : "key";
-function RX(e13, t10, r10) {
+let RK = E_.mac ? "mac" : E_.windows ? "win" : E_.linux ? "linux" : "key";
+function RG(e13, t10, r10) {
   return t10.altKey && (e13 = "Alt-" + e13), t10.ctrlKey && (e13 = "Ctrl-" + e13), t10.metaKey && (e13 = "Meta-" + e13), false !== r10 && t10.shiftKey && (e13 = "Shift-" + e13), e13;
 }
-let RQ = T4.default(Rz.domEventHandlers({ keydown: (e13, t10) => {
+let RJ = T6.default(RU.domEventHandlers({ keydown: (e13, t10) => {
   var r10, i10, o10, s10, l10;
   let a10, c10, u10, h10, f10, d10, p10, g7, m10, y10, b10, w10, x10;
-  return r10 = (a10 = t10.state.facet(RY), (c10 = RK.get(a10)) || RK.set(a10, c10 = function(e14) {
-    let t11 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rq, r11 = /* @__PURE__ */ Object.create(null), i11 = /* @__PURE__ */ Object.create(null), o11 = (e15, t12) => {
+  return r10 = (a10 = t10.state.facet(RZ), (c10 = R0.get(a10)) || R0.set(a10, c10 = function(e14) {
+    let t11 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RK, r11 = /* @__PURE__ */ Object.create(null), i11 = /* @__PURE__ */ Object.create(null), o11 = (e15, t12) => {
       let r12 = i11[e15];
       if (null == r12)
         i11[e15] = t12;
@@ -20434,9 +20443,9 @@ let RQ = T4.default(Rz.domEventHandlers({ keydown: (e13, t10) => {
       for (let t12 = 1; t12 < f11.length; t12++) {
         let r12 = f11.slice(0, t12).join(" ");
         o11(r12, true), h11[r12] || (h11[r12] = { preventDefault: true, stopPropagation: false, run: [(t13) => {
-          let i13 = RG = { view: t13, prefix: r12, scope: e15 };
+          let i13 = R1 = { view: t13, prefix: r12, scope: e15 };
           return setTimeout(() => {
-            RG == i13 && (RG = null);
+            R1 == i13 && (R1 = null);
           }, 4e3), true;
         }] });
       }
@@ -20459,7 +20468,7 @@ let RQ = T4.default(Rz.domEventHandlers({ keydown: (e13, t10) => {
           s11(t12, o12, i12.run, i12.preventDefault, i12.stopPropagation), i12.shift && s11(t12, "Shift-" + o12, i12.shift, i12.preventDefault, i12.stopPropagation);
     }
     return r11;
-  }(a10.reduce((e14, t11) => e14.concat(t11), []))), c10), i10 = e13, o10 = t10, s10 = "editor", h10 = TR(TE(u10 = ("Esc" == (l10 = !(PU && i10.metaKey && i10.shiftKey && !i10.ctrlKey && !i10.altKey || Pq && i10.shiftKey && i10.key && 1 == i10.key.length || "Unidentified" == i10.key) && i10.key || (i10.shiftKey ? PW : PH)[i10.keyCode] || i10.key || "Unidentified") && (l10 = "Escape"), "Del" == l10 && (l10 = "Delete"), "Left" == l10 && (l10 = "ArrowLeft"), "Up" == l10 && (l10 = "ArrowUp"), "Right" == l10 && (l10 = "ArrowRight"), "Down" == l10 && (l10 = "ArrowDown"), l10), 0)) == u10.length && " " != u10, f10 = "", d10 = false, p10 = false, g7 = false, RG && RG.view == o10 && RG.scope == s10 && (f10 = RG.prefix + " ", 0 > DW.indexOf(i10.keyCode) && (p10 = true, RG = null)), m10 = /* @__PURE__ */ new Set(), y10 = (e14) => {
+  }(a10.reduce((e14, t11) => e14.concat(t11), []))), c10), i10 = e13, o10 = t10, s10 = "editor", h10 = TN(TL(u10 = ("Esc" == (l10 = !(PY && i10.metaKey && i10.shiftKey && !i10.ctrlKey && !i10.altKey || PK && i10.shiftKey && i10.key && 1 == i10.key.length || "Unidentified" == i10.key) && i10.key || (i10.shiftKey ? PQ : PX)[i10.keyCode] || i10.key || "Unidentified") && (l10 = "Escape"), "Del" == l10 && (l10 = "Delete"), "Left" == l10 && (l10 = "ArrowLeft"), "Up" == l10 && (l10 = "ArrowUp"), "Right" == l10 && (l10 = "ArrowRight"), "Down" == l10 && (l10 = "ArrowDown"), l10), 0)) == u10.length && " " != u10, f10 = "", d10 = false, p10 = false, g7 = false, R1 && R1.view == o10 && R1.scope == s10 && (f10 = R1.prefix + " ", 0 > DQ.indexOf(i10.keyCode) && (p10 = true, R1 = null)), m10 = /* @__PURE__ */ new Set(), y10 = (e14) => {
     if (e14) {
       for (let t11 of e14.run)
         if (!m10.has(t11) && (m10.add(t11), t11(o10, i10)))
@@ -20467,17 +20476,17 @@ let RQ = T4.default(Rz.domEventHandlers({ keydown: (e13, t10) => {
       e14.preventDefault && (e14.stopPropagation && (g7 = true), p10 = true);
     }
     return false;
-  }, (b10 = r10[s10]) && (y10(b10[f10 + RX(u10, i10, !h10)]) ? d10 = true : h10 && (i10.altKey || i10.metaKey || i10.ctrlKey) && !(ES.windows && i10.ctrlKey && i10.altKey) && (w10 = PH[i10.keyCode]) && w10 != u10 ? y10(b10[f10 + RX(w10, i10, true)]) ? d10 = true : i10.shiftKey && (x10 = PW[i10.keyCode]) != u10 && x10 != w10 && y10(b10[f10 + RX(x10, i10, false)]) && (d10 = true) : h10 && i10.shiftKey && y10(b10[f10 + RX(u10, i10, true)]) && (d10 = true), !d10 && y10(b10._any) && (d10 = true)), p10 && (d10 = true), d10 && g7 && i10.stopPropagation(), d10;
-} })), RY = TQ.define({ enables: RQ }), RK = /* @__PURE__ */ new WeakMap(), RG = null, RJ = !ES.ios, RZ = { ".cm-line": { "& ::selection": { backgroundColor: "transparent !important" }, "&::selection": { backgroundColor: "transparent !important" } } };
-function R0(e13, t10, r10, i10, o10) {
+  }, (b10 = r10[s10]) && (y10(b10[f10 + RG(u10, i10, !h10)]) ? d10 = true : h10 && (i10.altKey || i10.metaKey || i10.ctrlKey) && !(E_.windows && i10.ctrlKey && i10.altKey) && (w10 = PX[i10.keyCode]) && w10 != u10 ? y10(b10[f10 + RG(w10, i10, true)]) ? d10 = true : i10.shiftKey && (x10 = PQ[i10.keyCode]) != u10 && x10 != w10 && y10(b10[f10 + RG(x10, i10, false)]) && (d10 = true) : h10 && i10.shiftKey && y10(b10[f10 + RG(u10, i10, true)]) && (d10 = true), !d10 && y10(b10._any) && (d10 = true)), p10 && (d10 = true), d10 && g7 && i10.stopPropagation(), d10;
+} })), RZ = TJ.define({ enables: RJ }), R0 = /* @__PURE__ */ new WeakMap(), R1 = null, R2 = !E_.ios, R4 = { ".cm-line": { "& ::selection": { backgroundColor: "transparent !important" }, "&::selection": { backgroundColor: "transparent !important" } } };
+function R3(e13, t10, r10, i10, o10) {
   t10.lastIndex = 0;
   for (let s10 = e13.iterRange(r10, i10), l10 = r10, a10; !s10.next().done; l10 += s10.value.length)
     if (!s10.lineBreak)
       for (; a10 = t10.exec(s10.value); )
         o10(l10 + a10.index, a10);
 }
-RJ && (RZ[".cm-line"].caretColor = "transparent !important", RZ[".cm-content"] = { caretColor: "transparent !important" });
-class R1 {
+R2 && (R4[".cm-line"].caretColor = "transparent !important", R4[".cm-content"] = { caretColor: "transparent !important" });
+class R5 {
   constructor(e13) {
     let { regexp: t10, decoration: r10, decorate: i10, boundary: o10, maxLength: s10 = 1e3 } = e13;
     if (!t10.global)
@@ -20496,7 +20505,7 @@ class R1 {
     this.boundary = o10, this.maxLength = s10;
   }
   createDeco(e13) {
-    let t10 = new PO(), r10 = t10.add.bind(t10);
+    let t10 = new PT(), r10 = t10.add.bind(t10);
     for (let { from: t11, to: i10 } of function(e14, t12) {
       let r11 = e14.visibleRanges;
       if (1 == r11.length && r11[0].from == e14.viewport.from && r11[0].to == e14.viewport.to)
@@ -20506,7 +20515,7 @@ class R1 {
         o10 = Math.max(e14.state.doc.lineAt(o10).from, o10 - t12), s10 = Math.min(e14.state.doc.lineAt(s10).to, s10 + t12), i11.length && i11[i11.length - 1].to >= o10 ? i11[i11.length - 1].to = s10 : i11.push({ from: o10, to: s10 });
       return i11;
     }(e13, this.maxLength))
-      R0(e13.state.doc, this.regexp, t11, i10, (t12, i11) => this.addMatch(i11, e13, t12, r10));
+      R3(e13.state.doc, this.regexp, t11, i10, (t12, i11) => this.addMatch(i11, e13, t12, r10));
     return t10.finish();
   }
   updateDeco(e13, t10) {
@@ -20537,25 +20546,25 @@ class R1 {
           for (this.regexp.lastIndex = a10 - r11.from; (h10 = this.regexp.exec(r11.text)) && h10.index < c10 - r11.from; )
             this.addMatch(h10, e13, h10.index + r11.from, f10);
         else
-          R0(e13.state.doc, this.regexp, a10, c10, (t11, r12) => this.addMatch(r12, e13, t11, f10));
+          R3(e13.state.doc, this.regexp, a10, c10, (t11, r12) => this.addMatch(r12, e13, t11, f10));
         t10 = t10.update({ filterFrom: a10, filterTo: c10, filter: (e14, t11) => e14 < a10 || t11 > c10, add: u10 });
       }
     }
     return t10;
   }
 }
-let R2 = null != /x/.unicode ? "gu" : "g", R4 = RegExp("[\0-\b\n--­؜​‎‏\u2028\u2029‭‮⁦⁧⁩\uFEFF￹-￼]", R2), R3 = { 0: "null", 7: "bell", 8: "backspace", 10: "newline", 11: "vertical tab", 13: "carriage return", 27: "escape", 8203: "zero width space", 8204: "zero width non-joiner", 8205: "zero width joiner", 8206: "left-to-right mark", 8207: "right-to-left mark", 8232: "line separator", 8237: "left-to-right override", 8238: "right-to-left override", 8294: "left-to-right isolate", 8295: "right-to-left isolate", 8297: "pop directional isolate", 8233: "paragraph separator", 65279: "zero width no-break space", 65532: "object replacement" }, R5 = null, R8 = TQ.define({ combine(e13) {
-  let t10 = Pb(e13, { render: null, specialChars: R4, addSpecialChars: null });
+let R8 = null != /x/.unicode ? "gu" : "g", R6 = RegExp("[\0-\b\n--­؜​‎‏\u2028\u2029‭‮⁦⁧⁩\uFEFF￹-￼]", R8), R9 = { 0: "null", 7: "bell", 8: "backspace", 10: "newline", 11: "vertical tab", 13: "carriage return", 27: "escape", 8203: "zero width space", 8204: "zero width non-joiner", 8205: "zero width joiner", 8206: "left-to-right mark", 8207: "right-to-left mark", 8232: "line separator", 8237: "left-to-right override", 8238: "right-to-left override", 8294: "left-to-right isolate", 8295: "right-to-left isolate", 8297: "pop directional isolate", 8233: "paragraph separator", 65279: "zero width no-break space", 65532: "object replacement" }, R7 = null, Ie = TJ.define({ combine(e13) {
+  let t10 = PS(e13, { render: null, specialChars: R6, addSpecialChars: null });
   return (t10.replaceTabs = !function() {
     var e14;
-    if (null == R5 && "undefined" != typeof document && document.body) {
+    if (null == R7 && "undefined" != typeof document && document.body) {
       let t11 = document.body.style;
-      R5 = (null !== (e14 = t11.tabSize) && void 0 !== e14 ? e14 : t11.MozTabSize) != null;
+      R7 = (null !== (e14 = t11.tabSize) && void 0 !== e14 ? e14 : t11.MozTabSize) != null;
     }
-    return R5 || false;
-  }()) && (t10.specialChars = RegExp("	|" + t10.specialChars.source, R2)), t10.addSpecialChars && (t10.specialChars = RegExp(t10.specialChars.source + "|" + t10.addSpecialChars.source, R2)), t10;
-} }), R6 = null;
-class R9 extends Ej {
+    return R7 || false;
+  }()) && (t10.specialChars = RegExp("	|" + t10.specialChars.source, R8)), t10.addSpecialChars && (t10.specialChars = RegExp(t10.specialChars.source + "|" + t10.addSpecialChars.source, R8)), t10;
+} }), It = null;
+class In extends EF {
   constructor(e13, t10) {
     super(), this.options = e13, this.code = t10;
   }
@@ -20564,7 +20573,7 @@ class R9 extends Ej {
   }
   toDOM(e13) {
     var t10;
-    let r10 = (t10 = this.code) >= 32 ? "•" : 10 == t10 ? "␤" : String.fromCharCode(9216 + t10), i10 = e13.state.phrase("Control character") + " " + (R3[this.code] || "0x" + this.code.toString(16)), o10 = this.options.render && this.options.render(this.code, i10, r10);
+    let r10 = (t10 = this.code) >= 32 ? "•" : 10 == t10 ? "␤" : String.fromCharCode(9216 + t10), i10 = e13.state.phrase("Control character") + " " + (R9[this.code] || "0x" + this.code.toString(16)), o10 = this.options.render && this.options.render(this.code, i10, r10);
     if (o10)
       return o10;
     let s10 = document.createElement("span");
@@ -20574,7 +20583,7 @@ class R9 extends Ej {
     return false;
   }
 }
-class R7 extends Ej {
+class Ir extends EF {
   constructor(e13) {
     super(), this.width = e13;
   }
@@ -20589,7 +20598,7 @@ class R7 extends Ej {
     return false;
   }
 }
-let Ie = EB.line({ class: "cm-activeLine" }), It = Dd.fromClass(class {
+let Ii = EV.line({ class: "cm-activeLine" }), Io = Dv.fromClass(class {
   constructor(e13) {
     this.decorations = this.getDeco(e13);
   }
@@ -20600,12 +20609,12 @@ let Ie = EB.line({ class: "cm-activeLine" }), It = Dd.fromClass(class {
     let t10 = -1, r10 = [];
     for (let i10 of e13.state.selection.ranges) {
       let o10 = e13.lineBlockAt(i10.head);
-      o10.from > t10 && (r10.push(Ie.range(o10.from)), t10 = o10.from);
+      o10.from > t10 && (r10.push(Ii.range(o10.from)), t10 = o10.from);
     }
-    return EB.set(r10);
+    return EV.set(r10);
   }
-}, { decorations: (e13) => e13.decorations }), In = "-10000px";
-class Ir {
+}, { decorations: (e13) => e13.decorations }), Is = "-10000px";
+class Il {
   constructor(e13, t10, r10, i10) {
     this.facet = t10, this.createTooltipView = r10, this.removeTooltipView = i10, this.input = e13.state.facet(t10), this.tooltips = this.input.filter((e14) => e14);
     let o10 = null;
@@ -20640,18 +20649,18 @@ class Ir {
     return t10 && (l10.forEach((e14, r11) => t10[r11] = e14), t10.length = l10.length), this.input = i10, this.tooltips = o10, this.tooltipViews = s10, true;
   }
 }
-function Ii(e13) {
+function Ia(e13) {
   let { win: t10 } = e13;
   return { top: 0, left: 0, bottom: t10.innerHeight, right: t10.innerWidth };
 }
-let Io = TQ.define({ combine: (e13) => {
+let Ic = TJ.define({ combine: (e13) => {
   var t10, r10, i10;
-  return { position: ES.ios ? "absolute" : (null === (t10 = e13.find((e14) => e14.position)) || void 0 === t10 ? void 0 : t10.position) || "fixed", parent: (null === (r10 = e13.find((e14) => e14.parent)) || void 0 === r10 ? void 0 : r10.parent) || null, tooltipSpace: (null === (i10 = e13.find((e14) => e14.tooltipSpace)) || void 0 === i10 ? void 0 : i10.tooltipSpace) || Ii };
-} }), Is = /* @__PURE__ */ new WeakMap(), Il = Dd.fromClass(class {
+  return { position: E_.ios ? "absolute" : (null === (t10 = e13.find((e14) => e14.position)) || void 0 === t10 ? void 0 : t10.position) || "fixed", parent: (null === (r10 = e13.find((e14) => e14.parent)) || void 0 === r10 ? void 0 : r10.parent) || null, tooltipSpace: (null === (i10 = e13.find((e14) => e14.tooltipSpace)) || void 0 === i10 ? void 0 : i10.tooltipSpace) || Ia };
+} }), Iu = /* @__PURE__ */ new WeakMap(), Ih = Dv.fromClass(class {
   constructor(e13) {
     this.view = e13, this.above = [], this.inView = true, this.madeAbsolute = false, this.lastTransaction = 0, this.measureTimeout = -1;
-    let t10 = e13.state.facet(Io);
-    this.position = t10.position, this.parent = t10.parent, this.classes = e13.themeClasses, this.createContainer(), this.measureReq = { read: this.readMeasure.bind(this), write: this.writeMeasure.bind(this), key: this }, this.resizeObserver = "function" == typeof ResizeObserver ? new ResizeObserver(() => this.measureSoon()) : null, this.manager = new Ir(e13, Iu, (e14, t11) => this.createTooltip(e14, t11), (e14) => {
+    let t10 = e13.state.facet(Ic);
+    this.position = t10.position, this.parent = t10.parent, this.classes = e13.themeClasses, this.createContainer(), this.measureReq = { read: this.readMeasure.bind(this), write: this.writeMeasure.bind(this), key: this }, this.resizeObserver = "function" == typeof ResizeObserver ? new ResizeObserver(() => this.measureSoon()) : null, this.manager = new Il(e13, Ip, (e14, t11) => this.createTooltip(e14, t11), (e14) => {
       this.resizeObserver && this.resizeObserver.unobserve(e14.dom), e14.dom.remove();
     }), this.above = this.manager.tooltips.map((e14) => !!e14.above), this.intersectionObserver = "function" == typeof IntersectionObserver ? new IntersectionObserver((e14) => {
       Date.now() > this.lastTransaction - 50 && e14.length > 0 && e14[e14.length - 1].intersectionRatio < 1 && this.measureSoon();
@@ -20674,7 +20683,7 @@ let Io = TQ.define({ combine: (e13) => {
     e13.transactions.length && (this.lastTransaction = Date.now());
     let t10 = this.manager.update(e13, this.above);
     t10 && this.observeIntersection();
-    let r10 = t10 || e13.geometryChanged, i10 = e13.state.facet(Io);
+    let r10 = t10 || e13.geometryChanged, i10 = e13.state.facet(Ic);
     if (i10.position != this.position && !this.madeAbsolute) {
       for (let e14 of (this.position = i10.position, this.manager.tooltipViews))
         e14.dom.style.position = this.position;
@@ -20694,7 +20703,7 @@ let Io = TQ.define({ combine: (e13) => {
       let e14 = document.createElement("div");
       e14.className = "cm-tooltip-arrow", r10.dom.appendChild(e14);
     }
-    return r10.dom.style.position = this.position, r10.dom.style.top = In, r10.dom.style.left = "0px", this.container.insertBefore(r10.dom, i10), r10.mount && r10.mount(this.view), this.resizeObserver && this.resizeObserver.observe(r10.dom), r10;
+    return r10.dom.style.position = this.position, r10.dom.style.top = Is, r10.dom.style.left = "0px", this.container.insertBefore(r10.dom, i10), r10.mount && r10.mount(this.view), this.resizeObserver && this.resizeObserver.observe(r10.dom), r10;
   }
   destroy() {
     var e13, t10, r10;
@@ -20706,9 +20715,9 @@ let Io = TQ.define({ combine: (e13) => {
     let e13 = this.view.dom.getBoundingClientRect(), t10 = 1, r10 = 1, i10 = false;
     if ("fixed" == this.position && this.manager.tooltipViews.length) {
       let { dom: e14 } = this.manager.tooltipViews[0];
-      if (ES.gecko)
+      if (E_.gecko)
         i10 = e14.offsetParent != this.container.ownerDocument.body;
-      else if (e14.style.top == In && "0px" == e14.style.left) {
+      else if (e14.style.top == Is && "0px" == e14.style.left) {
         let t11 = e14.getBoundingClientRect();
         i10 = Math.abs(t11.top + 1e4) > 1 || Math.abs(t11.left) > 1;
       }
@@ -20726,7 +20735,7 @@ let Io = TQ.define({ combine: (e13) => {
     }), size: this.manager.tooltipViews.map((e14) => {
       let { dom: t11 } = e14;
       return t11.getBoundingClientRect();
-    }), space: this.view.state.facet(Io).tooltipSpace(this.view), scaleX: t10, scaleY: r10, makeAbsolute: i10 };
+    }), space: this.view.state.facet(Ic).tooltipSpace(this.view), scaleX: t10, scaleY: r10, makeAbsolute: i10 };
   }
   writeMeasure(e13) {
     var t10;
@@ -20737,18 +20746,18 @@ let Io = TQ.define({ combine: (e13) => {
     for (let a10 = 0; a10 < this.manager.tooltips.length; a10++) {
       let c10 = this.manager.tooltips[a10], u10 = this.manager.tooltipViews[a10], { dom: h10 } = u10, f10 = e13.pos[a10], d10 = e13.size[a10];
       if (!f10 || f10.bottom <= Math.max(r10.top, i10.top) || f10.top >= Math.min(r10.bottom, i10.bottom) || f10.right < Math.max(r10.left, i10.left) - 0.1 || f10.left > Math.min(r10.right, i10.right) + 0.1) {
-        h10.style.top = In;
+        h10.style.top = Is;
         continue;
       }
-      let p10 = c10.arrow ? u10.dom.querySelector(".cm-tooltip-arrow") : null, g7 = p10 ? 7 : 0, m10 = d10.right - d10.left, y10 = null !== (t10 = Is.get(u10)) && void 0 !== t10 ? t10 : d10.bottom - d10.top, b10 = u10.offset || Ic, w10 = this.view.textDirection == EX.LTR, x10 = d10.width > i10.right - i10.left ? w10 ? i10.left : i10.right - d10.width : w10 ? Math.min(f10.left - (p10 ? 14 : 0) + b10.x, i10.right - m10) : Math.max(i10.left, f10.left - m10 + (p10 ? 14 : 0) - b10.x), k10 = this.above[a10];
+      let p10 = c10.arrow ? u10.dom.querySelector(".cm-tooltip-arrow") : null, g7 = p10 ? 7 : 0, m10 = d10.right - d10.left, y10 = null !== (t10 = Iu.get(u10)) && void 0 !== t10 ? t10 : d10.bottom - d10.top, b10 = u10.offset || Id, w10 = this.view.textDirection == EG.LTR, x10 = d10.width > i10.right - i10.left ? w10 ? i10.left : i10.right - d10.width : w10 ? Math.min(f10.left - (p10 ? 14 : 0) + b10.x, i10.right - m10) : Math.max(i10.left, f10.left - m10 + (p10 ? 14 : 0) - b10.x), k10 = this.above[a10];
       !c10.strictSide && (k10 ? f10.top - (d10.bottom - d10.top) - b10.y < i10.top : f10.bottom + (d10.bottom - d10.top) + b10.y > i10.bottom) && k10 == i10.bottom - f10.bottom > f10.top - i10.top && (k10 = this.above[a10] = !k10);
       let S10 = (k10 ? f10.top - i10.top : i10.bottom - f10.bottom) - g7;
       if (S10 < y10 && false !== u10.resize) {
         if (S10 < this.view.defaultLineHeight) {
-          h10.style.top = In;
+          h10.style.top = Is;
           continue;
         }
-        Is.set(u10, y10), h10.style.height = (y10 = S10) / s10 + "px";
+        Iu.set(u10, y10), h10.style.height = (y10 = S10) / s10 + "px";
       } else
         h10.style.height && (h10.style.height = "");
       let C10 = k10 ? f10.top - y10 - g7 - b10.y : f10.bottom + g7 + b10.y, O10 = x10 + m10;
@@ -20765,17 +20774,17 @@ let Io = TQ.define({ combine: (e13) => {
   maybeMeasure() {
     if (this.manager.tooltips.length && (this.view.inView && this.view.requestMeasure(this.measureReq), this.inView != this.view.inView && (this.inView = this.view.inView, !this.inView)))
       for (let e13 of this.manager.tooltipViews)
-        e13.dom.style.top = In;
+        e13.dom.style.top = Is;
   }
 }, { eventObservers: { scroll() {
   this.maybeMeasure();
-} } }), Ia = Rz.baseTheme({ ".cm-tooltip": { zIndex: 100, boxSizing: "border-box" }, "&light .cm-tooltip": { border: "1px solid #bbb", backgroundColor: "#f5f5f5" }, "&light .cm-tooltip-section:not(:first-child)": { borderTop: "1px solid #bbb" }, "&dark .cm-tooltip": { backgroundColor: "#333338", color: "white" }, ".cm-tooltip-arrow": { height: "7px", width: "14px", position: "absolute", zIndex: -1, overflow: "hidden", "&:before, &:after": { content: "''", position: "absolute", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent" }, ".cm-tooltip-above &": { bottom: "-7px", "&:before": { borderTop: "7px solid #bbb" }, "&:after": { borderTop: "7px solid #f5f5f5", bottom: "1px" } }, ".cm-tooltip-below &": { top: "-7px", "&:before": { borderBottom: "7px solid #bbb" }, "&:after": { borderBottom: "7px solid #f5f5f5", top: "1px" } } }, "&dark .cm-tooltip .cm-tooltip-arrow": { "&:before": { borderTopColor: "#333338", borderBottomColor: "#333338" }, "&:after": { borderTopColor: "transparent", borderBottomColor: "transparent" } } }), Ic = { x: 0, y: 0 }, Iu = TQ.define({ enables: [Il, Ia] }), Ih = TQ.define({ combine: (e13) => e13.reduce((e14, t10) => e14.concat(t10), []) });
-class If {
+} } }), If = RU.baseTheme({ ".cm-tooltip": { zIndex: 100, boxSizing: "border-box" }, "&light .cm-tooltip": { border: "1px solid #bbb", backgroundColor: "#f5f5f5" }, "&light .cm-tooltip-section:not(:first-child)": { borderTop: "1px solid #bbb" }, "&dark .cm-tooltip": { backgroundColor: "#333338", color: "white" }, ".cm-tooltip-arrow": { height: "7px", width: "14px", position: "absolute", zIndex: -1, overflow: "hidden", "&:before, &:after": { content: "''", position: "absolute", width: 0, height: 0, borderLeft: "7px solid transparent", borderRight: "7px solid transparent" }, ".cm-tooltip-above &": { bottom: "-7px", "&:before": { borderTop: "7px solid #bbb" }, "&:after": { borderTop: "7px solid #f5f5f5", bottom: "1px" } }, ".cm-tooltip-below &": { top: "-7px", "&:before": { borderBottom: "7px solid #bbb" }, "&:after": { borderBottom: "7px solid #f5f5f5", top: "1px" } } }, "&dark .cm-tooltip .cm-tooltip-arrow": { "&:before": { borderTopColor: "#333338", borderBottomColor: "#333338" }, "&:after": { borderTopColor: "transparent", borderBottomColor: "transparent" } } }), Id = { x: 0, y: 0 }, Ip = TJ.define({ enables: [Ih, If] }), Ig = TJ.define({ combine: (e13) => e13.reduce((e14, t10) => e14.concat(t10), []) });
+class Im {
   static create(e13) {
-    return new If(e13);
+    return new Im(e13);
   }
   constructor(e13) {
-    this.view = e13, this.mounted = false, this.dom = document.createElement("div"), this.dom.classList.add("cm-tooltip-hover"), this.manager = new Ir(e13, Ih, (e14, t10) => this.createHostedView(e14, t10), (e14) => e14.dom.remove());
+    this.view = e13, this.mounted = false, this.dom = document.createElement("div"), this.dom.classList.add("cm-tooltip-hover"), this.manager = new Il(e13, Ig, (e14, t10) => this.createHostedView(e14, t10), (e14) => e14.dom.remove());
   }
   createHostedView(e13, t10) {
     let r10 = e13.create(this.view);
@@ -20824,14 +20833,14 @@ class If {
     return this.passProp("resize");
   }
 }
-let Id = Iu.compute([Ih], (e13) => {
-  let t10 = e13.facet(Ih);
+let Iv = Ip.compute([Ig], (e13) => {
+  let t10 = e13.facet(Ig);
   return 0 === t10.length ? null : { pos: Math.min(...t10.map((e14) => e14.pos)), end: Math.max(...t10.map((e14) => {
     var t11;
     return null !== (t11 = e14.end) && void 0 !== t11 ? t11 : e14.pos;
-  })), create: If.create, above: t10[0].above, arrow: t10.some((e14) => e14.arrow) };
+  })), create: Im.create, above: t10[0].above, arrow: t10.some((e14) => e14.arrow) };
 });
-class Ip {
+class Iy {
   constructor(e13, t10, r10, i10, o10) {
     this.view = e13, this.source = t10, this.field = r10, this.setHover = i10, this.hoverTime = o10, this.hoverTimeout = -1, this.restartTimeout = -1, this.pending = null, this.lastMove = { x: 0, y: 0, target: e13.dom, time: 0 }, this.checkHover = this.checkHover.bind(this), e13.dom.addEventListener("mouseleave", this.mouseleave = this.mouseleave.bind(this)), e13.dom.addEventListener("mousemove", this.mousemove = this.mousemove.bind(this));
   }
@@ -20853,7 +20862,7 @@ class Ip {
     if (!r10)
       return;
     let i10, o10 = 1;
-    if (r10 instanceof EA)
+    if (r10 instanceof EP)
       i10 = r10.posAtStart;
     else {
       if (null == (i10 = e13.posAtCoords(t10)))
@@ -20861,7 +20870,7 @@ class Ip {
       let r11 = e13.coordsAtPos(i10);
       if (!r11 || t10.y < r11.top || t10.y > r11.bottom || t10.x < r11.left - e13.defaultCharacterWidth || t10.x > r11.right + e13.defaultCharacterWidth)
         return;
-      let s11 = e13.bidiSpans(e13.state.doc.lineAt(i10)).find((e14) => e14.from <= i10 && e14.to >= i10), l10 = s11 && s11.dir == EX.RTL ? -1 : 1;
+      let s11 = e13.bidiSpans(e13.state.doc.lineAt(i10)).find((e14) => e14.from <= i10 && e14.to >= i10), l10 = s11 && s11.dir == EG.RTL ? -1 : 1;
       o10 = t10.x < r11.left ? -l10 : l10;
     }
     let s10 = this.source(e13, i10, o10);
@@ -20869,12 +20878,12 @@ class Ip {
       let t11 = this.pending = { pos: i10 };
       s10.then((r11) => {
         this.pending == t11 && (this.pending = null, r11 && !(Array.isArray(r11) && !r11.length) && e13.dispatch({ effects: this.setHover.of(Array.isArray(r11) ? r11 : [r11]) }));
-      }, (t12) => Dc(e13.state, t12, "hover tooltip"));
+      }, (t12) => Dd(e13.state, t12, "hover tooltip"));
     } else
       s10 && !(Array.isArray(s10) && !s10.length) && e13.dispatch({ effects: this.setHover.of(Array.isArray(s10) ? s10 : [s10]) });
   }
   get tooltip() {
-    let e13 = this.view.plugin(Il), t10 = e13 ? e13.manager.tooltips.findIndex((e14) => e14.create == If.create) : -1;
+    let e13 = this.view.plugin(Ih), t10 = e13 ? e13.manager.tooltips.findIndex((e14) => e14.create == Im.create) : -1;
     return t10 > -1 ? e13.manager.tooltipViews[t10] : null;
   }
   mousemove(e13) {
@@ -20911,29 +20920,29 @@ class Ip {
     clearTimeout(this.hoverTimeout), this.view.dom.removeEventListener("mouseleave", this.mouseleave), this.view.dom.removeEventListener("mousemove", this.mousemove);
   }
 }
-function Ig(e13, t10) {
-  let r10 = e13.plugin(Il);
+function Ib(e13, t10) {
+  let r10 = e13.plugin(Ih);
   if (!r10)
     return null;
   let i10 = r10.manager.tooltips.indexOf(t10);
   return i10 < 0 ? null : r10.manager.tooltipViews[i10];
 }
-let Im = Pu.define(), Iv = TQ.define({ combine(e13) {
+let Iw = Pp.define(), Ix = TJ.define({ combine(e13) {
   let t10, r10;
   for (let i10 of e13)
     t10 = t10 || i10.topContainer, r10 = r10 || i10.bottomContainer;
   return { topContainer: t10, bottomContainer: r10 };
-} }), Iy = Dd.fromClass(class {
+} }), Ik = Dv.fromClass(class {
   constructor(e13) {
-    this.input = e13.state.facet(Ix), this.specs = this.input.filter((e14) => e14), this.panels = this.specs.map((t11) => t11(e13));
-    let t10 = e13.state.facet(Iv);
-    for (let r10 of (this.top = new Ib(e13, true, t10.topContainer), this.bottom = new Ib(e13, false, t10.bottomContainer), this.top.sync(this.panels.filter((e14) => e14.top)), this.bottom.sync(this.panels.filter((e14) => !e14.top)), this.panels))
+    this.input = e13.state.facet(IO), this.specs = this.input.filter((e14) => e14), this.panels = this.specs.map((t11) => t11(e13));
+    let t10 = e13.state.facet(Ix);
+    for (let r10 of (this.top = new IS(e13, true, t10.topContainer), this.bottom = new IS(e13, false, t10.bottomContainer), this.top.sync(this.panels.filter((e14) => e14.top)), this.bottom.sync(this.panels.filter((e14) => !e14.top)), this.panels))
       r10.dom.classList.add("cm-panel"), r10.mount && r10.mount();
   }
   update(e13) {
-    let t10 = e13.state.facet(Iv);
-    this.top.container != t10.topContainer && (this.top.sync([]), this.top = new Ib(e13.view, true, t10.topContainer)), this.bottom.container != t10.bottomContainer && (this.bottom.sync([]), this.bottom = new Ib(e13.view, false, t10.bottomContainer)), this.top.syncClasses(), this.bottom.syncClasses();
-    let r10 = e13.state.facet(Ix);
+    let t10 = e13.state.facet(Ix);
+    this.top.container != t10.topContainer && (this.top.sync([]), this.top = new IS(e13.view, true, t10.topContainer)), this.bottom.container != t10.bottomContainer && (this.bottom.sync([]), this.bottom = new IS(e13.view, false, t10.bottomContainer)), this.top.syncClasses(), this.bottom.syncClasses();
+    let r10 = e13.state.facet(IO);
     if (r10 != this.input) {
       let t11 = r10.filter((e14) => e14), i10 = [], o10 = [], s10 = [], l10 = [];
       for (let r11 of t11) {
@@ -20949,11 +20958,11 @@ let Im = Pu.define(), Iv = TQ.define({ combine(e13) {
   destroy() {
     this.top.sync([]), this.bottom.sync([]);
   }
-}, { provide: (e13) => Rz.scrollMargins.of((t10) => {
+}, { provide: (e13) => RU.scrollMargins.of((t10) => {
   let r10 = t10.plugin(e13);
   return r10 && { top: r10.top.scrollMargin(), bottom: r10.bottom.scrollMargin() };
 }) });
-class Ib {
+class IS {
   constructor(e13, t10, r10) {
     this.view = e13, this.top = t10, this.container = r10, this.dom = void 0, this.classes = "", this.panels = [], this.syncClasses();
   }
@@ -20976,12 +20985,12 @@ class Ib {
     for (let t10 of this.panels)
       if (t10.dom.parentNode == this.dom) {
         for (; e13 != t10.dom; )
-          e13 = Iw(e13);
+          e13 = IC(e13);
         e13 = e13.nextSibling;
       } else
         this.dom.insertBefore(t10.dom, e13);
     for (; e13; )
-      e13 = Iw(e13);
+      e13 = IC(e13);
   }
   scrollMargin() {
     return !this.dom || this.container ? 0 : Math.max(0, this.top ? this.dom.getBoundingClientRect().bottom - Math.max(0, this.view.scrollDOM.getBoundingClientRect().top) : Math.min(innerHeight, this.view.scrollDOM.getBoundingClientRect().bottom) - this.dom.getBoundingClientRect().top);
@@ -20995,12 +21004,12 @@ class Ib {
     }
   }
 }
-function Iw(e13) {
+function IC(e13) {
   let t10 = e13.nextSibling;
   return e13.remove(), t10;
 }
-let Ix = TQ.define({ enables: Iy });
-class Ik extends Pw {
+let IO = TJ.define({ enables: Ik });
+class IA extends PC {
   compare(e13) {
     return this == e13 || this.constructor == e13.constructor && this.eq(e13);
   }
@@ -21010,46 +21019,46 @@ class Ik extends Pw {
   destroy(e13) {
   }
 }
-Ik.prototype.elementClass = "", Ik.prototype.toDOM = void 0, Ik.prototype.mapMode = TL.TrackBefore, Ik.prototype.startSide = Ik.prototype.endSide = -1, Ik.prototype.point = true;
-let IS = TQ.define(), IC = { class: "", renderEmptyElements: false, elementStyle: "", markers: () => PC.empty, lineMarker: () => null, widgetMarker: () => null, lineMarkerChange: null, initialSpacer: null, updateSpacer: null, domEventHandlers: {} }, IO = TQ.define();
-function IA(e13) {
-  return [IM(), IO.of(Object.assign(Object.assign({}, IC), e13))];
+IA.prototype.elementClass = "", IA.prototype.toDOM = void 0, IA.prototype.mapMode = T$.TrackBefore, IA.prototype.startSide = IA.prototype.endSide = -1, IA.prototype.point = true;
+let I_ = TJ.define(), IM = { class: "", renderEmptyElements: false, elementStyle: "", markers: () => PM.empty, lineMarker: () => null, widgetMarker: () => null, lineMarkerChange: null, initialSpacer: null, updateSpacer: null, domEventHandlers: {} }, IT = TJ.define();
+function IP(e13) {
+  return [ID(), IT.of(Object.assign(Object.assign({}, IM), e13))];
 }
-let I_ = TQ.define({ combine: (e13) => e13.some((e14) => e14) });
-function IM(e13) {
-  let t10 = [IT];
-  return e13 && false === e13.fixed && t10.push(I_.of(true)), t10;
+let IE = TJ.define({ combine: (e13) => e13.some((e14) => e14) });
+function ID(e13) {
+  let t10 = [IR];
+  return e13 && false === e13.fixed && t10.push(IE.of(true)), t10;
 }
-let IT = Dd.fromClass(class {
+let IR = Dv.fromClass(class {
   constructor(e13) {
-    for (let t10 of (this.view = e13, this.prevViewport = e13.viewport, this.dom = document.createElement("div"), this.dom.className = "cm-gutters", this.dom.setAttribute("aria-hidden", "true"), this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px", this.gutters = e13.state.facet(IO).map((t11) => new IR(e13, t11)), this.gutters))
+    for (let t10 of (this.view = e13, this.prevViewport = e13.viewport, this.dom = document.createElement("div"), this.dom.className = "cm-gutters", this.dom.setAttribute("aria-hidden", "true"), this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px", this.gutters = e13.state.facet(IT).map((t11) => new IN(e13, t11)), this.gutters))
       this.dom.appendChild(t10.dom);
-    this.fixed = !e13.state.facet(I_), this.fixed && (this.dom.style.position = "sticky"), this.syncGutters(false), e13.scrollDOM.insertBefore(this.dom, e13.contentDOM);
+    this.fixed = !e13.state.facet(IE), this.fixed && (this.dom.style.position = "sticky"), this.syncGutters(false), e13.scrollDOM.insertBefore(this.dom, e13.contentDOM);
   }
   update(e13) {
     if (this.updateGutters(e13)) {
       let t10 = this.prevViewport, r10 = e13.view.viewport, i10 = Math.min(t10.to, r10.to) - Math.max(t10.from, r10.from);
       this.syncGutters(i10 < (r10.to - r10.from) * 0.8);
     }
-    e13.geometryChanged && (this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px"), this.view.state.facet(I_) != !this.fixed && (this.fixed = !this.fixed, this.dom.style.position = this.fixed ? "sticky" : ""), this.prevViewport = e13.view.viewport;
+    e13.geometryChanged && (this.dom.style.minHeight = this.view.contentHeight / this.view.scaleY + "px"), this.view.state.facet(IE) != !this.fixed && (this.fixed = !this.fixed, this.dom.style.position = this.fixed ? "sticky" : ""), this.prevViewport = e13.view.viewport;
   }
   syncGutters(e13) {
     let t10 = this.dom.nextSibling;
     e13 && this.dom.remove();
-    let r10 = PC.iter(this.view.state.facet(IS), this.view.viewport.from), i10 = [], o10 = this.gutters.map((e14) => new ID(e14, this.view.viewport, -this.view.documentPadding.top));
+    let r10 = PM.iter(this.view.state.facet(I_), this.view.viewport.from), i10 = [], o10 = this.gutters.map((e14) => new Ij(e14, this.view.viewport, -this.view.documentPadding.top));
     for (let e14 of this.view.viewportLineBlocks)
       if (i10.length && (i10 = []), Array.isArray(e14.type)) {
         let t11 = true;
         for (let s10 of e14.type)
-          if (s10.type == EN.Text && t11) {
-            for (let e15 of (IE(r10, i10, s10.from), o10))
+          if (s10.type == Ez.Text && t11) {
+            for (let e15 of (IL(r10, i10, s10.from), o10))
               e15.line(this.view, s10, i10);
             t11 = false;
           } else if (s10.widget)
             for (let e15 of o10)
               e15.widget(this.view, s10);
-      } else if (e14.type == EN.Text)
-        for (let t11 of (IE(r10, i10, e14.from), o10))
+      } else if (e14.type == Ez.Text)
+        for (let t11 of (IL(r10, i10, e14.from), o10))
           t11.line(this.view, e14, i10);
       else if (e14.widget)
         for (let t11 of o10)
@@ -21059,7 +21068,7 @@ let IT = Dd.fromClass(class {
     e13 && this.view.scrollDOM.insertBefore(this.dom, t10);
   }
   updateGutters(e13) {
-    let t10 = e13.startState.facet(IO), r10 = e13.state.facet(IO), i10 = e13.docChanged || e13.heightChanged || e13.viewportChanged || !PC.eq(e13.startState.facet(IS), e13.state.facet(IS), e13.view.viewport.from, e13.view.viewport.to);
+    let t10 = e13.startState.facet(IT), r10 = e13.state.facet(IT), i10 = e13.docChanged || e13.heightChanged || e13.viewportChanged || !PM.eq(e13.startState.facet(I_), e13.state.facet(I_), e13.view.viewport.from, e13.view.viewport.to);
     if (t10 == r10)
       for (let t11 of this.gutters)
         t11.update(e13) && (i10 = true);
@@ -21068,7 +21077,7 @@ let IT = Dd.fromClass(class {
       let o10 = [];
       for (let i11 of r10) {
         let r11 = t10.indexOf(i11);
-        r11 < 0 ? o10.push(new IR(this.view, i11)) : (this.gutters[r11].update(e13), o10.push(this.gutters[r11]));
+        r11 < 0 ? o10.push(new IN(this.view, i11)) : (this.gutters[r11].update(e13), o10.push(this.gutters[r11]));
       }
       for (let e14 of this.gutters)
         e14.dom.remove(), 0 > o10.indexOf(e14) && e14.destroy();
@@ -21083,25 +21092,25 @@ let IT = Dd.fromClass(class {
       e13.destroy();
     this.dom.remove();
   }
-}, { provide: (e13) => Rz.scrollMargins.of((t10) => {
+}, { provide: (e13) => RU.scrollMargins.of((t10) => {
   let r10 = t10.plugin(e13);
-  return r10 && 0 != r10.gutters.length && r10.fixed ? t10.textDirection == EX.LTR ? { left: r10.dom.offsetWidth * t10.scaleX } : { right: r10.dom.offsetWidth * t10.scaleX } : null;
+  return r10 && 0 != r10.gutters.length && r10.fixed ? t10.textDirection == EG.LTR ? { left: r10.dom.offsetWidth * t10.scaleX } : { right: r10.dom.offsetWidth * t10.scaleX } : null;
 }) });
-function IP(e13) {
+function II(e13) {
   return Array.isArray(e13) ? e13 : [e13];
 }
-function IE(e13, t10, r10) {
+function IL(e13, t10, r10) {
   for (; e13.value && e13.from <= r10; )
     e13.from == r10 && t10.push(e13.value), e13.next();
 }
-class ID {
+class Ij {
   constructor(e13, t10, r10) {
-    this.gutter = e13, this.height = r10, this.i = 0, this.cursor = PC.iter(e13.markers, t10.from);
+    this.gutter = e13, this.height = r10, this.i = 0, this.cursor = PM.iter(e13.markers, t10.from);
   }
   addElement(e13, t10, r10) {
     let { gutter: i10 } = this, o10 = (t10.top - this.height) / e13.scaleY, s10 = t10.height / e13.scaleY;
     if (this.i == i10.elements.length) {
-      let t11 = new II(e13, s10, o10, r10);
+      let t11 = new IB(e13, s10, o10, r10);
       i10.elements.push(t11), i10.dom.appendChild(t11.dom);
     } else
       i10.elements[this.i].update(e13, s10, o10, r10);
@@ -21109,7 +21118,7 @@ class ID {
   }
   line(e13, t10, r10) {
     let i10 = [];
-    IE(this.cursor, i10, t10.from), r10.length && (i10 = i10.concat(r10));
+    IL(this.cursor, i10, t10.from), r10.length && (i10 = i10.concat(r10));
     let o10 = this.gutter.config.lineMarker(e13, t10, i10);
     o10 && i10.unshift(o10);
     let s10 = this.gutter;
@@ -21127,7 +21136,7 @@ class ID {
     }
   }
 }
-class IR {
+class IN {
   constructor(e13, t10) {
     for (let r10 in this.view = e13, this.config = t10, this.elements = [], this.spacer = null, this.dom = document.createElement("div"), this.dom.className = "cm-gutter" + (this.config.class ? " " + this.config.class : ""), t10.domEventHandlers)
       this.dom.addEventListener(r10, (i10) => {
@@ -21142,23 +21151,23 @@ class IR {
         let l10 = e13.lineBlockAtHeight(s10 - e13.documentTop);
         t10.domEventHandlers[r10](e13, l10, i10) && i10.preventDefault();
       });
-    this.markers = IP(t10.markers(e13)), t10.initialSpacer && (this.spacer = new II(e13, 0, 0, [t10.initialSpacer(e13)]), this.dom.appendChild(this.spacer.dom), this.spacer.dom.style.cssText += "visibility: hidden; pointer-events: none");
+    this.markers = II(t10.markers(e13)), t10.initialSpacer && (this.spacer = new IB(e13, 0, 0, [t10.initialSpacer(e13)]), this.dom.appendChild(this.spacer.dom), this.spacer.dom.style.cssText += "visibility: hidden; pointer-events: none");
   }
   update(e13) {
     let t10 = this.markers;
-    if (this.markers = IP(this.config.markers(e13.view)), this.spacer && this.config.updateSpacer) {
+    if (this.markers = II(this.config.markers(e13.view)), this.spacer && this.config.updateSpacer) {
       let t11 = this.config.updateSpacer(this.spacer.markers[0], e13);
       t11 != this.spacer.markers[0] && this.spacer.update(e13.view, 0, 0, [t11]);
     }
     let r10 = e13.view.viewport;
-    return !PC.eq(this.markers, t10, r10.from, r10.to) || !!this.config.lineMarkerChange && this.config.lineMarkerChange(e13);
+    return !PM.eq(this.markers, t10, r10.from, r10.to) || !!this.config.lineMarkerChange && this.config.lineMarkerChange(e13);
   }
   destroy() {
     for (let e13 of this.elements)
       e13.destroy();
   }
 }
-class II {
+class IB {
   constructor(e13, t10, r10, i10) {
     this.height = -1, this.above = 0, this.markers = [], this.dom = document.createElement("div"), this.dom.className = "cm-gutterElement", this.update(e13, t10, r10, i10);
   }
@@ -21204,7 +21213,7 @@ class II {
     this.setMarkers(null, []);
   }
 }
-let IL = TQ.define(), Ij = TQ.define({ combine: (e13) => Pb(e13, { formatNumber: String, domEventHandlers: {} }, { domEventHandlers(e14, t10) {
+let I$ = TJ.define(), IF = TJ.define({ combine: (e13) => PS(e13, { formatNumber: String, domEventHandlers: {} }, { domEventHandlers(e14, t10) {
   let r10 = Object.assign({}, e14);
   for (let e15 in t10) {
     let i10 = r10[e15], o10 = t10[e15];
@@ -21212,7 +21221,7 @@ let IL = TQ.define(), Ij = TQ.define({ combine: (e13) => Pb(e13, { formatNumber:
   }
   return r10;
 } }) });
-class IN extends Ik {
+class Iz extends IA {
   constructor(e13) {
     super(), this.number = e13;
   }
@@ -21223,32 +21232,32 @@ class IN extends Ik {
     return document.createTextNode(this.number);
   }
 }
-function IB(e13, t10) {
-  return e13.state.facet(Ij).formatNumber(t10, e13.state);
+function IV(e13, t10) {
+  return e13.state.facet(IF).formatNumber(t10, e13.state);
 }
-let I$ = IO.compute([Ij], (e13) => ({ class: "cm-lineNumbers", renderEmptyElements: false, markers: (e14) => e14.state.facet(IL), lineMarker: (e14, t10, r10) => r10.some((e15) => e15.toDOM) ? null : new IN(IB(e14, e14.state.doc.lineAt(t10.from).number)), widgetMarker: () => null, lineMarkerChange: (e14) => e14.startState.facet(Ij) != e14.state.facet(Ij), initialSpacer: (e14) => new IN(IB(e14, IF(e14.state.doc.lines))), updateSpacer(e14, t10) {
-  let r10 = IB(t10.view, IF(t10.view.state.doc.lines));
-  return r10 == e14.number ? e14 : new IN(r10);
-}, domEventHandlers: e13.facet(Ij).domEventHandlers }));
-function IF(e13) {
+let IH = IT.compute([IF], (e13) => ({ class: "cm-lineNumbers", renderEmptyElements: false, markers: (e14) => e14.state.facet(I$), lineMarker: (e14, t10, r10) => r10.some((e15) => e15.toDOM) ? null : new Iz(IV(e14, e14.state.doc.lineAt(t10.from).number)), widgetMarker: () => null, lineMarkerChange: (e14) => e14.startState.facet(IF) != e14.state.facet(IF), initialSpacer: (e14) => new Iz(IV(e14, IW(e14.state.doc.lines))), updateSpacer(e14, t10) {
+  let r10 = IV(t10.view, IW(t10.view.state.doc.lines));
+  return r10 == e14.number ? e14 : new Iz(r10);
+}, domEventHandlers: e13.facet(IF).domEventHandlers }));
+function IW(e13) {
   let t10 = 9;
   for (; t10 < e13; )
     t10 = 10 * t10 + 9;
   return t10;
 }
-let Iz = new class extends Ik {
+let IU = new class extends IA {
   constructor() {
     super(...arguments), this.elementClass = "cm-activeLineGutter";
   }
-}(), IV = IS.compute(["selection"], (e13) => {
+}(), Iq = I_.compute(["selection"], (e13) => {
   let t10 = [], r10 = -1;
   for (let i10 of e13.selection.ranges) {
     let o10 = e13.doc.lineAt(i10.head).from;
-    o10 > r10 && (r10 = o10, t10.push(Iz.range(o10)));
+    o10 > r10 && (r10 = o10, t10.push(IU.range(o10)));
   }
-  return PC.of(t10);
+  return PM.of(t10);
 });
-function IH() {
+function IX() {
   var e13 = arguments[0];
   "string" == typeof e13 && (e13 = document.createElement(e13));
   var t10 = 1, r10 = arguments[1];
@@ -21276,77 +21285,77 @@ function IH() {
     }(e13, arguments[t10]);
   return e13;
 }
-class IW {
+class IQ {
   constructor(e13, t10, r10) {
     this.from = e13, this.to = t10, this.diagnostic = r10;
   }
 }
-class IU {
+class IY {
   constructor(e13, t10, r10) {
     this.diagnostics = e13, this.panel = t10, this.selected = r10;
   }
   static init(e13, t10, r10) {
-    let i10 = e13, o10 = r10.facet(I5).markerFilter;
+    let i10 = e13, o10 = r10.facet(I7).markerFilter;
     o10 && (i10 = o10(i10, r10));
-    let s10 = EB.set(i10.map((e14) => e14.from == e14.to || e14.from == e14.to - 1 && r10.doc.lineAt(e14.from).to == e14.from ? EB.widget({ widget: new I7(e14), diagnostic: e14 }).range(e14.from) : EB.mark({ attributes: { class: "cm-lintRange cm-lintRange-" + e14.severity + (e14.markClass ? " " + e14.markClass : "") }, diagnostic: e14, inclusive: true }).range(e14.from, e14.to)), true);
-    return new IU(s10, t10, Iq(s10));
+    let s10 = EV.set(i10.map((e14) => e14.from == e14.to || e14.from == e14.to - 1 && r10.doc.lineAt(e14.from).to == e14.from ? EV.widget({ widget: new Lr(e14), diagnostic: e14 }).range(e14.from) : EV.mark({ attributes: { class: "cm-lintRange cm-lintRange-" + e14.severity + (e14.markClass ? " " + e14.markClass : "") }, diagnostic: e14, inclusive: true }).range(e14.from, e14.to)), true);
+    return new IY(s10, t10, IK(s10));
   }
 }
-function Iq(e13) {
+function IK(e13) {
   let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, i10 = null;
   return e13.between(r10, 1e9, (e14, r11, o10) => {
     let { spec: s10 } = o10;
     if (!t10 || s10.diagnostic == t10)
-      return i10 = new IW(e14, r11, s10.diagnostic), false;
+      return i10 = new IQ(e14, r11, s10.diagnostic), false;
   }), i10;
 }
-function IX(e13, t10) {
+function IG(e13, t10) {
   let r10 = e13.startState.doc.lineAt(t10.pos);
-  return !!(e13.effects.some((e14) => e14.is(IY)) || e13.changes.touchesRange(r10.from, r10.to));
+  return !!(e13.effects.some((e14) => e14.is(IZ)) || e13.changes.touchesRange(r10.from, r10.to));
 }
-function IQ(e13, t10) {
-  return e13.field(IJ, false) ? t10 : t10.concat(Pu.appendConfig.of(Lf));
+function IJ(e13, t10) {
+  return e13.field(I2, false) ? t10 : t10.concat(Pp.appendConfig.of(Lm));
 }
-let IY = Pu.define(), IK = Pu.define(), IG = Pu.define(), IJ = T0.define({ create: () => new IU(EB.none, null, null), update(e13, t10) {
+let IZ = Pp.define(), I0 = Pp.define(), I1 = Pp.define(), I2 = T3.define({ create: () => new IY(EV.none, null, null), update(e13, t10) {
   if (t10.docChanged) {
     let r10 = e13.diagnostics.map(t10.changes), i10 = null;
     if (e13.selected) {
       let o10 = t10.changes.mapPos(e13.selected.from, 1);
-      i10 = Iq(r10, e13.selected.diagnostic, o10) || Iq(r10, null, o10);
+      i10 = IK(r10, e13.selected.diagnostic, o10) || IK(r10, null, o10);
     }
-    e13 = new IU(r10, e13.panel, i10);
+    e13 = new IY(r10, e13.panel, i10);
   }
   for (let r10 of t10.effects)
-    r10.is(IY) ? e13 = IU.init(r10.value, e13.panel, t10.state) : r10.is(IK) ? e13 = new IU(e13.diagnostics, r10.value ? Lt.open : null, e13.selected) : r10.is(IG) && (e13 = new IU(e13.diagnostics, e13.panel, r10.value));
+    r10.is(IZ) ? e13 = IY.init(r10.value, e13.panel, t10.state) : r10.is(I0) ? e13 = new IY(e13.diagnostics, r10.value ? Lo.open : null, e13.selected) : r10.is(I1) && (e13 = new IY(e13.diagnostics, e13.panel, r10.value));
   return e13;
-}, provide: (e13) => [Ix.from(e13, (e14) => e14.panel), Rz.decorations.from(e13, (e14) => e14.diagnostics)] });
-function IZ(e13) {
-  let t10 = e13.field(IJ, false);
+}, provide: (e13) => [IO.from(e13, (e14) => e14.panel), RU.decorations.from(e13, (e14) => e14.diagnostics)] });
+function I4(e13) {
+  let t10 = e13.field(I2, false);
   return t10 ? t10.diagnostics.size : 0;
 }
-let I0 = EB.mark({ class: "cm-lintRange cm-lintRange-active", inclusive: true });
-function I1(e13, t10) {
-  return IH("ul", { class: "cm-tooltip-lint" }, t10.map((t11) => I9(e13, t11, false)));
+let I3 = EV.mark({ class: "cm-lintRange cm-lintRange-active", inclusive: true });
+function I5(e13, t10) {
+  return IX("ul", { class: "cm-tooltip-lint" }, t10.map((t11) => Ln(e13, t11, false)));
 }
-let I2 = (e13) => {
-  let t10 = e13.state.field(IJ, false);
-  return !!t10 && !!t10.panel && (e13.dispatch({ effects: IK.of(false) }), true);
-}, I4 = [{ key: "Mod-Shift-m", run: (e13) => {
+let I8 = (e13) => {
+  let t10 = e13.state.field(I2, false);
+  return !!t10 && !!t10.panel && (e13.dispatch({ effects: I0.of(false) }), true);
+}, I6 = [{ key: "Mod-Shift-m", run: (e13) => {
   var t10;
-  let r10, i10, o10 = e13.state.field(IJ, false);
-  o10 && o10.panel || e13.dispatch({ effects: IQ(e13.state, [IK.of(true)]) });
-  let s10 = (t10 = Lt.open, (i10 = (r10 = e13.plugin(Iy)) ? r10.specs.indexOf(t10) : -1) > -1 ? r10.panels[i10] : null);
+  let r10, i10, o10 = e13.state.field(I2, false);
+  o10 && o10.panel || e13.dispatch({ effects: IJ(e13.state, [I0.of(true)]) });
+  let s10 = (t10 = Lo.open, (i10 = (r10 = e13.plugin(Ik)) ? r10.specs.indexOf(t10) : -1) > -1 ? r10.panels[i10] : null);
   return s10 && s10.dom.querySelector(".cm-panel-lint ul").focus(), true;
 }, preventDefault: true }, { key: "F8", run: (e13) => {
-  let t10 = e13.state.field(IJ, false);
+  let t10 = e13.state.field(I2, false);
   if (!t10)
     return false;
   let r10 = e13.state.selection.main, i10 = t10.diagnostics.iter(r10.to + 1);
   return (!!i10.value || !!(i10 = t10.diagnostics.iter(0)).value && (i10.from != r10.from || i10.to != r10.to)) && (e13.dispatch({ selection: { anchor: i10.from, head: i10.to }, scrollIntoView: true }), true);
-} }], I3 = Dd.fromClass(class {
+} }], I9 = Dv.fromClass(class {
   constructor(e13) {
     this.view = e13, this.timeout = -1, this.set = true;
-    let { delay: t10 } = e13.state.facet(I5);
+    let { delay: t10 } = e13.state.facet(I7);
     this.lintTime = Date.now() + t10, this.run = this.run.bind(this), this.timeout = setTimeout(this.run, t10);
   }
   run() {
@@ -21355,18 +21364,18 @@ let I2 = (e13) => {
       this.timeout = setTimeout(this.run, this.lintTime - e13);
     else {
       this.set = false;
-      let { state: e14 } = this.view, { sources: t10 } = e14.facet(I5);
+      let { state: e14 } = this.view, { sources: t10 } = e14.facet(I7);
       t10.length && Promise.all(t10.map((e15) => Promise.resolve(e15(this.view)))).then((t11) => {
         let r10 = t11.reduce((e15, t12) => e15.concat(t12));
-        this.view.state.doc == e14.doc && this.view.dispatch({ effects: IQ(this.view.state, [IY.of(r10)]) });
+        this.view.state.doc == e14.doc && this.view.dispatch({ effects: IJ(this.view.state, [IZ.of(r10)]) });
       }, (e15) => {
-        Dc(this.view.state, e15);
+        Dd(this.view.state, e15);
       });
     }
   }
   update(e13) {
-    let t10 = e13.state.facet(I5);
-    (e13.docChanged || t10 != e13.startState.facet(I5) || t10.needsRefresh && t10.needsRefresh(e13)) && (this.lintTime = Date.now() + t10.delay, this.set || (this.set = true, this.timeout = setTimeout(this.run, t10.delay)));
+    let t10 = e13.state.facet(I7);
+    (e13.docChanged || t10 != e13.startState.facet(I7) || t10.needsRefresh && t10.needsRefresh(e13)) && (this.lintTime = Date.now() + t10.delay, this.set || (this.set = true, this.timeout = setTimeout(this.run, t10.delay)));
   }
   force() {
     this.set && (this.lintTime = Date.now(), this.run());
@@ -21374,12 +21383,12 @@ let I2 = (e13) => {
   destroy() {
     clearTimeout(this.timeout);
   }
-}), I5 = TQ.define({ combine: (e13) => Object.assign({ sources: e13.map((e14) => e14.source).filter((e14) => null != e14) }, Pb(e13.map((e14) => e14.config), { delay: 750, markerFilter: null, tooltipFilter: null, needsRefresh: null }, { needsRefresh: (e14, t10) => e14 ? t10 ? (r10) => e14(r10) || t10(r10) : e14 : t10 })) });
-function I8(e13) {
-  let t10 = e13.plugin(I3);
+}), I7 = TJ.define({ combine: (e13) => Object.assign({ sources: e13.map((e14) => e14.source).filter((e14) => null != e14) }, PS(e13.map((e14) => e14.config), { delay: 750, markerFilter: null, tooltipFilter: null, needsRefresh: null }, { needsRefresh: (e14, t10) => e14 ? t10 ? (r10) => e14(r10) || t10(r10) : e14 : t10 })) });
+function Le(e13) {
+  let t10 = e13.plugin(I9);
   t10 && t10.force();
 }
-function I6(e13) {
+function Lt(e13) {
   let t10 = [];
   if (e13)
     n:
@@ -21395,21 +21404,21 @@ function I6(e13) {
       }
   return t10;
 }
-function I9(e13, t10, r10) {
+function Ln(e13, t10, r10) {
   var i10;
-  let o10 = r10 ? I6(t10.actions) : [];
-  return IH("li", { class: "cm-diagnostic cm-diagnostic-" + t10.severity }, IH("span", { class: "cm-diagnosticText" }, t10.renderMessage ? t10.renderMessage() : t10.message), null === (i10 = t10.actions) || void 0 === i10 ? void 0 : i10.map((r11, i11) => {
+  let o10 = r10 ? Lt(t10.actions) : [];
+  return IX("li", { class: "cm-diagnostic cm-diagnostic-" + t10.severity }, IX("span", { class: "cm-diagnosticText" }, t10.renderMessage ? t10.renderMessage() : t10.message), null === (i10 = t10.actions) || void 0 === i10 ? void 0 : i10.map((r11, i11) => {
     let s10 = false, l10 = (i12) => {
       if (i12.preventDefault(), s10)
         return;
       s10 = true;
-      let o11 = Iq(e13.state.field(IJ).diagnostics, t10);
+      let o11 = IK(e13.state.field(I2).diagnostics, t10);
       o11 && r11.apply(e13, o11.from, o11.to);
-    }, { name: a10 } = r11, c10 = o10[i11] ? a10.indexOf(o10[i11]) : -1, u10 = c10 < 0 ? a10 : [a10.slice(0, c10), IH("u", a10.slice(c10, c10 + 1)), a10.slice(c10 + 1)];
-    return IH("button", { type: "button", class: "cm-diagnosticAction", onclick: l10, onmousedown: l10, "aria-label": ` Action: ${a10}${c10 < 0 ? "" : ` (access key "${o10[i11]})"`}.` }, u10);
-  }), t10.source && IH("div", { class: "cm-diagnosticSource" }, t10.source));
+    }, { name: a10 } = r11, c10 = o10[i11] ? a10.indexOf(o10[i11]) : -1, u10 = c10 < 0 ? a10 : [a10.slice(0, c10), IX("u", a10.slice(c10, c10 + 1)), a10.slice(c10 + 1)];
+    return IX("button", { type: "button", class: "cm-diagnosticAction", onclick: l10, onmousedown: l10, "aria-label": ` Action: ${a10}${c10 < 0 ? "" : ` (access key "${o10[i11]})"`}.` }, u10);
+  }), t10.source && IX("div", { class: "cm-diagnosticSource" }, t10.source));
 }
-class I7 extends Ej {
+class Lr extends EF {
   constructor(e13) {
     super(), this.diagnostic = e13;
   }
@@ -21417,19 +21426,19 @@ class I7 extends Ej {
     return e13.diagnostic == this.diagnostic;
   }
   toDOM() {
-    return IH("span", { class: "cm-lintPoint cm-lintPoint-" + this.diagnostic.severity });
+    return IX("span", { class: "cm-lintPoint cm-lintPoint-" + this.diagnostic.severity });
   }
 }
-class Le {
+class Li {
   constructor(e13, t10) {
-    this.diagnostic = t10, this.id = "item_" + Math.floor(4294967295 * Math.random()).toString(16), this.dom = I9(e13, t10, true), this.dom.id = this.id, this.dom.setAttribute("role", "option");
+    this.diagnostic = t10, this.id = "item_" + Math.floor(4294967295 * Math.random()).toString(16), this.dom = Ln(e13, t10, true), this.dom.id = this.id, this.dom.setAttribute("role", "option");
   }
 }
-class Lt {
+class Lo {
   constructor(e13) {
-    this.view = e13, this.items = [], this.list = IH("ul", { tabIndex: 0, role: "listbox", "aria-label": this.view.state.phrase("Diagnostics"), onkeydown: (t10) => {
+    this.view = e13, this.items = [], this.list = IX("ul", { tabIndex: 0, role: "listbox", "aria-label": this.view.state.phrase("Diagnostics"), onkeydown: (t10) => {
       if (27 == t10.keyCode)
-        I2(this.view), this.view.focus();
+        I8(this.view), this.view.focus();
       else if (38 == t10.keyCode || 33 == t10.keyCode)
         this.moveSelection((this.selectedIndex - 1 + this.items.length) % this.items.length);
       else if (40 == t10.keyCode || 34 == t10.keyCode)
@@ -21443,10 +21452,10 @@ class Lt {
       else {
         if (!(t10.keyCode >= 65) || !(t10.keyCode <= 90) || !(this.selectedIndex >= 0))
           return;
-        let { diagnostic: r10 } = this.items[this.selectedIndex], i10 = I6(r10.actions);
+        let { diagnostic: r10 } = this.items[this.selectedIndex], i10 = Lt(r10.actions);
         for (let o10 = 0; o10 < i10.length; o10++)
           if (i10[o10].toUpperCase().charCodeAt(0) == t10.keyCode) {
-            let t11 = Iq(this.view.state.field(IJ).diagnostics, r10);
+            let t11 = IK(this.view.state.field(I2).diagnostics, r10);
             t11 && r10.actions[o10].apply(e13, t11.from, t11.to);
           }
       }
@@ -21454,10 +21463,10 @@ class Lt {
     }, onclick: (e14) => {
       for (let t10 = 0; t10 < this.items.length; t10++)
         this.items[t10].dom.contains(e14.target) && this.moveSelection(t10);
-    } }), this.dom = IH("div", { class: "cm-panel-lint" }, this.list, IH("button", { type: "button", name: "close", "aria-label": this.view.state.phrase("close"), onclick: () => I2(this.view) }, "×")), this.update();
+    } }), this.dom = IX("div", { class: "cm-panel-lint" }, this.list, IX("button", { type: "button", name: "close", "aria-label": this.view.state.phrase("close"), onclick: () => I8(this.view) }, "×")), this.update();
   }
   get selectedIndex() {
-    let e13 = this.view.state.field(IJ).selected;
+    let e13 = this.view.state.field(I2).selected;
     if (!e13)
       return -1;
     for (let t10 = 0; t10 < this.items.length; t10++)
@@ -21466,7 +21475,7 @@ class Lt {
     return -1;
   }
   update() {
-    let { diagnostics: e13, selected: t10 } = this.view.state.field(IJ), r10 = 0, i10 = false, o10 = null;
+    let { diagnostics: e13, selected: t10 } = this.view.state.field(I2), r10 = 0, i10 = false, o10 = null;
     for (e13.between(0, this.view.state.doc.length, (e14, s10, l10) => {
       let { spec: a10 } = l10, c10 = -1, u10;
       for (let e15 = r10; e15 < this.items.length; e15++)
@@ -21474,10 +21483,10 @@ class Lt {
           c10 = e15;
           break;
         }
-      c10 < 0 ? (u10 = new Le(this.view, a10.diagnostic), this.items.splice(r10, 0, u10), i10 = true) : (u10 = this.items[c10], c10 > r10 && (this.items.splice(r10, c10 - r10), i10 = true)), t10 && u10.diagnostic == t10.diagnostic ? u10.dom.hasAttribute("aria-selected") || (u10.dom.setAttribute("aria-selected", "true"), o10 = u10) : u10.dom.hasAttribute("aria-selected") && u10.dom.removeAttribute("aria-selected"), r10++;
+      c10 < 0 ? (u10 = new Li(this.view, a10.diagnostic), this.items.splice(r10, 0, u10), i10 = true) : (u10 = this.items[c10], c10 > r10 && (this.items.splice(r10, c10 - r10), i10 = true)), t10 && u10.diagnostic == t10.diagnostic ? u10.dom.hasAttribute("aria-selected") || (u10.dom.setAttribute("aria-selected", "true"), o10 = u10) : u10.dom.hasAttribute("aria-selected") && u10.dom.removeAttribute("aria-selected"), r10++;
     }); r10 < this.items.length && !(1 == this.items.length && this.items[0].diagnostic.from < 0); )
       i10 = true, this.items.pop();
-    0 == this.items.length && (this.items.push(new Le(this.view, { from: -1, to: -1, severity: "info", message: this.view.state.phrase("No diagnostics") })), i10 = true), o10 ? (this.list.setAttribute("aria-activedescendant", o10.id), this.view.requestMeasure({ key: this, read: () => ({ sel: o10.dom.getBoundingClientRect(), panel: this.list.getBoundingClientRect() }), write: (e14) => {
+    0 == this.items.length && (this.items.push(new Li(this.view, { from: -1, to: -1, severity: "info", message: this.view.state.phrase("No diagnostics") })), i10 = true), o10 ? (this.list.setAttribute("aria-activedescendant", o10.id), this.view.requestMeasure({ key: this, read: () => ({ sel: o10.dom.getBoundingClientRect(), panel: this.list.getBoundingClientRect() }), write: (e14) => {
       let { sel: t11, panel: r11 } = e14, i11 = r11.height / this.list.offsetHeight;
       t11.top < r11.top ? this.list.scrollTop -= (r11.top - t11.top) / i11 : t11.bottom > r11.bottom && (this.list.scrollTop += (t11.bottom - r11.bottom) / i11);
     } })) : this.selectedIndex < 0 && this.list.removeAttribute("aria-activedescendant"), i10 && this.sync();
@@ -21501,46 +21510,46 @@ class Lt {
   moveSelection(e13) {
     if (this.selectedIndex < 0)
       return;
-    let t10 = Iq(this.view.state.field(IJ).diagnostics, this.items[e13].diagnostic);
-    t10 && this.view.dispatch({ selection: { anchor: t10.from, head: t10.to }, scrollIntoView: true, effects: IG.of(t10) });
+    let t10 = IK(this.view.state.field(I2).diagnostics, this.items[e13].diagnostic);
+    t10 && this.view.dispatch({ selection: { anchor: t10.from, head: t10.to }, scrollIntoView: true, effects: I1.of(t10) });
   }
   static open(e13) {
-    return new Lt(e13);
+    return new Lo(e13);
   }
 }
-function Ln(e13) {
+function Ls(e13) {
   let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'viewBox="0 0 40 40"';
   return `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" ${t10}>${encodeURIComponent(e13)}</svg>')`;
 }
-function Lr(e13) {
-  return Ln(`<path d="m0 2.5 l2 -1.5 l1 0 l2 1.5 l1 0" stroke="${e13}" fill="none" stroke-width=".7"/>`, 'width="6" height="3"');
+function Ll(e13) {
+  return Ls(`<path d="m0 2.5 l2 -1.5 l1 0 l2 1.5 l1 0" stroke="${e13}" fill="none" stroke-width=".7"/>`, 'width="6" height="3"');
 }
-let Li = Rz.baseTheme({ ".cm-diagnostic": { padding: "3px 6px 3px 8px", marginLeft: "-1px", display: "block", whiteSpace: "pre-wrap" }, ".cm-diagnostic-error": { borderLeft: "5px solid #d11" }, ".cm-diagnostic-warning": { borderLeft: "5px solid orange" }, ".cm-diagnostic-info": { borderLeft: "5px solid #999" }, ".cm-diagnostic-hint": { borderLeft: "5px solid #66d" }, ".cm-diagnosticAction": { font: "inherit", border: "none", padding: "2px 4px", backgroundColor: "#444", color: "white", borderRadius: "3px", marginLeft: "8px", cursor: "pointer" }, ".cm-diagnosticSource": { fontSize: "70%", opacity: 0.7 }, ".cm-lintRange": { backgroundPosition: "left bottom", backgroundRepeat: "repeat-x", paddingBottom: "0.7px" }, ".cm-lintRange-error": { backgroundImage: Lr("#d11") }, ".cm-lintRange-warning": { backgroundImage: Lr("orange") }, ".cm-lintRange-info": { backgroundImage: Lr("#999") }, ".cm-lintRange-hint": { backgroundImage: Lr("#66d") }, ".cm-lintRange-active": { backgroundColor: "#ffdd9980" }, ".cm-tooltip-lint": { padding: 0, margin: 0 }, ".cm-lintPoint": { position: "relative", "&:after": { content: '""', position: "absolute", bottom: 0, left: "-2px", borderLeft: "3px solid transparent", borderRight: "3px solid transparent", borderBottom: "4px solid #d11" } }, ".cm-lintPoint-warning": { "&:after": { borderBottomColor: "orange" } }, ".cm-lintPoint-info": { "&:after": { borderBottomColor: "#999" } }, ".cm-lintPoint-hint": { "&:after": { borderBottomColor: "#66d" } }, ".cm-panel.cm-panel-lint": { position: "relative", "& ul": { maxHeight: "100px", overflowY: "auto", "& [aria-selected]": { backgroundColor: "#ddd", "& u": { textDecoration: "underline" } }, "&:focus [aria-selected]": { background_fallback: "#bdf", backgroundColor: "Highlight", color_fallback: "white", color: "HighlightText" }, "& u": { textDecoration: "none" }, padding: 0, margin: 0 }, "& [name=close]": { position: "absolute", top: "0", right: "2px", background: "inherit", border: "none", font: "inherit", padding: 0, margin: 0 } } });
-function Lo(e13) {
+let La = RU.baseTheme({ ".cm-diagnostic": { padding: "3px 6px 3px 8px", marginLeft: "-1px", display: "block", whiteSpace: "pre-wrap" }, ".cm-diagnostic-error": { borderLeft: "5px solid #d11" }, ".cm-diagnostic-warning": { borderLeft: "5px solid orange" }, ".cm-diagnostic-info": { borderLeft: "5px solid #999" }, ".cm-diagnostic-hint": { borderLeft: "5px solid #66d" }, ".cm-diagnosticAction": { font: "inherit", border: "none", padding: "2px 4px", backgroundColor: "#444", color: "white", borderRadius: "3px", marginLeft: "8px", cursor: "pointer" }, ".cm-diagnosticSource": { fontSize: "70%", opacity: 0.7 }, ".cm-lintRange": { backgroundPosition: "left bottom", backgroundRepeat: "repeat-x", paddingBottom: "0.7px" }, ".cm-lintRange-error": { backgroundImage: Ll("#d11") }, ".cm-lintRange-warning": { backgroundImage: Ll("orange") }, ".cm-lintRange-info": { backgroundImage: Ll("#999") }, ".cm-lintRange-hint": { backgroundImage: Ll("#66d") }, ".cm-lintRange-active": { backgroundColor: "#ffdd9980" }, ".cm-tooltip-lint": { padding: 0, margin: 0 }, ".cm-lintPoint": { position: "relative", "&:after": { content: '""', position: "absolute", bottom: 0, left: "-2px", borderLeft: "3px solid transparent", borderRight: "3px solid transparent", borderBottom: "4px solid #d11" } }, ".cm-lintPoint-warning": { "&:after": { borderBottomColor: "orange" } }, ".cm-lintPoint-info": { "&:after": { borderBottomColor: "#999" } }, ".cm-lintPoint-hint": { "&:after": { borderBottomColor: "#66d" } }, ".cm-panel.cm-panel-lint": { position: "relative", "& ul": { maxHeight: "100px", overflowY: "auto", "& [aria-selected]": { backgroundColor: "#ddd", "& u": { textDecoration: "underline" } }, "&:focus [aria-selected]": { background_fallback: "#bdf", backgroundColor: "Highlight", color_fallback: "white", color: "HighlightText" }, "& u": { textDecoration: "none" }, padding: 0, margin: 0 }, "& [name=close]": { position: "absolute", top: "0", right: "2px", background: "inherit", border: "none", font: "inherit", padding: 0, margin: 0 } } });
+function Lc(e13) {
   return "error" == e13 ? 4 : "warning" == e13 ? 3 : "info" == e13 ? 2 : 1;
 }
-class Ls extends Ik {
+class Lu extends IA {
   constructor(e13) {
-    super(), this.diagnostics = e13, this.severity = e13.reduce((e14, t10) => Lo(e14) < Lo(t10.severity) ? t10.severity : e14, "hint");
+    super(), this.diagnostics = e13, this.severity = e13.reduce((e14, t10) => Lc(e14) < Lc(t10.severity) ? t10.severity : e14, "hint");
   }
   toDOM(e13) {
     let t10 = document.createElement("div");
     t10.className = "cm-lint-marker cm-lint-marker-" + this.severity;
-    let r10 = this.diagnostics, i10 = e13.state.facet(Ld).tooltipFilter;
+    let r10 = this.diagnostics, i10 = e13.state.facet(Lv).tooltipFilter;
     return i10 && (r10 = i10(r10, e13.state)), r10.length && (t10.onmouseover = () => function(e14, t11, r11) {
       function i11() {
         let i12, o11 = e14.elementAtHeight(t11.getBoundingClientRect().top + 5 - e14.documentTop);
-        e14.coordsAtPos(o11.from) && e14.dispatch({ effects: Lc.of({ pos: o11.from, above: false, create: () => ({ dom: I1(e14, r11), getCoords: () => t11.getBoundingClientRect() }) }) }), t11.onmouseout = t11.onmousemove = null, i12 = (r12) => {
+        e14.coordsAtPos(o11.from) && e14.dispatch({ effects: Ld.of({ pos: o11.from, above: false, create: () => ({ dom: I5(e14, r11), getCoords: () => t11.getBoundingClientRect() }) }) }), t11.onmouseout = t11.onmousemove = null, i12 = (r12) => {
           let o12 = t11.getBoundingClientRect();
           if (!(r12.clientX > o12.left - 10) || !(r12.clientX < o12.right + 10) || !(r12.clientY > o12.top - 10) || !(r12.clientY < o12.bottom + 10)) {
             for (let e15 = r12.target; e15; e15 = e15.parentNode)
               if (1 == e15.nodeType && e15.classList.contains("cm-tooltip-lint"))
                 return;
-            window.removeEventListener("mousemove", i12), e14.state.field(Lu) && e14.dispatch({ effects: Lc.of(null) });
+            window.removeEventListener("mousemove", i12), e14.state.field(Lp) && e14.dispatch({ effects: Ld.of(null) });
           }
         }, window.addEventListener("mousemove", i12);
       }
-      let { hoverTime: o10 } = e14.state.facet(Ld), s10 = setTimeout(i11, o10);
+      let { hoverTime: o10 } = e14.state.facet(Lv), s10 = setTimeout(i11, o10);
       t11.onmouseout = () => {
         clearTimeout(s10), t11.onmouseout = t11.onmousemove = null;
       }, t11.onmousemove = () => {
@@ -21549,11 +21558,11 @@ class Ls extends Ik {
     }(e13, t10, r10)), t10;
   }
 }
-let Ll = IA({ class: "cm-gutter-lint", markers: (e13) => e13.state.field(La) }), La = T0.define({ create: () => PC.empty, update(e13, t10) {
+let Lh = IP({ class: "cm-gutter-lint", markers: (e13) => e13.state.field(Lf) }), Lf = T3.define({ create: () => PM.empty, update(e13, t10) {
   e13 = e13.map(t10.changes);
-  let r10 = t10.state.facet(Ld).markerFilter;
+  let r10 = t10.state.facet(Lv).markerFilter;
   for (let i10 of t10.effects)
-    if (i10.is(IY)) {
+    if (i10.is(IZ)) {
       let o10 = i10.value;
       r10 && (o10 = r10(o10 || [], t10.state)), e13 = function(e14, t11) {
         let r11 = /* @__PURE__ */ Object.create(null);
@@ -21563,20 +21572,20 @@ let Ll = IA({ class: "cm-gutter-lint", markers: (e13) => e13.state.field(La) }),
         }
         let i11 = [];
         for (let e15 in r11)
-          i11.push(new Ls(r11[e15]).range(+e15));
-        return PC.of(i11, true);
+          i11.push(new Lu(r11[e15]).range(+e15));
+        return PM.of(i11, true);
       }(t10.state.doc, o10.slice(0));
     }
   return e13;
-} }), Lc = Pu.define(), Lu = T0.define({ create: () => null, update: (e13, t10) => (e13 && t10.docChanged && (e13 = IX(t10, e13) ? null : Object.assign(Object.assign({}, e13), { pos: t10.changes.mapPos(e13.pos) })), t10.effects.reduce((e14, t11) => t11.is(Lc) ? t11.value : e14, e13)), provide: (e13) => Iu.from(e13) }), Lh = Rz.baseTheme({ ".cm-gutter-lint": { width: "1.4em", "& .cm-gutterElement": { padding: ".2em" } }, ".cm-lint-marker": { width: "1em", height: "1em" }, ".cm-lint-marker-info": { content: Ln('<path fill="#aaf" stroke="#77e" stroke-width="6" stroke-linejoin="round" d="M5 5L35 5L35 35L5 35Z"/>') }, ".cm-lint-marker-warning": { content: Ln('<path fill="#fe8" stroke="#fd7" stroke-width="6" stroke-linejoin="round" d="M20 6L37 35L3 35Z"/>') }, ".cm-lint-marker-error": { content: Ln('<circle cx="20" cy="20" r="15" fill="#f87" stroke="#f43" stroke-width="6"/>') } }), Lf = [IJ, Rz.decorations.compute([IJ], (e13) => {
-  let { selected: t10, panel: r10 } = e13.field(IJ);
-  return t10 && r10 && t10.from != t10.to ? EB.set([I0.range(t10.from, t10.to)]) : EB.none;
+} }), Ld = Pp.define(), Lp = T3.define({ create: () => null, update: (e13, t10) => (e13 && t10.docChanged && (e13 = IG(t10, e13) ? null : Object.assign(Object.assign({}, e13), { pos: t10.changes.mapPos(e13.pos) })), t10.effects.reduce((e14, t11) => t11.is(Ld) ? t11.value : e14, e13)), provide: (e13) => Ip.from(e13) }), Lg = RU.baseTheme({ ".cm-gutter-lint": { width: "1.4em", "& .cm-gutterElement": { padding: ".2em" } }, ".cm-lint-marker": { width: "1em", height: "1em" }, ".cm-lint-marker-info": { content: Ls('<path fill="#aaf" stroke="#77e" stroke-width="6" stroke-linejoin="round" d="M5 5L35 5L35 35L5 35Z"/>') }, ".cm-lint-marker-warning": { content: Ls('<path fill="#fe8" stroke="#fd7" stroke-width="6" stroke-linejoin="round" d="M20 6L37 35L3 35Z"/>') }, ".cm-lint-marker-error": { content: Ls('<circle cx="20" cy="20" r="15" fill="#f87" stroke="#f43" stroke-width="6"/>') } }), Lm = [I2, RU.decorations.compute([I2], (e13) => {
+  let { selected: t10, panel: r10 } = e13.field(I2);
+  return t10 && r10 && t10.from != t10.to ? EV.set([I3.range(t10.from, t10.to)]) : EV.none;
 }), function(e13) {
-  let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r10 = Pu.define(), i10 = T0.define({ create: () => [], update(e14, i11) {
+  let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, r10 = Pp.define(), i10 = T3.define({ create: () => [], update(e14, i11) {
     if (e14.length && (t10.hideOnChange && (i11.docChanged || i11.selection) ? e14 = [] : t10.hideOn && (e14 = e14.filter((e15) => !t10.hideOn(i11, e15))), i11.docChanged)) {
       let t11 = [];
       for (let r11 of e14) {
-        let e15 = i11.changes.mapPos(r11.pos, -1, TL.TrackDel);
+        let e15 = i11.changes.mapPos(r11.pos, -1, T$.TrackDel);
         if (null != e15) {
           let o10 = Object.assign(/* @__PURE__ */ Object.create(null), r11);
           o10.pos = e15, null != o10.end && (o10.end = i11.changes.mapPos(o10.end)), t11.push(o10);
@@ -21585,59 +21594,59 @@ let Ll = IA({ class: "cm-gutter-lint", markers: (e13) => e13.state.field(La) }),
       e14 = t11;
     }
     for (let t11 of i11.effects)
-      t11.is(r10) && (e14 = t11.value), t11.is(Im) && (e14 = []);
+      t11.is(r10) && (e14 = t11.value), t11.is(Iw) && (e14 = []);
     return e14;
-  }, provide: (e14) => Ih.from(e14) });
-  return [i10, Dd.define((o10) => new Ip(o10, e13, i10, r10, t10.hoverTime || 300)), Id];
+  }, provide: (e14) => Ig.from(e14) });
+  return [i10, Dv.define((o10) => new Iy(o10, e13, i10, r10, t10.hoverTime || 300)), Iv];
 }(function(e13, t10, r10) {
-  let { diagnostics: i10 } = e13.state.field(IJ), o10 = [], s10 = 2e8, l10 = 0;
+  let { diagnostics: i10 } = e13.state.field(I2), o10 = [], s10 = 2e8, l10 = 0;
   i10.between(t10 - (r10 < 0 ? 1 : 0), t10 + (r10 > 0 ? 1 : 0), (e14, i11, a11) => {
     let { spec: c10 } = a11;
     t10 >= e14 && t10 <= i11 && (e14 == i11 || (t10 > e14 || r10 > 0) && (t10 < i11 || r10 < 0)) && (o10.push(c10.diagnostic), s10 = Math.min(e14, s10), l10 = Math.max(i11, l10));
   });
-  let a10 = e13.state.facet(I5).tooltipFilter;
-  return (a10 && (o10 = a10(o10, e13.state)), o10.length) ? { pos: s10, end: l10, above: e13.state.doc.lineAt(s10).to < l10, create: () => ({ dom: I1(e13, o10) }) } : null;
-}, { hideOn: IX }), Li], Ld = TQ.define({ combine: (e13) => Pb(e13, { hoverTime: 300, markerFilter: null, tooltipFilter: null }) }), Lp = 0;
-class Lg {
+  let a10 = e13.state.facet(I7).tooltipFilter;
+  return (a10 && (o10 = a10(o10, e13.state)), o10.length) ? { pos: s10, end: l10, above: e13.state.doc.lineAt(s10).to < l10, create: () => ({ dom: I5(e13, o10) }) } : null;
+}, { hideOn: IG }), La], Lv = TJ.define({ combine: (e13) => PS(e13, { hoverTime: 300, markerFilter: null, tooltipFilter: null }) }), Ly = 0;
+class Lb {
   constructor(e13, t10) {
     this.from = e13, this.to = t10;
   }
 }
-class Lm {
+class Lw {
   constructor(e13 = {}) {
-    this.id = Lp++, this.perNode = !!e13.perNode, this.deserialize = e13.deserialize || (() => {
+    this.id = Ly++, this.perNode = !!e13.perNode, this.deserialize = e13.deserialize || (() => {
       throw Error("This node type doesn't define a deserialize function");
     });
   }
   add(e13) {
     if (this.perNode)
       throw RangeError("Can't add per-node props to node types");
-    return "function" != typeof e13 && (e13 = Lb.match(e13)), (t10) => {
+    return "function" != typeof e13 && (e13 = LS.match(e13)), (t10) => {
       let r10 = e13(t10);
       return void 0 === r10 ? null : [this, r10];
     };
   }
 }
-Lm.closedBy = new Lm({ deserialize: (e13) => e13.split(" ") }), Lm.openedBy = new Lm({ deserialize: (e13) => e13.split(" ") }), Lm.group = new Lm({ deserialize: (e13) => e13.split(" ") }), Lm.isolate = new Lm({ deserialize: (e13) => {
+Lw.closedBy = new Lw({ deserialize: (e13) => e13.split(" ") }), Lw.openedBy = new Lw({ deserialize: (e13) => e13.split(" ") }), Lw.group = new Lw({ deserialize: (e13) => e13.split(" ") }), Lw.isolate = new Lw({ deserialize: (e13) => {
   if (e13 && "rtl" != e13 && "ltr" != e13 && "auto" != e13)
     throw RangeError("Invalid value for isolate: " + e13);
   return e13 || "auto";
-} }), Lm.contextHash = new Lm({ perNode: true }), Lm.lookAhead = new Lm({ perNode: true }), Lm.mounted = new Lm({ perNode: true });
-class Lv {
+} }), Lw.contextHash = new Lw({ perNode: true }), Lw.lookAhead = new Lw({ perNode: true }), Lw.mounted = new Lw({ perNode: true });
+class Lx {
   constructor(e13, t10, r10) {
     this.tree = e13, this.overlay = t10, this.parser = r10;
   }
   static get(e13) {
-    return e13 && e13.props && e13.props[Lm.mounted.id];
+    return e13 && e13.props && e13.props[Lw.mounted.id];
   }
 }
-let Ly = /* @__PURE__ */ Object.create(null);
-class Lb {
+let Lk = /* @__PURE__ */ Object.create(null);
+class LS {
   constructor(e13, t10, r10, i10 = 0) {
     this.name = e13, this.props = t10, this.id = r10, this.flags = i10;
   }
   static define(e13) {
-    let t10 = e13.props && e13.props.length ? /* @__PURE__ */ Object.create(null) : Ly, r10 = (e13.top ? 1 : 0) | (e13.skipped ? 2 : 0) | (e13.error ? 4 : 0) | (null == e13.name ? 8 : 0), i10 = new Lb(e13.name || "", t10, e13.id, r10);
+    let t10 = e13.props && e13.props.length ? /* @__PURE__ */ Object.create(null) : Lk, r10 = (e13.top ? 1 : 0) | (e13.skipped ? 2 : 0) | (e13.error ? 4 : 0) | (null == e13.name ? 8 : 0), i10 = new LS(e13.name || "", t10, e13.id, r10);
     if (e13.props) {
       for (let r11 of e13.props)
         if (Array.isArray(r11) || (r11 = r11(i10)), r11) {
@@ -21667,7 +21676,7 @@ class Lb {
     if ("string" == typeof e13) {
       if (this.name == e13)
         return true;
-      let t10 = this.prop(Lm.group);
+      let t10 = this.prop(Lw.group);
       return !!t10 && t10.indexOf(e13) > -1;
     }
     return this.id == e13;
@@ -21678,7 +21687,7 @@ class Lb {
       for (let i10 of r10.split(" "))
         t10[i10] = e13[r10];
     return (e14) => {
-      for (let r10 = e14.prop(Lm.group), i10 = -1; i10 < (r10 ? r10.length : 0); i10++) {
+      for (let r10 = e14.prop(Lw.group), i10 = -1; i10 < (r10 ? r10.length : 0); i10++) {
         let o10 = t10[i10 < 0 ? e14.name : r10[i10]];
         if (o10)
           return o10;
@@ -21686,8 +21695,8 @@ class Lb {
     };
   }
 }
-Lb.none = new Lb("", /* @__PURE__ */ Object.create(null), 0, 8);
-class Lw {
+LS.none = new LS("", /* @__PURE__ */ Object.create(null), 0, 8);
+class LC {
   constructor(e13) {
     this.types = e13;
     for (let t10 = 0; t10 < e13.length; t10++)
@@ -21704,21 +21713,21 @@ class Lw {
         let t11 = i11(e14);
         t11 && (r11 || (r11 = Object.assign({}, e14.props)), r11[t11[0].id] = t11[1]);
       }
-      i10.push(r11 ? new Lb(e14.name, r11, e14.id, e14.flags) : e14);
+      i10.push(r11 ? new LS(e14.name, r11, e14.id, e14.flags) : e14);
     }
-    return new Lw(i10);
+    return new LC(i10);
   }
 }
-let Lx = /* @__PURE__ */ new WeakMap(), Lk = /* @__PURE__ */ new WeakMap();
+let LO = /* @__PURE__ */ new WeakMap(), LA = /* @__PURE__ */ new WeakMap();
 (X = ed || (ed = {}))[X.ExcludeBuffers = 1] = "ExcludeBuffers", X[X.IncludeAnonymous = 2] = "IncludeAnonymous", X[X.IgnoreMounts = 4] = "IgnoreMounts", X[X.IgnoreOverlays = 8] = "IgnoreOverlays";
-class LS {
+class L_ {
   constructor(e13, t10, r10, i10, o10) {
     if (this.type = e13, this.children = t10, this.positions = r10, this.length = i10, this.props = null, o10 && o10.length)
       for (let [e14, t11] of (this.props = /* @__PURE__ */ Object.create(null), o10))
         this.props["number" == typeof e14 ? e14 : e14.id] = t11;
   }
   toString() {
-    let e13 = Lv.get(this);
+    let e13 = Lx.get(this);
     if (e13 && !e13.overlay)
       return e13.tree.toString();
     let t10 = "";
@@ -21730,41 +21739,41 @@ class LS {
   }
   cursor() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-    return new Lj(this.topNode, e13);
+    return new LF(this.topNode, e13);
   }
   cursorAt(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    let r10 = new Lj(Lx.get(this) || this.topNode);
-    return r10.moveTo(e13, t10), Lx.set(this, r10._tree), r10;
+    let r10 = new LF(LO.get(this) || this.topNode);
+    return r10.moveTo(e13, t10), LO.set(this, r10._tree), r10;
   }
   get topNode() {
-    return new LT(this, 0, 0, null);
+    return new LR(this, 0, 0, null);
   }
   resolve(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = L_(Lx.get(this) || this.topNode, e13, t10, false);
-    return Lx.set(this, r10), r10;
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = LE(LO.get(this) || this.topNode, e13, t10, false);
+    return LO.set(this, r10), r10;
   }
   resolveInner(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = L_(Lk.get(this) || this.topNode, e13, t10, true);
-    return Lk.set(this, r10), r10;
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0, r10 = LE(LA.get(this) || this.topNode, e13, t10, true);
+    return LA.set(this, r10), r10;
   }
   resolveStack(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return function(e14, t11, r10) {
       let i10 = e14.resolveInner(t11, r10), o10 = null;
-      for (let e15 = i10 instanceof LT ? i10 : i10.context.parent; e15; e15 = e15.parent)
+      for (let e15 = i10 instanceof LR ? i10 : i10.context.parent; e15; e15 = e15.parent)
         if (e15.index < 0) {
           let s10 = e15.parent;
           (o10 || (o10 = [i10])).push(s10.resolve(t11, r10)), e15 = s10;
         } else {
-          let s10 = Lv.get(e15.tree);
+          let s10 = Lx.get(e15.tree);
           if (s10 && s10.overlay && s10.overlay[0].from <= t11 && s10.overlay[s10.overlay.length - 1].to >= t11) {
-            let l10 = new LT(s10.tree, s10.overlay[0].from + e15.from, -1, e15);
-            (o10 || (o10 = [i10])).push(L_(l10, t11, r10, false));
+            let l10 = new LR(s10.tree, s10.overlay[0].from + e15.from, -1, e15);
+            (o10 || (o10 = [i10])).push(LE(l10, t11, r10, false));
           }
         }
-      return o10 ? LI(o10) : i10;
+      return o10 ? LB(o10) : i10;
     }(this, e13, t10);
   }
   iterate(e13) {
@@ -21795,12 +21804,12 @@ class LS {
   }
   balance() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return this.children.length <= 8 ? this : LF(Lb.none, this.children, this.positions, 0, this.children.length, 0, this.length, (e14, t10, r10) => new LS(this.type, e14, t10, r10, this.propValues), e13.makeTree || ((e14, t10, r10) => new LS(Lb.none, e14, t10, r10)));
+    return this.children.length <= 8 ? this : LW(LS.none, this.children, this.positions, 0, this.children.length, 0, this.length, (e14, t10, r10) => new L_(this.type, e14, t10, r10, this.propValues), e13.makeTree || ((e14, t10, r10) => new L_(LS.none, e14, t10, r10)));
   }
   static build(e13) {
     return function(e14) {
       var t10;
-      let { buffer: r10, nodeSet: i10, maxBufferLength: o10 = 1024, reused: s10 = [], minRepeatType: l10 = i10.types.length } = e14, a10 = Array.isArray(r10) ? new LC(r10, r10.length) : r10, c10 = i10.types, u10 = 0, h10 = 0;
+      let { buffer: r10, nodeSet: i10, maxBufferLength: o10 = 1024, reused: s10 = [], minRepeatType: l10 = i10.types.length } = e14, a10 = Array.isArray(r10) ? new LM(r10, r10.length) : r10, c10 = i10.types, u10 = 0, h10 = 0;
       function f10(e15, t11, r11, o11, s11, l11, a11, c11) {
         let u11 = [], h11 = [];
         for (; e15.length > o11; )
@@ -21810,14 +21819,14 @@ class LS {
       function d10(e15, t11, r11, i11) {
         let o11 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0, s11 = arguments.length > 5 ? arguments[5] : void 0;
         if (u10) {
-          let e16 = [Lm.contextHash, u10];
+          let e16 = [Lw.contextHash, u10];
           s11 = s11 ? [e16].concat(s11) : [e16];
         }
         if (o11 > 25) {
-          let e16 = [Lm.lookAhead, o11];
+          let e16 = [Lw.lookAhead, o11];
           s11 = s11 ? [e16].concat(s11) : [e16];
         }
-        return new LS(e15, t11, r11, i11, s11);
+        return new L_(e15, t11, r11, i11, s11);
       }
       let p10 = [], g7 = [];
       for (; a10.pos > 0; )
@@ -21883,7 +21892,7 @@ class LS {
                   -3 == f11 ? u10 = o12 : -4 == f11 && (h10 = o12);
                 return i11;
               }(A10.start, e16, o11);
-            O10 = new LO(e16, x10 - A10.start, i10), _10 = A10.start - t11;
+            O10 = new LT(e16, x10 - A10.start, i10), _10 = A10.start - t11;
           } else {
             let t12 = a10.pos - k10;
             a10.next();
@@ -21904,34 +21913,34 @@ class LS {
                   let t14 = new Uint16Array(4 * c12), o11 = l11[l11.length - 2];
                   for (let e17 = l11.length - 3, r14 = 0; e17 >= 0; e17 -= 3)
                     t14[r14++] = l11[e17], t14[r14++] = l11[e17 + 1] - o11, t14[r14++] = l11[e17 + 2] - o11, t14[r14++] = r14;
-                  r13.push(new LO(t14, l11[2] - o11, i10)), s12.push(o11 - e16);
+                  r13.push(new LT(t14, l11[2] - o11, i10)), s12.push(o11 - e16);
                 }
               }(w10, t12, r12, s11) : e15(w10, t12, r12, s11, c11, y10 + 1);
             if (c11 >= 0 && u11 > 0 && u11 < r12.length && f10(r12, s11, w10, u11, w10, h11, c11, S10), r12.reverse(), s11.reverse(), c11 > -1 && u11 > 0) {
               let e16 = /* @__PURE__ */ function(e17) {
                 return (t13, r13, i11) => {
                   let o11 = 0, s12 = t13.length - 1, l11, a11;
-                  if (s12 >= 0 && (l11 = t13[s12]) instanceof LS) {
+                  if (s12 >= 0 && (l11 = t13[s12]) instanceof L_) {
                     if (!s12 && l11.type == e17 && l11.length == i11)
                       return l11;
-                    (a11 = l11.prop(Lm.lookAhead)) && (o11 = r13[s12] + l11.length + a11);
+                    (a11 = l11.prop(Lw.lookAhead)) && (o11 = r13[s12] + l11.length + a11);
                   }
                   return d10(e17, t13, r13, i11, o11);
                 };
               }(C10);
-              O10 = LF(C10, r12, s11, 0, r12.length, 0, x10 - w10, e16, e16);
+              O10 = LW(C10, r12, s11, 0, r12.length, 0, x10 - w10, e16, e16);
             } else
               O10 = d10(C10, r12, s11, x10 - w10, S10 - x10);
           }
           p11.push(O10), g9.push(_10);
         }(e14.start || 0, e14.bufferStart || 0, p10, g7, -1, 0);
       let m10 = null !== (t10 = e14.length) && void 0 !== t10 ? t10 : p10.length ? g7[0] + p10[0].length : 0;
-      return new LS(c10[e14.topID], p10.reverse(), g7.reverse(), m10);
+      return new L_(c10[e14.topID], p10.reverse(), g7.reverse(), m10);
     }(e13);
   }
 }
-LS.empty = new LS(Lb.none, [], [], 0);
-class LC {
+L_.empty = new L_(LS.none, [], [], 0);
+class LM {
   constructor(e13, t10) {
     this.buffer = e13, this.index = t10;
   }
@@ -21954,15 +21963,15 @@ class LC {
     this.index -= 4;
   }
   fork() {
-    return new LC(this.buffer, this.index);
+    return new LM(this.buffer, this.index);
   }
 }
-class LO {
+class LT {
   constructor(e13, t10, r10) {
     this.buffer = e13, this.length = t10, this.set = r10;
   }
   get type() {
-    return Lb.none;
+    return LS.none;
   }
   toString() {
     let e13 = [];
@@ -21981,7 +21990,7 @@ class LO {
   }
   findChild(e13, t10, r10, i10, o10) {
     let { buffer: s10 } = this, l10 = -1;
-    for (let a10 = e13; a10 != t10 && (!LA(o10, i10, s10[a10 + 1], s10[a10 + 2]) || (l10 = a10, !(r10 > 0))); a10 = s10[a10 + 3])
+    for (let a10 = e13; a10 != t10 && (!LP(o10, i10, s10[a10 + 1], s10[a10 + 2]) || (l10 = a10, !(r10 > 0))); a10 = s10[a10 + 3])
       ;
     return l10;
   }
@@ -21992,10 +22001,10 @@ class LO {
       let t11 = o10[a10++] = i10[l10++] - r10;
       o10[a10++] = i10[l10++] - e13, s10 = Math.max(s10, t11);
     }
-    return new LO(o10, s10, this.set);
+    return new LT(o10, s10, this.set);
   }
 }
-function LA(e13, t10, r10, i10) {
+function LP(e13, t10, r10, i10) {
   switch (e13) {
     case -2:
       return r10 < t10;
@@ -22011,9 +22020,9 @@ function LA(e13, t10, r10, i10) {
       return true;
   }
 }
-function L_(e13, t10, r10, i10) {
+function LE(e13, t10, r10, i10) {
   for (var o10; e13.from == e13.to || (r10 < 1 ? e13.from >= t10 : e13.from > t10) || (r10 > -1 ? e13.to <= t10 : e13.to < t10); ) {
-    let t11 = !i10 && e13 instanceof LT && e13.index < 0 ? null : e13.parent;
+    let t11 = !i10 && e13 instanceof LR && e13.index < 0 ? null : e13.parent;
     if (!t11)
       return e13;
     e13 = t11;
@@ -22021,7 +22030,7 @@ function L_(e13, t10, r10, i10) {
   let s10 = i10 ? 0 : ed.IgnoreOverlays;
   if (i10)
     for (let i11 = e13, l10 = i11.parent; l10; l10 = (i11 = l10).parent)
-      i11 instanceof LT && i11.index < 0 && (null === (o10 = l10.enter(t10, r10, s10)) || void 0 === o10 ? void 0 : o10.from) != i11.from && (e13 = l10);
+      i11 instanceof LR && i11.index < 0 && (null === (o10 = l10.enter(t10, r10, s10)) || void 0 === o10 ? void 0 : o10.from) != i11.from && (e13 = l10);
   for (; ; ) {
     let i11 = e13.enter(t10, r10, s10);
     if (!i11)
@@ -22029,29 +22038,29 @@ function L_(e13, t10, r10, i10) {
     e13 = i11;
   }
 }
-class LM {
+class LD {
   cursor() {
     let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-    return new Lj(this, e13);
+    return new LF(this, e13);
   }
   getChild(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, i10 = LP(this, e13, t10, r10);
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, i10 = LI(this, e13, t10, r10);
     return i10.length ? i10[0] : null;
   }
   getChildren(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    return LP(this, e13, t10, r10);
+    return LI(this, e13, t10, r10);
   }
   resolve(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return L_(this, e13, t10, false);
+    return LE(this, e13, t10, false);
   }
   resolveInner(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return L_(this, e13, t10, true);
+    return LE(this, e13, t10, true);
   }
   matchContext(e13) {
-    return LE(this, e13);
+    return LL(this, e13);
   }
   enterUnfinishedNodesBefore(e13) {
     let t10 = this.childBefore(e13), r10 = this;
@@ -22070,7 +22079,7 @@ class LM {
     return this.parent;
   }
 }
-class LT extends LM {
+class LR extends LD {
   constructor(e13, t10, r10, i10) {
     super(), this._tree = e13, this.from = t10, this.index = r10, this._parent = i10;
   }
@@ -22088,18 +22097,18 @@ class LT extends LM {
     for (let s10 = this; ; ) {
       for (let { children: l10, positions: a10 } = s10._tree, c10 = t10 > 0 ? l10.length : -1; e13 != c10; e13 += t10) {
         let c11 = l10[e13], u10 = a10[e13] + s10.from;
-        if (LA(i10, r10, u10, u10 + c11.length)) {
-          if (c11 instanceof LO) {
+        if (LP(i10, r10, u10, u10 + c11.length)) {
+          if (c11 instanceof LT) {
             if (o10 & ed.ExcludeBuffers)
               continue;
             let l11 = c11.findChild(0, c11.buffer.length, t10, r10 - u10, i10);
             if (l11 > -1)
-              return new LR(new LD(s10, c11, e13, u10), null, l11);
-          } else if (o10 & ed.IncludeAnonymous || !c11.type.isAnonymous || LN(c11)) {
+              return new LN(new Lj(s10, c11, e13, u10), null, l11);
+          } else if (o10 & ed.IncludeAnonymous || !c11.type.isAnonymous || Lz(c11)) {
             let l11;
-            if (!(o10 & ed.IgnoreMounts) && (l11 = Lv.get(c11)) && !l11.overlay)
-              return new LT(l11.tree, u10, e13, s10);
-            let a11 = new LT(c11, u10, e13, s10);
+            if (!(o10 & ed.IgnoreMounts) && (l11 = Lx.get(c11)) && !l11.overlay)
+              return new LR(l11.tree, u10, e13, s10);
+            let a11 = new LR(c11, u10, e13, s10);
             return o10 & ed.IncludeAnonymous || !a11.type.isAnonymous ? a11 : a11.nextChild(t10 < 0 ? c11.children.length - 1 : 0, t10, r10, i10);
           }
         }
@@ -22122,11 +22131,11 @@ class LT extends LM {
   }
   enter(e13, t10) {
     let r10, i10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-    if (!(i10 & ed.IgnoreOverlays) && (r10 = Lv.get(this._tree)) && r10.overlay) {
+    if (!(i10 & ed.IgnoreOverlays) && (r10 = Lx.get(this._tree)) && r10.overlay) {
       let i11 = e13 - this.from;
       for (let { from: e14, to: o10 } of r10.overlay)
         if ((t10 > 0 ? e14 <= i11 : e14 < i11) && (t10 < 0 ? o10 >= i11 : o10 > i11))
-          return new LT(r10.tree, r10.overlay[0].from + this.from, -1, this);
+          return new LR(r10.tree, r10.overlay[0].from + this.from, -1, this);
     }
     return this.nextChild(0, 1, e13, t10, i10);
   }
@@ -22155,7 +22164,7 @@ class LT extends LM {
     return this._tree.toString();
   }
 }
-function LP(e13, t10, r10, i10) {
+function LI(e13, t10, r10, i10) {
   let o10 = e13.cursor(), s10 = [];
   if (!o10.firstChild())
     return s10;
@@ -22171,7 +22180,7 @@ function LP(e13, t10, r10, i10) {
       return null == i10 ? s10 : [];
   }
 }
-function LE(e13, t10) {
+function LL(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t10.length - 1;
   for (let i10 = e13.parent; r10 >= 0; i10 = i10.parent) {
     if (!i10)
@@ -22184,12 +22193,12 @@ function LE(e13, t10) {
   }
   return true;
 }
-class LD {
+class Lj {
   constructor(e13, t10, r10, i10) {
     this.parent = e13, this.buffer = t10, this.index = r10, this.start = i10;
   }
 }
-class LR extends LM {
+class LN extends LD {
   get name() {
     return this.type.name;
   }
@@ -22204,7 +22213,7 @@ class LR extends LM {
   }
   child(e13, t10, r10) {
     let { buffer: i10 } = this.context, o10 = i10.findChild(this.index + 4, i10.buffer[this.index + 3], e13, t10 - this.context.start, r10);
-    return o10 < 0 ? null : new LR(this.context, this, o10);
+    return o10 < 0 ? null : new LN(this.context, this, o10);
   }
   get firstChild() {
     return this.child(1, 0, 4);
@@ -22223,7 +22232,7 @@ class LR extends LM {
     if (r10 & ed.ExcludeBuffers)
       return null;
     let { buffer: i10 } = this.context, o10 = i10.findChild(this.index + 4, i10.buffer[this.index + 3], t10 > 0 ? 1 : -1, e13 - this.context.start, t10);
-    return o10 < 0 ? null : new LR(this.context, this, o10);
+    return o10 < 0 ? null : new LN(this.context, this, o10);
   }
   get parent() {
     return this._parent || this.context.parent.nextSignificantParent();
@@ -22233,11 +22242,11 @@ class LR extends LM {
   }
   get nextSibling() {
     let { buffer: e13 } = this.context, t10 = e13.buffer[this.index + 3];
-    return t10 < (this._parent ? e13.buffer[this._parent.index + 3] : e13.buffer.length) ? new LR(this.context, this._parent, t10) : this.externalSibling(1);
+    return t10 < (this._parent ? e13.buffer[this._parent.index + 3] : e13.buffer.length) ? new LN(this.context, this._parent, t10) : this.externalSibling(1);
   }
   get prevSibling() {
     let { buffer: e13 } = this.context, t10 = this._parent ? this._parent.index + 4 : 0;
-    return this.index == t10 ? this.externalSibling(-1) : new LR(this.context, this._parent, e13.findChild(t10, this.index, -1, 0, 4));
+    return this.index == t10 ? this.externalSibling(-1) : new LN(this.context, this._parent, e13.findChild(t10, this.index, -1, 0, 4));
   }
   get tree() {
     return null;
@@ -22248,13 +22257,13 @@ class LR extends LM {
       let s10 = r10.buffer[this.index + 1];
       e13.push(r10.slice(i10, o10, s10)), t10.push(0);
     }
-    return new LS(this.type, e13, t10, this.to - this.from);
+    return new L_(this.type, e13, t10, this.to - this.from);
   }
   toString() {
     return this.context.buffer.childString(this.index);
   }
 }
-function LI(e13) {
+function LB(e13) {
   if (!e13.length)
     return null;
   let t10 = 0, r10 = e13[0];
@@ -22262,23 +22271,23 @@ function LI(e13) {
     let o11 = e13[i11];
     (o11.from > r10.from || o11.to < r10.to) && (r10 = o11, t10 = i11);
   }
-  let i10 = r10 instanceof LT && r10.index < 0 ? null : r10.parent, o10 = e13.slice();
-  return i10 ? o10[t10] = i10 : o10.splice(t10, 1), new LL(o10, r10);
+  let i10 = r10 instanceof LR && r10.index < 0 ? null : r10.parent, o10 = e13.slice();
+  return i10 ? o10[t10] = i10 : o10.splice(t10, 1), new L$(o10, r10);
 }
-class LL {
+class L$ {
   constructor(e13, t10) {
     this.heads = e13, this.node = t10;
   }
   get next() {
-    return LI(this.heads);
+    return LB(this.heads);
   }
 }
-class Lj {
+class LF {
   get name() {
     return this.type.name;
   }
   constructor(e13, t10 = 0) {
-    if (this.mode = t10, this.buffer = null, this.stack = [], this.index = 0, this.bufferNode = null, e13 instanceof LT)
+    if (this.mode = t10, this.buffer = null, this.stack = [], this.index = 0, this.bufferNode = null, e13 instanceof LR)
       this.yieldNode(e13);
     else {
       this._tree = e13.context.parent, this.buffer = e13.context;
@@ -22296,7 +22305,7 @@ class Lj {
     return this.type = t10 || i10.set.types[i10.buffer[e13]], this.from = r10 + i10.buffer[e13 + 1], this.to = r10 + i10.buffer[e13 + 2], true;
   }
   yield(e13) {
-    return !!e13 && (e13 instanceof LT ? (this.buffer = null, this.yieldNode(e13)) : (this.buffer = e13.context, this.yieldBuf(e13.index, e13.type)));
+    return !!e13 && (e13 instanceof LR ? (this.buffer = null, this.yieldNode(e13)) : (this.buffer = e13.context, this.yieldBuf(e13.index, e13.type)));
   }
   toString() {
     return this.buffer ? this.buffer.buffer.childString(this.index) : this._tree.toString();
@@ -22369,7 +22378,7 @@ class Lj {
       if (t10 > -1)
         for (let i11 = t10 + e13, o10 = e13 < 0 ? -1 : r10._tree.children.length; i11 != o10; i11 += e13) {
           let e14 = r10._tree.children[i11];
-          if (this.mode & ed.IncludeAnonymous || e14 instanceof LO || !e14.type.isAnonymous || LN(e14))
+          if (this.mode & ed.IncludeAnonymous || e14 instanceof LT || !e14.type.isAnonymous || Lz(e14))
             return false;
         }
     return true;
@@ -22417,8 +22426,8 @@ class Lj {
           i10 = this.stack[--o10];
         }
     for (let e14 = r10; e14 < this.stack.length; e14++)
-      t10 = new LR(this.buffer, t10, this.stack[e14]);
-    return this.bufferNode = new LR(this.buffer, t10, this.index);
+      t10 = new LN(this.buffer, t10, this.stack[e14]);
+    return this.bufferNode = new LN(this.buffer, t10, this.index);
   }
   get tree() {
     return this.buffer ? null : this._tree._tree;
@@ -22442,11 +22451,11 @@ class Lj {
   }
   matchContext(e13) {
     if (!this.buffer)
-      return LE(this.node, e13);
+      return LL(this.node, e13);
     let { buffer: t10 } = this.buffer, { types: r10 } = t10.set;
     for (let i10 = e13.length - 1, o10 = this.stack.length - 1; i10 >= 0; o10--) {
       if (o10 < 0)
-        return LE(this.node, e13, i10);
+        return LL(this.node, e13, i10);
       let s10 = r10[t10.buffer[this.stack[o10]]];
       if (!s10.isAnonymous) {
         if (e13[i10] && e13[i10] != s10.name)
@@ -22457,36 +22466,36 @@ class Lj {
     return true;
   }
 }
-function LN(e13) {
-  return e13.children.some((e14) => e14 instanceof LO || !e14.type.isAnonymous || LN(e14));
+function Lz(e13) {
+  return e13.children.some((e14) => e14 instanceof LT || !e14.type.isAnonymous || Lz(e14));
 }
-let LB = /* @__PURE__ */ new WeakMap();
-function L$(e13, t10) {
-  if (!e13.isAnonymous || t10 instanceof LO || t10.type != e13)
+let LV = /* @__PURE__ */ new WeakMap();
+function LH(e13, t10) {
+  if (!e13.isAnonymous || t10 instanceof LT || t10.type != e13)
     return 1;
-  let r10 = LB.get(t10);
+  let r10 = LV.get(t10);
   if (null == r10) {
     for (let i10 of (r10 = 1, t10.children)) {
-      if (i10.type != e13 || !(i10 instanceof LS)) {
+      if (i10.type != e13 || !(i10 instanceof L_)) {
         r10 = 1;
         break;
       }
-      r10 += L$(e13, i10);
+      r10 += LH(e13, i10);
     }
-    LB.set(t10, r10);
+    LV.set(t10, r10);
   }
   return r10;
 }
-function LF(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
+function LW(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
   let u10 = 0;
   for (let r11 = i10; r11 < o10; r11++)
-    u10 += L$(e13, t10[r11]);
+    u10 += LH(e13, t10[r11]);
   let h10 = Math.ceil(1.5 * u10 / 8), f10 = [], d10 = [];
   return !function t11(r11, i11, o11, l11, a11) {
     for (let u11 = o11; u11 < l11; ) {
-      let o12 = u11, p10 = i11[u11], g7 = L$(e13, r11[u11]);
+      let o12 = u11, p10 = i11[u11], g7 = LH(e13, r11[u11]);
       for (u11++; u11 < l11; u11++) {
-        let t12 = L$(e13, r11[u11]);
+        let t12 = LH(e13, r11[u11]);
         if (g7 + t12 >= h10)
           break;
         g7 += t12;
@@ -22500,13 +22509,13 @@ function LF(e13, t10, r10, i10, o10, s10, l10, a10, c10) {
         f10.push(r11[o12]);
       } else {
         let t12 = i11[u11 - 1] + r11[u11 - 1].length - p10;
-        f10.push(LF(e13, r11, i11, o12, u11, p10, t12, null, c10));
+        f10.push(LW(e13, r11, i11, o12, u11, p10, t12, null, c10));
       }
       d10.push(p10 + a11 - s10);
     }
   }(t10, r10, i10, o10, 0), (a10 || c10)(f10, d10, l10);
 }
-class Lz {
+class LU {
   constructor(e13, t10, r10, i10, o10 = false, s10 = false) {
     this.from = e13, this.to = t10, this.tree = r10, this.offset = i10, this.open = (o10 ? 1 : 0) | (s10 ? 2 : 0);
   }
@@ -22517,7 +22526,7 @@ class Lz {
     return (2 & this.open) > 0;
   }
   static addTree(e13) {
-    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [], r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = [new Lz(0, e13.length, e13, 0, false, r10)];
+    let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [], r10 = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i10 = [new LU(0, e13.length, e13, 0, false, r10)];
     for (let r11 of t10)
       r11.to > e13.length && i10.push(r11);
     return i10;
@@ -22534,7 +22543,7 @@ class Lz {
           let t11 = s10;
           if (a10 >= t11.from || h10 <= t11.to || c10) {
             let e14 = Math.max(t11.from, a10) - c10, r11 = Math.min(t11.to, h10) - c10;
-            t11 = e14 >= r11 ? null : new Lz(e14, r11, t11.tree, t11.offset + c10, l10 > 0, !!u10);
+            t11 = e14 >= r11 ? null : new LU(e14, r11, t11.tree, t11.offset + c10, l10 > 0, !!u10);
           }
           if (t11 && i10.push(t11), s10.to > h10)
             break;
@@ -22547,9 +22556,9 @@ class Lz {
     return i10;
   }
 }
-class LV {
+class Lq {
   startParse(e13, t10, r10) {
-    return "string" == typeof e13 && (e13 = new LH(e13)), r10 = r10 ? r10.length ? r10.map((e14) => new Lg(e14.from, e14.to)) : [new Lg(0, 0)] : [new Lg(0, e13.length)], this.createParse(e13, t10 || [], r10);
+    return "string" == typeof e13 && (e13 = new LX(e13)), r10 = r10 ? r10.length ? r10.map((e14) => new Lb(e14.from, e14.to)) : [new Lb(0, 0)] : [new Lb(0, e13.length)], this.createParse(e13, t10 || [], r10);
   }
   parse(e13, t10, r10) {
     let i10 = this.startParse(e13, t10, r10);
@@ -22560,7 +22569,7 @@ class LV {
     }
   }
 }
-class LH {
+class LX {
   constructor(e13) {
     this.string = e13;
   }
@@ -22577,30 +22586,30 @@ class LH {
     return this.string.slice(e13, t10);
   }
 }
-new Lm({ perNode: true });
-let LW = 0;
-class LU {
+new Lw({ perNode: true });
+let LQ = 0;
+class LY {
   constructor(e13, t10, r10) {
-    this.set = e13, this.base = t10, this.modified = r10, this.id = LW++;
+    this.set = e13, this.base = t10, this.modified = r10, this.id = LQ++;
   }
   static define(e13) {
     if (null == e13 ? void 0 : e13.base)
       throw Error("Can not derive from a modified tag");
-    let t10 = new LU([], null, []);
+    let t10 = new LY([], null, []);
     if (t10.set.push(t10), e13)
       for (let r10 of e13.set)
         t10.set.push(r10);
     return t10;
   }
   static defineModifier() {
-    let e13 = new LX();
-    return (t10) => t10.modified.indexOf(e13) > -1 ? t10 : LX.get(t10.base || t10, t10.modified.concat(e13).sort((e14, t11) => e14.id - t11.id));
+    let e13 = new LG();
+    return (t10) => t10.modified.indexOf(e13) > -1 ? t10 : LG.get(t10.base || t10, t10.modified.concat(e13).sort((e14, t11) => e14.id - t11.id));
   }
 }
-let Lq = 0;
-class LX {
+let LK = 0;
+class LG {
   constructor() {
-    this.instances = [], this.id = Lq++;
+    this.instances = [], this.id = LK++;
   }
   static get(e13, t10) {
     if (!t10.length)
@@ -22611,7 +22620,7 @@ class LX {
     });
     if (r10)
       return r10;
-    let i10 = [], o10 = new LU(i10, e13, t10);
+    let i10 = [], o10 = new LY(i10, e13, t10);
     for (let e14 of t10)
       e14.instances.push(o10);
     let s10 = function(e14) {
@@ -22624,11 +22633,11 @@ class LX {
     for (let t11 of e13.set)
       if (!t11.modified.length)
         for (let e14 of s10)
-          i10.push(LX.get(t11, e14));
+          i10.push(LG.get(t11, e14));
     return o10;
   }
 }
-function LQ(e13) {
+function LJ(e13) {
   let t10 = /* @__PURE__ */ Object.create(null);
   for (let r10 in e13) {
     let i10 = e13[r10];
@@ -22657,14 +22666,14 @@ function LQ(e13) {
         let l10 = r11.length - 1, a10 = r11[l10];
         if (!a10)
           throw RangeError("Invalid path: " + e14);
-        let c10 = new LK(i10, o10, l10 > 0 ? r11.slice(0, l10) : null);
+        let c10 = new L0(i10, o10, l10 > 0 ? r11.slice(0, l10) : null);
         t10[a10] = c10.sort(t10[a10]);
       }
   }
-  return LY.add(t10);
+  return LZ.add(t10);
 }
-let LY = new Lm();
-class LK {
+let LZ = new Lw();
+class L0 {
   constructor(e13, t10, r10, i10) {
     this.tags = e13, this.mode = t10, this.context = r10, this.next = i10;
   }
@@ -22681,7 +22690,7 @@ class LK {
     return this.context ? this.context.length : 0;
   }
 }
-function LG(e13, t10) {
+function L1(e13, t10) {
   let r10 = /* @__PURE__ */ Object.create(null);
   for (let t11 of e13)
     if (Array.isArray(t11.tag))
@@ -22703,8 +22712,8 @@ function LG(e13, t10) {
     return t11;
   }, scope: i10 };
 }
-LK.empty = new LK([], 2, null);
-class LJ {
+L0.empty = new L0([], 2, null);
+class L2 {
   constructor(e13, t10, r10) {
     this.at = e13, this.highlighters = t10, this.span = r10, this.class = "";
   }
@@ -22720,11 +22729,11 @@ class LJ {
       return;
     s10.isTop && (o10 = this.highlighters.filter((e14) => !e14.scope || e14.scope(s10)));
     let c10 = i10, u10 = function(e14) {
-      let t11 = e14.type.prop(LY);
+      let t11 = e14.type.prop(LZ);
       for (; t11 && t11.context && !e14.matchContext(t11.context); )
         t11 = t11.next;
       return t11 || null;
-    }(e13) || LK.empty, h10 = function(e14, t11) {
+    }(e13) || L0.empty, h10 = function(e14, t11) {
       let r11 = null;
       for (let i11 of e14) {
         let e15 = i11.style(t11);
@@ -22734,7 +22743,7 @@ class LJ {
     }(o10, u10.tags);
     if (h10 && (c10 && (c10 += " "), c10 += h10, 1 == u10.mode && (i10 += (i10 ? " " : "") + h10)), this.startSpan(Math.max(t10, l10), c10), u10.opaque)
       return;
-    let f10 = e13.tree && e13.tree.prop(Lm.mounted);
+    let f10 = e13.tree && e13.tree.prop(Lw.mounted);
     if (f10 && f10.overlay) {
       let s11 = e13.node.enter(f10.overlay[0].from + l10, 1), u11 = this.highlighters.filter((e14) => !e14.scope || e14.scope(f10.tree.type)), h11 = e13.firstChild();
       for (let d10 = 0, p10 = l10; ; d10++) {
@@ -22760,16 +22769,16 @@ class LJ {
     }
   }
 }
-let LZ = LU.define, L0 = LZ(), L1 = LZ(), L2 = LZ(L1), L4 = LZ(L1), L3 = LZ(), L5 = LZ(L3), L8 = LZ(L3), L6 = LZ(), L9 = LZ(L6), L7 = LZ(), je = LZ(), jt = LZ(), jn = LZ(jt), jr = LZ(), ji = { comment: L0, lineComment: LZ(L0), blockComment: LZ(L0), docComment: LZ(L0), name: L1, variableName: LZ(L1), typeName: L2, tagName: LZ(L2), propertyName: L4, attributeName: LZ(L4), className: LZ(L1), labelName: LZ(L1), namespace: LZ(L1), macroName: LZ(L1), literal: L3, string: L5, docString: LZ(L5), character: LZ(L5), attributeValue: LZ(L5), number: L8, integer: LZ(L8), float: LZ(L8), bool: LZ(L3), regexp: LZ(L3), escape: LZ(L3), color: LZ(L3), url: LZ(L3), keyword: L7, self: LZ(L7), null: LZ(L7), atom: LZ(L7), unit: LZ(L7), modifier: LZ(L7), operatorKeyword: LZ(L7), controlKeyword: LZ(L7), definitionKeyword: LZ(L7), moduleKeyword: LZ(L7), operator: je, derefOperator: LZ(je), arithmeticOperator: LZ(je), logicOperator: LZ(je), bitwiseOperator: LZ(je), compareOperator: LZ(je), updateOperator: LZ(je), definitionOperator: LZ(je), typeOperator: LZ(je), controlOperator: LZ(je), punctuation: jt, separator: LZ(jt), bracket: jn, angleBracket: LZ(jn), squareBracket: LZ(jn), paren: LZ(jn), brace: LZ(jn), content: L6, heading: L9, heading1: LZ(L9), heading2: LZ(L9), heading3: LZ(L9), heading4: LZ(L9), heading5: LZ(L9), heading6: LZ(L9), contentSeparator: LZ(L6), list: LZ(L6), quote: LZ(L6), emphasis: LZ(L6), strong: LZ(L6), link: LZ(L6), monospace: LZ(L6), strikethrough: LZ(L6), inserted: LZ(), deleted: LZ(), changed: LZ(), invalid: LZ(), meta: jr, documentMeta: LZ(jr), annotation: LZ(jr), processingInstruction: LZ(jr), definition: LU.defineModifier(), constant: LU.defineModifier(), function: LU.defineModifier(), standard: LU.defineModifier(), local: LU.defineModifier(), special: LU.defineModifier() }, jo = LG([{ tag: ji.link, class: "tok-link" }, { tag: ji.heading, class: "tok-heading" }, { tag: ji.emphasis, class: "tok-emphasis" }, { tag: ji.strong, class: "tok-strong" }, { tag: ji.keyword, class: "tok-keyword" }, { tag: ji.atom, class: "tok-atom" }, { tag: ji.bool, class: "tok-bool" }, { tag: ji.url, class: "tok-url" }, { tag: ji.labelName, class: "tok-labelName" }, { tag: ji.inserted, class: "tok-inserted" }, { tag: ji.deleted, class: "tok-deleted" }, { tag: ji.literal, class: "tok-literal" }, { tag: ji.string, class: "tok-string" }, { tag: ji.number, class: "tok-number" }, { tag: [ji.regexp, ji.escape, ji.special(ji.string)], class: "tok-string2" }, { tag: ji.variableName, class: "tok-variableName" }, { tag: ji.local(ji.variableName), class: "tok-variableName tok-local" }, { tag: ji.definition(ji.variableName), class: "tok-variableName tok-definition" }, { tag: ji.special(ji.variableName), class: "tok-variableName2" }, { tag: ji.definition(ji.propertyName), class: "tok-propertyName tok-definition" }, { tag: ji.typeName, class: "tok-typeName" }, { tag: ji.namespace, class: "tok-namespace" }, { tag: ji.className, class: "tok-className" }, { tag: ji.macroName, class: "tok-macroName" }, { tag: ji.propertyName, class: "tok-propertyName" }, { tag: ji.operator, class: "tok-operator" }, { tag: ji.comment, class: "tok-comment" }, { tag: ji.meta, class: "tok-meta" }, { tag: ji.invalid, class: "tok-invalid" }, { tag: ji.punctuation, class: "tok-punctuation" }]), js = new Lm(), jl = new Lm();
-class ja {
+let L4 = LY.define, L3 = L4(), L5 = L4(), L8 = L4(L5), L6 = L4(L5), L9 = L4(), L7 = L4(L9), je = L4(L9), jt = L4(), jn = L4(jt), jr = L4(), ji = L4(), jo = L4(), js = L4(jo), jl = L4(), ja = { comment: L3, lineComment: L4(L3), blockComment: L4(L3), docComment: L4(L3), name: L5, variableName: L4(L5), typeName: L8, tagName: L4(L8), propertyName: L6, attributeName: L4(L6), className: L4(L5), labelName: L4(L5), namespace: L4(L5), macroName: L4(L5), literal: L9, string: L7, docString: L4(L7), character: L4(L7), attributeValue: L4(L7), number: je, integer: L4(je), float: L4(je), bool: L4(L9), regexp: L4(L9), escape: L4(L9), color: L4(L9), url: L4(L9), keyword: jr, self: L4(jr), null: L4(jr), atom: L4(jr), unit: L4(jr), modifier: L4(jr), operatorKeyword: L4(jr), controlKeyword: L4(jr), definitionKeyword: L4(jr), moduleKeyword: L4(jr), operator: ji, derefOperator: L4(ji), arithmeticOperator: L4(ji), logicOperator: L4(ji), bitwiseOperator: L4(ji), compareOperator: L4(ji), updateOperator: L4(ji), definitionOperator: L4(ji), typeOperator: L4(ji), controlOperator: L4(ji), punctuation: jo, separator: L4(jo), bracket: js, angleBracket: L4(js), squareBracket: L4(js), paren: L4(js), brace: L4(js), content: jt, heading: jn, heading1: L4(jn), heading2: L4(jn), heading3: L4(jn), heading4: L4(jn), heading5: L4(jn), heading6: L4(jn), contentSeparator: L4(jt), list: L4(jt), quote: L4(jt), emphasis: L4(jt), strong: L4(jt), link: L4(jt), monospace: L4(jt), strikethrough: L4(jt), inserted: L4(), deleted: L4(), changed: L4(), invalid: L4(), meta: jl, documentMeta: L4(jl), annotation: L4(jl), processingInstruction: L4(jl), definition: LY.defineModifier(), constant: LY.defineModifier(), function: LY.defineModifier(), standard: LY.defineModifier(), local: LY.defineModifier(), special: LY.defineModifier() }, jc = L1([{ tag: ja.link, class: "tok-link" }, { tag: ja.heading, class: "tok-heading" }, { tag: ja.emphasis, class: "tok-emphasis" }, { tag: ja.strong, class: "tok-strong" }, { tag: ja.keyword, class: "tok-keyword" }, { tag: ja.atom, class: "tok-atom" }, { tag: ja.bool, class: "tok-bool" }, { tag: ja.url, class: "tok-url" }, { tag: ja.labelName, class: "tok-labelName" }, { tag: ja.inserted, class: "tok-inserted" }, { tag: ja.deleted, class: "tok-deleted" }, { tag: ja.literal, class: "tok-literal" }, { tag: ja.string, class: "tok-string" }, { tag: ja.number, class: "tok-number" }, { tag: [ja.regexp, ja.escape, ja.special(ja.string)], class: "tok-string2" }, { tag: ja.variableName, class: "tok-variableName" }, { tag: ja.local(ja.variableName), class: "tok-variableName tok-local" }, { tag: ja.definition(ja.variableName), class: "tok-variableName tok-definition" }, { tag: ja.special(ja.variableName), class: "tok-variableName2" }, { tag: ja.definition(ja.propertyName), class: "tok-propertyName tok-definition" }, { tag: ja.typeName, class: "tok-typeName" }, { tag: ja.namespace, class: "tok-namespace" }, { tag: ja.className, class: "tok-className" }, { tag: ja.macroName, class: "tok-macroName" }, { tag: ja.propertyName, class: "tok-propertyName" }, { tag: ja.operator, class: "tok-operator" }, { tag: ja.comment, class: "tok-comment" }, { tag: ja.meta, class: "tok-meta" }, { tag: ja.invalid, class: "tok-invalid" }, { tag: ja.punctuation, class: "tok-punctuation" }]), ju = new Lw(), jh = new Lw();
+class jf {
   constructor(e13, t10, r10 = [], i10 = "") {
-    this.data = e13, this.name = i10, Py.prototype.hasOwnProperty("tree") || Object.defineProperty(Py.prototype, "tree", { get() {
-      return jh(this);
-    } }), this.parser = t10, this.extension = [jw.of(this), Py.languageData.of((e14, t11, r11) => {
-      let i11 = jc(e14, t11, r11), o10 = i11.type.prop(js);
+    this.data = e13, this.name = i10, Pk.prototype.hasOwnProperty("tree") || Object.defineProperty(Pk.prototype, "tree", { get() {
+      return jg(this);
+    } }), this.parser = t10, this.extension = [jC.of(this), Pk.languageData.of((e14, t11, r11) => {
+      let i11 = jd(e14, t11, r11), o10 = i11.type.prop(ju);
       if (!o10)
         return [];
-      let s10 = e14.facet(o10), l10 = i11.type.prop(jl);
+      let s10 = e14.facet(o10), l10 = i11.type.prop(jh);
       if (l10) {
         let o11 = i11.resolve(t11 - i11.from, r11);
         for (let t12 of l10)
@@ -22783,22 +22792,22 @@ class ja {
   }
   isActiveAt(e13, t10) {
     let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-    return jc(e13, t10, r10).type.prop(js) == this.data;
+    return jd(e13, t10, r10).type.prop(ju) == this.data;
   }
   findRegions(e13) {
-    let t10 = e13.facet(jw);
+    let t10 = e13.facet(jC);
     if ((null == t10 ? void 0 : t10.data) == this.data)
       return [{ from: 0, to: e13.doc.length }];
     if (!t10 || !t10.allowsNesting)
       return [];
     let r10 = [], i10 = (e14, t11) => {
-      if (e14.prop(js) == this.data) {
+      if (e14.prop(ju) == this.data) {
         r10.push({ from: t11, to: t11 + e14.length });
         return;
       }
-      let o10 = e14.prop(Lm.mounted);
+      let o10 = e14.prop(Lw.mounted);
       if (o10) {
-        if (o10.tree.prop(js) == this.data) {
+        if (o10.tree.prop(ju) == this.data) {
           if (o10.overlay)
             for (let e15 of o10.overlay)
               r10.push({ from: e15.from + t11, to: e15.to + t11 });
@@ -22814,44 +22823,44 @@ class ja {
       }
       for (let r11 = 0; r11 < e14.children.length; r11++) {
         let o11 = e14.children[r11];
-        o11 instanceof LS && i10(o11, e14.positions[r11] + t11);
+        o11 instanceof L_ && i10(o11, e14.positions[r11] + t11);
       }
     };
-    return i10(jh(e13), 0), r10;
+    return i10(jg(e13), 0), r10;
   }
   get allowsNesting() {
     return true;
   }
 }
-function jc(e13, t10, r10) {
-  let i10 = e13.facet(jw), o10 = jh(e13).topNode;
+function jd(e13, t10, r10) {
+  let i10 = e13.facet(jC), o10 = jg(e13).topNode;
   if (!i10 || i10.allowsNesting)
     for (let e14 = o10; e14; e14 = e14.enter(t10, r10, ed.ExcludeBuffers))
       e14.type.isTop && (o10 = e14);
   return o10;
 }
-ja.setState = Pu.define();
-class ju extends ja {
+jf.setState = Pp.define();
+class jp extends jf {
   constructor(e13, t10, r10) {
     super(e13, t10, [], r10), this.parser = t10;
   }
   static define(e13) {
     var t10;
-    let r10 = (t10 = e13.languageData, TQ.define({ combine: t10 ? (e14) => e14.concat(t10) : void 0 }));
-    return new ju(r10, e13.parser.configure({ props: [js.add((e14) => e14.isTop ? r10 : void 0)] }), e13.name);
+    let r10 = (t10 = e13.languageData, TJ.define({ combine: t10 ? (e14) => e14.concat(t10) : void 0 }));
+    return new jp(r10, e13.parser.configure({ props: [ju.add((e14) => e14.isTop ? r10 : void 0)] }), e13.name);
   }
   configure(e13, t10) {
-    return new ju(this.data, this.parser.configure(e13), t10 || this.name);
+    return new jp(this.data, this.parser.configure(e13), t10 || this.name);
   }
   get allowsNesting() {
     return this.parser.hasWrappers();
   }
 }
-function jh(e13) {
-  let t10 = e13.field(ja.state, false);
-  return t10 ? t10.tree : LS.empty;
+function jg(e13) {
+  let t10 = e13.field(jf.state, false);
+  return t10 ? t10.tree : L_.empty;
 }
-class jf {
+class jm {
   constructor(e13) {
     this.doc = e13, this.cursorPos = 0, this.string = "", this.cursor = e13.iter();
   }
@@ -22872,19 +22881,19 @@ class jf {
     return e13 < r10 || t10 >= this.cursorPos ? this.doc.sliceString(e13, t10) : this.string.slice(e13 - r10, t10 - r10);
   }
 }
-let jd = null;
-class jp {
+let jv = null;
+class jy {
   constructor(e13, t10, r10 = [], i10, o10, s10, l10, a10) {
     this.parser = e13, this.state = t10, this.fragments = r10, this.tree = i10, this.treeLen = o10, this.viewport = s10, this.skipped = l10, this.scheduleOn = a10, this.parse = null, this.tempSkipped = [];
   }
   static create(e13, t10, r10) {
-    return new jp(e13, t10, [], LS.empty, 0, r10, [], null);
+    return new jy(e13, t10, [], L_.empty, 0, r10, [], null);
   }
   startParse() {
-    return this.parser.startParse(new jf(this.state.doc), this.fragments);
+    return this.parser.startParse(new jm(this.state.doc), this.fragments);
   }
   work(e13, t10) {
-    return (null != t10 && t10 >= this.state.doc.length && (t10 = void 0), this.tree != LS.empty && this.isDone(null != t10 ? t10 : this.state.doc.length)) ? (this.takeTree(), true) : this.withContext(() => {
+    return (null != t10 && t10 >= this.state.doc.length && (t10 = void 0), this.tree != L_.empty && this.isDone(null != t10 ? t10 : this.state.doc.length)) ? (this.takeTree(), true) : this.withContext(() => {
       var r10;
       if ("number" == typeof e13) {
         let t11 = Date.now() + e13;
@@ -22893,7 +22902,7 @@ class jp {
       for (this.parse || (this.parse = this.startParse()), null != t10 && (null == this.parse.stoppedAt || this.parse.stoppedAt > t10) && t10 < this.state.doc.length && this.parse.stopAt(t10); ; ) {
         let i10 = this.parse.advance();
         if (i10) {
-          if (this.fragments = this.withoutTempSkipped(Lz.addTree(i10, this.fragments, null != this.parse.stoppedAt)), this.treeLen = null !== (r10 = this.parse.stoppedAt) && void 0 !== r10 ? r10 : this.state.doc.length, this.tree = i10, this.parse = null, !(this.treeLen < (null != t10 ? t10 : this.state.doc.length)))
+          if (this.fragments = this.withoutTempSkipped(LU.addTree(i10, this.fragments, null != this.parse.stoppedAt)), this.treeLen = null !== (r10 = this.parse.stoppedAt) && void 0 !== r10 ? r10 : this.state.doc.length, this.tree = i10, this.parse = null, !(this.treeLen < (null != t10 ? t10 : this.state.doc.length)))
             return true;
           this.parse = this.startParse();
         }
@@ -22907,33 +22916,33 @@ class jp {
     this.parse && (e13 = this.parse.parsedPos) >= this.treeLen && ((null == this.parse.stoppedAt || this.parse.stoppedAt > e13) && this.parse.stopAt(e13), this.withContext(() => {
       for (; !(t10 = this.parse.advance()); )
         ;
-    }), this.treeLen = e13, this.tree = t10, this.fragments = this.withoutTempSkipped(Lz.addTree(this.tree, this.fragments, true)), this.parse = null);
+    }), this.treeLen = e13, this.tree = t10, this.fragments = this.withoutTempSkipped(LU.addTree(this.tree, this.fragments, true)), this.parse = null);
   }
   withContext(e13) {
-    let t10 = jd;
-    jd = this;
+    let t10 = jv;
+    jv = this;
     try {
       return e13();
     } finally {
-      jd = t10;
+      jv = t10;
     }
   }
   withoutTempSkipped(e13) {
     for (let t10; t10 = this.tempSkipped.pop(); )
-      e13 = jg(e13, t10.from, t10.to);
+      e13 = jb(e13, t10.from, t10.to);
     return e13;
   }
   changes(e13, t10) {
     let { fragments: r10, tree: i10, treeLen: o10, viewport: s10, skipped: l10 } = this;
     if (this.takeTree(), !e13.empty) {
       let t11 = [];
-      if (e13.iterChangedRanges((e14, r11, i11, o11) => t11.push({ fromA: e14, toA: r11, fromB: i11, toB: o11 })), r10 = Lz.applyChanges(r10, t11), i10 = LS.empty, o10 = 0, s10 = { from: e13.mapPos(s10.from, -1), to: e13.mapPos(s10.to, 1) }, this.skipped.length)
+      if (e13.iterChangedRanges((e14, r11, i11, o11) => t11.push({ fromA: e14, toA: r11, fromB: i11, toB: o11 })), r10 = LU.applyChanges(r10, t11), i10 = L_.empty, o10 = 0, s10 = { from: e13.mapPos(s10.from, -1), to: e13.mapPos(s10.to, 1) }, this.skipped.length)
         for (let t12 of (l10 = [], this.skipped)) {
           let r11 = e13.mapPos(t12.from, 1), i11 = e13.mapPos(t12.to, -1);
           r11 < i11 && l10.push({ from: r11, to: i11 });
         }
     }
-    return new jp(this.parser, t10, r10, i10, o10, s10, l10, this.scheduleOn);
+    return new jy(this.parser, t10, r10, i10, o10, s10, l10, this.scheduleOn);
   }
   updateViewport(e13) {
     if (this.viewport.from == e13.from && this.viewport.to == e13.to)
@@ -22942,7 +22951,7 @@ class jp {
     let t10 = this.skipped.length;
     for (let t11 = 0; t11 < this.skipped.length; t11++) {
       let { from: r10, to: i10 } = this.skipped[t11];
-      r10 < e13.to && i10 > e13.from && (this.fragments = jg(this.fragments, r10, i10), this.skipped.splice(t11--, 1));
+      r10 < e13.to && i10 > e13.from && (this.fragments = jb(this.fragments, r10, i10), this.skipped.splice(t11--, 1));
     }
     return !(this.skipped.length >= t10) && (this.reset(), true);
   }
@@ -22953,17 +22962,17 @@ class jp {
     this.skipped.push({ from: e13, to: t10 });
   }
   static getSkippingParser(e13) {
-    return new class extends LV {
+    return new class extends Lq {
       createParse(t10, r10, i10) {
         let o10 = i10[0].from, s10 = i10[i10.length - 1].to;
         return { parsedPos: o10, advance() {
-          let t11 = jd;
+          let t11 = jv;
           if (t11) {
             for (let e14 of i10)
               t11.tempSkipped.push(e14);
             e13 && (t11.scheduleOn = t11.scheduleOn ? Promise.all([t11.scheduleOn, e13]) : e13);
           }
-          return this.parsedPos = s10, new LS(Lb.none, [], [], s10 - o10);
+          return this.parsedPos = s10, new L_(LS.none, [], [], s10 - o10);
         }, stoppedAt: null, stopAt() {
         } };
       }
@@ -22975,13 +22984,13 @@ class jp {
     return this.treeLen >= e13 && t10.length && 0 == t10[0].from && t10[0].to >= e13;
   }
   static get() {
-    return jd;
+    return jv;
   }
 }
-function jg(e13, t10, r10) {
-  return Lz.applyChanges(e13, [{ fromA: t10, toA: r10, fromB: t10, toB: r10 }]);
+function jb(e13, t10, r10) {
+  return LU.applyChanges(e13, [{ fromA: t10, toA: r10, fromB: t10, toB: r10 }]);
 }
-class jm {
+class jw {
   constructor(e13) {
     this.context = e13, this.tree = e13.tree;
   }
@@ -22989,56 +22998,56 @@ class jm {
     if (!e13.docChanged && this.tree == this.context.tree)
       return this;
     let t10 = this.context.changes(e13.changes, e13.state), r10 = this.context.treeLen == e13.startState.doc.length ? void 0 : Math.max(e13.changes.mapPos(this.context.treeLen), t10.viewport.to);
-    return t10.work(20, r10) || t10.takeTree(), new jm(t10);
+    return t10.work(20, r10) || t10.takeTree(), new jw(t10);
   }
   static init(e13) {
-    let t10 = Math.min(3e3, e13.doc.length), r10 = jp.create(e13.facet(jw).parser, e13, { from: 0, to: t10 });
-    return r10.work(20, t10) || r10.takeTree(), new jm(r10);
+    let t10 = Math.min(3e3, e13.doc.length), r10 = jy.create(e13.facet(jC).parser, e13, { from: 0, to: t10 });
+    return r10.work(20, t10) || r10.takeTree(), new jw(r10);
   }
 }
-ja.state = T0.define({ create: jm.init, update(e13, t10) {
+jf.state = T3.define({ create: jw.init, update(e13, t10) {
   for (let e14 of t10.effects)
-    if (e14.is(ja.setState))
+    if (e14.is(jf.setState))
       return e14.value;
-  return t10.startState.facet(jw) != t10.state.facet(jw) ? jm.init(t10.state) : e13.apply(t10);
+  return t10.startState.facet(jC) != t10.state.facet(jC) ? jw.init(t10.state) : e13.apply(t10);
 } });
-let jv = (e13) => {
+let jx = (e13) => {
   let t10 = setTimeout(() => e13(), 500);
   return () => clearTimeout(t10);
 };
-"undefined" != typeof requestIdleCallback && (jv = (e13) => {
+"undefined" != typeof requestIdleCallback && (jx = (e13) => {
   let t10 = -1, r10 = setTimeout(() => {
     t10 = requestIdleCallback(e13, { timeout: 400 });
   }, 100);
   return () => t10 < 0 ? clearTimeout(r10) : cancelIdleCallback(t10);
 });
-let jy = "undefined" != typeof navigator && (null === (ep = navigator.scheduling) || void 0 === ep ? void 0 : ep.isInputPending) ? () => navigator.scheduling.isInputPending() : null, jb = Dd.fromClass(class {
+let jk = "undefined" != typeof navigator && (null === (ep = navigator.scheduling) || void 0 === ep ? void 0 : ep.isInputPending) ? () => navigator.scheduling.isInputPending() : null, jS = Dv.fromClass(class {
   constructor(e13) {
     this.view = e13, this.working = null, this.workScheduled = 0, this.chunkEnd = -1, this.chunkBudget = -1, this.work = this.work.bind(this), this.scheduleWork();
   }
   update(e13) {
-    let t10 = this.view.state.field(ja.state).context;
+    let t10 = this.view.state.field(jf.state).context;
     (t10.updateViewport(e13.view.viewport) || this.view.viewport.to > t10.treeLen) && this.scheduleWork(), (e13.docChanged || e13.selectionSet) && (this.view.hasFocus && (this.chunkBudget += 50), this.scheduleWork()), this.checkAsyncSchedule(t10);
   }
   scheduleWork() {
     if (this.working)
       return;
-    let { state: e13 } = this.view, t10 = e13.field(ja.state);
-    t10.tree == t10.context.tree && t10.context.isDone(e13.doc.length) || (this.working = jv(this.work));
+    let { state: e13 } = this.view, t10 = e13.field(jf.state);
+    t10.tree == t10.context.tree && t10.context.isDone(e13.doc.length) || (this.working = jx(this.work));
   }
   work(e13) {
     this.working = null;
     let t10 = Date.now();
     if (this.chunkEnd < t10 && (this.chunkEnd < 0 || this.view.hasFocus) && (this.chunkEnd = t10 + 3e4, this.chunkBudget = 3e3), this.chunkBudget <= 0)
       return;
-    let { state: r10, viewport: { to: i10 } } = this.view, o10 = r10.field(ja.state);
+    let { state: r10, viewport: { to: i10 } } = this.view, o10 = r10.field(jf.state);
     if (o10.tree == o10.context.tree && o10.context.isDone(i10 + 1e5))
       return;
-    let s10 = Date.now() + Math.min(this.chunkBudget, 100, e13 && !jy ? Math.max(25, e13.timeRemaining() - 5) : 1e9), l10 = o10.context.treeLen < i10 && r10.doc.length > i10 + 1e3, a10 = o10.context.work(() => jy && jy() || Date.now() > s10, i10 + (l10 ? 0 : 1e5));
-    this.chunkBudget -= Date.now() - t10, (a10 || this.chunkBudget <= 0) && (o10.context.takeTree(), this.view.dispatch({ effects: ja.setState.of(new jm(o10.context)) })), this.chunkBudget > 0 && !(a10 && !l10) && this.scheduleWork(), this.checkAsyncSchedule(o10.context);
+    let s10 = Date.now() + Math.min(this.chunkBudget, 100, e13 && !jk ? Math.max(25, e13.timeRemaining() - 5) : 1e9), l10 = o10.context.treeLen < i10 && r10.doc.length > i10 + 1e3, a10 = o10.context.work(() => jk && jk() || Date.now() > s10, i10 + (l10 ? 0 : 1e5));
+    this.chunkBudget -= Date.now() - t10, (a10 || this.chunkBudget <= 0) && (o10.context.takeTree(), this.view.dispatch({ effects: jf.setState.of(new jw(o10.context)) })), this.chunkBudget > 0 && !(a10 && !l10) && this.scheduleWork(), this.checkAsyncSchedule(o10.context);
   }
   checkAsyncSchedule(e13) {
-    e13.scheduleOn && (this.workScheduled++, e13.scheduleOn.then(() => this.scheduleWork()).catch((e14) => Dc(this.view.state, e14)).then(() => this.workScheduled--), e13.scheduleOn = null);
+    e13.scheduleOn && (this.workScheduled++, e13.scheduleOn.then(() => this.scheduleWork()).catch((e14) => Dd(this.view.state, e14)).then(() => this.workScheduled--), e13.scheduleOn = null);
   }
   destroy() {
     this.working && this.working();
@@ -23048,16 +23057,16 @@ let jy = "undefined" != typeof navigator && (null === (ep = navigator.scheduling
   }
 }, { eventHandlers: { focus() {
   this.scheduleWork();
-} } }), jw = TQ.define({ combine: (e13) => e13.length ? e13[0] : null, enables: (e13) => [ja.state, jb, Rz.contentAttributes.compute([e13], (t10) => {
+} } }), jC = TJ.define({ combine: (e13) => e13.length ? e13[0] : null, enables: (e13) => [jf.state, jS, RU.contentAttributes.compute([e13], (t10) => {
   let r10 = t10.facet(e13);
   return r10 && r10.name ? { "data-language": r10.name } : {};
 })] });
-class jx {
+class jO {
   constructor(e13, t10 = []) {
     this.language = e13, this.support = t10, this.extension = [e13, t10];
   }
 }
-let jk = TQ.define(), jS = TQ.define({ combine: (e13) => {
+let jA = TJ.define(), j_ = TJ.define({ combine: (e13) => {
   if (!e13.length)
     return "  ";
   let t10 = e13[0];
@@ -23065,12 +23074,12 @@ let jk = TQ.define(), jS = TQ.define({ combine: (e13) => {
     throw Error("Invalid indent unit: " + JSON.stringify(e13[0]));
   return t10;
 } });
-function jC(e13) {
-  let t10 = e13.facet(jS);
+function jM(e13) {
+  let t10 = e13.facet(j_);
   return 9 == t10.charCodeAt(0) ? e13.tabSize * t10.length : t10.length;
 }
-function jO(e13, t10) {
-  let r10 = "", i10 = e13.tabSize, o10 = e13.facet(jS)[0];
+function jT(e13, t10) {
+  let r10 = "", i10 = e13.tabSize, o10 = e13.facet(j_)[0];
   if ("	" == o10) {
     for (; t10 >= i10; )
       r10 += "	", t10 -= i10;
@@ -23080,13 +23089,13 @@ function jO(e13, t10) {
     r10 += o10;
   return r10;
 }
-function jA(e13, t10) {
-  for (let r11 of (e13 instanceof Py && (e13 = new j_(e13)), e13.state.facet(jk))) {
+function jP(e13, t10) {
+  for (let r11 of (e13 instanceof Pk && (e13 = new jE(e13)), e13.state.facet(jA))) {
     let i10 = r11(e13, t10);
     if (void 0 !== i10)
       return i10;
   }
-  let r10 = jh(e13.state);
+  let r10 = jg(e13.state);
   return r10.length >= t10 ? function(e14, t11, r11) {
     let i10 = t11.resolveStack(r11), o10 = i10.node.enterUnfinishedNodesBefore(r11);
     if (o10 != i10.node) {
@@ -23096,12 +23105,12 @@ function jA(e13, t10) {
       for (let t12 = e15.length - 1; t12 >= 0; t12--)
         i10 = { node: e15[t12], next: i10 };
     }
-    return jT(i10, e14, r11);
+    return jR(i10, e14, r11);
   }(e13, r10, t10) : null;
 }
-class j_ {
+class jE {
   constructor(e13, t10 = {}) {
-    this.state = e13, this.options = t10, this.unit = jC(e13);
+    this.state = e13, this.options = t10, this.unit = jM(e13);
   }
   lineAt(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, r10 = this.state.doc.lineAt(e13), { simulateBreak: i10, simulateDoubleBreak: o10 } = this.options;
@@ -23120,7 +23129,7 @@ class j_ {
   }
   countColumn(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13.length;
-    return Pj(e13, this.state.tabSize, t10);
+    return PF(e13, this.state.tabSize, t10);
   }
   lineIndent(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, { text: r10, from: i10 } = this.lineAt(e13, t10), o10 = this.options.overrideIndentation;
@@ -23135,15 +23144,15 @@ class j_ {
     return this.options.simulateBreak || null;
   }
 }
-let jM = new Lm();
-function jT(e13, t10, r10) {
+let jD = new Lw();
+function jR(e13, t10, r10) {
   for (let i10 = e13; i10; i10 = i10.next) {
     let e14 = function(e15) {
-      let t11 = e15.type.prop(jM);
+      let t11 = e15.type.prop(jD);
       if (t11)
         return t11;
       let r11 = e15.firstChild, i11;
-      if (r11 && (i11 = r11.type.prop(Lm.closedBy))) {
+      if (r11 && (i11 = r11.type.prop(Lw.closedBy))) {
         let t12 = e15.lastChild, r12 = t12 && i11.indexOf(t12.name) > -1;
         return (e16) => function(e17, t13, r13, i12, o10) {
           let s10 = e17.textAfter, l10 = s10.match(/^\s*/)[0].length, a10 = i12 && s10.slice(l10, l10 + i12.length) == i12 || o10 == e17.pos + l10, c10 = t13 ? function(e18) {
@@ -23163,17 +23172,17 @@ function jT(e13, t10, r10) {
           return c10 ? a10 ? e17.column(c10.from) : e17.column(c10.to) : e17.baseIndent + (a10 ? 0 : 1 * e17.unit);
         }(e16, true, 0, void 0, r12 && !(e16.pos == e16.options.simulateBreak && e16.options.simulateDoubleBreak) ? t12.from : void 0);
       }
-      return null == e15.parent ? jP : null;
+      return null == e15.parent ? jI : null;
     }(i10.node);
     if (e14)
-      return e14(jE.create(t10, r10, i10));
+      return e14(jL.create(t10, r10, i10));
   }
   return 0;
 }
-function jP() {
+function jI() {
   return 0;
 }
-class jE extends j_ {
+class jL extends jE {
   constructor(e13, t10, r10) {
     super(e13.state, e13.options), this.base = e13, this.pos = t10, this.context = r10;
   }
@@ -23181,7 +23190,7 @@ class jE extends j_ {
     return this.context.node;
   }
   static create(e13, t10, r10) {
-    return new jE(e13, t10, r10);
+    return new jL(e13, t10, r10);
   }
   get textAfter() {
     return this.textAfterPos(this.pos);
@@ -23207,25 +23216,25 @@ class jE extends j_ {
     return this.lineIndent(t10.from);
   }
   continue() {
-    return jT(this.context.next, this.base, this.pos);
+    return jR(this.context.next, this.base, this.pos);
   }
 }
-function jD() {
+function jj() {
   let { except: e13, units: t10 = 1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   return (r10) => {
     let i10 = e13 && e13.test(r10.textAfter);
     return r10.baseIndent + (i10 ? 0 : t10 * r10.unit);
   };
 }
-let jR = TQ.define(), jI = new Lm();
-function jL(e13, t10, r10) {
-  for (let i10 of e13.facet(jR)) {
+let jN = TJ.define(), jB = new Lw();
+function j$(e13, t10, r10) {
+  for (let i10 of e13.facet(jN)) {
     let o10 = i10(e13, t10, r10);
     if (o10)
       return o10;
   }
   return function(e14, t11, r11) {
-    let i10 = jh(e14);
+    let i10 = jg(e14);
     if (i10.length < r11)
       return null;
     let o10 = i10.resolveStack(r11, 1), s10 = null;
@@ -23235,7 +23244,7 @@ function jL(e13, t10, r10) {
         continue;
       if (s10 && o11.from < t11)
         break;
-      let a10 = o11.type.prop(jI);
+      let a10 = o11.type.prop(jB);
       if (a10 && (o11.to < i10.length - 50 || i10.length == e14.doc.length || !function(e15) {
         let t12 = e15.lastChild;
         return t12 && t12.to == e15.to && t12.type.isError;
@@ -23247,29 +23256,29 @@ function jL(e13, t10, r10) {
     return s10;
   }(e13, t10, r10);
 }
-function jj(e13, t10) {
+function jF(e13, t10) {
   let r10 = t10.mapPos(e13.from, 1), i10 = t10.mapPos(e13.to, -1);
   return r10 >= i10 ? void 0 : { from: r10, to: i10 };
 }
-let jN = Pu.define({ map: jj }), jB = Pu.define({ map: jj });
-function j$(e13) {
+let jz = Pp.define({ map: jF }), jV = Pp.define({ map: jF });
+function jH(e13) {
   let t10 = [];
   for (let { head: r10 } of e13.state.selection.ranges)
     t10.some((e14) => e14.from <= r10 && e14.to >= r10) || t10.push(e13.lineBlockAt(r10));
   return t10;
 }
-let jF = T0.define({ create: () => EB.none, update(e13, t10) {
+let jW = T3.define({ create: () => EV.none, update(e13, t10) {
   for (let r10 of (e13 = e13.map(t10.changes), t10.effects))
-    if (r10.is(jN) && !function(e14, t11, r11) {
+    if (r10.is(jz) && !function(e14, t11, r11) {
       let i10 = false;
       return e14.between(t11, t11, (e15, o10) => {
         e15 == t11 && o10 == r11 && (i10 = true);
       }), i10;
     }(e13, r10.value.from, r10.value.to)) {
-      let { preparePlaceholder: i10 } = t10.state.facet(jq), o10 = i10 ? EB.replace({ widget: new jK(i10(t10.state, r10.value)) }) : jY;
+      let { preparePlaceholder: i10 } = t10.state.facet(jK), o10 = i10 ? EV.replace({ widget: new j0(i10(t10.state, r10.value)) }) : jZ;
       e13 = e13.update({ add: [o10.range(r10.value.from, r10.value.to)] });
     } else
-      r10.is(jB) && (e13 = e13.update({ filter: (e14, t11) => r10.value.from != e14 || r10.value.to != t11, filterFrom: r10.value.from, filterTo: r10.value.to }));
+      r10.is(jV) && (e13 = e13.update({ filter: (e14, t11) => r10.value.from != e14 || r10.value.to != t11, filterFrom: r10.value.from, filterTo: r10.value.to }));
   if (t10.selection) {
     let r10 = false, { head: i10 } = t10.selection.main;
     e13.between(i10, i10, (e14, t11) => {
@@ -23277,7 +23286,7 @@ let jF = T0.define({ create: () => EB.none, update(e13, t10) {
     }), r10 && (e13 = e13.update({ filterFrom: i10, filterTo: i10, filter: (e14, t11) => t11 <= i10 || e14 >= i10 }));
   }
   return e13;
-}, provide: (e13) => Rz.decorations.from(e13), toJSON(e13, t10) {
+}, provide: (e13) => RU.decorations.from(e13), toJSON(e13, t10) {
   let r10 = [];
   return e13.between(0, t10.doc.length, (e14, t11) => {
     r10.push(e14, t11);
@@ -23290,76 +23299,76 @@ let jF = T0.define({ create: () => EB.none, update(e13, t10) {
     let i10 = e13[r10++], o10 = e13[r10++];
     if ("number" != typeof i10 || "number" != typeof o10)
       throw RangeError("Invalid JSON for fold state");
-    t10.push(jY.range(i10, o10));
+    t10.push(jZ.range(i10, o10));
   }
-  return EB.set(t10, true);
+  return EV.set(t10, true);
 } });
-function jz(e13, t10, r10) {
+function jU(e13, t10, r10) {
   var i10;
   let o10 = null;
-  return null === (i10 = e13.field(jF, false)) || void 0 === i10 || i10.between(t10, r10, (e14, t11) => {
+  return null === (i10 = e13.field(jW, false)) || void 0 === i10 || i10.between(t10, r10, (e14, t11) => {
     (!o10 || o10.from > e14) && (o10 = { from: e14, to: t11 });
   }), o10;
 }
-function jV(e13, t10) {
-  return e13.field(jF, false) ? t10 : t10.concat(Pu.appendConfig.of(jX()));
+function jq(e13, t10) {
+  return e13.field(jW, false) ? t10 : t10.concat(Pp.appendConfig.of(jG()));
 }
-function jH(e13, t10) {
+function jX(e13, t10) {
   let r10 = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2], i10 = e13.state.doc.lineAt(t10.from).number, o10 = e13.state.doc.lineAt(t10.to).number;
-  return Rz.announce.of(`${e13.state.phrase(r10 ? "Folded lines" : "Unfolded lines")} ${i10} ${e13.state.phrase("to")} ${o10}.`);
+  return RU.announce.of(`${e13.state.phrase(r10 ? "Folded lines" : "Unfolded lines")} ${i10} ${e13.state.phrase("to")} ${o10}.`);
 }
-let jW = [{ key: "Ctrl-Shift-[", mac: "Cmd-Alt-[", run: (e13) => {
-  for (let t10 of j$(e13)) {
-    let r10 = jL(e13.state, t10.from, t10.to);
+let jQ = [{ key: "Ctrl-Shift-[", mac: "Cmd-Alt-[", run: (e13) => {
+  for (let t10 of jH(e13)) {
+    let r10 = j$(e13.state, t10.from, t10.to);
     if (r10)
-      return e13.dispatch({ effects: jV(e13.state, [jN.of(r10), jH(e13, r10)]) }), true;
+      return e13.dispatch({ effects: jq(e13.state, [jz.of(r10), jX(e13, r10)]) }), true;
   }
   return false;
 } }, { key: "Ctrl-Shift-]", mac: "Cmd-Alt-]", run: (e13) => {
-  if (!e13.state.field(jF, false))
+  if (!e13.state.field(jW, false))
     return false;
   let t10 = [];
-  for (let r10 of j$(e13)) {
-    let i10 = jz(e13.state, r10.from, r10.to);
-    i10 && t10.push(jB.of(i10), jH(e13, i10, false));
+  for (let r10 of jH(e13)) {
+    let i10 = jU(e13.state, r10.from, r10.to);
+    i10 && t10.push(jV.of(i10), jX(e13, i10, false));
   }
   return t10.length && e13.dispatch({ effects: t10 }), t10.length > 0;
 } }, { key: "Ctrl-Alt-[", run: (e13) => {
   let { state: t10 } = e13, r10 = [];
   for (let i10 = 0; i10 < t10.doc.length; ) {
-    let o10 = e13.lineBlockAt(i10), s10 = jL(t10, o10.from, o10.to);
-    s10 && r10.push(jN.of(s10)), i10 = (s10 ? e13.lineBlockAt(s10.to) : o10).to + 1;
+    let o10 = e13.lineBlockAt(i10), s10 = j$(t10, o10.from, o10.to);
+    s10 && r10.push(jz.of(s10)), i10 = (s10 ? e13.lineBlockAt(s10.to) : o10).to + 1;
   }
-  return r10.length && e13.dispatch({ effects: jV(e13.state, r10) }), !!r10.length;
+  return r10.length && e13.dispatch({ effects: jq(e13.state, r10) }), !!r10.length;
 } }, { key: "Ctrl-Alt-]", run: (e13) => {
-  let t10 = e13.state.field(jF, false);
+  let t10 = e13.state.field(jW, false);
   if (!t10 || !t10.size)
     return false;
   let r10 = [];
   return t10.between(0, e13.state.doc.length, (e14, t11) => {
-    r10.push(jB.of({ from: e14, to: t11 }));
+    r10.push(jV.of({ from: e14, to: t11 }));
   }), e13.dispatch({ effects: r10 }), true;
-} }], jU = { placeholderDOM: null, preparePlaceholder: null, placeholderText: "…" }, jq = TQ.define({ combine: (e13) => Pb(e13, jU) });
-function jX(e13) {
-  let t10 = [jF, jZ];
-  return e13 && t10.push(jq.of(e13)), t10;
+} }], jY = { placeholderDOM: null, preparePlaceholder: null, placeholderText: "…" }, jK = TJ.define({ combine: (e13) => PS(e13, jY) });
+function jG(e13) {
+  let t10 = [jW, j4];
+  return e13 && t10.push(jK.of(e13)), t10;
 }
-function jQ(e13, t10) {
-  let { state: r10 } = e13, i10 = r10.facet(jq), o10 = (t11) => {
-    let r11 = e13.lineBlockAt(e13.posAtDOM(t11.target)), i11 = jz(e13.state, r11.from, r11.to);
-    i11 && e13.dispatch({ effects: jB.of(i11) }), t11.preventDefault();
+function jJ(e13, t10) {
+  let { state: r10 } = e13, i10 = r10.facet(jK), o10 = (t11) => {
+    let r11 = e13.lineBlockAt(e13.posAtDOM(t11.target)), i11 = jU(e13.state, r11.from, r11.to);
+    i11 && e13.dispatch({ effects: jV.of(i11) }), t11.preventDefault();
   };
   if (i10.placeholderDOM)
     return i10.placeholderDOM(e13, o10, t10);
   let s10 = document.createElement("span");
   return s10.textContent = i10.placeholderText, s10.setAttribute("aria-label", r10.phrase("folded code")), s10.title = r10.phrase("unfold"), s10.className = "cm-foldPlaceholder", s10.onclick = o10, s10;
 }
-let jY = EB.replace({ widget: new class extends Ej {
+let jZ = EV.replace({ widget: new class extends EF {
   toDOM(e13) {
-    return jQ(e13, null);
+    return jJ(e13, null);
   }
 }() });
-class jK extends Ej {
+class j0 extends EF {
   constructor(e13) {
     super(), this.value = e13;
   }
@@ -23367,11 +23376,11 @@ class jK extends Ej {
     return this.value == e13.value;
   }
   toDOM(e13) {
-    return jQ(e13, this.value);
+    return jJ(e13, this.value);
   }
 }
-let jG = { openText: "⌄", closedText: "›", markerDOM: null, domEventHandlers: {}, foldingChanged: () => false };
-class jJ extends Ik {
+let j1 = { openText: "⌄", closedText: "›", markerDOM: null, domEventHandlers: {}, foldingChanged: () => false };
+class j2 extends IA {
   constructor(e13, t10) {
     super(), this.config = e13, this.open = t10;
   }
@@ -23385,67 +23394,67 @@ class jJ extends Ik {
     return t10.textContent = this.open ? this.config.openText : this.config.closedText, t10.title = e13.state.phrase(this.open ? "Fold line" : "Unfold line"), t10;
   }
 }
-let jZ = Rz.baseTheme({ ".cm-foldPlaceholder": { backgroundColor: "#eee", border: "1px solid #ddd", color: "#888", borderRadius: ".2em", margin: "0 1px", padding: "0 1px", cursor: "pointer" }, ".cm-foldGutter span": { padding: "0 1px", cursor: "pointer" } });
-class j0 {
+let j4 = RU.baseTheme({ ".cm-foldPlaceholder": { backgroundColor: "#eee", border: "1px solid #ddd", color: "#888", borderRadius: ".2em", margin: "0 1px", padding: "0 1px", cursor: "pointer" }, ".cm-foldGutter span": { padding: "0 1px", cursor: "pointer" } });
+class j3 {
   constructor(e13, t10) {
     let r10;
     function i10(e14) {
-      let t11 = PF.newName();
+      let t11 = PW.newName();
       return (r10 || (r10 = /* @__PURE__ */ Object.create(null)))["." + t11] = e14, t11;
     }
     this.specs = e13;
     let o10 = "string" == typeof t10.all ? t10.all : t10.all ? i10(t10.all) : void 0, s10 = t10.scope;
-    this.scope = s10 instanceof ja ? (e14) => e14.prop(js) == s10.data : s10 ? (e14) => e14 == s10 : void 0, this.style = LG(e13.map((e14) => ({ tag: e14.tag, class: e14.class || i10(Object.assign({}, e14, { tag: null })) })), { all: o10 }).style, this.module = r10 ? new PF(r10) : null, this.themeType = t10.themeType;
+    this.scope = s10 instanceof jf ? (e14) => e14.prop(ju) == s10.data : s10 ? (e14) => e14 == s10 : void 0, this.style = L1(e13.map((e14) => ({ tag: e14.tag, class: e14.class || i10(Object.assign({}, e14, { tag: null })) })), { all: o10 }).style, this.module = r10 ? new PW(r10) : null, this.themeType = t10.themeType;
   }
   static define(e13, t10) {
-    return new j0(e13, t10 || {});
+    return new j3(e13, t10 || {});
   }
 }
-let j1 = TQ.define(), j2 = TQ.define({ combine: (e13) => e13.length ? [e13[0]] : null });
-function j4(e13) {
-  let t10 = e13.facet(j1);
-  return t10.length ? t10 : e13.facet(j2);
+let j5 = TJ.define(), j8 = TJ.define({ combine: (e13) => e13.length ? [e13[0]] : null });
+function j6(e13) {
+  let t10 = e13.facet(j5);
+  return t10.length ? t10 : e13.facet(j8);
 }
-let j3 = T4.high(Dd.fromClass(class {
+let j9 = T6.high(Dv.fromClass(class {
   constructor(e13) {
-    this.markCache = /* @__PURE__ */ Object.create(null), this.tree = jh(e13.state), this.decorations = this.buildDeco(e13, j4(e13.state)), this.decoratedTo = e13.viewport.to;
+    this.markCache = /* @__PURE__ */ Object.create(null), this.tree = jg(e13.state), this.decorations = this.buildDeco(e13, j6(e13.state)), this.decoratedTo = e13.viewport.to;
   }
   update(e13) {
-    let t10 = jh(e13.state), r10 = j4(e13.state), i10 = r10 != j4(e13.startState), { viewport: o10 } = e13.view, s10 = e13.changes.mapPos(this.decoratedTo, 1);
+    let t10 = jg(e13.state), r10 = j6(e13.state), i10 = r10 != j6(e13.startState), { viewport: o10 } = e13.view, s10 = e13.changes.mapPos(this.decoratedTo, 1);
     t10.length < o10.to && !i10 && t10.type == this.tree.type && s10 >= o10.to ? (this.decorations = this.decorations.map(e13.changes), this.decoratedTo = s10) : (t10 != this.tree || e13.viewportChanged || i10) && (this.tree = t10, this.decorations = this.buildDeco(e13.view, r10), this.decoratedTo = o10.to);
   }
   buildDeco(e13, t10) {
     if (!t10 || !this.tree.length)
-      return EB.none;
-    let r10 = new PO();
+      return EV.none;
+    let r10 = new PT();
     for (let { from: i10, to: o10 } of e13.visibleRanges)
       !function(e14, t11, r11) {
-        let i11 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0, o11 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : e14.length, s10 = new LJ(i11, Array.isArray(t11) ? t11 : [t11], r11);
+        let i11 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0, o11 = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : e14.length, s10 = new L2(i11, Array.isArray(t11) ? t11 : [t11], r11);
         s10.highlightRange(e14.cursor(), i11, o11, "", s10.highlighters), s10.flush(o11);
       }(this.tree, t10, (e14, t11, i11) => {
-        r10.add(e14, t11, this.markCache[i11] || (this.markCache[i11] = EB.mark({ class: i11 })));
+        r10.add(e14, t11, this.markCache[i11] || (this.markCache[i11] = EV.mark({ class: i11 })));
       }, i10, o10);
     return r10.finish();
   }
-}, { decorations: (e13) => e13.decorations })), j5 = Rz.baseTheme({ "&.cm-focused .cm-matchingBracket": { backgroundColor: "#328c8252" }, "&.cm-focused .cm-nonmatchingBracket": { backgroundColor: "#bb555544" } }), j8 = "()[]{}", j6 = TQ.define({ combine: (e13) => Pb(e13, { afterCursor: true, brackets: j8, maxScanDistance: 1e4, renderMatch: Ne }) }), j9 = EB.mark({ class: "cm-matchingBracket" }), j7 = EB.mark({ class: "cm-nonmatchingBracket" });
-function Ne(e13) {
-  let t10 = [], r10 = e13.matched ? j9 : j7;
+}, { decorations: (e13) => e13.decorations })), j7 = RU.baseTheme({ "&.cm-focused .cm-matchingBracket": { backgroundColor: "#328c8252" }, "&.cm-focused .cm-nonmatchingBracket": { backgroundColor: "#bb555544" } }), Ne = "()[]{}", Nt = TJ.define({ combine: (e13) => PS(e13, { afterCursor: true, brackets: Ne, maxScanDistance: 1e4, renderMatch: Ni }) }), Nn = EV.mark({ class: "cm-matchingBracket" }), Nr = EV.mark({ class: "cm-nonmatchingBracket" });
+function Ni(e13) {
+  let t10 = [], r10 = e13.matched ? Nn : Nr;
   return t10.push(r10.range(e13.start.from, e13.start.to)), e13.end && t10.push(r10.range(e13.end.from, e13.end.to)), t10;
 }
-let Nt = [T0.define({ create: () => EB.none, update(e13, t10) {
+let No = [T3.define({ create: () => EV.none, update(e13, t10) {
   if (!t10.docChanged && !t10.selection)
     return e13;
-  let r10 = [], i10 = t10.state.facet(j6);
+  let r10 = [], i10 = t10.state.facet(Nt);
   for (let e14 of t10.state.selection.ranges) {
     if (!e14.empty)
       continue;
-    let o10 = No(t10.state, e14.head, -1, i10) || e14.head > 0 && No(t10.state, e14.head - 1, 1, i10) || i10.afterCursor && (No(t10.state, e14.head, 1, i10) || e14.head < t10.state.doc.length && No(t10.state, e14.head + 1, -1, i10));
+    let o10 = Nc(t10.state, e14.head, -1, i10) || e14.head > 0 && Nc(t10.state, e14.head - 1, 1, i10) || i10.afterCursor && (Nc(t10.state, e14.head, 1, i10) || e14.head < t10.state.doc.length && Nc(t10.state, e14.head + 1, -1, i10));
     o10 && (r10 = r10.concat(i10.renderMatch(o10, t10.state)));
   }
-  return EB.set(r10, true);
-}, provide: (e13) => Rz.decorations.from(e13) }), j5], Nn = new Lm();
-function Nr(e13, t10, r10) {
-  let i10 = e13.prop(t10 < 0 ? Lm.openedBy : Lm.closedBy);
+  return EV.set(r10, true);
+}, provide: (e13) => RU.decorations.from(e13) }), j7], Ns = new Lw();
+function Nl(e13, t10, r10) {
+  let i10 = e13.prop(t10 < 0 ? Lw.openedBy : Lw.closedBy);
   if (i10)
     return i10;
   if (1 == e13.name.length) {
@@ -23455,16 +23464,16 @@ function Nr(e13, t10, r10) {
   }
   return null;
 }
-function Ni(e13) {
-  let t10 = e13.type.prop(Nn);
+function Na(e13) {
+  let t10 = e13.type.prop(Ns);
   return t10 ? t10(e13.node) : e13;
 }
-function No(e13, t10, r10) {
-  let i10 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, o10 = i10.maxScanDistance || 1e4, s10 = i10.brackets || j8, l10 = jh(e13), a10 = l10.resolveInner(t10, r10);
+function Nc(e13, t10, r10) {
+  let i10 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, o10 = i10.maxScanDistance || 1e4, s10 = i10.brackets || Ne, l10 = jg(e13), a10 = l10.resolveInner(t10, r10);
   for (let e14 = a10; e14; e14 = e14.parent) {
-    let i11 = Nr(e14.type, r10, s10);
+    let i11 = Nl(e14.type, r10, s10);
     if (i11 && e14.from < e14.to) {
-      let o11 = Ni(e14);
+      let o11 = Na(e14);
       if (o11 && (r10 > 0 ? t10 >= o11.from && t10 < o11.to : t10 > o11.from && t10 <= o11.to))
         return function(e15, t11, r11, i12, o12, s11, l11) {
           let a11 = i12.parent, c10 = { from: o12.from, to: o12.to }, u10 = 0, h10 = null == a11 ? void 0 : a11.cursor();
@@ -23472,14 +23481,14 @@ function No(e13, t10, r10) {
             do
               if (r11 < 0 ? h10.to <= i12.from : h10.from >= i12.to) {
                 if (0 == u10 && s11.indexOf(h10.type.name) > -1 && h10.from < h10.to) {
-                  let e16 = Ni(h10);
+                  let e16 = Na(h10);
                   return { start: c10, end: e16 ? { from: e16.from, to: e16.to } : void 0, matched: true };
                 }
-                if (Nr(h10.type, r11, l11))
+                if (Nl(h10.type, r11, l11))
                   u10++;
-                else if (Nr(h10.type, -r11, l11)) {
+                else if (Nl(h10.type, -r11, l11)) {
                   if (0 == u10) {
-                    let e16 = Ni(h10);
+                    let e16 = Na(h10);
                     return { start: c10, end: e16 && e16.from < e16.to ? { from: e16.from, to: e16.to } : void 0, matched: false };
                   }
                   u10--;
@@ -23516,43 +23525,43 @@ function No(e13, t10, r10) {
     return h10.done ? { start: u10, matched: false } : null;
   }(e13, t10, r10, l10, a10.type, o10, s10);
 }
-let Ns = /* @__PURE__ */ Object.create(null), Nl = [Lb.none], Na = [], Nc = /* @__PURE__ */ Object.create(null), Nu = /* @__PURE__ */ Object.create(null);
+let Nu = /* @__PURE__ */ Object.create(null), Nh = [LS.none], Nf = [], Nd = /* @__PURE__ */ Object.create(null), Np = /* @__PURE__ */ Object.create(null);
 for (let [e13, t10] of [["variable", "variableName"], ["variable-2", "variableName.special"], ["string-2", "string.special"], ["def", "variableName.definition"], ["tag", "tagName"], ["attribute", "attributeName"], ["type", "typeName"], ["builtin", "variableName.standard"], ["qualifier", "modifier"], ["error", "invalid"], ["header", "heading"], ["property", "propertyName"]])
-  Nu[e13] = function(e14, t11) {
+  Np[e13] = function(e14, t11) {
     let r10 = [];
     for (let i11 of t11.split(" ")) {
       let t12 = [];
       for (let r11 of i11.split(".")) {
-        let i12 = e14[r11] || ji[r11];
-        i12 ? "function" == typeof i12 ? t12.length ? t12 = t12.map(i12) : Nh(r11, `Modifier ${r11} used at start of tag`) : t12.length ? Nh(r11, `Tag ${r11} used as modifier`) : t12 = Array.isArray(i12) ? i12 : [i12] : Nh(r11, `Unknown highlighting tag ${r11}`);
+        let i12 = e14[r11] || ja[r11];
+        i12 ? "function" == typeof i12 ? t12.length ? t12 = t12.map(i12) : Ng(r11, `Modifier ${r11} used at start of tag`) : t12.length ? Ng(r11, `Tag ${r11} used as modifier`) : t12 = Array.isArray(i12) ? i12 : [i12] : Ng(r11, `Unknown highlighting tag ${r11}`);
       }
       for (let e15 of t12)
         r10.push(e15);
     }
     if (!r10.length)
       return 0;
-    let i10 = t11.replace(/ /g, "_"), o10 = i10 + " " + r10.map((e15) => e15.id), s10 = Nc[o10];
+    let i10 = t11.replace(/ /g, "_"), o10 = i10 + " " + r10.map((e15) => e15.id), s10 = Nd[o10];
     if (s10)
       return s10.id;
-    let l10 = Nc[o10] = Lb.define({ id: Nl.length, name: i10, props: [LQ({ [i10]: r10 })] });
-    return Nl.push(l10), l10.id;
-  }(Ns, t10);
-function Nh(e13, t10) {
-  Na.indexOf(e13) > -1 || (Na.push(e13), console.warn(t10));
+    let l10 = Nd[o10] = LS.define({ id: Nh.length, name: i10, props: [LJ({ [i10]: r10 })] });
+    return Nh.push(l10), l10.id;
+  }(Nu, t10);
+function Ng(e13, t10) {
+  Nf.indexOf(e13) > -1 || (Nf.push(e13), console.warn(t10));
 }
-EX.RTL, EX.LTR;
-class Nf {
+EG.RTL, EG.LTR;
+class Nm {
   constructor(e13, t10, r10) {
     this.state = e13, this.pos = t10, this.explicit = r10, this.abortListeners = [];
   }
   tokenBefore(e13) {
-    let t10 = jh(this.state).resolveInner(this.pos, -1);
+    let t10 = jg(this.state).resolveInner(this.pos, -1);
     for (; t10 && 0 > e13.indexOf(t10.name); )
       t10 = t10.parent;
     return t10 ? { from: t10.from, to: this.pos, text: this.state.sliceDoc(t10.from, this.pos), type: t10.type } : null;
   }
   matchBefore(e13) {
-    let t10 = this.state.doc.lineAt(this.pos), r10 = Math.max(t10.from, this.pos - 250), i10 = t10.text.slice(r10 - t10.from, this.pos - t10.from), o10 = i10.search(Nm(e13, false));
+    let t10 = this.state.doc.lineAt(this.pos), r10 = Math.max(t10.from, this.pos - 250), i10 = t10.text.slice(r10 - t10.from, this.pos - t10.from), o10 = i10.search(Nw(e13, false));
     return o10 < 0 ? null : { from: r10 + o10, to: this.pos, text: i10.slice(o10) };
   }
   get aborted() {
@@ -23562,29 +23571,29 @@ class Nf {
     "abort" == e13 && this.abortListeners && this.abortListeners.push(t10);
   }
 }
-function Nd(e13) {
+function Nv(e13) {
   let t10 = Object.keys(e13).join(""), r10 = /\w/.test(t10);
   return r10 && (t10 = t10.replace(/\w/g, "")), `[${r10 ? "\\w" : ""}${t10.replace(/[^\w\s]/g, "\\$&")}]`;
 }
-class Np {
+class Ny {
   constructor(e13, t10, r10, i10) {
     this.completion = e13, this.source = t10, this.match = r10, this.score = i10;
   }
 }
-function Ng(e13) {
+function Nb(e13) {
   return e13.selection.main.from;
 }
-function Nm(e13, t10) {
+function Nw(e13, t10) {
   var r10;
   let { source: i10 } = e13, o10 = t10 && "^" != i10[0], s10 = "$" != i10[i10.length - 1];
   return o10 || s10 ? RegExp(`${o10 ? "^" : ""}(?:${i10})${s10 ? "$" : ""}`, null !== (r10 = e13.flags) && void 0 !== r10 ? r10 : e13.ignoreCase ? "i" : "") : e13;
 }
-let Nv = Pl.define(), Ny = /* @__PURE__ */ new WeakMap();
-function Nb(e13) {
+let Nx = Ph.define(), Nk = /* @__PURE__ */ new WeakMap();
+function NS(e13) {
   if (!Array.isArray(e13))
     return e13;
-  let t10 = Ny.get(e13);
-  return t10 || Ny.set(e13, t10 = function(e14) {
+  let t10 = Nk.get(e13);
+  return t10 || Nk.set(e13, t10 = function(e14) {
     let t11 = e14.map((e15) => "string" == typeof e15 ? { label: e15 } : e15), [r10, i10] = t11.every((e15) => /^\w+$/.test(e15.label)) ? [/\w*$/, /\w+$/] : function(e15) {
       let t12 = /* @__PURE__ */ Object.create(null), r11 = /* @__PURE__ */ Object.create(null);
       for (let { label: i12 } of e15) {
@@ -23592,7 +23601,7 @@ function Nb(e13) {
         for (let e16 = 1; e16 < i12.length; e16++)
           r11[i12[e16]] = true;
       }
-      let i11 = Nd(t12) + Nd(r11) + "*$";
+      let i11 = Nv(t12) + Nv(r11) + "*$";
       return [RegExp("^" + i11), new RegExp(i11)];
     }(t11);
     return (e15) => {
@@ -23601,15 +23610,15 @@ function Nb(e13) {
     };
   }(e13)), t10;
 }
-let Nw = Pu.define(), Nx = Pu.define();
-class Nk {
+let NC = Pp.define(), NO = Pp.define();
+class NA {
   constructor(e13) {
     this.pattern = e13, this.chars = [], this.folded = [], this.any = [], this.precise = [], this.byWord = [], this.score = 0, this.matched = [];
     for (let t10 = 0; t10 < e13.length; ) {
-      let r10 = TE(e13, t10), i10 = TR(r10);
+      let r10 = TL(e13, t10), i10 = TN(r10);
       this.chars.push(r10);
       let o10 = e13.slice(t10, t10 + i10), s10 = o10.toUpperCase();
-      this.folded.push(TE(s10 == o10 ? o10.toLowerCase() : s10, 0)), t10 += i10;
+      this.folded.push(TL(s10 == o10 ? o10.toLowerCase() : s10, 0)), t10 += i10;
     }
     this.astral = e13.length != this.chars.length;
   }
@@ -23623,7 +23632,7 @@ class Nk {
       return null;
     let { chars: t10, folded: r10, any: i10, precise: o10, byWord: s10 } = this;
     if (1 == t10.length) {
-      let i11 = TE(e13, 0), o11 = TR(i11), s11 = o11 == e13.length ? 0 : -100;
+      let i11 = TL(e13, 0), o11 = TN(i11), s11 = o11 == e13.length ? 0 : -100;
       if (i11 == t10[0])
         ;
       else {
@@ -23639,31 +23648,31 @@ class Nk {
     let a10 = t10.length, c10 = 0;
     if (l10 < 0) {
       for (let o11 = 0, s11 = Math.min(e13.length, 200); o11 < s11 && c10 < a10; ) {
-        let s12 = TE(e13, o11);
-        (s12 == t10[c10] || s12 == r10[c10]) && (i10[c10++] = o11), o11 += TR(s12);
+        let s12 = TL(e13, o11);
+        (s12 == t10[c10] || s12 == r10[c10]) && (i10[c10++] = o11), o11 += TN(s12);
       }
       if (c10 < a10)
         return null;
     }
     let u10 = 0, h10 = 0, f10 = false, d10 = 0, p10 = -1, g7 = -1, m10 = /[a-z]/.test(e13), y10 = true;
     for (let i11 = 0, c11 = Math.min(e13.length, 200), b10 = 0; i11 < c11 && h10 < a10; ) {
-      let c12 = TE(e13, i11);
+      let c12 = TL(e13, i11);
       l10 < 0 && (u10 < a10 && c12 == t10[u10] && (o10[u10++] = i11), d10 < a10 && (c12 == t10[d10] || c12 == r10[d10] ? (0 == d10 && (p10 = i11), g7 = i11 + 1, d10++) : d10 = 0));
-      let w10, x10 = c12 < 255 ? c12 >= 48 && c12 <= 57 || c12 >= 97 && c12 <= 122 ? 2 : c12 >= 65 && c12 <= 90 ? 1 : 0 : (w10 = TD(c12)) != w10.toLowerCase() ? 1 : w10 != w10.toUpperCase() ? 2 : 0;
-      (!i11 || 1 == x10 && m10 || 0 == b10 && 0 != x10) && (t10[h10] == c12 || r10[h10] == c12 && (f10 = true) ? s10[h10++] = i11 : s10.length && (y10 = false)), b10 = x10, i11 += TR(c12);
+      let w10, x10 = c12 < 255 ? c12 >= 48 && c12 <= 57 || c12 >= 97 && c12 <= 122 ? 2 : c12 >= 65 && c12 <= 90 ? 1 : 0 : (w10 = Tj(c12)) != w10.toLowerCase() ? 1 : w10 != w10.toUpperCase() ? 2 : 0;
+      (!i11 || 1 == x10 && m10 || 0 == b10 && 0 != x10) && (t10[h10] == c12 || r10[h10] == c12 && (f10 = true) ? s10[h10++] = i11 : s10.length && (y10 = false)), b10 = x10, i11 += TN(c12);
     }
     return h10 == a10 && 0 == s10[0] && y10 ? this.result(-100 + (f10 ? -200 : 0), s10, e13) : d10 == a10 && 0 == p10 ? this.ret(-200 - e13.length + (g7 == e13.length ? 0 : -100), [0, g7]) : l10 > -1 ? this.ret(-700 - e13.length, [l10, l10 + this.pattern.length]) : d10 == a10 ? this.ret(-900 - e13.length, [p10, g7]) : h10 == a10 ? this.result(-100 + (f10 ? -200 : 0) + -700 + (y10 ? 0 : -1100), s10, e13) : 2 == t10.length ? null : this.result((i10[0] ? -700 : 0) + -200 + -1100, i10, e13);
   }
   result(e13, t10, r10) {
     let i10 = [], o10 = 0;
     for (let e14 of t10) {
-      let t11 = e14 + (this.astral ? TR(TE(r10, e14)) : 1);
+      let t11 = e14 + (this.astral ? TN(TL(r10, e14)) : 1);
       o10 && i10[o10 - 1] == e14 ? i10[o10 - 1] = t11 : (i10[o10++] = e14, i10[o10++] = t11);
     }
     return this.ret(e13 - r10.length, i10);
   }
 }
-class NS {
+class N_ {
   constructor(e13) {
     this.pattern = e13, this.matched = [], this.score = 0, this.folded = e13.toLowerCase();
   }
@@ -23674,12 +23683,12 @@ class NS {
     return null == r10 ? null : (this.matched = [0, t10.length], this.score = r10 + (e13.length == this.pattern.length ? 0 : -100), this);
   }
 }
-let NC = TQ.define({ combine: (e13) => Pb(e13, { activateOnTyping: true, activateOnCompletion: () => false, activateOnTypingDelay: 100, selectOnOpen: true, override: null, closeOnBlur: true, maxRenderedOptions: 100, defaultKeymap: true, tooltipClass: () => "", optionClass: () => "", aboveCursor: false, icons: true, addToOptions: [], positionInfo: NA, filterStrict: false, compareCompletions: (e14, t10) => e14.label.localeCompare(t10.label), interactionDelay: 75, updateSyncTime: 100 }, { defaultKeymap: (e14, t10) => e14 && t10, closeOnBlur: (e14, t10) => e14 && t10, icons: (e14, t10) => e14 && t10, tooltipClass: (e14, t10) => (r10) => NO(e14(r10), t10(r10)), optionClass: (e14, t10) => (r10) => NO(e14(r10), t10(r10)), addToOptions: (e14, t10) => e14.concat(t10), filterStrict: (e14, t10) => e14 || t10 }) });
-function NO(e13, t10) {
+let NM = TJ.define({ combine: (e13) => PS(e13, { activateOnTyping: true, activateOnCompletion: () => false, activateOnTypingDelay: 100, selectOnOpen: true, override: null, closeOnBlur: true, maxRenderedOptions: 100, defaultKeymap: true, tooltipClass: () => "", optionClass: () => "", aboveCursor: false, icons: true, addToOptions: [], positionInfo: NP, filterStrict: false, compareCompletions: (e14, t10) => e14.label.localeCompare(t10.label), interactionDelay: 75, updateSyncTime: 100 }, { defaultKeymap: (e14, t10) => e14 && t10, closeOnBlur: (e14, t10) => e14 && t10, icons: (e14, t10) => e14 && t10, tooltipClass: (e14, t10) => (r10) => NT(e14(r10), t10(r10)), optionClass: (e14, t10) => (r10) => NT(e14(r10), t10(r10)), addToOptions: (e14, t10) => e14.concat(t10), filterStrict: (e14, t10) => e14 || t10 }) });
+function NT(e13, t10) {
   return e13 ? t10 ? e13 + " " + t10 : e13 : t10;
 }
-function NA(e13, t10, r10, i10, o10, s10) {
-  let l10 = e13.textDirection == EX.RTL, a10 = l10, c10 = false, u10 = "top", h10, f10, d10 = t10.left - o10.left, p10 = o10.right - t10.right, g7 = i10.right - i10.left, m10 = i10.bottom - i10.top;
+function NP(e13, t10, r10, i10, o10, s10) {
+  let l10 = e13.textDirection == EG.RTL, a10 = l10, c10 = false, u10 = "top", h10, f10, d10 = t10.left - o10.left, p10 = o10.right - t10.right, g7 = i10.right - i10.left, m10 = i10.bottom - i10.top;
   if (a10 && d10 < Math.min(g7, p10) ? a10 = false : !a10 && p10 < Math.min(g7, d10) && (a10 = true), g7 <= (a10 ? d10 : p10))
     h10 = Math.max(o10.top, Math.min(r10.top, o10.bottom - m10)) - t10.top, f10 = Math.min(400, a10 ? d10 : p10);
   else {
@@ -23690,7 +23699,7 @@ function NA(e13, t10, r10, i10, o10, s10) {
   let y10 = (t10.bottom - t10.top) / s10.offsetHeight, b10 = (t10.right - t10.left) / s10.offsetWidth;
   return { style: `${u10}: ${h10 / y10}px; max-width: ${f10 / b10}px`, class: "cm-completionInfo-" + (c10 ? l10 ? "left-narrow" : "right-narrow" : a10 ? "left" : "right") };
 }
-function N_(e13, t10, r10) {
+function NE(e13, t10, r10) {
   if (e13 <= r10)
     return { from: 0, to: e13 };
   if (t10 < 0 && (t10 = 0), t10 <= e13 >> 1) {
@@ -23700,11 +23709,11 @@ function N_(e13, t10, r10) {
   let i10 = Math.floor((e13 - t10) / r10);
   return { from: e13 - (i10 + 1) * r10, to: e13 - i10 * r10 };
 }
-class NM {
+class ND {
   constructor(e13, t10, r10) {
     let i10;
     this.view = e13, this.stateField = t10, this.applyCompletion = r10, this.info = null, this.infoDestroy = null, this.placeInfoReq = { read: () => this.measureInfo(), write: (e14) => this.placeInfo(e14), key: this }, this.space = null, this.currentClass = "";
-    let o10 = e13.state.field(t10), { options: s10, selected: l10 } = o10.open, a10 = e13.state.facet(NC);
+    let o10 = e13.state.field(t10), { options: s10, selected: l10 } = o10.open, a10 = e13.state.facet(NM);
     this.optionContent = (i10 = a10.addToOptions.slice(), a10.icons && i10.push({ render(e14) {
       let t11 = document.createElement("div");
       return t11.classList.add("cm-completionIcon"), e14.type && t11.classList.add(...e14.type.split(/\s+/g).map((e15) => "cm-completionIcon-" + e15)), t11.setAttribute("aria-hidden", "true"), t11;
@@ -23724,7 +23733,7 @@ class NM {
         return null;
       let t11 = document.createElement("span");
       return t11.className = "cm-completionDetail", t11.textContent = e14.detail, t11;
-    }, position: 80 }), i10.sort((e14, t11) => e14.position - t11.position).map((e14) => e14.render)), this.optionClass = a10.optionClass, this.tooltipClass = a10.tooltipClass, this.range = N_(s10.length, l10, a10.maxRenderedOptions), this.dom = document.createElement("div"), this.dom.className = "cm-tooltip-autocomplete", this.updateTooltipClass(e13.state), this.dom.addEventListener("mousedown", (r11) => {
+    }, position: 80 }), i10.sort((e14, t11) => e14.position - t11.position).map((e14) => e14.render)), this.optionClass = a10.optionClass, this.tooltipClass = a10.tooltipClass, this.range = NE(s10.length, l10, a10.maxRenderedOptions), this.dom = document.createElement("div"), this.dom.className = "cm-tooltip-autocomplete", this.updateTooltipClass(e13.state), this.dom.addEventListener("mousedown", (r11) => {
       let { options: i11 } = e13.state.field(t10).open;
       for (let t11 = r11.target, o11; t11 && t11 != this.dom; t11 = t11.parentNode)
         if ("LI" == t11.nodeName && (o11 = /-(\d+)$/.exec(t11.id)) && +o11[1] < i11.length) {
@@ -23733,7 +23742,7 @@ class NM {
         }
     }), this.dom.addEventListener("focusout", (t11) => {
       let r11 = e13.state.field(this.stateField, false);
-      r11 && r11.tooltip && e13.state.facet(NC).closeOnBlur && t11.relatedTarget != e13.contentDOM && e13.dispatch({ effects: Nx.of(null) });
+      r11 && r11.tooltip && e13.state.facet(NM).closeOnBlur && t11.relatedTarget != e13.contentDOM && e13.dispatch({ effects: NO.of(null) });
     }), this.showOptions(s10, o10.id);
   }
   mount() {
@@ -23749,7 +23758,7 @@ class NM {
     let r10 = e13.state.field(this.stateField), i10 = e13.startState.field(this.stateField);
     if (this.updateTooltipClass(e13.state), r10 != i10) {
       let { options: o10, selected: s10, disabled: l10 } = r10.open;
-      i10.open && i10.open.options == o10 || (this.range = N_(o10.length, s10, e13.state.facet(NC).maxRenderedOptions), this.showOptions(o10, r10.id)), this.updateSel(), l10 != (null === (t10 = i10.open) || void 0 === t10 ? void 0 : t10.disabled) && this.dom.classList.toggle("cm-tooltip-autocomplete-disabled", !!l10);
+      i10.open && i10.open.options == o10 || (this.range = NE(o10.length, s10, e13.state.facet(NM).maxRenderedOptions), this.showOptions(o10, r10.id)), this.updateSel(), l10 != (null === (t10 = i10.open) || void 0 === t10 ? void 0 : t10.disabled) && this.dom.classList.toggle("cm-tooltip-autocomplete-disabled", !!l10);
     }
   }
   updateTooltipClass(e13) {
@@ -23767,7 +23776,7 @@ class NM {
   }
   updateSel() {
     let e13 = this.view.state.field(this.stateField), t10 = e13.open;
-    if ((t10.selected > -1 && t10.selected < this.range.from || t10.selected >= this.range.to) && (this.range = N_(t10.options.length, t10.selected, this.view.state.facet(NC).maxRenderedOptions), this.showOptions(t10.options, e13.id)), this.updateSelectedOption(t10.selected)) {
+    if ((t10.selected > -1 && t10.selected < this.range.from || t10.selected >= this.range.to) && (this.range = NE(t10.options.length, t10.selected, this.view.state.facet(NM).maxRenderedOptions), this.showOptions(t10.options, e13.id)), this.updateSelectedOption(t10.selected)) {
       this.destroyInfo();
       let { completion: r10 } = t10.options[t10.selected], { info: i10 } = r10;
       if (!i10)
@@ -23777,7 +23786,7 @@ class NM {
         return;
       "then" in o10 ? o10.then((t11) => {
         t11 && this.view.state.field(this.stateField, false) == e13 && this.addInfoPane(t11, r10);
-      }).catch((e14) => Dc(this.view.state, e14, "completion info")) : this.addInfoPane(o10, r10);
+      }).catch((e14) => Dd(this.view.state, e14, "completion info")) : this.addInfoPane(o10, r10);
     }
   }
   addInfoPane(e13, t10) {
@@ -23807,7 +23816,7 @@ class NM {
       let e14 = this.dom.ownerDocument.defaultView || window;
       o10 = { left: 0, top: 0, right: e14.innerWidth, bottom: e14.innerHeight };
     }
-    return i10.top > Math.min(o10.bottom, t10.bottom) - 10 || i10.bottom < Math.max(o10.top, t10.top) + 10 ? null : this.view.state.facet(NC).positionInfo(this.view, t10, i10, r10, o10, this.dom);
+    return i10.top > Math.min(o10.bottom, t10.bottom) - 10 || i10.bottom < Math.max(o10.top, t10.top) + 10 ? null : this.view.state.facet(NM).positionInfo(this.view, t10, i10, r10, o10, this.dom);
   }
   placeInfo(e13) {
     this.info && (e13 ? (e13.style && (this.info.style.cssText = e13.style), this.info.className = "cm-tooltip cm-completionInfo " + (e13.class || "")) : this.info.style.cssText = "top: -1e6px");
@@ -23839,15 +23848,15 @@ class NM {
     this.destroyInfo();
   }
 }
-function NT(e13) {
+function NR(e13) {
   return 100 * (e13.boost || 0) + (e13.apply ? 10 : 0) + (e13.info ? 5 : 0) + (e13.type ? 1 : 0);
 }
-class NP {
+class NI {
   constructor(e13, t10, r10, i10, o10, s10) {
     this.options = e13, this.attrs = t10, this.tooltip = r10, this.timestamp = i10, this.selected = o10, this.disabled = s10;
   }
   setSelected(e13, t10) {
-    return e13 == this.selected || e13 >= this.options.length ? this : new NP(this.options, NR(t10, e13), this.tooltip, this.timestamp, e13, this.disabled);
+    return e13 == this.selected || e13 >= this.options.length ? this : new NI(this.options, NN(t10, e13), this.tooltip, this.timestamp, e13, this.disabled);
   }
   static build(e13, t10, r10, i10, o10) {
     let s10 = function(e14, t11) {
@@ -23859,19 +23868,19 @@ class NP {
           let e16 = "string" == typeof t12 ? t12 : t12.name;
           i11.some((t13) => t13.name == e16) || i11.push("string" == typeof t12 ? { name: e16 } : t12);
         }
-      }, s11 = t11.facet(NC);
+      }, s11 = t11.facet(NM);
       for (let i12 of e14)
         if (i12.hasResult()) {
           let e15 = i12.result.getMatch;
           if (false === i12.result.filter)
             for (let t12 of i12.result.options)
-              o11(new Np(t12, i12.source, e15 ? e15(t12) : [], 1e9 - r11.length));
+              o11(new Ny(t12, i12.source, e15 ? e15(t12) : [], 1e9 - r11.length));
           else {
-            let r12 = t11.sliceDoc(i12.from, i12.to), l12, a11 = s11.filterStrict ? new NS(r12) : new Nk(r12);
+            let r12 = t11.sliceDoc(i12.from, i12.to), l12, a11 = s11.filterStrict ? new N_(r12) : new NA(r12);
             for (let t12 of i12.result.options)
               if (l12 = a11.match(t12.label)) {
                 let r13 = t12.displayLabel ? e15 ? e15(t12, l12.matched) : [] : l12.matched;
-                o11(new Np(t12, i12.source, r13, l12.score + (t12.boost || 0)));
+                o11(new Ny(t12, i12.source, r13, l12.score + (t12.boost || 0)));
               }
           }
         }
@@ -23890,13 +23899,13 @@ class NP {
       let l11 = [], a10 = null, c10 = s11.compareCompletions;
       for (let e15 of r11.sort((e16, t12) => t12.score - e16.score || c10(e16.completion, t12.completion))) {
         let t12 = e15.completion;
-        a10 && a10.label == t12.label && a10.detail == t12.detail && (null == a10.type || null == t12.type || a10.type == t12.type) && a10.apply == t12.apply && a10.boost == t12.boost ? NT(e15.completion) > NT(a10) && (l11[l11.length - 1] = e15) : l11.push(e15), a10 = e15.completion;
+        a10 && a10.label == t12.label && a10.detail == t12.detail && (null == a10.type || null == t12.type || a10.type == t12.type) && a10.apply == t12.apply && a10.boost == t12.boost ? NR(e15.completion) > NR(a10) && (l11[l11.length - 1] = e15) : l11.push(e15), a10 = e15.completion;
       }
       return l11;
     }(e13, t10);
     if (!s10.length)
-      return i10 && e13.some((e14) => 1 == e14.state) ? new NP(i10.options, i10.attrs, i10.tooltip, i10.timestamp, i10.selected, true) : null;
-    let l10 = t10.facet(NC).selectOnOpen ? 0 : -1;
+      return i10 && e13.some((e14) => 1 == e14.state) ? new NI(i10.options, i10.attrs, i10.tooltip, i10.timestamp, i10.selected, true) : null;
+    let l10 = t10.facet(NM).selectOnOpen ? 0 : -1;
     if (i10 && i10.selected != l10 && -1 != i10.selected) {
       let e14 = i10.options[i10.selected].completion;
       for (let t11 = 0; t11 < s10.length; t11++)
@@ -23905,21 +23914,21 @@ class NP {
           break;
         }
     }
-    return new NP(s10, NR(r10, l10), { pos: e13.reduce((e14, t11) => t11.hasResult() ? Math.min(e14, t11.from) : e14, 1e8), create: NV, above: o10.aboveCursor }, i10 ? i10.timestamp : Date.now(), l10, false);
+    return new NI(s10, NN(r10, l10), { pos: e13.reduce((e14, t11) => t11.hasResult() ? Math.min(e14, t11.from) : e14, 1e8), create: Nq, above: o10.aboveCursor }, i10 ? i10.timestamp : Date.now(), l10, false);
   }
   map(e13) {
-    return new NP(this.options, this.attrs, Object.assign(Object.assign({}, this.tooltip), { pos: e13.mapPos(this.tooltip.pos) }), this.timestamp, this.selected, this.disabled);
+    return new NI(this.options, this.attrs, Object.assign(Object.assign({}, this.tooltip), { pos: e13.mapPos(this.tooltip.pos) }), this.timestamp, this.selected, this.disabled);
   }
 }
-class NE {
+class NL {
   constructor(e13, t10, r10) {
     this.active = e13, this.id = t10, this.open = r10;
   }
   static start() {
-    return new NE(NI, "cm-ac-" + Math.floor(2e6 * Math.random()).toString(36), null);
+    return new NL(NB, "cm-ac-" + Math.floor(2e6 * Math.random()).toString(36), null);
   }
   update(e13) {
-    let { state: t10 } = e13, r10 = t10.facet(NC), i10 = (r10.override || t10.languageDataAt("autocomplete", Ng(t10)).map(Nb)).map((t11) => (this.active.find((e14) => e14.source == t11) || new Nj(t11, this.active.some((e14) => 0 != e14.state) ? 1 : 0)).update(e13, r10));
+    let { state: t10 } = e13, r10 = t10.facet(NM), i10 = (r10.override || t10.languageDataAt("autocomplete", Nb(t10)).map(NS)).map((t11) => (this.active.find((e14) => e14.source == t11) || new NF(t11, this.active.some((e14) => 0 != e14.state) ? 1 : 0)).update(e13, r10));
     i10.length == this.active.length && i10.every((e14, t11) => e14 == this.active[t11]) && (i10 = this.active);
     let o10 = this.open;
     for (let s10 of (o10 && e13.docChanged && (o10 = o10.map(e13.changes)), e13.selection || i10.some((t11) => t11.hasResult() && e13.changes.touchesRange(t11.from, t11.to)) || !function(e14, t11) {
@@ -23936,32 +23945,32 @@ class NE {
         if (e14[r11++].result != t11[i11++].result)
           return false;
       }
-    }(i10, this.active) ? o10 = NP.build(i10, t10, this.id, o10, r10) : o10 && o10.disabled && !i10.some((e14) => 1 == e14.state) && (o10 = null), !o10 && i10.every((e14) => 1 != e14.state) && i10.some((e14) => e14.hasResult()) && (i10 = i10.map((e14) => e14.hasResult() ? new Nj(e14.source, 0) : e14)), e13.effects))
-      s10.is(N$) && (o10 = o10 && o10.setSelected(s10.value, this.id));
-    return i10 == this.active && o10 == this.open ? this : new NE(i10, this.id, o10);
+    }(i10, this.active) ? o10 = NI.build(i10, t10, this.id, o10, r10) : o10 && o10.disabled && !i10.some((e14) => 1 == e14.state) && (o10 = null), !o10 && i10.every((e14) => 1 != e14.state) && i10.some((e14) => e14.hasResult()) && (i10 = i10.map((e14) => e14.hasResult() ? new NF(e14.source, 0) : e14)), e13.effects))
+      s10.is(NH) && (o10 = o10 && o10.setSelected(s10.value, this.id));
+    return i10 == this.active && o10 == this.open ? this : new NL(i10, this.id, o10);
   }
   get tooltip() {
     return this.open ? this.open.tooltip : null;
   }
   get attrs() {
-    return this.open ? this.open.attrs : ND;
+    return this.open ? this.open.attrs : Nj;
   }
 }
-let ND = { "aria-autocomplete": "list" };
-function NR(e13, t10) {
+let Nj = { "aria-autocomplete": "list" };
+function NN(e13, t10) {
   let r10 = { "aria-autocomplete": "list", "aria-haspopup": "listbox", "aria-controls": e13 };
   return t10 > -1 && (r10["aria-activedescendant"] = e13 + "-" + t10), r10;
 }
-let NI = [];
-function NL(e13, t10) {
+let NB = [];
+function N$(e13, t10) {
   if (e13.isUserEvent("input.complete")) {
-    let r10 = e13.annotation(Nv);
+    let r10 = e13.annotation(Nx);
     if (r10 && t10.activateOnCompletion(r10))
       return "input";
   }
   return e13.isUserEvent("input.type") ? "input" : e13.isUserEvent("delete.backward") ? "delete" : null;
 }
-class Nj {
+class NF {
   constructor(e13, t10, r10 = -1) {
     this.source = e13, this.state = t10, this.explicitPos = r10;
   }
@@ -23969,28 +23978,28 @@ class Nj {
     return false;
   }
   update(e13, t10) {
-    let r10 = NL(e13, t10), i10 = this;
-    for (let o10 of (r10 ? i10 = i10.handleUserEvent(e13, r10, t10) : e13.docChanged ? i10 = i10.handleChange(e13) : e13.selection && 0 != i10.state && (i10 = new Nj(i10.source, 0)), e13.effects))
-      if (o10.is(Nw))
-        i10 = new Nj(i10.source, 1, o10.value ? Ng(e13.state) : -1);
-      else if (o10.is(Nx))
-        i10 = new Nj(i10.source, 0);
-      else if (o10.is(NB))
+    let r10 = N$(e13, t10), i10 = this;
+    for (let o10 of (r10 ? i10 = i10.handleUserEvent(e13, r10, t10) : e13.docChanged ? i10 = i10.handleChange(e13) : e13.selection && 0 != i10.state && (i10 = new NF(i10.source, 0)), e13.effects))
+      if (o10.is(NC))
+        i10 = new NF(i10.source, 1, o10.value ? Nb(e13.state) : -1);
+      else if (o10.is(NO))
+        i10 = new NF(i10.source, 0);
+      else if (o10.is(NV))
         for (let e14 of o10.value)
           e14.source == i10.source && (i10 = e14);
     return i10;
   }
   handleUserEvent(e13, t10, r10) {
-    return "delete" != t10 && r10.activateOnTyping ? new Nj(this.source, 1) : this.map(e13.changes);
+    return "delete" != t10 && r10.activateOnTyping ? new NF(this.source, 1) : this.map(e13.changes);
   }
   handleChange(e13) {
-    return e13.changes.touchesRange(Ng(e13.startState)) ? new Nj(this.source, 0) : this.map(e13.changes);
+    return e13.changes.touchesRange(Nb(e13.startState)) ? new NF(this.source, 0) : this.map(e13.changes);
   }
   map(e13) {
-    return e13.empty || this.explicitPos < 0 ? this : new Nj(this.source, this.state, e13.mapPos(this.explicitPos));
+    return e13.empty || this.explicitPos < 0 ? this : new NF(this.source, this.state, e13.mapPos(this.explicitPos));
   }
 }
-class NN extends Nj {
+class Nz extends NF {
   constructor(e13, t10, r10, i10, o10) {
     super(e13, 2, t10), this.result = r10, this.from = i10, this.to = o10;
   }
@@ -24001,61 +24010,61 @@ class NN extends Nj {
     var i10;
     let o10 = this.result;
     o10.map && !e13.changes.empty && (o10 = o10.map(o10, e13.changes));
-    let s10 = e13.changes.mapPos(this.from), l10 = e13.changes.mapPos(this.to, 1), a10 = Ng(e13.state);
-    if ((this.explicitPos < 0 ? a10 <= s10 : a10 < this.from) || a10 > l10 || !o10 || "delete" == t10 && Ng(e13.startState) == this.from)
-      return new Nj(this.source, "input" == t10 && r10.activateOnTyping ? 1 : 0);
+    let s10 = e13.changes.mapPos(this.from), l10 = e13.changes.mapPos(this.to, 1), a10 = Nb(e13.state);
+    if ((this.explicitPos < 0 ? a10 <= s10 : a10 < this.from) || a10 > l10 || !o10 || "delete" == t10 && Nb(e13.startState) == this.from)
+      return new NF(this.source, "input" == t10 && r10.activateOnTyping ? 1 : 0);
     let c10 = this.explicitPos < 0 ? -1 : e13.changes.mapPos(this.explicitPos);
     return !function(e14, t11, r11, i11) {
       if (!e14)
         return false;
       let o11 = t11.sliceDoc(r11, i11);
-      return "function" == typeof e14 ? e14(o11, r11, i11, t11) : Nm(e14, true).test(o11);
-    }(o10.validFor, e13.state, s10, l10) ? o10.update && (o10 = o10.update(o10, s10, l10, new Nf(e13.state, a10, c10 >= 0))) ? new NN(this.source, c10, o10, o10.from, null !== (i10 = o10.to) && void 0 !== i10 ? i10 : Ng(e13.state)) : new Nj(this.source, 1, c10) : new NN(this.source, c10, o10, s10, l10);
+      return "function" == typeof e14 ? e14(o11, r11, i11, t11) : Nw(e14, true).test(o11);
+    }(o10.validFor, e13.state, s10, l10) ? o10.update && (o10 = o10.update(o10, s10, l10, new Nm(e13.state, a10, c10 >= 0))) ? new Nz(this.source, c10, o10, o10.from, null !== (i10 = o10.to) && void 0 !== i10 ? i10 : Nb(e13.state)) : new NF(this.source, 1, c10) : new Nz(this.source, c10, o10, s10, l10);
   }
   handleChange(e13) {
-    return e13.changes.touchesRange(this.from, this.to) ? new Nj(this.source, 0) : this.map(e13.changes);
+    return e13.changes.touchesRange(this.from, this.to) ? new NF(this.source, 0) : this.map(e13.changes);
   }
   map(e13) {
-    return e13.empty ? this : (this.result.map ? this.result.map(this.result, e13) : this.result) ? new NN(this.source, this.explicitPos < 0 ? -1 : e13.mapPos(this.explicitPos), this.result, e13.mapPos(this.from), e13.mapPos(this.to, 1)) : new Nj(this.source, 0);
+    return e13.empty ? this : (this.result.map ? this.result.map(this.result, e13) : this.result) ? new Nz(this.source, this.explicitPos < 0 ? -1 : e13.mapPos(this.explicitPos), this.result, e13.mapPos(this.from), e13.mapPos(this.to, 1)) : new NF(this.source, 0);
   }
 }
-let NB = Pu.define({ map: (e13, t10) => e13.map((e14) => e14.map(t10)) }), N$ = Pu.define(), NF = T0.define({ create: () => NE.start(), update: (e13, t10) => e13.update(t10), provide: (e13) => [Iu.from(e13, (e14) => e14.tooltip), Rz.contentAttributes.from(e13, (e14) => e14.attrs)] });
-function Nz(e13, t10) {
-  let r10 = t10.completion.apply || t10.completion.label, i10 = e13.state.field(NF).active.find((e14) => e14.source == t10.source);
-  return i10 instanceof NN && ("string" == typeof r10 ? e13.dispatch(Object.assign(Object.assign({}, function(e14, t11, r11, i11) {
+let NV = Pp.define({ map: (e13, t10) => e13.map((e14) => e14.map(t10)) }), NH = Pp.define(), NW = T3.define({ create: () => NL.start(), update: (e13, t10) => e13.update(t10), provide: (e13) => [Ip.from(e13, (e14) => e14.tooltip), RU.contentAttributes.from(e13, (e14) => e14.attrs)] });
+function NU(e13, t10) {
+  let r10 = t10.completion.apply || t10.completion.label, i10 = e13.state.field(NW).active.find((e14) => e14.source == t10.source);
+  return i10 instanceof Nz && ("string" == typeof r10 ? e13.dispatch(Object.assign(Object.assign({}, function(e14, t11, r11, i11) {
     let { main: o10 } = e14.selection, s10 = r11 - o10.from, l10 = i11 - o10.from;
-    return Object.assign(Object.assign({}, e14.changeByRange((a10) => a10 != o10 && r11 != i11 && e14.sliceDoc(a10.from + s10, a10.from + l10) != e14.sliceDoc(r11, i11) ? { range: a10 } : { changes: { from: a10.from + s10, to: i11 == o10.from ? a10.to : a10.from + l10, insert: t11 }, range: TU.cursor(a10.from + s10 + t11.length) })), { scrollIntoView: true, userEvent: "input.complete" });
-  }(e13.state, r10, i10.from, i10.to)), { annotations: Nv.of(t10.completion) })) : r10(e13, t10.completion, i10.from, i10.to), true);
+    return Object.assign(Object.assign({}, e14.changeByRange((a10) => a10 != o10 && r11 != i11 && e14.sliceDoc(a10.from + s10, a10.from + l10) != e14.sliceDoc(r11, i11) ? { range: a10 } : { changes: { from: a10.from + s10, to: i11 == o10.from ? a10.to : a10.from + l10, insert: t11 }, range: TY.cursor(a10.from + s10 + t11.length) })), { scrollIntoView: true, userEvent: "input.complete" });
+  }(e13.state, r10, i10.from, i10.to)), { annotations: Nx.of(t10.completion) })) : r10(e13, t10.completion, i10.from, i10.to), true);
 }
-let NV = (e13) => new NM(e13, NF, Nz);
-function NH(e13) {
+let Nq = (e13) => new ND(e13, NW, NU);
+function NX(e13) {
   let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "option";
   return (r10) => {
-    let i10 = r10.state.field(NF, false);
-    if (!i10 || !i10.open || i10.open.disabled || Date.now() - i10.open.timestamp < r10.state.facet(NC).interactionDelay)
+    let i10 = r10.state.field(NW, false);
+    if (!i10 || !i10.open || i10.open.disabled || Date.now() - i10.open.timestamp < r10.state.facet(NM).interactionDelay)
       return false;
     let o10 = 1, s10;
-    "page" == t10 && (s10 = Ig(r10, i10.open.tooltip)) && (o10 = Math.max(2, Math.floor(s10.dom.offsetHeight / s10.dom.querySelector("li").offsetHeight) - 1));
+    "page" == t10 && (s10 = Ib(r10, i10.open.tooltip)) && (o10 = Math.max(2, Math.floor(s10.dom.offsetHeight / s10.dom.querySelector("li").offsetHeight) - 1));
     let { length: l10 } = i10.open.options, a10 = i10.open.selected > -1 ? i10.open.selected + o10 * (e13 ? 1 : -1) : e13 ? 0 : l10 - 1;
-    return a10 < 0 ? a10 = "page" == t10 ? 0 : l10 - 1 : a10 >= l10 && (a10 = "page" == t10 ? l10 - 1 : 0), r10.dispatch({ effects: N$.of(a10) }), true;
+    return a10 < 0 ? a10 = "page" == t10 ? 0 : l10 - 1 : a10 >= l10 && (a10 = "page" == t10 ? l10 - 1 : 0), r10.dispatch({ effects: NH.of(a10) }), true;
   };
 }
-let NW = (e13) => !!e13.state.field(NF, false) && (e13.dispatch({ effects: Nw.of(true) }), true);
-class NU {
+let NQ = (e13) => !!e13.state.field(NW, false) && (e13.dispatch({ effects: NC.of(true) }), true);
+class NY {
   constructor(e13, t10) {
     this.active = e13, this.context = t10, this.time = Date.now(), this.updates = [], this.done = void 0;
   }
 }
-let Nq = Dd.fromClass(class {
+let NK = Dv.fromClass(class {
   constructor(e13) {
-    for (let t10 of (this.view = e13, this.debounceUpdate = -1, this.running = [], this.debounceAccept = -1, this.pendingStart = false, this.composing = 0, e13.state.field(NF).active))
+    for (let t10 of (this.view = e13, this.debounceUpdate = -1, this.running = [], this.debounceAccept = -1, this.pendingStart = false, this.composing = 0, e13.state.field(NW).active))
       1 == t10.state && this.startQuery(t10);
   }
   update(e13) {
-    let t10 = e13.state.field(NF), r10 = e13.state.facet(NC);
-    if (!e13.selectionSet && !e13.docChanged && e13.startState.field(NF) == t10)
+    let t10 = e13.state.field(NW), r10 = e13.state.facet(NM);
+    if (!e13.selectionSet && !e13.docChanged && e13.startState.field(NW) == t10)
       return;
-    let i10 = e13.transactions.some((e14) => (e14.selection || e14.docChanged) && !NL(e14, r10));
+    let i10 = e13.transactions.some((e14) => (e14.selection || e14.docChanged) && !N$(e14, r10));
     for (let t11 = 0; t11 < this.running.length; t11++) {
       let r11 = this.running[t11];
       if (i10 || r11.updates.length + e13.transactions.length > 50 && Date.now() - r11.time > 1e3) {
@@ -24063,45 +24072,45 @@ let Nq = Dd.fromClass(class {
           try {
             e14();
           } catch (e15) {
-            Dc(this.view.state, e15);
+            Dd(this.view.state, e15);
           }
         r11.context.abortListeners = null, this.running.splice(t11--, 1);
       } else
         r11.updates.push(...e13.transactions);
     }
-    this.debounceUpdate > -1 && clearTimeout(this.debounceUpdate), e13.transactions.some((e14) => e14.effects.some((e15) => e15.is(Nw))) && (this.pendingStart = true);
+    this.debounceUpdate > -1 && clearTimeout(this.debounceUpdate), e13.transactions.some((e14) => e14.effects.some((e15) => e15.is(NC))) && (this.pendingStart = true);
     let o10 = this.pendingStart ? 50 : r10.activateOnTypingDelay;
     if (this.debounceUpdate = t10.active.some((e14) => 1 == e14.state && !this.running.some((t11) => t11.active.source == e14.source)) ? setTimeout(() => this.startUpdate(), o10) : -1, 0 != this.composing)
       for (let t11 of e13.transactions)
-        "input" == NL(t11, r10) ? this.composing = 2 : 2 == this.composing && t11.selection && (this.composing = 3);
+        "input" == N$(t11, r10) ? this.composing = 2 : 2 == this.composing && t11.selection && (this.composing = 3);
   }
   startUpdate() {
     this.debounceUpdate = -1, this.pendingStart = false;
     let { state: e13 } = this.view;
-    for (let t10 of e13.field(NF).active)
+    for (let t10 of e13.field(NW).active)
       1 != t10.state || this.running.some((e14) => e14.active.source == t10.source) || this.startQuery(t10);
   }
   startQuery(e13) {
-    let { state: t10 } = this.view, r10 = Ng(t10), i10 = new Nf(t10, r10, e13.explicitPos == r10), o10 = new NU(e13, i10);
+    let { state: t10 } = this.view, r10 = Nb(t10), i10 = new Nm(t10, r10, e13.explicitPos == r10), o10 = new NY(e13, i10);
     this.running.push(o10), Promise.resolve(e13.source(i10)).then((e14) => {
       o10.context.aborted || (o10.done = e14 || null, this.scheduleAccept());
     }, (e14) => {
-      this.view.dispatch({ effects: Nx.of(null) }), Dc(this.view.state, e14);
+      this.view.dispatch({ effects: NO.of(null) }), Dd(this.view.state, e14);
     });
   }
   scheduleAccept() {
-    this.running.every((e13) => void 0 !== e13.done) ? this.accept() : this.debounceAccept < 0 && (this.debounceAccept = setTimeout(() => this.accept(), this.view.state.facet(NC).updateSyncTime));
+    this.running.every((e13) => void 0 !== e13.done) ? this.accept() : this.debounceAccept < 0 && (this.debounceAccept = setTimeout(() => this.accept(), this.view.state.facet(NM).updateSyncTime));
   }
   accept() {
     var e13;
     this.debounceAccept > -1 && clearTimeout(this.debounceAccept), this.debounceAccept = -1;
-    let t10 = [], r10 = this.view.state.facet(NC);
+    let t10 = [], r10 = this.view.state.facet(NM);
     for (let i10 = 0; i10 < this.running.length; i10++) {
       let o10 = this.running[i10];
       if (void 0 === o10.done)
         continue;
       if (this.running.splice(i10--, 1), o10.done) {
-        let i11 = new NN(o10.active.source, o10.active.explicitPos, o10.done, o10.done.from, null !== (e13 = o10.done.to) && void 0 !== e13 ? e13 : Ng(o10.updates.length ? o10.updates[0].startState : this.view.state));
+        let i11 = new Nz(o10.active.source, o10.active.explicitPos, o10.done, o10.done.from, null !== (e13 = o10.done.to) && void 0 !== e13 ? e13 : Nb(o10.updates.length ? o10.updates[0].startState : this.view.state));
         for (let e14 of o10.updates)
           i11 = i11.update(e14, r10);
         if (i11.hasResult()) {
@@ -24109,10 +24118,10 @@ let Nq = Dd.fromClass(class {
           continue;
         }
       }
-      let s10 = this.view.state.field(NF).active.find((e14) => e14.source == o10.active.source);
+      let s10 = this.view.state.field(NW).active.find((e14) => e14.source == o10.active.source);
       if (s10 && 1 == s10.state) {
         if (null == o10.done) {
-          let e14 = new Nj(o10.active.source, 0);
+          let e14 = new NF(o10.active.source, 0);
           for (let t11 of o10.updates)
             e14 = e14.update(t11, r10);
           1 != e14.state && t10.push(e14);
@@ -24120,40 +24129,40 @@ let Nq = Dd.fromClass(class {
           this.startQuery(s10);
       }
     }
-    t10.length && this.view.dispatch({ effects: NB.of(t10) });
+    t10.length && this.view.dispatch({ effects: NV.of(t10) });
   }
 }, { eventHandlers: { blur(e13) {
-  let t10 = this.view.state.field(NF, false);
-  if (t10 && t10.tooltip && this.view.state.facet(NC).closeOnBlur) {
-    let r10 = t10.open && Ig(this.view, t10.open.tooltip);
-    r10 && r10.dom.contains(e13.relatedTarget) || setTimeout(() => this.view.dispatch({ effects: Nx.of(null) }), 10);
+  let t10 = this.view.state.field(NW, false);
+  if (t10 && t10.tooltip && this.view.state.facet(NM).closeOnBlur) {
+    let r10 = t10.open && Ib(this.view, t10.open.tooltip);
+    r10 && r10.dom.contains(e13.relatedTarget) || setTimeout(() => this.view.dispatch({ effects: NO.of(null) }), 10);
   }
 }, compositionstart() {
   this.composing = 1;
 }, compositionend() {
-  3 == this.composing && setTimeout(() => this.view.dispatch({ effects: Nw.of(false) }), 20), this.composing = 0;
-} } }), NX = "object" == typeof navigator && /Win/.test(navigator.platform), NQ = T4.highest(Rz.domEventHandlers({ keydown(e13, t10) {
-  let r10 = t10.state.field(NF, false);
-  if (!r10 || !r10.open || r10.open.disabled || r10.open.selected < 0 || e13.key.length > 1 || e13.ctrlKey && !(NX && e13.altKey) || e13.metaKey)
+  3 == this.composing && setTimeout(() => this.view.dispatch({ effects: NC.of(false) }), 20), this.composing = 0;
+} } }), NG = "object" == typeof navigator && /Win/.test(navigator.platform), NJ = T6.highest(RU.domEventHandlers({ keydown(e13, t10) {
+  let r10 = t10.state.field(NW, false);
+  if (!r10 || !r10.open || r10.open.disabled || r10.open.selected < 0 || e13.key.length > 1 || e13.ctrlKey && !(NG && e13.altKey) || e13.metaKey)
     return false;
   let i10 = r10.open.options[r10.open.selected], o10 = r10.active.find((e14) => e14.source == i10.source), s10 = i10.completion.commitCharacters || o10.result.commitCharacters;
-  return s10 && s10.indexOf(e13.key) > -1 && Nz(t10, i10), false;
-} })), NY = Rz.baseTheme({ ".cm-tooltip.cm-tooltip-autocomplete": { "& > ul": { fontFamily: "monospace", whiteSpace: "nowrap", overflow: "hidden auto", maxWidth_fallback: "700px", maxWidth: "min(700px, 95vw)", minWidth: "250px", maxHeight: "10em", height: "100%", listStyle: "none", margin: 0, padding: 0, "& > li, & > completion-section": { padding: "1px 3px", lineHeight: 1.2 }, "& > li": { overflowX: "hidden", textOverflow: "ellipsis", cursor: "pointer" }, "& > completion-section": { display: "list-item", borderBottom: "1px solid silver", paddingLeft: "0.5em", opacity: 0.7 } } }, "&light .cm-tooltip-autocomplete ul li[aria-selected]": { background: "#17c", color: "white" }, "&light .cm-tooltip-autocomplete-disabled ul li[aria-selected]": { background: "#777" }, "&dark .cm-tooltip-autocomplete ul li[aria-selected]": { background: "#347", color: "white" }, "&dark .cm-tooltip-autocomplete-disabled ul li[aria-selected]": { background: "#444" }, ".cm-completionListIncompleteTop:before, .cm-completionListIncompleteBottom:after": { content: '"···"', opacity: 0.5, display: "block", textAlign: "center" }, ".cm-tooltip.cm-completionInfo": { position: "absolute", padding: "3px 9px", width: "max-content", maxWidth: "400px", boxSizing: "border-box" }, ".cm-completionInfo.cm-completionInfo-left": { right: "100%" }, ".cm-completionInfo.cm-completionInfo-right": { left: "100%" }, ".cm-completionInfo.cm-completionInfo-left-narrow": { right: "30px" }, ".cm-completionInfo.cm-completionInfo-right-narrow": { left: "30px" }, "&light .cm-snippetField": { backgroundColor: "#00000022" }, "&dark .cm-snippetField": { backgroundColor: "#ffffff22" }, ".cm-snippetFieldPosition": { verticalAlign: "text-top", width: 0, height: "1.15em", display: "inline-block", margin: "0 -0.7px -.7em", borderLeft: "1.4px dotted #888" }, ".cm-completionMatchedText": { textDecoration: "underline" }, ".cm-completionDetail": { marginLeft: "0.5em", fontStyle: "italic" }, ".cm-completionIcon": { fontSize: "90%", width: ".8em", display: "inline-block", textAlign: "center", paddingRight: ".6em", opacity: "0.6", boxSizing: "content-box" }, ".cm-completionIcon-function, .cm-completionIcon-method": { "&:after": { content: "'ƒ'" } }, ".cm-completionIcon-class": { "&:after": { content: "'○'" } }, ".cm-completionIcon-interface": { "&:after": { content: "'◌'" } }, ".cm-completionIcon-variable": { "&:after": { content: "'𝑥'" } }, ".cm-completionIcon-constant": { "&:after": { content: "'𝐶'" } }, ".cm-completionIcon-type": { "&:after": { content: "'𝑡'" } }, ".cm-completionIcon-enum": { "&:after": { content: "'∪'" } }, ".cm-completionIcon-property": { "&:after": { content: "'□'" } }, ".cm-completionIcon-keyword": { "&:after": { content: "'🔑︎'" } }, ".cm-completionIcon-namespace": { "&:after": { content: "'▢'" } }, ".cm-completionIcon-text": { "&:after": { content: "'abc'", fontSize: "50%", verticalAlign: "middle" } } });
-class NK {
+  return s10 && s10.indexOf(e13.key) > -1 && NU(t10, i10), false;
+} })), NZ = RU.baseTheme({ ".cm-tooltip.cm-tooltip-autocomplete": { "& > ul": { fontFamily: "monospace", whiteSpace: "nowrap", overflow: "hidden auto", maxWidth_fallback: "700px", maxWidth: "min(700px, 95vw)", minWidth: "250px", maxHeight: "10em", height: "100%", listStyle: "none", margin: 0, padding: 0, "& > li, & > completion-section": { padding: "1px 3px", lineHeight: 1.2 }, "& > li": { overflowX: "hidden", textOverflow: "ellipsis", cursor: "pointer" }, "& > completion-section": { display: "list-item", borderBottom: "1px solid silver", paddingLeft: "0.5em", opacity: 0.7 } } }, "&light .cm-tooltip-autocomplete ul li[aria-selected]": { background: "#17c", color: "white" }, "&light .cm-tooltip-autocomplete-disabled ul li[aria-selected]": { background: "#777" }, "&dark .cm-tooltip-autocomplete ul li[aria-selected]": { background: "#347", color: "white" }, "&dark .cm-tooltip-autocomplete-disabled ul li[aria-selected]": { background: "#444" }, ".cm-completionListIncompleteTop:before, .cm-completionListIncompleteBottom:after": { content: '"···"', opacity: 0.5, display: "block", textAlign: "center" }, ".cm-tooltip.cm-completionInfo": { position: "absolute", padding: "3px 9px", width: "max-content", maxWidth: "400px", boxSizing: "border-box" }, ".cm-completionInfo.cm-completionInfo-left": { right: "100%" }, ".cm-completionInfo.cm-completionInfo-right": { left: "100%" }, ".cm-completionInfo.cm-completionInfo-left-narrow": { right: "30px" }, ".cm-completionInfo.cm-completionInfo-right-narrow": { left: "30px" }, "&light .cm-snippetField": { backgroundColor: "#00000022" }, "&dark .cm-snippetField": { backgroundColor: "#ffffff22" }, ".cm-snippetFieldPosition": { verticalAlign: "text-top", width: 0, height: "1.15em", display: "inline-block", margin: "0 -0.7px -.7em", borderLeft: "1.4px dotted #888" }, ".cm-completionMatchedText": { textDecoration: "underline" }, ".cm-completionDetail": { marginLeft: "0.5em", fontStyle: "italic" }, ".cm-completionIcon": { fontSize: "90%", width: ".8em", display: "inline-block", textAlign: "center", paddingRight: ".6em", opacity: "0.6", boxSizing: "content-box" }, ".cm-completionIcon-function, .cm-completionIcon-method": { "&:after": { content: "'ƒ'" } }, ".cm-completionIcon-class": { "&:after": { content: "'○'" } }, ".cm-completionIcon-interface": { "&:after": { content: "'◌'" } }, ".cm-completionIcon-variable": { "&:after": { content: "'𝑥'" } }, ".cm-completionIcon-constant": { "&:after": { content: "'𝐶'" } }, ".cm-completionIcon-type": { "&:after": { content: "'𝑡'" } }, ".cm-completionIcon-enum": { "&:after": { content: "'∪'" } }, ".cm-completionIcon-property": { "&:after": { content: "'□'" } }, ".cm-completionIcon-keyword": { "&:after": { content: "'🔑︎'" } }, ".cm-completionIcon-namespace": { "&:after": { content: "'▢'" } }, ".cm-completionIcon-text": { "&:after": { content: "'abc'", fontSize: "50%", verticalAlign: "middle" } } });
+class N0 {
   constructor(e13, t10, r10, i10) {
     this.field = e13, this.line = t10, this.from = r10, this.to = i10;
   }
 }
-class NG {
+class N1 {
   constructor(e13, t10, r10) {
     this.field = e13, this.from = t10, this.to = r10;
   }
   map(e13) {
-    let t10 = e13.mapPos(this.from, -1, TL.TrackDel), r10 = e13.mapPos(this.to, 1, TL.TrackDel);
-    return null == t10 || null == r10 ? null : new NG(this.field, t10, r10);
+    let t10 = e13.mapPos(this.from, -1, T$.TrackDel), r10 = e13.mapPos(this.to, 1, T$.TrackDel);
+    return null == t10 || null == r10 ? null : new N1(this.field, t10, r10);
   }
 }
-class NJ {
+class N2 {
   constructor(e13, t10) {
     this.lines = e13, this.fieldPositions = t10;
   }
@@ -24163,12 +24172,12 @@ class NJ {
       if (r10.length) {
         let r11 = s10, l10 = /^\t*/.exec(o11)[0].length;
         for (let t11 = 0; t11 < l10; t11++)
-          r11 += e13.facet(jS);
+          r11 += e13.facet(j_);
         i10.push(t10 + r11.length - l10), o11 = r11 + o11.slice(l10);
       }
       r10.push(o11), t10 += o11.length + 1;
     }
-    return { text: r10, ranges: this.fieldPositions.map((e14) => new NG(e14.field, i10[e14.line] + e14.from, i10[e14.line] + e14.to)) };
+    return { text: r10, ranges: this.fieldPositions.map((e14) => new N1(e14.field, i10[e14.line] + e14.from, i10[e14.line] + e14.to)) };
   }
   static parse(e13) {
     let t10 = [], r10 = [], i10 = [], o10;
@@ -24184,17 +24193,17 @@ class NJ {
           for (let o11 of (t10.splice(r11, 0, { seq: e14, name: l10 }), a10 = r11, i10))
             o11.field >= a10 && o11.field++;
         }
-        i10.push(new NK(a10, r10.length, o10.index, o10.index + l10.length)), s10 = s10.slice(0, o10.index) + l10 + s10.slice(o10.index + o10[0].length);
+        i10.push(new N0(a10, r10.length, o10.index, o10.index + l10.length)), s10 = s10.slice(0, o10.index) + l10 + s10.slice(o10.index + o10[0].length);
       }
       for (let e14; e14 = /\\([{}])/.exec(s10); )
         for (let t11 of (s10 = s10.slice(0, e14.index) + e14[1] + s10.slice(e14.index + e14[0].length), i10))
           t11.line == r10.length && t11.from > e14.index && (t11.from--, t11.to--);
       r10.push(s10);
     }
-    return new NJ(r10, i10);
+    return new N2(r10, i10);
   }
 }
-let NZ = EB.widget({ widget: new class extends Ej {
+let N4 = EV.widget({ widget: new class extends EF {
   toDOM() {
     let e13 = document.createElement("span");
     return e13.className = "cm-snippetFieldPosition", e13;
@@ -24202,10 +24211,10 @@ let NZ = EB.widget({ widget: new class extends Ej {
   ignoreEvent() {
     return false;
   }
-}() }), N0 = EB.mark({ class: "cm-snippetField" });
-class N1 {
+}() }), N3 = EV.mark({ class: "cm-snippetField" });
+class N5 {
   constructor(e13, t10) {
-    this.ranges = e13, this.active = t10, this.deco = EB.set(e13.map((e14) => (e14.from == e14.to ? NZ : N0).range(e14.from, e14.to)));
+    this.ranges = e13, this.active = t10, this.deco = EV.set(e13.map((e14) => (e14.from == e14.to ? N4 : N3).range(e14.from, e14.to)));
   }
   map(e13) {
     let t10 = [];
@@ -24215,105 +24224,105 @@ class N1 {
         return null;
       t10.push(i10);
     }
-    return new N1(t10, this.active);
+    return new N5(t10, this.active);
   }
   selectionInsideField(e13) {
     return e13.ranges.every((e14) => this.ranges.some((t10) => t10.field == this.active && t10.from <= e14.from && t10.to >= e14.to));
   }
 }
-let N2 = Pu.define({ map: (e13, t10) => e13 && e13.map(t10) }), N4 = Pu.define(), N3 = T0.define({ create: () => null, update(e13, t10) {
+let N8 = Pp.define({ map: (e13, t10) => e13 && e13.map(t10) }), N6 = Pp.define(), N9 = T3.define({ create: () => null, update(e13, t10) {
   for (let r10 of t10.effects) {
-    if (r10.is(N2))
+    if (r10.is(N8))
       return r10.value;
-    if (r10.is(N4) && e13)
-      return new N1(e13.ranges, r10.value);
+    if (r10.is(N6) && e13)
+      return new N5(e13.ranges, r10.value);
   }
   return e13 && t10.docChanged && (e13 = e13.map(t10.changes)), e13 && t10.selection && !e13.selectionInsideField(t10.selection) && (e13 = null), e13;
-}, provide: (e13) => Rz.decorations.from(e13, (e14) => e14 ? e14.deco : EB.none) });
-function N5(e13, t10) {
-  return TU.create(e13.filter((e14) => e14.field == t10).map((e14) => TU.range(e14.from, e14.to)));
+}, provide: (e13) => RU.decorations.from(e13, (e14) => e14 ? e14.deco : EV.none) });
+function N7(e13, t10) {
+  return TY.create(e13.filter((e14) => e14.field == t10).map((e14) => TY.range(e14.from, e14.to)));
 }
-function N8(e13) {
+function Be(e13) {
   return (t10) => {
-    let { state: r10, dispatch: i10 } = t10, o10 = r10.field(N3, false);
+    let { state: r10, dispatch: i10 } = t10, o10 = r10.field(N9, false);
     if (!o10 || e13 < 0 && 0 == o10.active)
       return false;
     let s10 = o10.active + e13, l10 = e13 > 0 && !o10.ranges.some((t11) => t11.field == s10 + e13);
-    return i10(r10.update({ selection: N5(o10.ranges, s10), effects: N2.of(l10 ? null : new N1(o10.ranges, s10)), scrollIntoView: true })), true;
+    return i10(r10.update({ selection: N7(o10.ranges, s10), effects: N8.of(l10 ? null : new N5(o10.ranges, s10)), scrollIntoView: true })), true;
   };
 }
-let N6 = [{ key: "Tab", run: N8(1), shift: N8(-1) }, { key: "Escape", run: (e13) => {
+let Bt = [{ key: "Tab", run: Be(1), shift: Be(-1) }, { key: "Escape", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return !!t10.field(N3, false) && (r10(t10.update({ effects: N2.of(null) })), true);
-} }], N9 = TQ.define({ combine: (e13) => e13.length ? e13[0] : N6 }), N7 = T4.highest(RY.compute([N9], (e13) => e13.facet(N9)));
-function Be(e13, t10) {
+  return !!t10.field(N9, false) && (r10(t10.update({ effects: N8.of(null) })), true);
+} }], Bn = TJ.define({ combine: (e13) => e13.length ? e13[0] : Bt }), Br = T6.highest(RZ.compute([Bn], (e13) => e13.facet(Bn)));
+function Bi(e13, t10) {
   let r10;
-  return Object.assign(Object.assign({}, t10), { apply: (r10 = NJ.parse(e13), (e14, t11, i10, o10) => {
-    let { text: s10, ranges: l10 } = r10.instantiate(e14.state, i10), a10 = { changes: { from: i10, to: o10, insert: Tm.of(s10) }, scrollIntoView: true, annotations: t11 ? [Nv.of(t11), Ph.userEvent.of("input.complete")] : void 0 };
-    if (l10.length && (a10.selection = N5(l10, 0)), l10.some((e15) => e15.field > 0)) {
-      let t12 = new N1(l10, 0), r11 = a10.effects = [N2.of(t12)];
-      void 0 === e14.state.field(N3, false) && r11.push(Pu.appendConfig.of([N3, N7, Bt, NY]));
+  return Object.assign(Object.assign({}, t10), { apply: (r10 = N2.parse(e13), (e14, t11, i10, o10) => {
+    let { text: s10, ranges: l10 } = r10.instantiate(e14.state, i10), a10 = { changes: { from: i10, to: o10, insert: Tw.of(s10) }, scrollIntoView: true, annotations: t11 ? [Nx.of(t11), Pg.userEvent.of("input.complete")] : void 0 };
+    if (l10.length && (a10.selection = N7(l10, 0)), l10.some((e15) => e15.field > 0)) {
+      let t12 = new N5(l10, 0), r11 = a10.effects = [N8.of(t12)];
+      void 0 === e14.state.field(N9, false) && r11.push(Pp.appendConfig.of([N9, Br, Bo, NZ]));
     }
     e14.dispatch(e14.state.update(a10));
   }) });
 }
-let Bt = Rz.domEventHandlers({ mousedown(e13, t10) {
-  let r10 = t10.state.field(N3, false), i10;
+let Bo = RU.domEventHandlers({ mousedown(e13, t10) {
+  let r10 = t10.state.field(N9, false), i10;
   if (!r10 || null == (i10 = t10.posAtCoords({ x: e13.clientX, y: e13.clientY })))
     return false;
   let o10 = r10.ranges.find((e14) => e14.from <= i10 && e14.to >= i10);
-  return !!o10 && o10.field != r10.active && (t10.dispatch({ selection: N5(r10.ranges, o10.field), effects: N2.of(r10.ranges.some((e14) => e14.field > o10.field) ? new N1(r10.ranges, o10.field) : null), scrollIntoView: true }), true);
-} }), Bn = { brackets: ["(", "[", "{", "'", '"'], before: ")]}:;>", stringPrefixes: [] }, Br = Pu.define({ map(e13, t10) {
-  let r10 = t10.mapPos(e13, -1, TL.TrackAfter);
+  return !!o10 && o10.field != r10.active && (t10.dispatch({ selection: N7(r10.ranges, o10.field), effects: N8.of(r10.ranges.some((e14) => e14.field > o10.field) ? new N5(r10.ranges, o10.field) : null), scrollIntoView: true }), true);
+} }), Bs = { brackets: ["(", "[", "{", "'", '"'], before: ")]}:;>", stringPrefixes: [] }, Bl = Pp.define({ map(e13, t10) {
+  let r10 = t10.mapPos(e13, -1, T$.TrackAfter);
   return null == r10 ? void 0 : r10;
-} }), Bi = new class extends Pw {
+} }), Ba = new class extends PC {
 }();
-Bi.startSide = 1, Bi.endSide = -1;
-let Bo = T0.define({ create: () => PC.empty, update(e13, t10) {
+Ba.startSide = 1, Ba.endSide = -1;
+let Bc = T3.define({ create: () => PM.empty, update(e13, t10) {
   if (e13 = e13.map(t10.changes), t10.selection) {
     let r10 = t10.state.doc.lineAt(t10.selection.main.head);
     e13 = e13.update({ filter: (e14) => e14 >= r10.from && e14 <= r10.to });
   }
   for (let r10 of t10.effects)
-    r10.is(Br) && (e13 = e13.update({ add: [Bi.range(r10.value, r10.value + 1)] }));
+    r10.is(Bl) && (e13 = e13.update({ add: [Ba.range(r10.value, r10.value + 1)] }));
   return e13;
-} }), Bs = "()[]{}<>";
-function Bl(e13) {
-  for (let t10 = 0; t10 < Bs.length; t10 += 2)
-    if (Bs.charCodeAt(t10) == e13)
-      return Bs.charAt(t10 + 1);
-  return TD(e13 < 128 ? e13 : e13 + 1);
+} }), Bu = "()[]{}<>";
+function Bh(e13) {
+  for (let t10 = 0; t10 < Bu.length; t10 += 2)
+    if (Bu.charCodeAt(t10) == e13)
+      return Bu.charAt(t10 + 1);
+  return Tj(e13 < 128 ? e13 : e13 + 1);
 }
-function Ba(e13, t10) {
-  return e13.languageDataAt("closeBrackets", t10)[0] || Bn;
+function Bf(e13, t10) {
+  return e13.languageDataAt("closeBrackets", t10)[0] || Bs;
 }
-let Bc = "object" == typeof navigator && /Android\b/.test(navigator.userAgent), Bu = Rz.inputHandler.of((e13, t10, r10, i10) => {
-  if ((Bc ? e13.composing : e13.compositionStarted) || e13.state.readOnly)
+let Bd = "object" == typeof navigator && /Android\b/.test(navigator.userAgent), Bp = RU.inputHandler.of((e13, t10, r10, i10) => {
+  if ((Bd ? e13.composing : e13.compositionStarted) || e13.state.readOnly)
     return false;
   let o10 = e13.state.selection.main;
-  if (i10.length > 2 || 2 == i10.length && 1 == TR(TE(i10, 0)) || t10 != o10.from || r10 != o10.to)
+  if (i10.length > 2 || 2 == i10.length && 1 == TN(TL(i10, 0)) || t10 != o10.from || r10 != o10.to)
     return false;
   let s10 = function(e14, t11) {
-    let r11 = Ba(e14, e14.selection.main.head), i11 = r11.brackets || Bn.brackets;
+    let r11 = Bf(e14, e14.selection.main.head), i11 = r11.brackets || Bs.brackets;
     for (let o11 of i11) {
-      let s11 = Bl(TE(o11, 0));
+      let s11 = Bh(TL(o11, 0));
       if (t11 == o11)
         return s11 == o11 ? function(e15, t12, r12, i12) {
-          let o12 = i12.stringPrefixes || Bn.stringPrefixes, s12 = null, l10 = e15.changeByRange((i13) => {
+          let o12 = i12.stringPrefixes || Bs.stringPrefixes, s12 = null, l10 = e15.changeByRange((i13) => {
             if (!i13.empty)
-              return { changes: [{ insert: t12, from: i13.from }, { insert: t12, from: i13.to }], effects: Br.of(i13.to + t12.length), range: TU.range(i13.anchor + t12.length, i13.head + t12.length) };
-            let l11 = i13.head, a10 = Bd(e15.doc, l11), c10;
+              return { changes: [{ insert: t12, from: i13.from }, { insert: t12, from: i13.to }], effects: Bl.of(i13.to + t12.length), range: TY.range(i13.anchor + t12.length, i13.head + t12.length) };
+            let l11 = i13.head, a10 = Bv(e15.doc, l11), c10;
             if (a10 == t12) {
-              if (Bp(e15, l11))
-                return { changes: { insert: t12 + t12, from: l11 }, effects: Br.of(l11 + t12.length), range: TU.cursor(l11 + t12.length) };
-              if (Bf(e15, l11)) {
+              if (By(e15, l11))
+                return { changes: { insert: t12 + t12, from: l11 }, effects: Bl.of(l11 + t12.length), range: TY.cursor(l11 + t12.length) };
+              if (Bm(e15, l11)) {
                 let i14 = r12 && e15.sliceDoc(l11, l11 + 3 * t12.length) == t12 + t12 + t12 ? t12 + t12 + t12 : t12;
-                return { changes: { from: l11, to: l11 + i14.length, insert: i14 }, range: TU.cursor(l11 + i14.length) };
+                return { changes: { from: l11, to: l11 + i14.length, insert: i14 }, range: TY.cursor(l11 + i14.length) };
               }
-            } else if (r12 && e15.sliceDoc(l11 - 2 * t12.length, l11) == t12 + t12 && (c10 = Bg(e15, l11 - 2 * t12.length, o12)) > -1 && Bp(e15, c10))
-              return { changes: { insert: t12 + t12 + t12 + t12, from: l11 }, effects: Br.of(l11 + t12.length), range: TU.cursor(l11 + t12.length) };
-            else if (e15.charCategorizer(l11)(a10) != Pm.Word && Bg(e15, l11, o12) > -1 && !function(e16, t13, r13, i14) {
-              let o13 = jh(e16).resolveInner(t13, -1), s13 = i14.reduce((e17, t14) => Math.max(e17, t14.length), 0);
+            } else if (r12 && e15.sliceDoc(l11 - 2 * t12.length, l11) == t12 + t12 && (c10 = Bb(e15, l11 - 2 * t12.length, o12)) > -1 && By(e15, c10))
+              return { changes: { insert: t12 + t12 + t12 + t12, from: l11 }, effects: Bl.of(l11 + t12.length), range: TY.cursor(l11 + t12.length) };
+            else if (e15.charCategorizer(l11)(a10) != Pw.Word && Bb(e15, l11, o12) > -1 && !function(e16, t13, r13, i14) {
+              let o13 = jg(e16).resolveInner(t13, -1), s13 = i14.reduce((e17, t14) => Math.max(e17, t14.length), 0);
               for (let l12 = 0; l12 < 5; l12++) {
                 let l13 = e16.sliceDoc(o13.from, Math.min(o13.to, o13.from + r13.length + s13)), a11 = l13.indexOf(r13);
                 if (!a11 || a11 > -1 && i14.indexOf(l13.slice(0, a11)) > -1) {
@@ -24332,78 +24341,78 @@ let Bc = "object" == typeof navigator && /Android\b/.test(navigator.userAgent), 
               }
               return false;
             }(e15, l11, t12, o12))
-              return { changes: { insert: t12 + t12, from: l11 }, effects: Br.of(l11 + t12.length), range: TU.cursor(l11 + t12.length) };
+              return { changes: { insert: t12 + t12, from: l11 }, effects: Bl.of(l11 + t12.length), range: TY.cursor(l11 + t12.length) };
             return { range: s12 = i13 };
           });
           return s12 ? null : e15.update(l10, { scrollIntoView: true, userEvent: "input.type" });
         }(e14, o11, i11.indexOf(o11 + o11 + o11) > -1, r11) : function(e15, t12, r12, i12) {
           let o12 = null, s12 = e15.changeByRange((s13) => {
             if (!s13.empty)
-              return { changes: [{ insert: t12, from: s13.from }, { insert: r12, from: s13.to }], effects: Br.of(s13.to + t12.length), range: TU.range(s13.anchor + t12.length, s13.head + t12.length) };
-            let l10 = Bd(e15.doc, s13.head);
-            return !l10 || /\s/.test(l10) || i12.indexOf(l10) > -1 ? { changes: { insert: t12 + r12, from: s13.head }, effects: Br.of(s13.head + t12.length), range: TU.cursor(s13.head + t12.length) } : { range: o12 = s13 };
+              return { changes: [{ insert: t12, from: s13.from }, { insert: r12, from: s13.to }], effects: Bl.of(s13.to + t12.length), range: TY.range(s13.anchor + t12.length, s13.head + t12.length) };
+            let l10 = Bv(e15.doc, s13.head);
+            return !l10 || /\s/.test(l10) || i12.indexOf(l10) > -1 ? { changes: { insert: t12 + r12, from: s13.head }, effects: Bl.of(s13.head + t12.length), range: TY.cursor(s13.head + t12.length) } : { range: o12 = s13 };
           });
           return o12 ? null : e15.update(s12, { scrollIntoView: true, userEvent: "input.type" });
-        }(e14, o11, s11, r11.before || Bn.before);
-      if (t11 == s11 && Bf(e14, e14.selection.main.from))
+        }(e14, o11, s11, r11.before || Bs.before);
+      if (t11 == s11 && Bm(e14, e14.selection.main.from))
         return function(e15, t12, r12) {
-          let i12 = null, o12 = e15.changeByRange((t13) => t13.empty && Bd(e15.doc, t13.head) == r12 ? { changes: { from: t13.head, to: t13.head + r12.length, insert: r12 }, range: TU.cursor(t13.head + r12.length) } : i12 = { range: t13 });
+          let i12 = null, o12 = e15.changeByRange((t13) => t13.empty && Bv(e15.doc, t13.head) == r12 ? { changes: { from: t13.head, to: t13.head + r12.length, insert: r12 }, range: TY.cursor(t13.head + r12.length) } : i12 = { range: t13 });
           return i12 ? null : e15.update(o12, { scrollIntoView: true, userEvent: "input.type" });
         }(e14, 0, s11);
     }
     return null;
   }(e13.state, i10);
   return !!s10 && (e13.dispatch(s10), true);
-}), Bh = [{ key: "Backspace", run: (e13) => {
+}), Bg = [{ key: "Backspace", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
   if (t10.readOnly)
     return false;
-  let i10 = Ba(t10, t10.selection.main.head).brackets || Bn.brackets, o10 = null, s10 = t10.changeByRange((e14) => {
+  let i10 = Bf(t10, t10.selection.main.head).brackets || Bs.brackets, o10 = null, s10 = t10.changeByRange((e14) => {
     if (e14.empty) {
       var r11, s11;
       let o11;
-      let l10 = (r11 = t10.doc, s11 = e14.head, TR(TE(o11 = r11.sliceString(s11 - 2, s11), 0)) == o11.length ? o11 : o11.slice(1));
+      let l10 = (r11 = t10.doc, s11 = e14.head, TN(TL(o11 = r11.sliceString(s11 - 2, s11), 0)) == o11.length ? o11 : o11.slice(1));
       for (let r12 of i10)
-        if (r12 == l10 && Bd(t10.doc, e14.head) == Bl(TE(r12, 0)))
-          return { changes: { from: e14.head - r12.length, to: e14.head + r12.length }, range: TU.cursor(e14.head - r12.length) };
+        if (r12 == l10 && Bv(t10.doc, e14.head) == Bh(TL(r12, 0)))
+          return { changes: { from: e14.head - r12.length, to: e14.head + r12.length }, range: TY.cursor(e14.head - r12.length) };
     }
     return { range: o10 = e14 };
   });
   return o10 || r10(t10.update(s10, { scrollIntoView: true, userEvent: "delete.backward" })), !o10;
 } }];
-function Bf(e13, t10) {
+function Bm(e13, t10) {
   let r10 = false;
-  return e13.field(Bo).between(0, e13.doc.length, (e14) => {
+  return e13.field(Bc).between(0, e13.doc.length, (e14) => {
     e14 == t10 && (r10 = true);
   }), r10;
 }
-function Bd(e13, t10) {
+function Bv(e13, t10) {
   let r10 = e13.sliceString(t10, t10 + 2);
-  return r10.slice(0, TR(TE(r10, 0)));
+  return r10.slice(0, TN(TL(r10, 0)));
 }
-function Bp(e13, t10) {
-  let r10 = jh(e13).resolveInner(t10 + 1);
+function By(e13, t10) {
+  let r10 = jg(e13).resolveInner(t10 + 1);
   return r10.parent && r10.from == t10;
 }
-function Bg(e13, t10, r10) {
+function Bb(e13, t10, r10) {
   let i10 = e13.charCategorizer(t10);
-  if (i10(e13.sliceDoc(t10 - 1, t10)) != Pm.Word)
+  if (i10(e13.sliceDoc(t10 - 1, t10)) != Pw.Word)
     return t10;
   for (let o10 of r10) {
     let r11 = t10 - o10.length;
-    if (e13.sliceDoc(r11, t10) == o10 && i10(e13.sliceDoc(r11 - 1, r11)) != Pm.Word)
+    if (e13.sliceDoc(r11, t10) == o10 && i10(e13.sliceDoc(r11 - 1, r11)) != Pw.Word)
       return r11;
   }
   return -1;
 }
-let Bm = [{ key: "Ctrl-Space", run: NW }, { key: "Escape", run: (e13) => {
-  let t10 = e13.state.field(NF, false);
-  return !!(t10 && t10.active.some((e14) => 0 != e14.state)) && (e13.dispatch({ effects: Nx.of(null) }), true);
-} }, { key: "ArrowDown", run: NH(true) }, { key: "ArrowUp", run: NH(false) }, { key: "PageDown", run: NH(true, "page") }, { key: "PageUp", run: NH(false, "page") }, { key: "Enter", run: (e13) => {
-  let t10 = e13.state.field(NF, false);
-  return !(e13.state.readOnly || !t10 || !t10.open || t10.open.selected < 0 || t10.open.disabled || Date.now() - t10.open.timestamp < e13.state.facet(NC).interactionDelay) && Nz(e13, t10.open.options[t10.open.selected]);
-} }], Bv = T4.highest(RY.computeN([NC], (e13) => e13.facet(NC).defaultKeymap ? [Bm] : []));
-function By(e13, t10) {
+let Bw = [{ key: "Ctrl-Space", run: NQ }, { key: "Escape", run: (e13) => {
+  let t10 = e13.state.field(NW, false);
+  return !!(t10 && t10.active.some((e14) => 0 != e14.state)) && (e13.dispatch({ effects: NO.of(null) }), true);
+} }, { key: "ArrowDown", run: NX(true) }, { key: "ArrowUp", run: NX(false) }, { key: "PageDown", run: NX(true, "page") }, { key: "PageUp", run: NX(false, "page") }, { key: "Enter", run: (e13) => {
+  let t10 = e13.state.field(NW, false);
+  return !(e13.state.readOnly || !t10 || !t10.open || t10.open.selected < 0 || t10.open.disabled || Date.now() - t10.open.timestamp < e13.state.facet(NM).interactionDelay) && NU(e13, t10.open.options[t10.open.selected]);
+} }], Bx = T6.highest(RZ.computeN([NM], (e13) => e13.facet(NM).defaultKeymap ? [Bw] : []));
+function Bk(e13, t10) {
   return (r10) => {
     let { state: i10, dispatch: o10 } = r10;
     if (i10.readOnly)
@@ -24412,10 +24421,10 @@ function By(e13, t10) {
     return !!s10 && (o10(i10.update(s10)), true);
   };
 }
-let Bb = By(function(e13, t10) {
+let BS = Bk(function(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t10.selection.ranges, i10 = [], o10 = -1;
   for (let { from: e14, to: s10 } of r10) {
-    let r11 = i10.length, l10 = 1e9, a10 = Bk(t10, e14).line;
+    let r11 = i10.length, l10 = 1e9, a10 = BA(t10, e14).line;
     if (a10) {
       for (let r12 = e14; r12 <= s10; ) {
         let c10 = t10.doc.lineAt(r12);
@@ -24449,7 +24458,7 @@ let Bb = By(function(e13, t10) {
     return { changes: e14 };
   }
   return null;
-}, 0), Bw = By(BS, 0), Bx = By((e13, t10) => BS(e13, t10, function(e14) {
+}, 0), BC = Bk(B_, 0), BO = Bk((e13, t10) => B_(e13, t10, function(e14) {
   let t11 = [];
   for (let r10 of e14.selection.ranges) {
     let i10 = e14.doc.lineAt(r10.from), o10 = r10.to <= i10.to ? i10 : e14.doc.lineAt(r10.to), s10 = t11.length - 1;
@@ -24457,12 +24466,12 @@ let Bb = By(function(e13, t10) {
   }
   return t11;
 }(t10)), 0);
-function Bk(e13, t10) {
+function BA(e13, t10) {
   let r10 = e13.languageDataAt("commentTokens", t10);
   return r10.length ? r10[0] : {};
 }
-function BS(e13, t10) {
-  let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t10.selection.ranges, i10 = r10.map((e14) => Bk(t10, e14.from).block);
+function B_(e13, t10) {
+  let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t10.selection.ranges, i10 = r10.map((e14) => BA(t10, e14.from).block);
   if (!i10.every((e14) => e14))
     return null;
   let o10 = r10.map((e14, r11) => function(e15, t11, r12, i11) {
@@ -24486,84 +24495,84 @@ function BS(e13, t10) {
   }
   return null;
 }
-let BC = Pl.define(), BO = Pl.define(), BA = TQ.define(), B_ = TQ.define({ combine: (e13) => Pb(e13, { minDepth: 100, newGroupDelay: 500, joinToEvent: (e14, t10) => t10 }, { minDepth: Math.max, newGroupDelay: Math.min, joinToEvent: (e14, t10) => (r10, i10) => e14(r10, i10) || t10(r10, i10) }) }), BM = T0.define({ create: () => Bz.empty, update(e13, t10) {
-  let r10 = t10.state.facet(B_), i10 = t10.annotation(BC);
+let BM = Ph.define(), BT = Ph.define(), BP = TJ.define(), BE = TJ.define({ combine: (e13) => PS(e13, { minDepth: 100, newGroupDelay: 500, joinToEvent: (e14, t10) => t10 }, { minDepth: Math.max, newGroupDelay: Math.min, joinToEvent: (e14, t10) => (r10, i10) => e14(r10, i10) || t10(r10, i10) }) }), BD = T3.define({ create: () => BU.empty, update(e13, t10) {
+  let r10 = t10.state.facet(BE), i10 = t10.annotation(BM);
   if (i10) {
-    let o11 = BI.fromTransaction(t10, i10.selection), s11 = i10.side, l11 = 0 == s11 ? e13.undone : e13.done;
-    return l11 = o11 ? BL(l11, l11.length, r10.minDepth, o11) : BB(l11, t10.startState.selection), new Bz(0 == s11 ? i10.rest : l11, 0 == s11 ? l11 : i10.rest);
+    let o11 = BB.fromTransaction(t10, i10.selection), s11 = i10.side, l11 = 0 == s11 ? e13.undone : e13.done;
+    return l11 = o11 ? B$(l11, l11.length, r10.minDepth, o11) : BV(l11, t10.startState.selection), new BU(0 == s11 ? i10.rest : l11, 0 == s11 ? l11 : i10.rest);
   }
-  let o10 = t10.annotation(BO);
-  if (("full" == o10 || "before" == o10) && (e13 = e13.isolate()), false === t10.annotation(Ph.addToHistory))
+  let o10 = t10.annotation(BT);
+  if (("full" == o10 || "before" == o10) && (e13 = e13.isolate()), false === t10.annotation(Pg.addToHistory))
     return t10.changes.empty ? e13 : e13.addMapping(t10.changes.desc);
-  let s10 = BI.fromTransaction(t10), l10 = t10.annotation(Ph.time), a10 = t10.annotation(Ph.userEvent);
+  let s10 = BB.fromTransaction(t10), l10 = t10.annotation(Pg.time), a10 = t10.annotation(Pg.userEvent);
   return s10 ? e13 = e13.addChanges(s10, l10, a10, r10, t10) : t10.selection && (e13 = e13.addSelection(t10.startState.selection, l10, a10, r10.newGroupDelay)), ("full" == o10 || "after" == o10) && (e13 = e13.isolate()), e13;
-}, toJSON: (e13) => ({ done: e13.done.map((e14) => e14.toJSON()), undone: e13.undone.map((e14) => e14.toJSON()) }), fromJSON: (e13) => new Bz(e13.done.map(BI.fromJSON), e13.undone.map(BI.fromJSON)) });
-function BT(e13, t10) {
+}, toJSON: (e13) => ({ done: e13.done.map((e14) => e14.toJSON()), undone: e13.undone.map((e14) => e14.toJSON()) }), fromJSON: (e13) => new BU(e13.done.map(BB.fromJSON), e13.undone.map(BB.fromJSON)) });
+function BR(e13, t10) {
   return function(r10) {
     let { state: i10, dispatch: o10 } = r10;
     if (!t10 && i10.readOnly)
       return false;
-    let s10 = i10.field(BM, false);
+    let s10 = i10.field(BD, false);
     if (!s10)
       return false;
     let l10 = s10.pop(e13, i10, t10);
     return !!l10 && (o10(l10), true);
   };
 }
-let BP = BT(0, false), BE = BT(1, false), BD = BT(0, true), BR = BT(1, true);
-class BI {
+let BI = BR(0, false), BL = BR(1, false), Bj = BR(0, true), BN = BR(1, true);
+class BB {
   constructor(e13, t10, r10, i10, o10) {
     this.changes = e13, this.effects = t10, this.mapped = r10, this.startSelection = i10, this.selectionsAfter = o10;
   }
   setSelAfter(e13) {
-    return new BI(this.changes, this.effects, this.mapped, this.startSelection, e13);
+    return new BB(this.changes, this.effects, this.mapped, this.startSelection, e13);
   }
   toJSON() {
     var e13, t10, r10;
     return { changes: null === (e13 = this.changes) || void 0 === e13 ? void 0 : e13.toJSON(), mapped: null === (t10 = this.mapped) || void 0 === t10 ? void 0 : t10.toJSON(), startSelection: null === (r10 = this.startSelection) || void 0 === r10 ? void 0 : r10.toJSON(), selectionsAfter: this.selectionsAfter.map((e14) => e14.toJSON()) };
   }
   static fromJSON(e13) {
-    return new BI(e13.changes && TN.fromJSON(e13.changes), [], e13.mapped && Tj.fromJSON(e13.mapped), e13.startSelection && TU.fromJSON(e13.startSelection), e13.selectionsAfter.map(TU.fromJSON));
+    return new BB(e13.changes && Tz.fromJSON(e13.changes), [], e13.mapped && TF.fromJSON(e13.mapped), e13.startSelection && TY.fromJSON(e13.startSelection), e13.selectionsAfter.map(TY.fromJSON));
   }
   static fromTransaction(e13, t10) {
-    let r10 = BN;
-    for (let t11 of e13.startState.facet(BA)) {
+    let r10 = Bz;
+    for (let t11 of e13.startState.facet(BP)) {
       let i10 = t11(e13);
       i10.length && (r10 = r10.concat(i10));
     }
-    return !r10.length && e13.changes.empty ? null : new BI(e13.changes.invert(e13.startState.doc), r10, void 0, t10 || e13.startState.selection, BN);
+    return !r10.length && e13.changes.empty ? null : new BB(e13.changes.invert(e13.startState.doc), r10, void 0, t10 || e13.startState.selection, Bz);
   }
   static selection(e13) {
-    return new BI(void 0, BN, void 0, void 0, e13);
+    return new BB(void 0, Bz, void 0, void 0, e13);
   }
 }
-function BL(e13, t10, r10, i10) {
+function B$(e13, t10, r10, i10) {
   let o10 = e13.slice(t10 + 1 > r10 + 20 ? t10 - r10 - 1 : 0, t10);
   return o10.push(i10), o10;
 }
-function Bj(e13, t10) {
+function BF(e13, t10) {
   return e13.length ? t10.length ? e13.concat(t10) : e13 : t10;
 }
-let BN = [];
-function BB(e13, t10) {
+let Bz = [];
+function BV(e13, t10) {
   if (!e13.length)
-    return [BI.selection([t10])];
+    return [BB.selection([t10])];
   {
     let r10 = e13[e13.length - 1], i10 = r10.selectionsAfter.slice(Math.max(0, r10.selectionsAfter.length - 200));
-    return i10.length && i10[i10.length - 1].eq(t10) ? e13 : (i10.push(t10), BL(e13, e13.length - 1, 1e9, r10.setSelAfter(i10)));
+    return i10.length && i10[i10.length - 1].eq(t10) ? e13 : (i10.push(t10), B$(e13, e13.length - 1, 1e9, r10.setSelAfter(i10)));
   }
 }
-function B$(e13, t10) {
+function BH(e13, t10) {
   if (!e13.length)
     return e13;
-  let r10 = e13.length, i10 = BN;
+  let r10 = e13.length, i10 = Bz;
   for (; r10; ) {
     let o10 = function(e14, t11, r11) {
-      let i11 = Bj(e14.selectionsAfter.length ? e14.selectionsAfter.map((e15) => e15.map(t11)) : BN, r11);
+      let i11 = BF(e14.selectionsAfter.length ? e14.selectionsAfter.map((e15) => e15.map(t11)) : Bz, r11);
       if (!e14.changes)
-        return BI.selection(i11);
+        return BB.selection(i11);
       let o11 = e14.changes.map(t11), s10 = t11.mapDesc(e14.changes, true), l10 = e14.mapped ? e14.mapped.composeDesc(s10) : s10;
-      return new BI(o11, Pu.mapEffects(e14.effects, t11), l10, e14.startSelection.map(s10), i11);
+      return new BB(o11, Pp.mapEffects(e14.effects, t11), l10, e14.startSelection.map(s10), i11);
     }(e13[r10 - 1], t10, i10);
     if (o10.changes && !o10.changes.empty || o10.effects.length) {
       let t11 = e13.slice(0, r10);
@@ -24571,33 +24580,33 @@ function B$(e13, t10) {
     }
     t10 = o10.mapped, r10--, i10 = o10.selectionsAfter;
   }
-  return i10.length ? [BI.selection(i10)] : BN;
+  return i10.length ? [BB.selection(i10)] : Bz;
 }
-let BF = /^(input\.type|delete)($|\.)/;
-class Bz {
+let BW = /^(input\.type|delete)($|\.)/;
+class BU {
   constructor(e13, t10, r10 = 0, i10) {
     this.done = e13, this.undone = t10, this.prevTime = r10, this.prevUserEvent = i10;
   }
   isolate() {
-    return this.prevTime ? new Bz(this.done, this.undone) : this;
+    return this.prevTime ? new BU(this.done, this.undone) : this;
   }
   addChanges(e13, t10, r10, i10, o10) {
     var s10, l10;
     let a10, c10, u10 = this.done, h10 = u10[u10.length - 1];
-    return new Bz(u10 = h10 && h10.changes && !h10.changes.empty && e13.changes && (!r10 || BF.test(r10)) && (!h10.selectionsAfter.length && t10 - this.prevTime < i10.newGroupDelay && i10.joinToEvent(o10, (s10 = h10.changes, l10 = e13.changes, a10 = [], c10 = false, s10.iterChangedRanges((e14, t11) => a10.push(e14, t11)), l10.iterChangedRanges((e14, t11, r11, i11) => {
+    return new BU(u10 = h10 && h10.changes && !h10.changes.empty && e13.changes && (!r10 || BW.test(r10)) && (!h10.selectionsAfter.length && t10 - this.prevTime < i10.newGroupDelay && i10.joinToEvent(o10, (s10 = h10.changes, l10 = e13.changes, a10 = [], c10 = false, s10.iterChangedRanges((e14, t11) => a10.push(e14, t11)), l10.iterChangedRanges((e14, t11, r11, i11) => {
       for (let e15 = 0; e15 < a10.length; ) {
         let t12 = a10[e15++], o11 = a10[e15++];
         i11 >= t12 && r11 <= o11 && (c10 = true);
       }
-    }), c10)) || "input.type.compose" == r10) ? BL(u10, u10.length - 1, i10.minDepth, new BI(e13.changes.compose(h10.changes), Bj(e13.effects, h10.effects), h10.mapped, h10.startSelection, BN)) : BL(u10, u10.length, i10.minDepth, e13), BN, t10, r10);
+    }), c10)) || "input.type.compose" == r10) ? B$(u10, u10.length - 1, i10.minDepth, new BB(e13.changes.compose(h10.changes), BF(e13.effects, h10.effects), h10.mapped, h10.startSelection, Bz)) : B$(u10, u10.length, i10.minDepth, e13), Bz, t10, r10);
   }
   addSelection(e13, t10, r10, i10) {
     var o10;
-    let s10 = this.done.length ? this.done[this.done.length - 1].selectionsAfter : BN;
-    return s10.length > 0 && t10 - this.prevTime < i10 && r10 == this.prevUserEvent && r10 && /^select($|\.)/.test(r10) && (o10 = s10[s10.length - 1]).ranges.length == e13.ranges.length && 0 === o10.ranges.filter((t11, r11) => t11.empty != e13.ranges[r11].empty).length ? this : new Bz(BB(this.done, e13), this.undone, t10, r10);
+    let s10 = this.done.length ? this.done[this.done.length - 1].selectionsAfter : Bz;
+    return s10.length > 0 && t10 - this.prevTime < i10 && r10 == this.prevUserEvent && r10 && /^select($|\.)/.test(r10) && (o10 = s10[s10.length - 1]).ranges.length == e13.ranges.length && 0 === o10.ranges.filter((t11, r11) => t11.empty != e13.ranges[r11].empty).length ? this : new BU(BV(this.done, e13), this.undone, t10, r10);
   }
   addMapping(e13) {
-    return new Bz(B$(this.done, e13), B$(this.undone, e13), this.prevTime, this.prevUserEvent);
+    return new BU(BH(this.done, e13), BH(this.undone, e13), this.prevTime, this.prevUserEvent);
   }
   pop(e13, t10, r10) {
     let i10 = 0 == e13 ? this.done : this.undone;
@@ -24606,43 +24615,43 @@ class Bz {
     let o10 = i10[i10.length - 1], s10 = o10.selectionsAfter[0] || t10.selection;
     if (r10 && o10.selectionsAfter.length) {
       let r11, l10;
-      return t10.update({ selection: o10.selectionsAfter[o10.selectionsAfter.length - 1], annotations: BC.of({ side: e13, rest: (r11 = i10[i10.length - 1], (l10 = i10.slice())[i10.length - 1] = r11.setSelAfter(r11.selectionsAfter.slice(0, r11.selectionsAfter.length - 1)), l10), selection: s10 }), userEvent: 0 == e13 ? "select.undo" : "select.redo", scrollIntoView: true });
+      return t10.update({ selection: o10.selectionsAfter[o10.selectionsAfter.length - 1], annotations: BM.of({ side: e13, rest: (r11 = i10[i10.length - 1], (l10 = i10.slice())[i10.length - 1] = r11.setSelAfter(r11.selectionsAfter.slice(0, r11.selectionsAfter.length - 1)), l10), selection: s10 }), userEvent: 0 == e13 ? "select.undo" : "select.redo", scrollIntoView: true });
     }
     if (!o10.changes)
       return null;
     {
-      let r11 = 1 == i10.length ? BN : i10.slice(0, i10.length - 1);
-      return o10.mapped && (r11 = B$(r11, o10.mapped)), t10.update({ changes: o10.changes, selection: o10.startSelection, effects: o10.effects, annotations: BC.of({ side: e13, rest: r11, selection: s10 }), filter: false, userEvent: 0 == e13 ? "undo" : "redo", scrollIntoView: true });
+      let r11 = 1 == i10.length ? Bz : i10.slice(0, i10.length - 1);
+      return o10.mapped && (r11 = BH(r11, o10.mapped)), t10.update({ changes: o10.changes, selection: o10.startSelection, effects: o10.effects, annotations: BM.of({ side: e13, rest: r11, selection: s10 }), filter: false, userEvent: 0 == e13 ? "undo" : "redo", scrollIntoView: true });
     }
   }
 }
-Bz.empty = new Bz(BN, BN);
-let BV = [{ key: "Mod-z", run: BP, preventDefault: true }, { key: "Mod-y", mac: "Mod-Shift-z", run: BE, preventDefault: true }, { linux: "Ctrl-Shift-z", run: BE, preventDefault: true }, { key: "Mod-u", run: BD, preventDefault: true }, { key: "Alt-u", mac: "Mod-Shift-u", run: BR, preventDefault: true }];
-function BH(e13, t10) {
-  return TU.create(e13.ranges.map(t10), e13.mainIndex);
+BU.empty = new BU(Bz, Bz);
+let Bq = [{ key: "Mod-z", run: BI, preventDefault: true }, { key: "Mod-y", mac: "Mod-Shift-z", run: BL, preventDefault: true }, { linux: "Ctrl-Shift-z", run: BL, preventDefault: true }, { key: "Mod-u", run: Bj, preventDefault: true }, { key: "Alt-u", mac: "Mod-Shift-u", run: BN, preventDefault: true }];
+function BX(e13, t10) {
+  return TY.create(e13.ranges.map(t10), e13.mainIndex);
 }
-function BW(e13, t10) {
+function BQ(e13, t10) {
   return e13.update({ selection: t10, scrollIntoView: true, userEvent: "select" });
 }
-function BU(e13, t10) {
-  let { state: r10, dispatch: i10 } = e13, o10 = BH(r10.selection, t10);
-  return !o10.eq(r10.selection, true) && (i10(BW(r10, o10)), true);
+function BY(e13, t10) {
+  let { state: r10, dispatch: i10 } = e13, o10 = BX(r10.selection, t10);
+  return !o10.eq(r10.selection, true) && (i10(BQ(r10, o10)), true);
 }
-function Bq(e13, t10) {
-  return TU.cursor(t10 ? e13.to : e13.from);
+function BK(e13, t10) {
+  return TY.cursor(t10 ? e13.to : e13.from);
 }
-function BX(e13, t10) {
-  return BU(e13, (r10) => r10.empty ? e13.moveByChar(r10, t10) : Bq(r10, t10));
-}
-function BQ(e13) {
-  return e13.textDirectionAt(e13.state.selection.main.head) == EX.LTR;
-}
-let BY = (e13) => BX(e13, !BQ(e13)), BK = (e13) => BX(e13, BQ(e13));
 function BG(e13, t10) {
-  return BU(e13, (r10) => r10.empty ? e13.moveByGroup(r10, t10) : Bq(r10, t10));
+  return BY(e13, (r10) => r10.empty ? e13.moveByChar(r10, t10) : BK(r10, t10));
 }
-function BJ(e13, t10, r10) {
-  let i10, o10, s10 = jh(e13).resolveInner(t10.head), l10 = r10 ? Lm.closedBy : Lm.openedBy;
+function BJ(e13) {
+  return e13.textDirectionAt(e13.state.selection.main.head) == EG.LTR;
+}
+let BZ = (e13) => BG(e13, !BJ(e13)), B0 = (e13) => BG(e13, BJ(e13));
+function B1(e13, t10) {
+  return BY(e13, (r10) => r10.empty ? e13.moveByGroup(r10, t10) : BK(r10, t10));
+}
+function B2(e13, t10, r10) {
+  let i10, o10, s10 = jg(e13).resolveInner(t10.head), l10 = r10 ? Lw.closedBy : Lw.openedBy;
   for (let i11 = t10.head; ; ) {
     let t11 = r10 ? s10.childAfter(i11) : s10.childBefore(i11);
     if (!t11)
@@ -24654,21 +24663,21 @@ function BJ(e13, t10, r10) {
       return i12 && (i12 > 2 || /[^\s,.;:]/.test(e14.sliceDoc(t12.from, t12.to))) || t12.firstChild;
     }(e13, t11, l10) ? i11 = r10 ? t11.to : t11.from : s10 = t11;
   }
-  return o10 = s10.type.prop(l10) && (i10 = r10 ? No(e13, s10.from, 1) : No(e13, s10.to, -1)) && i10.matched ? r10 ? i10.end.to : i10.end.from : r10 ? s10.to : s10.from, TU.cursor(o10, r10 ? -1 : 1);
+  return o10 = s10.type.prop(l10) && (i10 = r10 ? Nc(e13, s10.from, 1) : Nc(e13, s10.to, -1)) && i10.matched ? r10 ? i10.end.to : i10.end.from : r10 ? s10.to : s10.from, TY.cursor(o10, r10 ? -1 : 1);
 }
-function BZ(e13, t10) {
-  return BU(e13, (r10) => {
+function B4(e13, t10) {
+  return BY(e13, (r10) => {
     if (!r10.empty)
-      return Bq(r10, t10);
+      return BK(r10, t10);
     let i10 = e13.moveVertically(r10, t10);
     return i10.head != r10.head ? i10 : e13.moveToLineBoundary(r10, t10);
   });
 }
-let B0 = (e13) => BZ(e13, false), B1 = (e13) => BZ(e13, true);
-function B2(e13) {
+let B3 = (e13) => B4(e13, false), B5 = (e13) => B4(e13, true);
+function B8(e13) {
   let t10 = e13.scrollDOM.clientHeight < e13.scrollDOM.scrollHeight - 2, r10 = 0, i10 = 0, o10;
   if (t10) {
-    for (let t11 of e13.state.facet(Rz.scrollMargins)) {
+    for (let t11 of e13.state.facet(RU.scrollMargins)) {
       let o11 = t11(e13);
       (null == o11 ? void 0 : o11.top) && (r10 = Math.max(null == o11 ? void 0 : o11.top, r10)), (null == o11 ? void 0 : o11.bottom) && (i10 = Math.max(null == o11 ? void 0 : o11.bottom, i10));
     }
@@ -24677,108 +24686,108 @@ function B2(e13) {
     o10 = (e13.dom.ownerDocument.defaultView || window).innerHeight;
   return { marginTop: r10, marginBottom: i10, selfScroll: t10, height: Math.max(e13.defaultLineHeight, o10 - 5) };
 }
-function B4(e13, t10) {
-  let r10, i10 = B2(e13), { state: o10 } = e13, s10 = BH(o10.selection, (r11) => r11.empty ? e13.moveVertically(r11, t10, i10.height) : Bq(r11, t10));
+function B6(e13, t10) {
+  let r10, i10 = B8(e13), { state: o10 } = e13, s10 = BX(o10.selection, (r11) => r11.empty ? e13.moveVertically(r11, t10, i10.height) : BK(r11, t10));
   if (s10.eq(o10.selection))
     return false;
   if (i10.selfScroll) {
     let t11 = e13.coordsAtPos(o10.selection.main.head), l10 = e13.scrollDOM.getBoundingClientRect(), a10 = l10.top + i10.marginTop, c10 = l10.bottom - i10.marginBottom;
-    t11 && t11.top > a10 && t11.bottom < c10 && (r10 = Rz.scrollIntoView(s10.main.head, { y: "start", yMargin: t11.top - a10 }));
+    t11 && t11.top > a10 && t11.bottom < c10 && (r10 = RU.scrollIntoView(s10.main.head, { y: "start", yMargin: t11.top - a10 }));
   }
-  return e13.dispatch(BW(o10, s10), { effects: r10 }), true;
+  return e13.dispatch(BQ(o10, s10), { effects: r10 }), true;
 }
-let B3 = (e13) => B4(e13, false), B5 = (e13) => B4(e13, true);
-function B8(e13, t10, r10) {
+let B9 = (e13) => B6(e13, false), B7 = (e13) => B6(e13, true);
+function $e(e13, t10, r10) {
   let i10 = e13.lineBlockAt(t10.head), o10 = e13.moveToLineBoundary(t10, r10);
   if (o10.head == t10.head && o10.head != (r10 ? i10.to : i10.from) && (o10 = e13.moveToLineBoundary(t10, r10, false)), !r10 && o10.head == i10.from && i10.length) {
     let r11 = /^\s*/.exec(e13.state.sliceDoc(i10.from, Math.min(i10.from + 100, i10.to)))[0].length;
-    r11 && t10.head != i10.from + r11 && (o10 = TU.cursor(i10.from + r11));
+    r11 && t10.head != i10.from + r11 && (o10 = TY.cursor(i10.from + r11));
   }
   return o10;
 }
-function B6(e13, t10) {
-  let r10 = BH(e13.state.selection, (e14) => {
-    let r11 = t10(e14);
-    return TU.range(e14.anchor, r11.head, r11.goalColumn, r11.bidiLevel || void 0);
-  });
-  return !r10.eq(e13.state.selection) && (e13.dispatch(BW(e13.state, r10)), true);
-}
-function B9(e13, t10) {
-  return B6(e13, (r10) => e13.moveByChar(r10, t10));
-}
-let B7 = (e13) => B9(e13, !BQ(e13)), $e = (e13) => B9(e13, BQ(e13));
 function $t(e13, t10) {
-  return B6(e13, (r10) => e13.moveByGroup(r10, t10));
+  let r10 = BX(e13.state.selection, (e14) => {
+    let r11 = t10(e14);
+    return TY.range(e14.anchor, r11.head, r11.goalColumn, r11.bidiLevel || void 0);
+  });
+  return !r10.eq(e13.state.selection) && (e13.dispatch(BQ(e13.state, r10)), true);
 }
 function $n(e13, t10) {
-  return B6(e13, (r10) => e13.moveVertically(r10, t10));
+  return $t(e13, (r10) => e13.moveByChar(r10, t10));
 }
-let $r = (e13) => $n(e13, false), $i = (e13) => $n(e13, true);
+let $r = (e13) => $n(e13, !BJ(e13)), $i = (e13) => $n(e13, BJ(e13));
 function $o(e13, t10) {
-  return B6(e13, (r10) => e13.moveVertically(r10, t10, B2(e13).height));
+  return $t(e13, (r10) => e13.moveByGroup(r10, t10));
 }
-let $s = (e13) => $o(e13, false), $l = (e13) => $o(e13, true), $a = (e13) => {
+function $s(e13, t10) {
+  return $t(e13, (r10) => e13.moveVertically(r10, t10));
+}
+let $l = (e13) => $s(e13, false), $a = (e13) => $s(e13, true);
+function $c(e13, t10) {
+  return $t(e13, (r10) => e13.moveVertically(r10, t10, B8(e13).height));
+}
+let $u = (e13) => $c(e13, false), $h = (e13) => $c(e13, true), $f = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return r10(BW(t10, { anchor: 0 })), true;
-}, $c = (e13) => {
+  return r10(BQ(t10, { anchor: 0 })), true;
+}, $d = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return r10(BW(t10, { anchor: t10.doc.length })), true;
-}, $u = (e13) => {
+  return r10(BQ(t10, { anchor: t10.doc.length })), true;
+}, $p = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return r10(BW(t10, { anchor: t10.selection.main.anchor, head: 0 })), true;
-}, $h = (e13) => {
+  return r10(BQ(t10, { anchor: t10.selection.main.anchor, head: 0 })), true;
+}, $g = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return r10(BW(t10, { anchor: t10.selection.main.anchor, head: t10.doc.length })), true;
+  return r10(BQ(t10, { anchor: t10.selection.main.anchor, head: t10.doc.length })), true;
 };
-function $f(e13, t10) {
+function $m(e13, t10) {
   if (e13.state.readOnly)
     return false;
   let r10 = "delete.selection", { state: i10 } = e13, o10 = i10.changeByRange((i11) => {
     let { from: o11, to: s10 } = i11;
     if (o11 == s10) {
       let l10 = t10(i11);
-      l10 < o11 ? (r10 = "delete.backward", l10 = $d(e13, l10, false)) : l10 > o11 && (r10 = "delete.forward", l10 = $d(e13, l10, true)), o11 = Math.min(o11, l10), s10 = Math.max(s10, l10);
+      l10 < o11 ? (r10 = "delete.backward", l10 = $v(e13, l10, false)) : l10 > o11 && (r10 = "delete.forward", l10 = $v(e13, l10, true)), o11 = Math.min(o11, l10), s10 = Math.max(s10, l10);
     } else
-      o11 = $d(e13, o11, false), s10 = $d(e13, s10, true);
-    return o11 == s10 ? { range: i11 } : { changes: { from: o11, to: s10 }, range: TU.cursor(o11, o11 < i11.head ? -1 : 1) };
+      o11 = $v(e13, o11, false), s10 = $v(e13, s10, true);
+    return o11 == s10 ? { range: i11 } : { changes: { from: o11, to: s10 }, range: TY.cursor(o11, o11 < i11.head ? -1 : 1) };
   });
-  return !o10.changes.empty && (e13.dispatch(i10.update(o10, { scrollIntoView: true, userEvent: r10, effects: "delete.selection" == r10 ? Rz.announce.of(i10.phrase("Selection deleted")) : void 0 })), true);
+  return !o10.changes.empty && (e13.dispatch(i10.update(o10, { scrollIntoView: true, userEvent: r10, effects: "delete.selection" == r10 ? RU.announce.of(i10.phrase("Selection deleted")) : void 0 })), true);
 }
-function $d(e13, t10, r10) {
-  if (e13 instanceof Rz)
-    for (let i10 of e13.state.facet(Rz.atomicRanges).map((t11) => t11(e13)))
+function $v(e13, t10, r10) {
+  if (e13 instanceof RU)
+    for (let i10 of e13.state.facet(RU.atomicRanges).map((t11) => t11(e13)))
       i10.between(t10, t10, (e14, i11) => {
         e14 < t10 && i11 > t10 && (t10 = r10 ? i11 : e14);
       });
   return t10;
 }
-let $p = (e13, t10, r10) => $f(e13, (i10) => {
+let $y = (e13, t10, r10) => $m(e13, (i10) => {
   let o10 = i10.from, { state: s10 } = e13, l10 = s10.doc.lineAt(o10), a10, c10;
   if (r10 && !t10 && o10 > l10.from && o10 < l10.from + 200 && !/[^ \t]/.test(a10 = l10.text.slice(0, o10 - l10.from))) {
     if ("	" == a10[a10.length - 1])
       return o10 - 1;
-    let e14 = Pj(a10, s10.tabSize) % jC(s10) || jC(s10);
+    let e14 = PF(a10, s10.tabSize) % jM(s10) || jM(s10);
     for (let t11 = 0; t11 < e14 && " " == a10[a10.length - 1 - t11]; t11++)
       o10--;
     c10 = o10;
   } else
-    (c10 = T_(l10.text, o10 - l10.from, t10, t10) + l10.from) == o10 && l10.number != (t10 ? s10.doc.lines : 1) ? c10 += t10 ? 1 : -1 : !t10 && /[\ufe00-\ufe0f]/.test(l10.text.slice(c10 - l10.from, o10 - l10.from)) && (c10 = T_(l10.text, c10 - l10.from, false, false) + l10.from);
+    (c10 = TE(l10.text, o10 - l10.from, t10, t10) + l10.from) == o10 && l10.number != (t10 ? s10.doc.lines : 1) ? c10 += t10 ? 1 : -1 : !t10 && /[\ufe00-\ufe0f]/.test(l10.text.slice(c10 - l10.from, o10 - l10.from)) && (c10 = TE(l10.text, c10 - l10.from, false, false) + l10.from);
   return c10;
-}), $g = (e13) => $p(e13, false, true), $m = (e13) => $p(e13, true, false), $v = (e13, t10) => $f(e13, (r10) => {
+}), $b = (e13) => $y(e13, false, true), $w = (e13) => $y(e13, true, false), $x = (e13, t10) => $m(e13, (r10) => {
   let i10 = r10.head, { state: o10 } = e13, s10 = o10.doc.lineAt(i10), l10 = o10.charCategorizer(i10);
   for (let e14 = null; ; ) {
     if (i10 == (t10 ? s10.to : s10.from)) {
       i10 == r10.head && s10.number != (t10 ? o10.doc.lines : 1) && (i10 += t10 ? 1 : -1);
       break;
     }
-    let a10 = T_(s10.text, i10 - s10.from, t10) + s10.from, c10 = s10.text.slice(Math.min(i10, a10) - s10.from, Math.max(i10, a10) - s10.from), u10 = l10(c10);
+    let a10 = TE(s10.text, i10 - s10.from, t10) + s10.from, c10 = s10.text.slice(Math.min(i10, a10) - s10.from, Math.max(i10, a10) - s10.from), u10 = l10(c10);
     if (null != e14 && u10 != e14)
       break;
     (" " != c10 || i10 != r10.head) && (e14 = u10), i10 = a10;
   }
   return i10;
-}), $y = (e13) => $v(e13, false);
-function $b(e13) {
+}), $k = (e13) => $x(e13, false);
+function $S(e13) {
   let t10 = [], r10 = -1;
   for (let i10 of e13.selection.ranges) {
     let o10 = e13.doc.lineAt(i10.from), s10 = e13.doc.lineAt(i10.to);
@@ -24791,33 +24800,33 @@ function $b(e13) {
   }
   return t10;
 }
-function $w(e13, t10, r10) {
+function $C(e13, t10, r10) {
   if (e13.readOnly)
     return false;
   let i10 = [], o10 = [];
-  for (let t11 of $b(e13)) {
+  for (let t11 of $S(e13)) {
     if (r10 ? t11.to == e13.doc.length : 0 == t11.from)
       continue;
     let s10 = e13.doc.lineAt(r10 ? t11.to + 1 : t11.from - 1), l10 = s10.length + 1;
     if (r10)
       for (let r11 of (i10.push({ from: t11.to, to: s10.to }, { from: t11.from, insert: s10.text + e13.lineBreak }), t11.ranges))
-        o10.push(TU.range(Math.min(e13.doc.length, r11.anchor + l10), Math.min(e13.doc.length, r11.head + l10)));
+        o10.push(TY.range(Math.min(e13.doc.length, r11.anchor + l10), Math.min(e13.doc.length, r11.head + l10)));
     else
       for (let r11 of (i10.push({ from: s10.from, to: t11.from }, { from: t11.to, insert: e13.lineBreak + s10.text }), t11.ranges))
-        o10.push(TU.range(r11.anchor - l10, r11.head - l10));
+        o10.push(TY.range(r11.anchor - l10, r11.head - l10));
   }
-  return !!i10.length && (t10(e13.update({ changes: i10, scrollIntoView: true, selection: TU.create(o10, e13.selection.mainIndex), userEvent: "move.line" })), true);
+  return !!i10.length && (t10(e13.update({ changes: i10, scrollIntoView: true, selection: TY.create(o10, e13.selection.mainIndex), userEvent: "move.line" })), true);
 }
-function $x(e13, t10, r10) {
+function $O(e13, t10, r10) {
   if (e13.readOnly)
     return false;
   let i10 = [];
-  for (let t11 of $b(e13))
+  for (let t11 of $S(e13))
     r10 ? i10.push({ from: t11.from, insert: e13.doc.slice(t11.from, t11.to) + e13.lineBreak }) : i10.push({ from: t11.to, insert: e13.lineBreak + e13.doc.slice(t11.from, t11.to) });
   return t10(e13.update({ changes: i10, scrollIntoView: true, userEvent: "input.copyline" })), true;
 }
-let $k = $C(false), $S = $C(true);
-function $C(e13) {
+let $A = $M(false), $_ = $M(true);
+function $M(e13) {
   return (t10) => {
     let { state: r10, dispatch: i10 } = t10;
     if (r10.readOnly)
@@ -24826,21 +24835,21 @@ function $C(e13) {
       let { from: i11, to: o11 } = t11, s10 = r10.doc.lineAt(i11), l10 = !e13 && i11 == o11 && function(e14, t12) {
         if (/\(\)|\[\]|\{\}/.test(e14.sliceDoc(t12 - 1, t12 + 1)))
           return { from: t12, to: t12 };
-        let r11 = jh(e14).resolveInner(t12), i12 = r11.childBefore(t12), o12 = r11.childAfter(t12), s11;
-        return i12 && o12 && i12.to <= t12 && o12.from >= t12 && (s11 = i12.type.prop(Lm.closedBy)) && s11.indexOf(o12.name) > -1 && e14.doc.lineAt(i12.to).from == e14.doc.lineAt(o12.from).from && !/\S/.test(e14.sliceDoc(i12.to, o12.from)) ? { from: i12.to, to: o12.from } : null;
+        let r11 = jg(e14).resolveInner(t12), i12 = r11.childBefore(t12), o12 = r11.childAfter(t12), s11;
+        return i12 && o12 && i12.to <= t12 && o12.from >= t12 && (s11 = i12.type.prop(Lw.closedBy)) && s11.indexOf(o12.name) > -1 && e14.doc.lineAt(i12.to).from == e14.doc.lineAt(o12.from).from && !/\S/.test(e14.sliceDoc(i12.to, o12.from)) ? { from: i12.to, to: o12.from } : null;
       }(r10, i11);
       e13 && (i11 = o11 = (o11 <= s10.to ? s10 : r10.doc.lineAt(o11)).to);
-      let a10 = new j_(r10, { simulateBreak: i11, simulateDoubleBreak: !!l10 }), c10 = jA(a10, i11);
-      for (null == c10 && (c10 = Pj(/^\s*/.exec(r10.doc.lineAt(i11).text)[0], r10.tabSize)); o11 < s10.to && /\s/.test(s10.text[o11 - s10.from]); )
+      let a10 = new jE(r10, { simulateBreak: i11, simulateDoubleBreak: !!l10 }), c10 = jP(a10, i11);
+      for (null == c10 && (c10 = PF(/^\s*/.exec(r10.doc.lineAt(i11).text)[0], r10.tabSize)); o11 < s10.to && /\s/.test(s10.text[o11 - s10.from]); )
         o11++;
       l10 ? { from: i11, to: o11 } = l10 : i11 > s10.from && i11 < s10.from + 100 && !/\S/.test(s10.text.slice(0, i11)) && (i11 = s10.from);
-      let u10 = ["", jO(r10, c10)];
-      return l10 && u10.push(jO(r10, a10.lineIndent(s10.from, -1))), { changes: { from: i11, to: o11, insert: Tm.of(u10) }, range: TU.cursor(i11 + 1 + u10[1].length) };
+      let u10 = ["", jT(r10, c10)];
+      return l10 && u10.push(jT(r10, a10.lineIndent(s10.from, -1))), { changes: { from: i11, to: o11, insert: Tw.of(u10) }, range: TY.cursor(i11 + 1 + u10[1].length) };
     });
     return i10(r10.update(o10, { scrollIntoView: true, userEvent: "input" })), true;
   };
 }
-function $O(e13, t10) {
+function $T(e13, t10) {
   let r10 = -1;
   return e13.changeByRange((i10) => {
     let o10 = [];
@@ -24849,33 +24858,33 @@ function $O(e13, t10) {
       l10.number > r10 && (i10.empty || i10.to > l10.from) && (t10(l10, o10, i10), r10 = l10.number), s11 = l10.to + 1;
     }
     let s10 = e13.changes(o10);
-    return { changes: o10, range: TU.range(s10.mapPos(i10.anchor, 1), s10.mapPos(i10.head, 1)) };
+    return { changes: o10, range: TY.range(s10.mapPos(i10.anchor, 1), s10.mapPos(i10.head, 1)) };
   });
 }
-let $A = (e13) => {
+let $P = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return !t10.readOnly && (r10(t10.update($O(t10, (e14, r11) => {
-    r11.push({ from: e14.from, insert: t10.facet(jS) });
+  return !t10.readOnly && (r10(t10.update($T(t10, (e14, r11) => {
+    r11.push({ from: e14.from, insert: t10.facet(j_) });
   }), { userEvent: "input.indent" })), true);
-}, $_ = (e13) => {
+}, $E = (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return !t10.readOnly && (r10(t10.update($O(t10, (e14, r11) => {
+  return !t10.readOnly && (r10(t10.update($T(t10, (e14, r11) => {
     let i10 = /^\s*/.exec(e14.text)[0];
     if (!i10)
       return;
-    let o10 = Pj(i10, t10.tabSize), s10 = 0, l10 = jO(t10, Math.max(0, o10 - jC(t10)));
+    let o10 = PF(i10, t10.tabSize), s10 = 0, l10 = jT(t10, Math.max(0, o10 - jM(t10)));
     for (; s10 < i10.length && s10 < l10.length && i10.charCodeAt(s10) == l10.charCodeAt(s10); )
       s10++;
     r11.push({ from: e14.from + s10, to: e14.from + i10.length, insert: l10.slice(s10) });
   }), { userEvent: "delete.dedent" })), true);
-}, $M = [{ key: "Ctrl-b", run: BY, shift: B7, preventDefault: true }, { key: "Ctrl-f", run: BK, shift: $e }, { key: "Ctrl-p", run: B0, shift: $r }, { key: "Ctrl-n", run: B1, shift: $i }, { key: "Ctrl-a", run: (e13) => BU(e13, (t10) => TU.cursor(e13.lineBlockAt(t10.head).from, 1)), shift: (e13) => B6(e13, (t10) => TU.cursor(e13.lineBlockAt(t10.head).from)) }, { key: "Ctrl-e", run: (e13) => BU(e13, (t10) => TU.cursor(e13.lineBlockAt(t10.head).to, -1)), shift: (e13) => B6(e13, (t10) => TU.cursor(e13.lineBlockAt(t10.head).to)) }, { key: "Ctrl-d", run: $m }, { key: "Ctrl-h", run: $g }, { key: "Ctrl-k", run: (e13) => $f(e13, (t10) => {
+}, $D = [{ key: "Ctrl-b", run: BZ, shift: $r, preventDefault: true }, { key: "Ctrl-f", run: B0, shift: $i }, { key: "Ctrl-p", run: B3, shift: $l }, { key: "Ctrl-n", run: B5, shift: $a }, { key: "Ctrl-a", run: (e13) => BY(e13, (t10) => TY.cursor(e13.lineBlockAt(t10.head).from, 1)), shift: (e13) => $t(e13, (t10) => TY.cursor(e13.lineBlockAt(t10.head).from)) }, { key: "Ctrl-e", run: (e13) => BY(e13, (t10) => TY.cursor(e13.lineBlockAt(t10.head).to, -1)), shift: (e13) => $t(e13, (t10) => TY.cursor(e13.lineBlockAt(t10.head).to)) }, { key: "Ctrl-d", run: $w }, { key: "Ctrl-h", run: $b }, { key: "Ctrl-k", run: (e13) => $m(e13, (t10) => {
   let r10 = e13.lineBlockAt(t10.head).to;
   return t10.head < r10 ? r10 : Math.min(e13.state.doc.length, t10.head + 1);
-}) }, { key: "Ctrl-Alt-h", run: $y }, { key: "Ctrl-o", run: (e13) => {
+}) }, { key: "Ctrl-Alt-h", run: $k }, { key: "Ctrl-o", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
   if (t10.readOnly)
     return false;
-  let i10 = t10.changeByRange((e14) => ({ changes: { from: e14.from, to: e14.to, insert: Tm.of(["", ""]) }, range: TU.cursor(e14.from) }));
+  let i10 = t10.changeByRange((e14) => ({ changes: { from: e14.from, to: e14.to, insert: Tw.of(["", ""]) }, range: TY.cursor(e14.from) }));
   return r10(t10.update(i10, { scrollIntoView: true, userEvent: "input" })), true;
 } }, { key: "Ctrl-t", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
@@ -24884,66 +24893,66 @@ let $A = (e13) => {
   let i10 = t10.changeByRange((e14) => {
     if (!e14.empty || 0 == e14.from || e14.from == t10.doc.length)
       return { range: e14 };
-    let r11 = e14.from, i11 = t10.doc.lineAt(r11), o10 = r11 == i11.from ? r11 - 1 : T_(i11.text, r11 - i11.from, false) + i11.from, s10 = r11 == i11.to ? r11 + 1 : T_(i11.text, r11 - i11.from, true) + i11.from;
-    return { changes: { from: o10, to: s10, insert: t10.doc.slice(r11, s10).append(t10.doc.slice(o10, r11)) }, range: TU.cursor(s10) };
+    let r11 = e14.from, i11 = t10.doc.lineAt(r11), o10 = r11 == i11.from ? r11 - 1 : TE(i11.text, r11 - i11.from, false) + i11.from, s10 = r11 == i11.to ? r11 + 1 : TE(i11.text, r11 - i11.from, true) + i11.from;
+    return { changes: { from: o10, to: s10, insert: t10.doc.slice(r11, s10).append(t10.doc.slice(o10, r11)) }, range: TY.cursor(s10) };
   });
   return !i10.changes.empty && (r10(t10.update(i10, { scrollIntoView: true, userEvent: "move.character" })), true);
-} }, { key: "Ctrl-v", run: B5 }], $T = [{ key: "Alt-ArrowLeft", mac: "Ctrl-ArrowLeft", run: (e13) => BU(e13, (t10) => BJ(e13.state, t10, !BQ(e13))), shift: (e13) => B6(e13, (t10) => BJ(e13.state, t10, !BQ(e13))) }, { key: "Alt-ArrowRight", mac: "Ctrl-ArrowRight", run: (e13) => BU(e13, (t10) => BJ(e13.state, t10, BQ(e13))), shift: (e13) => B6(e13, (t10) => BJ(e13.state, t10, BQ(e13))) }, { key: "Alt-ArrowUp", run: (e13) => {
+} }, { key: "Ctrl-v", run: B7 }], $R = [{ key: "Alt-ArrowLeft", mac: "Ctrl-ArrowLeft", run: (e13) => BY(e13, (t10) => B2(e13.state, t10, !BJ(e13))), shift: (e13) => $t(e13, (t10) => B2(e13.state, t10, !BJ(e13))) }, { key: "Alt-ArrowRight", mac: "Ctrl-ArrowRight", run: (e13) => BY(e13, (t10) => B2(e13.state, t10, BJ(e13))), shift: (e13) => $t(e13, (t10) => B2(e13.state, t10, BJ(e13))) }, { key: "Alt-ArrowUp", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return $w(t10, r10, false);
+  return $C(t10, r10, false);
 } }, { key: "Shift-Alt-ArrowUp", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return $x(t10, r10, false);
+  return $O(t10, r10, false);
 } }, { key: "Alt-ArrowDown", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return $w(t10, r10, true);
+  return $C(t10, r10, true);
 } }, { key: "Shift-Alt-ArrowDown", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
-  return $x(t10, r10, true);
+  return $O(t10, r10, true);
 } }, { key: "Escape", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13, i10 = t10.selection, o10 = null;
-  return i10.ranges.length > 1 ? o10 = TU.create([i10.main]) : i10.main.empty || (o10 = TU.create([TU.cursor(i10.main.head)])), !!o10 && (r10(BW(t10, o10)), true);
-} }, { key: "Mod-Enter", run: $S }, { key: "Alt-l", mac: "Ctrl-l", run: (e13) => {
-  let { state: t10, dispatch: r10 } = e13, i10 = $b(t10).map((e14) => {
+  return i10.ranges.length > 1 ? o10 = TY.create([i10.main]) : i10.main.empty || (o10 = TY.create([TY.cursor(i10.main.head)])), !!o10 && (r10(BQ(t10, o10)), true);
+} }, { key: "Mod-Enter", run: $_ }, { key: "Alt-l", mac: "Ctrl-l", run: (e13) => {
+  let { state: t10, dispatch: r10 } = e13, i10 = $S(t10).map((e14) => {
     let { from: r11, to: i11 } = e14;
-    return TU.range(r11, Math.min(i11 + 1, t10.doc.length));
+    return TY.range(r11, Math.min(i11 + 1, t10.doc.length));
   });
-  return r10(t10.update({ selection: TU.create(i10), userEvent: "select" })), true;
+  return r10(t10.update({ selection: TY.create(i10), userEvent: "select" })), true;
 } }, { key: "Mod-i", run: (e13) => {
-  let { state: t10, dispatch: r10 } = e13, i10 = BH(t10.selection, (e14) => {
+  let { state: t10, dispatch: r10 } = e13, i10 = BX(t10.selection, (e14) => {
     var r11;
-    let i11 = jh(t10).resolveStack(e14.from, 1);
+    let i11 = jg(t10).resolveStack(e14.from, 1);
     for (let t11 = i11; t11; t11 = t11.next) {
       let { node: i12 } = t11;
       if ((i12.from < e14.from && i12.to >= e14.to || i12.to > e14.to && i12.from <= e14.from) && (null === (r11 = i12.parent) || void 0 === r11 ? void 0 : r11.parent))
-        return TU.range(i12.to, i12.from);
+        return TY.range(i12.to, i12.from);
     }
     return e14;
   });
-  return r10(BW(t10, i10)), true;
-}, preventDefault: true }, { key: "Mod-[", run: $_ }, { key: "Mod-]", run: $A }, { key: "Mod-Alt-\\", run: (e13) => {
+  return r10(BQ(t10, i10)), true;
+}, preventDefault: true }, { key: "Mod-[", run: $E }, { key: "Mod-]", run: $P }, { key: "Mod-Alt-\\", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
   if (t10.readOnly)
     return false;
-  let i10 = /* @__PURE__ */ Object.create(null), o10 = new j_(t10, { overrideIndentation: (e14) => {
+  let i10 = /* @__PURE__ */ Object.create(null), o10 = new jE(t10, { overrideIndentation: (e14) => {
     let t11 = i10[e14];
     return null == t11 ? -1 : t11;
-  } }), s10 = $O(t10, (e14, r11, s11) => {
-    let l10 = jA(o10, e14.from);
+  } }), s10 = $T(t10, (e14, r11, s11) => {
+    let l10 = jP(o10, e14.from);
     if (null == l10)
       return;
     /\S/.test(e14.text) || (l10 = 0);
-    let a10 = /^\s*/.exec(e14.text)[0], c10 = jO(t10, l10);
+    let a10 = /^\s*/.exec(e14.text)[0], c10 = jT(t10, l10);
     (a10 != c10 || s11.from < e14.from + a10.length) && (i10[e14.from] = l10, r11.push({ from: e14.from, to: e14.from + a10.length, insert: c10 }));
   });
   return s10.changes.empty || r10(t10.update(s10, { userEvent: "indent" })), true;
 } }, { key: "Shift-Mod-k", run: (e13) => {
   if (e13.state.readOnly)
     return false;
-  let { state: t10 } = e13, r10 = t10.changes($b(t10).map((e14) => {
+  let { state: t10 } = e13, r10 = t10.changes($S(t10).map((e14) => {
     let { from: r11, to: i11 } = e14;
     return r11 > 0 ? r11-- : i11 < t10.doc.length && i11++, { from: r11, to: i11 };
-  })), i10 = BH(t10.selection, (t11) => {
+  })), i10 = BX(t10.selection, (t11) => {
     let r11;
     if (e13.lineWrapping) {
       let i11 = e13.lineBlockAt(t11.head), o10 = e13.coordsAtPos(t11.head, t11.assoc || 1);
@@ -24954,115 +24963,115 @@ let $A = (e13) => {
   return e13.dispatch({ changes: r10, selection: i10, scrollIntoView: true, userEvent: "delete.line" }), true;
 } }, { key: "Shift-Mod-\\", run: (e13) => {
   let t10, r10, { state: i10, dispatch: o10 } = e13;
-  return t10 = false, r10 = BH(i10.selection, (e14) => {
-    let r11 = No(i10, e14.head, -1) || No(i10, e14.head, 1) || e14.head > 0 && No(i10, e14.head - 1, 1) || e14.head < i10.doc.length && No(i10, e14.head + 1, -1);
+  return t10 = false, r10 = BX(i10.selection, (e14) => {
+    let r11 = Nc(i10, e14.head, -1) || Nc(i10, e14.head, 1) || e14.head > 0 && Nc(i10, e14.head - 1, 1) || e14.head < i10.doc.length && Nc(i10, e14.head + 1, -1);
     if (!r11 || !r11.end)
       return e14;
     t10 = true;
     let o11 = r11.start.from == e14.head ? r11.end.to : r11.end.from;
-    return TU.cursor(o11);
-  }), !!t10 && (o10(BW(i10, r10)), true);
+    return TY.cursor(o11);
+  }), !!t10 && (o10(BQ(i10, r10)), true);
 } }, { key: "Mod-/", run: (e13) => {
-  let { state: t10 } = e13, r10 = t10.doc.lineAt(t10.selection.main.from), i10 = Bk(e13.state, r10.from);
-  return i10.line ? Bb(e13) : !!i10.block && Bx(e13);
-} }, { key: "Alt-A", run: Bw }].concat([{ key: "ArrowLeft", run: BY, shift: B7, preventDefault: true }, { key: "Mod-ArrowLeft", mac: "Alt-ArrowLeft", run: (e13) => BG(e13, !BQ(e13)), shift: (e13) => $t(e13, !BQ(e13)), preventDefault: true }, { mac: "Cmd-ArrowLeft", run: (e13) => BU(e13, (t10) => B8(e13, t10, !BQ(e13))), shift: (e13) => B6(e13, (t10) => B8(e13, t10, !BQ(e13))), preventDefault: true }, { key: "ArrowRight", run: BK, shift: $e, preventDefault: true }, { key: "Mod-ArrowRight", mac: "Alt-ArrowRight", run: (e13) => BG(e13, BQ(e13)), shift: (e13) => $t(e13, BQ(e13)), preventDefault: true }, { mac: "Cmd-ArrowRight", run: (e13) => BU(e13, (t10) => B8(e13, t10, BQ(e13))), shift: (e13) => B6(e13, (t10) => B8(e13, t10, BQ(e13))), preventDefault: true }, { key: "ArrowUp", run: B0, shift: $r, preventDefault: true }, { mac: "Cmd-ArrowUp", run: $a, shift: $u }, { mac: "Ctrl-ArrowUp", run: B3, shift: $s }, { key: "ArrowDown", run: B1, shift: $i, preventDefault: true }, { mac: "Cmd-ArrowDown", run: $c, shift: $h }, { mac: "Ctrl-ArrowDown", run: B5, shift: $l }, { key: "PageUp", run: B3, shift: $s }, { key: "PageDown", run: B5, shift: $l }, { key: "Home", run: (e13) => BU(e13, (t10) => B8(e13, t10, false)), shift: (e13) => B6(e13, (t10) => B8(e13, t10, false)), preventDefault: true }, { key: "Mod-Home", run: $a, shift: $u }, { key: "End", run: (e13) => BU(e13, (t10) => B8(e13, t10, true)), shift: (e13) => B6(e13, (t10) => B8(e13, t10, true)), preventDefault: true }, { key: "Mod-End", run: $c, shift: $h }, { key: "Enter", run: $k }, { key: "Mod-a", run: (e13) => {
+  let { state: t10 } = e13, r10 = t10.doc.lineAt(t10.selection.main.from), i10 = BA(e13.state, r10.from);
+  return i10.line ? BS(e13) : !!i10.block && BO(e13);
+} }, { key: "Alt-A", run: BC }].concat([{ key: "ArrowLeft", run: BZ, shift: $r, preventDefault: true }, { key: "Mod-ArrowLeft", mac: "Alt-ArrowLeft", run: (e13) => B1(e13, !BJ(e13)), shift: (e13) => $o(e13, !BJ(e13)), preventDefault: true }, { mac: "Cmd-ArrowLeft", run: (e13) => BY(e13, (t10) => $e(e13, t10, !BJ(e13))), shift: (e13) => $t(e13, (t10) => $e(e13, t10, !BJ(e13))), preventDefault: true }, { key: "ArrowRight", run: B0, shift: $i, preventDefault: true }, { key: "Mod-ArrowRight", mac: "Alt-ArrowRight", run: (e13) => B1(e13, BJ(e13)), shift: (e13) => $o(e13, BJ(e13)), preventDefault: true }, { mac: "Cmd-ArrowRight", run: (e13) => BY(e13, (t10) => $e(e13, t10, BJ(e13))), shift: (e13) => $t(e13, (t10) => $e(e13, t10, BJ(e13))), preventDefault: true }, { key: "ArrowUp", run: B3, shift: $l, preventDefault: true }, { mac: "Cmd-ArrowUp", run: $f, shift: $p }, { mac: "Ctrl-ArrowUp", run: B9, shift: $u }, { key: "ArrowDown", run: B5, shift: $a, preventDefault: true }, { mac: "Cmd-ArrowDown", run: $d, shift: $g }, { mac: "Ctrl-ArrowDown", run: B7, shift: $h }, { key: "PageUp", run: B9, shift: $u }, { key: "PageDown", run: B7, shift: $h }, { key: "Home", run: (e13) => BY(e13, (t10) => $e(e13, t10, false)), shift: (e13) => $t(e13, (t10) => $e(e13, t10, false)), preventDefault: true }, { key: "Mod-Home", run: $f, shift: $p }, { key: "End", run: (e13) => BY(e13, (t10) => $e(e13, t10, true)), shift: (e13) => $t(e13, (t10) => $e(e13, t10, true)), preventDefault: true }, { key: "Mod-End", run: $d, shift: $g }, { key: "Enter", run: $A }, { key: "Mod-a", run: (e13) => {
   let { state: t10, dispatch: r10 } = e13;
   return r10(t10.update({ selection: { anchor: 0, head: t10.doc.length }, userEvent: "select" })), true;
-} }, { key: "Backspace", run: $g, shift: $g }, { key: "Delete", run: $m }, { key: "Mod-Backspace", mac: "Alt-Backspace", run: $y }, { key: "Mod-Delete", mac: "Alt-Delete", run: (e13) => $v(e13, true) }, { mac: "Mod-Backspace", run: (e13) => $f(e13, (t10) => {
+} }, { key: "Backspace", run: $b, shift: $b }, { key: "Delete", run: $w }, { key: "Mod-Backspace", mac: "Alt-Backspace", run: $k }, { key: "Mod-Delete", mac: "Alt-Delete", run: (e13) => $x(e13, true) }, { mac: "Mod-Backspace", run: (e13) => $m(e13, (t10) => {
   let r10 = e13.moveToLineBoundary(t10, false).head;
   return t10.head > r10 ? r10 : Math.max(0, t10.head - 1);
-}) }, { mac: "Mod-Delete", run: (e13) => $f(e13, (t10) => {
+}) }, { mac: "Mod-Delete", run: (e13) => $m(e13, (t10) => {
   let r10 = e13.moveToLineBoundary(t10, true).head;
   return t10.head < r10 ? r10 : Math.min(e13.state.doc.length, t10.head + 1);
-}) }].concat($M.map((e13) => ({ mac: e13.key, run: e13.run, shift: e13.shift })))), $P = { key: "Tab", run: $A, shift: $_ }, $E = (e13) => {
+}) }].concat($D.map((e13) => ({ mac: e13.key, run: e13.run, shift: e13.shift })))), $I = { key: "Tab", run: $P, shift: $E }, $L = (e13) => {
   let t10 = () => [function() {
     let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return [Ld.of(e14), La, Ll, Lh, Lu];
-  }(), RY.of(I4), function() {
+    return [Lv.of(e14), Lf, Lh, Lg, Lp];
+  }(), RZ.of(I6), function() {
     let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return [Ij.of(e14), IM(), I$];
+    return [IF.of(e14), ID(), IH];
   }(), function() {
-    let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t11 = Object.assign(Object.assign({}, jG), e14), r11 = new jJ(t11, true), i11 = new jJ(t11, false), o11 = Dd.fromClass(class {
+    let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t11 = Object.assign(Object.assign({}, j1), e14), r11 = new j2(t11, true), i11 = new j2(t11, false), o11 = Dv.fromClass(class {
       constructor(e15) {
         this.from = e15.viewport.from, this.markers = this.buildMarkers(e15);
       }
       update(e15) {
-        (e15.docChanged || e15.viewportChanged || e15.startState.facet(jw) != e15.state.facet(jw) || e15.startState.field(jF, false) != e15.state.field(jF, false) || jh(e15.startState) != jh(e15.state) || t11.foldingChanged(e15)) && (this.markers = this.buildMarkers(e15.view));
+        (e15.docChanged || e15.viewportChanged || e15.startState.facet(jC) != e15.state.facet(jC) || e15.startState.field(jW, false) != e15.state.field(jW, false) || jg(e15.startState) != jg(e15.state) || t11.foldingChanged(e15)) && (this.markers = this.buildMarkers(e15.view));
       }
       buildMarkers(e15) {
-        let t12 = new PO();
+        let t12 = new PT();
         for (let o12 of e15.viewportLineBlocks) {
-          let s12 = jz(e15.state, o12.from, o12.to) ? i11 : jL(e15.state, o12.from, o12.to) ? r11 : null;
+          let s12 = jU(e15.state, o12.from, o12.to) ? i11 : j$(e15.state, o12.from, o12.to) ? r11 : null;
           s12 && t12.add(o12.from, o12.from, s12);
         }
         return t12.finish();
       }
     }), { domEventHandlers: s11 } = t11;
-    return [o11, IA({ class: "cm-foldGutter", markers(e15) {
+    return [o11, IP({ class: "cm-foldGutter", markers(e15) {
       var t12;
-      return (null === (t12 = e15.plugin(o11)) || void 0 === t12 ? void 0 : t12.markers) || PC.empty;
-    }, initialSpacer: () => new jJ(t11, false), domEventHandlers: Object.assign(Object.assign({}, s11), { click: (e15, t12, r12) => {
+      return (null === (t12 = e15.plugin(o11)) || void 0 === t12 ? void 0 : t12.markers) || PM.empty;
+    }, initialSpacer: () => new j2(t11, false), domEventHandlers: Object.assign(Object.assign({}, s11), { click: (e15, t12, r12) => {
       if (s11.click && s11.click(e15, t12, r12))
         return true;
-      let i12 = jz(e15.state, t12.from, t12.to);
+      let i12 = jU(e15.state, t12.from, t12.to);
       if (i12)
-        return e15.dispatch({ effects: jB.of(i12) }), true;
-      let o12 = jL(e15.state, t12.from, t12.to);
-      return !!o12 && (e15.dispatch({ effects: jN.of(o12) }), true);
-    } }) }), jX()];
-  }({ openText: String.fromCharCode(9662), closedText: String.fromCharCode(9656) }), RY.of(jW), function() {
+        return e15.dispatch({ effects: jV.of(i12) }), true;
+      let o12 = j$(e15.state, t12.from, t12.to);
+      return !!o12 && (e15.dispatch({ effects: jz.of(o12) }), true);
+    } }) }), jG()];
+  }({ openText: String.fromCharCode(9662), closedText: String.fromCharCode(9656) }), RZ.of(jQ), function() {
     let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return [j6.of(e14), Nt];
-  }(), [Bu, Bo], RY.of(Bh), IV, It, function() {
+    return [Nt.of(e14), No];
+  }(), [Bp, Bc], RZ.of(Bg), Iq, Io, function() {
     let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return [R8.of(e14), R6 || (R6 = Dd.fromClass(class {
+    return [Ie.of(e14), It || (It = Dv.fromClass(class {
       constructor(e15) {
-        this.view = e15, this.decorations = EB.none, this.decorationCache = /* @__PURE__ */ Object.create(null), this.decorator = this.makeDecorator(e15.state.facet(R8)), this.decorations = this.decorator.createDeco(e15);
+        this.view = e15, this.decorations = EV.none, this.decorationCache = /* @__PURE__ */ Object.create(null), this.decorator = this.makeDecorator(e15.state.facet(Ie)), this.decorations = this.decorator.createDeco(e15);
       }
       makeDecorator(e15) {
-        return new R1({ regexp: e15.specialChars, decoration: (t11, r11, i11) => {
-          let { doc: o11 } = r11.state, s11 = TE(t11[0], 0);
+        return new R5({ regexp: e15.specialChars, decoration: (t11, r11, i11) => {
+          let { doc: o11 } = r11.state, s11 = TL(t11[0], 0);
           if (9 == s11) {
-            let e16 = o11.lineAt(i11), t12 = r11.state.tabSize, s12 = Pj(e16.text, t12, i11 - e16.from);
-            return EB.replace({ widget: new R7((t12 - s12 % t12) * this.view.defaultCharacterWidth / this.view.scaleX) });
+            let e16 = o11.lineAt(i11), t12 = r11.state.tabSize, s12 = PF(e16.text, t12, i11 - e16.from);
+            return EV.replace({ widget: new Ir((t12 - s12 % t12) * this.view.defaultCharacterWidth / this.view.scaleX) });
           }
-          return this.decorationCache[s11] || (this.decorationCache[s11] = EB.replace({ widget: new R9(e15, s11) }));
+          return this.decorationCache[s11] || (this.decorationCache[s11] = EV.replace({ widget: new In(e15, s11) }));
         }, boundary: e15.replaceTabs ? void 0 : /[^]/ });
       }
       update(e15) {
-        let t11 = e15.state.facet(R8);
-        e15.startState.facet(R8) != t11 ? (this.decorator = this.makeDecorator(t11), this.decorations = this.decorator.createDeco(e15.view)) : this.decorations = this.decorator.updateDeco(e15, this.decorations);
+        let t11 = e15.state.facet(Ie);
+        e15.startState.facet(Ie) != t11 ? (this.decorator = this.makeDecorator(t11), this.decorations = this.decorator.createDeco(e15.view)) : this.decorations = this.decorator.updateDeco(e15, this.decorations);
       }
     }, { decorations: (e15) => e15.decorations }))];
   }(), function() {
     let e14 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return [BM, B_.of(e14), Rz.domEventHandlers({ beforeinput(e15, t11) {
-      let r11 = "historyUndo" == e15.inputType ? BP : "historyRedo" == e15.inputType ? BE : null;
+    return [BD, BE.of(e14), RU.domEventHandlers({ beforeinput(e15, t11) {
+      let r11 = "historyUndo" == e15.inputType ? BI : "historyRedo" == e15.inputType ? BL : null;
       return !!r11 && (e15.preventDefault(), r11(t11));
     } })];
-  }(), RY.of(BV), RY.of($T)], r10 = bM([]), i10 = bM(e13 || ""), o10 = bM(null), s10 = bM(null), l10 = y_([i10, r10]).pipe(yx((e14) => {
+  }(), RZ.of(Bq), RZ.of($R)], r10 = bM([]), i10 = bM(e13 || ""), o10 = bM(null), s10 = bM(null), l10 = y_([i10, r10]).pipe(yx((e14) => {
     let [r11, i11] = e14;
-    return Py.create({ doc: r11, extensions: [...i11, t10].map((e15) => e15()) });
+    return Pk.create({ doc: r11, extensions: [...i11, t10].map((e15) => e15()) });
   }));
   return { initial$: i10, state$: l10, dom$: o10, view$: s10, use: (e14) => (r10.next([...r10.value, e14]), () => {
     r10.next(r10.value.filter((t11) => t11 !== e14));
   }), serve: () => yT(l10, y_([o10, l10]).pipe(yD((e14) => {
     let [t11, r11] = e14;
-    return null == t11 ? yw(null) : yw(new Rz({ parent: t11, state: r11 }));
+    return null == t11 ? yw(null) : yw(new RU({ parent: t11, state: r11 }));
   }), bP((e14) => (s10.next(e14), () => null == e14 ? void 0 : e14.destroy())))) };
-}, $D = bE(() => $E(), { name: "EditorContext" }), $R = (e13) => {
-  let t10 = $D.use();
+}, $j = bE(() => $L(), { name: "EditorContext" }), $N = (e13) => {
+  let t10 = $j.use();
   yI(t10.dom$, bP(() => t10.use(() => e13())), bx());
-}, $I = Object.assign(k6("div", () => {
-  let e13 = $D.use();
-  return $R(() => {
+}, $B = Object.assign(k6("div", () => {
+  let e13 = $j.use();
+  return $N(() => {
     var e14;
     let t10, r10;
-    return e14 = { fallback: true }, t10 = [j3], jo instanceof j0 && (jo.module && t10.push(Rz.styleModule.of(jo.module)), r10 = jo.themeType), (null == e14 ? void 0 : e14.fallback) ? t10.push(j2.of(jo)) : r10 ? t10.push(j1.computeN([Rz.darkTheme], (e15) => e15.facet(Rz.darkTheme) == ("dark" == r10) ? [jo] : [])) : t10.push(j1.of(jo)), t10;
+    return e14 = { fallback: true }, t10 = [j9], jc instanceof j3 && (jc.module && t10.push(RU.styleModule.of(jc.module)), r10 = jc.themeType), (null == e14 ? void 0 : e14.fallback) ? t10.push(j8.of(jc)) : r10 ? t10.push(j5.computeN([RU.darkTheme], (e15) => e15.facet(RU.darkTheme) == ("dark" == r10) ? [jc] : [])) : t10.push(j5.of(jc)), t10;
   }), yI(e13.serve(), bk()), (t10) => bw(t10, { ref: e13.dom$ });
 })({ width: "100%", height: "100%", fontSize: 12, "& .cm-editor": { outline: "none", height: "100%", "& .cm-gutterElement": { color: "sys.secondary" }, "& [aria-readonly=true]": { opacity: 0.7 }, "& .cm-activeLineGutter": { backgroundColor: xM("sys.primary", xA(0.08)) }, "& .cm-activeLine": { backgroundColor: xM("sys.primary", xA(0.08)) }, "& .diffLineGutter": { backgroundColor: xM("sys.error", xA(0.08)) }, "& .diffLine": { backgroundColor: xM("sys.error", xA(0.08)) }, "& .cm-tooltip-autocomplete ul li[aria-selected]": { containerStyle: "sys.primary" }, "& .cm-gutters": { border: "none", containerStyle: "sys.surface-container-lowest" }, "& .cm-tooltip": { border: "none", boxShadow: "2", borderRadius: "xs", containerStyle: "sys.surface-container-lowest", fontFamily: "code" }, "& .cm-tooltip-lint": { overflow: "hidden" }, "& .cm-tooltip-hover": { overflow: "hidden" } }, "& .tok-propertyName": { color: "sys.primary" }, "& .tok-number": { color: "sys.error" }, "& .tok-keyword": { color: "sys.error" }, "& .tok-string": { color: "sys.tertiary" }, "& .cm-lint-marker": { width: "0.7em", height: "0.7em" }, "& .tok-punctuation": { color: xM("sys.primary", xA(0.38)) } }), { displayName: "EditorContainer" });
-var $L = {};
-class $j {
+var $$ = {};
+class $F {
   constructor(e13, t10, r10, i10, o10, s10, l10, a10, c10, u10 = 0, h10) {
     this.p = e13, this.stack = t10, this.state = r10, this.reducePos = i10, this.pos = o10, this.score = s10, this.buffer = l10, this.bufferBase = a10, this.curContext = c10, this.lookAhead = u10, this.parent = h10;
   }
@@ -25071,7 +25080,7 @@ class $j {
   }
   static start(e13, t10) {
     let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, i10 = e13.parser.context;
-    return new $j(e13, [], t10, r10, r10, 0, [], 0, i10 ? new $N(i10, i10.start) : null, 0, null);
+    return new $F(e13, [], t10, r10, r10, 0, [], 0, i10 ? new $z(i10, i10.start) : null, 0, null);
   }
   get context() {
     return this.curContext ? this.curContext.context : null;
@@ -25150,14 +25159,14 @@ class $j {
     let r10 = e13.buffer.slice(t10), i10 = e13.bufferBase + t10;
     for (; e13 && i10 == e13.bufferBase; )
       e13 = e13.parent;
-    return new $j(this.p, this.stack.slice(), this.state, this.reducePos, this.pos, this.score, r10, i10, this.curContext, this.lookAhead, e13);
+    return new $F(this.p, this.stack.slice(), this.state, this.reducePos, this.pos, this.score, r10, i10, this.curContext, this.lookAhead, e13);
   }
   recoverByDelete(e13, t10) {
     let r10 = e13 <= this.p.parser.maxNode;
     r10 && this.storeNode(e13, this.pos, t10, 4), this.storeNode(0, this.pos, t10, r10 ? 8 : 4), this.pos = this.reducePos = t10, this.score -= 190;
   }
   canShift(e13) {
-    for (let t10 = new $B(this); ; ) {
+    for (let t10 = new $V(this); ; ) {
       let r10 = this.p.parser.stateSlot(t10.state, 4) || this.p.parser.hasAction(t10.state, e13);
       if (0 == r10)
         return false;
@@ -25276,7 +25285,7 @@ class $j {
   }
   updateContext(e13) {
     if (e13 != this.curContext.context) {
-      let t10 = new $N(this.curContext.tracker, e13);
+      let t10 = new $z(this.curContext.tracker, e13);
       t10.hash != this.curContext.hash && this.emitContext(), this.curContext = t10;
     }
   }
@@ -25287,12 +25296,12 @@ class $j {
     this.curContext && this.curContext.tracker.strict && this.emitContext(), this.lookAhead > 0 && this.emitLookAhead();
   }
 }
-class $N {
+class $z {
   constructor(e13, t10) {
     this.tracker = e13, this.context = t10, this.hash = e13.strict ? e13.hash(t10) : 0;
   }
 }
-class $B {
+class $V {
   constructor(e13) {
     this.start = e13, this.state = e13.state, this.stack = e13.stack, this.base = this.stack.length;
   }
@@ -25303,13 +25312,13 @@ class $B {
     this.state = r10;
   }
 }
-class $$ {
+class $H {
   constructor(e13, t10, r10) {
     this.stack = e13, this.pos = t10, this.index = r10, this.buffer = e13.buffer, 0 == this.index && this.maybeNext();
   }
   static create(e13) {
     let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e13.bufferBase + e13.buffer.length;
-    return new $$(e13, t10, t10 - e13.bufferBase);
+    return new $H(e13, t10, t10 - e13.bufferBase);
   }
   maybeNext() {
     let e13 = this.stack.parent;
@@ -25331,10 +25340,10 @@ class $$ {
     this.index -= 4, this.pos -= 4, 0 == this.index && this.maybeNext();
   }
   fork() {
-    return new $$(this.stack, this.pos, this.index);
+    return new $H(this.stack, this.pos, this.index);
   }
 }
-function $F(e13) {
+function $W(e13) {
   let t10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uint16Array;
   if ("string" != typeof e13)
     return e13;
@@ -25357,15 +25366,15 @@ function $F(e13) {
   }
   return r10;
 }
-class $z {
+class $U {
   constructor() {
     this.start = -1, this.value = -1, this.end = -1, this.extended = -1, this.lookAhead = 0, this.mask = 0, this.context = 0;
   }
 }
-let $V = new $z();
-class $H {
+let $q = new $U();
+class $X {
   constructor(e13, t10) {
-    this.input = e13, this.ranges = t10, this.chunk = "", this.chunkOff = 0, this.chunk2 = "", this.chunk2Pos = 0, this.next = -1, this.token = $V, this.rangeIndex = 0, this.pos = this.chunkPos = t10[0].from, this.range = t10[0], this.end = t10[t10.length - 1].to, this.readNext();
+    this.input = e13, this.ranges = t10, this.chunk = "", this.chunkOff = 0, this.chunk2 = "", this.chunk2Pos = 0, this.next = -1, this.token = $q, this.rangeIndex = 0, this.pos = this.chunkPos = t10[0].from, this.range = t10[0], this.end = t10[t10.length - 1].to, this.readNext();
   }
   resolveOffset(e13, t10) {
     let r10 = this.range, i10 = this.rangeIndex, o10 = this.pos + e13;
@@ -25445,7 +25454,7 @@ class $H {
     return this.pos = this.chunkPos = this.end, this.range = this.ranges[this.rangeIndex = this.ranges.length - 1], this.chunk = "", this.next = -1;
   }
   reset(e13, t10) {
-    if (t10 ? (this.token = t10, t10.start = e13, t10.lookAhead = e13 + 1, t10.value = t10.extended = -1) : this.token = $V, this.pos != e13) {
+    if (t10 ? (this.token = t10, t10.start = e13, t10.lookAhead = e13 + 1, t10.value = t10.extended = -1) : this.token = $q, this.pos != e13) {
       if (this.pos = e13, e13 == this.end)
         return this.setDone(), this;
       for (; e13 < this.range.from; )
@@ -25472,7 +25481,7 @@ class $H {
     return r10;
   }
 }
-class $W {
+class $Q {
   constructor(e13, t10) {
     this.data = e13, this.id = t10;
   }
@@ -25487,8 +25496,8 @@ class $W {
             if ((e14[i12 + 1] & a10) > 0) {
               let r13 = e14[i12];
               if (c10.allows(r13) && (-1 == t11.token.value || t11.token.value == r13 || function(e15, t12, r14, i13) {
-                let o11 = $U(r14, i13, t12);
-                return o11 < 0 || $U(r14, i13, e15) < o11;
+                let o11 = $Y(r14, i13, t12);
+                return o11 < 0 || $Y(r14, i13, e15) < o11;
               }(r13, t11.token.value, o10, s10))) {
                 t11.acceptToken(r13);
                 break;
@@ -25515,15 +25524,15 @@ class $W {
     }(this.data, e13, t10, this.id, r10.data, r10.tokenPrecTable);
   }
 }
-function $U(e13, t10, r10) {
+function $Y(e13, t10, r10) {
   for (let i10 = t10, o10; 65535 != (o10 = e13[i10]); i10++)
     if (o10 == r10)
       return i10 - t10;
   return -1;
 }
-$W.prototype.contextual = $W.prototype.fallback = $W.prototype.extend = false, $W.prototype.fallback = $W.prototype.extend = false;
-let $q = "undefined" != typeof process && $L && /\bparse\b/.test($L.LOG), $X = null;
-function $Q(e13, t10, r10) {
+$Q.prototype.contextual = $Q.prototype.fallback = $Q.prototype.extend = false, $Q.prototype.fallback = $Q.prototype.extend = false;
+let $K = "undefined" != typeof process && $$ && /\bparse\b/.test($$.LOG), $G = null;
+function $J(e13, t10, r10) {
   let i10 = e13.cursor(ed.IncludeAnonymous);
   for (i10.moveTo(t10); ; )
     if (!(r10 < 0 ? i10.childBefore(t10) : i10.childAfter(t10)))
@@ -25536,14 +25545,14 @@ function $Q(e13, t10, r10) {
           return r10 < 0 ? 0 : e13.length;
       }
 }
-class $Y {
+class $Z {
   constructor(e13, t10) {
     this.fragments = e13, this.nodeSet = t10, this.i = 0, this.fragment = null, this.safeFrom = -1, this.safeTo = -1, this.trees = [], this.start = [], this.index = [], this.nextFragment();
   }
   nextFragment() {
     let e13 = this.fragment = this.i == this.fragments.length ? null : this.fragments[this.i++];
     if (e13) {
-      for (this.safeFrom = e13.openStart ? $Q(e13.tree, e13.from + e13.offset, 1) - e13.offset : e13.from, this.safeTo = e13.openEnd ? $Q(e13.tree, e13.to + e13.offset, -1) - e13.offset : e13.to; this.trees.length; )
+      for (this.safeFrom = e13.openStart ? $J(e13.tree, e13.from + e13.offset, 1) - e13.offset : e13.from, this.safeTo = e13.openEnd ? $J(e13.tree, e13.to + e13.offset, -1) - e13.offset : e13.to; this.trees.length; )
         this.trees.pop(), this.start.pop(), this.index.pop();
       this.trees.push(e13.tree), this.start.push(-e13.offset), this.index.push(0), this.nextStart = this.safeFrom;
     } else
@@ -25568,13 +25577,13 @@ class $Y {
       let o10 = r10.children[i10], s10 = this.start[t10] + r10.positions[i10];
       if (s10 > e13)
         return this.nextStart = s10, null;
-      if (o10 instanceof LS) {
+      if (o10 instanceof L_) {
         if (s10 == e13) {
           if (s10 < this.safeFrom)
             return null;
           let e14 = s10 + o10.length;
           if (e14 <= this.safeTo) {
-            let t11 = o10.prop(Lm.lookAhead);
+            let t11 = o10.prop(Lw.lookAhead);
             if (!t11 || e14 + t11 < this.fragment.to)
               return o10;
           }
@@ -25585,9 +25594,9 @@ class $Y {
     }
   }
 }
-class $K {
+class $0 {
   constructor(e13, t10) {
-    this.stream = t10, this.tokens = [], this.mainToken = null, this.actions = [], this.tokens = e13.tokenizers.map((e14) => new $z());
+    this.stream = t10, this.tokens = [], this.mainToken = null, this.actions = [], this.tokens = e13.tokenizers.map((e14) => new $U());
   }
   getActions(e13) {
     let t10 = 0, r10 = null, { parser: i10 } = e13.p, { tokenizers: o10 } = i10, s10 = i10.stateSlot(e13.state, 3), l10 = e13.curContext ? e13.curContext.hash : 0, a10 = 0;
@@ -25603,12 +25612,12 @@ class $K {
     }
     for (; this.actions.length > t10; )
       this.actions.pop();
-    return a10 && e13.setLookAhead(a10), r10 || e13.pos != this.stream.end || ((r10 = new $z()).value = e13.p.parser.eofTerm, r10.start = r10.end = e13.pos, t10 = this.addActions(e13, r10.value, r10.end, t10)), this.mainToken = r10, this.actions;
+    return a10 && e13.setLookAhead(a10), r10 || e13.pos != this.stream.end || ((r10 = new $U()).value = e13.p.parser.eofTerm, r10.start = r10.end = e13.pos, t10 = this.addActions(e13, r10.value, r10.end, t10)), this.mainToken = r10, this.actions;
   }
   getMainToken(e13) {
     if (this.mainToken)
       return this.mainToken;
-    let t10 = new $z(), { pos: r10, p: i10 } = e13;
+    let t10 = new $U(), { pos: r10, p: i10 } = e13;
     return t10.start = r10, t10.end = Math.min(r10 + 1, i10.stream.end), t10.value = r10 == i10.stream.end ? i10.parser.eofTerm : 0, t10;
   }
   updateCachedToken(e13, t10, r10) {
@@ -25638,22 +25647,22 @@ class $K {
       for (let a10 = s10.stateSlot(o10, e14 ? 2 : 1); ; a10 += 3) {
         if (65535 == l10[a10]) {
           if (1 == l10[a10 + 1])
-            a10 = $1(l10, a10 + 2);
+            a10 = $5(l10, a10 + 2);
           else {
-            0 == i10 && 2 == l10[a10 + 1] && (i10 = this.putAction($1(l10, a10 + 2), t10, r10, i10));
+            0 == i10 && 2 == l10[a10 + 1] && (i10 = this.putAction($5(l10, a10 + 2), t10, r10, i10));
             break;
           }
         }
-        l10[a10] == t10 && (i10 = this.putAction($1(l10, a10 + 1), t10, r10, i10));
+        l10[a10] == t10 && (i10 = this.putAction($5(l10, a10 + 1), t10, r10, i10));
       }
     return i10;
   }
 }
-class $G {
+class $1 {
   constructor(e13, t10, r10, i10) {
-    this.parser = e13, this.input = t10, this.ranges = i10, this.recovering = 0, this.nextStackID = 9812, this.minStackPos = 0, this.reused = [], this.stoppedAt = null, this.lastBigReductionStart = -1, this.lastBigReductionSize = 0, this.bigReductionCount = 0, this.stream = new $H(t10, i10), this.tokens = new $K(e13, this.stream), this.topTerm = e13.top[1];
+    this.parser = e13, this.input = t10, this.ranges = i10, this.recovering = 0, this.nextStackID = 9812, this.minStackPos = 0, this.reused = [], this.stoppedAt = null, this.lastBigReductionStart = -1, this.lastBigReductionSize = 0, this.bigReductionCount = 0, this.stream = new $X(t10, i10), this.tokens = new $0(e13, this.stream), this.topTerm = e13.top[1];
     let { from: o10 } = i10[0];
-    this.stacks = [$j.start(this, e13.top[0], o10)], this.fragments = r10.length && this.stream.end - o10 > 4 * e13.bufferLength ? new $Y(r10, e13.nodeSet) : null;
+    this.stacks = [$F.start(this, e13.top[0], o10)], this.fragments = r10.length && this.stream.end - o10 > 4 * e13.bufferLength ? new $Z(r10, e13.nodeSet) : null;
   }
   get parsedPos() {
     return this.minStackPos;
@@ -25691,15 +25700,15 @@ class $G {
         return t12;
       }(e13);
       if (t11)
-        return $q && console.log("Finish with " + this.stackID(t11)), this.stackToTree(t11);
+        return $K && console.log("Finish with " + this.stackID(t11)), this.stackToTree(t11);
       if (this.parser.strict)
-        throw $q && e13 && console.log("Stuck with token " + (this.tokens.mainToken ? this.parser.getName(this.tokens.mainToken.value) : "none")), SyntaxError("No parse at " + i10);
+        throw $K && e13 && console.log("Stuck with token " + (this.tokens.mainToken ? this.parser.getName(this.tokens.mainToken.value) : "none")), SyntaxError("No parse at " + i10);
       this.recovering || (this.recovering = 5);
     }
     if (this.recovering && e13) {
       let r11 = null != this.stoppedAt && e13[0].pos > this.stoppedAt ? e13[0] : this.runRecovery(e13, t10, o10);
       if (r11)
-        return $q && console.log("Force-finish " + this.stackID(r11)), this.stackToTree(r11.forceAll());
+        return $K && console.log("Force-finish " + this.stackID(r11)), this.stackToTree(r11.forceAll());
     }
     if (this.recovering) {
       let e14 = 1 == this.recovering ? 1 : 3 * this.recovering;
@@ -25736,19 +25745,19 @@ class $G {
     this.stoppedAt = e13;
   }
   advanceStack(e13, t10, r10) {
-    let i10 = e13.pos, { parser: o10 } = this, s10 = $q ? this.stackID(e13) + " -> " : "";
+    let i10 = e13.pos, { parser: o10 } = this, s10 = $K ? this.stackID(e13) + " -> " : "";
     if (null != this.stoppedAt && i10 > this.stoppedAt)
       return e13.forceReduce() ? e13 : null;
     if (this.fragments) {
       let t11 = e13.curContext && e13.curContext.tracker.strict, r11 = t11 ? e13.curContext.hash : 0;
       for (let l11 = this.fragments.nodeAt(i10); l11; ) {
         let i11 = this.parser.nodeSet.types[l11.type.id] == l11.type ? o10.getGoto(e13.state, l11.type.id) : -1;
-        if (i11 > -1 && l11.length && (!t11 || (l11.prop(Lm.contextHash) || 0) == r11))
-          return e13.useNode(l11, i11), $q && console.log(s10 + this.stackID(e13) + ` (via reuse of ${o10.getName(l11.type.id)})`), true;
-        if (!(l11 instanceof LS) || 0 == l11.children.length || l11.positions[0] > 0)
+        if (i11 > -1 && l11.length && (!t11 || (l11.prop(Lw.contextHash) || 0) == r11))
+          return e13.useNode(l11, i11), $K && console.log(s10 + this.stackID(e13) + ` (via reuse of ${o10.getName(l11.type.id)})`), true;
+        if (!(l11 instanceof L_) || 0 == l11.children.length || l11.positions[0] > 0)
           break;
         let a11 = l11.children[0];
-        if (a11 instanceof LS && 0 == l11.positions[0])
+        if (a11 instanceof L_ && 0 == l11.positions[0])
           l11 = a11;
         else
           break;
@@ -25756,14 +25765,14 @@ class $G {
     }
     let l10 = o10.stateSlot(e13.state, 4);
     if (l10 > 0)
-      return e13.reduce(l10), $q && console.log(s10 + this.stackID(e13) + ` (via always-reduce ${o10.getName(65535 & l10)})`), true;
+      return e13.reduce(l10), $K && console.log(s10 + this.stackID(e13) + ` (via always-reduce ${o10.getName(65535 & l10)})`), true;
     if (e13.stack.length >= 8400)
       for (; e13.stack.length > 6e3 && e13.forceReduce(); )
         ;
     let a10 = this.tokens.getActions(e13);
     for (let l11 = 0; l11 < a10.length; ) {
       let c10 = a10[l11++], u10 = a10[l11++], h10 = a10[l11++], f10 = l11 == a10.length || !r10, d10 = f10 ? e13 : e13.split(), p10 = this.tokens.mainToken;
-      if (d10.apply(c10, u10, p10 ? p10.start : d10.pos, h10), $q && console.log(s10 + this.stackID(d10) + ` (via ${(65536 & c10) == 0 ? "shift" : `reduce of ${o10.getName(65535 & c10)}`} for ${o10.getName(u10)} @ ${i10}${d10 == e13 ? "" : ", split"})`), f10)
+      if (d10.apply(c10, u10, p10 ? p10.start : d10.pos, h10), $K && console.log(s10 + this.stackID(d10) + ` (via ${(65536 & c10) == 0 ? "shift" : `reduce of ${o10.getName(65535 & c10)}`} for ${o10.getName(u10)} @ ${i10}${d10 == e13 ? "" : ", split"})`), f10)
         return true;
       d10.pos > i10 ? t10.push(d10) : r10.push(d10);
     }
@@ -25775,33 +25784,33 @@ class $G {
       if (!this.advanceStack(e13, null, null))
         return false;
       if (e13.pos > r10)
-        return $J(e13, t10), true;
+        return $2(e13, t10), true;
     }
   }
   runRecovery(e13, t10, r10) {
     let i10 = null, o10 = false;
     for (let s10 = 0; s10 < e13.length; s10++) {
-      let l10 = e13[s10], a10 = t10[s10 << 1], c10 = t10[(s10 << 1) + 1], u10 = $q ? this.stackID(l10) + " -> " : "";
-      if (l10.deadEnd && (o10 || (o10 = true, l10.restart(), $q && console.log(u10 + this.stackID(l10) + " (restarted)"), this.advanceFully(l10, r10))))
+      let l10 = e13[s10], a10 = t10[s10 << 1], c10 = t10[(s10 << 1) + 1], u10 = $K ? this.stackID(l10) + " -> " : "";
+      if (l10.deadEnd && (o10 || (o10 = true, l10.restart(), $K && console.log(u10 + this.stackID(l10) + " (restarted)"), this.advanceFully(l10, r10))))
         continue;
       let h10 = l10.split(), f10 = u10;
-      for (let e14 = 0; h10.forceReduce() && e14 < 10 && ($q && console.log(f10 + this.stackID(h10) + " (via force-reduce)"), !this.advanceFully(h10, r10)); e14++)
-        $q && (f10 = this.stackID(h10) + " -> ");
+      for (let e14 = 0; h10.forceReduce() && e14 < 10 && ($K && console.log(f10 + this.stackID(h10) + " (via force-reduce)"), !this.advanceFully(h10, r10)); e14++)
+        $K && (f10 = this.stackID(h10) + " -> ");
       for (let e14 of l10.recoverByInsert(a10))
-        $q && console.log(u10 + this.stackID(e14) + " (via recover-insert)"), this.advanceFully(e14, r10);
-      this.stream.end > l10.pos ? (c10 == l10.pos && (c10++, a10 = 0), l10.recoverByDelete(a10, c10), $q && console.log(u10 + this.stackID(l10) + ` (via recover-delete ${this.parser.getName(a10)})`), $J(l10, r10)) : (!i10 || i10.score < l10.score) && (i10 = l10);
+        $K && console.log(u10 + this.stackID(e14) + " (via recover-insert)"), this.advanceFully(e14, r10);
+      this.stream.end > l10.pos ? (c10 == l10.pos && (c10++, a10 = 0), l10.recoverByDelete(a10, c10), $K && console.log(u10 + this.stackID(l10) + ` (via recover-delete ${this.parser.getName(a10)})`), $2(l10, r10)) : (!i10 || i10.score < l10.score) && (i10 = l10);
     }
     return i10;
   }
   stackToTree(e13) {
-    return e13.close(), LS.build({ buffer: $$.create(e13), nodeSet: this.parser.nodeSet, topID: this.topTerm, maxBufferLength: this.parser.bufferLength, reused: this.reused, start: this.ranges[0].from, length: e13.pos - this.ranges[0].from, minRepeatType: this.parser.minRepeatTerm });
+    return e13.close(), L_.build({ buffer: $H.create(e13), nodeSet: this.parser.nodeSet, topID: this.topTerm, maxBufferLength: this.parser.bufferLength, reused: this.reused, start: this.ranges[0].from, length: e13.pos - this.ranges[0].from, minRepeatType: this.parser.minRepeatTerm });
   }
   stackID(e13) {
-    let t10 = ($X || ($X = /* @__PURE__ */ new WeakMap())).get(e13);
-    return t10 || $X.set(e13, t10 = String.fromCodePoint(this.nextStackID++)), t10 + e13;
+    let t10 = ($G || ($G = /* @__PURE__ */ new WeakMap())).get(e13);
+    return t10 || $G.set(e13, t10 = String.fromCodePoint(this.nextStackID++)), t10 + e13;
   }
 }
-function $J(e13, t10) {
+function $2(e13, t10) {
   for (let r10 = 0; r10 < t10.length; r10++) {
     let i10 = t10[r10];
     if (i10.pos == e13.pos && i10.sameState(e13)) {
@@ -25811,7 +25820,7 @@ function $J(e13, t10) {
   }
   t10.push(e13);
 }
-class $Z {
+class $4 {
   constructor(e13, t10, r10) {
     this.source = e13, this.flags = t10, this.disabled = r10;
   }
@@ -25819,7 +25828,7 @@ class $Z {
     return !this.disabled || 0 == this.disabled[e13];
   }
 }
-class $0 extends LV {
+class $3 extends Lq {
   constructor(e13) {
     if (super(), this.wrappers = [], 14 != e13.version)
       throw RangeError(`Parser version (${e13.version}) doesn't match runtime version (14)`);
@@ -25836,7 +25845,7 @@ class $0 extends LV {
     if (e13.nodeProps)
       for (let t11 of e13.nodeProps) {
         let e14 = t11[0];
-        "string" == typeof e14 && (e14 = Lm[e14]);
+        "string" == typeof e14 && (e14 = Lw[e14]);
         for (let r11 = 1; r11 < t11.length; ) {
           let i11 = t11[r11++];
           if (i11 >= 0)
@@ -25849,15 +25858,15 @@ class $0 extends LV {
           }
         }
       }
-    this.nodeSet = new Lw(t10.map((t11, o11) => Lb.define({ name: o11 >= this.minRepeatTerm ? void 0 : t11, id: o11, props: i10[o11], top: r10.indexOf(o11) > -1, error: 0 == o11, skipped: e13.skippedNodes && e13.skippedNodes.indexOf(o11) > -1 }))), e13.propSources && (this.nodeSet = this.nodeSet.extend(...e13.propSources)), this.strict = false, this.bufferLength = 1024;
-    let s10 = $F(e13.tokenData);
+    this.nodeSet = new LC(t10.map((t11, o11) => LS.define({ name: o11 >= this.minRepeatTerm ? void 0 : t11, id: o11, props: i10[o11], top: r10.indexOf(o11) > -1, error: 0 == o11, skipped: e13.skippedNodes && e13.skippedNodes.indexOf(o11) > -1 }))), e13.propSources && (this.nodeSet = this.nodeSet.extend(...e13.propSources)), this.strict = false, this.bufferLength = 1024;
+    let s10 = $W(e13.tokenData);
     this.context = e13.context, this.specializerSpecs = e13.specialized || [], this.specialized = new Uint16Array(this.specializerSpecs.length);
     for (let e14 = 0; e14 < this.specializerSpecs.length; e14++)
       this.specialized[e14] = this.specializerSpecs[e14].term;
-    this.specializers = this.specializerSpecs.map($2), this.states = $F(e13.states, Uint32Array), this.data = $F(e13.stateData), this.goto = $F(e13.goto), this.maxTerm = e13.maxTerm, this.tokenizers = e13.tokenizers.map((e14) => "number" == typeof e14 ? new $W(s10, e14) : e14), this.topRules = e13.topRules, this.dialects = e13.dialects || {}, this.dynamicPrecedences = e13.dynamicPrecedences || null, this.tokenPrecTable = e13.tokenPrec, this.termNames = e13.termNames || null, this.maxNode = this.nodeSet.types.length - 1, this.dialect = this.parseDialect(), this.top = this.topRules[Object.keys(this.topRules)[0]];
+    this.specializers = this.specializerSpecs.map($8), this.states = $W(e13.states, Uint32Array), this.data = $W(e13.stateData), this.goto = $W(e13.goto), this.maxTerm = e13.maxTerm, this.tokenizers = e13.tokenizers.map((e14) => "number" == typeof e14 ? new $Q(s10, e14) : e14), this.topRules = e13.topRules, this.dialects = e13.dialects || {}, this.dynamicPrecedences = e13.dynamicPrecedences || null, this.tokenPrecTable = e13.tokenPrec, this.termNames = e13.termNames || null, this.maxNode = this.nodeSet.types.length - 1, this.dialect = this.parseDialect(), this.top = this.topRules[Object.keys(this.topRules)[0]];
   }
   createParse(e13, t10, r10) {
-    let i10 = new $G(this, e13, t10, r10);
+    let i10 = new $1(this, e13, t10, r10);
     for (let o10 of this.wrappers)
       i10 = o10(i10, e13, t10, r10);
     return i10;
@@ -25883,14 +25892,14 @@ class $0 extends LV {
       for (let o10 = this.stateSlot(e13, i10 ? 2 : 1), s10; ; o10 += 3) {
         if (65535 == (s10 = r10[o10])) {
           if (1 == r10[o10 + 1])
-            s10 = r10[o10 = $1(r10, o10 + 2)];
+            s10 = r10[o10 = $5(r10, o10 + 2)];
           else if (2 == r10[o10 + 1])
-            return $1(r10, o10 + 2);
+            return $5(r10, o10 + 2);
           else
             break;
         }
         if (s10 == t10 || 0 == s10)
-          return $1(r10, o10 + 1);
+          return $5(r10, o10 + 1);
       }
     return 0;
   }
@@ -25908,11 +25917,11 @@ class $0 extends LV {
     for (let r11 = this.stateSlot(e13, 1); null == i10; r11 += 3) {
       if (65535 == this.data[r11]) {
         if (1 == this.data[r11 + 1])
-          r11 = $1(this.data, r11 + 2);
+          r11 = $5(this.data, r11 + 2);
         else
           break;
       }
-      i10 = t10($1(this.data, r11 + 1));
+      i10 = t10($5(this.data, r11 + 1));
     }
     return i10;
   }
@@ -25921,7 +25930,7 @@ class $0 extends LV {
     for (let r10 = this.stateSlot(e13, 1); ; r10 += 3) {
       if (65535 == this.data[r10]) {
         if (1 == this.data[r10 + 1])
-          r10 = $1(this.data, r10 + 2);
+          r10 = $5(this.data, r10 + 2);
         else
           break;
       }
@@ -25933,7 +25942,7 @@ class $0 extends LV {
     return t10;
   }
   configure(e13) {
-    let t10 = Object.assign(Object.create($0.prototype), this);
+    let t10 = Object.assign(Object.create($3.prototype), this);
     if (e13.props && (t10.nodeSet = this.nodeSet.extend(...e13.props)), e13.top) {
       let r10 = this.topRules[e13.top];
       if (!r10)
@@ -25948,7 +25957,7 @@ class $0 extends LV {
       if (!o10)
         return r10;
       let s10 = Object.assign(Object.assign({}, r10), { external: o10.to });
-      return t10.specializers[i10] = $2(s10), s10;
+      return t10.specializers[i10] = $8(s10), s10;
     })), e13.contextTracker && (t10.context = e13.contextTracker), e13.dialect && (t10.dialect = this.parseDialect(e13.dialect)), null != e13.strict && (t10.strict = e13.strict), e13.wrap && (t10.wrappers = t10.wrappers.concat(e13.wrap)), null != e13.bufferLength && (t10.bufferLength = e13.bufferLength), t10;
   }
   hasWrappers() {
@@ -25979,27 +25988,27 @@ class $0 extends LV {
       if (!r10[e14])
         for (let r11 = this.dialects[t10[e14]], o10; 65535 != (o10 = this.data[r11++]); )
           (i10 || (i10 = new Uint8Array(this.maxTerm + 1)))[o10] = 1;
-    return new $Z(e13, r10, i10);
+    return new $4(e13, r10, i10);
   }
   static deserialize(e13) {
-    return new $0(e13);
+    return new $3(e13);
   }
 }
-function $1(e13, t10) {
+function $5(e13, t10) {
   return e13[t10] | e13[t10 + 1] << 16;
 }
-function $2(e13) {
+function $8(e13) {
   if (e13.external) {
     let t10 = e13.extend ? 1 : 0;
     return (r10, i10) => e13.external(r10, i10) << 1 | t10;
   }
   return e13.get;
 }
-let $4 = LQ({ PropertyName: ji.propertyName, String: ji.string, Bytes: ji.string, Number: ji.number, "True False": ji.bool, ",": ji.separator, ":": ji.separator, "[ ]": ji.squareBracket, "{ }": ji.brace }), $3 = $0.deserialize({ version: 14, states: "&`Q}QPOOOOQO'#C`'#C`O!UQPO'#C`O!^QPO'#CcO#ZQPO'#CfOOQO'#Cg'#CgOOQO'#Ch'#ChOOQO'#Ci'#CiOOQO'#Cj'#CjOOQO'#Ck'#CkOOQO'#Cl'#ClOOQO'#Cw'#CwO#bQPO'#C_OOQO'#Cm'#CmQ!aQPOOQOQPOOOOQO,58},58}O#gQPO,58}OOQO,59Q,59QO#rQPO,59QO#zQPO,58yOOQO-E6k-E6kOOQO1G.i1G.iO$RQPO1G.lO$YQPO1G.lOOQO1G.l1G.lO$bQQO'#C`O$vQPO'#CnO#zQPO1G.eO${QQO1G.eOOQO,59Z,59ZOOQO7+$W7+$WO%^QPO7+$WOOQO-E6m-E6mOOQO,59Y,59YOOQO-E6l-E6lO%eQQO7+$POOQO7+$P7+$POOQO<<Gr<<GrP!iQPO'#CoOOQO<<Gk<<Gk", stateData: "&S~OfOSgOSPOS~OUROXSOhPOmTOnUOoVOpWOqWOrXOsYO~OiQO~P]Od]XjSX~OT`OhPOiPO~OUROXSOiVOmTOnUOoVOpWOqWOrXOsYO~OWbO~P!iOjdO~OTfOhPOiPO~OWiOlgO~OijO~P]OWoO~P!iOWoOlpO~Od]Xh]Xi]XjSXt]XT]X~OjrO~OtuOdRihRiiRiTRi~OWvO~P!iOtxOdRqhRqiRqTRq~Otgqpoimrshr~", goto: "#PlPPPmsPP}PP}}}}}}}!W!b!hPPPPPPP!nX]OR^aW[OR^aTkdl_ZOSdglpwQ^OQaRTe^aQldRslQhcRqhQ_OQcSQmdUngpwRtl", nodeNames: "⚠ Comment Document Property PropertyName } { Object ] [ Array Null Number String Bytes True False", maxTerm: 36, nodeProps: [["isolate", 1, ""], ["openedBy", 5, "{", 8, "["], ["closedBy", 6, "}", 9, "]"]], propSources: [$4], skippedNodes: [0, 1], repeatNodeCount: 3, tokenData: "C|~RiXY!pYZ!{]^!{pq!prs#Stu)`wx)t|}9w!O!P:O!P!Q;[!Q![;|![!]<b!c!})`!}#O<g#P#Q<l#R#S)`#T#Y)`#Y#Z<q#Z#b)`#b#c?b#c#h)`#h#iAj#i#o)`#o#pCr#q#rCw~!uQf~XY!ppq!p~#SOtQg~~#VWpq#oqr#ors&Xs#O#o#O#P$a#P;'S#o;'S;=`&R<%lO#o~#rWpq#oqr#ors$[s#O#o#O#P$a#P;'S#o;'S;=`&R<%lO#o~$aOi~~$dXrs#o!P!Q#o#O#P#o#U#V#o#Y#Z#o#b#c#o#f#g#o#h#i#o#i#j%P~%SR!Q![%]!c!i%]#T#Z%]~%`R!Q![%i!c!i%i#T#Z%i~%lR!Q![%u!c!i%u#T#Z%u~%xR!Q![#o!c!i#o#T#Z#o~&UP;=`<%l#o~&^Pi~rs&a~&dZXY&aYZ&a]^&apq&aqr&ars'Vs#O&a#O#P'h#P;'S&a;'S;=`)Y<%lO&a~'YPrs']~'`Prs'c~'hOo~~'kXrs&a!P!Q&a#O#P&a#U#V&a#Y#Z&a#b#c&a#f#g&a#h#i&a#i#j(W~(ZR!Q![(d!c!i(d#T#Z(d~(gR!Q![(p!c!i(p#T#Z(p~(sR!Q![(|!c!i(|#T#Z(|~)PR!Q![&a!c!i&a#T#Z&a~)]P;=`<%l&a~)eTh~tu)`!Q![)`!c!})`#R#S)`#T#o)`~)wXpq*dqr*dsw*dwx-lx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~*gXpq*dqr*dsw*dwx+Sx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~+XXp~pq*dqr*dsw*dwx+Sx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~+wXrs*d!P!Q*d#O#P*d#U#V*d#Y#Z*d#b#c*d#f#g*d#h#i*d#i#j,d~,gR!Q![,p!c!i,p#T#Z,p~,sR!Q![,|!c!i,|#T#Z,|~-PR!Q![-Y!c!i-Y#T#Z-Y~-]R!Q![*d!c!i*d#T#Z*d~-iP;=`<%l*d~-qXp~pq*dqr*dsw*dwx.^x#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~.c[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx5^x#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~/[[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx0Qx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~0T[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx0yx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~0|[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx1rx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~1w[q~XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx1rx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~2pXrs/X!P!Q/X#O#P/X#U#V/X#Y#Z/X#b#c/X#f#g/X#h#i/X#i#j3]~3`R!Q![3i!c!i3i#T#Z3i~3lR!Q![3u!c!i3u#T#Z3u~3xR!Q![4R!c!i4R#T#Z4R~4UR!Q![/X!c!i/X#T#Z/X~4bP;=`<%l/X~4h[XY/XYZ/X]^/Xpq4eqr4esw4ewx5^x#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~5c[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx6Xx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~6^[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx7Sx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~7Z[q~p~XY/XYZ/X]^/Xpq4eqr4esw4ewx7Sx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~8SXrs4e!P!Q4e#O#P4e#U#V4e#Y#Z4e#b#c4e#f#g4e#h#i4e#i#j8o~8rR!Q![8{!c!i8{#T#Z8{~9OR!Q![9X!c!i9X#T#Z9X~9[R!Q![9e!c!i9e#T#Z9e~9hR!Q![4e!c!i4e#T#Z4e~9tP;=`<%l4eR:OOlPtQ~:RP!Q![:U~:ZSn~!Q![:U!g!h:g#R#S:U#X#Y:g~:jS{|:v}!O:v!Q![;P#R#S;P~:yQ!Q![;P#R#S;P~;UQn~!Q![;P#R#S;P~;_P!P!Q;b~;gTP~OY;bZ];b^;'S;b;'S;=`;v<%lO;b~;yP;=`<%l;b~<RTn~!O!P:U!Q![;|!g!h:g#R#S;|#X#Y:g~<gOj~~<lOX~~<qOW~~<vUh~tu)`!Q![)`!c!})`#R#S)`#T#U=Y#U#o)`~=_Vh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#a=t#a#o)`~=yVh~tu)`!Q![)`!c!})`#R#S)`#T#g)`#g#h>`#h#o)`~>eVh~tu)`!Q![)`!c!})`#R#S)`#T#X)`#X#Y>z#Y#o)`~?RTs~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~?gVh~tu)`!Q![)`!c!})`#R#S)`#T#i)`#i#j?|#j#o)`~@RVh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#a@h#a#o)`~@mVh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#aAS#a#o)`~AZTm~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~AoVh~tu)`!Q![)`!c!})`#R#S)`#T#f)`#f#gBU#g#o)`~BZVh~tu)`!Q![)`!c!})`#R#S)`#T#i)`#i#jBp#j#o)`~BuVh~tu)`!Q![)`!c!})`#R#S)`#T#X)`#X#YC[#Y#o)`~CcTr~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~CwOU~~C|OT~", tokenizers: [0, 1], topRules: { Document: [0, 2] }, tokenPrec: 222 }), $5 = ju.define({ name: "jsoncue", parser: $3.configure({ props: [jM.add({ Object: jD({ except: /^\s*\}/ }), Array: jD({ except: /^\s*\]/ }) }), jI.add({ "Object Array": function(e13) {
+let $6 = LJ({ PropertyName: ja.propertyName, String: ja.string, Bytes: ja.string, Number: ja.number, "True False": ja.bool, ",": ja.separator, ":": ja.separator, "[ ]": ja.squareBracket, "{ }": ja.brace }), $9 = $3.deserialize({ version: 14, states: "&`Q}QPOOOOQO'#C`'#C`O!UQPO'#C`O!^QPO'#CcO#ZQPO'#CfOOQO'#Cg'#CgOOQO'#Ch'#ChOOQO'#Ci'#CiOOQO'#Cj'#CjOOQO'#Ck'#CkOOQO'#Cl'#ClOOQO'#Cw'#CwO#bQPO'#C_OOQO'#Cm'#CmQ!aQPOOQOQPOOOOQO,58},58}O#gQPO,58}OOQO,59Q,59QO#rQPO,59QO#zQPO,58yOOQO-E6k-E6kOOQO1G.i1G.iO$RQPO1G.lO$YQPO1G.lOOQO1G.l1G.lO$bQQO'#C`O$vQPO'#CnO#zQPO1G.eO${QQO1G.eOOQO,59Z,59ZOOQO7+$W7+$WO%^QPO7+$WOOQO-E6m-E6mOOQO,59Y,59YOOQO-E6l-E6lO%eQQO7+$POOQO7+$P7+$POOQO<<Gr<<GrP!iQPO'#CoOOQO<<Gk<<Gk", stateData: "&S~OfOSgOSPOS~OUROXSOhPOmTOnUOoVOpWOqWOrXOsYO~OiQO~P]Od]XjSX~OT`OhPOiPO~OUROXSOiVOmTOnUOoVOpWOqWOrXOsYO~OWbO~P!iOjdO~OTfOhPOiPO~OWiOlgO~OijO~P]OWoO~P!iOWoOlpO~Od]Xh]Xi]XjSXt]XT]X~OjrO~OtuOdRihRiiRiTRi~OWvO~P!iOtxOdRqhRqiRqTRq~Otgqpoimrshr~", goto: "#PlPPPmsPP}PP}}}}}}}!W!b!hPPPPPPP!nX]OR^aW[OR^aTkdl_ZOSdglpwQ^OQaRTe^aQldRslQhcRqhQ_OQcSQmdUngpwRtl", nodeNames: "⚠ Comment Document Property PropertyName } { Object ] [ Array Null Number String Bytes True False", maxTerm: 36, nodeProps: [["isolate", 1, ""], ["openedBy", 5, "{", 8, "["], ["closedBy", 6, "}", 9, "]"]], propSources: [$6], skippedNodes: [0, 1], repeatNodeCount: 3, tokenData: "C|~RiXY!pYZ!{]^!{pq!prs#Stu)`wx)t|}9w!O!P:O!P!Q;[!Q![;|![!]<b!c!})`!}#O<g#P#Q<l#R#S)`#T#Y)`#Y#Z<q#Z#b)`#b#c?b#c#h)`#h#iAj#i#o)`#o#pCr#q#rCw~!uQf~XY!ppq!p~#SOtQg~~#VWpq#oqr#ors&Xs#O#o#O#P$a#P;'S#o;'S;=`&R<%lO#o~#rWpq#oqr#ors$[s#O#o#O#P$a#P;'S#o;'S;=`&R<%lO#o~$aOi~~$dXrs#o!P!Q#o#O#P#o#U#V#o#Y#Z#o#b#c#o#f#g#o#h#i#o#i#j%P~%SR!Q![%]!c!i%]#T#Z%]~%`R!Q![%i!c!i%i#T#Z%i~%lR!Q![%u!c!i%u#T#Z%u~%xR!Q![#o!c!i#o#T#Z#o~&UP;=`<%l#o~&^Pi~rs&a~&dZXY&aYZ&a]^&apq&aqr&ars'Vs#O&a#O#P'h#P;'S&a;'S;=`)Y<%lO&a~'YPrs']~'`Prs'c~'hOo~~'kXrs&a!P!Q&a#O#P&a#U#V&a#Y#Z&a#b#c&a#f#g&a#h#i&a#i#j(W~(ZR!Q![(d!c!i(d#T#Z(d~(gR!Q![(p!c!i(p#T#Z(p~(sR!Q![(|!c!i(|#T#Z(|~)PR!Q![&a!c!i&a#T#Z&a~)]P;=`<%l&a~)eTh~tu)`!Q![)`!c!})`#R#S)`#T#o)`~)wXpq*dqr*dsw*dwx-lx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~*gXpq*dqr*dsw*dwx+Sx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~+XXp~pq*dqr*dsw*dwx+Sx#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~+wXrs*d!P!Q*d#O#P*d#U#V*d#Y#Z*d#b#c*d#f#g*d#h#i*d#i#j,d~,gR!Q![,p!c!i,p#T#Z,p~,sR!Q![,|!c!i,|#T#Z,|~-PR!Q![-Y!c!i-Y#T#Z-Y~-]R!Q![*d!c!i*d#T#Z*d~-iP;=`<%l*d~-qXp~pq*dqr*dsw*dwx.^x#O*d#O#P+t#P;'S*d;'S;=`-f<%lO*d~.c[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx5^x#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~/[[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx0Qx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~0T[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx0yx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~0|[XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx1rx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~1w[q~XY/XYZ/X]^/Xpq/Xqr/Xsw/Xwx1rx#O/X#O#P2m#P;'S/X;'S;=`4_<%lO/X~2pXrs/X!P!Q/X#O#P/X#U#V/X#Y#Z/X#b#c/X#f#g/X#h#i/X#i#j3]~3`R!Q![3i!c!i3i#T#Z3i~3lR!Q![3u!c!i3u#T#Z3u~3xR!Q![4R!c!i4R#T#Z4R~4UR!Q![/X!c!i/X#T#Z/X~4bP;=`<%l/X~4h[XY/XYZ/X]^/Xpq4eqr4esw4ewx5^x#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~5c[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx6Xx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~6^[p~XY/XYZ/X]^/Xpq4eqr4esw4ewx7Sx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~7Z[q~p~XY/XYZ/X]^/Xpq4eqr4esw4ewx7Sx#O4e#O#P8P#P;'S4e;'S;=`9q<%lO4e~8SXrs4e!P!Q4e#O#P4e#U#V4e#Y#Z4e#b#c4e#f#g4e#h#i4e#i#j8o~8rR!Q![8{!c!i8{#T#Z8{~9OR!Q![9X!c!i9X#T#Z9X~9[R!Q![9e!c!i9e#T#Z9e~9hR!Q![4e!c!i4e#T#Z4e~9tP;=`<%l4eR:OOlPtQ~:RP!Q![:U~:ZSn~!Q![:U!g!h:g#R#S:U#X#Y:g~:jS{|:v}!O:v!Q![;P#R#S;P~:yQ!Q![;P#R#S;P~;UQn~!Q![;P#R#S;P~;_P!P!Q;b~;gTP~OY;bZ];b^;'S;b;'S;=`;v<%lO;b~;yP;=`<%l;b~<RTn~!O!P:U!Q![;|!g!h:g#R#S;|#X#Y:g~<gOj~~<lOX~~<qOW~~<vUh~tu)`!Q![)`!c!})`#R#S)`#T#U=Y#U#o)`~=_Vh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#a=t#a#o)`~=yVh~tu)`!Q![)`!c!})`#R#S)`#T#g)`#g#h>`#h#o)`~>eVh~tu)`!Q![)`!c!})`#R#S)`#T#X)`#X#Y>z#Y#o)`~?RTs~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~?gVh~tu)`!Q![)`!c!})`#R#S)`#T#i)`#i#j?|#j#o)`~@RVh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#a@h#a#o)`~@mVh~tu)`!Q![)`!c!})`#R#S)`#T#`)`#`#aAS#a#o)`~AZTm~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~AoVh~tu)`!Q![)`!c!})`#R#S)`#T#f)`#f#gBU#g#o)`~BZVh~tu)`!Q![)`!c!})`#R#S)`#T#i)`#i#jBp#j#o)`~BuVh~tu)`!Q![)`!c!})`#R#S)`#T#X)`#X#YC[#Y#o)`~CcTr~h~tu)`!Q![)`!c!})`#R#S)`#T#o)`~CwOU~~C|OT~", tokenizers: [0, 1], topRules: { Document: [0, 2] }, tokenPrec: 222 }), $7 = jp.define({ name: "jsoncue", parser: $9.configure({ props: [jD.add({ Object: jj({ except: /^\s*\}/ }), Array: jj({ except: /^\s*\]/ }) }), jB.add({ "Object Array": function(e13) {
   let t10 = e13.firstChild, r10 = e13.lastChild;
   return t10 && t10.to < r10.from ? { from: t10.to, to: r10.type.isError ? e13.to : r10.from } : null;
 } })] }), languageData: { closeBrackets: { brackets: ["[", "{", '"""', "'''", '"', "'"] }, indentOnInput: /^\s*[\}\]]$/ } });
-const _$8 = class _$8 {
+const _Fe = class _Fe {
   constructor(e13, t10) {
     this.tree = e13, this.code = t10;
   }
@@ -26010,25 +26019,25 @@ const _$8 = class _$8 {
     return this.tree.topNode;
   }
 };
-__publicField(_$8, "parse", (e13) => new _$8($3.parse(e13), e13));
-let $8 = _$8;
-let $6 = class extends Error {
+__publicField(_Fe, "parse", (e13) => new _Fe($9.parse(e13), e13));
+let Fe = _Fe;
+let Ft = class extends Error {
   constructor(e13, t10, r10 = "") {
-    let i10 = Py.create({ doc: e13.sliceDoc(0) }), o10 = i10.doc.lineAt(t10.from), s10 = `${o10.number} | `;
+    let i10 = Pk.create({ doc: e13.sliceDoc(0) }), o10 = i10.doc.lineAt(t10.from), s10 = `${o10.number} | `;
     super(`SyntaxError${r10 ? `: ${r10}` : ""}
 ${s10}${i10.sliceDoc(o10.from, o10.to)}        
 ${Array(s10.length + (t10.from - o10.from - 1)).fill(" ").join("")} ^ at position ${t10.from}        
 `), this.source = e13, this.node = t10, this.reason = r10;
   }
-}, $9 = Array.isArray;
-function $7(e13) {
+}, Fn = Array.isArray;
+function Fr(e13) {
   return !!e13 && e13.constructor === Object;
 }
-let Fe = (e13) => "string" == typeof e13 || e13 instanceof String;
-function Ft(e13) {
+let Fi = (e13) => "string" == typeof e13 || e13 instanceof String;
+function Fo(e13) {
   return void 0 === e13;
 }
-class Fn {
+class Fs {
   constructor() {
     __privateAdd(this, _s2, []);
     __privateAdd(this, _l2, 0);
@@ -26058,74 +26067,74 @@ class Fn {
 }
 _s2 = new WeakMap();
 _l2 = new WeakMap();
-function* Fr(e13) {
+function* Fl(e13) {
   for (let t10 = e13.firstChild; null != t10; t10 = t10.nextSibling)
     yield t10;
 }
-let Fi = function(e13, t10) {
+let Fa = function(e13, t10) {
   let r10 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-  return Fo(e13, t10, [], r10);
-}, Fo = (e13, t10, r10, i10) => {
+  return Fc(e13, t10, [], r10);
+}, Fc = (e13, t10, r10, i10) => {
   if (!t10)
     return null;
   switch (i10.onValueNode && i10.onValueNode(t10, r10), t10.type.id) {
     case 2:
       let o10;
-      for (let s11 of Fr(t10))
+      for (let s11 of Fl(t10))
         if (!s11.type.is(1)) {
           if (s11.type.is(3)) {
             o10 || (o10 = {});
-            let [t11, l11] = Fc(e13, s11), a11 = Fu(e13, t11);
-            Fh(o10, a11, Fo(e13, l11, [...r10, ...a11], i10));
+            let [t11, l11] = Fd(e13, s11), a11 = Fp(e13, t11);
+            Fg(o10, a11, Fc(e13, l11, [...r10, ...a11], i10));
           } else {
             if (o10) {
               if (i10.invalidValueAsUndefined)
                 return;
-              throw new $6(e13, s11, "Property / Value could not in same scope");
+              throw new Ft(e13, s11, "Property / Value could not in same scope");
             }
-            return Fo(e13, s11, r10, i10);
+            return Fc(e13, s11, r10, i10);
           }
         }
       return o10;
     case 7:
       let s10 = {};
-      for (let o11 of Fr(t10))
+      for (let o11 of Fl(t10))
         if (!o11.type.is(1) && o11.type.is(3)) {
-          let [t11, l11] = Fc(e13, o11), a11 = Fu(e13, t11);
-          Fh(s10, a11, Fo(e13, l11, [...r10, ...a11], i10));
+          let [t11, l11] = Fd(e13, o11), a11 = Fp(e13, t11);
+          Fg(s10, a11, Fc(e13, l11, [...r10, ...a11], i10));
         }
       return s10;
     case 10:
       let l10 = [];
-      for (let o11 of Fr(t10)) {
+      for (let o11 of Fl(t10)) {
         if ("[" == o11.name || "]" == o11.name)
           continue;
-        let t11 = Fo(e13, o11, [...r10, l10.length], i10);
+        let t11 = Fc(e13, o11, [...r10, l10.length], i10);
         l10.push(t11);
       }
       return l10;
     case 14:
       if (t10.firstChild)
-        throw new $6(e13, t10, "invalid bytes");
+        throw new Ft(e13, t10, "invalid bytes");
       let a10 = e13.sliceDoc(t10.from, t10.to);
       if (a10.startsWith("'''"))
-        return Fs(Fa(a10.substring(3, a10.length - 3)));
-      return Fs(JSON.parse(a10.replaceAll("'", '"')));
+        return Fu(Ff(a10.substring(3, a10.length - 3)));
+      return Fu(JSON.parse(a10.replaceAll("'", '"')));
     case 13:
       if (t10.firstChild) {
         if (i10.invalidValueAsUndefined)
           return;
-        throw new $6(e13, t10, "invalid string");
+        throw new Ft(e13, t10, "invalid string");
       }
       let c10 = e13.sliceDoc(t10.from, t10.to);
       if (c10.startsWith('"""'))
-        return Fa(c10.substring(3, c10.length - 3));
+        return Ff(c10.substring(3, c10.length - 3));
       return JSON.parse(c10);
     case 12:
       if (t10.firstChild) {
         if (i10.invalidValueAsUndefined)
           return;
-        throw new $6(e13, t10, "invalid number");
+        throw new Ft(e13, t10, "invalid number");
       }
       return parseFloat(e13.sliceDoc(t10.from, t10.to));
     case 15:
@@ -26137,40 +26146,40 @@ let Fi = function(e13, t10) {
     default:
       if (i10.invalidValueAsUndefined)
         return;
-      throw new $6(e13, t10);
+      throw new Ft(e13, t10);
   }
 };
-function Fs(e13) {
-  return new Fl(new TextEncoder().encode(e13));
+function Fu(e13) {
+  return new Fh(new TextEncoder().encode(e13));
 }
-class Fl extends Uint8Array {
+class Fh extends Uint8Array {
   toJSON() {
     return btoa(new TextDecoder().decode(this));
   }
 }
-function Fa(e13) {
+function Ff(e13) {
   let t10 = e13.match(/^(([\n\r]+)[\t ]+)/);
   return t10 ? e13.replaceAll(t10[1], t10[2]).trimStart() : e13;
 }
-function Fc(e13, t10) {
+function Fd(e13, t10) {
   let r10;
   let i10 = [];
-  for (let o10 of Fr(t10)) {
+  for (let o10 of Fl(t10)) {
     if (o10.type.is(4)) {
       i10.push(o10);
       continue;
     }
-    if (!Ft(r10))
-      throw new $6(e13, o10, "Property must only one value");
+    if (!Fo(r10))
+      throw new Ft(e13, o10, "Property must only one value");
     r10 = o10;
   }
   if (0 == i10.length)
-    throw new $6(e13, t10, "Property must have at least one PropertyName");
-  if (Ft(r10))
-    throw new $6(e13, t10, "Property must at least one value");
+    throw new Ft(e13, t10, "Property must have at least one PropertyName");
+  if (Fo(r10))
+    throw new Ft(e13, t10, "Property must at least one value");
   return [i10, r10];
 }
-function Fu(e13, t10) {
+function Fp(e13, t10) {
   return t10.map((t11) => function(e14) {
     try {
       return JSON.parse(e14);
@@ -26179,7 +26188,7 @@ function Fu(e13, t10) {
     }
   }(e13.sliceDoc(t11.from, t11.to)));
 }
-function Fh(e13, t10, r10) {
+function Fg(e13, t10, r10) {
   if (0 === t10.length)
     return;
   if (1 === t10.length) {
@@ -26187,46 +26196,46 @@ function Fh(e13, t10, r10) {
     return;
   }
   let [i10, ...o10] = t10;
-  if (Ft(e13[i10]))
+  if (Fo(e13[i10]))
     e13[i10] = {};
-  else if (!$7(e13[i10]))
+  else if (!Fr(e13[i10]))
     throw Error(`o[${i10}] already have non-object value`);
-  return Fh(e13[i10], o10, r10);
+  return Fg(e13[i10], o10, r10);
 }
-class Ff {
+class Fm {
   constructor() {
     __privateAdd(this, _c2);
-    __privateAdd(this, _a2, new Fn());
+    __privateAdd(this, _a2, new Fs());
   }
   toString() {
     return __privateGet(this, _a2).toString();
   }
   print(e13) {
-    if ($9(e13)) {
+    if (Fn(e13)) {
       if (0 == e13.length) {
         __privateGet(this, _a2).write("[]");
         return;
       }
       __privateGet(this, _a2).write("["), __privateGet(this, _a2).break(), __privateGet(this, _a2).withIdent(() => {
         for (let t10 of e13)
-          Fp(t10) && (__privateGet(this, _a2).tab(), this.print(t10), __privateGet(this, _a2).write(","), __privateGet(this, _a2).break());
+          Fy(t10) && (__privateGet(this, _a2).tab(), this.print(t10), __privateGet(this, _a2).write(","), __privateGet(this, _a2).break());
       }), __privateGet(this, _a2).tab(), __privateGet(this, _a2).write("]");
       return;
     }
-    if ($7(e13)) {
+    if (Fr(e13)) {
       let t10 = Object.entries(e13).filter((e14) => {
         let [t11, r11] = e14;
-        return Fp(r11);
+        return Fy(r11);
       });
       if (0 == t10.length && __privateGet(this, _a2).write("{}"), 1 == t10.length) {
         let [e14, r11] = t10[0];
-        __privateGet(this, _a2).write(Fd(e14)), __privateGet(this, _a2).write(": "), this.print(r11);
+        __privateGet(this, _a2).write(Fv(e14)), __privateGet(this, _a2).write(": "), this.print(r11);
         return;
       }
       let r10 = () => {
         let e14 = {}, r11 = 0;
         for (let [i10, o10] of t10) {
-          e14[i10] = Fd(i10);
+          e14[i10] = Fv(i10);
           let t11 = e14[i10].length;
           t11 > r11 && (r11 = t11);
         }
@@ -26244,27 +26253,27 @@ class Ff {
       }), __privateGet(this, _a2).tab(), __privateGet(this, _a2).write("}");
       return;
     }
-    if (Fe(e13)) {
+    if (Fi(e13)) {
       if (!("" == e13 || /^[0-9]+$/.test(e13)) && function(e14) {
         let t10 = e14.length;
-        if (t10 % 4 != 0 || Fv.test(e14))
+        if (t10 % 4 != 0 || Fx.test(e14))
           return false;
         let r10 = e14.indexOf("=");
         return -1 === r10 || r10 === t10 - 1 || r10 === t10 - 2 && "=" === e14[t10 - 1];
       }(e13)) {
         let t10 = atob(e13);
-        if (Fg(t10)) {
+        if (Fb(t10)) {
           __privateMethod(this, _c2, c_fn).call(this, t10, "'''");
           return;
         }
-        __privateGet(this, _a2).write(Fm(t10, "'"));
+        __privateGet(this, _a2).write(Fw(t10, "'"));
         return;
       }
-      if (Fg(e13)) {
+      if (Fb(e13)) {
         __privateMethod(this, _c2, c_fn).call(this, e13, '"""');
         return;
       }
-      __privateGet(this, _a2).write(Fm(e13, '"'));
+      __privateGet(this, _a2).write(Fw(e13, '"'));
       return;
     }
     __privateGet(this, _a2).write(JSON.stringify(e13));
@@ -26291,59 +26300,59 @@ c_fn = function(e13, t10) {
     __privateGet(this, _a2).tab(), __privateGet(this, _a2).write(t10);
   });
 };
-function Fd(e13) {
+function Fv(e13) {
   return /[_$A-Za-z0-9]+/.test(e13) ? e13 : JSON.stringify(e13);
 }
-function Fp(e13) {
-  return !(Ft(e13) || e13 && e13.constructor && e13.call && e13.apply);
+function Fy(e13) {
+  return !(Fo(e13) || e13 && e13.constructor && e13.call && e13.apply);
 }
-function Fg(e13) {
+function Fb(e13) {
   return /[\r\n]/.test(e13);
 }
-function Fm(e13, t10) {
+function Fw(e13, t10) {
   return `${t10}${e13.split("").map((e14) => e14 == t10 ? "\\" + t10 : e14).join("")}${t10}`;
 }
-let Fv = /[^A-Z0-9+\/=]/i;
-class Fy {
+let Fx = /[^A-Z0-9+\/=]/i;
+class Fk {
   static parse(e13) {
-    let t10 = $8.parse(e13);
-    return Fi(t10, t10.topNode);
+    let t10 = Fe.parse(e13);
+    return Fa(t10, t10.topNode);
   }
   static stringify(e13) {
     return function(e14) {
-      let t10 = new Ff();
+      let t10 = new Fm();
       return t10.print(e14), t10.toString();
     }(e13);
   }
   static asBytes(e13) {
-    return Fs(e13);
+    return Fu(e13);
   }
   static stringifyPropertyName(e13) {
-    return Fd(e13);
+    return Fv(e13);
   }
 }
-let Fb = (e13, t10) => {
-  let r10 = jh(e13).topNode;
+let FS = (e13, t10) => {
+  let r10 = jg(e13).topNode;
   t10 > 0 && e13.sliceDoc(t10 - 1, t10).endsWith("\n") && (t10 += 1);
   let i10 = function(r11) {
     let o10 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     switch (r11.type.id) {
       case 2:
         let s10 = false;
-        for (let l11 of Fr(r11))
+        for (let l11 of Fl(r11))
           if (!l11.type.is(1)) {
             if (l11.type.is(3)) {
               if (s10 = true, l11.from <= t10 && t10 <= l11.to) {
                 let t11;
                 let r12 = [];
-                for (let e14 of Fr(l11)) {
+                for (let e14 of Fl(l11)) {
                   if (e14.type.is(4)) {
                     r12.push(e14);
                     continue;
                   }
                   t11 = e14;
                 }
-                let s11 = [...o10, ...Fu(e13, r12)];
+                let s11 = [...o10, ...Fp(e13, r12)];
                 if (t11)
                   return i10(t11, s11);
                 return { path: s11, node: l11 };
@@ -26355,18 +26364,18 @@ let Fb = (e13, t10) => {
           }
         break;
       case 7:
-        for (let s11 of Fr(r11))
+        for (let s11 of Fl(r11))
           if (!s11.type.is(1) && s11.type.is(3) && s11.from <= t10 && t10 <= s11.to) {
             let t11;
             let r12 = [];
-            for (let e14 of Fr(s11)) {
+            for (let e14 of Fl(s11)) {
               if (e14.type.is(4)) {
                 r12.push(e14);
                 continue;
               }
               t11 = e14;
             }
-            let l11 = [...o10, ...Fu(e13, r12)];
+            let l11 = [...o10, ...Fp(e13, r12)];
             if (t11)
               return i10(t11, l11);
             return { path: l11, node: s11 };
@@ -26374,7 +26383,7 @@ let Fb = (e13, t10) => {
         break;
       case 10:
         let l10 = 0;
-        for (let e14 of Fr(r11))
+        for (let e14 of Fl(r11))
           if (!("[" == e14.name || "]" == e14.name)) {
             if (e14.from <= t10 && t10 <= e14.to)
               return i10(e14, [...o10, l10]);
@@ -26383,9 +26392,9 @@ let Fb = (e13, t10) => {
     }
     return { node: r11, path: o10 };
   };
-  return { ...i10(r10), root: r10, values: Fi(e13, r10, { invalidValueAsUndefined: true }) };
+  return { ...i10(r10), root: r10, values: Fa(e13, r10, { invalidValueAsUndefined: true }) };
 };
-function Fw(e13) {
+function FC(e13) {
   switch (e13.type) {
     case "object":
     case "record":
@@ -26399,7 +26408,7 @@ function Fw(e13) {
   }
   return "${}";
 }
-function Fx(e13) {
+function FO(e13) {
   switch (e13.type) {
     case "object":
     case "record":
@@ -26413,16 +26422,16 @@ function Fx(e13) {
   }
   return "";
 }
-class Fk {
+class FA {
   static parse(e13) {
     if ("" === e13)
       return [];
     if ("/" !== e13.charAt(0))
       throw Error("Invalid JSON pointer: " + e13);
-    return e13.substring(1).split(/\//).map(Fk.unescape);
+    return e13.substring(1).split(/\//).map(FA.unescape);
   }
   static compile(e13) {
-    return 0 === e13.length ? "" : "/" + e13.map(Fk.escape).join("/");
+    return 0 === e13.length ? "" : "/" + e13.map(FA.escape).join("/");
   }
   static unescape(e13) {
     return e13.replace(/~1/g, "/").replace(/~0/g, "~");
@@ -26431,36 +26440,36 @@ class Fk {
     return e13.toString().replace(/~/g, "~0").replace(/\//g, "~1");
   }
 }
-let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
+let F_ = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
   var r10;
-  let {} = t10, i10 = S6.use(), o10 = $E(S1(e13.field$.input) ? "" : Fy.stringify(e13.field$.input)), s10 = mn.decode(null !== (r10 = e13.field$.meta.rawSchema) && void 0 !== r10 ? r10 : {}, (e14) => {
+  let {} = t10, i10 = S6.use(), o10 = $L(S1(e13.field$.input) ? "" : Fk.stringify(e13.field$.input)), s10 = mn.decode(null !== (r10 = e13.field$.meta.rawSchema) && void 0 !== r10 ? r10 : {}, (e14) => {
     var t11;
     return [null !== (t11 = i10.schema(e14)) && void 0 !== t11 ? t11 : {}, mt(e14)];
   });
-  return e13.field$.optional && (s10 = s10.optional()), () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($D, { value: o10, children: bw(FC, { field$: e13.field$, schema: s10 }) }) });
-}), FC = b_({ field$: pP(), schema: pP() }, (e13) => {
-  let t10 = $D.use();
+  return e13.field$.optional && (s10 = s10.optional()), () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($j, { value: o10, children: bw(FM, { field$: e13.field$, schema: s10 }) }) });
+}), FM = b_({ field$: pP(), schema: pP() }, (e13) => {
+  let t10 = $j.use();
   return yI(e13.schema$, bP((e14) => t10.use(() => {
     var t11;
-    return t11 = e14, [new jx($5), function() {
+    return t11 = e14, [new jO($7), function() {
       let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return [NQ, NF, NC.of(e15), Nq, Bv, NY];
+      return [NJ, NW, NM.of(e15), NK, Bx, NZ];
     }({ override: [/* @__PURE__ */ function(e15) {
       let t12 = (t13, r10) => {
-        let i10 = Fb(t13, r10), o10 = function e16(t14, r11, i11) {
+        let i10 = FS(t13, r10), o10 = function e16(t14, r11, i11) {
           let o11 = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dY;
           switch (t14.type) {
             case "array":
               if (0 === i11.length)
                 break;
               let s10 = i11[0];
-              if (Ft(r11) && (r11 = []), !function(e17) {
+              if (Fo(r11) && (r11 = []), !function(e17) {
                 try {
                   return Number(e17) === e17;
                 } catch {
                   return false;
                 }
-              }(s10) || !$9(r11))
+              }(s10) || !Fn(r11))
                 return;
               for (let [l11, a10, c10] of t14.entries(Array(s10 + 1), o11))
                 if (l11 == s10) {
@@ -26471,7 +26480,7 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
             case "union":
             case "record":
             case "object":
-              if (Ft(r11) && (r11 = {}), !$7(r11))
+              if (Fo(r11) && (r11 = {}), !Fr(r11))
                 return;
               let l10 = {};
               for (let [s11, a10, c10] of t14.entries(r11, o11)) {
@@ -26493,17 +26502,17 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
             case "array":
               if (t14.type.is(10)) {
                 let t15 = e16.getSchema("items");
-                l10.push(Be(Fw(t15), { label: Fx(t15) }));
+                l10.push(Bi(FC(t15), { label: FO(t15) }));
                 break;
               }
-              l10.push(Be(Fw(e16), { label: Fx(e16) }));
+              l10.push(Bi(FC(e16), { label: FO(e16) }));
               break;
             case "union":
             case "record":
             case "object":
               for (let [t15, s11, a10] of e16.entries({}, dY)) {
                 let e17 = String(t15), s12 = { label: e17, info: null !== (o11 = null === (i11 = a10.getMeta("description")) || void 0 === i11 ? void 0 : null === (r11 = i11.split("\n")) || void 0 === r11 ? void 0 : r11[0]) && void 0 !== o11 ? o11 : "" };
-                l10.push(Be(`${Fy.stringifyPropertyName(e17)}: ${Fw(a10)}`, s12));
+                l10.push(Bi(`${Fk.stringifyPropertyName(e17)}: ${FC(a10)}`, s12));
               }
               break;
             case "boolean":
@@ -26520,15 +26529,15 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
         let r10 = e16.matchBefore(/\w+/);
         return e16.explicit || r10 ? { from: (null == r10 ? void 0 : r10.text) ? null == r10 ? void 0 : r10.from : e16.pos, options: t12(e16.state, e16.pos), filter: true } : null;
       };
-    }(t11)] }), RY.of([{ key: "Shift-Space", shift: NW }]), function(e15) {
+    }(t11)] }), RZ.of([{ key: "Shift-Space", shift: NQ }]), function(e15) {
       let t12 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return [I5.of({ source: e15, config: t12 }), I3, Lf];
+      return [I7.of({ source: e15, config: t12 }), I9, Lm];
     }((e15) => {
-      let r10 = jh(e15.state).topNode, i10 = [...function* e16(t12) {
+      let r10 = jg(e15.state).topNode, i10 = [...function* e16(t12) {
         yield t12;
         for (let r11 = t12.firstChild; null != r11; r11 = r11.nextSibling)
           yield* e16(r11);
-      }(jh(e15.state).topNode)].filter((e16) => e16.type.isError);
+      }(jg(e15.state).topNode)].filter((e16) => e16.type.isError);
       if (i10.length > 0)
         return i10.map((e16) => ({ severity: "error", from: e16.from, to: e16.to, message: function(e17) {
           if (e17.parent) {
@@ -26547,9 +26556,9 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
           }
           return "Syntax Error";
         }(e16) }));
-      let o10 = {}, s10 = Fi(e15.state, r10, { onValueNode: (e16, t12) => {
+      let o10 = {}, s10 = Fa(e15.state, r10, { onValueNode: (e16, t12) => {
         var r11;
-        let i11 = Fk.compile(t12);
+        let i11 = FA.compile(t12);
         o10[i11] = [...null !== (r11 = o10[i11]) && void 0 !== r11 ? r11 : [], e16];
       }, invalidValueAsUndefined: true }), [l10] = t11.validate(s10);
       if (!l10)
@@ -26558,26 +26567,26 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
       for (let e16 of l10.failures()) {
         var c10;
         if ("never" !== e16.type)
-          for (let t12 of null !== (c10 = o10[Fk.compile(e16.path)]) && void 0 !== c10 ? c10 : [])
+          for (let t12 of null !== (c10 = o10[FA.compile(e16.path)]) && void 0 !== c10 ? c10 : [])
             a10.push({ severity: "error", from: t12.from, to: t12.to, message: e16.message });
       }
       return a10;
-    }), RY.of([$P])];
-  })), bx()), $R(() => Rz.updateListener.of((t11) => {
+    }), RZ.of([$I])];
+  })), bx()), $N(() => RU.updateListener.of((t11) => {
     if (t11.focusChanged) {
-      I8(t11.view), e13.field$.next((e14) => {
-        e14.error = 0 == IZ(t11.state) ? null : ["配置有误"];
+      Le(t11.view), e13.field$.next((e14) => {
+        e14.error = 0 == I4(t11.state) ? null : ["配置有误"];
       });
       return;
     }
     if (t11.docChanged) {
-      if (I8(t11.view), IZ(t11.state) > 0)
+      if (Le(t11.view), I4(t11.state) > 0)
         e13.field$.next((e14) => {
           e14.error = ["配置有误"];
         });
       else
         try {
-          let r10 = t11.state.doc.sliceString(0), i10 = Fy.parse(r10);
+          let r10 = t11.state.doc.sliceString(0), i10 = Fk.parse(r10);
           e13.field$.update(i10), e13.field$.next((e14) => {
             e14.error = null;
           });
@@ -26587,14 +26596,14 @@ let FS = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
           });
         }
     }
-  })), () => bw($I, {});
-}), FO = Object.assign(FS, { displayName: "JSONCueEditorInput" }), FA = () => ({ "User-Agent": navigator.userAgent, Origin: location.origin, Referer: `${location.origin}${location.pathname}` }), F_ = (e13) => {
+  })), () => bw($B, {});
+}), FT = Object.assign(F_, { displayName: "JSONCueEditorInput" }), FP = () => ({ "User-Agent": navigator.userAgent, Origin: location.origin, Referer: `${location.origin}${location.pathname}` }), FE = (e13) => {
   let { field: t10, value: r10 } = e13;
   return bb(k5, { component: "span", sx: { display: "block" }, children: [bb(k5, { component: "span", sx: { fontWeight: "bold", marginRight: "0.5em" }, children: [t10, ":"] }), bw("span", { children: r10 })] });
-}, FM = (e13) => {
+}, FD = (e13) => {
   let { method: t10, url: r10, params: i10 } = e13, o10 = bB(i10);
   return bb(k5, { component: "span", sx: { fontWeight: "bold" }, children: [t10.toUpperCase(), " ", bb(k5, { component: "span", sx: { fontWeight: "medium" }, children: [r10, o10 ? `?${o10}` : ""] }), "  HTTP/*"] });
-}, FT = (e13, t10) => {
+}, FR = (e13, t10) => {
   let r10 = (t11, i10) => i10 instanceof File || i10 instanceof Blob ? `${e13}
 Content-Disposition: form-data; name="${t11}"${i10.name ? `; filename="${i10.name}"` : ""}
 Content-Type: ${i10.type}
@@ -26609,65 +26618,65 @@ ${r3(i10) ? JSON.stringify(i10) : String(i10)}
     let [t11, i10] = e14;
     return r10(t11, i10);
   }).join("\n") + `${e13}--`;
-}, FP = md({ $default: pP().optional() }, (e13, t10) => {
+}, FI = md({ $default: pP().optional() }, (e13, t10) => {
   let {} = e13, { slots: r10 } = t10;
   return () => {
     var e14;
     return bw(k5, { sx: { containerStyle: "sys.surface-container", rounded: "xs", width: "100%", overflow: "auto", py: 4, px: 8 }, children: bw(k5, { component: "pre", sx: { padding: 4, margin: 0, textStyle: "sys.body-small", fontFamily: "code" }, children: bw("code", { children: null === (e14 = r10.default) || void 0 === e14 ? void 0 : e14.call(r10) }) }) });
   };
-}), FE = md({ request: pP() }, (e13) => () => {
+}), FL = md({ request: pP() }, (e13) => () => {
   let t10 = e13.request;
-  return bb(FP, { children: [bw(FM, { ...t10 }), bw(fY, { children: Object.entries({ ...FA(), ...t10.headers }).toSorted().map((e14) => {
+  return bb(FI, { children: [bw(FD, { ...t10 }), bw(fY, { children: Object.entries({ ...FP(), ...t10.headers }).toSorted().map((e14) => {
     let [t11, r10] = e14;
-    return bw(F_, { field: t11, value: r10 }, t11);
+    return bw(FE, { field: t11, value: r10 }, t11);
   }) }), t10.body && bb(fY, { children: [bw("br", {}), function(e14) {
-    if (FL(e14.headers).includes("multipart/form-data")) {
+    if (F$(e14.headers).includes("multipart/form-data")) {
       let t11 = "----WebKitFormBoundaryfakefakefakefakefakefakefakefakefake";
-      return e14.headers = { ...e14.headers, "Content-Type": `multipart/form-data; boundary=${t11}` }, FT(t11, e14.body);
+      return e14.headers = { ...e14.headers, "Content-Type": `multipart/form-data; boundary=${t11}` }, FR(t11, e14.body);
     }
-    return FL(e14.headers).includes("application/x-www-form-urlencoded") ? bB(e14.body) : Fj(e14.headers) ? JSON.stringify(e14.body, null, 2) : e14.body;
+    return F$(e14.headers).includes("application/x-www-form-urlencoded") ? bB(e14.body) : FF(e14.headers) ? JSON.stringify(e14.body, null, 2) : e14.body;
   }(t10)] })] });
-}), FD = (e13) => Buffer.from(e13).toString("utf8"), FR = (e13, t10) => {
+}), Fj = (e13) => Buffer.from(e13).toString("utf8"), FN = (e13, t10) => {
   let r10 = new Uint8Array(e13), i10 = "";
   for (let e14 = r10.byteLength, t11 = 0; t11 < e14; t11++)
     i10 += String.fromCharCode(r10[t11]);
   return `data:${t10};base64,${btoa(i10)}`;
-}, FI = md({ response: pP() }, (e13, t10) => {
+}, FB = md({ response: pP() }, (e13, t10) => {
   let {} = t10;
   return () => {
     let t11 = e13.response;
-    return FL(t11.headers).includes("image/") ? bw("div", { children: bw("img", { src: FR(t11.body, FL(t11.headers)), alt: "" }) }) : bb(FP, { children: [bb("span", { children: ["HTTP/* ", t11.status] }), bw("br", {}), t11.headers && bw(fY, { children: Object.entries(t11.headers).map((e14) => {
+    return F$(t11.headers).includes("image/") ? bw("div", { children: bw("img", { src: FN(t11.body, F$(t11.headers)), alt: "" }) }) : bb(FI, { children: [bb("span", { children: ["HTTP/* ", t11.status] }), bw("br", {}), t11.headers && bw(fY, { children: Object.entries(t11.headers).map((e14) => {
       let [t12, r10] = e14;
-      return bw(F_, { field: t12, value: r10 }, t12);
-    }) }), bw("br", {}), t11.body ? Fj(t11.headers) ? JSON.stringify(t11.body, null, 2) : `${FD(t11.body)}` : null] });
+      return bw(FE, { field: t12, value: r10 }, t12);
+    }) }), bw("br", {}), t11.body ? FF(t11.headers) ? JSON.stringify(t11.body, null, 2) : `${Fj(t11.body)}` : null] });
   };
 });
-function FL() {
+function F$() {
   let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   for (let [t10, r10] of Object.entries(e13))
     if ("content-type" == t10.toLowerCase())
       return r10;
   return "";
 }
-let Fj = (e13) => FL(e13).includes("application/json"), FN = Object.assign(FE, { displayName: "HttpRequest" }), FB = Object.assign(FI, { displayName: "HTTPResponse" }), F$ = b_({ operationID: pm() }, (e13) => yI(S6.use().response$(e13.operationID), bS((e14) => bw(FF, { children: bw(FB, { response: e14 }) })))), FF = k6("section")({ maxHeight: "40vh", overflow: "auto" }), Fz = Object.assign(F$, { displayName: "ResponsePreview" });
-function FV(e13) {
+let FF = (e13) => F$(e13).includes("application/json"), Fz = Object.assign(FL, { displayName: "HttpRequest" }), FV = Object.assign(FB, { displayName: "HTTPResponse" }), FH = b_({ operationID: pm() }, (e13) => yI(S6.use().response$(e13.operationID), bS((e14) => bw(FW, { children: bw(FV, { response: e14 }) })))), FW = k6("section")({ maxHeight: "40vh", overflow: "auto" }), FU = Object.assign(FH, { displayName: "ResponsePreview" });
+function Fq(e13) {
   return (t10) => dJ.of(t10, { $meta: { rawSchema: e13 } });
 }
-let FH = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
+let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
   var r10, i10, o10;
   let { slots: s10 } = t10, l10 = S6.use(), a10 = {};
   for (let t11 of null !== (r10 = e13.operation.parameters) && void 0 !== r10 ? r10 : []) {
-    let e14 = pP().use(M3(`${t11.name}, in=${JSON.stringify(t11.in)}`), FV(t11.schema));
-    ["object", "array"].includes(null !== (i10 = t11.schema.type) && void 0 !== i10 ? i10 : "") ? a10[t11.name] = e14.use(M5(FO)) : a10[t11.name] = e14;
+    let e14 = pP().use(M6(`${t11.name}, in=${JSON.stringify(t11.in)}`), Fq(t11.schema));
+    ["object", "array"].includes(null !== (i10 = t11.schema.type) && void 0 !== i10 ? i10 : "") ? a10[t11.name] = e14.use(M9(FT)) : a10[t11.name] = e14;
   }
   if (e13.operation.requestBody) {
     let t11 = Object.entries(null !== (o10 = e13.operation.requestBody.content) && void 0 !== o10 ? o10 : {})[0];
     if (t11) {
-      let [e14, r11] = t11, i11 = pP().use(M3(`body, content-type = ${JSON.stringify(e14)}`), FV(r11.schema));
-      e14.includes("json") ? a10.body = i11.use(M5(FO)) : a10.body = i11;
+      let [e14, r11] = t11, i11 = pP().use(M6(`body, content-type = ${JSON.stringify(e14)}`), Fq(r11.schema));
+      e14.includes("json") ? a10.body = i11.use(M9(FT)) : e14.includes("octet-stream") ? a10.body = i11.use(M9(FZ)) : a10.body = i11;
     }
   }
-  let c10 = fw(va), u10 = fw(vc), h10 = M2.of(pS(a10), (() => {
+  let c10 = fw(va), u10 = fw(vc), h10 = M5.of(pS(a10), (() => {
     try {
       var e14;
       let t11 = u10.query.params;
@@ -26683,29 +26692,42 @@ let FH = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
   }), bx());
   let f10 = yI(h10.inputs$, bS((t11) => {
     let r11 = l10.asRequestConfigCreator(e13.operation.operationId);
-    return r11 ? bw(FN, { request: r11(t11) }) : null;
+    return r11 ? bw(Fz, { request: r11(t11) }) : null;
   }));
   return () => {
     var t11;
     return bb(k5, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e14) => {
       e14.preventDefault(), h10.submit();
-    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...h10.fields(h10.typedef)].map((e14) => bw(FW, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [f10, bw(k5, { sx: { px: 8 }, children: bw(Te, { type: "submit", children: "发起请求" }) }), bw(Fz, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = s10.default) || void 0 === t11 ? void 0 : t11.call(s10) })] }) })] }, e13.operation.operationId);
+    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...h10.fields(h10.typedef)].map((e14) => bw(FQ, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [f10, bw(k5, { sx: { px: 8 }, children: bw(Tr, { type: "submit", children: "发起请求" }) }), bw(FU, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = s10.default) || void 0 === t11 ? void 0 : t11.call(s10) })] }) })] }, e13.operation.operationId);
   };
-}), FW = b_({ field$: pP() }, (e13, t10) => {
+}), FQ = b_({ field$: pP() }, (e13, t10) => {
   let { field$: r10 } = e13, { render: i10 } = t10;
   return h8(() => {
     r10.destroy();
   }), yI(y_([r10, r10.input$]), i10((e14) => {
     var t11, i11, o10, s10, l10, a10, c10;
-    let [u10, h10] = e14, f10 = null !== (s10 = null === (t11 = r10.meta) || void 0 === t11 ? void 0 : t11.rawSchema) && void 0 !== s10 ? s10 : {}, d10 = null !== (l10 = null === (i11 = r10.meta) || void 0 === i11 ? void 0 : i11.input) && void 0 !== l10 ? l10 : FX, p10 = null !== (a10 = null === (o10 = r10.meta) || void 0 === o10 ? void 0 : o10.readOnlyWhenInitialExist) && void 0 !== a10 && a10 && !!u10.initial;
-    return bw(M9, { valued: !S1(null != h10 ? h10 : u10.initial), invalid: !!u10.error, focus: !!u10.focus, $label: bb("span", { children: [null !== (c10 = r10.meta.label) && void 0 !== c10 ? c10 : r10.name, r10.optional ? "（非必填）" : ""] }), $supporting: bb(MQ, { children: [bw(MY, { schema: null != f10 ? f10 : {} }), bw(MK, { schema: null != f10 ? f10 : {} })] }), $trailing: d10.$trailing, children: bw(d10, { field$: r10, readOnly: p10 }) });
+    let [u10, h10] = e14, f10 = null !== (s10 = null === (t11 = r10.meta) || void 0 === t11 ? void 0 : t11.rawSchema) && void 0 !== s10 ? s10 : {}, d10 = null !== (l10 = null === (i11 = r10.meta) || void 0 === i11 ? void 0 : i11.input) && void 0 !== l10 ? l10 : FJ, p10 = null !== (a10 = null === (o10 = r10.meta) || void 0 === o10 ? void 0 : o10.readOnlyWhenInitialExist) && void 0 !== a10 && a10 && !!u10.initial;
+    return bw(Tt, { valued: !S1(null != h10 ? h10 : u10.initial), invalid: !!u10.error, focus: !!u10.focus, $label: bb("span", { children: [null !== (c10 = r10.meta.label) && void 0 !== c10 ? c10 : r10.name, r10.optional ? "（非必填）" : ""] }), $supporting: bb(MK, { children: [bw(MG, { schema: null != f10 ? f10 : {} }), bw(MZ, { schema: null != f10 ? f10 : {} })] }), $trailing: d10.$trailing, children: bw(d10, { field$: r10, readOnly: p10 }) });
   }));
-}), FU = md({ readOnly: pb().optional(), field$: pP() }, (e13) => () => {
+}), FY = md({ readOnly: pb().optional(), field$: pP() }, (e13) => () => {
   let { readOnly: t10, field$: r10, ...i10 } = e13;
   return bw("input", { ...i10, "data-input": true, type: "text", readonly: t10, name: r10.name, value: r10.input, onChange: (e14) => {
     r10.update(e14.target.value);
   }, onFocus: () => r10.focus(), onBlur: () => r10.blur() });
-}), Fq = Object.assign(FH, { displayName: "RequestBuilder" }), FX = Object.assign(FU, { displayName: "TextInput" }), FQ = b_({ operationId: pm() }, (e13, t10) => {
+}), FK = b_({ field$: pP(), readOnly: pb().optional(), accept: pm().optional() }, (e13) => {
+  let t10 = bM(null);
+  return yI(t10, yR((t11) => {
+    t11 && e13.field$.update(t11);
+  }), bk()), () => {
+    var r10;
+    let { readOnly: i10, accept: o10 } = e13;
+    return bb(k5, { component: "label", "data-input": true, sx: { display: "flex", alignItems: "center", justifyContent: "center", gap: 8, $data_file_input: { display: "none" }, $data_icon: { width: 40, height: 40, my: 40 } }, children: [bw("input", { type: "file", name: e13.field$.name, readonly: i10, accept: o10, "data-file-input": true, onChange: (e14) => {
+      var r11;
+      let i11 = null === (r11 = e14.target.files) || void 0 === r11 ? void 0 : r11[0];
+      i11 && (t10.value = i11);
+    } }), bw(To, { path: "M5 3H19C20.11 3 21 3.9 21 5V19C21 20.11 20.11 21 19 21H5C3.9 21 3 20.11 3 19V5C3 3.9 3.9 3 5 3M16 17V15H8V17H16M16 11L12 7L8 11H10.5V14H13.5V11H16Z" }), bw("span", { children: null === (r10 = t10.value) || void 0 === r10 ? void 0 : r10.name })] });
+  };
+}), FG = Object.assign(FX, { displayName: "RequestBuilder" }), FJ = Object.assign(FY, { displayName: "TextInput" }), FZ = Object.assign(FK, { displayName: "FileSelectInput" }), F0 = b_({ operationId: pm() }, (e13, t10) => {
   var r10;
   let {} = t10, i10 = S6.use(), o10 = yI(e13.operationId$, yD((e14) => i10.operation$(e14))), s10 = yI(o10, (r10 = (e14) => !!e14, vZ(function(e14, t11) {
     var i11 = 0;
@@ -26714,16 +26736,16 @@ let FH = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
     }));
   }))), l10 = yI(s10, bS((e14) => {
     var t11;
-    return bb(FK, { sx: { containerStyle: null !== (t11 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[e14.method]) && void 0 !== t11 ? t11 : "sys.secondary-container" }, children: [bw("div", { "data-operation-method": true, children: e14.method }), bb("div", { "data-operation-desc": true, children: [bw("div", { "data-operation-path": true, children: e14.path }), bb("div", { "data-operation-summary": true, children: [e14.summary, " ", e14.operationId != e14.summary ? e14.operationId : ""] })] })] });
+    return bb(F2, { sx: { containerStyle: null !== (t11 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[e14.method]) && void 0 !== t11 ? t11 : "sys.secondary-container" }, children: [bw("div", { "data-operation-method": true, children: e14.method }), bb("div", { "data-operation-desc": true, children: [bw("div", { "data-operation-path": true, children: e14.path }), bb("div", { "data-operation-summary": true, children: [e14.summary, " ", e14.operationId != e14.summary ? e14.operationId : ""] })] })] });
   })), a10 = yI(s10, bS((e14) => bw("span", { children: e14.description }))), c10 = yI(s10, bS((e14) => {
     var t11;
-    return bw(Fq, { operation: e14, children: bw(fY, { children: Object.entries(null !== (t11 = e14.responses) && void 0 !== t11 ? t11 : {}).map((e15) => {
+    return bw(FG, { operation: e14, children: bw(fY, { children: Object.entries(null !== (t11 = e14.responses) && void 0 !== t11 ? t11 : {}).map((e15) => {
       let [t12, r11] = e15;
-      return bw(M1, { code: t12, response: r11 }, t12);
+      return bw(M3, { code: t12, response: r11 }, t12);
     }) }) }, e14.operationId);
   }));
-  return yI(o10, bS((e14) => e14 ? bb(FY, { children: [l10, bb(k5, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [a10, bw(k5, { sx: { flex: 1, overflow: "auto" }, children: c10 })] })] }, e14.operationId) : null));
-}), FY = k6("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), FK = k6("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), FG = Object.assign(FQ, { displayName: "OperationView" });
+  return yI(o10, bS((e14) => e14 ? bb(F1, { children: [l10, bb(k5, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [a10, bw(k5, { sx: { flex: 1, overflow: "auto" }, children: c10 })] })] }, e14.operationId) : null));
+}), F1 = k6("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), F2 = k6("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), F4 = Object.assign(F0, { displayName: "OperationView" });
 export {
   k7 as C,
   k9 as G,
@@ -26741,7 +26763,7 @@ export {
   mZ as i,
   bb as j,
   dQ as k,
-  FG as l,
+  F4 as l,
   pm as m,
   bB as p,
   yI as r,
