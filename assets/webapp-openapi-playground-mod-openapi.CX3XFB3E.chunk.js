@@ -26441,12 +26441,8 @@ class FA {
   }
 }
 let F_ = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
-  var r10;
-  let {} = t10, i10 = S6.use(), o10 = $L(S1(e13.field$.input) ? "" : Fk.stringify(e13.field$.input)), s10 = mn.decode(null !== (r10 = e13.field$.meta.rawSchema) && void 0 !== r10 ? r10 : {}, (e14) => {
-    var t11;
-    return [null !== (t11 = i10.schema(e14)) && void 0 !== t11 ? t11 : {}, mt(e14)];
-  });
-  return e13.field$.optional && (s10 = s10.optional()), () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($j, { value: o10, children: bw(FM, { field$: e13.field$, schema: s10 }) }) });
+  let {} = t10, r10 = $L(S1(e13.field$.input) ? "" : Fk.stringify(e13.field$.input));
+  return () => bw(k5, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: bw($j, { value: r10, children: bw(FM, { field$: e13.field$, schema: e13.field$.typedef }) }) });
 }), FM = b_({ field$: pP(), schema: pP() }, (e13) => {
   let t10 = $j.use();
   return yI(e13.schema$, bP((e14) => t10.use(() => {
@@ -26663,42 +26659,48 @@ function Fq(e13) {
   return (t10) => dJ.of(t10, { $meta: { rawSchema: e13 } });
 }
 let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
-  var r10, i10, o10;
-  let { slots: s10 } = t10, l10 = S6.use(), a10 = {};
+  var r10, i10, o10, s10;
+  let { slots: l10 } = t10, a10 = S6.use(), c10 = {};
   for (let t11 of null !== (r10 = e13.operation.parameters) && void 0 !== r10 ? r10 : []) {
-    let e14 = pP().use(M6(`${t11.name}, in=${JSON.stringify(t11.in)}`), Fq(t11.schema));
-    ["object", "array"].includes(null !== (i10 = t11.schema.type) && void 0 !== i10 ? i10 : "") ? a10[t11.name] = e14.use(M9(FT)) : a10[t11.name] = e14;
+    let e14 = mn.decode(t11.schema, (e15) => {
+      var t12;
+      return [null !== (t12 = a10.schema(e15)) && void 0 !== t12 ? t12 : {}, mt(e15)];
+    }).use(M6(`${t11.name}, in=${JSON.stringify(t11.in)}`), Fq(t11.schema));
+    t11.required || (e14 = e14.optional()), ["object", "array"].includes(null !== (i10 = t11.schema.type) && void 0 !== i10 ? i10 : "") ? c10[t11.name] = e14.use(M9(FT)) : c10[t11.name] = e14;
   }
   if (e13.operation.requestBody) {
     let t11 = Object.entries(null !== (o10 = e13.operation.requestBody.content) && void 0 !== o10 ? o10 : {})[0];
     if (t11) {
-      let [e14, r11] = t11, i11 = pP().use(M6(`body, content-type = ${JSON.stringify(e14)}`), Fq(r11.schema));
-      e14.includes("json") ? a10.body = i11.use(M9(FT)) : e14.includes("octet-stream") ? a10.body = i11.use(M9(FZ)) : a10.body = i11;
+      let [e14, r11] = t11, i11 = mn.decode(null !== (s10 = r11.schema) && void 0 !== s10 ? s10 : {}, (e15) => {
+        var t12;
+        return [null !== (t12 = a10.schema(e15)) && void 0 !== t12 ? t12 : {}, mt(e15)];
+      }).use(M6(`body, content-type = ${JSON.stringify(e14)}`), Fq(r11.schema));
+      e14.includes("json") ? c10.body = i11.use(M9(FT)) : e14.includes("octet-stream") ? c10.body = i11.use(M9(FZ)) : c10.body = i11;
     }
   }
-  let c10 = fw(va), u10 = fw(vc), h10 = M5.of(pS(a10), (() => {
+  let u10 = fw(va), h10 = fw(vc), f10 = M5.of(pS(c10), (() => {
     try {
       var e14;
-      let t11 = u10.query.params;
+      let t11 = h10.query.params;
       return JSON.parse(atob(null !== (e14 = Array.isArray(t11) ? t11[0] : t11) && void 0 !== e14 ? e14 : ""));
     } catch (e15) {
     }
     return {};
   })());
-  yI(h10, yR((t11) => {
-    l10.request(e13.operation.operationId, t11);
+  yI(f10, yR((t11) => {
+    a10.request(e13.operation.operationId, t11);
   }), yR((e14) => {
-    c10.replace({ query: { params: btoa(JSON.stringify(e14)) } });
+    u10.replace({ query: { params: btoa(JSON.stringify(e14)) } });
   }), bx());
-  let f10 = yI(h10.inputs$, bS((t11) => {
-    let r11 = l10.asRequestConfigCreator(e13.operation.operationId);
+  let d10 = yI(f10.inputs$, bS((t11) => {
+    let r11 = a10.asRequestConfigCreator(e13.operation.operationId);
     return r11 ? bw(Fz, { request: r11(t11) }) : null;
   }));
   return () => {
     var t11;
     return bb(k5, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e14) => {
-      e14.preventDefault(), h10.submit();
-    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...h10.fields(h10.typedef)].map((e14) => bw(FQ, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [f10, bw(k5, { sx: { px: 8 }, children: bw(Tr, { type: "submit", children: "发起请求" }) }), bw(FU, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = s10.default) || void 0 === t11 ? void 0 : t11.call(s10) })] }) })] }, e13.operation.operationId);
+      e14.preventDefault(), f10.submit();
+    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...f10.fields(f10.typedef)].map((e14) => bw(FQ, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [d10, bw(k5, { sx: { px: 8 }, children: bw(Tr, { type: "submit", children: "发起请求" }) }), bw(FU, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = l10.default) || void 0 === t11 ? void 0 : t11.call(l10) })] }) })] }, e13.operation.operationId);
   };
 }), FQ = b_({ field$: pP() }, (e13, t10) => {
   let { field$: r10 } = e13, { render: i10 } = t10;
