@@ -5206,7 +5206,8 @@ class mn {
     return mo(t10) ? rk(t10.items) ? pO(t10.items.map((e14) => this.decode(e14))) : pA(this.decode(t10.items)) : ml(t10) ? "binary" === t10.format ? pw() : pm() : ms(t10) ? "integer" === t10.type ? py() : pv() : ma(t10) ? pb() : mi(t10) ? pg() : pd();
   }
 }
-let mr = (e13) => "object" === e13.type, mi = (e13) => "null" === e13.type, mo = (e13) => "array" === e13.type, ms = (e13) => "number" === e13.type || "integer" === e13.type, ml = (e13) => "string" === e13.type, ma = (e13) => "boolean" === e13.type, mc = { object: ["properties", "additionalProperties", "unevaluatedProperties", "patternProperties", "propertyNames", "dependentSchemas", "maxProperties", "minProperties"], array: ["contains", "items", "additionalItems", "unevaluatedItems", "maxItems", "minItems", "uniqueItems", "maxContains", "minContains"], string: ["pattern", "contentMediaType", "contentEncoding", "contentSchema", "maxLength", "minLength"], number: ["maximum", "minimum", "multipleOf", "exclusiveMaximum", "exclusiveMinimum"] }, mu = (e13, t10) => aJ(t10, (t11) => aS(e13, t11)), mh = (e13) => !mu(e13, ["type", "$ref", "$id", "oneOf", "anyOf", "allOf"]), mf = (e13) => {
+let mr = (e13) => "object" === e13.type, mi = (e13) => "null" === e13.type, mo = (e13) => "array" === e13.type, ms = (e13) => "number" === e13.type || "integer" === e13.type, ml = (e13) => "string" === e13.type, ma = (e13) => "boolean" === e13.type, mc = { object: ["properties", "additionalProperties", "unevaluatedProperties", "patternProperties", "propertyNames", "dependentSchemas", "maxProperties", "minProperties"], array: ["contains", "items", "additionalItems", "unevaluatedItems", "maxItems", "minItems", "uniqueItems", "maxContains", "minContains"], string: ["pattern", "contentMediaType", "contentEncoding", "contentSchema", "maxLength", "minLength"], number: ["maximum", "minimum", "multipleOf", "exclusiveMaximum", "exclusiveMinimum"] }, mu = (e13, t10) => aJ(t10, (t11) => aS(e13, t11)), mh = (e13) => !mu(e13, ["type", "$ref", "$id", "oneOf", "anyOf", "allOf"]), mf = function() {
+  let e13 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   if (true === e13 || false === e13 || rb(e13) && "[object Boolean]" == ry(e13))
     return {};
   if (!e13.type) {
@@ -26477,8 +26478,17 @@ let F_ = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
                   return e16(c10, t15, i11.slice(1), { path: [...o11.path, s10], branch: [...o11.branch, t15] });
                 }
               break;
-            case "union":
             case "record":
+              if (Fo(r11) && (r11 = {}), !Fr(r11))
+                return;
+              for (let [s11, l11, a10] of (0 == Object.keys(r11).length && i11.length > 0 && (r11[i11[0]] = void 0), t14.entries(r11, o11))) {
+                if (s11 == ps)
+                  continue;
+                let t15 = r11[s11];
+                return e16(a10, t15, i11.slice(1), { path: [...o11.path, String(s11)], branch: [...o11.branch, t15] });
+              }
+              break;
+            case "union":
             case "object":
               if (Fo(r11) && (r11 = {}), !Fr(r11))
                 return;
@@ -26507,8 +26517,9 @@ let F_ = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
               }
               l10.push(Bi(FC(e16), { label: FO(e16) }));
               break;
-            case "union":
             case "record":
+              break;
+            case "union":
             case "object":
               for (let [t15, s11, a10] of e16.entries({}, dY)) {
                 let e17 = String(t15), s12 = { label: e17, info: null !== (o11 = null === (i11 = a10.getMeta("description")) || void 0 === i11 ? void 0 : null === (r11 = i11.split("\n")) || void 0 === r11 ? void 0 : r11[0]) && void 0 !== o11 ? o11 : "" };
