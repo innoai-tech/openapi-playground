@@ -1,8 +1,9 @@
-import { l as e, F as t } from "./lib--nodepkg-vueuikit.Cwinxioe.chunk.js";
-import { f as n, r, c as i } from "./lib--nodepkg-typedef.5X_Ny0jI.chunk.js";
-import { b as l, r as o, d as a } from "./lib--nodepkg-vuekit.GwyEMV02.chunk.js";
-import { j as u, a as c } from "./lib--nodepkg-vue-jsx-runtime.CmBQ_T3E.chunk.js";
-import { d as s } from "./vendor--rxjs.D2Za7iWR.chunk.js";
+import { f as e, r as t, c as n } from "./lib--nodepkg-typedef.Bwrbe8Ho.chunk.js";
+import { b as r, r as i, d as l } from "./lib--nodepkg-vuekit.BRo0ZIlg.chunk.js";
+import { j as o, a } from "./lib--nodepkg-vue-jsx-runtime.B1nVnwQT.chunk.js";
+import { F as u } from "./vendor--vue-runtime-core.CdjcGpyV.chunk.js";
+import { d as c } from "./vendor--rxjs.FN4n8WH4.chunk.js";
+var s = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};
 let f = {};
 function p(e10, t10, n10) {
   if (e10 && "object" == typeof e10) {
@@ -2809,7 +2810,7 @@ var n0 = {}, n2 = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, n4 = /\n/g, n3 = /^\s*/, n5
 function re(e10) {
   return e10 ? e10.replace(n7, "") : "";
 }
-var rt = e && e.__importDefault || function(e10) {
+var rt = s && s.__importDefault || function(e10) {
   return e10 && e10.__esModule ? e10 : { default: e10 };
 };
 Object.defineProperty(n0, "__esModule", { value: true });
@@ -3459,66 +3460,66 @@ function rY(e10) {
     t10++, n10 = e10.charCodeAt(t10);
   return e10.slice(t10);
 }
-let rQ = Object.assign(l({ text: n(), components: r(n(), i()).optional() }, (e10, n10) => {
-  let {} = n10;
-  return o(e10.text$, s(), a((n11) => {
-    var r2;
-    let i2 = function(e11, t10) {
-      let n12 = function(e12, t11) {
-        var n13, r4;
-        let i4, l3, o2;
-        let a2 = t11 || rH, u2 = /* @__PURE__ */ new Map(), c2 = /* @__PURE__ */ new Map(), s2 = { all: function(e13) {
-          let t12 = [];
+let rQ = Object.assign(r({ text: e(), components: t(e(), n()).optional() }, (e10, t10) => {
+  let {} = t10;
+  return i(e10.text$, c(), l((t11) => {
+    var n10;
+    let r2 = function(e11, t12) {
+      let n11 = function(e12, t13) {
+        var n12, r4;
+        let i3, l3, o2;
+        let a2 = t13 || rH, u2 = /* @__PURE__ */ new Map(), c2 = /* @__PURE__ */ new Map(), s2 = { all: function(e13) {
+          let t14 = [];
           if ("children" in e13) {
-            let n14 = e13.children, r5 = -1;
-            for (; ++r5 < n14.length; ) {
-              let i5 = s2.one(n14[r5], e13);
-              if (i5) {
-                if (r5 && "break" === n14[r5 - 1].type && (Array.isArray(i5) || "text" !== i5.type || (i5.value = rY(i5.value)), !Array.isArray(i5) && "element" === i5.type)) {
-                  let e14 = i5.children[0];
+            let n13 = e13.children, r5 = -1;
+            for (; ++r5 < n13.length; ) {
+              let i4 = s2.one(n13[r5], e13);
+              if (i4) {
+                if (r5 && "break" === n13[r5 - 1].type && (Array.isArray(i4) || "text" !== i4.type || (i4.value = rY(i4.value)), !Array.isArray(i4) && "element" === i4.type)) {
+                  let e14 = i4.children[0];
                   e14 && "text" === e14.type && (e14.value = rY(e14.value));
                 }
-                Array.isArray(i5) ? t12.push(...i5) : t12.push(i5);
+                Array.isArray(i4) ? t14.push(...i4) : t14.push(i4);
               }
             }
           }
-          return t12;
-        }, applyData: rq, definitionById: u2, footnoteById: c2, footnoteCounts: /* @__PURE__ */ new Map(), footnoteOrder: [], handlers: { ...rI, ...a2.handlers }, one: function(e13, t12) {
-          let n14 = e13.type, r5 = s2.handlers[n14];
-          if (rV.call(s2.handlers, n14) && r5)
-            return r5(s2, e13, t12);
-          if (s2.options.passThrough && s2.options.passThrough.includes(n14)) {
+          return t14;
+        }, applyData: rq, definitionById: u2, footnoteById: c2, footnoteCounts: /* @__PURE__ */ new Map(), footnoteOrder: [], handlers: { ...rI, ...a2.handlers }, one: function(e13, t14) {
+          let n13 = e13.type, r5 = s2.handlers[n13];
+          if (rV.call(s2.handlers, n13) && r5)
+            return r5(s2, e13, t14);
+          if (s2.options.passThrough && s2.options.passThrough.includes(n13)) {
             if ("children" in e13) {
-              let { children: t13, ...n15 } = e13, r6 = rR(n15);
+              let { children: t15, ...n14 } = e13, r6 = rR(n14);
               return r6.children = s2.all(e13), r6;
             }
             return rR(e13);
           }
-          return (s2.options.unknownHandler || function(e14, t13) {
-            let n15 = t13.data || {}, r6 = "value" in t13 && !(rV.call(n15, "hProperties") || rV.call(n15, "hChildren")) ? { type: "text", value: t13.value } : { type: "element", tagName: "div", properties: {}, children: e14.all(t13) };
-            return e14.patch(t13, r6), e14.applyData(t13, r6);
-          })(s2, e13, t12);
+          return (s2.options.unknownHandler || function(e14, t15) {
+            let n14 = t15.data || {}, r6 = "value" in t15 && !(rV.call(n14, "hProperties") || rV.call(n14, "hChildren")) ? { type: "text", value: t15.value } : { type: "element", tagName: "div", properties: {}, children: e14.all(t15) };
+            return e14.patch(t15, r6), e14.applyData(t15, r6);
+          })(s2, e13, t14);
         }, options: a2, patch: rU, wrap: rW };
-        return "function" == typeof (n13 = function(e13) {
+        return "function" == typeof (n12 = function(e13) {
           if ("definition" === e13.type || "footnoteDefinition" === e13.type) {
-            let t12 = "definition" === e13.type ? u2 : c2, n14 = String(e13.identifier).toUpperCase();
-            t12.has(n14) || t12.set(n14, e13);
+            let t14 = "definition" === e13.type ? u2 : c2, n13 = String(e13.identifier).toUpperCase();
+            t14.has(n13) || t14.set(n13, e13);
           }
-        }) ? (l3 = void 0, o2 = n13, i4 = r4) : (l3 = n13, o2 = r4, i4 = void 0), eQ(e12, l3, function(e13, t12) {
-          let n14 = t12[t12.length - 1], r5 = n14 ? n14.children.indexOf(e13) : void 0;
-          return o2(e13, r5, n14);
-        }, i4), s2;
-      }(e11, void 0), r3 = n12.one(e11, void 0), i3 = function(e12) {
-        let t11 = "string" == typeof e12.options.clobberPrefix ? e12.options.clobberPrefix : "user-content-", n13 = e12.options.footnoteBackContent || r_, r4 = e12.options.footnoteBackLabel || rB, i4 = e12.options.footnoteLabel || "Footnotes", l3 = e12.options.footnoteLabelTagName || "h2", o2 = e12.options.footnoteLabelProperties || { className: ["sr-only"] }, a2 = [], u2 = -1;
+        }) ? (l3 = void 0, o2 = n12, i3 = r4) : (l3 = n12, o2 = r4, i3 = void 0), eQ(e12, l3, function(e13, t14) {
+          let n13 = t14[t14.length - 1], r5 = n13 ? n13.children.indexOf(e13) : void 0;
+          return o2(e13, r5, n13);
+        }, i3), s2;
+      }(e11, void 0), r3 = n11.one(e11, void 0), i2 = function(e12) {
+        let t13 = "string" == typeof e12.options.clobberPrefix ? e12.options.clobberPrefix : "user-content-", n12 = e12.options.footnoteBackContent || r_, r4 = e12.options.footnoteBackLabel || rB, i3 = e12.options.footnoteLabel || "Footnotes", l3 = e12.options.footnoteLabelTagName || "h2", o2 = e12.options.footnoteLabelProperties || { className: ["sr-only"] }, a2 = [], u2 = -1;
         for (; ++u2 < e12.footnoteOrder.length; ) {
-          let i5 = e12.footnoteById.get(e12.footnoteOrder[u2]);
-          if (!i5)
+          let i4 = e12.footnoteById.get(e12.footnoteOrder[u2]);
+          if (!i4)
             continue;
-          let l4 = e12.all(i5), o3 = String(i5.identifier).toUpperCase(), c2 = P(o3.toLowerCase()), s2 = 0, f2 = [], p2 = e12.footnoteCounts.get(o3);
+          let l4 = e12.all(i4), o3 = String(i4.identifier).toUpperCase(), c2 = P(o3.toLowerCase()), s2 = 0, f2 = [], p2 = e12.footnoteCounts.get(o3);
           for (; void 0 !== p2 && ++s2 <= p2; ) {
             f2.length > 0 && f2.push({ type: "text", value: " " });
-            let e13 = "string" == typeof n13 ? n13 : n13(u2, s2);
-            "string" == typeof e13 && (e13 = { type: "text", value: e13 }), f2.push({ type: "element", tagName: "a", properties: { href: "#" + t11 + "fnref-" + c2 + (s2 > 1 ? "-" + s2 : ""), dataFootnoteBackref: "", ariaLabel: "string" == typeof r4 ? r4 : r4(u2, s2), className: ["data-footnote-backref"] }, children: Array.isArray(e13) ? e13 : [e13] });
+            let e13 = "string" == typeof n12 ? n12 : n12(u2, s2);
+            "string" == typeof e13 && (e13 = { type: "text", value: e13 }), f2.push({ type: "element", tagName: "a", properties: { href: "#" + t13 + "fnref-" + c2 + (s2 > 1 ? "-" + s2 : ""), dataFootnoteBackref: "", ariaLabel: "string" == typeof r4 ? r4 : r4(u2, s2), className: ["data-footnote-backref"] }, children: Array.isArray(e13) ? e13 : [e13] });
           }
           let d2 = l4[l4.length - 1];
           if (d2 && "element" === d2.type && "p" === d2.tagName) {
@@ -3526,47 +3527,48 @@ let rQ = Object.assign(l({ text: n(), components: r(n(), i()).optional() }, (e10
             e13 && "text" === e13.type ? e13.value += " " : d2.children.push({ type: "text", value: " " }), d2.children.push(...f2);
           } else
             l4.push(...f2);
-          let h2 = { type: "element", tagName: "li", properties: { id: t11 + "fn-" + c2 }, children: e12.wrap(l4, true) };
-          e12.patch(i5, h2), a2.push(h2);
+          let h2 = { type: "element", tagName: "li", properties: { id: t13 + "fn-" + c2 }, children: e12.wrap(l4, true) };
+          e12.patch(i4, h2), a2.push(h2);
         }
         if (0 !== a2.length)
-          return { type: "element", tagName: "section", properties: { dataFootnotes: true, className: ["footnotes"] }, children: [{ type: "element", tagName: l3, properties: { ...rR(o2), id: "footnote-label" }, children: [{ type: "text", value: i4 }] }, { type: "text", value: "\n" }, { type: "element", tagName: "ol", properties: {}, children: e12.wrap(a2, true) }, { type: "text", value: "\n" }] };
-      }(n12), l2 = Array.isArray(r3) ? { type: "root", children: r3 } : r3 || { type: "root", children: [] };
-      return i3 && l2.children.push({ type: "text", value: "\n" }, i3), l2;
-    }(nh(n11));
+          return { type: "element", tagName: "section", properties: { dataFootnotes: true, className: ["footnotes"] }, children: [{ type: "element", tagName: l3, properties: { ...rR(o2), id: "footnote-label" }, children: [{ type: "text", value: i3 }] }, { type: "text", value: "\n" }, { type: "element", tagName: "ol", properties: {}, children: e12.wrap(a2, true) }, { type: "text", value: "\n" }] };
+      }(n11), l2 = Array.isArray(r3) ? { type: "root", children: r3 } : r3 || { type: "root", children: [] };
+      return i2 && l2.children.push({ type: "text", value: "\n" }, i2), l2;
+    }(nh(t11));
     return function(e11) {
-      let { components: n12 } = e11;
+      let { components: t12 } = e11;
       return function(e12) {
-        return function(e13, t10) {
-          var n13, r3, i3;
+        return function(e13, t13) {
+          var n11, r3, i2;
           let l2;
-          if (!t10 || void 0 === t10.Fragment)
+          if (!t13 || void 0 === t13.Fragment)
             throw TypeError("Expected `Fragment` in options");
-          let o2 = t10.filePath || void 0;
-          if (t10.development) {
-            if ("function" != typeof t10.jsxDEV)
+          let o2 = t13.filePath || void 0;
+          if (t13.development) {
+            if ("function" != typeof t13.jsxDEV)
               throw TypeError("Expected `jsxDEV` in options when `development: true`");
-            n13 = t10.jsxDEV, l2 = function(e14, t11, r4, i4) {
+            n11 = t13.jsxDEV, l2 = function(e14, t14, r4, i3) {
               let l3 = Array.isArray(r4.children), a3 = ro(e14);
-              return n13(t11, r4, i4, l3, { columnNumber: a3 ? a3.column - 1 : void 0, fileName: o2, lineNumber: a3 ? a3.line : void 0 }, void 0);
+              return n11(t14, r4, i3, l3, { columnNumber: a3 ? a3.column - 1 : void 0, fileName: o2, lineNumber: a3 ? a3.line : void 0 }, void 0);
             };
           } else {
-            if ("function" != typeof t10.jsx)
+            if ("function" != typeof t13.jsx)
               throw TypeError("Expected `jsx` in production options");
-            if ("function" != typeof t10.jsxs)
+            if ("function" != typeof t13.jsxs)
               throw TypeError("Expected `jsxs` in production options");
-            r3 = t10.jsx, i3 = t10.jsxs, l2 = function(e14, t11, n14, l3) {
-              let o3 = Array.isArray(n14.children) ? i3 : r3;
-              return l3 ? o3(t11, n14, l3) : o3(t11, n14);
+            r3 = t13.jsx, i2 = t13.jsxs, l2 = function(e14, t14, n12, l3) {
+              let o3 = Array.isArray(n12.children) ? i2 : r3;
+              return l3 ? o3(t14, n12, l3) : o3(t14, n12);
             };
           }
-          let a2 = { Fragment: t10.Fragment, ancestors: [], components: t10.components || {}, create: l2, elementAttributeNameCase: t10.elementAttributeNameCase || "react", evaluater: t10.createEvaluater ? t10.createEvaluater() : void 0, filePath: o2, ignoreInvalidStyle: t10.ignoreInvalidStyle || false, passKeys: false !== t10.passKeys, passNode: t10.passNode || false, schema: "svg" === t10.space ? n1 : nG, stylePropertyNameCase: t10.stylePropertyNameCase || "dom", tableCellAlignToStyle: false !== t10.tableCellAlignToStyle }, u2 = rg(a2, e13, void 0);
+          let a2 = { Fragment: t13.Fragment, ancestors: [], components: t13.components || {}, create: l2, elementAttributeNameCase: t13.elementAttributeNameCase || "react", evaluater: t13.createEvaluater ? t13.createEvaluater() : void 0, filePath: o2, ignoreInvalidStyle: t13.ignoreInvalidStyle || false, passKeys: false !== t13.passKeys, passNode: t13.passNode || false, schema: "svg" === t13.space ? n1 : nG, stylePropertyNameCase: t13.stylePropertyNameCase || "dom", tableCellAlignToStyle: false !== t13.tableCellAlignToStyle }, u2 = rg(a2, e13, void 0);
           return u2 && "string" != typeof u2 ? u2 : a2.create(e13, a2.Fragment, { children: u2 || void 0 }, void 0);
-        }(e12, { Fragment: t, jsx: u, jsxs: c, components: n12 });
+        }(e12, { Fragment: u, jsx: o, jsxs: a, components: t12 });
       };
-    }({ components: null !== (r2 = e10.components) && void 0 !== r2 ? r2 : {} })(i2);
+    }({ components: null !== (n10 = e10.components) && void 0 !== n10 ? n10 : {} })(r2);
   }));
 }), { displayName: "Markdown" });
 export {
-  rQ as M
+  rQ as M,
+  s as c
 };

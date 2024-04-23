@@ -1,5 +1,5 @@
-import { O as e, B as t, S as s, g as r, t as n, h as i, f as a, j as o, o as u } from "./vendor--rxjs.D2Za7iWR.chunk.js";
-import { i as h, F as c, d as p, t as d, a as l } from "./lib--nodepkg-typedef.5X_Ny0jI.chunk.js";
+import { O as e, B as t, S as s, b as r, t as n, e as i, f as a, g as o, o as u } from "./vendor--rxjs.FN4n8WH4.chunk.js";
+import { i as h, B as c, d as p, t as d, a as l } from "./lib--nodepkg-typedef.Bwrbe8Ho.chunk.js";
 let f = (e2, t2) => new g(e2, t2);
 class g extends e {
   constructor(e2, c2) {
@@ -20,7 +20,7 @@ let y = function() {
 }, $ = function() {
   let e2 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   e2["Content-Type"] && (e2["Content-Type"] = void 0), e2["content-type"] && (e2["content-type"] = void 0);
-}, m = (e2) => y(e2).includes("multipart/form-data"), b = (e2) => y(e2).includes("application/x-www-form-urlencoded"), w = (e2) => {
+}, b = (e2) => y(e2).includes("multipart/form-data"), m = (e2) => y(e2).includes("application/x-www-form-urlencoded"), w = (e2) => {
   let t2 = new URLSearchParams(), s2 = (e3, r2) => {
     if (p(r2)) {
       c(r2, (t3) => {
@@ -38,14 +38,14 @@ let y = function() {
     s2(t3, e3);
   }), t2.toString();
 }, v = (e2, t2) => {
-  if (m(t2)) {
+  if (b(t2)) {
     $(t2);
     let s2 = new FormData(), r2 = (e3, t3) => {
       t3 instanceof File || t3 instanceof Blob ? s2.append(e3, t3) : p(t3) ? c(t3, (t4) => r2(e3, t4)) : d(t3) ? s2.append(e3, JSON.stringify(t3)) : s2.append(e3, t3);
     };
     return c(e2, (e3, t3) => r2(t3, e3)), s2;
   }
-  return b(t2) ? w(e2) : p(e2) || d(e2) ? JSON.stringify(e2) : e2;
+  return m(t2) ? w(e2) : p(e2) || d(e2) ? JSON.stringify(e2) : e2;
 }, x = (e2) => {
   let { paramsSerializer: t2, transformRequestBody: s2 } = e2;
   return { toHref: (e3) => {
