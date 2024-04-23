@@ -10435,9 +10435,7 @@ let Ce = (e13) => (t10, r10) => t10[e13] == r10[e13] ? 0 : t10[e13] < r10[e13] ?
     }) })] });
   }));
   return () => bb(Cn, { children: [l10, bw(Cs, { children: bw(vx, {}) })] });
-}), Cn = k6("div")({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), Cr = k6("aside")({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), Ci = k6("div")({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), Co = k6("div")({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), Cs = k6("main")({ flex: 1, overflow: "hidden" }), Cl = k6("a")({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), Ca = Object.assign(Ct, { displayName: "OpenAPIView" });
-n6({ target: "Object", stat: true }, { hasOwn: tl });
-let Cc = {};
+}), Cn = k6("div")({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), Cr = k6("aside")({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), Ci = k6("div")({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), Co = k6("div")({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), Cs = k6("main")({ flex: 1, overflow: "hidden" }), Cl = k6("a")({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), Ca = Object.assign(Ct, { displayName: "OpenAPIView" }), Cc = {};
 function Cu(e13, t10, r10) {
   if (e13 && "object" == typeof e13) {
     if ("value" in e13)
@@ -14027,7 +14025,7 @@ let MN = Object.assign(b_({ text: pm(), components: pC(pm(), pP()).optional() },
   let {} = t10;
   return (t11) => {
     var r10;
-    let i10 = null !== (r10 = e13.schema.description) && void 0 !== r10 ? r10 : "";
+    let i10 = null !== (r10 = e13.schema.getMeta("description")) && void 0 !== r10 ? r10 : "";
     return 0 == i10.length ? null : bw(t11, { children: bw(MN, { text: i10 }) });
   };
 })({ position: "relative", pt: 4, "& p": { my: 1, "&::before": { content: '"// "', fontFamily: "code" }, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12 }), MV = (e13) => {
@@ -14043,67 +14041,69 @@ let MN = Object.assign(b_({ text: pm(), components: pC(pm(), pP()).optional() },
     return bw(MH, { value: { indent: i10.indent + 1 }, children: null === (e14 = r10.default) || void 0 === e14 ? void 0 : e14.call(r10) });
   };
 }), MU = b_({ schema: pP() }, (e13) => () => bw(fY, { children: bw(MZ, { schema: e13.schema }) })), Mq = b_({ schema: pP() }, (e13) => {
-  var t10;
-  let r10 = S6.use(), i10 = null !== (t10 = e13.schema) && void 0 !== t10 ? t10 : {};
-  if (i10.$ref) {
-    let e14 = i10.$ref;
-    return yI(r10.schema$(e14), bS((e15) => e15 && e15.$id ? bw(MU, { schema: e15 }) : null));
-  }
-  return () => {
-    var e14, t11, r11, o10;
-    if (Array.isArray(i10.oneOf))
-      return i10.discriminator ? bw(fY, { children: Object.entries(null !== (e14 = i10.discriminator.mapping) && void 0 !== e14 ? e14 : {}).toSorted().map((e15) => {
-        var t12;
-        let [r12, o11] = e15;
-        return o11 ? bb(fY, { children: [bw(MK, { spacing: 2, children: " " }), bw(MK, { children: bb(MY, { sx: { py: 8 }, children: ["if ", null === (t12 = i10.discriminator) || void 0 === t12 ? void 0 : t12.propertyName, " = ", bw(MZ, { schema: { enum: [r12] } }), ":"] }) }), bb(MJ, { children: [bw(MQ, { children: "  " }), bw(MZ, { schema: o11 })] })] }) : null;
-      }) }) : bw(fY, { children: i10.oneOf.map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MQ, { children: [" ", " | ", " "] }), bw(MQ, { sx: { mr: "1em" }, children: ":" }), bw(MZ, { schema: e15 })] })) });
-    if (Array.isArray(i10.allOf))
-      return bw(MQ, { children: i10.allOf.filter((e15) => !Object.keys(e15).length).map((e15, t12) => bb(fY, { children: [t12 > 0 && bb(MQ, { children: [" ", "&", " "] }), bw(MZ, { schema: e15 })] })) });
-    if ("array" == i10.type)
-      return bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MQ, { children: "Array<" }), bw(MZ, { schema: null !== (t11 = i10.items) && void 0 !== t11 ? t11 : {} }), bw(MQ, { children: ">" })] });
-    if ("object" == i10.type)
-      return bb(fY, { children: [i10.$id && bb(MQ, { id: i10.$id, children: [i10.$id, " "] }), bw(MQ, { children: "{" }), bw(MJ, { children: bw(fY, { children: Object.entries(null !== (r11 = i10.properties) && void 0 !== r11 ? r11 : {}).map((e15) => {
-        var t12;
-        let [r12, o11] = e15;
-        return o11 ? bw(fY, { children: bb(MK, { spacing: 2, children: [bw(MG, { schema: o11 }), bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MY, { nullable: o11.nullable, deprecated: o11.deprecated, optional: !(null !== (t12 = i10.required) && void 0 !== t12 ? t12 : []).includes(r12), children: r12 }), bw(MQ, { sx: { mr: "1em" }, children: ":" }), bw(MZ, { schema: o11 })] })] }) }) : null;
-      }) }) }), i10.additionalProperties && bw(fY, { children: bw(MJ, { children: bb(MK, { children: [bb(MQ, { sx: { mr: 1 }, children: ["[K:", " "] }), bw(MZ, { schema: null !== (o10 = i10.propertyNames) && void 0 !== o10 ? o10 : { type: "string" } }), bb(MQ, { sx: { mr: 1 }, children: ["]:", " "] }), bw(MZ, { schema: i10.additionalProperties })] }) }) }), bw(MQ, { children: "}" })] });
-    let [s10, l10, a10, c10] = [i10.type, i10.format, i10.enum, i10.default];
-    return a10 && 1 == a10.length ? bw(MQ, { children: JSON.stringify(a10[0]) }) : (!s10 && a10 && a10.length > 0 && (s10 = typeof a10[0]), bb(fY, { children: [bw(MQ, { sx: { fontWeight: "bold" }, children: s10 || "any" }), bb(MJ, { children: [l10 && bw(MV, { name: "format", value: l10 }), !S1(c10) && bw(MV, { name: "default", value: c10 }), !MX(i10) && bw(MV, { name: "validate", value: function() {
-      let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return e15["x-tag-validate"] ? e15["x-tag-validate"] : MX(e15) ? e15.pattern ? `@r/${String(e15.pattern)}/` : `@${e15.exclusiveMinimum} ? "(" : "["}${function() {
-        let e16 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return e16.minProperties ? e16.minProperties : e16.minItems ? e16.minItems : e16.minimum ? e16.minimum : e16.minLength ? e16.minLength : "string" === e16.type ? "0" : ("number" === e16.type || "integer" === e16.type) && e16.format ? `${Math.pow(2, Number(e16.format.replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞";
-      }(e15)},${e15.maxProperties ? e15.maxProperties : e15.maxItems ? e15.maxItems : e15.maximum ? e15.maximum : e15.maxLength ? e15.maxLength : "string" === e15.type && "uint64" === e15.format ? "19" : ("number" === e15.type || "integer" === e15.type) && e15.format ? `${Math.pow(2, Number(e15.format.replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${e15.exclusiveMaximum ? ")" : "]"}` : "";
-    }(i10) }), Array.isArray(a10) && bw(fY, { children: a10.map((e15, t12) => {
-      var r12;
-      return bw(MV, { name: "enum", value: `${e15}`, extra: (null === (r12 = i10["x-enum-labels"]) || void 0 === r12 ? void 0 : r12[t12]) ? { label: JSON.stringify(i10["x-enum-labels"][t12]) } : {} }, e15);
-    }) })] })] }));
+  let t10 = e13.schema;
+  return t10.getSchema("$ref") ? bw(MU, { schema: t10.unwrap }) : () => {
+    var e14, r10, i10, o10, s10, l10, a10, c10;
+    switch (t10.type) {
+      case "union":
+        return bw(fY, { children: null === (e14 = t10.getSchema("oneOf")) || void 0 === e14 ? void 0 : e14.map((e15, t11) => bb(fY, { children: [t11 > 0 && bb(MQ, { children: [" ", " | ", " "] }), bw(MZ, { schema: e15 })] })) });
+      case "intersection":
+        return bw(MQ, { children: null === (r10 = t10.getSchema("allOf")) || void 0 === r10 ? void 0 : r10.filter((e15) => !Object.keys(e15).length).map((e15, t11) => bb(fY, { children: [t11 > 0 && bb(MQ, { children: [" ", "&", " "] }), bw(MZ, { schema: e15 })] })) });
+      case "array":
+        return bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MQ, { children: "Array<" }), bw(MZ, { schema: null !== (i10 = t10.getSchema("items")) && void 0 !== i10 ? i10 : pd() }), bw(MQ, { children: ">" })] });
+      case "object":
+        return bb(fY, { children: [bw(MQ, { children: "{" }), bw(MJ, { children: bw(fY, { children: Object.entries(null !== (o10 = t10.getSchema("properties")) && void 0 !== o10 ? o10 : {}).map((e15) => {
+          var r11;
+          let [i11, o11] = e15;
+          return o11 ? bw(fY, { children: bb(MK, { spacing: 2, children: [bw(MG, { schema: o11 }), bb(MQ, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [bw(MY, { nullable: o11.getSchema("nullable"), deprecated: o11.getSchema("deprecated"), optional: !(null !== (r11 = t10.getSchema("required")) && void 0 !== r11 ? r11 : []).includes(i11), children: i11 }), bw(MQ, { sx: { mr: "1em" }, children: ":" }), bw(MZ, { schema: o11 })] })] }) }) : null;
+        }) }) }), bw(MQ, { children: "}" })] });
+      case "record":
+        return bb(fY, { children: [bw(MQ, { children: "{" }), t10.getSchema("additionalProperties") && bw(fY, { children: bw(MJ, { children: bb(MK, { children: [bb(MQ, { sx: { mr: 1 }, children: ["[K:", " "] }), bw(MZ, { schema: null !== (s10 = t10.getSchema("propertyNames")) && void 0 !== s10 ? s10 : pm() }), bb(MQ, { sx: { mr: 1 }, children: ["]:", " "] }), bw(MZ, { schema: null !== (l10 = t10.getSchema("additionalProperties")) && void 0 !== l10 ? l10 : pd() })] }) }) }), bw(MQ, { children: "}" })] });
+      case "enums": {
+        let e15 = null !== (a10 = t10.getSchema("enum")) && void 0 !== a10 ? a10 : [];
+        if (1 == e15.length)
+          return bw(MQ, { children: JSON.stringify(e15[0]) });
+        let r11 = "any";
+        return e15.length > 0 && (r11 = typeof e15[0]), bb(fY, { children: [bw(MQ, { sx: { fontWeight: "bold" }, children: r11 }), bw(MJ, { children: e15.map((e16, r12) => {
+          var i11;
+          return bw(MV, { name: "enum", value: `${e16}`, extra: (null === (i11 = t10.getMeta("enumLabels")) || void 0 === i11 ? void 0 : i11[r12]) ? { label: JSON.stringify(t10.getMeta("enumLabels")[r12]) } : {} }, e16);
+        }) })] });
+      }
+    }
+    let [u10, h10, f10] = [t10.type, t10.getSchema("format"), t10.getSchema("default")];
+    return bb(fY, { children: [bw(MQ, { sx: { fontWeight: "bold" }, children: u10 || "any" }), bb(MJ, { children: [h10 && bw(MV, { name: "format", value: h10 }), !aM(f10) && bw(MV, { name: "default", value: f10 }), !MX(t10) && bw(MV, { name: "validate", value: (c10 = t10).getSchema("x-tag-validate") ? c10.getSchema("x-tag-validate") : MX(c10) ? c10.getSchema("pattern") ? `@r/${String(c10.getSchema("pattern"))}/` : `@${c10.getSchema("exclusiveMinimum")} ? "(" : "["}${c10.getSchema("minProperties") ? c10.getSchema("minProperties") : c10.getSchema("minItems") ? c10.getSchema("minItems") : c10.getSchema("minimum") ? c10.getSchema("minimum") : c10.getSchema("minLength") ? c10.getSchema("minLength") : "string" === c10.type ? "0" : ("number" === c10.type || "integer" === c10.type) && c10.getSchema("format") ? `${Math.pow(2, Number(c10.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞"},${c10.getSchema("maxProperties") ? c10.getSchema("maxProperties") : c10.getSchema("maxItems") ? c10.getSchema("maxItems") : c10.getSchema("maximum") ? c10.getSchema("maximum") : c10.getSchema("maxLength") ? c10.getSchema("maxLength") : "string" === c10.type && "uint64" === c10.getSchema("format") ? "19" : ("number" === c10.type || "integer" === c10.type) && c10.getSchema("format") ? `${Math.pow(2, Number(c10.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${c10.getSchema("exclusiveMaximum") ? ")" : "]"}` : "" })] })] });
   };
 });
 function MX(e13) {
-  return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t10) => Object.hasOwn(e13, t10));
+  return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t10) => e13.getSchema(t10));
 }
-let MQ = Object.assign(MB, { displayName: "Token" }), MY = Object.assign(M$, { displayName: "PropName" }), MK = Object.assign(MF, { displayName: "Line" }), MG = Object.assign(Mz, { displayName: "Description" }), MJ = Object.assign(MW, { displayName: "Indent" }), MZ = Object.assign(Mq, { displayName: "SchemaView" }), M0 = b_({ code: pP(), response: pP() }, (e13) => () => {
-  var t10, r10;
-  return bb(M1, { children: [bw(M2, { "data-failed": function(e14) {
-    try {
-      return Number(e14) >= 400;
-    } catch (e15) {
-      return false;
-    }
-  }(e13.code), children: e13.code }), bb(k5, { sx: { pl: "4em" }, children: [bw(fY, { children: null === (t10 = e13.response["x-status-return-errors"]) || void 0 === t10 ? void 0 : t10.map((e14) => function() {
-    let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-    return e15.startsWith("StatusError{") ? e15.slice(12, e15.length - 1).split(",").reduce((e16, t11) => {
-      let [r11, i10] = t11.split("=", 2);
-      return S1(r11) || S1(i10) ? e16 : { ...e16, [r11]: i10 };
-    }, {}) : null;
-  }(e14)).map((e14) => e14 ? bw(k5, { sx: { mb: 16 }, children: bb(MK, { spacing: 0, children: [bb(MQ, { children: ["{", " "] }), bw(MJ, { children: Object.entries(e14).map((e15) => {
-    let [t11, r11] = e15;
-    return "code" === t11 ? null : bb(MK, { children: [bw(MY, { children: t11 }), bw(MQ, { children: ": " }), bw(MQ, { children: r11 })] });
-  }) }), bb(MQ, { children: [" ", "}"] })] }) }) : null) }), bw(fY, { children: Object.entries(null !== (r10 = e13.response.content) && void 0 !== r10 ? r10 : {}).map((e14) => {
-    let [t11, { schema: r11 }] = e14;
-    return bb(M4, { children: [bw(MK, { spacing: 0, children: bw(MZ, { schema: r11 }) }), bw("div", { "data-content-type": true, children: t11 })] });
-  }) })] })] });
+let MQ = Object.assign(MB, { displayName: "Token" }), MY = Object.assign(M$, { displayName: "PropName" }), MK = Object.assign(MF, { displayName: "Line" }), MG = Object.assign(Mz, { displayName: "Description" }), MJ = Object.assign(MW, { displayName: "Indent" }), MZ = Object.assign(Mq, { displayName: "SchemaView" }), M0 = b_({ code: pP(), response: pP() }, (e13) => {
+  let t10 = S6.use();
+  return () => {
+    var r10, i10;
+    return bb(M1, { children: [bw(M2, { "data-failed": function(e14) {
+      try {
+        return Number(e14) >= 400;
+      } catch (e15) {
+        return false;
+      }
+    }(e13.code), children: e13.code }), bb(k5, { sx: { pl: "4em" }, children: [bw(fY, { children: null === (r10 = e13.response["x-status-return-errors"]) || void 0 === r10 ? void 0 : r10.map((e14) => function() {
+      let e15 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return e15.startsWith("StatusError{") ? e15.slice(12, e15.length - 1).split(",").reduce((e16, t11) => {
+        let [r11, i11] = t11.split("=", 2);
+        return S1(r11) || S1(i11) ? e16 : { ...e16, [r11]: i11 };
+      }, {}) : null;
+    }(e14)).map((e14) => e14 ? bw(k5, { sx: { mb: 16 }, children: bb(MK, { spacing: 0, children: [bb(MQ, { children: ["{", " "] }), bw(MJ, { children: Object.entries(e14).map((e15) => {
+      let [t11, r11] = e15;
+      return "code" === t11 ? null : bb(MK, { children: [bw(MY, { children: t11 }), bw(MQ, { children: ": " }), bw(MQ, { children: r11 })] });
+    }) }), bb(MQ, { children: [" ", "}"] })] }) }) : null) }), bw(fY, { children: Object.entries(null !== (i10 = e13.response.content) && void 0 !== i10 ? i10 : {}).map((e14) => {
+      let [r11, { schema: i11 }] = e14;
+      return bb(M4, { children: [bw(MK, { spacing: 0, children: bw(MZ, { schema: mn.decode(i11, (e15) => {
+        var r12;
+        return [null !== (r12 = t10.schema(e15)) && void 0 !== r12 ? r12 : {}, mt(e15)];
+      }) }) }), bw("div", { "data-content-type": true, children: r11 })] });
+    }) })] })] });
+  };
 }), M1 = k6("section")({}), M2 = k6("div")({ fontSize: 18, fontFamily: "code", color: "sys.success", py: 12, pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), M4 = k6("section")({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), M3 = Object.assign(M0, { displayName: "ResponseView" }), M5 = class e10 extends v4 {
   constructor(e13, t10) {
     var r10;
@@ -26658,18 +26658,14 @@ function F$() {
       return r10;
   return "";
 }
-let FF = (e13) => F$(e13).includes("application/json"), Fz = Object.assign(FL, { displayName: "HttpRequest" }), FV = Object.assign(FB, { displayName: "HTTPResponse" }), FH = b_({ operationID: pm() }, (e13) => yI(S6.use().response$(e13.operationID), bS((e14) => bw(FW, { children: bw(FV, { response: e14 }) })))), FW = k6("section")({ maxHeight: "40vh", overflow: "auto" }), FU = Object.assign(FH, { displayName: "ResponsePreview" });
-function Fq(e13) {
-  return (t10) => dJ.of(t10, { $meta: { rawSchema: e13 } });
-}
-let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
+let FF = (e13) => F$(e13).includes("application/json"), Fz = Object.assign(FL, { displayName: "HttpRequest" }), FV = Object.assign(FB, { displayName: "HTTPResponse" }), FH = b_({ operationID: pm() }, (e13) => yI(S6.use().response$(e13.operationID), bS((e14) => bw(FW, { children: bw(FV, { response: e14 }) })))), FW = k6("section")({ maxHeight: "40vh", overflow: "auto" }), FU = Object.assign(FH, { displayName: "ResponsePreview" }), Fq = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
   var r10, i10, o10, s10;
   let { slots: l10 } = t10, a10 = S6.use(), c10 = {};
   for (let t11 of null !== (r10 = e13.operation.parameters) && void 0 !== r10 ? r10 : []) {
     let e14 = mn.decode(t11.schema, (e15) => {
       var t12;
       return [null !== (t12 = a10.schema(e15)) && void 0 !== t12 ? t12 : {}, mt(e15)];
-    }).use(M6(`${t11.name}, in=${JSON.stringify(t11.in)}`), Fq(t11.schema));
+    }).use(M6(`${t11.name}, in=${JSON.stringify(t11.in)}`));
     t11.required || (e14 = e14.optional()), ["object", "array"].includes(null !== (i10 = t11.schema.type) && void 0 !== i10 ? i10 : "") ? c10[t11.name] = e14.use(M9(FT)) : c10[t11.name] = e14;
   }
   if (e13.operation.requestBody) {
@@ -26678,8 +26674,8 @@ let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
       let [e14, r11] = t11, i11 = mn.decode(null !== (s10 = r11.schema) && void 0 !== s10 ? s10 : {}, (e15) => {
         var t12;
         return [null !== (t12 = a10.schema(e15)) && void 0 !== t12 ? t12 : {}, mt(e15)];
-      }).use(M6(`body, content-type = ${JSON.stringify(e14)}`), Fq(r11.schema));
-      e14.includes("json") ? c10.body = i11.use(M9(FT)) : e14.includes("octet-stream") ? c10.body = i11.use(M9(FZ)) : c10.body = i11;
+      }).use(M6(`body, content-type = ${JSON.stringify(e14)}`));
+      e14.includes("json") ? c10.body = i11.use(M9(FT)) : e14.includes("octet-stream") ? c10.body = i11.use(M9(FJ)) : c10.body = i11;
     }
   }
   let u10 = fw(va), h10 = fw(vc), f10 = M5.of(pS(c10), (() => {
@@ -26704,23 +26700,23 @@ let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
     var t11;
     return bb(k5, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e14) => {
       e14.preventDefault(), f10.submit();
-    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...f10.fields(f10.typedef)].map((e14) => bw(FQ, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [d10, bw(k5, { sx: { px: 8 }, children: bw(Tr, { type: "submit", children: "发起请求" }) }), bw(FU, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = l10.default) || void 0 === t11 ? void 0 : t11.call(l10) })] }) })] }, e13.operation.operationId);
+    }, children: [bw(k5, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...f10.fields(f10.typedef)].map((e14) => bw(FX, { field$: e14 })) }), bw(k5, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: bb(k5, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [d10, bw(k5, { sx: { px: 8 }, children: bw(Tr, { type: "submit", children: "发起请求" }) }), bw(FU, { operationID: e13.operation.operationId }), bw(k5, { sx: { flex: 1, overflow: "auto" }, children: null === (t11 = l10.default) || void 0 === t11 ? void 0 : t11.call(l10) })] }) })] }, e13.operation.operationId);
   };
-}), FQ = b_({ field$: pP() }, (e13, t10) => {
+}), FX = b_({ field$: pP() }, (e13, t10) => {
   let { field$: r10 } = e13, { render: i10 } = t10;
   return h8(() => {
     r10.destroy();
   }), yI(y_([r10, r10.input$]), i10((e14) => {
-    var t11, i11, o10, s10, l10, a10, c10;
-    let [u10, h10] = e14, f10 = null !== (s10 = null === (t11 = r10.meta) || void 0 === t11 ? void 0 : t11.rawSchema) && void 0 !== s10 ? s10 : {}, d10 = null !== (l10 = null === (i11 = r10.meta) || void 0 === i11 ? void 0 : i11.input) && void 0 !== l10 ? l10 : FJ, p10 = null !== (a10 = null === (o10 = r10.meta) || void 0 === o10 ? void 0 : o10.readOnlyWhenInitialExist) && void 0 !== a10 && a10 && !!u10.initial;
-    return bw(Tt, { valued: !S1(null != h10 ? h10 : u10.initial), invalid: !!u10.error, focus: !!u10.focus, $label: bb("span", { children: [null !== (c10 = r10.meta.label) && void 0 !== c10 ? c10 : r10.name, r10.optional ? "（非必填）" : ""] }), $supporting: bb(MK, { children: [bw(MG, { schema: null != f10 ? f10 : {} }), bw(MZ, { schema: null != f10 ? f10 : {} })] }), $trailing: d10.$trailing, children: bw(d10, { field$: r10, readOnly: p10 }) });
+    var t11, i11, o10, s10, l10;
+    let [a10, c10] = e14, u10 = null !== (o10 = null === (t11 = r10.meta) || void 0 === t11 ? void 0 : t11.input) && void 0 !== o10 ? o10 : FG, h10 = null !== (s10 = null === (i11 = r10.meta) || void 0 === i11 ? void 0 : i11.readOnlyWhenInitialExist) && void 0 !== s10 && s10 && !!a10.initial;
+    return bw(Tt, { valued: !S1(null != c10 ? c10 : a10.initial), invalid: !!a10.error, focus: !!a10.focus, $label: bb("span", { children: [null !== (l10 = r10.meta.label) && void 0 !== l10 ? l10 : r10.name, r10.optional ? "（非必填）" : ""] }), $supporting: bb(MK, { children: [bw(MG, { schema: r10.typedef }), bw(MZ, { schema: r10.typedef })] }), $trailing: u10.$trailing, children: bw(u10, { field$: r10, readOnly: h10 }) });
   }));
-}), FY = md({ readOnly: pb().optional(), field$: pP() }, (e13) => () => {
+}), FQ = md({ readOnly: pb().optional(), field$: pP() }, (e13) => () => {
   let { readOnly: t10, field$: r10, ...i10 } = e13;
   return bw("input", { ...i10, "data-input": true, type: "text", readonly: t10, name: r10.name, value: r10.input, onChange: (e14) => {
     r10.update(e14.target.value);
   }, onFocus: () => r10.focus(), onBlur: () => r10.blur() });
-}), FK = b_({ field$: pP(), readOnly: pb().optional(), accept: pm().optional() }, (e13) => {
+}), FY = b_({ field$: pP(), readOnly: pb().optional(), accept: pm().optional() }, (e13) => {
   let t10 = bM(null);
   return yI(t10, yR((t11) => {
     t11 && e13.field$.update(t11);
@@ -26733,7 +26729,7 @@ let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
       i11 && (t10.value = i11);
     } }), bw(To, { path: "M5 3H19C20.11 3 21 3.9 21 5V19C21 20.11 20.11 21 19 21H5C3.9 21 3 20.11 3 19V5C3 3.9 3.9 3 5 3M16 17V15H8V17H16M16 11L12 7L8 11H10.5V14H13.5V11H16Z" }), bw("span", { children: null === (r10 = t10.value) || void 0 === r10 ? void 0 : r10.name })] });
   };
-}), FG = Object.assign(FX, { displayName: "RequestBuilder" }), FJ = Object.assign(FY, { displayName: "TextInput" }), FZ = Object.assign(FK, { displayName: "FileSelectInput" }), F0 = b_({ operationId: pm() }, (e13, t10) => {
+}), FK = Object.assign(Fq, { displayName: "RequestBuilder" }), FG = Object.assign(FQ, { displayName: "TextInput" }), FJ = Object.assign(FY, { displayName: "FileSelectInput" }), FZ = b_({ operationId: pm() }, (e13, t10) => {
   var r10;
   let {} = t10, i10 = S6.use(), o10 = yI(e13.operationId$, yD((e14) => i10.operation$(e14))), s10 = yI(o10, (r10 = (e14) => !!e14, vZ(function(e14, t11) {
     var i11 = 0;
@@ -26742,16 +26738,16 @@ let FX = b_({ operation: pP(), $default: pP() }, (e13, t10) => {
     }));
   }))), l10 = yI(s10, bS((e14) => {
     var t11;
-    return bb(F2, { sx: { containerStyle: null !== (t11 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[e14.method]) && void 0 !== t11 ? t11 : "sys.secondary-container" }, children: [bw("div", { "data-operation-method": true, children: e14.method }), bb("div", { "data-operation-desc": true, children: [bw("div", { "data-operation-path": true, children: e14.path }), bb("div", { "data-operation-summary": true, children: [e14.summary, " ", e14.operationId != e14.summary ? e14.operationId : ""] })] })] });
+    return bb(F1, { sx: { containerStyle: null !== (t11 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[e14.method]) && void 0 !== t11 ? t11 : "sys.secondary-container" }, children: [bw("div", { "data-operation-method": true, children: e14.method }), bb("div", { "data-operation-desc": true, children: [bw("div", { "data-operation-path": true, children: e14.path }), bb("div", { "data-operation-summary": true, children: [e14.summary, " ", e14.operationId != e14.summary ? e14.operationId : ""] })] })] });
   })), a10 = yI(s10, bS((e14) => bw("span", { children: e14.description }))), c10 = yI(s10, bS((e14) => {
     var t11;
-    return bw(FG, { operation: e14, children: bw(fY, { children: Object.entries(null !== (t11 = e14.responses) && void 0 !== t11 ? t11 : {}).map((e15) => {
+    return bw(FK, { operation: e14, children: bw(fY, { children: Object.entries(null !== (t11 = e14.responses) && void 0 !== t11 ? t11 : {}).map((e15) => {
       let [t12, r11] = e15;
       return bw(M3, { code: t12, response: r11 }, t12);
     }) }) }, e14.operationId);
   }));
-  return yI(o10, bS((e14) => e14 ? bb(F1, { children: [l10, bb(k5, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [a10, bw(k5, { sx: { flex: 1, overflow: "auto" }, children: c10 })] })] }, e14.operationId) : null));
-}), F1 = k6("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), F2 = k6("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), F4 = Object.assign(F0, { displayName: "OperationView" });
+  return yI(o10, bS((e14) => e14 ? bb(F0, { children: [l10, bb(k5, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [a10, bw(k5, { sx: { flex: 1, overflow: "auto" }, children: c10 })] })] }, e14.operationId) : null));
+}), F0 = k6("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), F1 = k6("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), F2 = Object.assign(FZ, { displayName: "OperationView" });
 export {
   k7 as C,
   k9 as G,
@@ -26769,7 +26765,7 @@ export {
   mZ as i,
   bb as j,
   dQ as k,
-  F4 as l,
+  F2 as l,
   pm as m,
   bB as p,
   yI as r,
