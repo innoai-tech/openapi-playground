@@ -23,9 +23,10 @@ var __privateSet = (obj, member, value, setter) => {
   return value;
 };
 var _t, _e;
-import { i as t, E as e, S as i, a as s, b as n, s as r, g as a, T as l } from "./lib--nodepkg-typedef.Bwrbe8Ho.chunk.js";
-import { S as u, I as o, r as f, g as h, m as d } from "./lib--nodepkg-vuekit.UMOgsAuw.chunk.js";
-class p extends u {
+import { i as t, E as e, S as i, a as s, b as n, s as r, g as a, T as l } from "./lib--nodepkg-typedef.5X_Ny0jI.chunk.js";
+import { I as u, r as o } from "./lib--nodepkg-vuekit.GwyEMV02.chunk.js";
+import { S as f, d as h, m as d } from "./vendor--rxjs.D2Za7iWR.chunk.js";
+class p extends f {
   constructor(t2, e2) {
     var i2;
     super();
@@ -58,7 +59,7 @@ class p extends u {
           });
       }
     });
-    this.typedef = t2, this.inputs$ = new o(null !== (i2 = e2()) && void 0 !== i2 ? i2 : {});
+    this.typedef = t2, this.inputs$ = new u(null !== (i2 = e2()) && void 0 !== i2 ? i2 : {});
   }
   static of(e2, i2) {
     return new p(e2, () => t(i2) ? i2() : i2);
@@ -83,7 +84,7 @@ class p extends u {
       e2.reset();
   }
 }
-const _v = class _v extends o {
+const _v = class _v extends u {
   constructor(t2, e2, i2, s2 = _v.stringify(i2)) {
     super({ initial: a(t2.inputs$.value, s2, _v.defaultValue(e2)) });
     __privateAdd(this, _t, void 0);
@@ -137,7 +138,7 @@ const _v = class _v extends o {
     return void 0 === __privateGet(this, _t) && __privateSet(this, _t, !this.validate(void 0)), __privateGet(this, _t);
   }
   get input$() {
-    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, f(this.form$.inputs$, d((t2) => a(t2, this.name, _v.defaultValue(this.typedef))), h())), __privateGet(this, _e);
+    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, o(this.form$.inputs$, d((t2) => a(t2, this.name, _v.defaultValue(this.typedef))), h())), __privateGet(this, _e);
   }
   validate(t2) {
     let e2 = "array" !== this.typedef.type || s(t2) ? t2 : t2.filter((t3) => !s(t3)), [i2] = this.typedef.validate(e2);
