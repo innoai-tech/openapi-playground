@@ -1,6 +1,6 @@
-const __vite__fileDeps=["assets/webapp-openapi-playground-page.BWjAD8Qw.chunk.js","assets/webapp-openapi-playground-mod-openapi.CX3XFB3E.chunk.js","assets/webapp-openapi-playground-page-operations.C6qDukDS.chunk.js"],__vite__mapDeps=i=>i.map(i=>__vite__fileDeps[i]);
+const __vite__fileDeps=["assets/webapp-openapi-playground-page.CVmMsLnU.chunk.js","assets/webapp-openapi-playground-mod-openapi.CW8cXT8N.chunk.js","assets/webapp-openapi-playground-page-operations.B6Ftk7ux.chunk.js"],__vite__mapDeps=i=>i.map(i=>__vite__fileDeps[i]);
 var n, e;
-import { c as t, a as o, O as i, r, f as a, j as s, b as l, s as d, t as c, p, d as m, e as h, C as u, G as f, R as b, T as g, g as y, h as v, i as E, k as w } from "./webapp-openapi-playground-mod-openapi.CX3XFB3E.chunk.js";
+import { c as t, a as o, O as i, r, f as a, j as s, b as l, s as d, t as c, p, d as m, e as h, C as u, G as f, R as b, T as g, g as y, h as v, i as E, k as w } from "./webapp-openapi-playground-mod-openapi.CW8cXT8N.chunk.js";
 (function() {
   let n2 = document.createElement("link").relList;
   if (!(n2 && n2.supports && n2.supports("modulepreload"))) {
@@ -77,5 +77,5 @@ let _ = '/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.c
     if (e3.payload = n3, window.dispatchEvent(e3), !e3.defaultPrevented)
       throw n3;
   });
-}, N = Object.assign(o(() => () => h(y, {})), { displayName: "IndexDefault" }), F = v({ history: E(new URL(null !== (e = null === (n = document.querySelector("base")) || void 0 === n ? void 0 : n.href) && void 0 !== e ? e : "/").pathname), routes: [{ name: "operations", path: "/operations", component: () => T(() => import("./webapp-openapi-playground-page.BWjAD8Qw.chunk.js"), true ? __vite__mapDeps([0,1]) : void 0), children: [{ name: "operations-operationId", path: ":operationId", component: () => T(() => import("./webapp-openapi-playground-page-operations.C6qDukDS.chunk.js"), true ? __vite__mapDeps([2,1]) : void 0), props: true }], props: true }, { name: "index", path: "/", component: N, props: true }] });
+}, N = Object.assign(o(() => () => h(y, {})), { displayName: "IndexDefault" }), F = v({ history: E(new URL(null !== (e = null === (n = document.querySelector("base")) || void 0 === n ? void 0 : n.href) && void 0 !== e ? e : "/").pathname), routes: [{ name: "operations", path: "/operations", component: () => T(() => import("./webapp-openapi-playground-page.CVmMsLnU.chunk.js"), true ? __vite__mapDeps([0,1]) : void 0), children: [{ name: "operations-operationId", path: ":operationId", component: () => T(() => import("./webapp-openapi-playground-page-operations.B6Ftk7ux.chunk.js"), true ? __vite__mapDeps([2,1]) : void 0), props: true }], props: true }, { name: "index", path: "/", component: N, props: true }] });
 w(O).use(F).mount("#root");

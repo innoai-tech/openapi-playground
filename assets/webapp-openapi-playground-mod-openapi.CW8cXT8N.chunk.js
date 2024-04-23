@@ -26227,7 +26227,11 @@ class Fm {
         let [t11, r11] = e14;
         return Fy(r11);
       });
-      if (0 == t10.length && __privateGet(this, _a2).write("{}"), 1 == t10.length) {
+      if (0 == t10.length) {
+        __privateGet(this, _a2).write("{}");
+        return;
+      }
+      if (1 == t10.length) {
         let [e14, r11] = t10[0];
         __privateGet(this, _a2).write(Fv(e14)), __privateGet(this, _a2).write(": "), this.print(r11);
         return;
