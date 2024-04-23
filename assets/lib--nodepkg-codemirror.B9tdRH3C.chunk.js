@@ -1,8 +1,8 @@
 let t, e;
-import { j as i } from "./lib--nodepkg-vue-jsx-runtime.B1nVnwQT.chunk.js";
-import { c as n, o as s, t as r, r as o, s as l, a as h } from "./lib--nodepkg-vuekit.BRo0ZIlg.chunk.js";
-import { s as a, v as c, a as d } from "./lib--nodepkg-vueuikit.WHW5k3l4.chunk.js";
-import { c as u, m as f, a as p, s as g, o as m } from "./vendor--rxjs.FN4n8WH4.chunk.js";
+import { j as i } from "./lib--nodepkg-vue-jsx-runtime.CmBQ_T3E.chunk.js";
+import { s as n, v as s, a as r } from "./lib--nodepkg-vueuikit.Cwinxioe.chunk.js";
+import { c as o, o as l, t as h, r as a, s as c, a as d } from "./lib--nodepkg-vuekit.GwyEMV02.chunk.js";
+import { c as u, m as f, a as p, s as g, o as m } from "./vendor--rxjs.D2Za7iWR.chunk.js";
 class v {
   lineAt(t6) {
     if (t6 < 0 || t6 > this.length)
@@ -10687,7 +10687,7 @@ let aX = (t6) => {
     let t7 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return [s3.of(t7), sJ(), s5];
   }(), function() {
-    let t7 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, e11 = Object.assign(Object.assign({}, ld), t7), i11 = new lu(e11, true), n11 = new lu(e11, false), s10 = iL.fromClass(class {
+    let t7 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, e11 = Object.assign(Object.assign({}, ld), t7), i11 = new lu(e11, true), n11 = new lu(e11, false), s11 = iL.fromClass(class {
       constructor(t10) {
         this.from = t10.viewport.from, this.markers = this.buildMarkers(t10);
       }
@@ -10696,24 +10696,24 @@ let aX = (t6) => {
       }
       buildMarkers(t10) {
         let e12 = new tq();
-        for (let s11 of t10.viewportLineBlocks) {
-          let r11 = le(t10.state, s11.from, s11.to) ? n11 : o4(t10.state, s11.from, s11.to) ? i11 : null;
-          r11 && e12.add(s11.from, s11.from, r11);
+        for (let s12 of t10.viewportLineBlocks) {
+          let r12 = le(t10.state, s12.from, s12.to) ? n11 : o4(t10.state, s12.from, s12.to) ? i11 : null;
+          r12 && e12.add(s12.from, s12.from, r12);
         }
         return e12.finish();
       }
-    }), { domEventHandlers: r10 } = e11;
-    return [s10, sU({ class: "cm-foldGutter", markers(t10) {
+    }), { domEventHandlers: r11 } = e11;
+    return [s11, sU({ class: "cm-foldGutter", markers(t10) {
       var e12;
-      return (null === (e12 = t10.plugin(s10)) || void 0 === e12 ? void 0 : e12.markers) || t_.empty;
-    }, initialSpacer: () => new lu(e11, false), domEventHandlers: Object.assign(Object.assign({}, r10), { click: (t10, e12, i12) => {
-      if (r10.click && r10.click(t10, e12, i12))
+      return (null === (e12 = t10.plugin(s11)) || void 0 === e12 ? void 0 : e12.markers) || t_.empty;
+    }, initialSpacer: () => new lu(e11, false), domEventHandlers: Object.assign(Object.assign({}, r11), { click: (t10, e12, i12) => {
+      if (r11.click && r11.click(t10, e12, i12))
         return true;
       let n12 = le(t10.state, e12.from, e12.to);
       if (n12)
         return t10.dispatch({ effects: o6.of(n12) }), true;
-      let s11 = o4(t10.state, e12.from, e12.to);
-      return !!s11 && (t10.dispatch({ effects: o9.of(s11) }), true);
+      let s12 = o4(t10.state, e12.from, e12.to);
+      return !!s12 && (t10.dispatch({ effects: o9.of(s12) }), true);
     } }) }), ll()];
   }({ openText: String.fromCharCode(9662), closedText: String.fromCharCode(9656) }), so.of(ls), function() {
     let t7 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -10726,12 +10726,12 @@ let aX = (t6) => {
       }
       makeDecorator(t10) {
         return new su({ regexp: t10.specialChars, decoration: (e11, i11, n11) => {
-          let { doc: s10 } = i11.state, r10 = B(e11[0], 0);
-          if (9 == r10) {
-            let t11 = s10.lineAt(n11), e12 = i11.state.tabSize, r11 = t1(t11.text, e12, n11 - t11.from);
-            return e3.replace({ widget: new sb((e12 - r11 % e12) * this.view.defaultCharacterWidth / this.view.scaleX) });
+          let { doc: s11 } = i11.state, r11 = B(e11[0], 0);
+          if (9 == r11) {
+            let t11 = s11.lineAt(n11), e12 = i11.state.tabSize, r12 = t1(t11.text, e12, n11 - t11.from);
+            return e3.replace({ widget: new sb((e12 - r12 % e12) * this.view.defaultCharacterWidth / this.view.scaleX) });
           }
-          return this.decorationCache[r10] || (this.decorationCache[r10] = e3.replace({ widget: new sy(t10, r10) }));
+          return this.decorationCache[r11] || (this.decorationCache[r11] = e3.replace({ widget: new sy(t10, r11) }));
         }, boundary: t10.replaceTabs ? void 0 : /[^]/ });
       }
       update(t10) {
@@ -10745,27 +10745,27 @@ let aX = (t6) => {
       let i11 = "historyUndo" == t10.inputType ? h1 : "historyRedo" == t10.inputType ? h2 : null;
       return !!i11 && (t10.preventDefault(), i11(e11));
     } })];
-  }(), so.of(an), so.of(a0)], i10 = s([]), n10 = s(t6 || ""), o10 = s(null), l10 = s(null), h10 = u([n10, i10]).pipe(f((t7) => {
+  }(), so.of(an), so.of(a0)], i10 = l([]), n10 = l(t6 || ""), s10 = l(null), r10 = l(null), o10 = u([n10, i10]).pipe(f((t7) => {
     let [i11, n11] = t7;
     return tV.create({ doc: i11, extensions: [...n11, e10].map((t10) => t10()) });
   }));
-  return { initial$: n10, state$: h10, dom$: o10, view$: l10, use: (t7) => (i10.next([...i10.value, t7]), () => {
+  return { initial$: n10, state$: o10, dom$: s10, view$: r10, use: (t7) => (i10.next([...i10.value, t7]), () => {
     i10.next(i10.value.filter((e11) => e11 !== t7));
-  }), serve: () => p(h10, u([o10, h10]).pipe(g((t7) => {
+  }), serve: () => p(o10, u([s10, o10]).pipe(g((t7) => {
     let [e11, i11] = t7;
     return null == e11 ? m(null) : m(new n6({ parent: e11, state: i11 }));
-  }), r((t7) => (l10.next(t7), () => null == t7 ? void 0 : t7.destroy())))) };
-}, a3 = n(() => a2(), { name: "EditorContext" }), a8 = (t6) => {
+  }), h((t7) => (r10.next(t7), () => null == t7 ? void 0 : t7.destroy())))) };
+}, a3 = o(() => a2(), { name: "EditorContext" }), a8 = (t6) => {
   let e10 = a3.use();
-  o(e10.dom$, r(() => e10.use(() => t6())), l());
-}, a4 = Object.assign(a("div", () => {
+  a(e10.dom$, h(() => e10.use(() => t6())), c());
+}, a4 = Object.assign(n("div", () => {
   let t6 = a3.use();
   return a8(() => {
     var t7;
     let e10, i10;
     return t7 = { fallback: true }, e10 = [lw], oD instanceof lp && (oD.module && e10.push(n6.styleModule.of(oD.module)), i10 = oD.themeType), (null == t7 ? void 0 : t7.fallback) ? e10.push(lm.of(oD)) : i10 ? e10.push(lg.computeN([n6.darkTheme], (t10) => t10.facet(n6.darkTheme) == ("dark" == i10) ? [oD] : [])) : e10.push(lg.of(oD)), e10;
-  }), o(t6.serve(), h()), (e10) => i(e10, { ref: t6.dom$ });
-})({ width: "100%", height: "100%", fontSize: 12, "& .cm-editor": { outline: "none", height: "100%", "& .cm-gutterElement": { color: "sys.secondary" }, "& [aria-readonly=true]": { opacity: 0.7 }, "& .cm-activeLineGutter": { backgroundColor: c("sys.primary", d(0.08)) }, "& .cm-activeLine": { backgroundColor: c("sys.primary", d(0.08)) }, "& .diffLineGutter": { backgroundColor: c("sys.error", d(0.08)) }, "& .diffLine": { backgroundColor: c("sys.error", d(0.08)) }, "& .cm-tooltip-autocomplete ul li[aria-selected]": { containerStyle: "sys.primary" }, "& .cm-gutters": { border: "none", containerStyle: "sys.surface-container-lowest" }, "& .cm-tooltip": { border: "none", boxShadow: "2", borderRadius: "xs", containerStyle: "sys.surface-container-lowest", fontFamily: "code" }, "& .cm-tooltip-lint": { overflow: "hidden" }, "& .cm-tooltip-hover": { overflow: "hidden" } }, "& .tok-propertyName": { color: "sys.primary" }, "& .tok-number": { color: "sys.error" }, "& .tok-keyword": { color: "sys.error" }, "& .tok-string": { color: "sys.tertiary" }, "& .cm-lint-marker": { width: "0.7em", height: "0.7em" }, "& .tok-punctuation": { color: c("sys.primary", d(0.38)) } }), { displayName: "EditorContainer" });
+  }), a(t6.serve(), d()), (e10) => i(e10, { ref: t6.dom$ });
+})({ width: "100%", height: "100%", fontSize: 12, "& .cm-editor": { outline: "none", height: "100%", "& .cm-gutterElement": { color: "sys.secondary" }, "& [aria-readonly=true]": { opacity: 0.7 }, "& .cm-activeLineGutter": { backgroundColor: s("sys.primary", r(0.08)) }, "& .cm-activeLine": { backgroundColor: s("sys.primary", r(0.08)) }, "& .diffLineGutter": { backgroundColor: s("sys.error", r(0.08)) }, "& .diffLine": { backgroundColor: s("sys.error", r(0.08)) }, "& .cm-tooltip-autocomplete ul li[aria-selected]": { containerStyle: "sys.primary" }, "& .cm-gutters": { border: "none", containerStyle: "sys.surface-container-lowest" }, "& .cm-tooltip": { border: "none", boxShadow: "2", borderRadius: "xs", containerStyle: "sys.surface-container-lowest", fontFamily: "code" }, "& .cm-tooltip-lint": { overflow: "hidden" }, "& .cm-tooltip-hover": { overflow: "hidden" } }, "& .tok-propertyName": { color: "sys.primary" }, "& .tok-number": { color: "sys.error" }, "& .tok-keyword": { color: "sys.error" }, "& .tok-string": { color: "sys.tertiary" }, "& .cm-lint-marker": { width: "0.7em", height: "0.7em" }, "& .tok-punctuation": { color: s("sys.primary", r(0.38)) } }), { displayName: "EditorContainer" });
 export {
   rI as D,
   tV as E,
