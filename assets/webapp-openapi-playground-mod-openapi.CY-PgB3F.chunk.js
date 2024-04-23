@@ -26479,6 +26479,8 @@ let F_ = b_({ field$: pP(), readOnly: pb().optional() }, (e13, t10) => {
                 }
               break;
             case "record":
+              if (0 === i11.length)
+                break;
               if (Fo(r11) && (r11 = {}), !Fr(r11))
                 return;
               for (let [s11, l11, a10] of (0 == Object.keys(r11).length && i11.length > 0 && (r11[i11[0]] = void 0), t14.entries(r11, o11))) {
