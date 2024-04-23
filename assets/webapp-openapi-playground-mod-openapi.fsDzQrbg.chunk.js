@@ -26306,7 +26306,7 @@ c_fn = function(e13, t10) {
   });
 };
 function Fv(e13) {
-  return /[_$A-Za-z0-9]+/.test(e13) ? e13 : JSON.stringify(e13);
+  return /^[A-Za-z$_]([$_A-Za-z0-9]+)?$/.test(e13) ? e13 : JSON.stringify(e13);
 }
 function Fy(e13) {
   return !(Fo(e13) || e13 && e13.constructor && e13.call && e13.apply);

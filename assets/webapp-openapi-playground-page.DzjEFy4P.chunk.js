@@ -1,4 +1,4 @@
-import { a, e, g as p } from "./webapp-openapi-playground-mod-openapi.CY-PgB3F.chunk.js";
+import { a, e, g as p } from "./webapp-openapi-playground-mod-openapi.fsDzQrbg.chunk.js";
 let o = Object.assign(a(() => () => e(p, {})), { displayName: "OperationsDefault" });
 export {
   o as default
