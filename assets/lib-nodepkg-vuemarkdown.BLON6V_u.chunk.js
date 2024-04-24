@@ -1,8 +1,6 @@
-import { l as e, F as t } from "./lib--nodepkg-vueuikit.Cwinxioe.chunk.js";
-import { f as n, r, c as i } from "./lib--nodepkg-typedef.5X_Ny0jI.chunk.js";
-import { b as l, r as o, d as a } from "./lib--nodepkg-vuekit.GwyEMV02.chunk.js";
-import { j as u, a as c } from "./lib--nodepkg-vue-jsx-runtime.CmBQ_T3E.chunk.js";
-import { d as s } from "./vendor--rxjs.D2Za7iWR.chunk.js";
+import { g as e, F as t, j as n, k as r } from "./lib-nodepkg-vue-jsx-runtime.BN22WHLF.chunk.js";
+import { f as i, r as l, c as o } from "./lib-nodepkg-typedef.Bwrbe8Ho.chunk.js";
+import { h as a, r as u, i as c, g as s } from "./lib-nodepkg-vuekit.CaGE9cHH.chunk.js";
 let f = {};
 function p(e10, t10, n10) {
   if (e10 && "object" == typeof e10) {
@@ -3459,112 +3457,112 @@ function rY(e10) {
     t10++, n10 = e10.charCodeAt(t10);
   return e10.slice(t10);
 }
-let rQ = Object.assign(l({ text: n(), components: r(n(), i()).optional() }, (e10, n10) => {
-  let {} = n10;
-  return o(e10.text$, s(), a((n11) => {
-    var r2;
-    let i2 = function(e11, t10) {
-      let n12 = function(e12, t11) {
-        var n13, r4;
-        let i4, l3, o2;
+let rQ = Object.assign(a({ text: i(), components: l(i(), o()).optional() }, (e10, i2) => {
+  let {} = i2;
+  return u(e10.text$, s(), c((i3) => {
+    var l2;
+    let o2 = function(e11, t10) {
+      let n10 = function(e12, t11) {
+        var n11, r3;
+        let i5, l4, o3;
         let a2 = t11 || rH, u2 = /* @__PURE__ */ new Map(), c2 = /* @__PURE__ */ new Map(), s2 = { all: function(e13) {
           let t12 = [];
           if ("children" in e13) {
-            let n14 = e13.children, r5 = -1;
-            for (; ++r5 < n14.length; ) {
-              let i5 = s2.one(n14[r5], e13);
-              if (i5) {
-                if (r5 && "break" === n14[r5 - 1].type && (Array.isArray(i5) || "text" !== i5.type || (i5.value = rY(i5.value)), !Array.isArray(i5) && "element" === i5.type)) {
-                  let e14 = i5.children[0];
+            let n12 = e13.children, r4 = -1;
+            for (; ++r4 < n12.length; ) {
+              let i6 = s2.one(n12[r4], e13);
+              if (i6) {
+                if (r4 && "break" === n12[r4 - 1].type && (Array.isArray(i6) || "text" !== i6.type || (i6.value = rY(i6.value)), !Array.isArray(i6) && "element" === i6.type)) {
+                  let e14 = i6.children[0];
                   e14 && "text" === e14.type && (e14.value = rY(e14.value));
                 }
-                Array.isArray(i5) ? t12.push(...i5) : t12.push(i5);
+                Array.isArray(i6) ? t12.push(...i6) : t12.push(i6);
               }
             }
           }
           return t12;
         }, applyData: rq, definitionById: u2, footnoteById: c2, footnoteCounts: /* @__PURE__ */ new Map(), footnoteOrder: [], handlers: { ...rI, ...a2.handlers }, one: function(e13, t12) {
-          let n14 = e13.type, r5 = s2.handlers[n14];
-          if (rV.call(s2.handlers, n14) && r5)
-            return r5(s2, e13, t12);
-          if (s2.options.passThrough && s2.options.passThrough.includes(n14)) {
+          let n12 = e13.type, r4 = s2.handlers[n12];
+          if (rV.call(s2.handlers, n12) && r4)
+            return r4(s2, e13, t12);
+          if (s2.options.passThrough && s2.options.passThrough.includes(n12)) {
             if ("children" in e13) {
-              let { children: t13, ...n15 } = e13, r6 = rR(n15);
-              return r6.children = s2.all(e13), r6;
+              let { children: t13, ...n13 } = e13, r5 = rR(n13);
+              return r5.children = s2.all(e13), r5;
             }
             return rR(e13);
           }
           return (s2.options.unknownHandler || function(e14, t13) {
-            let n15 = t13.data || {}, r6 = "value" in t13 && !(rV.call(n15, "hProperties") || rV.call(n15, "hChildren")) ? { type: "text", value: t13.value } : { type: "element", tagName: "div", properties: {}, children: e14.all(t13) };
-            return e14.patch(t13, r6), e14.applyData(t13, r6);
+            let n13 = t13.data || {}, r5 = "value" in t13 && !(rV.call(n13, "hProperties") || rV.call(n13, "hChildren")) ? { type: "text", value: t13.value } : { type: "element", tagName: "div", properties: {}, children: e14.all(t13) };
+            return e14.patch(t13, r5), e14.applyData(t13, r5);
           })(s2, e13, t12);
         }, options: a2, patch: rU, wrap: rW };
-        return "function" == typeof (n13 = function(e13) {
+        return "function" == typeof (n11 = function(e13) {
           if ("definition" === e13.type || "footnoteDefinition" === e13.type) {
-            let t12 = "definition" === e13.type ? u2 : c2, n14 = String(e13.identifier).toUpperCase();
-            t12.has(n14) || t12.set(n14, e13);
+            let t12 = "definition" === e13.type ? u2 : c2, n12 = String(e13.identifier).toUpperCase();
+            t12.has(n12) || t12.set(n12, e13);
           }
-        }) ? (l3 = void 0, o2 = n13, i4 = r4) : (l3 = n13, o2 = r4, i4 = void 0), eQ(e12, l3, function(e13, t12) {
-          let n14 = t12[t12.length - 1], r5 = n14 ? n14.children.indexOf(e13) : void 0;
-          return o2(e13, r5, n14);
-        }, i4), s2;
-      }(e11, void 0), r3 = n12.one(e11, void 0), i3 = function(e12) {
-        let t11 = "string" == typeof e12.options.clobberPrefix ? e12.options.clobberPrefix : "user-content-", n13 = e12.options.footnoteBackContent || r_, r4 = e12.options.footnoteBackLabel || rB, i4 = e12.options.footnoteLabel || "Footnotes", l3 = e12.options.footnoteLabelTagName || "h2", o2 = e12.options.footnoteLabelProperties || { className: ["sr-only"] }, a2 = [], u2 = -1;
+        }) ? (l4 = void 0, o3 = n11, i5 = r3) : (l4 = n11, o3 = r3, i5 = void 0), eQ(e12, l4, function(e13, t12) {
+          let n12 = t12[t12.length - 1], r4 = n12 ? n12.children.indexOf(e13) : void 0;
+          return o3(e13, r4, n12);
+        }, i5), s2;
+      }(e11, void 0), r2 = n10.one(e11, void 0), i4 = function(e12) {
+        let t11 = "string" == typeof e12.options.clobberPrefix ? e12.options.clobberPrefix : "user-content-", n11 = e12.options.footnoteBackContent || r_, r3 = e12.options.footnoteBackLabel || rB, i5 = e12.options.footnoteLabel || "Footnotes", l4 = e12.options.footnoteLabelTagName || "h2", o3 = e12.options.footnoteLabelProperties || { className: ["sr-only"] }, a2 = [], u2 = -1;
         for (; ++u2 < e12.footnoteOrder.length; ) {
-          let i5 = e12.footnoteById.get(e12.footnoteOrder[u2]);
-          if (!i5)
+          let i6 = e12.footnoteById.get(e12.footnoteOrder[u2]);
+          if (!i6)
             continue;
-          let l4 = e12.all(i5), o3 = String(i5.identifier).toUpperCase(), c2 = P(o3.toLowerCase()), s2 = 0, f2 = [], p2 = e12.footnoteCounts.get(o3);
+          let l5 = e12.all(i6), o4 = String(i6.identifier).toUpperCase(), c2 = P(o4.toLowerCase()), s2 = 0, f2 = [], p2 = e12.footnoteCounts.get(o4);
           for (; void 0 !== p2 && ++s2 <= p2; ) {
             f2.length > 0 && f2.push({ type: "text", value: " " });
-            let e13 = "string" == typeof n13 ? n13 : n13(u2, s2);
-            "string" == typeof e13 && (e13 = { type: "text", value: e13 }), f2.push({ type: "element", tagName: "a", properties: { href: "#" + t11 + "fnref-" + c2 + (s2 > 1 ? "-" + s2 : ""), dataFootnoteBackref: "", ariaLabel: "string" == typeof r4 ? r4 : r4(u2, s2), className: ["data-footnote-backref"] }, children: Array.isArray(e13) ? e13 : [e13] });
+            let e13 = "string" == typeof n11 ? n11 : n11(u2, s2);
+            "string" == typeof e13 && (e13 = { type: "text", value: e13 }), f2.push({ type: "element", tagName: "a", properties: { href: "#" + t11 + "fnref-" + c2 + (s2 > 1 ? "-" + s2 : ""), dataFootnoteBackref: "", ariaLabel: "string" == typeof r3 ? r3 : r3(u2, s2), className: ["data-footnote-backref"] }, children: Array.isArray(e13) ? e13 : [e13] });
           }
-          let d2 = l4[l4.length - 1];
+          let d2 = l5[l5.length - 1];
           if (d2 && "element" === d2.type && "p" === d2.tagName) {
             let e13 = d2.children[d2.children.length - 1];
             e13 && "text" === e13.type ? e13.value += " " : d2.children.push({ type: "text", value: " " }), d2.children.push(...f2);
           } else
-            l4.push(...f2);
-          let h2 = { type: "element", tagName: "li", properties: { id: t11 + "fn-" + c2 }, children: e12.wrap(l4, true) };
-          e12.patch(i5, h2), a2.push(h2);
+            l5.push(...f2);
+          let h2 = { type: "element", tagName: "li", properties: { id: t11 + "fn-" + c2 }, children: e12.wrap(l5, true) };
+          e12.patch(i6, h2), a2.push(h2);
         }
         if (0 !== a2.length)
-          return { type: "element", tagName: "section", properties: { dataFootnotes: true, className: ["footnotes"] }, children: [{ type: "element", tagName: l3, properties: { ...rR(o2), id: "footnote-label" }, children: [{ type: "text", value: i4 }] }, { type: "text", value: "\n" }, { type: "element", tagName: "ol", properties: {}, children: e12.wrap(a2, true) }, { type: "text", value: "\n" }] };
-      }(n12), l2 = Array.isArray(r3) ? { type: "root", children: r3 } : r3 || { type: "root", children: [] };
-      return i3 && l2.children.push({ type: "text", value: "\n" }, i3), l2;
-    }(nh(n11));
+          return { type: "element", tagName: "section", properties: { dataFootnotes: true, className: ["footnotes"] }, children: [{ type: "element", tagName: l4, properties: { ...rR(o3), id: "footnote-label" }, children: [{ type: "text", value: i5 }] }, { type: "text", value: "\n" }, { type: "element", tagName: "ol", properties: {}, children: e12.wrap(a2, true) }, { type: "text", value: "\n" }] };
+      }(n10), l3 = Array.isArray(r2) ? { type: "root", children: r2 } : r2 || { type: "root", children: [] };
+      return i4 && l3.children.push({ type: "text", value: "\n" }, i4), l3;
+    }(nh(i3));
     return function(e11) {
-      let { components: n12 } = e11;
+      let { components: i4 } = e11;
       return function(e12) {
         return function(e13, t10) {
-          var n13, r3, i3;
-          let l2;
+          var n10, r2, i5;
+          let l3;
           if (!t10 || void 0 === t10.Fragment)
             throw TypeError("Expected `Fragment` in options");
-          let o2 = t10.filePath || void 0;
+          let o3 = t10.filePath || void 0;
           if (t10.development) {
             if ("function" != typeof t10.jsxDEV)
               throw TypeError("Expected `jsxDEV` in options when `development: true`");
-            n13 = t10.jsxDEV, l2 = function(e14, t11, r4, i4) {
-              let l3 = Array.isArray(r4.children), a3 = ro(e14);
-              return n13(t11, r4, i4, l3, { columnNumber: a3 ? a3.column - 1 : void 0, fileName: o2, lineNumber: a3 ? a3.line : void 0 }, void 0);
+            n10 = t10.jsxDEV, l3 = function(e14, t11, r3, i6) {
+              let l4 = Array.isArray(r3.children), a3 = ro(e14);
+              return n10(t11, r3, i6, l4, { columnNumber: a3 ? a3.column - 1 : void 0, fileName: o3, lineNumber: a3 ? a3.line : void 0 }, void 0);
             };
           } else {
             if ("function" != typeof t10.jsx)
               throw TypeError("Expected `jsx` in production options");
             if ("function" != typeof t10.jsxs)
               throw TypeError("Expected `jsxs` in production options");
-            r3 = t10.jsx, i3 = t10.jsxs, l2 = function(e14, t11, n14, l3) {
-              let o3 = Array.isArray(n14.children) ? i3 : r3;
-              return l3 ? o3(t11, n14, l3) : o3(t11, n14);
+            r2 = t10.jsx, i5 = t10.jsxs, l3 = function(e14, t11, n11, l4) {
+              let o4 = Array.isArray(n11.children) ? i5 : r2;
+              return l4 ? o4(t11, n11, l4) : o4(t11, n11);
             };
           }
-          let a2 = { Fragment: t10.Fragment, ancestors: [], components: t10.components || {}, create: l2, elementAttributeNameCase: t10.elementAttributeNameCase || "react", evaluater: t10.createEvaluater ? t10.createEvaluater() : void 0, filePath: o2, ignoreInvalidStyle: t10.ignoreInvalidStyle || false, passKeys: false !== t10.passKeys, passNode: t10.passNode || false, schema: "svg" === t10.space ? n1 : nG, stylePropertyNameCase: t10.stylePropertyNameCase || "dom", tableCellAlignToStyle: false !== t10.tableCellAlignToStyle }, u2 = rg(a2, e13, void 0);
+          let a2 = { Fragment: t10.Fragment, ancestors: [], components: t10.components || {}, create: l3, elementAttributeNameCase: t10.elementAttributeNameCase || "react", evaluater: t10.createEvaluater ? t10.createEvaluater() : void 0, filePath: o3, ignoreInvalidStyle: t10.ignoreInvalidStyle || false, passKeys: false !== t10.passKeys, passNode: t10.passNode || false, schema: "svg" === t10.space ? n1 : nG, stylePropertyNameCase: t10.stylePropertyNameCase || "dom", tableCellAlignToStyle: false !== t10.tableCellAlignToStyle }, u2 = rg(a2, e13, void 0);
           return u2 && "string" != typeof u2 ? u2 : a2.create(e13, a2.Fragment, { children: u2 || void 0 }, void 0);
-        }(e12, { Fragment: t, jsx: u, jsxs: c, components: n12 });
+        }(e12, { Fragment: t, jsx: n, jsxs: r, components: i4 });
       };
-    }({ components: null !== (r2 = e10.components) && void 0 !== r2 ? r2 : {} })(i2);
+    }({ components: null !== (l2 = e10.components) && void 0 !== l2 ? l2 : {} })(o2);
   }));
 }), { displayName: "Markdown" });
 export {
