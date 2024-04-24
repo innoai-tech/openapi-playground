@@ -17,8 +17,8 @@ var __privateMethod = (obj, member, method) => {
 };
 var _e, _t, _r, r_get, _n, n_fn;
 import { k as e, j as t, F as r, l as n, v as i } from "./lib-nodepkg-vue-jsx-runtime.BN22WHLF.chunk.js";
-import { O as a, B as o, S as l, v as s, p as d, w as c, n as p, x as u, e as h, I as m, r as f, s as y, m as g, b as v, E as b, c as x, h as $, d as _, y as S, i as w, z as O, R as I, j, t as k, A as C, C as N, a as q, o as D, f as T, D as F } from "./lib-nodepkg-vuekit.CaGE9cHH.chunk.js";
-import { i as B, B as P, d as W, t as R, a as L, h as A, C as J, c as H, f as M, D as z, J as V, F as E, j as U, o as K } from "./lib-nodepkg-typedef.Bwrbe8Ho.chunk.js";
+import { O as a, B as o, S as l, v as s, p as d, w as c, n as p, x as u, e as h, I as m, r as f, s as y, m as g, b as v, E as b, c as x, h as $, d as _, y as w, i as S, z as O, R as I, j, t as k, A as C, C as N, a as q, o as D, f as T, D as F } from "./lib-nodepkg-vuekit.CaGE9cHH.chunk.js";
+import { i as B, B as L, d as P, t as W, a as R, h as A, C as J, c as H, f as M, D as z, J as V, F as E, j as U, o as K } from "./lib-nodepkg-typedef.Bwrbe8Ho.chunk.js";
 import { s as G, B as Q } from "./lib-nodepkg-vueuikit.DFV9rQh5.chunk.js";
 import { M as X } from "./lib-nodepkg-vuemarkdown.BLON6V_u.chunk.js";
 import { l as Y, i as Z, F as ee } from "./lib-nodepkg-vueformdata.Dng-mErD.chunk.js";
@@ -42,35 +42,35 @@ class e$ extends a {
 let e_ = function() {
   let e10 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   return e10["Content-Type"] || e10["content-type"] || "";
-}, eS = function() {
+}, ew = function() {
   let e10 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   e10["Content-Type"] && (e10["Content-Type"] = void 0), e10["content-type"] && (e10["content-type"] = void 0);
-}, ew = (e10) => e_(e10).includes("multipart/form-data"), eO = (e10) => e_(e10).includes("application/x-www-form-urlencoded"), eI = (e10) => {
+}, eS = (e10) => e_(e10).includes("multipart/form-data"), eO = (e10) => e_(e10).includes("application/x-www-form-urlencoded"), eI = (e10) => {
   let t2 = new URLSearchParams(), r2 = (e11, n2) => {
-    if (W(n2)) {
-      P(n2, (t3) => {
+    if (P(n2)) {
+      L(n2, (t3) => {
         r2(e11, t3);
       });
       return;
     }
-    if (R(n2)) {
+    if (W(n2)) {
       r2(e11, JSON.stringify(n2));
       return;
     }
-    L(n2) || 0 === `${n2}`.length || t2.append(e11, `${n2}`);
+    R(n2) || 0 === `${n2}`.length || t2.append(e11, `${n2}`);
   };
-  return P(e10, (e11, t3) => {
+  return L(e10, (e11, t3) => {
     r2(t3, e11);
   }), t2.toString();
 }, ej = (e10, t2) => {
-  if (ew(t2)) {
-    eS(t2);
+  if (eS(t2)) {
+    ew(t2);
     let r2 = new FormData(), n2 = (e11, t3) => {
-      t3 instanceof File || t3 instanceof Blob ? r2.append(e11, t3) : W(t3) ? P(t3, (t4) => n2(e11, t4)) : R(t3) ? r2.append(e11, JSON.stringify(t3)) : r2.append(e11, t3);
+      t3 instanceof File || t3 instanceof Blob ? r2.append(e11, t3) : P(t3) ? L(t3, (t4) => n2(e11, t4)) : W(t3) ? r2.append(e11, JSON.stringify(t3)) : r2.append(e11, t3);
     };
-    return P(e10, (e11, t3) => n2(t3, e11)), r2;
+    return L(e10, (e11, t3) => n2(t3, e11)), r2;
   }
-  return eO(t2) ? eI(e10) : W(e10) || R(e10) ? JSON.stringify(e10) : e10;
+  return eO(t2) ? eI(e10) : P(e10) || W(e10) ? JSON.stringify(e10) : e10;
 }, ek = (e10) => {
   let { paramsSerializer: t2, transformRequestBody: r2 } = e10;
   return { toHref: (e11) => {
@@ -149,7 +149,7 @@ const _eF = class _eF extends m {
       let i2 = Object.keys(null !== (r2 = null === (t2 = n2.requestBody) || void 0 === t2 ? void 0 : t2.content) && void 0 !== r2 ? r2 : {})[0];
       return (e11) => {
         var t3, r3;
-        return { method: n2.method, url: __privateGet(this, _r, r_get) + eP(n2.path, e11), params: eT(e11, null === (t3 = n2.parameters) || void 0 === t3 ? void 0 : t3.filter((e12) => "query" == e12.in).map((e12) => e12.name)), headers: { ...eT(e11, null === (r3 = n2.parameters) || void 0 === r3 ? void 0 : r3.filter((e12) => "header" == e12.in).map((e12) => e12.name)), ...i2 ? { "Content-Type": i2 } : {} }, body: e11.body, inputs: e11 };
+        return { method: n2.method, url: __privateGet(this, _r, r_get) + eL(n2.path, e11), params: eT(e11, null === (t3 = n2.parameters) || void 0 === t3 ? void 0 : t3.filter((e12) => "query" == e12.in).map((e12) => e12.name)), headers: { ...eT(e11, null === (r3 = n2.parameters) || void 0 === r3 ? void 0 : r3.filter((e12) => "header" == e12.in).map((e12) => e12.name)), ...i2 ? { "Content-Type": i2 } : {} }, body: e11.body, inputs: e11 };
       };
     }
     return null;
@@ -215,39 +215,39 @@ function* eB(e10, t2) {
       if ("OpenAPI" != l2.operationId && "OpenAPIView" != l2.operationId && (!t2.tag || (null !== (n2 = l2.tags) && void 0 !== n2 ? n2 : []).includes(t2.tag))) {
         if (t2.operationId) {
           if (t2.operationId.startsWith("*")) {
-            if (!l2.operationId.includes(t2.operationId.slice(1)))
+            if (!l2.operationId.toLowerCase().includes(t2.operationId.slice(1).toLowerCase()))
               continue;
-          } else if (l2.operationId != t2.operationId)
+          } else if (l2.operationId.toLowerCase() != t2.operationId.toLowerCase())
             continue;
         }
         yield { ...l2, method: e11, path: a2, group: null !== (i2 = null === (r2 = l2.tags) || void 0 === r2 ? void 0 : r2[0]) && void 0 !== i2 ? i2 : "" };
       }
     }
 }
-let eP = function(e10) {
+let eL = function(e10) {
   let t2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return e10.replace(/{([\s\S]+?)}/g, (e11, r2) => [].concat(t2[r2] || e11).join(","));
-}, eW = x(() => eF.empty(), { name: "OpenAPI" }), eR = (e10) => (t2, r2) => t2[e10] == r2[e10] ? 0 : t2[e10] < r2[e10] ? -1 : 1, eL = $((r2, n2) => {
-  let {} = r2, {} = n2, i2 = eW.use(), a2 = new m({ operationId: void 0 }), o2 = new l();
-  f(o2, S(200), d((e10) => {
+}, eP = x(() => eF.empty(), { name: "OpenAPI" }), eW = (e10) => (t2, r2) => t2[e10] == r2[e10] ? 0 : t2[e10] < r2[e10] ? -1 : 1, eR = $((r2, n2) => {
+  let {} = r2, {} = n2, i2 = eP.use(), a2 = new m({ operationId: void 0 }), o2 = new l();
+  f(o2, w(200), d((e10) => {
     a2.next((t2) => {
       t2.operationId = `*${null != e10 ? e10 : ""}`;
     });
   }), _());
-  let s2 = f(a2, y((e10) => i2.operations$(e10)), w((r3) => {
+  let s2 = f(a2, y((e10) => i2.operations$(e10)), S((r3) => {
     let n3 = Object.groupBy(r3, (e10) => e10.group);
     return e(eJ, { children: [t(eH, { children: t("input", { type: "text", placeholder: "请输入 operationId 查询", onInput: (e10) => {
       o2.next(e10.target.value);
     } }) }), t(eM, { sx: { flex: 1, overflow: "scroll" }, children: Object.entries(n3).toSorted().map((r4) => {
       let [n4, i3] = r4;
-      return e("div", { "data-nav-group": true, children: [t("div", { "data-nav-group-heading": true, children: n4 }), t("div", { "data-nav-group-contents": true, children: null == i3 ? void 0 : i3.toSorted(eR("operationId")).map((r5) => {
+      return e("div", { "data-nav-group": true, children: [t("div", { "data-nav-group-heading": true, children: n4 }), t("div", { "data-nav-group-contents": true, children: null == i3 ? void 0 : i3.toSorted(eW("operationId")).map((r5) => {
         var n5;
         return e(eV, { component: O, to: `/operations/${r5.operationId}`, children: [t(Q, { "data-operation-method": true, sx: { color: null !== (n5 = { get: "sys.primary", post: "sys.success", put: "sys.warning", delete: "sys.error" }[r5.method]) && void 0 !== n5 ? n5 : "sys.secondary" }, children: r5.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-id": true, children: r5.operationId }), r5.summary ? t("div", { "data-operation-summary": true, children: r5.summary != r5.operationId ? r5.summary : t("span", { children: " " }) }) : void 0] })] });
       }) })] });
     }) })] });
   }));
   return () => e(eA, { children: [s2, t(ez, { children: t(I, {}) })] });
-}), eA = G("div")({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), eJ = G("aside")({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), eH = G("div")({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), eM = G("div")({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), ez = G("main")({ flex: 1, overflow: "hidden" }), eV = G("a")({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), eE = Object.assign(eL, { displayName: "OpenAPIView" }), eU = G("div")({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), eK = G("div", { deprecated: A().optional(), optional: A().optional(), nullable: A().optional() })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14, color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), eG = G("div", { spacing: J().optional().default(0), $default: H().optional() }, (e10, r2) => {
+}), eA = G("div")({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), eJ = G("aside")({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), eH = G("div")({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), eM = G("div")({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), ez = G("main")({ flex: 1, overflow: "hidden" }), eV = G("a")({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), eE = Object.assign(eR, { displayName: "OpenAPIView" }), eU = G("div")({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), eK = G("div", { deprecated: A().optional(), optional: A().optional(), nullable: A().optional() })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14, color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), eG = G("div", { spacing: J().optional().default(0), $default: H().optional() }, (e10, r2) => {
   let { slots: n2 } = r2, i2 = eY.use();
   return (r3) => {
     var a2;
@@ -303,14 +303,14 @@ let eP = function(e10) {
       }
     }
     let [u2, h2, m2] = [i2.type, i2.getSchema("format"), i2.getSchema("default")];
-    return e(r, { children: [t(e2, { sx: { fontWeight: "bold" }, children: u2 || "any" }), e(e5, { children: [h2 && t(eX, { name: "format", value: h2 }), !L(m2) && t(eX, { name: "default", value: m2 }), !e4(i2) && t(eX, { name: "validate", value: (p2 = i2).getSchema("x-tag-validate") ? p2.getSchema("x-tag-validate") : e4(p2) ? p2.getSchema("pattern") ? `@r/${String(p2.getSchema("pattern"))}/` : `@${p2.getSchema("exclusiveMinimum")} ? "(" : "["}${p2.getSchema("minProperties") ? p2.getSchema("minProperties") : p2.getSchema("minItems") ? p2.getSchema("minItems") : p2.getSchema("minimum") ? p2.getSchema("minimum") : p2.getSchema("minLength") ? p2.getSchema("minLength") : "string" === p2.type ? "0" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞"},${p2.getSchema("maxProperties") ? p2.getSchema("maxProperties") : p2.getSchema("maxItems") ? p2.getSchema("maxItems") : p2.getSchema("maximum") ? p2.getSchema("maximum") : p2.getSchema("maxLength") ? p2.getSchema("maxLength") : "string" === p2.type && "uint64" === p2.getSchema("format") ? "19" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${p2.getSchema("exclusiveMaximum") ? ")" : "]"}` : "" })] })] });
+    return e(r, { children: [t(e2, { sx: { fontWeight: "bold" }, children: u2 || "any" }), e(e5, { children: [h2 && t(eX, { name: "format", value: h2 }), !R(m2) && t(eX, { name: "default", value: m2 }), !e4(i2) && t(eX, { name: "validate", value: (p2 = i2).getSchema("x-tag-validate") ? p2.getSchema("x-tag-validate") : e4(p2) ? p2.getSchema("pattern") ? `@r/${String(p2.getSchema("pattern"))}/` : `@${p2.getSchema("exclusiveMinimum")} ? "(" : "["}${p2.getSchema("minProperties") ? p2.getSchema("minProperties") : p2.getSchema("minItems") ? p2.getSchema("minItems") : p2.getSchema("minimum") ? p2.getSchema("minimum") : p2.getSchema("minLength") ? p2.getSchema("minLength") : "string" === p2.type ? "0" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞"},${p2.getSchema("maxProperties") ? p2.getSchema("maxProperties") : p2.getSchema("maxItems") ? p2.getSchema("maxItems") : p2.getSchema("maximum") ? p2.getSchema("maximum") : p2.getSchema("maxLength") ? p2.getSchema("maxLength") : "string" === p2.type && "uint64" === p2.getSchema("format") ? "19" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${p2.getSchema("exclusiveMaximum") ? ")" : "]"}` : "" })] })] });
   };
 });
 function e4(e10) {
   return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t2) => e10.getSchema(t2));
 }
 let e2 = Object.assign(eU, { displayName: "Token" }), e8 = Object.assign(eK, { displayName: "PropName" }), e6 = Object.assign(eG, { displayName: "Line" }), e3 = Object.assign(eQ, { displayName: "Description" }), e5 = Object.assign(eZ, { displayName: "Indent" }), e7 = Object.assign(e1, { displayName: "SchemaView" }), e9 = $({ code: H(), response: H() }, (n2) => {
-  let i2 = eW.use();
+  let i2 = eP.use();
   return () => {
     var a2, o2;
     return e(te, { children: [t(tt, { "data-failed": function(e10) {
@@ -391,10 +391,10 @@ Content-Disposition: form-data; name="${t3}"${n2.name ? `; filename="${n2.name}"
 Content-Type: ${n2.type}
 
 [File Content]
-` : W(n2) ? n2.map((e11) => r2(t3, e11)).join("\n") : `${e10}
+` : P(n2) ? n2.map((e11) => r2(t3, e11)).join("\n") : `${e10}
 Content-Disposition: form-data; name="${t3}"
 
-${R(n2) ? JSON.stringify(n2) : String(n2)}
+${W(n2) ? JSON.stringify(n2) : String(n2)}
 `;
   return Object.entries(t2).map((e11) => {
     let [t3, n2] = e11;
@@ -440,9 +440,9 @@ function tb() {
       return r2;
   return "";
 }
-let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, { displayName: "HttpRequest" }), t_ = Object.assign(tv, { displayName: "HTTPResponse" }), tS = $({ operationID: M() }, (e10) => f(eW.use().response$(e10.operationID), w((e11) => t(tw, { children: t(t_, { response: e11 }) })))), tw = G("section")({ maxHeight: "40vh", overflow: "auto" }), tO = Object.assign(tS, { displayName: "ResponsePreview" }), tI = $({ operation: H(), $default: H() }, (r2, n2) => {
+let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, { displayName: "HttpRequest" }), t_ = Object.assign(tv, { displayName: "HTTPResponse" }), tw = $({ operationID: M() }, (e10) => f(eP.use().response$(e10.operationID), S((e11) => t(tS, { children: t(t_, { response: e11 }) })))), tS = G("section")({ maxHeight: "40vh", overflow: "auto" }), tO = Object.assign(tw, { displayName: "ResponsePreview" }), tI = $({ operation: H(), $default: H() }, (r2, n2) => {
   var i2, a2, o2, l2;
-  let { slots: s2 } = n2, c2 = eW.use(), p2 = {};
+  let { slots: s2 } = n2, c2 = eP.use(), p2 = {};
   for (let e10 of null !== (i2 = r2.operation.parameters) && void 0 !== i2 ? i2 : []) {
     let t2 = V.decode(e10.schema, (e11) => {
       var t3;
@@ -474,7 +474,7 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
   }), d((e10) => {
     u2.replace({ query: { params: btoa(JSON.stringify(e10)) } });
   }), _());
-  let y2 = f(m2.inputs$, w((e10) => {
+  let y2 = f(m2.inputs$, S((e10) => {
     let n3 = c2.asRequestConfigCreator(r2.operation.operationId);
     return n3 ? t(t$, { request: n3(e10) }) : null;
   }));
@@ -512,21 +512,21 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
     } }), t(en, { path: er }), t("span", { children: null === (i2 = n2.value) || void 0 === i2 ? void 0 : i2.name })] });
   };
 }), tN = Object.assign(tI, { displayName: "RequestBuilder" }), tq = Object.assign(tk, { displayName: "TextInput" }), tD = Object.assign(tC, { displayName: "FileSelectInput" }), tT = $({ operationId: M() }, (n2, i2) => {
-  let {} = i2, a2 = eW.use(), o2 = f(n2.operationId$, y((e10) => a2.operation$(e10))), l2 = f(o2, F((e10) => !!e10)), s2 = f(l2, w((r2) => {
+  let {} = i2, a2 = eP.use(), o2 = f(n2.operationId$, y((e10) => a2.operation$(e10))), l2 = f(o2, F((e10) => !!e10)), s2 = f(l2, S((r2) => {
     var n3;
     return e(tB, { sx: { containerStyle: null !== (n3 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[r2.method]) && void 0 !== n3 ? n3 : "sys.secondary-container" }, children: [t("div", { "data-operation-method": true, children: r2.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-path": true, children: r2.path }), e("div", { "data-operation-summary": true, children: [r2.summary, " ", r2.operationId != r2.summary ? r2.operationId : ""] })] })] });
-  })), d2 = f(l2, w((e10) => t("span", { children: e10.description }))), c2 = f(l2, w((e10) => {
+  })), d2 = f(l2, S((e10) => t("span", { children: e10.description }))), c2 = f(l2, S((e10) => {
     var n3;
     return t(tN, { operation: e10, children: t(r, { children: Object.entries(null !== (n3 = e10.responses) && void 0 !== n3 ? n3 : {}).map((e11) => {
       let [r2, n4] = e11;
       return t(tn, { code: r2, response: n4 }, r2);
     }) }) }, e10.operationId);
   }));
-  return f(o2, w((r2) => r2 ? e(tF, { children: [s2, e(Q, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [d2, t(Q, { sx: { flex: 1, overflow: "auto" }, children: c2 })] })] }, r2.operationId) : null));
-}), tF = G("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tB = G("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tP = Object.assign(tT, { displayName: "OperationView" });
+  return f(o2, S((r2) => r2 ? e(tF, { children: [s2, e(Q, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [d2, t(Q, { sx: { flex: 1, overflow: "auto" }, children: c2 })] })] }, r2.operationId) : null));
+}), tF = G("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tB = G("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tL = Object.assign(tT, { displayName: "OperationView" });
 export {
-  eW as O,
-  tP as a,
+  eP as O,
+  tL as a,
   eE as b,
   ek as c,
   eI as p,
