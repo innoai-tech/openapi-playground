@@ -23,29 +23,29 @@ var __privateSet = (obj, member, value, setter) => {
   return value;
 };
 var _t, _e;
-import { S as t, I as e, r as i, g as s, m as n } from "./lib-nodepkg-vuekit.Da1QhWA9.chunk.js";
-import { i as r, E as a, S as l, a as u, b as o, s as f, g as h, T as d } from "./lib-nodepkg-typedef.Bwrbe8Ho.chunk.js";
-class p extends t {
-  constructor(t2, i2) {
-    var s2;
+import { i as t, E as e, S as i, a as s, b as n, s as r, g as a, T as l } from "./lib-nodepkg-typedef.Bwrbe8Ho.chunk.js";
+import { S as u, I as o, r as f, g as h, m as d } from "./lib-nodepkg-vuekit.CaGE9cHH.chunk.js";
+class p extends u {
+  constructor(t2, e2) {
+    var i2;
     super();
     __publicField(this, "inputs$");
     __publicField(this, "_fields", /* @__PURE__ */ new Map());
     __publicField(this, "submit", () => {
       let t2 = {}, e2 = false;
-      for (let [i2, s2] of this._fields) {
-        if (s2.blur(), s2.state.error) {
+      for (let [i2, a2] of this._fields) {
+        if (a2.blur(), a2.state.error) {
           e2 = true;
           continue;
         }
-        let n2 = s2.input, r2 = s2.validate(n2);
-        if (r2) {
-          s2.next((t3) => {
-            t3.error = r2;
+        let l2 = a2.input, u2 = a2.validate(l2);
+        if (u2) {
+          a2.next((t3) => {
+            t3.error = u2;
           }), e2 = true;
           continue;
         }
-        u(n2) || (o(n2) ? f(t2, i2, { ...n2 }) : f(t2, i2, n2));
+        s(l2) || (n(l2) ? r(t2, i2, { ...l2 }) : r(t2, i2, l2));
       }
       e2 || this.next(t2);
     });
@@ -58,10 +58,10 @@ class p extends t {
           });
       }
     });
-    this.typedef = t2, this.inputs$ = new e(null !== (s2 = i2()) && void 0 !== s2 ? s2 : {});
+    this.typedef = t2, this.inputs$ = new o(null !== (i2 = e2()) && void 0 !== i2 ? i2 : {});
   }
-  static of(t2, e2) {
-    return new p(t2, () => r(e2) ? e2() : e2);
+  static of(e2, i2) {
+    return new p(e2, () => t(i2) ? i2() : i2);
   }
   get inputs() {
     return this.inputs$.value;
@@ -70,12 +70,12 @@ class p extends t {
     return this._fields.get(t2);
   }
   *fields(t2) {
-    let e2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.inputs$.value, i2 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    for (let [s2, n2, r2] of t2.entries(e2, a)) {
-      if (s2 === l || "never" === r2.type)
+    let s2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.inputs$.value, n2 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+    for (let [r2, a2, l2] of t2.entries(s2, e)) {
+      if (r2 === i || "never" === l2.type)
         continue;
-      let t3 = [...i2, s2], e3 = v.stringify(t3), n3 = this._fields.get(e3);
-      n3 || (n3 = new v(this, r2, t3), this._fields.set(e3, n3)), yield n3;
+      let t3 = [...n2, r2], e2 = v.stringify(t3), s3 = this._fields.get(e2);
+      s3 || (s3 = new v(this, l2, t3), this._fields.set(e2, s3)), yield s3;
     }
   }
   reset() {
@@ -83,9 +83,9 @@ class p extends t {
       e2.reset();
   }
 }
-const _v = class _v extends e {
+const _v = class _v extends o {
   constructor(t2, e2, i2, s2 = _v.stringify(i2)) {
-    super({ initial: h(t2.inputs$.value, s2, _v.defaultValue(e2)) });
+    super({ initial: a(t2.inputs$.value, s2, _v.defaultValue(e2)) });
     __privateAdd(this, _t, void 0);
     __privateAdd(this, _e, void 0);
     __publicField(this, "focus", () => {
@@ -100,12 +100,12 @@ const _v = class _v extends e {
     });
     __publicField(this, "reset", () => {
       this.form$.inputs$.next((t2) => {
-        f(t2, this.name, this.value.initial);
+        r(t2, this.name, this.value.initial);
       }), this.next({ initial: this.value.initial });
     });
     __publicField(this, "update", (t2) => {
       this.form$.inputs$.next((e2) => {
-        f(e2, this.name, t2);
+        r(e2, this.name, t2);
       }), this.next((e2) => {
         var i2;
         e2.dirty = t2 !== e2.initial, e2.error = null !== (i2 = this.validate(t2)) && void 0 !== i2 ? i2 : null;
@@ -125,7 +125,7 @@ const _v = class _v extends e {
     return e2;
   }
   get input() {
-    return h(this.form$.inputs$.value, this.name, _v.defaultValue(this.typedef));
+    return a(this.form$.inputs$.value, this.name, _v.defaultValue(this.typedef));
   }
   get meta() {
     return this.typedef.meta;
@@ -137,15 +137,15 @@ const _v = class _v extends e {
     return void 0 === __privateGet(this, _t) && __privateSet(this, _t, !this.validate(void 0)), __privateGet(this, _t);
   }
   get input$() {
-    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, i(this.form$.inputs$, n((t2) => h(t2, this.name, _v.defaultValue(this.typedef))), s())), __privateGet(this, _e);
+    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, f(this.form$.inputs$, d((t2) => a(t2, this.name, _v.defaultValue(this.typedef))), h())), __privateGet(this, _e);
   }
   validate(t2) {
-    let e2 = "array" !== this.typedef.type || u(t2) ? t2 : t2.filter((t3) => !u(t3)), [i2] = this.typedef.validate(e2);
+    let e2 = "array" !== this.typedef.type || s(t2) ? t2 : t2.filter((t3) => !s(t3)), [i2] = this.typedef.validate(e2);
     if (!i2)
       return;
-    let s2 = i2.failures().filter((t3) => "never" !== t3.type && 0 === t3.path.length);
-    if (0 !== s2.length)
-      return s2.map((t3) => void 0 === t3.value ? "字段不能为空" : t3.message);
+    let n2 = i2.failures().filter((t3) => "never" !== t3.type && 0 === t3.path.length);
+    if (0 !== n2.length)
+      return n2.map((t3) => void 0 === t3.value ? "字段不能为空" : t3.message);
   }
   destroy() {
     this.form$._fields.delete(this.name);
@@ -162,10 +162,10 @@ __publicField(_v, "defaultValue", (t2) => {
 });
 let v = _v;
 function m(t2) {
-  return (e2) => d.of(e2, { $meta: { label: t2 } });
+  return (e2) => l.of(e2, { $meta: { label: t2 } });
 }
 function c(t2) {
-  return (e2) => d.of(e2, { $meta: { input: t2 } });
+  return (e2) => l.of(e2, { $meta: { input: t2 } });
 }
 export {
   p as F,
