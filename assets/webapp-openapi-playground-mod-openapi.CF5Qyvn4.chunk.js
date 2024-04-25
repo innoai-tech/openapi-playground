@@ -262,58 +262,85 @@ let eL = function(e10) {
   };
 })({ position: "relative", pt: 4, "& p": { my: 1, "&::before": { content: '"// "', fontFamily: "code" }, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12 }), eX = (n2) => {
   let { name: i2, value: a2, extra: o2 } = n2;
-  return "" == a2 ? null : t(e6, { children: e(e2, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e2, { sx: { color: "sys.primary" }, children: `@${i2}(` }), `${a2}`, Object.entries(null != o2 ? o2 : {}).map((n3) => {
+  return "" == a2 ? null : t(e5, { children: e(e6, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e6, { sx: { color: "sys.primary" }, children: `@${i2}(` }), `${a2}`, Object.entries(null != o2 ? o2 : {}).map((n3) => {
     let [i3, a3] = n3;
-    return e(r, { children: [e(e2, { sx: { opacity: 0.5 }, children: [",", " "] }), t(e2, { sx: { opacity: 0.5 }, children: i3 }), e(e2, { sx: { opacity: 0.5 }, children: [":", " "] }), t(e2, { sx: { opacity: 0.7 }, children: a3 })] });
-  }), t(e2, { sx: { color: "sys.primary" }, children: ")" })] }) });
+    return e(r, { children: [e(e6, { sx: { opacity: 0.5 }, children: [",", " "] }), t(e6, { sx: { opacity: 0.5 }, children: i3 }), e(e6, { sx: { opacity: 0.5 }, children: [":", " "] }), t(e6, { sx: { opacity: 0.7 }, children: a3 })] });
+  }), t(e6, { sx: { color: "sys.primary" }, children: ")" })] }) });
 }, eY = x(() => ({ indent: 0 }), { name: "IntentContext" }), eZ = j({ $default: H().optional() }, (e10, r2) => {
   let {} = e10, { slots: n2 } = r2, i2 = eY.use();
   return () => {
     var e11;
     return t(eY, { value: { indent: i2.indent + 1 }, children: null === (e11 = n2.default) || void 0 === e11 ? void 0 : e11.call(n2) });
   };
-}), e0 = $({ schema: H() }, (e10) => () => t(r, { children: t(e7, { schema: e10.schema }) })), e1 = $({ schema: H() }, (n2) => {
+});
+class e0 {
+  constructor(e10, t2) {
+    this.id = e10, this.parent = t2;
+  }
+  child(e10) {
+    return new e0(e10, this);
+  }
+  safe(e10) {
+    let t2 = this;
+    for (; t2; ) {
+      if (t2.id == e10)
+        return false;
+      t2 = t2.parent;
+    }
+    return true;
+  }
+}
+let e1 = x(() => new e0("")), e4 = $({ schema: H() }, (r2) => {
+  let n2 = e1.use();
+  return () => {
+    let i2 = r2.schema.getSchema("$ref"), a2 = r2.schema;
+    for (; a2.getSchema("$ref"); )
+      a2 = a2.unwrap;
+    let o2 = "intersection" == a2.type || "object" == a2.type || "union" == a2.type || "record" == a2.type || "array" == a2.type || "union" == a2.type;
+    return e(e1, { value: n2.child(i2), children: [o2 && t(O, { to: `#${i2}`, children: e(e6, { id: i2, children: [i2, " "] }) }), n2.safe(i2) && t(te, { schema: a2 })] });
+  };
+}), e2 = $({ schema: H() }, (n2) => {
   let i2 = n2.schema;
-  return i2.getSchema("$ref") ? t(e0, { schema: i2.unwrap }) : () => {
+  return i2.getSchema("$ref") ? t(e4, { schema: i2 }) : () => {
     var n3, a2, o2, l2, s2, d2, c2, p2;
     switch (i2.type) {
       case "union":
-        return t(r, { children: null === (n3 = i2.getSchema("oneOf")) || void 0 === n3 ? void 0 : n3.map((n4, i3) => e(r, { children: [i3 > 0 && e(e2, { children: [" ", " | ", " "] }), t(e7, { schema: n4 })] })) });
+        return t(r, { children: null === (n3 = i2.getSchema("oneOf")) || void 0 === n3 ? void 0 : n3.map((n4, i3) => e(r, { children: [i3 > 0 && e(e6, { children: [" ", " | ", " "] }), t(te, { schema: n4 })] })) });
       case "intersection":
-        return t(e2, { children: null === (a2 = i2.getSchema("allOf")) || void 0 === a2 ? void 0 : a2.filter((e10) => !Object.keys(e10).length).map((n4, i3) => e(r, { children: [i3 > 0 && e(e2, { children: [" ", "&", " "] }), t(e7, { schema: n4 })] })) });
+        return t(e6, { children: null === (a2 = i2.getSchema("allOf")) || void 0 === a2 ? void 0 : a2.filter((e10) => !Object.keys(e10).length).map((n4, i3) => e(r, { children: [i3 > 0 && e(e6, { children: [" ", "&", " "] }), t(te, { schema: n4 })] })) });
       case "array":
-        return e(e2, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e2, { children: "Array<" }), t(e7, { schema: null !== (o2 = i2.getSchema("items")) && void 0 !== o2 ? o2 : z() }), t(e2, { children: ">" })] });
+        return e(e6, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e6, { children: "Array<" }), t(te, { schema: null !== (o2 = i2.getSchema("items")) && void 0 !== o2 ? o2 : z() }), t(e6, { children: ">" })] });
       case "object":
-        return e(r, { children: [t(e2, { children: "{" }), t(e5, { children: t(r, { children: Object.entries(null !== (l2 = i2.getSchema("properties")) && void 0 !== l2 ? l2 : {}).map((n4) => {
+        return e(r, { children: [t(e6, { children: "{" }), t(e9, { children: t(r, { children: Object.entries(null !== (l2 = i2.getSchema("properties")) && void 0 !== l2 ? l2 : {}).map((n4) => {
           var a3;
           let [o3, l3] = n4;
-          return l3 ? t(r, { children: e(e6, { spacing: 2, children: [t(e3, { schema: l3 }), e(e2, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e8, { nullable: l3.getSchema("nullable"), deprecated: l3.getSchema("deprecated"), optional: !(null !== (a3 = i2.getSchema("required")) && void 0 !== a3 ? a3 : []).includes(o3), children: o3 }), t(e2, { sx: { mr: "1em" }, children: ":" }), t(e7, { schema: l3 })] })] }) }) : null;
-        }) }) }), t(e2, { children: "}" })] });
+          return l3 ? t(r, { children: e(e5, { spacing: 2, children: [t(e7, { schema: l3 }), e(e6, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [t(e3, { nullable: l3.getSchema("nullable"), deprecated: l3.getSchema("deprecated"), optional: !(null !== (a3 = i2.getSchema("required")) && void 0 !== a3 ? a3 : []).includes(o3), children: o3 }), t(e6, { sx: { mr: "1em" }, children: ":" }), t(te, { schema: l3 })] })] }) }) : null;
+        }) }) }), t(e6, { children: "}" })] });
       case "record":
-        return e(r, { children: [t(e2, { children: "{" }), i2.getSchema("additionalProperties") && t(r, { children: t(e5, { children: e(e6, { children: [e(e2, { sx: { mr: 1 }, children: ["[K:", " "] }), t(e7, { schema: null !== (s2 = i2.getSchema("propertyNames")) && void 0 !== s2 ? s2 : M() }), e(e2, { sx: { mr: 1 }, children: ["]:", " "] }), t(e7, { schema: null !== (d2 = i2.getSchema("additionalProperties")) && void 0 !== d2 ? d2 : z() })] }) }) }), t(e2, { children: "}" })] });
+        return e(r, { children: [t(e6, { children: "{" }), i2.getSchema("additionalProperties") && t(r, { children: t(e9, { children: e(e5, { children: [e(e6, { sx: { mr: 1 }, children: ["[K:", " "] }), t(te, { schema: null !== (s2 = i2.getSchema("propertyNames")) && void 0 !== s2 ? s2 : M() }), e(e6, { sx: { mr: 1 }, children: ["]:", " "] }), t(te, { schema: null !== (d2 = i2.getSchema("additionalProperties")) && void 0 !== d2 ? d2 : z() })] }) }) }), t(e6, { children: "}" })] });
       case "enums": {
         let n4 = null !== (c2 = i2.getSchema("enum")) && void 0 !== c2 ? c2 : [];
         if (1 == n4.length)
-          return t(e2, { children: JSON.stringify(n4[0]) });
+          return t(e6, { children: JSON.stringify(n4[0]) });
         let a3 = "any";
-        return n4.length > 0 && (a3 = typeof n4[0]), e(r, { children: [t(e2, { sx: { fontWeight: "bold" }, children: a3 }), t(e5, { children: n4.map((e10, r2) => {
+        return n4.length > 0 && (a3 = typeof n4[0]), e(r, { children: [t(e6, { sx: { fontWeight: "bold" }, children: a3 }), t(e9, { children: n4.map((e10, r2) => {
           var n5;
           return t(eX, { name: "enum", value: `${e10}`, extra: (null === (n5 = i2.getMeta("enumLabels")) || void 0 === n5 ? void 0 : n5[r2]) ? { label: JSON.stringify(i2.getMeta("enumLabels")[r2]) } : {} }, e10);
         }) })] });
       }
     }
     let [u2, h2, m2] = [i2.type, i2.getSchema("format"), i2.getSchema("default")];
-    return e(r, { children: [t(e2, { sx: { fontWeight: "bold" }, children: u2 || "any" }), e(e5, { children: [h2 && t(eX, { name: "format", value: h2 }), !R(m2) && t(eX, { name: "default", value: m2 }), !e4(i2) && t(eX, { name: "validate", value: (p2 = i2).getSchema("x-tag-validate") ? p2.getSchema("x-tag-validate") : e4(p2) ? p2.getSchema("pattern") ? `@r/${String(p2.getSchema("pattern"))}/` : `@${p2.getSchema("exclusiveMinimum")} ? "(" : "["}${p2.getSchema("minProperties") ? p2.getSchema("minProperties") : p2.getSchema("minItems") ? p2.getSchema("minItems") : p2.getSchema("minimum") ? p2.getSchema("minimum") : p2.getSchema("minLength") ? p2.getSchema("minLength") : "string" === p2.type ? "0" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞"},${p2.getSchema("maxProperties") ? p2.getSchema("maxProperties") : p2.getSchema("maxItems") ? p2.getSchema("maxItems") : p2.getSchema("maximum") ? p2.getSchema("maximum") : p2.getSchema("maxLength") ? p2.getSchema("maxLength") : "string" === p2.type && "uint64" === p2.getSchema("format") ? "19" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${p2.getSchema("exclusiveMaximum") ? ")" : "]"}` : "" })] })] });
+    return e(r, { children: [t(e6, { sx: { fontWeight: "bold" }, children: u2 || "any" }), e(e9, { children: [h2 && t(eX, { name: "format", value: h2 }), !R(m2) && t(eX, { name: "default", value: m2 }), !e8(i2) && t(eX, { name: "validate", value: (p2 = i2).getSchema("x-tag-validate") ? p2.getSchema("x-tag-validate") : e8(p2) ? p2.getSchema("pattern") ? `@r/${String(p2.getSchema("pattern"))}/` : `@${p2.getSchema("exclusiveMinimum")} ? "(" : "["}${p2.getSchema("minProperties") ? p2.getSchema("minProperties") : p2.getSchema("minItems") ? p2.getSchema("minItems") : p2.getSchema("minimum") ? p2.getSchema("minimum") : p2.getSchema("minLength") ? p2.getSchema("minLength") : "string" === p2.type ? "0" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "-∞"},${p2.getSchema("maxProperties") ? p2.getSchema("maxProperties") : p2.getSchema("maxItems") ? p2.getSchema("maxItems") : p2.getSchema("maximum") ? p2.getSchema("maximum") : p2.getSchema("maxLength") ? p2.getSchema("maxLength") : "string" === p2.type && "uint64" === p2.getSchema("format") ? "19" : ("number" === p2.type || "integer" === p2.type) && p2.getSchema("format") ? `${Math.pow(2, Number(p2.getSchema("format").replace(/[^0-9]/g, "")) - 1) - 1}` : "+∞"}${p2.getSchema("exclusiveMaximum") ? ")" : "]"}` : "" })] })] });
   };
 });
-function e4(e10) {
+function e8(e10) {
   return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t2) => e10.getSchema(t2));
 }
-let e2 = Object.assign(eU, { displayName: "Token" }), e8 = Object.assign(eK, { displayName: "PropName" }), e6 = Object.assign(eG, { displayName: "Line" }), e3 = Object.assign(eQ, { displayName: "Description" }), e5 = Object.assign(eZ, { displayName: "Indent" }), e7 = Object.assign(e1, { displayName: "SchemaView" }), e9 = $({ code: H(), response: H() }, (n2) => {
+let e6 = Object.assign(eU, { displayName: "Token" }), e3 = Object.assign(eK, { displayName: "PropName" }), e5 = Object.assign(eG, { displayName: "Line" }), e7 = Object.assign(eQ, { displayName: "Description" }), e9 = Object.assign(eZ, { displayName: "Indent" }), te = Object.assign(e2, { displayName: "SchemaView" }), tt = $({ code: H(), response: H() }, (n2) => {
   let i2 = eP.use();
   return () => {
     var a2, o2;
-    return e(te, { children: [t(tt, { "data-failed": function(e10) {
+    return e(tr, { children: [t(tn, { "data-failed": function(e10) {
       try {
         return Number(e10) >= 400;
       } catch (e11) {
@@ -325,18 +352,18 @@ let e2 = Object.assign(eU, { displayName: "Token" }), e8 = Object.assign(eK, { d
         let [r2, n3] = t2.split("=", 2);
         return eq(r2) || eq(n3) ? e12 : { ...e12, [r2]: n3 };
       }, {}) : null;
-    }(e10)).map((r2) => r2 ? t(Q, { sx: { mb: 16 }, children: e(e6, { spacing: 0, children: [e(e2, { children: ["{", " "] }), t(e5, { children: Object.entries(r2).map((r3) => {
+    }(e10)).map((r2) => r2 ? t(Q, { sx: { mb: 16 }, children: e(e5, { spacing: 0, children: [e(e6, { children: ["{", " "] }), t(e9, { children: Object.entries(r2).map((r3) => {
       let [n3, i3] = r3;
-      return "code" === n3 ? null : e(e6, { children: [t(e8, { children: n3 }), t(e2, { children: ": " }), t(e2, { children: i3 })] });
-    }) }), e(e2, { children: [" ", "}"] })] }) }) : null) }), t(r, { children: Object.entries(null !== (o2 = n2.response.content) && void 0 !== o2 ? o2 : {}).map((r2) => {
+      return "code" === n3 ? null : e(e5, { children: [t(e3, { children: n3 }), t(e6, { children: ": " }), t(e6, { children: i3 })] });
+    }) }), e(e6, { children: [" ", "}"] })] }) }) : null) }), t(r, { children: Object.entries(null !== (o2 = n2.response.content) && void 0 !== o2 ? o2 : {}).map((r2) => {
       let [n3, { schema: a3 }] = r2;
-      return e(tr, { children: [t(e6, { spacing: 0, children: t(e7, { schema: V.decode(a3, (e10) => {
+      return e(ti, { children: [t(e5, { spacing: 0, children: t(te, { schema: V.decode(a3, (e10) => {
         var t2;
         return [null !== (t2 = i2.schema(e10)) && void 0 !== t2 ? t2 : {}, E(e10)];
       }) }) }), t("div", { "data-content-type": true, children: n3 })] });
     }) })] })] });
   };
-}), te = G("section")({}), tt = G("div")({ fontSize: 18, fontFamily: "code", color: "sys.success", py: 12, pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), tr = G("section")({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), tn = Object.assign(e9, { displayName: "ResponseView" }), ti = G("div", { valued: A().optional(), focus: A().optional(), invalid: A().optional(), disabled: A().optional(), $label: H().optional(), $hint: H().optional(), $supporting: H().optional(), $leading: H().optional(), $trailing: H().optional(), $default: H() }, (r2, i2) => {
+}), tr = G("section")({}), tn = G("div")({ fontSize: 18, fontFamily: "code", color: "sys.success", py: 12, pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), ti = G("section")({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), ta = Object.assign(tt, { displayName: "ResponseView" }), to = G("div", { valued: A().optional(), focus: A().optional(), invalid: A().optional(), disabled: A().optional(), $label: H().optional(), $hint: H().optional(), $supporting: H().optional(), $leading: H().optional(), $trailing: H().optional(), $default: H() }, (r2, i2) => {
   let { slots: a2 } = i2;
   return (i3) => {
     var o2, l2, s2, d2;
@@ -347,12 +374,12 @@ let e2 = Object.assign(eU, { displayName: "Token" }), e8 = Object.assign(eK, { d
       }
       return n(e10);
     });
-    return e(i3, { "data-valued": c2, "data-invalid": p2, "data-disabled": u2, "data-focus-within": r2.focus, "data-has-leading": !!a2.leading, "data-has-trailing": !!a2.trailing, children: [e("div", { "data-input-container": true, children: [e("div", { "data-input-decorator-container": true, children: [t("div", { "data-input-decorator-leading": true }), t("div", { "data-input-decorator-label": true, children: t("div", { "data-input-label": true, children: null === (l2 = a2.label) || void 0 === l2 ? void 0 : l2.call(a2) }) }), t("div", { "data-input-decorator-trailing": true })] }), e("div", { "data-input-row": true, children: [a2.leading && t(ta, { role: "leading", children: a2.leading() }), h2, a2.trailing && t(ta, { role: "trailing", children: a2.trailing() })] })] }), a2.supporting && t("div", { "data-input-supporting": true, children: null === (s2 = a2.supporting) || void 0 === s2 ? void 0 : s2.call(a2) })] });
+    return e(i3, { "data-valued": c2, "data-invalid": p2, "data-disabled": u2, "data-focus-within": r2.focus, "data-has-leading": !!a2.leading, "data-has-trailing": !!a2.trailing, children: [e("div", { "data-input-container": true, children: [e("div", { "data-input-decorator-container": true, children: [t("div", { "data-input-decorator-leading": true }), t("div", { "data-input-decorator-label": true, children: t("div", { "data-input-label": true, children: null === (l2 = a2.label) || void 0 === l2 ? void 0 : l2.call(a2) }) }), t("div", { "data-input-decorator-trailing": true })] }), e("div", { "data-input-row": true, children: [a2.leading && t(tl, { role: "leading", children: a2.leading() }), h2, a2.trailing && t(tl, { role: "trailing", children: a2.trailing() })] })] }), a2.supporting && t("div", { "data-input-supporting": true, children: null === (s2 = a2.supporting) || void 0 === s2 ? void 0 : s2.call(a2) })] });
   };
-})({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, pointerEvents: "none", rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1 }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), ta = G("div", { role: U(["leading", "trailing"]) })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), to = Object.assign(ti, { displayName: "TextField" }), tl = $({ field$: H(), readOnly: A().optional() }, (e10, r2) => {
+})({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, pointerEvents: "none", rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1 }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), tl = G("div", { role: U(["leading", "trailing"]) })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), ts = Object.assign(to, { displayName: "TextField" }), td = $({ field$: H(), readOnly: A().optional() }, (e10, r2) => {
   let {} = r2, n2 = ei(eq(e10.field$.input) ? "" : ey.stringify(e10.field$.input));
-  return () => t(Q, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: t(ea, { value: n2, children: t(ts, { field$: e10.field$, schema: e10.field$.typedef }) }) });
-}), ts = $({ field$: H(), schema: H() }, (e10) => {
+  return () => t(Q, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: t(ea, { value: n2, children: t(tc, { field$: e10.field$, schema: e10.field$.typedef }) }) });
+}), tc = $({ field$: H(), schema: H() }, (e10) => {
   let r2 = ea.use();
   return f(e10.schema$, k((e11) => r2.use(() => [eg(), ep({ override: [ev(e11)] }), eu.of([{ key: "Shift-Space", shift: eh }]), em(eb(e11)), eu.of([ef])])), _()), eo(() => es.updateListener.of((t2) => {
     if (t2.focusChanged) {
@@ -379,13 +406,13 @@ let e2 = Object.assign(eU, { displayName: "Token" }), e8 = Object.assign(eK, { d
         }
     }
   })), () => t(el, {});
-}), td = Object.assign(tl, { displayName: "JSONCueEditorInput" }), tc = () => ({ "User-Agent": navigator.userAgent, Origin: location.origin, Referer: `${location.origin}${location.pathname}` }), tp = (r2) => {
+}), tp = Object.assign(td, { displayName: "JSONCueEditorInput" }), tu = () => ({ "User-Agent": navigator.userAgent, Origin: location.origin, Referer: `${location.origin}${location.pathname}` }), th = (r2) => {
   let { field: n2, value: i2 } = r2;
   return e(Q, { component: "span", sx: { display: "block" }, children: [e(Q, { component: "span", sx: { fontWeight: "bold", marginRight: "0.5em" }, children: [n2, ":"] }), t("span", { children: i2 })] });
-}, tu = (t2) => {
+}, tm = (t2) => {
   let { method: r2, url: n2, params: i2 } = t2, a2 = eI(i2);
   return e(Q, { component: "span", sx: { fontWeight: "bold" }, children: [r2.toUpperCase(), " ", e(Q, { component: "span", sx: { fontWeight: "medium" }, children: [n2, a2 ? `?${a2}` : ""] }), "  HTTP/*"] });
-}, th = (e10, t2) => {
+}, tf = (e10, t2) => {
   let r2 = (t3, n2) => n2 instanceof File || n2 instanceof Blob ? `${e10}
 Content-Disposition: form-data; name="${t3}"${n2.name ? `; filename="${n2.name}"` : ""}
 Content-Type: ${n2.type}
@@ -400,47 +427,47 @@ ${W(n2) ? JSON.stringify(n2) : String(n2)}
     let [t3, n2] = e11;
     return r2(t3, n2);
   }).join("\n") + `${e10}--`;
-}, tm = j({ $default: H().optional() }, (e10, r2) => {
+}, ty = j({ $default: H().optional() }, (e10, r2) => {
   let {} = e10, { slots: n2 } = r2;
   return () => {
     var e11;
     return t(Q, { sx: { containerStyle: "sys.surface-container", rounded: "xs", width: "100%", overflow: "auto", py: 4, px: 8 }, children: t(Q, { component: "pre", sx: { padding: 4, margin: 0, textStyle: "sys.body-small", fontFamily: "code" }, children: t("code", { children: null === (e11 = n2.default) || void 0 === e11 ? void 0 : e11.call(n2) }) }) });
   };
-}), tf = j({ request: H() }, (n2) => () => {
+}), tg = j({ request: H() }, (n2) => () => {
   let i2 = n2.request;
-  return e(tm, { children: [t(tu, { ...i2 }), t(r, { children: Object.entries({ ...tc(), ...i2.headers }).toSorted().map((e10) => {
+  return e(ty, { children: [t(tm, { ...i2 }), t(r, { children: Object.entries({ ...tu(), ...i2.headers }).toSorted().map((e10) => {
     let [r2, n3] = e10;
-    return t(tp, { field: r2, value: n3 }, r2);
+    return t(th, { field: r2, value: n3 }, r2);
   }) }), i2.body && e(r, { children: [t("br", {}), function(e10) {
-    if (tb(e10.headers).includes("multipart/form-data")) {
+    if (t$(e10.headers).includes("multipart/form-data")) {
       let t2 = "----WebKitFormBoundaryfakefakefakefakefakefakefakefakefake";
-      return e10.headers = { ...e10.headers, "Content-Type": `multipart/form-data; boundary=${t2}` }, th(t2, e10.body);
+      return e10.headers = { ...e10.headers, "Content-Type": `multipart/form-data; boundary=${t2}` }, tf(t2, e10.body);
     }
-    return tb(e10.headers).includes("application/x-www-form-urlencoded") ? eI(e10.body) : tx(e10.headers) ? JSON.stringify(e10.body, null, 2) : e10.body;
+    return t$(e10.headers).includes("application/x-www-form-urlencoded") ? eI(e10.body) : t_(e10.headers) ? JSON.stringify(e10.body, null, 2) : e10.body;
   }(i2)] })] });
-}), ty = (e10) => Buffer.from(e10).toString("utf8"), tg = (e10, t2) => {
+}), tv = (e10) => Buffer.from(e10).toString("utf8"), tb = (e10, t2) => {
   let r2 = new Uint8Array(e10), n2 = "";
   for (let e11 = r2.byteLength, t3 = 0; t3 < e11; t3++)
     n2 += String.fromCharCode(r2[t3]);
   return `data:${t2};base64,${btoa(n2)}`;
-}, tv = j({ response: H() }, (n2, i2) => {
+}, tx = j({ response: H() }, (n2, i2) => {
   let {} = i2;
   return () => {
     let i3 = n2.response;
-    return tb(i3.headers).includes("image/") ? t("div", { children: t("img", { src: tg(i3.body, tb(i3.headers)), alt: "" }) }) : e(tm, { children: [e("span", { children: ["HTTP/* ", i3.status] }), t("br", {}), i3.headers && t(r, { children: Object.entries(i3.headers).map((e10) => {
+    return t$(i3.headers).includes("image/") ? t("div", { children: t("img", { src: tb(i3.body, t$(i3.headers)), alt: "" }) }) : e(ty, { children: [e("span", { children: ["HTTP/* ", i3.status] }), t("br", {}), i3.headers && t(r, { children: Object.entries(i3.headers).map((e10) => {
       let [r2, n3] = e10;
-      return t(tp, { field: r2, value: n3 }, r2);
-    }) }), t("br", {}), i3.body ? tx(i3.headers) ? JSON.stringify(i3.body, null, 2) : `${ty(i3.body)}` : null] });
+      return t(th, { field: r2, value: n3 }, r2);
+    }) }), t("br", {}), i3.body ? t_(i3.headers) ? JSON.stringify(i3.body, null, 2) : `${tv(i3.body)}` : null] });
   };
 });
-function tb() {
+function t$() {
   let e10 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   for (let [t2, r2] of Object.entries(e10))
     if ("content-type" == t2.toLowerCase())
       return r2;
   return "";
 }
-let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, { displayName: "HttpRequest" }), t_ = Object.assign(tv, { displayName: "HTTPResponse" }), tw = $({ operationID: M() }, (e10) => f(eP.use().response$(e10.operationID), S((e11) => t(tS, { children: t(t_, { response: e11 }) })))), tS = G("section")({ maxHeight: "40vh", overflow: "auto" }), tO = Object.assign(tw, { displayName: "ResponsePreview" }), tI = $({ operation: H(), $default: H() }, (r2, n2) => {
+let t_ = (e10) => t$(e10).includes("application/json"), tw = Object.assign(tg, { displayName: "HttpRequest" }), tS = Object.assign(tx, { displayName: "HTTPResponse" }), tO = $({ operationID: M() }, (e10) => f(eP.use().response$(e10.operationID), S((e11) => t(tI, { children: t(tS, { response: e11 }) })))), tI = G("section")({ maxHeight: "40vh", overflow: "auto" }), tj = Object.assign(tO, { displayName: "ResponsePreview" }), tk = $({ operation: H(), $default: H() }, (r2, n2) => {
   var i2, a2, o2, l2;
   let { slots: s2 } = n2, c2 = eP.use(), p2 = {};
   for (let e10 of null !== (i2 = r2.operation.parameters) && void 0 !== i2 ? i2 : []) {
@@ -448,7 +475,7 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
       var t3;
       return [null !== (t3 = c2.schema(e11)) && void 0 !== t3 ? t3 : {}, E(e11)];
     }).use(Y(`${e10.name}, in=${JSON.stringify(e10.in)}`));
-    e10.required || (t2 = t2.optional()), ["object", "array"].includes(null !== (a2 = e10.schema.type) && void 0 !== a2 ? a2 : "") ? p2[e10.name] = t2.use(Z(td)) : p2[e10.name] = t2;
+    e10.required || (t2 = t2.optional()), ["object", "array"].includes(null !== (a2 = e10.schema.type) && void 0 !== a2 ? a2 : "") ? p2[e10.name] = t2.use(Z(tp)) : p2[e10.name] = t2;
   }
   if (r2.operation.requestBody) {
     let e10 = Object.entries(null !== (o2 = r2.operation.requestBody.content) && void 0 !== o2 ? o2 : {})[0];
@@ -457,7 +484,7 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
         var t3;
         return [null !== (t3 = c2.schema(e11)) && void 0 !== t3 ? t3 : {}, E(e11)];
       }).use(Y(`body, content-type = ${JSON.stringify(t2)}`));
-      t2.includes("json") ? p2.body = n3.use(Z(td)) : t2.includes("octet-stream") ? p2.body = n3.use(Z(tD)) : p2.body = n3;
+      t2.includes("json") ? p2.body = n3.use(Z(tp)) : t2.includes("octet-stream") ? p2.body = n3.use(Z(tF)) : p2.body = n3;
     }
   }
   let u2 = C(), h2 = N(), m2 = ee.of(K(p2), (() => {
@@ -476,29 +503,29 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
   }), _());
   let y2 = f(m2.inputs$, S((e10) => {
     let n3 = c2.asRequestConfigCreator(r2.operation.operationId);
-    return n3 ? t(t$, { request: n3(e10) }) : null;
+    return n3 ? t(tw, { request: n3(e10) }) : null;
   }));
   return () => {
     var n3;
     return e(Q, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e10) => {
       e10.preventDefault(), m2.submit();
-    }, children: [t(Q, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...m2.fields(m2.typedef)].map((e10) => t(tj, { field$: e10 })) }), t(Q, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: e(Q, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [y2, t(Q, { sx: { px: 8 }, children: t(et, { type: "submit", children: "发起请求" }) }), t(tO, { operationID: r2.operation.operationId }), t(Q, { sx: { flex: 1, overflow: "auto" }, children: null === (n3 = s2.default) || void 0 === n3 ? void 0 : n3.call(s2) })] }) })] }, r2.operation.operationId);
+    }, children: [t(Q, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...m2.fields(m2.typedef)].map((e10) => t(tC, { field$: e10 })) }), t(Q, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: e(Q, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [y2, t(Q, { sx: { px: 8 }, children: t(et, { type: "submit", children: "发起请求" }) }), t(tj, { operationID: r2.operation.operationId }), t(Q, { sx: { flex: 1, overflow: "auto" }, children: null === (n3 = s2.default) || void 0 === n3 ? void 0 : n3.call(s2) })] }) })] }, r2.operation.operationId);
   };
-}), tj = $({ field$: H() }, (r2, n2) => {
+}), tC = $({ field$: H() }, (r2, n2) => {
   let { field$: a2 } = r2, { render: o2 } = n2;
   return i(() => {
     a2.destroy();
   }), f(q([a2, a2.input$]), o2((r3) => {
     var n3, i2, o3, l2, s2;
-    let [d2, c2] = r3, p2 = null !== (o3 = null === (n3 = a2.meta) || void 0 === n3 ? void 0 : n3.input) && void 0 !== o3 ? o3 : tq, u2 = null !== (l2 = null === (i2 = a2.meta) || void 0 === i2 ? void 0 : i2.readOnlyWhenInitialExist) && void 0 !== l2 && l2 && !!d2.initial;
-    return t(to, { valued: !eq(null != c2 ? c2 : d2.initial), invalid: !!d2.error, focus: !!d2.focus, $label: e("span", { children: [null !== (s2 = a2.meta.label) && void 0 !== s2 ? s2 : a2.name, a2.optional ? "（非必填）" : ""] }), $supporting: e(e6, { children: [t(e3, { schema: a2.typedef }), t(e7, { schema: a2.typedef })] }), $trailing: p2.$trailing, children: t(p2, { field$: a2, readOnly: u2 }) });
+    let [d2, c2] = r3, p2 = null !== (o3 = null === (n3 = a2.meta) || void 0 === n3 ? void 0 : n3.input) && void 0 !== o3 ? o3 : tT, u2 = null !== (l2 = null === (i2 = a2.meta) || void 0 === i2 ? void 0 : i2.readOnlyWhenInitialExist) && void 0 !== l2 && l2 && !!d2.initial;
+    return t(ts, { valued: !eq(null != c2 ? c2 : d2.initial), invalid: !!d2.error, focus: !!d2.focus, $label: e("span", { children: [null !== (s2 = a2.meta.label) && void 0 !== s2 ? s2 : a2.name, a2.optional ? "（非必填）" : ""] }), $supporting: e(e5, { children: [t(e7, { schema: a2.typedef }), t(te, { schema: a2.typedef })] }), $trailing: p2.$trailing, children: t(p2, { field$: a2, readOnly: u2 }) });
   }));
-}), tk = j({ readOnly: A().optional(), field$: H() }, (e10) => () => {
+}), tN = j({ readOnly: A().optional(), field$: H() }, (e10) => () => {
   let { readOnly: r2, field$: n2, ...i2 } = e10;
   return t("input", { ...i2, "data-input": true, type: "text", readonly: r2, name: n2.name, value: n2.input, onChange: (e11) => {
     n2.update(e11.target.value);
   }, onFocus: () => n2.focus(), onBlur: () => n2.blur() });
-}), tC = $({ field$: H(), readOnly: A().optional(), accept: M().optional() }, (r2) => {
+}), tq = $({ field$: H(), readOnly: A().optional(), accept: M().optional() }, (r2) => {
   let n2 = D(null);
   return f(n2, d((e10) => {
     e10 && r2.field$.update(e10);
@@ -511,22 +538,22 @@ let tx = (e10) => tb(e10).includes("application/json"), t$ = Object.assign(tf, {
       r3 && (n2.value = r3);
     } }), t(en, { path: er }), t("span", { children: null === (i2 = n2.value) || void 0 === i2 ? void 0 : i2.name })] });
   };
-}), tN = Object.assign(tI, { displayName: "RequestBuilder" }), tq = Object.assign(tk, { displayName: "TextInput" }), tD = Object.assign(tC, { displayName: "FileSelectInput" }), tT = $({ operationId: M() }, (n2, i2) => {
+}), tD = Object.assign(tk, { displayName: "RequestBuilder" }), tT = Object.assign(tN, { displayName: "TextInput" }), tF = Object.assign(tq, { displayName: "FileSelectInput" }), tB = $({ operationId: M() }, (n2, i2) => {
   let {} = i2, a2 = eP.use(), o2 = f(n2.operationId$, y((e10) => a2.operation$(e10))), l2 = f(o2, F((e10) => !!e10)), s2 = f(l2, S((r2) => {
     var n3;
-    return e(tB, { sx: { containerStyle: null !== (n3 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[r2.method]) && void 0 !== n3 ? n3 : "sys.secondary-container" }, children: [t("div", { "data-operation-method": true, children: r2.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-path": true, children: r2.path }), e("div", { "data-operation-summary": true, children: [r2.summary, " ", r2.operationId != r2.summary ? r2.operationId : ""] })] })] });
+    return e(tP, { sx: { containerStyle: null !== (n3 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[r2.method]) && void 0 !== n3 ? n3 : "sys.secondary-container" }, children: [t("div", { "data-operation-method": true, children: r2.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-path": true, children: r2.path }), e("div", { "data-operation-summary": true, children: [r2.summary, " ", r2.operationId != r2.summary ? r2.operationId : ""] })] })] });
   })), d2 = f(l2, S((e10) => t("span", { children: e10.description }))), c2 = f(l2, S((e10) => {
     var n3;
-    return t(tN, { operation: e10, children: t(r, { children: Object.entries(null !== (n3 = e10.responses) && void 0 !== n3 ? n3 : {}).map((e11) => {
+    return t(tD, { operation: e10, children: t(r, { children: Object.entries(null !== (n3 = e10.responses) && void 0 !== n3 ? n3 : {}).map((e11) => {
       let [r2, n4] = e11;
-      return t(tn, { code: r2, response: n4 }, r2);
+      return t(ta, { code: r2, response: n4 }, r2);
     }) }) }, e10.operationId);
   }));
-  return f(o2, S((r2) => r2 ? e(tF, { children: [s2, e(Q, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [d2, t(Q, { sx: { flex: 1, overflow: "auto" }, children: c2 })] })] }, r2.operationId) : null));
-}), tF = G("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tB = G("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tL = Object.assign(tT, { displayName: "OperationView" });
+  return f(o2, S((r2) => r2 ? e(tL, { children: [s2, e(Q, { sx: { flex: 1, overflow: "hidden", py: 24, display: "flex", flexDirection: "column", alignItems: "stretch" }, children: [d2, t(Q, { sx: { flex: 1, overflow: "auto" }, children: c2 })] })] }, r2.operationId) : null));
+}), tL = G("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tP = G("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tW = Object.assign(tB, { displayName: "OperationView" });
 export {
   eP as O,
-  tL as a,
+  tW as a,
   eE as b,
   ek as c,
   eI as p,
