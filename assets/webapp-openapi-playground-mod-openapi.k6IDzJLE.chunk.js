@@ -17,7 +17,7 @@ var __privateMethod = (obj, member, method) => {
 };
 var _e, _t, _r, r_get, _n, n_fn;
 import { k as e, j as t, F as r, l as n, v as i } from "./lib-nodepkg-vue-jsx-runtime.BN22WHLF.chunk.js";
-import { O as a, B as o, S as l, v as s, p as d, w as c, n as p, x as u, e as h, I as m, r as f, s as y, m as g, b as v, E as b, c as x, h as $, d as _, y as w, i as S, z as I, R as O, j, t as k, A as C, C as N, a as q, o as D, f as T, D as F } from "./lib-nodepkg-vuekit.BFRuxpnB.chunk.js";
+import { O as a, B as o, S as l, v as s, p as d, w as c, n as p, x as u, e as h, I as m, r as f, s as y, m as g, b as v, E as b, c as x, h as $, d as w, y as _, i as S, z as I, R as O, j, t as k, A as C, C as N, a as q, o as D, f as F, D as T } from "./lib-nodepkg-vuekit.BFRuxpnB.chunk.js";
 import { i as B, B as L, d as P, t as W, a as R, C as J, g as A, h as H, D as M, c as z, f as V, F as E, J as U, G as K, j as G, o as Q } from "./lib-nodepkg-typedef.C-lDlS3A.chunk.js";
 import { s as X, B as Y } from "./lib-nodepkg-vueuikit.0WAVmc9Z.chunk.js";
 import { M as Z } from "./lib-nodepkg-vuemarkdown.B4OM2ZVG.chunk.js";
@@ -25,8 +25,8 @@ import { l as ee, i as et, F as er } from "./lib-nodepkg-vueformdata.DM474siA.ch
 import { F as en, m as ei, I as ea } from "./lib-nodepkg-vuematerial.DEB6yj2h.chunk.js";
 import { j as eo, k as el, u as es, l as ed, m as ec, n as ep, o as eu, p as eh, q as em, r as ef, v as ey, w as eg } from "./lib-nodepkg-codemirror.DL3xZr6w.chunk.js";
 import { J as ev, j as eb, a as ex, b as e$ } from "./lib-nodepkg-jsoncue.B6_Gclq2.chunk.js";
-let e_ = (e10, t2) => new ew(e10, t2);
-class ew extends a {
+let ew = (e10, t2) => new e_(e10, t2);
+class e_ extends a {
   constructor(e10, t2) {
     super((e11) => this._success$.subscribe(e11)), this.createConfig = e10, this.fetcher = t2, this.requesting$ = new o(false), this.error$ = new l(), this._success$ = new l(), this._input$ = new l(), this.unsubscribe = this._input$.pipe(s((e11) => (this.requesting$.next(true), p(this.fetcher.request(this.createConfig(e11))).pipe(d((e12) => this._success$.next(e12)), u((e12) => (this.error$.next(e12), h(e12)))))), d(() => {
       this.requesting$.next(false);
@@ -125,7 +125,7 @@ const _eq = class _eq extends m {
       let i2 = Object.keys(null !== (r2 = null === (t2 = n2.requestBody) || void 0 === t2 ? void 0 : t2.content) && void 0 !== r2 ? r2 : {})[0];
       return (e11) => {
         var t3, r3;
-        return { method: n2.method, url: __privateGet(this, _r, r_get) + eT(n2.path, e11), params: J(e11, null === (t3 = n2.parameters) || void 0 === t3 ? void 0 : t3.filter((e12) => "query" == e12.in).map((e12) => e12.name)), headers: { ...J(e11, null === (r3 = n2.parameters) || void 0 === r3 ? void 0 : r3.filter((e12) => "header" == e12.in).map((e12) => e12.name)), ...i2 ? { "Content-Type": i2 } : {} }, body: e11.body, inputs: e11 };
+        return { method: n2.method, url: __privateGet(this, _r, r_get) + eF(n2.path, e11), params: J(e11, null === (t3 = n2.parameters) || void 0 === t3 ? void 0 : t3.filter((e12) => "query" == e12.in).map((e12) => e12.name)), headers: { ...J(e11, null === (r3 = n2.parameters) || void 0 === r3 ? void 0 : r3.filter((e12) => "header" == e12.in).map((e12) => e12.name)), ...i2 ? { "Content-Type": i2 } : {} }, body: e11.body, inputs: e11 };
       };
     }
     return null;
@@ -136,7 +136,7 @@ const _eq = class _eq extends m {
       let t3 = this.asRequestConfigCreator(e10);
       if (!t3)
         return;
-      r2 = e_(Object.assign(t3, { operationID: e10, TRespData: {} }), __privateGet(this, _e)), __privateGet(this, _t).value.set(e10, r2), __privateGet(this, _t).next(__privateGet(this, _t).value);
+      r2 = ew(Object.assign(t3, { operationID: e10, TRespData: {} }), __privateGet(this, _e)), __privateGet(this, _t).value.set(e10, r2), __privateGet(this, _t).next(__privateGet(this, _t).value);
     }
     r2.next(t2);
   }
@@ -200,16 +200,16 @@ function* eD(e10, t2) {
       }
     }
 }
-let eT = function(e10) {
+let eF = function(e10) {
   let t2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return e10.replace(/{([\s\S]+?)}/g, (e11, r2) => [].concat(t2[r2] || e11).join(","));
-}, eF = x(() => eq.empty(), { name: "OpenAPI" }), eB = (e10) => (t2, r2) => t2[e10] == r2[e10] ? 0 : t2[e10] < r2[e10] ? -1 : 1, eL = $((r2, n2) => {
-  let {} = r2, {} = n2, i2 = eF.use(), a2 = new m({ operationId: void 0 }), o2 = new l();
-  f(o2, w(200), d((e10) => {
+}, eT = x(() => eq.empty(), { name: "OpenAPI" }), eB = (e10) => (t2, r2) => t2[e10] == r2[e10] ? 0 : t2[e10] < r2[e10] ? -1 : 1, eL = $((r2, n2) => {
+  let {} = r2, {} = n2, i2 = eT.use(), a2 = new m({ operationId: void 0 }), o2 = new l();
+  f(o2, _(200), d((e10) => {
     a2.next((t2) => {
       t2.operationId = `*${null != e10 ? e10 : ""}`;
     });
-  }), _());
+  }), w());
   let s2 = f(a2, y((e10) => i2.operations$(e10)), S((r3) => {
     let n3 = Object.groupBy(r3, (e10) => e10.group);
     return e(eW, { children: [t(eR, { children: t("input", { type: "text", placeholder: "请输入 operationId 查询", onInput: (e10) => {
@@ -313,7 +313,7 @@ function e1(e10) {
   return ["enum", "maximum", "exclusiveMaximum", "minimum", "exclusiveMinimum", "maxLength", "minLength", "pattern", "maxItems", "minItems", "maxProperties", "minProperties"].some((t2) => e10.getSchema(t2));
 }
 let e4 = Object.assign(ez, { displayName: "Token" }), e2 = Object.assign(eV, { displayName: "PropName" }), e8 = Object.assign(eE, { displayName: "Line" }), e6 = Object.assign(eU, { displayName: "Description" }), e3 = Object.assign(eQ, { displayName: "Indent" }), e5 = Object.assign(e0, { displayName: "SchemaView" }), e7 = $({ code: z(), response: z() }, (n2) => {
-  let i2 = eF.use();
+  let i2 = eT.use();
   return () => {
     var a2, o2;
     return e(e9, { children: [t(te, { "data-failed": function(e10) {
@@ -357,7 +357,7 @@ let e4 = Object.assign(ez, { displayName: "Token" }), e2 = Object.assign(eV, { d
   return () => t(Y, { sx: { position: "relative", width: "100%", minHeight: "8em", overflow: "hidden", py: 8 }, children: t(el, { value: n2, children: t(tl, { field$: e10.field$, schema: e10.field$.typedef }) }) });
 }), tl = $({ field$: z(), schema: z() }, (e10) => {
   let r2 = el.use();
-  return f(e10.schema$, k((e11) => r2.use(() => [eb(), eh({ override: [ex(e11)] }), em.of([{ key: "Shift-Space", shift: ef }]), ey(e$(e11)), em.of([eg])])), _()), es(() => ec.updateListener.of((t2) => {
+  return f(e10.schema$, k((e11) => r2.use(() => [eb(), eh({ override: [ex(e11)] }), em.of([{ key: "Shift-Space", shift: ef }]), ey(e$(e11)), em.of([eg])])), w()), es(() => ec.updateListener.of((t2) => {
     if (t2.focusChanged) {
       ep(t2.view), e10.field$.next((e11) => {
         e11.error = 0 == eu(t2.state) ? null : ["配置有误"];
@@ -443,9 +443,9 @@ function tg() {
       return r2;
   return "";
 }
-let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, { displayName: "HttpRequest" }), tx = Object.assign(ty, { displayName: "HTTPResponse" }), t$ = $({ operationID: V() }, (e10) => f(eF.use().response$(e10.operationID), S((e11) => t(t_, { children: t(tx, { response: e11 }) })))), t_ = X("section")({ maxHeight: "40vh", overflow: "auto" }), tw = Object.assign(t$, { displayName: "ResponsePreview" }), tS = $({ operation: z(), $default: z() }, (r2, n2) => {
+let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, { displayName: "HttpRequest" }), tx = Object.assign(ty, { displayName: "HTTPResponse" }), t$ = $({ operationID: V() }, (e10) => f(eT.use().response$(e10.operationID), S((e11) => t(tw, { children: t(tx, { response: e11 }) })))), tw = X("section")({ maxHeight: "40vh", overflow: "auto" }), t_ = Object.assign(t$, { displayName: "ResponsePreview" }), tS = $({ operation: z(), $default: z() }, (r2, n2) => {
   var i2, a2, o2, l2;
-  let { slots: s2 } = n2, c2 = eF.use(), p2 = {};
+  let { slots: s2 } = n2, c2 = eT.use(), p2 = {};
   for (let e10 of null !== (i2 = r2.operation.parameters) && void 0 !== i2 ? i2 : []) {
     let t2 = U.decode(e10.schema, (e11) => {
       var t3;
@@ -476,7 +476,7 @@ let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, {
     c2.request(r2.operation.operationId, e10);
   }), d((e10) => {
     u2.replace({ query: { params: btoa(JSON.stringify(e10)) } });
-  }), _());
+  }), w());
   let y2 = f(m2.inputs$, S((e10) => {
     let n3 = c2.asRequestConfigCreator(r2.operation.operationId);
     return n3 ? t(tb, { request: n3(e10) }) : null;
@@ -485,7 +485,7 @@ let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, {
     var n3;
     return e(Y, { sx: { py: 24, px: 24, gap: 24, width: "100%", height: "100%", display: "flex", alignItems: "stretch", overflow: "hidden" }, component: "form", onSubmit: (e10) => {
       e10.preventDefault(), m2.submit();
-    }, children: [t(Y, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...m2.fields(m2.typedef)].map((e10) => t(tI, { field$: e10 })) }), t(Y, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: e(Y, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [y2, t(Y, { sx: { px: 8 }, children: t(en, { type: "submit", children: "发起请求" }) }), t(tw, { operationID: r2.operation.operationId }), t(Y, { sx: { flex: 1, overflow: "auto" }, children: null === (n3 = s2.default) || void 0 === n3 ? void 0 : n3.call(s2) })] }) })] }, r2.operation.operationId);
+    }, children: [t(Y, { sx: { flex: 2, py: 24, display: "flex", flexDirection: "column", gap: 16, height: "100%", overflow: "auto" }, children: [...m2.fields(m2.typedef)].map((e10) => t(tI, { field$: e10 })) }), t(Y, { sx: { flex: 3, gap: 24, display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }, children: e(Y, { sx: { display: "flex", flexDirection: "column", gap: 24, height: "100%", overflow: "hidden" }, children: [y2, t(Y, { sx: { px: 8 }, children: t(en, { type: "submit", children: "发起请求" }) }), t(t_, { operationID: r2.operation.operationId }), t(Y, { sx: { flex: 1, overflow: "auto" }, children: null === (n3 = s2.default) || void 0 === n3 ? void 0 : n3.call(s2) })] }) })] }, r2.operation.operationId);
   };
 }), tI = $({ field$: z() }, (r2, n2) => {
   let { field$: a2 } = r2, { render: o2 } = n2;
@@ -499,13 +499,35 @@ let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, {
 }), tO = j({ readOnly: H().optional(), field$: z() }, (e10) => () => {
   let { readOnly: r2, field$: n2, ...i2 } = e10;
   return t("input", { ...i2, "data-input": true, type: "text", readonly: r2, name: n2.name, value: n2.input, onChange: (e11) => {
-    n2.update(e11.target.value);
+    let t2 = e11.target.value;
+    switch (n2.typedef.type) {
+      case "number":
+        try {
+          n2.update(n2.typedef.create(parseFloat(t2)));
+        } catch (e12) {
+        }
+        break;
+      case "integer":
+        try {
+          n2.update(n2.typedef.create(parseInt(t2)));
+        } catch (e12) {
+        }
+        break;
+      case "boolean":
+        try {
+          n2.update(n2.typedef.create("false" !== t2 || !!t2));
+        } catch (e12) {
+        }
+        break;
+      default:
+        n2.update(n2.typedef.create(t2));
+    }
   }, onFocus: () => n2.focus(), onBlur: () => n2.blur() });
 }), tj = $({ field$: z(), readOnly: H().optional(), accept: V().optional() }, (r2) => {
   let n2 = D(null);
   return f(n2, d((e10) => {
     e10 && r2.field$.update(e10);
-  }), T()), () => {
+  }), F()), () => {
     var i2;
     let { readOnly: a2, accept: o2 } = r2;
     return e(Y, { component: "label", "data-input": true, sx: { display: "flex", alignItems: "center", justifyContent: "center", gap: 8, $data_file_input: { display: "none" }, $data_icon: { width: 40, height: 40, my: 40 } }, children: [t("input", { type: "file", name: r2.field$.name, readonly: a2, accept: o2, "data-file-input": true, onChange: (e10) => {
@@ -515,9 +537,9 @@ let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, {
     } }), t(ea, { path: ei }), t("span", { children: null === (i2 = n2.value) || void 0 === i2 ? void 0 : i2.name })] });
   };
 }), tk = Object.assign(tS, { displayName: "RequestBuilder" }), tC = Object.assign(tO, { displayName: "TextInput" }), tN = Object.assign(tj, { displayName: "FileSelectInput" }), tq = $({ operationId: V() }, (n2, i2) => {
-  let {} = i2, a2 = eF.use(), o2 = f(n2.operationId$, y((e10) => a2.operation$(e10))), l2 = f(o2, F((e10) => !!e10)), s2 = f(l2, S((r2) => {
+  let {} = i2, a2 = eT.use(), o2 = f(n2.operationId$, y((e10) => a2.operation$(e10))), l2 = f(o2, T((e10) => !!e10)), s2 = f(l2, S((r2) => {
     var n3;
-    return e(tT, { sx: { containerStyle: null !== (n3 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[r2.method]) && void 0 !== n3 ? n3 : "sys.secondary-container" }, children: [t("div", { "data-operation-method": true, children: r2.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-path": true, children: r2.path }), e("div", { "data-operation-summary": true, children: [r2.summary, " ", r2.operationId != r2.summary ? r2.operationId : ""] })] })] });
+    return e(tF, { sx: { containerStyle: null !== (n3 = { get: "sys.primary-container", post: "sys.success-container", put: "sys.warning-container", delete: "sys.error-container" }[r2.method]) && void 0 !== n3 ? n3 : "sys.secondary-container" }, children: [t("div", { "data-operation-method": true, children: r2.method }), e("div", { "data-operation-desc": true, children: [t("div", { "data-operation-path": true, children: r2.path }), e("div", { "data-operation-summary": true, children: [r2.summary, " ", r2.operationId != r2.summary ? r2.operationId : ""] })] })] });
   })), d2 = f(l2, S((e10) => {
     var r2;
     return t(Y, { sx: { px: 24 }, children: t(Z, { text: null !== (r2 = e10.description) && void 0 !== r2 ? r2 : "" }) });
@@ -529,10 +551,10 @@ let tv = (e10) => tg(e10).includes("application/json"), tb = Object.assign(tm, {
     }) }) }, e10.operationId);
   }));
   return f(o2, S((r2) => r2 ? e(tD, { children: [s2, d2, t(Y, { sx: { flex: 1, overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "stretch" }, children: t(Y, { sx: { flex: 1, overflow: "auto" }, children: c2 }) })] }, r2.operationId) : null));
-}), tD = X("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tT = X("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tF = Object.assign(tq, { displayName: "OperationView" });
+}), tD = X("div")({ height: "100%", display: "flex", flexDirection: "column", alignItems: "stretch" }), tF = X("div")({ display: "flex", alignItems: "center", width: "100%", px: 16, py: 8, gap: 16, $data_operation_method: { textTransform: "uppercase", fontSize: 24, fontFamily: "code" }, $data_operation_path: { fontFamily: "code" }, $data_operation_summary: { opacity: 0.8, textStyle: "sys.body-small" } }), tT = Object.assign(tq, { displayName: "OperationView" });
 export {
-  eF as O,
-  tF as a,
+  eT as O,
+  tT as a,
   eM as b,
   eN as c,
   ek as p,
