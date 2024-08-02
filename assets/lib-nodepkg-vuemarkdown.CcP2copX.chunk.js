@@ -1,5 +1,6 @@
-import { u as e, F as t, v as n, w as r, x as i, r as l, y as o, q as a } from "./lib-nodepkg-vuekit.BrSJ_ipC.chunk.js";
-import { s as u, r as c, c as s } from "./lib-nodepkg-typedef.D2OyHZDO.chunk.js";
+import { c as e, F as t, j as n, a as r, b as i, r as l, d as o } from "./lib-nodepkg-vuekit.BhEjgaEZ.chunk.js";
+import { s as a, r as u, c } from "./lib-nodepkg-typedef.E6pln5b6.chunk.js";
+import { d as s } from "./vendor-rxjs.UW_doh-B.chunk.js";
 let f = {};
 function p(e10, t10, n10) {
   if (e10 && "object" == typeof e10) {
@@ -3263,9 +3264,9 @@ function rY(e10) {
   for (; 9 === n10 || 32 === n10; ) t10++, n10 = e10.charCodeAt(t10);
   return e10.slice(t10);
 }
-let rQ = i({ text: u(), components: c(u(), s()).optional() }, (e10, i2) => {
+let rQ = i({ text: a(), components: u(a(), c()).optional() }, (e10, i2) => {
   let {} = i2;
-  return l(e10.text$, a(), o((i3) => {
+  return l(e10.text$, s(), o((i3) => {
     var l2;
     let o2 = function(e11, t10) {
       let n10 = function(e12, t11) {
