@@ -329,7 +329,7 @@ var j = function() {
     }
   }, t2.prototype.forEach = function(t3, r2) {
     var n2 = this;
-    return new (r2 = T(r2))(function(r3, e2) {
+    return new (r2 = k(r2))(function(r3, e2) {
       var o2 = new S({ next: function(r4) {
         try {
           t3(r4);
@@ -349,7 +349,7 @@ var j = function() {
     return A(t3)(this);
   }, t2.prototype.toPromise = function(t3) {
     var r2 = this;
-    return new (t3 = T(t3))(function(t4, n2) {
+    return new (t3 = k(t3))(function(t4, n2) {
       var e2;
       r2.subscribe(function(t5) {
         return e2 = t5;
@@ -363,11 +363,11 @@ var j = function() {
     return new t2(r2);
   }, t2;
 }();
-function T(t2) {
+function k(t2) {
   var r2;
   return null !== (r2 = null != t2 ? t2 : d.Promise) && void 0 !== r2 ? r2 : Promise;
 }
-function k(t2) {
+function T(t2) {
   return function(r2) {
     if (c(null == r2 ? void 0 : r2.lift)) return r2.lift(function(r3) {
       try {
@@ -829,7 +829,7 @@ function te(t2, r2, n2, e2, o2) {
   if (t2.add(i2), !o2) return i2;
 }
 function to(t2, r2) {
-  return void 0 === r2 && (r2 = 0), k(function(n2, e2) {
+  return void 0 === r2 && (r2 = 0), T(function(n2, e2) {
     n2.subscribe(C(e2, function(n3) {
       return te(e2, t2, function() {
         return e2.next(n3);
@@ -846,7 +846,7 @@ function to(t2, r2) {
   });
 }
 function ti(t2, r2) {
-  return void 0 === r2 && (r2 = 0), k(function(n2, e2) {
+  return void 0 === r2 && (r2 = 0), T(function(n2, e2) {
     e2.add(t2.schedule(function() {
       return n2.subscribe(e2);
     }, r2));
@@ -908,7 +908,7 @@ function tl(t2) {
   return !!t2 && (t2 instanceof j || c(t2.lift) && c(t2.subscribe));
 }
 function ta(t2, r2) {
-  return k(function(n2, e2) {
+  return T(function(n2, e2) {
     var o2 = 0;
     n2.subscribe(C(e2, function(n3) {
       e2.next(t2.call(r2, n3, o2++));
@@ -961,7 +961,7 @@ function ty(t2, r2, n2) {
     return ta(function(t3, o2) {
       return r2(n3, t3, e2, o2);
     })(tr(t2(n3, e2)));
-  }, n2) : ("number" == typeof r2 && (n2 = r2), k(function(r3, e2) {
+  }, n2) : ("number" == typeof r2 && (n2 = r2), T(function(r3, e2) {
     var o2, i2, u2, c2, s2, l2, a2;
     return o2 = n2, i2 = [], u2 = 0, c2 = 0, s2 = false, l2 = function() {
       !s2 || i2.length || u2 || e2.complete();
@@ -997,7 +997,7 @@ function tm() {
   return n2.length ? 1 === n2.length ? tr(n2[0]) : (void 0 === (r2 = i2) && (r2 = 1 / 0), ty(I, r2))(tc(n2, o2)) : V;
 }
 function tw(t2, r2) {
-  return k(function(n2, e2) {
+  return T(function(n2, e2) {
     var o2 = 0;
     n2.subscribe(C(e2, function(n3) {
       return t2.call(r2, n3, o2++) && e2.next(n3);
@@ -1005,7 +1005,7 @@ function tw(t2, r2) {
   });
 }
 function tg(t2) {
-  return k(function(r2, n2) {
+  return T(function(r2, n2) {
     var e2, o2 = null, i2 = false;
     o2 = r2.subscribe(C(n2, void 0, void 0, function(u2) {
       e2 = tr(t2(u2, tg(t2)(r2))), o2 ? (o2.unsubscribe(), o2 = null, e2.subscribe(n2)) : i2 = true;
@@ -1013,7 +1013,7 @@ function tg(t2) {
   });
 }
 function tx(t2, r2) {
-  return void 0 === r2 && (r2 = N), k(function(n2, e2) {
+  return void 0 === r2 && (r2 = N), T(function(n2, e2) {
     var o2 = null, i2 = null, u2 = null, c2 = function() {
       if (o2) {
         o2.unsubscribe(), o2 = null;
@@ -1039,12 +1039,12 @@ function tx(t2, r2) {
   });
 }
 function t_() {
-  return k(function(t2, r2) {
+  return T(function(t2, r2) {
     t2.subscribe(C(r2, m));
   });
 }
 function tS(t2, r2) {
-  return void 0 === r2 && (r2 = I), t2 = null != t2 ? t2 : tO, k(function(n2, e2) {
+  return void 0 === r2 && (r2 = I), t2 = null != t2 ? t2 : tO, T(function(n2, e2) {
     var o2, i2 = true;
     n2.subscribe(C(e2, function(n3) {
       var u2 = r2(n3);
@@ -1055,8 +1055,13 @@ function tS(t2, r2) {
 function tO(t2, r2) {
   return t2 === r2;
 }
-function tE(t2, r2) {
-  return k(function(n2, e2) {
+function tE(t2) {
+  return tw(function(r2, n2) {
+    return t2 <= n2;
+  });
+}
+function tI(t2, r2) {
+  return T(function(n2, e2) {
     var o2 = null, i2 = 0, u2 = false, c2 = function() {
       return u2 && !o2 && e2.complete();
     };
@@ -1073,9 +1078,9 @@ function tE(t2, r2) {
     }));
   });
 }
-function tI(t2, r2, n2) {
+function tP(t2, r2, n2) {
   var e2 = c(t2) || r2 || n2 ? { next: t2, error: r2, complete: n2 } : t2;
-  return e2 ? k(function(t3, r3) {
+  return e2 ? T(function(t3, r3) {
     null === (n3 = e2.subscribe) || void 0 === n3 || n3.call(e2);
     var n3, o2 = true;
     t3.subscribe(C(r3, function(t4) {
@@ -1093,7 +1098,7 @@ function tI(t2, r2, n2) {
     }));
   }) : I;
 }
-function tP(t2, r2) {
+function tA(t2, r2) {
   var n2 = {};
   for (var e2 in t2) Object.prototype.hasOwnProperty.call(t2, e2) && 0 > r2.indexOf(e2) && (n2[e2] = t2[e2]);
   if (null != t2 && "function" == typeof Object.getOwnPropertySymbols) for (var o2 = 0, e2 = Object.getOwnPropertySymbols(t2); o2 < e2.length; o2++) 0 > r2.indexOf(e2[o2]) && Object.prototype.propertyIsEnumerable.call(t2, e2[o2]) && (n2[e2[o2]] = t2[e2[o2]]);
@@ -1104,7 +1109,7 @@ export {
   V as E,
   j as O,
   F as S,
-  tP as _,
+  tA as _,
   ty as a,
   t_ as b,
   tg as c,
@@ -1112,12 +1117,13 @@ export {
   tm as e,
   tc as f,
   tx as g,
-  tb as h,
+  tE as h,
   tl as i,
-  tw as j,
+  tb as j,
+  tw as k,
   ta as m,
   ts as o,
   P as p,
-  tE as s,
-  tI as t
+  tI as s,
+  tP as t
 };
