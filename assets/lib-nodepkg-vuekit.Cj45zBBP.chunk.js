@@ -686,7 +686,7 @@ var oN = Object.create || function(e11, t10) {
 void 0 === oB[oU] && o$(oB, oU, { configurable: true, value: oN(null) });
 var oV = ee.f, oz = e9("toStringTag");
 /**
-* @vue/shared v3.4.35
+* @vue/shared v3.4.36
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -2816,7 +2816,7 @@ let sw = Symbol("_vei"), sE = /(?:Once|Passive|Capture)$/, sS = 0, sO = Promise.
     return { render: Y2, hydrate: r10, createApp: function(e13) {
       let t12 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
       o4(e13) || (e13 = oQ({}, e13)), null == t12 || o7(t12) || (t12 = null);
-      let o12 = aB(), l10 = /* @__PURE__ */ new WeakSet(), i12 = false, a11 = o12.app = { _uid: aV++, _component: e13, _props: t12, _container: null, _context: o12, _instance: null, version: "3.4.35", get config() {
+      let o12 = aB(), l10 = /* @__PURE__ */ new WeakSet(), i12 = false, a11 = o12.app = { _uid: aV++, _component: e13, _props: t12, _container: null, _context: o12, _instance: null, version: "3.4.36", get config() {
         return o12.config;
       }, set config(v) {
       }, use(e14) {
