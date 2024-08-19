@@ -398,8 +398,8 @@ class L extends y {
   get type() {
     return this.schema.type;
   }
-  *entries(e2) {
-    if ("any" !== this.schema.items.type && Array.isArray(e2)) for (let [t2, r2] of e2.entries()) yield [t2, r2, this.schema.items];
+  *entries(e2, t2) {
+    if (Array.isArray(e2)) for (let [t3, r2] of e2.entries()) yield [t3, r2, this.schema.items];
   }
   validator(e2) {
     return Array.isArray(e2);
