@@ -101,7 +101,7 @@ var eP = I, eT = eo.String, ej = !!Object.getOwnPropertySymbols && !et(function(
   }
   return t10;
 }, eq = "__core-js_shared__", eG = ez.exports = eo[eq] || eH(eq, {});
-(eG.versions || (eG.versions = [])).push({ version: "3.38.0", mode: "global", copyright: "© 2014-2024 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.38.0/LICENSE", source: "https://github.com/zloirock/core-js" });
+(eG.versions || (eG.versions = [])).push({ version: "3.38.1", mode: "global", copyright: "© 2014-2024 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.38.1/LICENSE", source: "https://github.com/zloirock/core-js" });
 var eK = ez.exports, eY = function(e11, t10) {
   return eK[e11] || (eK[e11] = t10 || {});
 }, eX = TypeError, eQ = function(e11) {
