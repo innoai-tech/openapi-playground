@@ -1,9 +1,9 @@
-import { c as e, I as t, a as n, r as l, j as i, b as a, d as r, e as o, f as d, T as s, F as c, g as p, o as u } from "./lib-nodepkg-vuekit.DXsfgqxw.chunk.js";
+import { c as e, I as t, a as n, r as l, j as i, b as a, d as r, e as o, f as d, T as s, F as c, g as p, o as u } from "./lib-nodepkg-vuekit.BHx9vJzz.chunk.js";
 import { o as v, E as h } from "./lib-nodepkg-typedef.CZTserIo.chunk.js";
 import { i as m, g as y, a as f, b as x, c as b, d as g, s as w } from "./vendor-innoai-tech-lodash.DaXqQgFo.chunk.js";
-import { s as k, d as N, t as S, P as $, v as C, a as I } from "./lib-nodepkg-vueuikit.NDvjFyiG.chunk.js";
-import { M as D } from "./lib-nodepkg-vuemarkdown.CsX7qgMr.chunk.js";
-import { I as O, m as A, a as T, b as E, c as R, d as j, e as J, f as P } from "./lib-nodepkg-vuematerial.CfZ-Ms8n.chunk.js";
+import { s as k, d as N, t as S, P as $, v as C, a as I } from "./lib-nodepkg-vueuikit.BaQCmP1e.chunk.js";
+import { M as D } from "./lib-nodepkg-vuemarkdown.kEN6RMdX.chunk.js";
+import { I as O, m as A, a as T, b as E, c as R, d as j, e as J, f as P } from "./lib-nodepkg-vuematerial.CZ8mhgX4.chunk.js";
 class B extends t {
   constructor(e2, t2) {
     super(t2), this.typedef = e2, this.initials = t2;
@@ -217,7 +217,7 @@ let ev = p(function(e2, t2) {
     a2.show();
   } }) }) })));
 }, { displayName: "RawInput", props: ["ctx", "value", "typedef"] }), eC = n((e2, n2) => {
-  let { emit: a2, render: r2 } = n2, s2 = d(null), c2 = new t(e2.value), p2 = new t(""), v2 = () => {
+  let { emit: a2, render: r2 } = n2, s2 = d(null), c2 = new t(f(e2.value) ? "" : JSON.stringify(e2.value)), p2 = new t(""), v2 = () => {
     if (c2.value) try {
       a2("submit", JSON.parse(c2.value));
     } catch (e3) {
@@ -233,7 +233,7 @@ let ev = p(function(e2, t2) {
   let m2 = l(p2, r2((e3) => e3 ? i(eD, { children: e3 }) : null));
   return l(c2, r2((t2) => o(em, { onSubmit: (e3) => {
     e3.preventDefault(), v2();
-  }, children: [i("textarea", { ref: s2, name: "value", rows: "10", value: f(t2) ? "" : JSON.stringify(t2), onInput: (e3) => {
+  }, children: [i("textarea", { ref: s2, name: "value", rows: "10", value: f(t2) ? "" : t2, onInput: (e3) => {
     c2.next(e3.target.value);
   }, onKeypress: h2 }), m2, i(eI, { children: "请输入合法的 json value，string 需要包含引号" }), o(eh, { children: [i(R, { type: "button", onClick: (t3) => {
     t3.preventDefault(), a2("submit", e2.value);

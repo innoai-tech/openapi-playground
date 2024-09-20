@@ -1,6 +1,6 @@
-import { h as e, F as t, j as n, e as r, a as i, r as l, i as o } from "./lib-nodepkg-vuekit.DXsfgqxw.chunk.js";
+import { h as e, F as t, j as n, e as r, a as i, r as l, i as o } from "./lib-nodepkg-vuekit.BHx9vJzz.chunk.js";
 import { s as a, r as u, c } from "./lib-nodepkg-typedef.CZTserIo.chunk.js";
-import { d as s } from "./vendor-rxjs.D2F2rdN9.chunk.js";
+import { d as s } from "./vendor-rxjs.BlC8C2kN.chunk.js";
 let f = {};
 function p(e10, t10, n10) {
   if (e10 && "object" == typeof e10) {
@@ -1902,41 +1902,46 @@ let tY = { tokenize: function(e10, t10, n10) {
     return N(e10, f2, "whitespace")(t11);
   }
   function f2(r3) {
-    return (e10.exit("directiveContainerFence"), null === r3) ? p2(r3) : D(r3) ? i2.interrupt ? t10(r3) : e10.attempt(tK, d2, p2)(r3) : n10(r3);
+    return (e10.exit("directiveContainerFence"), null === r3) ? v2(r3) : D(r3) ? i2.interrupt ? t10(r3) : e10.attempt(tK, p2, v2)(r3) : n10(r3);
   }
-  function p2(n11) {
-    return e10.exit("directiveContainer"), t10(n11);
+  function p2(t11) {
+    return null === t11 ? v2(t11) : D(t11) ? e10.check(tK, g2, v2)(t11) : (e10.enter("directiveContainerContent"), d2(t11));
   }
-  function d2(n11) {
-    return null === n11 ? (e10.exit("directiveContainer"), t10(n11)) : (e10.enter("directiveContainerContent"), h2(n11));
+  function d2(t11) {
+    return e10.attempt({ tokenize: b2, partial: true }, k2, o2 ? N(e10, h2, "linePrefix", o2 + 1) : h2)(t11);
   }
   function h2(t11) {
-    return null === t11 ? x2(t11) : e10.attempt({ tokenize: k2, partial: true }, x2, o2 ? N(e10, m2, "linePrefix", o2 + 1) : m2)(t11);
+    return null === t11 ? k2(t11) : D(t11) ? e10.check(tK, m2, k2)(t11) : m2(t11);
   }
   function m2(t11) {
-    if (null === t11) return x2(t11);
     let n11 = e10.enter("chunkDocument", { contentType: "document", previous: r2 });
     return r2 && (r2.next = n11), r2 = n11, function t12(n12) {
       if (null === n12) {
         let t13 = e10.exit("chunkDocument");
-        return i2.parser.lazy[t13.start.line] = false, x2(n12);
+        return i2.parser.lazy[t13.start.line] = false, k2(n12);
       }
-      return D(n12) ? e10.check(tK, g2, y2)(n12) : (e10.consume(n12), t12);
+      return D(n12) ? e10.check(tK, y2, x2)(n12) : (e10.consume(n12), t12);
     }(t11);
   }
   function g2(t11) {
-    e10.consume(t11);
-    let n11 = e10.exit("chunkDocument");
-    return i2.parser.lazy[n11.start.line] = false, h2;
+    return e10.enter("directiveContainerContent"), d2(t11);
   }
   function y2(t11) {
+    e10.consume(t11);
     let n11 = e10.exit("chunkDocument");
-    return i2.parser.lazy[n11.start.line] = false, x2(t11);
+    return i2.parser.lazy[n11.start.line] = false, d2;
   }
-  function x2(n11) {
-    return e10.exit("directiveContainerContent"), e10.exit("directiveContainer"), t10(n11);
+  function x2(t11) {
+    let n11 = e10.exit("chunkDocument");
+    return i2.parser.lazy[n11.start.line] = false, k2(t11);
   }
-  function k2(e11, t11, n11) {
+  function k2(t11) {
+    return e10.exit("directiveContainerContent"), v2(t11);
+  }
+  function v2(n11) {
+    return e10.exit("directiveContainer"), t10(n11);
+  }
+  function b2(e11, t11, n11) {
     let r3 = 0;
     return N(e11, function(t12) {
       return e11.enter("directiveContainerFence"), e11.enter("directiveContainerSequence"), function t13(i3) {
