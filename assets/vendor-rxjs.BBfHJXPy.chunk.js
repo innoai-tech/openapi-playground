@@ -255,11 +255,11 @@ var w = /* @__PURE__ */ function(t2) {
       this.unsubscribe();
     }
   }, n2;
-}(f), g = Function.prototype.bind;
-function x(t2, r2) {
-  return g.call(t2, r2);
+}(f), x = Function.prototype.bind;
+function _(t2, r2) {
+  return x.call(t2, r2);
 }
-var _ = /* @__PURE__ */ function() {
+var g = /* @__PURE__ */ function() {
   function t2(t3) {
     this.partialObserver = t3;
   }
@@ -291,7 +291,7 @@ var _ = /* @__PURE__ */ function() {
     var o2, i2, u2 = t2.call(this) || this;
     return c(r2) || !r2 ? o2 = { next: null != r2 ? r2 : void 0, error: null != n3 ? n3 : void 0, complete: null != e2 ? e2 : void 0 } : u2 && d.useDeprecatedNextContext ? ((i2 = /* @__PURE__ */ Object.create(r2)).unsubscribe = function() {
       return u2.unsubscribe();
-    }, o2 = { next: r2.next && x(r2.next, i2), error: r2.error && x(r2.error, i2), complete: r2.complete && x(r2.complete, i2) }) : o2 = r2, u2.destination = new _(o2), u2;
+    }, o2 = { next: r2.next && _(r2.next, i2), error: r2.error && _(r2.error, i2), complete: r2.complete && _(r2.complete, i2) }) : o2 = r2, u2.destination = new g(o2), u2;
   }
   return r(n2, t2), n2;
 }(w), O = { closed: true, next: m, error: function(t2) {
@@ -536,9 +536,8 @@ var z = /* @__PURE__ */ function(t2) {
   for (var n2 = [], e2 = 2; e2 < arguments.length; e2++) n2[e2 - 2] = arguments[e2];
   return setInterval.apply(void 0, /* @__PURE__ */ i([t2, r2], /* @__PURE__ */ o(n2)));
 }, clearInterval: function(t2) {
-  var r2 = q.delegate;
-  return ((null == r2 ? void 0 : r2.clearInterval) || clearInterval)(t2);
-}, delegate: void 0 }, B = /* @__PURE__ */ function(t2) {
+  return clearInterval(t2);
+} }, B = /* @__PURE__ */ function(t2) {
   function n2(r2, n3) {
     var e2 = t2.call(this, r2, n3) || this;
     return e2.scheduler = r2, e2.work = n3, e2.pending = false, e2;
@@ -1004,15 +1003,15 @@ function tw(t2, r2) {
     }));
   });
 }
-function tg(t2) {
+function tx(t2) {
   return T(function(r2, n2) {
     var e2, o2 = null, i2 = false;
     o2 = /* @__PURE__ */ r2.subscribe(/* @__PURE__ */ C(n2, void 0, void 0, function(u2) {
-      e2 = /* @__PURE__ */ tr(/* @__PURE__ */ t2(u2, /* @__PURE__ */ tg(t2)(r2))), o2 ? (o2.unsubscribe(), o2 = null, e2.subscribe(n2)) : i2 = true;
+      e2 = /* @__PURE__ */ tr(/* @__PURE__ */ t2(u2, /* @__PURE__ */ tx(t2)(r2))), o2 ? (o2.unsubscribe(), o2 = null, e2.subscribe(n2)) : i2 = true;
     })), i2 && (o2.unsubscribe(), o2 = null, e2.subscribe(n2));
   });
 }
-function tx(t2, r2) {
+function t_(t2, r2) {
   return void 0 === r2 && (r2 = N), T(function(n2, e2) {
     var o2 = null, i2 = null, u2 = null, c2 = function() {
       if (o2) {
@@ -1038,7 +1037,7 @@ function tx(t2, r2) {
     }));
   });
 }
-function t_() {
+function tg() {
   return T(function(t2, r2) {
     t2.subscribe(/* @__PURE__ */ C(r2, m));
   });
@@ -1111,13 +1110,13 @@ export {
   F as S,
   tA as _,
   ty as a,
-  t_ as b,
+  tg as b,
   tb as c,
   tS as d,
-  tg as e,
+  tx as e,
   tc as f,
   tm as g,
-  tx as h,
+  t_ as h,
   tl as i,
   tE as j,
   tw as k,
