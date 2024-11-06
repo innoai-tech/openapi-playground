@@ -958,7 +958,7 @@ class tr {
     if ((null == t2 ? void 0 : t2.title) && (r2 = /* @__PURE__ */ r2.use(/* @__PURE__ */ e5({ title: null == t2 ? void 0 : t2.title })), i2 = true), null == t2 ? void 0 : t2.description) {
       if (i2) r2 = /* @__PURE__ */ r2.use(/* @__PURE__ */ e5({ description: null == t2 ? void 0 : t2.description }));
       else {
-        let [e11, ...i3] = null == t2 ? void 0 : t2.description.split("\n");
+        let [e11, ...i3] = null == t2 ? void 0 : t2.description.split(/[.\n]/);
         r2 = /* @__PURE__ */ r2.use(/* @__PURE__ */ e5({ title: e11, description: i3 ? i3.join("\n").trim() : void 0 }));
       }
     }
@@ -971,55 +971,55 @@ class tr {
     return r2;
   }
   _decode(t2) {
-    let r2 = /* @__PURE__ */ tp(t2);
-    if (r2.$ref) {
-      let [e10, t3] = this.resolveRef(r2.$ref);
+    var r2, n2, a2, o2;
+    let s2 = /* @__PURE__ */ tp(t2);
+    if (s2.$ref) {
+      let [e10, t3] = this.resolveRef(s2.$ref);
       return this.def.has(t3) || (this.def.set(t3, /* @__PURE__ */ eE()), this.def.set(t3, /* @__PURE__ */ this.decode(e10))), eA(t3, () => this.ref(t3));
     }
-    if (r2.enum) {
-      let e10 = /* @__PURE__ */ eX(r2.enum);
-      return r2["x-enum-labels"] ? e10.use(/* @__PURE__ */ e5({ enumLabels: r2["x-enum-labels"] })) : e10;
+    if (s2.enum) {
+      let e10 = /* @__PURE__ */ eX(s2.enum);
+      return s2["x-enum-labels"] ? e10.use(/* @__PURE__ */ e5({ enumLabels: s2["x-enum-labels"] })) : e10;
     }
-    if (r2.discriminator) {
-      let t3 = r2.discriminator.propertyName;
+    if (s2.discriminator) {
+      let t3 = s2.discriminator.propertyName;
       if (t3) {
         let i2 = {};
-        if (r2.discriminator.mapping) {
-          let e10 = r2.discriminator.mapping;
+        if (s2.discriminator.mapping) {
+          let e10 = s2.discriminator.mapping;
           if (e10) for (let [t4, r3] of Object.entries(e10)) i2[t4] = /* @__PURE__ */ this.decode(r3);
         }
-        if (r2.oneOf) for (let n3 of r2.oneOf) {
-          let r3 = /* @__PURE__ */ this.decode(n3), a3 = el.schemaProp(r3, "properties")[t3];
-          if (a3) {
-            let t4 = el.schemaProp(a3, "enum")[0];
-            e(t4) || (i2[`${t4}`] = r3);
+        if (s2.oneOf) for (let n3 of s2.oneOf) {
+          let a3 = /* @__PURE__ */ this.decode(n3), o3 = el.schemaProp(a3, "properties")[t3];
+          if (o3) {
+            let t4 = null === (r2 = /* @__PURE__ */ el.schemaProp(o3, "enum")) || void 0 === r2 ? void 0 : r2[0];
+            e(t4) || (i2[`${t4}`] = a3);
           }
         }
         return e4(t3, i2);
       }
     }
-    if (r2.oneOf) {
-      let e10 = /* @__PURE__ */ r2.oneOf.map((e11) => this.decode(e11));
+    if (s2.oneOf) {
+      let e10 = /* @__PURE__ */ s2.oneOf.map((e11) => this.decode(e11));
       return 1 === e10.length ? e10[0] : e3(...e10);
     }
-    if (r2.allOf) {
-      let e10 = /* @__PURE__ */ r2.allOf.map((e11) => this.decode(e11));
+    if (s2.allOf) {
+      let e10 = /* @__PURE__ */ s2.allOf.map((e11) => this.decode(e11));
       return 1 === e10.length ? e10[0] : e2(...e10);
     }
-    if (ti(r2)) {
-      var n2, a2, o2;
-      if (r2.properties) {
-        let e11 = null !== (n2 = r2.required) && void 0 !== n2 ? n2 : [], t3 = {};
-        for (let [i2, n3] of Object.entries(r2.properties)) {
-          let r3 = /* @__PURE__ */ this.decode(n3);
-          e11.includes(i2) || (r3 = /* @__PURE__ */ r3.optional()), t3[i2] = r3;
+    if (ti(s2)) {
+      if (s2.properties) {
+        let e11 = null !== (n2 = s2.required) && void 0 !== n2 ? n2 : [], t3 = {};
+        for (let [r3, i2] of Object.entries(s2.properties)) {
+          let n3 = /* @__PURE__ */ this.decode(i2);
+          e11.includes(r3) || (n3 = /* @__PURE__ */ n3.optional()), t3[r3] = n3;
         }
         return eQ(t3);
       }
-      let e10 = null !== (a2 = r2.additionalProperties) && void 0 !== a2 ? a2 : {};
-      return e10 ? eV(/* @__PURE__ */ this.decode(null !== (o2 = r2.propertyNames) && void 0 !== o2 ? o2 : { type: "string" }), /* @__PURE__ */ this.decode(e10)) : eQ();
+      let e10 = null !== (a2 = s2.additionalProperties) && void 0 !== a2 ? a2 : {};
+      return e10 ? eV(/* @__PURE__ */ this.decode(null !== (o2 = s2.propertyNames) && void 0 !== o2 ? o2 : { type: "string" }), /* @__PURE__ */ this.decode(e10)) : eQ();
     }
-    return ta(r2) ? i(r2.items) ? eY(/* @__PURE__ */ r2.items.map((e10) => this.decode(e10))) : eZ(/* @__PURE__ */ this.decode(r2.items)) : ts(r2) ? "binary" === r2.format ? eB() : ek() : to(r2) ? "integer" === r2.type ? eK() : eD() : tl(r2) ? eU() : tn(r2) ? eF() : eE();
+    return ta(s2) ? i(s2.items) ? eY(/* @__PURE__ */ s2.items.map((e10) => this.decode(e10))) : eZ(/* @__PURE__ */ this.decode(s2.items)) : ts(s2) ? "binary" === s2.format ? eB() : ek() : to(s2) ? "integer" === s2.type ? eK() : eD() : tl(s2) ? eU() : tn(s2) ? eF() : eE();
   }
 }
 let ti = (e10) => "object" === e10.type, tn = (e10) => "null" === e10.type, ta = (e10) => "array" === e10.type, to = (e10) => "number" === e10.type || "integer" === e10.type, ts = (e10) => "string" === e10.type, tl = (e10) => "boolean" === e10.type, tc = { object: ["properties", "additionalProperties", "unevaluatedProperties", "patternProperties", "propertyNames", "dependentSchemas", "maxProperties", "minProperties"], array: ["contains", "items", "additionalItems", "unevaluatedItems", "maxItems", "minItems", "uniqueItems", "maxContains", "minContains"], string: ["pattern", "contentMediaType", "contentEncoding", "contentSchema", "maxLength", "minLength"], number: ["maximum", "minimum", "multipleOf", "exclusiveMaximum", "exclusiveMinimum"] }, tu = ["maxProperties", "minProperties", "maxItems", "minItems", "uniqueItems", "pattern", "maxLength", "minLength", "maximum", "minimum", "multipleOf", "exclusiveMaximum", "exclusiveMinimum"], td = (e10, t2) => t2.some((t3) => Object.hasOwn(e10, t3)), tf = (e10) => !td(e10, ["type", "$ref", "$id", "oneOf", "anyOf", "allOf"]), tp = function() {

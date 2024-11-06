@@ -9,11 +9,11 @@ var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read fr
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
 var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
 var _t, _e;
-import { I as t, e } from "./lib-nodepkg-vuekit.CYv97ktF.chunk.js";
-import { E as i, S as s, d as n, a as r } from "./lib-nodepkg-typedef.CkHtBJ-Q.chunk.js";
-import { S as a, a as l, b as o } from "./vendor-rxjs.B9ojupzi.chunk.js";
-import { b as u, a as f, i as h, s as d, g as p } from "./vendor-innoai-tech-lodash.XmF8H4xo.chunk.js";
-class v extends a {
+import { I as t, e } from "./lib-nodepkg-vuekit.BvzCpXNU.chunk.js";
+import { E as i, S as s, J as a, d as r, a as n } from "./lib-nodepkg-typedef.Bo0mYmbQ.chunk.js";
+import { S as l, a as o, b as u } from "./vendor-rxjs.B9ojupzi.chunk.js";
+import { b as h, a as f, i as d, s as p, g as v } from "./vendor-innoai-tech-lodash.XmF8H4xo.chunk.js";
+class c extends l {
   constructor(e2, i2) {
     var s2;
     super();
@@ -26,14 +26,14 @@ class v extends a {
           e2 = true;
           continue;
         }
-        let n2 = s2.input, r2 = /* @__PURE__ */ s2.validate(n2);
+        let a2 = s2.input, r2 = /* @__PURE__ */ s2.validate(a2);
         if (r2) {
           s2.next((t3) => {
             t3.error = r2;
           }), e2 = true;
           continue;
         }
-        f(n2) || (h(n2) ? d(t2, i2, { ...n2 }) : d(t2, i2, n2));
+        f(a2) || (d(a2) ? p(t2, i2, { ...a2 }) : p(t2, i2, a2));
       }
       e2 || this.next(t2);
     });
@@ -48,7 +48,7 @@ class v extends a {
     this.typedef = e2, this.inputs$ = new t(null !== (s2 = /* @__PURE__ */ i2()) && void 0 !== s2 ? s2 : {});
   }
   static of(t2, e2) {
-    return new v(t2, () => u(e2) ? e2() : e2);
+    return new c(t2, () => h(e2) ? e2() : e2);
   }
   get inputs() {
     return this.inputs$.value;
@@ -57,11 +57,11 @@ class v extends a {
     return this._fields.get(t2);
   }
   *fields(t2) {
-    let e2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.inputs$.value, n2 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    for (let [r2, a2, l2] of t2.entries(e2, i)) {
-      if (r2 === s.RecordKey || "never" === l2.type) continue;
-      let t3 = [...n2, r2], e3 = /* @__PURE__ */ m.stringify(t3), i2 = /* @__PURE__ */ this._fields.get(e3);
-      i2 || (i2 = new m(this, l2, t3), this._fields.set(e3, i2)), yield i2;
+    let e2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.inputs$.value, r2 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+    for (let [n2, l2, o2] of t2.entries(e2, i)) {
+      if (n2 === s.RecordKey || "never" === o2.type) continue;
+      let t3 = [...r2, n2], e3 = /* @__PURE__ */ a.create(t3), i2 = /* @__PURE__ */ this._fields.get(e3);
+      i2 || (i2 = new m(this, o2, t3), this._fields.set(e3, i2)), yield i2;
     }
   }
   reset() {
@@ -69,8 +69,8 @@ class v extends a {
   }
 }
 const _m = class _m extends t {
-  constructor(t2, e2, i2, s2 = _m.stringify(i2)) {
-    super({ initial: /* @__PURE__ */ p(t2.inputs$.value, s2, /* @__PURE__ */ _m.defaultValue(e2)) });
+  constructor(t2, e2, i2, s2 = a.create(i2)) {
+    super({ initial: /* @__PURE__ */ v(t2.inputs$.value, i2, /* @__PURE__ */ _m.defaultValue(e2)) });
     __privateAdd(this, _t);
     __privateAdd(this, _e);
     __publicField(this, "focus", () => {
@@ -85,12 +85,12 @@ const _m = class _m extends t {
     });
     __publicField(this, "reset", () => {
       this.form$.inputs$.next((t2) => {
-        d(t2, this.name, this.value.initial);
+        p(t2, this.path, this.value.initial);
       }), this.next({ initial: this.value.initial });
     });
     __publicField(this, "update", (t2) => {
       this.form$.inputs$.next((e2) => {
-        d(e2, this.name, t2);
+        p(e2, this.path, t2);
       }), this.next((e2) => {
         var i2;
         e2.dirty = t2 !== e2.initial, e2.error = null !== (i2 = /* @__PURE__ */ this.validate(t2)) && void 0 !== i2 ? i2 : null;
@@ -98,19 +98,8 @@ const _m = class _m extends t {
     });
     this.form$ = t2, this.typedef = e2, this.path = i2, this.name = s2;
   }
-  static stringify(t2) {
-    let e2 = "";
-    for (let i2 of t2) {
-      if ("number" == typeof i2) {
-        e2 += `[${i2}]`;
-        continue;
-      }
-      e2 += e2 ? `.${i2}` : i2;
-    }
-    return e2;
-  }
   get input() {
-    return p(this.form$.inputs$.value, this.name, /* @__PURE__ */ _m.defaultValue(this.typedef));
+    return v(this.form$.inputs$.value, this.path, /* @__PURE__ */ _m.defaultValue(this.typedef));
   }
   get meta() {
     return this.typedef.meta;
@@ -122,7 +111,7 @@ const _m = class _m extends t {
     return void 0 === __privateGet(this, _t) && __privateSet(this, _t, !this.validate(void 0)), __privateGet(this, _t);
   }
   get input$() {
-    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, /* @__PURE__ */ e(this.form$.inputs$, /* @__PURE__ */ o((t2) => p(t2, this.name, /* @__PURE__ */ _m.defaultValue(this.typedef))), /* @__PURE__ */ l())), __privateGet(this, _e);
+    return void 0 === __privateGet(this, _e) && __privateSet(this, _e, /* @__PURE__ */ e(this.form$.inputs$, /* @__PURE__ */ u((t2) => v(t2, this.path, /* @__PURE__ */ _m.defaultValue(this.typedef))), /* @__PURE__ */ o())), __privateGet(this, _e);
   }
   validate(t2) {
     let e2 = "array" !== this.typedef.type || f(t2) ? t2 : t2.filter((t3) => !f(t3)), [i2] = this.typedef.validate(e2);
@@ -144,9 +133,9 @@ __publicField(_m, "defaultValue", (t2) => {
   }
 });
 let m = _m;
-let c = /* @__PURE__ */ n((t2, e2) => r({ label: e2 }).modify(t2)), y = /* @__PURE__ */ n((t2, e2) => r({ inputBy: e2 }).modify(t2));
+let y = /* @__PURE__ */ r((t2, e2) => n({ label: e2 }).modify(t2)), $ = /* @__PURE__ */ r((t2, e2) => n({ inputBy: e2 }).modify(t2));
 export {
-  v as F,
-  y as i,
-  c as l
+  c as F,
+  $ as i,
+  y as l
 };
