@@ -405,9 +405,9 @@ const _ec = class _ec {
       }
       return [.../* @__PURE__ */ r3.keys()];
     }, get(r3, a3) {
-      var o3, c2, u2;
       if (a3 === _ec.meta) return null != s2 ? s2 : s2 = /* @__PURE__ */ _ec.create(t2, l2, _ec.meta);
       if (n2) {
+        var o3, c2;
         if (i(t2)) {
           let r4 = null == t2 ? void 0 : null === (c2 = t2[n2]) || void 0 === c2 ? void 0 : c2[a3];
           if (!e(r4)) return r4;
@@ -418,7 +418,7 @@ const _ec = class _ec {
         let r4 = null == t2 ? void 0 : t2[a3];
         if (!e(r4)) return r4;
       }
-      return null !== (u2 = t2[a3]) && void 0 !== u2 ? u2 : l2 ? l2[a3] : void 0;
+      return l2 ? l2[a3] : void 0;
     } });
   }
   static schemaProp(e10, t2) {
@@ -770,7 +770,7 @@ class eN extends eh {
               } else a2[e11] = n3;
             }
           }
-          return eg.create(e10.name, () => new eN({ type: "object", properties: a2, required: /* @__PURE__ */ t2(a2), additionalProperties: /* @__PURE__ */ e$.create() }));
+          return new eN({ type: "object", properties: a2, required: /* @__PURE__ */ t2(a2), additionalProperties: /* @__PURE__ */ e$.create() });
         }
         return new eN({ type: "object", properties: e10, required: /* @__PURE__ */ t2(e10), additionalProperties: /* @__PURE__ */ e$.create() });
       }
