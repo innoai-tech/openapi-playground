@@ -15,7 +15,7 @@ import { s as K, B as G } from "./lib-nodepkg-vueuikit.C-SQymNf.chunk.js";
 import { M as Q } from "./lib-nodepkg-vuemarkdown.BcdfvqRe.chunk.js";
 import { l as X, i as Y, F as Z } from "./lib-nodepkg-vueformdata.HuOk-IDi.chunk.js";
 import { F as ee, e as et, I as er } from "./lib-nodepkg-vuematerial.mnV9EuoY.chunk.js";
-import { J as ea, a as ei, b as en } from "./lib-nodepkg-jsoneditor.CFIap9Tg.chunk.js";
+import { J as ea, a as ei, b as en } from "./lib-nodepkg-jsoneditor.CER9-75V.chunk.js";
 const _eo = class _eo extends e {
   constructor() {
     super(...arguments);
