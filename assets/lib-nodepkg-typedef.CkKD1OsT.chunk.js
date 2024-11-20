@@ -2,7 +2,7 @@ var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 var _a;
-import { i as e } from "./lib-nodepkg-vuekit.BLjobv50.chunk.js";
+import { i as e } from "./lib-nodepkg-vuekit.DHDC8L6I.chunk.js";
 let t = (e10) => void 0 === e10, r = (e10) => Object.is(e10, null), n = (e10) => !!e10 && "object" == typeof e10, i = (e10) => !!e10 && e10.constructor == Object, a = (e10) => Array.isArray(e10), o = (e10) => "number" == typeof e10 && !Number.isNaN(e10), l = (e10) => "number" == typeof e10 && !Number.isNaN(e10) && Number.isInteger(e10), s = (e10) => "boolean" == typeof e10, c = (e10) => "string" == typeof e10, u = (e10) => "object" == typeof e10 && "function" == typeof e10[Symbol.iterator], f = (e10) => "function" == typeof e10 && `${e10}`.startsWith("class"), d = (e10) => !!(e10 && e10.constructor && e10.call && e10.apply);
 var p, h, y, v = /* @__PURE__ */ Symbol.for("immer-nothing"), m = /* @__PURE__ */ Symbol.for("immer-draftable"), g = /* @__PURE__ */ Symbol.for("immer-state");
 function b(e10) {
@@ -1322,7 +1322,7 @@ class tc {
     if (t2) {
       for (let e11 of tm) if (e11 in t2) {
         let n3 = tl[e11];
-        r2 = /* @__PURE__ */ r2.use(/* @__PURE__ */ n3(t2[e11]));
+        n3 && (r2 = /* @__PURE__ */ r2.use(/* @__PURE__ */ n3(t2[e11])));
       }
     }
     return r2;
