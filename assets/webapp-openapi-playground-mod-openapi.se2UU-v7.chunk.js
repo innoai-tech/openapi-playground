@@ -6,16 +6,16 @@ var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read fr
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
 var __privateMethod = (obj, member, method) => (__accessCheck(obj, member, "access private method"), method);
 var _e, _t, _ed_instances, r_get, a_fn;
-import { I as e, r as t, c as r, a, e as i, s as n, k as o, j as l, C as s, R as d, d as p, F as c, b as u, D as m, o as h, E as y, G as v, y as f } from "./lib-nodepkg-vuekit.DHDC8L6I.chunk.js";
-import { S as g, s as x, a as b, c as $, e as _, f as w, g as P, h as I, o as S } from "./lib-nodepkg-typedef.CkKD1OsT.chunk.js";
-import { c as k, a as N, p as O, t as C } from "./vendor-innoai-tech-fetcher.BjPWWl7O.chunk.js";
+import { I as e, r as t, c as r, a, e as i, s as n, k as o, j as l, C as s, R as d, d as p, F as c, b as u, D as m, o as h, E as y, G as v, y as f } from "./lib-nodepkg-vuekit.CJr2PA1p.chunk.js";
+import { S as g, s as x, a as b, c as $, e as _, f as w, g as P, h as I, o as S } from "./lib-nodepkg-typedef.S8A8zKcZ.chunk.js";
+import { c as k, a as N, p as O, t as C } from "./vendor-innoai-tech-fetcher.Cqb_7ot-.chunk.js";
 import { B as j, s as q, b as D, m as F, E as L, o as T, S as B, t as R, k as W, l as A, c as J, n as H } from "./vendor-rxjs.ByE15jUQ.chunk.js";
-import { w as M, g as V, a as z, d as E, e as U } from "./vendor-innoai-tech-lodash.BmKfyDt9.chunk.js";
-import { s as K, B as G } from "./lib-nodepkg-vueuikit.CCThKRrA.chunk.js";
-import { M as Q } from "./lib-nodepkg-vuemarkdown.X7Cc-3M-.chunk.js";
-import { I as X, m as Y, T as Z, F as ee, f as et } from "./lib-nodepkg-vuematerial.DDJXHnvP.chunk.js";
-import { l as er, h as ea, i as ei, F as en } from "./lib-nodepkg-vueformdata.DfP9Ov9N.chunk.js";
-import { J as eo, a as el, b as es } from "./lib-nodepkg-jsoneditor.BdaGVzjw.chunk.js";
+import { w as M, g as V, a as z, d as E, e as U } from "./vendor-innoai-tech-lodash.BIXzStxr.chunk.js";
+import { s as K, B as G } from "./lib-nodepkg-vueuikit.D8fdV20v.chunk.js";
+import { M as Q } from "./lib-nodepkg-vuemarkdown.BI8o8P3U.chunk.js";
+import { I as X, m as Y, T as Z, F as ee, f as et } from "./lib-nodepkg-vuematerial.CyRJIG2i.chunk.js";
+import { l as er, h as ea, i as ei, F as en } from "./lib-nodepkg-vueformdata.SkfFHvId.chunk.js";
+import { J as eo, a as el, b as es } from "./lib-nodepkg-jsoneditor.BrMMs9iZ.chunk.js";
 const _ed = class _ed extends e {
   constructor() {
     super(...arguments);
@@ -265,7 +265,7 @@ let eF = /* @__PURE__ */ a({ code: /* @__PURE__ */ $(), response: /* @__PURE__ *
   return /* @__PURE__ */ i(G, { component: "span", sx: { display: "block" }, children: [/* @__PURE__ */ i(G, { component: "span", sx: { fontWeight: "bold", marginRight: "0.5em" }, children: [t2, ":"] }), /* @__PURE__ */ l("span", { children: r2 })] });
 }, eV = (e5) => {
   let { method: t2, url: r2, params: a2 } = e5, n2 = /* @__PURE__ */ O(a2);
-  return /* @__PURE__ */ i(G, { component: "span", sx: { fontWeight: "bold" }, children: [/* @__PURE__ */ t2.toUpperCase(), /* @__PURE__ */ i(G, { component: "span", sx: { fontWeight: "medium" }, children: [r2, n2 ? `?${n2}` : ""] }), "HTTP/*"] });
+  return /* @__PURE__ */ i(G, { component: "span", sx: { fontWeight: "bold" }, children: [`${t2.toUpperCase()} `, /* @__PURE__ */ i(G, { component: "span", sx: { fontWeight: "medium" }, children: [r2, n2 ? `?${n2}` : ""] }), " HTTP/*"] });
 }, ez = (e5, t2) => {
   let r2 = (t3, a2) => a2 instanceof File || a2 instanceof Blob ? `${e5}
 Content-Disposition: form-data; name="${t3}"${a2.name ? `; filename="${a2.name}"` : ""}
