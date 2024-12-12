@@ -9,10 +9,10 @@ var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read fr
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
 var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
 var _t, _e, _i;
-import { I as t, r as e } from "./lib-nodepkg-vuekit.CJr2PA1p.chunk.js";
-import { J as i, E as s, S as r, d as a, b as n } from "./lib-nodepkg-typedef.S8A8zKcZ.chunk.js";
-import { S as l, a as o, b as u } from "./vendor-rxjs.ByE15jUQ.chunk.js";
-import { b as h, f, a as d, i as p, s as v, g as c } from "./vendor-innoai-tech-lodash.BIXzStxr.chunk.js";
+import { I as t, r as e } from "./lib-nodepkg-vuekit.Ce7n1Vqu.chunk.js";
+import { J as i, E as s, S as r, d as a, b as n } from "./lib-nodepkg-typedef.C7AJ53Bp.chunk.js";
+import { S as l, a as o, b as u } from "./vendor-rxjs.BqYGlyAQ.chunk.js";
+import { b as h, f, a as d, i as p, s as v, g as c } from "./vendor-innoai-tech-lodash.CzrXiiPp.chunk.js";
 const _m = class _m extends l {
   constructor(e2, i2) {
     var s2;
@@ -26,7 +26,7 @@ const _m = class _m extends l {
           e2 = true;
           continue;
         }
-        let i3 = s2.input, r2 = /* @__PURE__ */ s2.validate(i3);
+        let i3 = s2.input, r2 = s2.validate(i3);
         if (r2) {
           s2.next((t3) => {
             t3.error = r2;
@@ -46,7 +46,7 @@ const _m = class _m extends l {
         });
       };
     })());
-    this.typedef = e2, this.inputs$ = new t(null !== (s2 = /* @__PURE__ */ i2()) && void 0 !== s2 ? s2 : {});
+    this.typedef = e2, this.inputs$ = new t(null !== (s2 = i2()) && void 0 !== s2 ? s2 : {});
   }
   static of(t2, e2) {
     return new _m(t2, () => h(e2) ? e2() : e2);
@@ -64,7 +64,7 @@ const _m = class _m extends l {
     let e2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.inputs$.value, a2 = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let [n2, l2, o2] of t2.entries(e2, s)) {
       if (n2 === r.RecordKey || "never" === o2.type) continue;
-      let t3 = [...a2, n2], e3 = /* @__PURE__ */ i.create(t3), s2 = /* @__PURE__ */ __privateGet(this, _t).get(e3);
+      let t3 = [...a2, n2], e3 = i.create(t3), s2 = __privateGet(this, _t).get(e3);
       s2 || (s2 = new y(this, o2, t3), __privateGet(this, _t).set(e3, s2)), yield s2;
     }
   }
@@ -76,7 +76,7 @@ _t = new WeakMap();
 let m = _m;
 const _y = class _y extends t {
   constructor(t2, e2, s2, r2 = i.create(s2)) {
-    super({ initial: /* @__PURE__ */ c(t2.inputs$.value, s2, /* @__PURE__ */ _y.defaultValue(e2)) });
+    super({ initial: c(t2.inputs$.value, s2, _y.defaultValue(e2)) });
     __privateAdd(this, _e);
     __privateAdd(this, _i);
     __publicField(this, "focus", () => {
@@ -99,13 +99,13 @@ const _y = class _y extends t {
         v(e2, this.path, t2);
       }), this.next((e2) => {
         var i2;
-        e2.dirty = t2 !== e2.initial, e2.error = null !== (i2 = /* @__PURE__ */ this.validate(t2)) && void 0 !== i2 ? i2 : null;
+        e2.dirty = t2 !== e2.initial, e2.error = null !== (i2 = this.validate(t2)) && void 0 !== i2 ? i2 : null;
       });
     });
     this.form$ = t2, this.typedef = e2, this.path = s2, this.pointer = r2;
   }
   get input() {
-    return c(this.form$.inputs$.value, this.path, /* @__PURE__ */ _y.defaultValue(this.typedef));
+    return c(this.form$.inputs$.value, this.path, _y.defaultValue(this.typedef));
   }
   get meta() {
     return this.typedef.meta;
@@ -120,12 +120,12 @@ const _y = class _y extends t {
     return void 0 === __privateGet(this, _e) && __privateSet(this, _e, !this.validate(void 0)), __privateGet(this, _e);
   }
   get input$() {
-    return void 0 === __privateGet(this, _i) && __privateSet(this, _i, /* @__PURE__ */ e(this.form$.inputs$, /* @__PURE__ */ u((t2) => c(t2, this.path, /* @__PURE__ */ _y.defaultValue(this.typedef))), /* @__PURE__ */ o())), __privateGet(this, _i);
+    return void 0 === __privateGet(this, _i) && __privateSet(this, _i, e(this.form$.inputs$, u((t2) => c(t2, this.path, _y.defaultValue(this.typedef))), o())), __privateGet(this, _i);
   }
   validate(t2) {
     let e2 = "array" !== this.typedef.type || d(t2) ? t2 : t2.filter((t3) => !d(t3)), [i2] = this.typedef.validate(e2);
     if (!i2) return;
-    let s2 = /* @__PURE__ */ i2.failures().filter((t3) => "never" !== t3.type && 0 === t3.path.length);
+    let s2 = i2.failures().filter((t3) => "never" !== t3.type && 0 === t3.path.length);
     if (0 !== s2.length) return s2.map((t3) => void 0 === t3.value ? "字段不能为空" : t3.message);
   }
   destroy() {
@@ -142,7 +142,7 @@ __publicField(_y, "defaultValue", (t2) => {
   }
 });
 let y = _y;
-let $ = /* @__PURE__ */ a((t2, e2) => n({ label: e2 }).modify(t2)), g = /* @__PURE__ */ a((t2, e2) => n({ hint: e2 }).modify(t2)), x = /* @__PURE__ */ a((t2, e2) => n({ inputBy: e2 }).modify(t2));
+let $ = a((t2, e2) => n({ label: e2 }).modify(t2)), g = a((t2, e2) => n({ hint: e2 }).modify(t2)), x = a((t2, e2) => n({ inputBy: e2 }).modify(t2));
 export {
   m as F,
   g as h,
