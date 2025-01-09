@@ -455,10 +455,13 @@ let e8 = (e10) => e6(e10).includes("application/json"), e3 = r({ operationID: x(
     }), Object.entries(r3).map((e11) => {
       let [t3, a3] = e11;
       return d(tp, { onMouseover: () => {
-        o2.next(a3.columnNames);
+        o2.next(a3.columnNames.map((e12) => e12.name));
       }, onMouseleave: () => {
         o2.next([]);
-      }, children: n(tv, { "data-primary": a3.primary, "data-unique": a3.unique, children: [d(et, { path: a3.unique ? el : es }), d("span", { children: t3 }), n("span", { children: ["(", a3.columnNames.join(","), ")"] })] }) });
+      }, children: n(tv, { "data-primary": a3.primary, "data-unique": a3.unique, children: [d(et, { path: a3.unique ? el : es }), d("span", { children: t3 }), n("span", { children: ["(", a3.columnNames.map((e12) => {
+        var t4;
+        return [e12.name, ...null !== (t4 = e12.options) && void 0 !== t4 ? t4 : []].join(" ");
+      }).join(","), ")"] })] }) });
     }), d(X, { sx: { py: 4 } })] });
   }));
 }, { displayName: "DatabaseErTableView", props: ["database", "table", "tableName"] }), tn = r((a2, r2) => {
