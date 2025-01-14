@@ -10,7 +10,7 @@ var _e, _t, _ew_instances, a_get, r_fn;
 import { S as e, s as t, b as a, e as r, f as i, h as n, j as o, k as l, o as s, _ as d } from "./lib-nodepkg-typedef.wThrm2fx.chunk.js";
 import { I as p, r as c, c as m, a as u, o as h, e as y, s as f, v as b, h as g, j as x, A as v, R as w, d as $, F as _, b as N, B as S, C as I, D as P, k as O } from "./lib-nodepkg-vuekit.BOSnaom6.chunk.js";
 import { c as k, a as C, p as j, t as D } from "./vendor-innoai-tech-fetcher.CtFGdZwe.chunk.js";
-import { B as T, s as q, a as L, m as B, E, o as R, S as F, k as W, t as M, O as J, l as A, c as V, e as H, n as z } from "./vendor-rxjs.BHYITtPb.chunk.js";
+import { B as T, s as q, a as E, m as L, E as B, o as R, S as F, k as W, t as M, O as J, l as A, c as H, e as V, n as z } from "./vendor-rxjs.BHYITtPb.chunk.js";
 import { w as U, g as K, a as G, x as Q, d as X, e as Y } from "./vendor-innoai-tech-lodash.BIpaKHXU.chunk.js";
 import { s as Z, B as ee, v as et, a as ea } from "./lib-nodepkg-vueuikit.CfNSk5ff.chunk.js";
 import { M as er } from "./lib-nodepkg-vuemarkdown.BDgwosmJ.chunk.js";
@@ -30,7 +30,7 @@ const _ew = class _ew extends p {
   response$(e10) {
     return c(__privateGet(this, _t), q((t2) => {
       let a2 = t2.get(e10);
-      return a2 ? B(a2, a2.error$) : E;
+      return a2 ? L(a2, a2.error$) : B;
     }));
   }
   requesting$(e10) {
@@ -70,7 +70,7 @@ const _ew = class _ew extends p {
   schema$(e10) {
     var _a;
     let t2 = ((_a = e10.split("#/")[1]) == null ? void 0 : _a.split("/")) ?? [];
-    return c(this, q((e11) => t2 ? R(K(e11, t2) ?? null) : R(null)), L((e11) => e11 ? { ...e11, $id: t2[t2.length - 1] } : e11));
+    return c(this, q((e11) => t2 ? R(K(e11, t2) ?? null) : R(null)), E((e11) => e11 ? { ...e11, $id: t2[t2.length - 1] } : e11));
   }
   schema(e10) {
     var _a;
@@ -131,7 +131,7 @@ let e_ = function(e10) {
         };
       });
     }
-    return E;
+    return B;
   }), b());
   let o2 = c(r2, q((e11) => a2.operations$(e11)), g((e11) => {
     let t3 = Object.groupBy(e11, (e12) => e12.group);
@@ -143,18 +143,18 @@ let e_ = function(e10) {
     }) })] });
   }));
   return () => y(eP, { children: [o2, x(ej, { children: x(w, {}) })] });
-}, { displayName: "OpenAPIView" }), eP = Z("div", { displayName: "Container" })({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), eO = Z("aside", { displayName: "NavContainer" })({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), ek = Z("div", { displayName: "NavSearchBox" })({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), eC = Z("div", { displayName: "Nav" })({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), ej = Z("main", { displayName: "Main" })({ flex: 1, overflow: "hidden" }), eD = Z("a", { displayName: "OperationListItem" })({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), eT = Z("div", { displayName: "Token" })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), eq = Z("div", { displayName: "PropName", props: ["deprecated", "optional", "nullable"] })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14, color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), eL = Z("div", (e10, t2) => {
+}, { displayName: "OpenAPIView" }), eP = Z("div", { displayName: "Container" })({ width: "100vw", height: "100vh", overflow: "hidden", display: "flex" }), eO = Z("aside", { displayName: "NavContainer" })({ width: 240, py: 4, display: "flex", flexDirection: "column", gap: 4, height: "100%", overflow: "hidden", borderRight: "1px solid", borderColor: "sys.outline" }), ek = Z("div", { displayName: "NavSearchBox" })({ input: { py: 10, px: 12, border: "none", width: "100%", outline: 0 }, borderBottom: "1px solid", borderColor: "sys.outline" }), eC = Z("div", { displayName: "Nav" })({ display: "flex", flexDirection: "column", gap: 4, $data_nav_group_heading: { px: 12, py: 4, textStyle: "sys.label-small", containerStyle: "sys.secondary-container" } }), ej = Z("main", { displayName: "Main" })({ flex: 1, overflow: "hidden" }), eD = Z("a", { displayName: "OperationListItem" })({ px: 12, py: 8, pos: "relative", overflow: "hidden", width: 240, display: "flex", alignItems: "center", gap: 8, flexDirection: "row-reverse", textDecoration: "none", $data_operation_method: { textTransform: "uppercase", fontSize: 18, fontFamily: "code", display: "flex", alignItems: "center", pointerEvents: "none" }, $data_operation_desc: { flex: 1, overflow: "hidden" }, $data_operation_id: { textStyle: "sys.label-large", textOverflow: "ellipsis", overflow: "hidden" }, $data_operation_summary: { opacity: 0.7, textStyle: "sys.body-small", textOverflow: "ellipsis", overflow: "hidden" }, "&.router-link-active": { containerStyle: "sys.surface-container" } }), eT = Z("div", { displayName: "Token" })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14 }), eq = Z("div", { displayName: "PropName", props: ["deprecated", "optional", "nullable"] })({ display: "inline-table", textStyle: "sys.label-small", fontWeight: "bold", fontFamily: "inherit", fontSize: 11, lineHeight: 14, color: "sys.primary", _deprecated: { textDecoration: "line-through" }, _nullable: { "&:after": { content: '"??"', color: "sys.error" } }, _optional: { "&:after": { content: '"?"', color: "sys.secondary" } } }), eE = Z("div", (e10, t2) => {
   let { slots: a2 } = t2, r2 = eF.use();
   return (t3) => {
     var _a;
     return x(t3, { style: { paddingLeft: `${r2.indent}em`, marginTop: (e10.spacing ?? 0) * 0.5 }, children: (_a = a2.default) == null ? void 0 : _a.call(a2) });
   };
-}, { displayName: "Line", props: ["spacing"] })({ position: "relative", display: "block" }), eB = Z("div", (t2, a2) => (a3) => {
+}, { displayName: "Line", props: ["spacing"] })({ position: "relative", display: "block" }), eL = Z("div", (t2, a2) => (a3) => {
   let r2 = e.metaProp(t2.schema, "title") ?? "", i2 = e.metaProp(t2.schema, "description") ?? "";
-  return y(a3, { children: [r2, " ", i2 ? x(el, { title: x(eE, { children: x(er, { text: i2 }) }), children: x(ei, { path: eo }) }) : null] });
-}, { displayName: "Description", props: ["schema"] })({ position: "relative", pt: 8, display: "flex", alignItems: "center", gap: 4, "&::before": { content: '"// "', fontFamily: "code" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12, [`${ei}`]: { width: 12, height: 12, overflow: "hidden" } }), eE = Z("div", { displayName: "MarkdownContainer" })({ textStyle: "sys.body-small", "& p": { my: 1, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" } }), eR = (e10) => {
+  return y(a3, { children: [r2, " ", i2 ? x(el, { title: x(eB, { children: x(er, { text: i2 }) }), children: x(ei, { path: eo }) }) : null] });
+}, { displayName: "Description", props: ["schema"] })({ position: "relative", pt: 8, display: "flex", alignItems: "center", gap: 4, "&::before": { content: '"// "', fontFamily: "code" }, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12, [`${ei}`]: { width: 12, height: 12, overflow: "hidden" } }), eB = Z("div", { displayName: "MarkdownContainer" })({ textStyle: "sys.body-small", "& p": { my: 1, wordBreak: "keep-all", whiteSpace: "nowrap", opacity: 0.7 }, "& code": { wordBreak: "keep-all", whiteSpace: "nowrap" } }), eR = (e10) => {
   let { name: t2, value: a2, extra: r2 } = e10;
-  return "" == a2 ? null : x(eL, { children: y(eT, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eT, { sx: { color: "sys.primary" }, children: `@${t2}(` }), `${a2}`, Object.entries(r2 ?? {}).map((e11) => {
+  return "" == a2 ? null : x(eE, { children: y(eT, { sx: { opacity: 0.7, wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eT, { sx: { color: "sys.primary" }, children: `@${t2}(` }), `${a2}`, Object.entries(r2 ?? {}).map((e11) => {
     let [t3, a3] = e11;
     return y(_, { children: [y(eT, { sx: { opacity: 0.5 }, children: [",", " "] }), x(eT, { sx: { opacity: 0.5 }, children: t3 }), y(eT, { sx: { opacity: 0.5 }, children: [":", " "] }), x(eT, { sx: { opacity: 0.7 }, children: a3 })] });
   }), x(eT, { sx: { color: "sys.primary" }, children: ")" })] }) });
@@ -184,32 +184,32 @@ class eM {
 let eJ = m(() => new eM("")), eA = u((t2) => {
   let a2 = eJ.use(), r2 = eF.use(), i2 = h(false);
   return () => {
-    let n2 = t2.schema, o2 = e.schemaProp(t2.schema, "$ref"), l2 = "intersection" == (n2 = e.schemaProp(t2.schema, e.unwrap)()).type || "object" == n2.type || "union" == n2.type || "record" == n2.type || "array" == n2.type || "union" == n2.type, s2 = a2.safe(o2) && y(_, { children: [x("span", { children: " " }), x(eH, { schema: n2 })] });
+    let n2 = t2.schema, o2 = e.schemaProp(t2.schema, "$ref"), l2 = "intersection" == (n2 = e.schemaProp(t2.schema, e.unwrap)()).type || "object" == n2.type || "union" == n2.type || "record" == n2.type || "array" == n2.type || "union" == n2.type, s2 = a2.safe(o2) && y(_, { children: [x("span", { children: " " }), x(eV, { schema: n2 })] });
     return x(eJ, { value: a2.child(o2), children: l2 ? r2.indent < 3 ? y(_, { children: [x(v, { to: `#${o2}`, children: x(eT, { id: o2, children: o2 }) }), r2.indent < 3 && s2] }) : y(_, { children: [x("a", { href: `#${o2}`, onClick: (e10) => {
       e10.preventDefault(), i2.next(true);
     }, children: x(eT, { id: o2, children: o2 }) }), a2.safe(o2) && x(en, { isOpen: i2.value, onClose: () => {
       i2.next(false);
-    }, children: x(eV, { children: y(eL, { children: [x(eT, { children: o2 }), x(eF, { value: { indent: 0 }, children: s2 })] }) }) })] }) : s2 });
+    }, children: x(eH, { children: y(eE, { children: [x(eT, { children: o2 }), x(eF, { value: { indent: 0 }, children: s2 })] }) }) })] }) : s2 });
   };
-}, { displayName: "SchemaViewLink", props: ["schema"] }), eV = Z("div", { displayName: "DialogContainer" })({ display: "flex", containerStyle: "sys.surface", height: "100vh", width: "36vw", roundedLeft: "sm", px: 16, py: 36, top: 0, right: 0, position: "absolute", overflow: "auto" }), eH = u((r2) => {
+}, { displayName: "SchemaViewLink", props: ["schema"] }), eH = Z("div", { displayName: "DialogContainer" })({ display: "flex", containerStyle: "sys.surface", height: "100vh", width: "36vw", roundedLeft: "sm", px: 16, py: 36, top: 0, right: 0, position: "absolute", overflow: "auto" }), eV = u((r2) => {
   let i2 = r2.schema;
   return e.schemaProp(i2, "$ref") ? x(eA, { schema: i2 }) : () => {
     var _a, _b;
     var r3;
     switch (i2.type) {
       case "union":
-        return x(_, { children: (_a = e.schemaProp(i2, "oneOf")) == null ? void 0 : _a.map((e10, t2) => y(_, { children: [t2 > 0 && y(eT, { children: [" ", " | ", " "] }), x(eH, { schema: e10 })] })) });
+        return x(_, { children: (_a = e.schemaProp(i2, "oneOf")) == null ? void 0 : _a.map((e10, t2) => y(_, { children: [t2 > 0 && y(eT, { children: [" ", " | ", " "] }), x(eV, { schema: e10 })] })) });
       case "intersection":
-        return x(eT, { children: (_b = e.schemaProp(i2, "allOf")) == null ? void 0 : _b.filter((e10) => !Object.keys(e10).length).map((e10, t2) => y(_, { children: [t2 > 0 && y(eT, { children: [" ", "&", " "] }), x(eH, { schema: e10 })] })) });
+        return x(eT, { children: (_b = e.schemaProp(i2, "allOf")) == null ? void 0 : _b.filter((e10) => !Object.keys(e10).length).map((e10, t2) => y(_, { children: [t2 > 0 && y(eT, { children: [" ", "&", " "] }), x(eV, { schema: e10 })] })) });
       case "array":
-        return y(eT, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eT, { children: "Array<" }), x(eH, { schema: e.schemaProp(i2, "items") ?? a() }), x(eT, { children: ">" })] });
+        return y(eT, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eT, { children: "Array<" }), x(eV, { schema: e.schemaProp(i2, "items") ?? a() }), x(eT, { children: ">" })] });
       case "object":
         return y(_, { children: [x(eT, { children: "{" }), x(eW, { children: x(_, { children: Object.entries(e.schemaProp(i2, "properties") ?? {}).map((t2) => {
           let [a2, r4] = t2;
-          return r4 ? x(_, { children: y(eL, { spacing: 2, children: [x(eB, { schema: r4 }), y(eT, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eq, { nullable: e.schemaProp(i2, "nullable"), deprecated: e.schemaProp(i2, "deprecated"), optional: !(e.schemaProp(i2, "required") ?? []).includes(a2), children: a2 }), x(eT, { sx: { mr: "1em" }, children: ":" }), x(eH, { schema: r4 })] })] }) }) : null;
+          return r4 ? x(_, { children: y(eE, { spacing: 2, children: [x(eL, { schema: r4 }), y(eT, { sx: { wordBreak: "keep-all", whiteSpace: "nowrap" }, children: [x(eq, { nullable: e.schemaProp(i2, "nullable"), deprecated: e.schemaProp(i2, "deprecated"), optional: !(e.schemaProp(i2, "required") ?? []).includes(a2), children: a2 }), x(eT, { sx: { mr: "1em" }, children: ":" }), x(eV, { schema: r4 })] })] }) }) : null;
         }) }) }), x(eT, { children: "}" })] });
       case "record":
-        return y(_, { children: [x(eT, { children: "{" }), e.schemaProp(i2, "additionalProperties") && x(_, { children: x(eW, { children: y(eL, { children: [y(eT, { sx: { mr: 1 }, children: ["[K:", " "] }), x(eH, { schema: e.schemaProp(i2, "propertyNames") ?? t() }), y(eT, { sx: { mr: 1 }, children: ["]:", " "] }), x(eH, { schema: e.schemaProp(i2, "additionalProperties") ?? a() })] }) }) }), x(eT, { children: "}" })] });
+        return y(_, { children: [x(eT, { children: "{" }), e.schemaProp(i2, "additionalProperties") && x(_, { children: x(eW, { children: y(eE, { children: [y(eT, { sx: { mr: 1 }, children: ["[K:", " "] }), x(eV, { schema: e.schemaProp(i2, "propertyNames") ?? t() }), y(eT, { sx: { mr: 1 }, children: ["]:", " "] }), x(eV, { schema: e.schemaProp(i2, "additionalProperties") ?? a() })] }) }) }), x(eT, { children: "}" })] });
       case "enums": {
         let t2 = e.schemaProp(i2, "enum") ?? [];
         if (1 == t2.length) return x(eT, { children: JSON.stringify(t2[0]) });
@@ -243,12 +243,12 @@ let eU = u({ code: r(), response: r() }, (e10) => {
       let r2 = t4.slice(0, a2), i2 = t4.slice(a2 + 1);
       return G(r2) || G(i2) ? e13 : { ...e13, [r2]: JSON.parse(i2) };
     }, { key: e12.slice(0, t3) }) : null;
-  }(e11)).map((e11) => e11 ? x(ee, { sx: { mb: 16 }, children: y(eL, { spacing: 0, children: [y(eT, { children: ["{", " "] }), x(eW, { children: Object.entries(e11).map((e12) => {
+  }(e11)).map((e11) => e11 ? x(ee, { sx: { mb: 16 }, children: y(eE, { spacing: 0, children: [y(eT, { children: ["{", " "] }), x(eW, { children: Object.entries(e11).map((e12) => {
     let [t3, a2] = e12;
-    return "code" === t3 ? null : y(eL, { children: [x(eq, { children: t3 }), x(eT, { children: ": " }), x(eT, { children: JSON.stringify(a2) })] });
+    return "code" === t3 ? null : y(eE, { children: [x(eq, { children: t3 }), x(eT, { children: ": " }), x(eT, { children: JSON.stringify(a2) })] });
   }) }), y(eT, { children: [" ", "}"] })] }) }) : null) }), x(_, { children: Object.entries(e10.response.content ?? {}).map((e11) => {
     let [a2, { schema: r2 }] = e11;
-    return y(eQ, { children: [x(eL, { spacing: 0, children: x(eH, { schema: i.decode(r2, (e12) => [t2.schema(e12) ?? {}, n(e12)]) }) }), x("div", { "data-content-type": true, children: a2 })] });
+    return y(eQ, { children: [x(eE, { spacing: 0, children: x(eV, { schema: i.decode(r2, (e12) => [t2.schema(e12) ?? {}, n(e12)]) }) }), x("div", { "data-content-type": true, children: a2 })] });
   }) })] })] });
 }, { displayName: "ResponseView" }), eK = Z("section", { displayName: "ResponseSection" })({}), eG = Z("div", { displayName: "ResponseStatusCode" })({ fontSize: 18, fontFamily: "code", color: "sys.success", py: 12, pos: "sticky", top: 0, _data_failed__true: { color: "sys.error" } }), eQ = Z("section", { displayName: "ResponseSchema" })({ pos: "relative", $data_content_type: { pos: "absolute", right: 0, top: 0, fontFamily: "code", opacity: 0.3 } }), eX = Z("div", (e10, t2) => {
   let { slots: a2 } = t2;
@@ -260,7 +260,7 @@ let eU = u({ code: r(), response: r() }, (e10) => {
     });
     return y(t3, { "data-valued": r2, "data-invalid": i2, "data-disabled": n2, "data-focus-within": e10.focus, "data-has-leading": !!a2.leading, "data-has-trailing": !!a2.trailing, children: [y("div", { "data-input-container": true, children: [y("div", { "data-input-decorator-container": true, children: [x("div", { "data-input-decorator-leading": true }), x("div", { "data-input-decorator-label": true, children: x("div", { "data-input-label": true, children: (_b = a2.label) == null ? void 0 : _b.call(a2) }) }), x("div", { "data-input-decorator-trailing": true })] }), y("div", { "data-input-row": true, children: [a2.leading && x(eY, { role: "leading", children: a2.leading() }), o2, a2.trailing && x(eY, { role: "trailing", children: a2.trailing() })] })] }), a2.supporting && x("div", { "data-input-supporting": true, children: (_c = a2.supporting) == null ? void 0 : _c.call(a2) })] });
   };
-}, { displayName: "TextField", props: ["valued", "focus", "invalid", "disabled"] })({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, pointerEvents: "none", rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1 }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), eY = Z("div", { role: o(["leading", "trailing"]) }, { displayName: "Maker" })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), eZ = u((e10, t2) => {
+}, { displayName: "TextField", props: ["valued", "focus", "invalid", "disabled"] })({ display: "block", pos: "relative", textStyle: "sys.body-medium", $data_input_container: { pos: "relative", zIndex: 1 }, $data_input_row: { pos: "relative", rounded: "xs", overflow: "hidden", minHeight: 40, display: "flex", alignItems: "stretch" }, $data_input_decorator_container: { pos: "absolute", left: 0, top: 0, bottom: 0, right: 0, display: "flex", zIndex: 1, rounded: "xs" }, $data_input_decorator_leading: { roundedLeft: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", width: 16, borderLeft: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", pointerEvents: "none" }, $data_input_decorator_label: { transitionDuration: "sm1", transitionTimingFunction: "standard", borderBottom: "1px solid", borderColor: "sys.outline" }, $data_input_decorator_trailing: { borderRight: "1px solid", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "sys.outline", roundedRight: "xs", transitionDuration: "sm1", transitionTimingFunction: "standard", flex: 1, pointerEvents: "none" }, $data_input_label: { position: "relative", top: -12, padding: 4, textStyle: "sys.body-small", color: "sys.on-surface-variant", display: "flex", alignItems: "center" }, $data_input: { flex: 1, w: "100%", m: 0, px: 16, py: 4, cursor: "text", "&[readonly]": { cursor: "pointer" }, bg: "inherit", color: "sys.on-surface", outline: "none", border: "none", textStyle: "sys.body-medium", _disabled: { cursor: "not-allowed" } }, $data_input_supporting: { textStyle: "sys.body-small", px: 16, pt: 4, display: "flex", gap: 16, width: "100%", overflow: "auto", color: "sys.on-surface-variant" }, $data_icon: { color: "sys.on-surface-variant" }, _has_leading: { $data_input: { pl: 36 }, $data_input_label: { left: 36 } }, _has_trailing: { $data_input: { pr: 32 } }, _valued: { $data_input: {} }, _focusWithin: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.primary" }, $data_input_label: { color: "sys.primary" } }, _invalid: { $data_input_decorator_leading: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_label: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_decorator_trailing: { borderWidth: "2px", borderColor: "sys.error" }, $data_input_label: { color: "sys.error" }, $data_input_supporting: { color: "sys.error" }, $data_icon: { color: "sys.error" } }, _disabled: { opacity: 0.38, cursor: "not-allowed" } }), eY = Z("div", { role: o(["leading", "trailing"]) }, { displayName: "Maker" })({ pos: "absolute", top: 4, bottom: 4, display: "flex", alignItems: "center", color: "sys.on-surface-variant", _role__leading: { left: 12, $data_icon: { ml: -4 } }, _role__trailing: { right: 12, $data_icon: { mr: -4 } } }), eZ = u((e10, t2) => {
   let a2 = eg.of(e10.field$.typedef, G(e10.field$.input) ? void 0 : e10.field$.input);
   return c(a2, A(1), M((t3) => {
     e10.field$.update(t3);
@@ -360,9 +360,9 @@ let te = (e10) => e7(e10).includes("application/json"), tt = u({ operationID: t(
   let { field$: r2 } = t2, { render: i2 } = a2;
   return S(() => {
     r2.destroy();
-  }), c(V([r2, r2.input$]), i2((t3) => {
+  }), c(H([r2, r2.input$]), i2((t3) => {
     let [a3, i3] = t3, n2 = e.metaProp(r2.typedef, "inputBy") ?? tn, o2 = (e.metaProp(r2.typedef, "readOnlyWhenInitialExist") ?? false) && !!a3.initial;
-    return x(eX, { valued: !G(i3 ?? a3.initial), invalid: !!a3.error, focus: !!a3.focus, $label: y("span", { children: [r2.meta.label ?? r2.name, r2.optional ? "（非必填）" : ""] }), $supporting: y(eL, { children: [x(eB, { schema: r2.typedef }), x(eH, { schema: r2.typedef })] }), $trailing: n2.$trailing, children: x(n2, { field$: r2, readOnly: o2 }) });
+    return x(eX, { valued: !G(i3 ?? a3.initial), invalid: !!a3.error, focus: !!a3.focus, $label: y("span", { children: [r2.meta.label ?? r2.name, r2.optional ? "（非必填）" : ""] }), $supporting: y(eE, { children: [x(eL, { schema: r2.typedef }), x(eV, { schema: r2.typedef })] }), $trailing: n2.$trailing, children: x(n2, { field$: r2, readOnly: o2 }) });
   }));
 }, { displayName: "ParameterInput", props: ["field$"] }), tn = $({ readOnly: l().optional(), field$: r() }, (e10) => () => {
   let { readOnly: t2, field$: a2, ...r2 } = e10;
@@ -438,7 +438,7 @@ let te = (e10) => e7(e10).includes("application/json"), tt = u({ operationID: t(
   return () => y(tg, { onClick: () => {
     r2.next(true);
   }, children: [e10.of, i2] });
-}, { displayName: "DatabaseErTableColumnOfView", props: ["of", "database"] }), tc = Z("div", { displayName: "DatabaseErMain" })({ py: 18, px: 24, flex: 1, overflow: "auto" }), tm = Z("div", { displayName: "DatabaseErHeader" })({ py: 8, px: 16, textStyle: "sys.label-large" }), tu = Z("details", { displayName: "DatabaseErTable" })({ "& + &": { mt: 16 }, rounded: "sm", border: "1px solid", borderColor: et("sys.outline-variant", ea(0.38)), overflow: "hidden", width: "100%" }), th = Z("summary", { displayName: "DatabaseErTableSummary" })({ textStyle: "sys.label-large", py: 8, px: 16, display: "flex", color: "sys.primary" }), ty = Z("div", { displayName: "DatabaseErTableDef" })({ px: 16, py: 4, display: "flex", _hover: { containerStyle: "sys.surface-container-low" } }), tf = Z("div", { displayName: "DatabaseErTableColumnName" })({ display: "flex", width: "20vw", textStyle: "sys.label-small", font: "code" }), tb = Z("div", { displayName: "DatabaseErTableColumnComment" })({ display: "flex", textStyle: "sys.label-small", width: "20vw", justifyContent: "end" }), tg = Z("div", { displayName: "DatabaseErTableColumnOf" })({ flex: 1, textStyle: "sys.label-small", font: "code", fontWeight: "bold", color: "sys.primary", _hover: { cursor: "pointer" } }), tx = Z("div", { displayName: "DatabaseErTableColumnType" })({ flex: 1, textStyle: "sys.label-small" }), tv = Z("div", (e10, t2) => (t3) => y(t3, { children: [e10.meta.title, " ", e10.meta.description ? x(el, { title: x(eE, { children: x(er, { text: e10.meta.description }) }), children: x(ei, { path: eo }) }) : null] }), { displayName: "DatabaseDescription", props: ["meta"] })({ position: "relative", display: "flex", alignItems: "center", gap: 4, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12, [`${ei}`]: { width: 12, height: 12, overflow: "hidden" } }), tw = Z("div", { displayName: "DialogContainer" })({ display: "flex", containerStyle: "sys.surface", width: "90vw", roundedBottom: "sm", px: 16, py: 36, top: 0, position: "absolute", overflow: "auto" }), t$ = Z("div", { displayName: "DatabaseErTableConstraintName" })({ flex: 1, textStyle: "sys.label-small", font: "code", fontWeight: "bold", display: "flex", alignItems: "center", gap: "1em", _primary: { [`${ei}`]: { color: "sys.primary" } }, _unique: { [`${ei}`]: { position: "relative", "&::before": { content: JSON.stringify("1"), position: "absolute", right: -6, textStyle: "sys.label-small", fontSize: 8 } } } }), t_ = Z("div", { displayName: "Spacer" })({ flex: 1 }), tN = Z("pre", (e10, t2) => {
+}, { displayName: "DatabaseErTableColumnOfView", props: ["of", "database"] }), tc = Z("div", { displayName: "DatabaseErMain" })({ py: 18, px: 24, flex: 1, overflow: "auto" }), tm = Z("div", { displayName: "DatabaseErHeader" })({ py: 8, px: 16, textStyle: "sys.label-large" }), tu = Z("details", { displayName: "DatabaseErTable" })({ "& + &": { mt: 16 }, rounded: "sm", border: "1px solid", borderColor: et("sys.outline-variant", ea(0.38)), overflow: "hidden", width: "100%" }), th = Z("summary", { displayName: "DatabaseErTableSummary" })({ textStyle: "sys.label-large", py: 8, px: 16, display: "flex", color: "sys.primary" }), ty = Z("div", { displayName: "DatabaseErTableDef" })({ px: 16, py: 4, display: "flex", _hover: { containerStyle: "sys.surface-container-low" } }), tf = Z("div", { displayName: "DatabaseErTableColumnName" })({ display: "flex", width: "20vw", textStyle: "sys.label-small", font: "code" }), tb = Z("div", { displayName: "DatabaseErTableColumnComment" })({ display: "flex", textStyle: "sys.label-small", width: "20vw", justifyContent: "end" }), tg = Z("div", { displayName: "DatabaseErTableColumnOf" })({ flex: 1, textStyle: "sys.label-small", font: "code", fontWeight: "bold", color: "sys.primary", _hover: { cursor: "pointer" } }), tx = Z("div", { displayName: "DatabaseErTableColumnType" })({ flex: 1, textStyle: "sys.label-small" }), tv = Z("div", (e10, t2) => (t3) => y(t3, { children: [e10.meta.title, " ", e10.meta.description ? x(el, { title: x(eB, { children: x(er, { text: e10.meta.description }) }), children: x(ei, { path: eo }) }) : null] }), { displayName: "DatabaseDescription", props: ["meta"] })({ position: "relative", display: "flex", alignItems: "center", gap: 4, textStyle: "sys.body-small", fontSize: 10, lineHeight: 12, [`${ei}`]: { width: 12, height: 12, overflow: "hidden" } }), tw = Z("div", { displayName: "DialogContainer" })({ display: "flex", containerStyle: "sys.surface", width: "90vw", roundedBottom: "sm", px: 16, py: 36, top: 0, position: "absolute", overflow: "auto" }), t$ = Z("div", { displayName: "DatabaseErTableConstraintName" })({ flex: 1, textStyle: "sys.label-small", font: "code", fontWeight: "bold", display: "flex", alignItems: "center", gap: "1em", _primary: { [`${ei}`]: { color: "sys.primary" } }, _unique: { [`${ei}`]: { position: "relative", "&::before": { content: JSON.stringify("1"), position: "absolute", right: -6, textStyle: "sys.label-small", fontSize: 8 } } } }), t_ = Z("div", { displayName: "Spacer" })({ flex: 1 }), tN = Z("pre", (e10, t2) => {
   let { slots: a2 } = t2;
   return (e11) => {
     var _a;
@@ -447,17 +447,17 @@ let te = (e10) => e7(e10).includes("application/json"), tt = u({ operationID: t(
   };
 }, { displayName: "PreWithMermaid" })({}), tS = u((e10, t2) => {
   let a2 = h(null);
-  return c(a2, q((e11) => e11 ? H((async () => {
+  return c(a2, q((e11) => e11 ? V((async () => {
     let { default: t3 } = await d(async () => {
       let { default: e12 } = await import("./vendor-min-mermaid~mermaid.esm.min.DZ_2iELU.chunk.js");
       return { default: e12 };
     }, true ? __vite__mapDeps([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]) : void 0);
     await t3.run({ nodes: [e11] });
-  })()) : E), b()), () => x(tI, { ref: a2, class: "mermaid", children: e10.code });
+  })()) : B), b()), () => x(tI, { ref: a2, class: "mermaid", children: e10.code });
 }, { displayName: "Mermaid", props: ["code"] }), tI = Z("div", { displayName: "MermaidContainer" })({ "& > svg": { minWidth: "80%" } }), tP = u({ operationId: t() }, (e10, t2) => {
   let a2 = eN.use(), r2 = c(e10.operationId$, q((e11) => a2.operation$(e11))), i2 = c(r2, z((e11) => !!e11)), n2 = p.seed(false), o2 = c(i2, g((e11) => e11.description ? x(er, { text: e11.description, components: { pre: tN } }) : null)), l2 = c(n2, g((e11) => x(en, { isOpen: e11, onClose: () => {
     n2.next(false);
-  }, children: x(s2, { children: x(ee, { sx: { px: 24, py: 12, width: "100%" }, children: x(eE, { children: o2 }) }) }) }))), s2 = Z("div", { displayName: "DialogContainer" })({ display: "flex", containerStyle: "sys.surface", width: "90vw", roundedBottom: "sm", px: 16, py: 36, top: 0, position: "absolute", overflow: "auto" }), d2 = c(i2, g((e11) => e11.description ? y(eu, { onClick: () => {
+  }, children: x(s2, { children: x(eB, { children: o2 }) }) }))), s2 = Z("div", { displayName: "DialogContainer" })({ containerStyle: "sys.surface", width: "95vw", maxHeight: "98vh", roundedBottom: "sm", px: 32, pt: 16, py: 48, top: 0, position: "absolute", overflow: "auto", pre: { width: "100%" }, "svg,img": { display: "block", m: "0 auto" } }), d2 = c(i2, g((e11) => e11.description ? y(eu, { onClick: () => {
     n2.next(true);
   }, children: [x(ei, { path: em }), l2] }) : null)), m2 = c(i2, g((e11) => x(tr, { operation: e11, children: x(_, { children: Object.entries(e11.responses ?? {}).map((e12) => {
     let [t3, a3] = e12;
