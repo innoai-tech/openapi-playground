@@ -242,10 +242,10 @@ let eU = u({ code: r(), response: r() }, (e10) => {
       if (a2 < 0) return e13;
       let r2 = t4.slice(0, a2), i2 = t4.slice(a2 + 1);
       return G(r2) || G(i2) ? e13 : { ...e13, [r2]: JSON.parse(i2) };
-    }, { key: e12.slice(0, t3) }) : null;
+    }, { code: e12.slice(0, t3) }) : null;
   }(e11)).map((e11) => e11 ? x(ee, { sx: { mb: 16 }, children: y(eE, { spacing: 0, children: [y(eT, { children: ["{", " "] }), x(eW, { children: Object.entries(e11).map((e12) => {
     let [t3, a2] = e12;
-    return "code" === t3 ? null : y(eE, { children: [x(eq, { children: t3 }), x(eT, { children: ": " }), x(eT, { children: JSON.stringify(a2) })] });
+    return y(eE, { children: [x(eq, { children: t3 }), x(eT, { children: ": " }), x(eT, { children: JSON.stringify(a2) })] });
   }) }), y(eT, { children: [" ", "}"] })] }) }) : null) }), x(_, { children: Object.entries(e10.response.content ?? {}).map((e11) => {
     let [a2, { schema: r2 }] = e11;
     return y(eQ, { children: [x(eE, { spacing: 0, children: x(eV, { schema: i.decode(r2, (e12) => [t2.schema(e12) ?? {}, n(e12)]) }) }), x("div", { "data-content-type": true, children: a2 })] });
