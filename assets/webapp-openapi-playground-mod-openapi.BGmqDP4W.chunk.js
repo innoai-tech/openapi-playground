@@ -331,7 +331,7 @@ let te = (e10) => e7(e10).includes("application/json"), tt = u({ operationID: t(
     let t3 = Object.entries(e10.operation.requestBody.content ?? {})[0];
     if (t3) {
       let [e11, a3] = t3, l2 = i.decode(a3.schema ?? {}, (e12) => [r2.schema(e12) ?? {}, n(e12)]).use(eh(`body, content-type = ${JSON.stringify(e11)}`));
-      e11.includes("json") ? o2.body = l2.use(ef(eZ)) : e11.includes("octet-stream") ? o2.body = l2.use(ef(to)) : o2.body = l2;
+      e11.includes("text/") ? o2.body = l2 : e11.includes("octet-stream") ? o2.body = l2.use(ef(to)) : e11.includes("image/") ? o2.body = l2.use(ef(to)) : o2.body = l2.use(ef(eZ));
     }
   }
   let s2 = S(), d2 = P(), p2 = eb.of(l(o2), (() => {
