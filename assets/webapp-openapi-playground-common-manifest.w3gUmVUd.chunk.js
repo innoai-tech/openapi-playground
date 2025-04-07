@@ -1,5 +1,5 @@
 import './lib-nodepkg-typedef.CzjpWxrC.chunk.js';
-import { c as createProvider } from './lib-nodepkg-vuekit.B7XostCX.chunk.js';
+import { c as createProvider } from './lib-nodepkg-vuekit.CtL-AQwf.chunk.js';
 
 const ManifestProvider = createProvider(
   () => ({
