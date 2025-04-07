@@ -1,1 +1,0 @@
-import{H as c,i as e}from"./vendor-min-mermaid~chunk-ZKYS2E5M.BYa6fn-6.chunk.js";import{m as i}from"./vendor-min-mermaid~chunk-GTKDMUJJ.Cm7bUosf.chunk.js";var d=i(o=>{var m;let{securityLevel:r}=c(),t=e("body");if(r==="sandbox"){let n=((m=e(`#i${o}`).node())==null?void 0:m.contentDocument)??document;t=e(n.body)}return t.select(`#${o}`)},"selectSvgElement");export{d};

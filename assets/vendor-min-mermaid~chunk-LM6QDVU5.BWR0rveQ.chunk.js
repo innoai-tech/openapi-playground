@@ -1,1 +1,0 @@
-import{m as r}from"./vendor-min-mermaid~chunk-GTKDMUJJ.Cm7bUosf.chunk.js";var n=r(({flowchart:t})=>{var o,e;let a=((o=t==null?void 0:t.subGraphTitleMargin)==null?void 0:o.top)??0,i=((e=t==null?void 0:t.subGraphTitleMargin)==null?void 0:e.bottom)??0,p=a+i;return{subGraphTitleTopMargin:a,subGraphTitleBottomMargin:i,subGraphTitleTotalMargin:p}},"getSubGraphTitleMargins");export{n};
