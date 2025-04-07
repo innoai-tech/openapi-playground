@@ -1,10 +1,10 @@
-import { c as createProvider, I as ImmerBehaviorSubject, j as jsx, a as component$, r as rx, s as subscribeUntilUnmount, b as cloneVNode, d as jsxs, e as ref, f as component, T as Teleport, F as Fragment, o as observableRef, t as tapEffect, g as ref$1 } from './lib-nodepkg-vuekit.CtL-AQwf.chunk.js';
+import { c as createProvider, I as ImmerBehaviorSubject, j as jsx, a as component$, r as rx, s as subscribeUntilUnmount, b as cloneVNode, d as jsxs, e as ref, f as component, T as Teleport, F as Fragment, o as observableRef, t as tapEffect, g as ref$1 } from './lib-nodepkg-vuekit.B7XostCX.chunk.js';
 import { o as object, J as JSONPointer, g as getDefaultExportFromCjs, S as Schema, a as array, b as any, r as record, s as string, E as EmptyContext } from './lib-nodepkg-typedef.CzjpWxrC.chunk.js';
-import { s as styled, a as size, P as Popper, v as variant, b as alpha, B as Box } from './lib-nodepkg-vueuikit.CtMcShXR.chunk.js';
-import { I as IconButton, a as Icon, m as mdiHelpBox, b as mdiContentCopy, c as mdiCancel, d as mdiCheckBold, e as mdiMinusBoxOutline } from './lib-nodepkg-vuematerial.C1cIH2hj.chunk.js';
-import { O as Observable, s as switchMap, m as merge, f as fromEvent, d as delay, t as tap, E as EMPTY, c as combineLatest, B as BehaviorSubject, S as Subject } from './vendor-rxjs.BO1Fdxz5.chunk.js';
+import { s as styled, a as size, P as Popper, v as variant, b as alpha, B as Box } from './lib-nodepkg-vueuikit.CfH5cx_9.chunk.js';
+import { I as IconButton, a as Icon, m as mdiHelpBox, b as mdiContentCopy, c as mdiCancel, d as mdiCheckBold, e as mdiMinusBoxOutline } from './lib-nodepkg-vuematerial.DQu244h8.chunk.js';
+import { O as Observable, s as switchMap, m as merge, f as fromEvent, d as delay, t as tap, E as EMPTY, c as combineLatest, B as BehaviorSubject, S as Subject } from './vendor-rxjs.BsXCl7Vk.chunk.js';
 import { i as isPlainObject, g as get, a as isUndefined, b as isFunction, s as set, l as last, c as isNumber, d as isArray, e as isObject } from './vendor-innoai-tech-lodash.CDxVqk50.chunk.js';
-import { M as Markdown } from './lib-nodepkg-vuemarkdown.CqPUQo9q.chunk.js';
+import { M as Markdown } from './lib-nodepkg-vuemarkdown.BIdhFx0S.chunk.js';
 
 class JSONEditor extends Observable {
   constructor(typedef, initials) {
