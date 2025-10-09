@@ -1,7 +1,6 @@
-import { Dt as t, E as e, F as i, I as s, It as r, L as a, Mt as n, R as l, Tt as u, bt as h, m as o, p as f, yt as p } from "./vendor-innoai-tech-vuekit.DojXeCx1.chunk.js";
-import { c as d, y as c } from "./vendor-innoai-tech-fetcher.CZum5yF-.chunk.js";
-import { r as v } from "./vendor-rxjs.BM_clCws.chunk.js";
-var m = class e extends c {
+import { Dt as t, E as e, F as i, I as s, It as r, L as a, Mt as n, R as l, Tt as u, bt as h, m as o, p as f, yt as p } from "./vendor-innoai-tech-vuekit.Cd-yk6hr.chunk.js";
+import { h as d, i as c, x as v } from "./vendor-rxjs.CLbJyizg.chunk.js";
+var m = class e extends v {
 	static of(t, i) {
 		return new e(t, () => h(i) ? i() : i);
 	}
@@ -81,7 +80,7 @@ var m = class e extends c {
 	}
 	#i;
 	get input$() {
-		return void 0 === this.#i && (this.#i = o(this.form$.inputs$, d((t) => r(t, this.path, e.defaultValue(this.typedef))), v())), this.#i;
+		return void 0 === this.#i && (this.#i = o(this.form$.inputs$, d((t) => r(t, this.path, e.defaultValue(this.typedef))), c())), this.#i;
 	}
 	focus = () => {
 		this.next((t) => {
