@@ -1,7 +1,7 @@
 const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/vendor-mermaid.BFNr_o1n.chunk.js","assets/vendor-min-mermaid~architectureDiagram-4X3Z3J56.CRZbjc31.chunk.js","assets/vendor-min-mermaid~architecture-U656AL7Q-3ZQKGQJL.BA2pzSbr.chunk.js","assets/vendor-min-mermaid~blockDiagram-BWRZOBD3.Crrv7K4I.chunk.js","assets/vendor-min-mermaid~chunk-4HFYJGYH.sOLS5yli.chunk.js","assets/vendor-min-mermaid~chunk-5V7UUW6L.Bj_CzqOT.chunk.js","assets/vendor-min-mermaid~chunk-AI4T2ZLM.DtYl6jcl.chunk.js","assets/vendor-min-mermaid~chunk-6EQESGSB.DbY0go2v.chunk.js","assets/vendor-min-mermaid~chunk-F3RBCZRS.B1A4fW1G.chunk.js","assets/vendor-min-mermaid~mermaid.esm.min.DlHIYSrB.chunk.js"])))=>i.map(i=>d[i]);
 import { $ as e, A as t, B as a, Bt as r, C as i, F as n, G as o, H as l, I as s, J as d, K as p, L as c, M as u, N as m, O as h, P as y, Q as f, Qt as b, Ut as x, V as g, X as v, Z as w, Zt as $, _, _t as N, a as S, c as I, ct as C, dt as O, g as k, gt as D, h as P, j, k as T, l as q, m as E, nn as B, o as L, p as R, r as W, rn as F, rt as J, s as M, t as A, tt as H, u as V, w as z, x as U } from "./vendor-innoai-tech-vuekit.CxIPbSuZ.chunk.js";
 import { d as K, f as Z, o as Q, s as X } from "./vendor-innoai-tech-vueuikit.CY09ziTb.chunk.js";
-import { i as G, n as Y, r as ee, t as et } from "./vendor-innoai-tech-fetcher.sAIXrr3I.chunk.js";
+import { i as G, n as Y, r as ee, t as et } from "./vendor-innoai-tech-fetcher.EEsvC0tW.chunk.js";
 import { a as ea, c as er, d as ei, f as en, i as eo, l as el, m as es, n as ed, o as ep, p as ec, r as eu, s as em, t as eh, u as ey } from "./vendor-innoai-tech-jsoneditor.CFENXAZz.chunk.js";
 import { i as ef, n as eb, r as ex, t as eg } from "./lib-nodepkg-vueformdata.CmclN8dW.chunk.js";
 import { Nn as ev } from "./vendor-min-mermaid~architectureDiagram-4X3Z3J56.CRZbjc31.chunk.js";
@@ -34,12 +34,12 @@ var ew = class e extends R {
 		let t = this.#r(e);
 		if (!t) return null;
 		let a = Object.keys(t.requestBody?.content ?? {})[0];
-		return (e) => ({
+		return (e = {}) => ({
 			method: t.method.toUpperCase(),
 			url: this.#a + e_(t.path, e),
-			params: x(e, t.parameters?.filter((e) => "query" == e.in).map((e) => e.name)),
+			params: x(e, t.parameters?.filter((e) => "query" == e.in).map((e) => e.name) ?? []),
 			headers: {
-				...x(e, t.parameters?.filter((e) => "header" == e.in).map((e) => e.name)),
+				...x(e, t.parameters?.filter((e) => "header" == e.in).map((e) => e.name) ?? []),
 				...a ? { "Content-Type": a } : {}
 			},
 			body: e.body,
@@ -980,7 +980,7 @@ ${B(t) ? JSON.stringify(t) : String(t)}
 			return `data:${t};base64,${btoa(r)}`;
 		})(t.body, e5(t.headers)),
 		alt: ""
-	}) }) : M(e6, { children: [
+	}) }) : (console.log(t), M(e6, { children: [
 		M("span", { children: ["HTTP/* ", t.status] }),
 		L("br", {}),
 		t.headers && L(C, { children: Object.entries(t.headers).map(([e, t]) => L(e2, {
@@ -989,7 +989,7 @@ ${B(t) ? JSON.stringify(t) : String(t)}
 		}, e)) }),
 		L("br", {}),
 		t.body ? e9(t.headers) ? JSON.stringify(t.body, null, 2) : `${t.body}` : null
-	] });
+	] }));
 }, { displayName: "HTTPResponse" });
 function e5(e = {}) {
 	for (let [t, a] of Object.entries(e)) if ("content-type" == t.toLowerCase()) return a;
@@ -1028,7 +1028,7 @@ var e9 = (e) => e5(e).includes("application/json"), e7 = W((e) => E(eN.use().res
 	}), V());
 	let c = E(d.inputs$, S((e) => {
 		let a = i.asRequestConfigCreator(t.operation.operationId);
-		return a ? L(e8, { request: a(e) }) : null;
+		return a ? L(e8, { request: a(e ?? {}) }) : null;
 	}));
 	return () => M(X, {
 		sx: {

@@ -1,5 +1,5 @@
 import { A as e, D as t, F as r, N as s, P as n, S as o, b as i, h as a, j as u } from "./vendor-innoai-tech-vuekit.CxIPbSuZ.chunk.js";
-var p = (e) => !!e && e.constructor === Object, l = Array.isArray, c = (e) => {
+var p = (e) => !!e && e.constructor === Object, l = Array.isArray, d = (e) => {
 	let t = new URLSearchParams(), r = (e, s) => {
 		if (l(s)) {
 			for (let t of s) r(e, t);
@@ -10,8 +10,8 @@ var p = (e) => !!e && e.constructor === Object, l = Array.isArray, c = (e) => {
 	};
 	if (e) for (let [t, s] of Object.entries(e)) r(t, s);
 	return t.toString();
-}, d = (e = {}) => e["Content-Type"] || e["content-type"] || "", f = (e, t) => {
-	if (d(t).includes("multipart/form-data")) {
+}, c = (e = {}) => e["Content-Type"] || e["content-type"] || "", f = (e, t) => {
+	if (c(t).includes("multipart/form-data")) {
 		((e = {}) => {
 			e["Content-Type"] && (e["Content-Type"] = void 0), e["content-type"] && (e["content-type"] = void 0);
 		})(t);
@@ -23,7 +23,7 @@ var p = (e) => !!e && e.constructor === Object, l = Array.isArray, c = (e) => {
 		for (let [t, r] of e) s(t, r);
 		return r;
 	}
-	return d(t).includes("application/x-www-form-urlencoded") ? c(e) : d(t).includes("application/octet-stream") ? e : d(t).includes("application/json") || l(e) || p(e) ? JSON.stringify(e) : e;
+	return c(t).includes("application/x-www-form-urlencoded") ? d(e) : c(t).includes("application/octet-stream") ? e : c(t).includes("application/json") || l(e) || p(e) ? JSON.stringify(e) : e;
 }, h = ({ paramsSerializer: e, transformRequestBody: t }) => {
 	let r = (t) => {
 		let r = e(t.params);
@@ -70,7 +70,7 @@ var p = (e) => !!e && e.constructor === Object, l = Array.isArray, c = (e) => {
 					status: t.status,
 					headers: {}
 				};
-				for (let [e, r] of Object.entries(t.headers ?? {})) s.headers[e] = r;
+				for (let [e, r] of t.headers.entries()) s.headers[e] = r;
 				return s.body = r, s;
 			}).then((e) => {
 				if (e.status >= 400) throw e.error = e.body, e;
@@ -99,4 +99,4 @@ var p = (e) => !!e && e.constructor === Object, l = Array.isArray, c = (e) => {
 	};
 	toHref = (e) => this.fetcher.toHref(this.createConfig(e));
 };
-export { f as i, y as n, c as r, h as t };
+export { f as i, y as n, d as r, h as t };
