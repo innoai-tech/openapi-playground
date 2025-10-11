@@ -1,2 +1,0 @@
-import { t as a } from "./vendor-min-mermaid~pieDiagram-QB62DFGK.bThjFqPL.chunk.js";
-export { a as diagram };
