@@ -1,9 +1,9 @@
 const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/vendor-mermaid.BUJzcPsl.chunk.js","assets/vendor-min-mermaid~architectureDiagram-4X3Z3J56.3cmRlxJg.chunk.js","assets/vendor-min-mermaid~architecture-U656AL7Q-3ZQKGQJL.BHePMx5P.chunk.js","assets/vendor-min-mermaid~blockDiagram-MFEFEJY7.CWfUmpcG.chunk.js","assets/vendor-min-mermaid~chunk-2K7MXLZZ.qYuMXQX8.chunk.js","assets/vendor-min-mermaid~chunk-5V7UUW6L.CVKcaz_P.chunk.js","assets/vendor-min-mermaid~chunk-A6NU47M6.GzJuVpdN.chunk.js","assets/vendor-min-mermaid~chunk-F3RBCZRS.B8Vm61Fo.chunk.js","assets/vendor-min-mermaid~mermaid.esm.min.CCMBNZNV.chunk.js"])))=>i.map(i=>d[i]);
-import { $ as e, A as t, B as a, Bt as r, C as i, F as n, G as o, H as l, I as s, J as d, K as p, L as c, M as u, N as m, O as h, P as y, Q as f, Qt as b, Ut as x, V as g, X as v, Z as w, Zt as $, _, _t as N, a as S, c as I, ct as C, dt as O, g as k, gt as D, h as P, j, k as T, l as q, m as B, nn as L, o as E, p as W, r as R, rn as F, rt as J, s as M, t as A, tt as H, u as V, w as z, x as U } from "./vendor-innoai-tech-vuekit.xnGqAMjy.chunk.js";
-import { d as K, f as Z, o as Q, s as X } from "./vendor-innoai-tech-vueuikit.DRnVjSOS.chunk.js";
-import { i as G, n as Y, r as ee, t as et } from "./vendor-innoai-tech-fetcher.xzrDI7f3.chunk.js";
-import { a as ea, c as er, d as ei, f as en, i as eo, l as el, m as es, n as ed, o as ep, p as ec, r as eu, s as em, t as eh, u as ey } from "./vendor-innoai-tech-jsoneditor.D6Ox0hKK.chunk.js";
-import { i as ef, n as eb, r as ex, t as eg } from "./lib-nodepkg-vueformdata.Cn_xBo0l.chunk.js";
+import { $ as e, A as t, B as a, Bt as r, C as i, F as n, G as o, H as l, I as s, J as d, K as p, L as c, M as u, N as m, O as h, P as y, Q as f, Qt as b, Ut as x, V as g, X as v, Z as w, Zt as $, _, _t as N, a as S, c as I, ct as C, dt as O, g as k, gt as D, h as P, j, k as T, l as q, m as B, nn as L, o as E, p as W, r as R, rn as F, rt as J, s as M, t as A, tt as H, u as V, w as z, x as U } from "./vendor-innoai-tech-vuekit.6Jwfxkw3.chunk.js";
+import { d as K, f as Z, o as Q, s as X } from "./vendor-innoai-tech-vueuikit.DoB9aZ0u.chunk.js";
+import { i as G, n as Y, r as ee, t as et } from "./vendor-innoai-tech-fetcher.MR9Xk_7W.chunk.js";
+import { a as ea, c as er, d as ei, f as en, i as eo, l as el, m as es, n as ed, o as ep, p as ec, r as eu, s as em, t as eh, u as ey } from "./vendor-innoai-tech-jsoneditor.CS3f7hBh.chunk.js";
+import { i as ef, n as eb, r as ex, t as eg } from "./lib-nodepkg-vueformdata.C-qErbkW.chunk.js";
 import { Nn as ev } from "./vendor-min-mermaid~architectureDiagram-4X3Z3J56.3cmRlxJg.chunk.js";
 var ew = class e extends W {
 	static empty() {
@@ -1119,7 +1119,7 @@ var e9 = (e) => e5(e).includes("application/json"), e7 = R((e) => B(eN.use().res
 	readOnly: v().optional(),
 	field$: w()
 }, (e) => () => {
-	let { readOnly: t, field$: a,...r } = e;
+	let { readOnly: t, field$: a, ...r } = e;
 	return E("input", {
 		...r,
 		"data-input": !0,
