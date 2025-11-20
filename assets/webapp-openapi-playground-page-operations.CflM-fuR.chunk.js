@@ -1,0 +1,1 @@
+import{H as e,o as t,tt as n}from"./vendor-innoai-tech-vuekit.bNdK9jTh.chunk.js";import{t as r}from"./webapp-openapi-playground-mod-openapi.BMJvoRW_.chunk.js";var i=e({operationId:n()},e=>()=>t(r,{operationId:e.operationId},e.operationId));export{i as default};

@@ -1,0 +1,1 @@
+import{t as e}from"./vendor-min-mermaid~architecture-U656AL7Q-3ZQKGQJL.j2WEiM7o.chunk.js";export{e as createArchitectureServices};

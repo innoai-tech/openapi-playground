@@ -1,0 +1,1 @@
+import{ln as e}from"./vendor-min-mermaid~architectureDiagram-4X3Z3J56.B6u8GKdf.chunk.js";import{Q as t}from"./vendor-min-mermaid~architecture-U656AL7Q-3ZQKGQJL.j2WEiM7o.chunk.js";var n=t((t,n)=>{let r;return n===`sandbox`&&(r=e(`#i`+t)),e(n===`sandbox`?r.nodes()[0].contentDocument.body:`body`).select(`[id="${t}"]`)},`getDiagramElement`);export{n as t};
