@@ -1,1 +1,0 @@
-import{t as e}from"./vendor-min-mermaid~mindmap-definition-YDONIZRL.sfY5x1ro.chunk.js";export{e as diagram};

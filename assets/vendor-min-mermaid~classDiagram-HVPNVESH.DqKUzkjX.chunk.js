@@ -1,1 +1,0 @@
-import{Q as e}from"./vendor-min-mermaid~architecture-U656AL7Q-3ZQKGQJL.j2WEiM7o.chunk.js";import{i as t,n,r,t as i}from"./vendor-min-mermaid~chunk-BHQAJ5QI.ClZmDECv.chunk.js";var a={parser:i,get db(){return new t},renderer:n,styles:r,init:e(e=>{e.class||={},e.class.arrowMarkerAbsolute=e.arrowMarkerAbsolute},`init`)};export{a as t};

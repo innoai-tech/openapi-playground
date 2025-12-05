@@ -1,0 +1,1 @@
+import{r as e}from"./vendor-min-mermaid~architectureDiagram-4X3Z3J56.BpJofp52.chunk.js";export{e as createInfoServices};
